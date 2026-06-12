@@ -92,7 +92,11 @@ window.embeddedDataset = [
         "current_odds": 4.3,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "USA vs Paraguay",
@@ -215,7 +219,11 @@ window.embeddedDataset = [
         "current_odds": 3.75,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "provided",
+    "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet."
   },
   {
     "match_name": "Qatar vs Switzerland",
@@ -345,7 +353,11 @@ window.embeddedDataset = [
         "current_odds": 1.21,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "provided",
+    "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet."
   },
   {
     "match_name": "Brazil vs Morocco",
@@ -475,7 +487,11 @@ window.embeddedDataset = [
         "current_odds": 5.25,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "provided",
+    "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet."
   },
   {
     "match_name": "Haiti vs Scotland",
@@ -605,7 +621,11 @@ window.embeddedDataset = [
         "current_odds": 1.54,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "provided",
+    "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet."
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -749,7 +769,11 @@ window.embeddedDataset = [
         "current_odds": 1.71,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "provided",
+    "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet."
   },
   {
     "match_name": "Germany vs Curaçao",
@@ -844,7 +868,11 @@ window.embeddedDataset = [
         "current_odds": 31,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Netherlands vs Japan",
@@ -939,7 +967,11 @@ window.embeddedDataset = [
         "current_odds": 3.6,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -1034,7 +1066,11 @@ window.embeddedDataset = [
         "current_odds": 2.35,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Sweden vs Tunisia",
@@ -1129,7 +1165,11 @@ window.embeddedDataset = [
         "current_odds": 4.2,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -1224,7 +1264,11 @@ window.embeddedDataset = [
         "current_odds": 21,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -1319,7 +1363,11 @@ window.embeddedDataset = [
         "current_odds": 5.5,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -1414,7 +1462,11 @@ window.embeddedDataset = [
         "current_odds": 1.42,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Iran vs New Zealand",
@@ -1509,7 +1561,11 @@ window.embeddedDataset = [
         "current_odds": 4.6,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "France vs Senegal",
@@ -1604,7 +1660,11 @@ window.embeddedDataset = [
         "current_odds": 7,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Iraq vs Norway",
@@ -1699,7 +1759,11 @@ window.embeddedDataset = [
         "current_odds": 1.2,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Argentina vs Algeria",
@@ -1794,7 +1858,11 @@ window.embeddedDataset = [
         "current_odds": 8.5,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Austria vs Jordan",
@@ -1889,7 +1957,11 @@ window.embeddedDataset = [
         "current_odds": 9,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Portugal vs DR Congo",
@@ -1984,7 +2056,11 @@ window.embeddedDataset = [
         "current_odds": 11,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "England vs Croatia",
@@ -2079,7 +2155,11 @@ window.embeddedDataset = [
         "current_odds": 4.9,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Ghana vs Panama",
@@ -2174,7 +2254,11 @@ window.embeddedDataset = [
         "current_odds": 3.65,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -2269,7 +2353,11 @@ window.embeddedDataset = [
         "current_odds": 1.35,
         "au_bookie": "BetRight"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -2364,7 +2452,11 @@ window.embeddedDataset = [
         "current_odds": 5,
         "au_bookie": "TAB"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -2459,7 +2551,11 @@ window.embeddedDataset = [
         "current_odds": 6,
         "au_bookie": "TAB"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Canada vs Qatar",
@@ -2554,7 +2650,11 @@ window.embeddedDataset = [
         "current_odds": 11,
         "au_bookie": "TAB"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -2649,6 +2749,10 @@ window.embeddedDataset = [
         "current_odds": 3.8,
         "au_bookie": "TAB"
       }
-    ]
+    ],
+    "referee_last_checked": "2026-06-12T13:49:51.615Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
+    "referee_status": "not_verified",
+    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh."
   }
 ];

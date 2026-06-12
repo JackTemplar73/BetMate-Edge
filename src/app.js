@@ -181,6 +181,22 @@ function formatBookCell(market) {
   return `${book}<span class="sub-cell">Prop books: ${playerPropBooks.join(', ')}</span>`;
 }
 
+function formatRefereeStatus(fixture) {
+  const status = fixture.referee_status || (fixture.referee_name === 'Referee not verified' ? 'not_verified' : 'provided');
+  const labels = {
+    verified: 'Verified source',
+    provided: 'Provided, not verified',
+    not_verified: 'Not verified yet'
+  };
+
+  return labels[status] || labels.provided;
+}
+
+function refereeStatusClass(fixture) {
+  const status = fixture.referee_status || (fixture.referee_name === 'Referee not verified' ? 'not_verified' : 'provided');
+  return `ref-${status}`;
+}
+
 function renderSummary() {
   const fixtures = getUpcomingFixtures();
   const rows = flattenMarkets(fixtures);
@@ -375,12 +391,15 @@ function renderFixturePanels() {
             <h2>${fixture.match_name}</h2>
             <p>${fixture.pitch_type} | ${formatKickoff(fixture.kickoff_time_aest)}</p>
           </div>
-          <span class="official">${fixture.referee_name}</span>
+          <span class="official ${refereeStatusClass(fixture)}">
+            ${fixture.referee_name}
+            <small>${formatRefereeStatus(fixture)}</small>
+          </span>
         </div>
         <p class="tactical-summary">${plainGameNotes[fixture.match_name] || fixture.tactical_summary}</p>
         <div class="fixture-meta">
           <span><strong>Pitch:</strong> ${fixture.pitch_constraints}</span>
-          <span><strong>Referee:</strong> ${fixture.referee_tendencies}</span>
+          <span><strong>Referee:</strong> ${fixture.referee_tendencies} ${fixture.referee_source ? `<em>${fixture.referee_source}</em>` : ''}</span>
         </div>
         <div class="market-grid">
           ${markets.map((market) => `

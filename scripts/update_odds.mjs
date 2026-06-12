@@ -20,6 +20,10 @@ const DEFAULT_SPORT_KEYS = [
   'soccer_fifa_world_cup',
   'soccer_international_friendlies'
 ];
+const ESPN_LEAGUES = [
+  'fifa.world',
+  'fifa.friendly'
+];
 const MIN_TRACKED_QI = 70;
 
 const MARKET_MAP = {
@@ -142,6 +146,109 @@ function findEvent(events, fixture) {
     const eventTime = new Date(event.commence_time).getTime();
     return hasTeams && Math.abs(eventTime - kickoff) <= maxDriftMs;
   }) || null;
+}
+
+function dateKey(value) {
+  return value.toISOString().slice(0, 10).replace(/-/g, '');
+}
+
+function fixtureDateKeys(dataset) {
+  return [...new Set(dataset.map((fixture) => dateKey(parseAest(fixture.kickoff_time_aest))))];
+}
+
+function findEspnEvent(events, fixture) {
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  const kickoff = parseAest(fixture.kickoff_time_aest).getTime();
+  const maxDriftMs = 36 * 60 * 60 * 1000;
+
+  return events.find((event) => {
+    const competition = event.competitions?.[0];
+    const competitors = competition?.competitors || [];
+    const teamNames = competitors.flatMap((competitor) => [
+      competitor.team?.displayName,
+      competitor.team?.shortDisplayName,
+      competitor.team?.name,
+      competitor.team?.abbreviation
+    ]).filter(Boolean).map(normalise);
+
+    const eventTime = new Date(event.date || competition?.date || '').getTime();
+    const hasTeams = teamNames.includes(teams.home) && teamNames.includes(teams.away);
+    return hasTeams && Number.isFinite(eventTime) && Math.abs(eventTime - kickoff) <= maxDriftMs;
+  }) || null;
+}
+
+function getEspnReferee(event) {
+  const officials = event.competitions?.[0]?.officials || event.officials || [];
+  const referee = officials.find((official) => {
+    const role = normalise(official.position?.name || official.position?.displayName || official.role || official.type || '');
+    return role.includes('referee') || role === 'ref';
+  }) || officials[0];
+
+  return referee?.displayName || referee?.fullName || referee?.name || null;
+}
+
+async function fetchEspnScoreboard(league, date) {
+  const url = new URL(`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/scoreboard`);
+  url.searchParams.set('dates', date);
+
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`ESPN ${league} referee request failed: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+async function refreshRefereeData(dataset, nowIso) {
+  const allEvents = [];
+
+  for (const league of ESPN_LEAGUES) {
+    for (const date of fixtureDateKeys(dataset)) {
+      try {
+        const scoreboard = await fetchEspnScoreboard(league, date);
+        allEvents.push(...(scoreboard.events || []));
+      } catch (error) {
+        console.warn(error.message);
+      }
+    }
+  }
+
+  let verified = 0;
+
+  for (const fixture of dataset) {
+    fixture.referee_last_checked = nowIso;
+    fixture.referee_check_sources = 'FIFA first when available; ESPN structured event feed fallback.';
+
+    const espnEvent = findEspnEvent(allEvents, fixture);
+    const espnReferee = espnEvent ? getEspnReferee(espnEvent) : null;
+
+    if (espnReferee) {
+      fixture.referee_name = espnReferee;
+      fixture.referee_status = 'verified';
+      fixture.referee_source = `ESPN event ${espnEvent.id || 'match centre'}`;
+      fixture.referee_tendencies = fixture.referee_tendencies === 'No referee-specific adjustment applied; card and foul effects are not being overclaimed.'
+        ? 'Referee confirmed from ESPN. No card-style adjustment has been applied until the referee profile is separately modelled.'
+        : fixture.referee_tendencies;
+      verified += 1;
+      continue;
+    }
+
+    if (normalise(fixture.referee_name).includes('referee not verified')) {
+      fixture.referee_status = 'not_verified';
+      fixture.referee_source = 'No FIFA or ESPN referee assignment found during latest refresh.';
+      fixture.referee_tendencies = 'No referee-specific adjustment applied; card and foul effects are not being overclaimed.';
+      continue;
+    }
+
+    if (fixture.referee_status !== 'verified') {
+      fixture.referee_status = 'provided';
+      fixture.referee_source = fixture.referee_source || 'Initial model dataset; not independently verified by FIFA or ESPN yet.';
+    }
+  }
+
+  return verified;
 }
 
 function betId(fixture, marketItem) {
@@ -348,6 +455,7 @@ async function main() {
 
   let updates = 0;
   const nowIso = new Date().toISOString();
+  const refereeUpdates = await refreshRefereeData(dataset, nowIso);
 
   for (const fixture of dataset) {
     const event = findEvent(allEvents, fixture);
@@ -387,7 +495,7 @@ async function main() {
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
   const historyCount = await syncBetHistory(dataset);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Verified ${refereeUpdates} referee assignments. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {
