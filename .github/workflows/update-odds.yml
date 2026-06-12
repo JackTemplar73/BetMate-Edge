@@ -1,0 +1,44 @@
+name: Refresh odds
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '*/15 * * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-odds
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out dashboard
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Refresh prices when due
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_SPORT_KEYS: soccer_fifa_world_cup,soccer_international_friendlies
+        run: node scripts/update_odds.mjs
+
+      - name: Publish updated odds
+        run: |
+          if git diff --quiet data/weekend_payload.json src/embeddedData.js; then
+            echo "No odds changes to publish."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/weekend_payload.json src/embeddedData.js
+          git commit -m "Auto refresh odds"
+          git push
