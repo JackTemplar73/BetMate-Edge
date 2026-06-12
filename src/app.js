@@ -59,7 +59,7 @@ async function loadDataset({ bustCache = false } = {}) {
   } catch (error) {
     state.dataset = JSON.parse(JSON.stringify(window.embeddedDataset));
     state.dataSource = 'Embedded local copy from data/weekend_payload.json';
-    document.querySelector('[data-app-error]').textContent = `Using embedded data because the JSON file could not be fetched. ${error.message}`;
+    document.querySelector('[data-app-error]').textContent = '';
   }
 
   state.lastRefresh = new Date();
