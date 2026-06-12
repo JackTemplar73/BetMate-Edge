@@ -119,7 +119,7 @@
       <div class="section-heading">
         <div>
           <h2>Bet History</h2>
-          <p>All currently displayed bets are listed here automatically.</p>
+          <p>All displayed bets are tracked with opening odds, latest odds, closing odds, and CLV.</p>
         </div>
       </div>
       <div class="table-wrap">
@@ -128,11 +128,12 @@
             <tr>
               <th>Match</th>
               <th>Bet</th>
-              <th>Odds</th>
-              <th>Model Price</th>
-              <th>EV</th>
-              <th>QI</th>
               <th>Book</th>
+              <th>Opening</th>
+              <th>Odds</th>
+              <th>Closing</th>
+              <th>CLV</th>
+              <th>QI</th>
             </tr>
           </thead>
           <tbody data-history-table></tbody>
@@ -144,6 +145,7 @@
 
   <script src="./src/calculations.js?v=20260612-data-visible"></script>
   <script src="./src/embeddedData.js?v=20260612-full-analysis-all-games"></script>
-  <script src="./src/app.js?v=20260612-qi-purple-90"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260612-clv-history"></script>
+  <script src="./src/app.js?v=20260612-clv-history"></script>
 </body>
 </html>

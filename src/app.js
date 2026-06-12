@@ -1,5 +1,6 @@
 const state = {
   dataset: [],
+  betHistory: [],
   marketFilter: 'All',
   sortMode: 'qi',
   lastRefresh: null,
@@ -62,6 +63,24 @@ async function loadDataset({ bustCache = false } = {}) {
   }
 
   state.lastRefresh = new Date();
+}
+
+async function loadBetHistory({ bustCache = false } = {}) {
+  if (window.location.protocol === 'file:') {
+    state.betHistory = JSON.parse(JSON.stringify(window.embeddedBetHistory || []));
+    return;
+  }
+
+  try {
+    const url = bustCache ? `./data/bet_history.json?t=${Date.now()}` : './data/bet_history.json';
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Bet history failed to load: ${response.status}`);
+    }
+    state.betHistory = await response.json();
+  } catch {
+    state.betHistory = JSON.parse(JSON.stringify(window.embeddedBetHistory || []));
+  }
 }
 
 function getReferenceDate() {
@@ -203,7 +222,7 @@ function renderViewTabs() {
     section.classList.toggle('hidden', section.dataset.viewSection !== state.activeView);
   });
 
-  document.querySelector('[data-history-count]').textContent = flattenMarkets(getUpcomingFixtures()).length;
+  document.querySelector('[data-history-count]').textContent = state.betHistory.length || flattenMarkets(getUpcomingFixtures()).length;
 }
 
 function renderSourceTable() {
@@ -387,25 +406,48 @@ function renderFixturePanels() {
 
 function renderBetHistory() {
   const tableBody = document.querySelector('[data-history-table]');
-  const rows = flattenMarkets(getUpcomingFixtures())
-    .sort((a, b) => b.metrics.qi - a.metrics.qi);
+  const rows = state.betHistory.length > 0
+    ? [...state.betHistory].sort((a, b) => new Date(b.last_seen_at || 0) - new Date(a.last_seen_at || 0))
+    : flattenMarkets(getUpcomingFixtures()).map((market) => ({
+        match_name: market.match_name,
+        target_selection: market.target_selection,
+        market_matrix: market.market_matrix,
+        au_bookie: market.au_bookie,
+        opening_odds: market.current_odds,
+        current_odds: market.current_odds,
+        closing_odds: null,
+        clv_percent: null,
+        current_qi: market.metrics.qi
+      })).sort((a, b) => b.current_qi - a.current_qi);
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="7">No bets available right now.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="8">No bets available right now.</td></tr>';
     return;
   }
 
-  tableBody.innerHTML = rows.map((market) => `
+  tableBody.innerHTML = rows.map((bet) => `
     <tr>
-      <td>${market.match_name}</td>
-      <td><span class="primary-cell">${market.target_selection}</span><span class="sub-cell">${plainMarketNames[market.market_matrix] || market.market_matrix}</span></td>
-      <td>$${market.current_odds.toFixed(2)}</td>
-      <td>${formatModelPrice(market)}</td>
-      <td class="${evClass(market)}">${formatEv(market)}</td>
-      <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></td>
-      <td>${formatBookCell(market)}</td>
+      <td>${bet.match_name}</td>
+      <td><span class="primary-cell">${bet.target_selection}</span><span class="sub-cell">${plainMarketNames[bet.market_matrix] || bet.market_matrix}</span></td>
+      <td><span class="pill">${bet.au_bookie}</span></td>
+      <td>${formatHistoryPrice(bet.opening_odds)}</td>
+      <td>${formatHistoryPrice(bet.current_odds)}</td>
+      <td>${formatHistoryPrice(bet.closing_odds, 'Pending')}</td>
+      <td class="${Number(bet.clv_percent) >= 0 ? 'positive' : Number.isFinite(Number(bet.clv_percent)) ? 'negative' : ''}">${formatClv(bet.clv_percent)}</td>
+      <td><span class="qi-badge ${metricClass(bet.current_qi)}">${Number.isFinite(Number(bet.current_qi)) ? bet.current_qi : '-'}</span></td>
     </tr>
   `).join('');
+}
+
+function formatHistoryPrice(value, fallback = '-') {
+  const numeric = Number.parseFloat(value);
+  return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : fallback;
+}
+
+function formatClv(value) {
+  const numeric = Number.parseFloat(value);
+  if (!Number.isFinite(numeric)) return '-';
+  return `${numeric > 0 ? '+' : ''}${numeric.toFixed(2)}%`;
 }
 
 function bindSortControls() {
@@ -426,6 +468,7 @@ function bindRefreshOdds() {
     document.querySelector('[data-app-error]').textContent = '';
 
     await loadDataset({ bustCache: true });
+    await loadBetHistory({ bustCache: true });
     render();
 
     button.disabled = false;
@@ -461,7 +504,7 @@ function render() {
   renderBetHistory();
 }
 
-loadDataset()
+Promise.all([loadDataset(), loadBetHistory()])
   .then(() => {
     window.betmateAppReady = true;
     document.documentElement.dataset.betmateAppReady = 'true';
