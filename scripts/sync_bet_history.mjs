@@ -4,6 +4,7 @@ import { createHash } from 'node:crypto';
 const DATA_PATH = new URL('../data/weekend_payload.json', import.meta.url);
 const HISTORY_PATH = new URL('../data/bet_history.json', import.meta.url);
 const EMBEDDED_HISTORY_PATH = new URL('../src/embeddedBetHistory.js', import.meta.url);
+const MIN_TRACKED_QI = 70;
 
 function normalise(value) {
   return String(value || '')
@@ -72,7 +73,9 @@ function clvPercent(openingOdds, closingOdds) {
 async function main() {
   const dataset = JSON.parse(await readFile(DATA_PATH, 'utf8'));
   const history = await readHistory();
-  const byId = new Map(history.map((entry) => [entry.bet_id, entry]));
+  const byId = new Map(history
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .map((entry) => [entry.bet_id, entry]));
   const now = process.env.BETMATE_NOW ? new Date(process.env.BETMATE_NOW) : new Date();
   const nowIso = now.toISOString();
 
@@ -85,6 +88,10 @@ async function main() {
       const currentOdds = Number.parseFloat(marketItem.current_odds);
       const modelPrice = Number.parseFloat(marketItem.true_price);
       const existing = byId.get(id);
+
+      if (!existing && metrics.qi < MIN_TRACKED_QI) {
+        continue;
+      }
 
       const entry = existing || {
         bet_id: id,
@@ -119,11 +126,13 @@ async function main() {
     }
   }
 
-  const nextHistory = [...byId.values()].sort((a, b) => {
-    const timeDiff = new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest);
-    if (timeDiff !== 0) return timeDiff;
-    return b.current_qi - a.current_qi;
-  });
+  const nextHistory = [...byId.values()]
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .sort((a, b) => {
+      const timeDiff = new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest);
+      if (timeDiff !== 0) return timeDiff;
+      return b.current_qi - a.current_qi;
+    });
 
   await writeFile(HISTORY_PATH, `${JSON.stringify(nextHistory, null, 2)}\n`);
   await writeFile(EMBEDDED_HISTORY_PATH, `window.embeddedBetHistory = ${JSON.stringify(nextHistory, null, 2)};\n`);

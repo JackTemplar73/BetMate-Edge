@@ -20,6 +20,7 @@ const DEFAULT_SPORT_KEYS = [
   'soccer_fifa_world_cup',
   'soccer_international_friendlies'
 ];
+const MIN_TRACKED_QI = 70;
 
 const MARKET_MAP = {
   h2h: ['Full Match Model', 'Moneyline'],
@@ -173,7 +174,9 @@ function clvPercent(openingOdds, closingOdds) {
 
 async function syncBetHistory(dataset, now = getNow()) {
   const history = await readHistory();
-  const byId = new Map(history.map((entry) => [entry.bet_id, entry]));
+  const byId = new Map(history
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .map((entry) => [entry.bet_id, entry]));
   const nowIso = now.toISOString();
 
   for (const fixture of dataset) {
@@ -185,6 +188,10 @@ async function syncBetHistory(dataset, now = getNow()) {
       const currentOdds = Number.parseFloat(marketItem.current_odds);
       const modelPrice = Number.parseFloat(marketItem.true_price);
       const existing = byId.get(id);
+
+      if (!existing && metrics.qi < MIN_TRACKED_QI) {
+        continue;
+      }
 
       const entry = existing || {
         bet_id: id,
@@ -219,11 +226,13 @@ async function syncBetHistory(dataset, now = getNow()) {
     }
   }
 
-  const nextHistory = [...byId.values()].sort((a, b) => {
-    const timeDiff = new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest);
-    if (timeDiff !== 0) return timeDiff;
-    return b.current_qi - a.current_qi;
-  });
+  const nextHistory = [...byId.values()]
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .sort((a, b) => {
+      const timeDiff = new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest);
+      if (timeDiff !== 0) return timeDiff;
+      return b.current_qi - a.current_qi;
+    });
 
   await writeFile(HISTORY_PATH, `${JSON.stringify(nextHistory, null, 2)}\n`);
   await writeFile(EMBEDDED_HISTORY_PATH, `window.embeddedBetHistory = ${JSON.stringify(nextHistory, null, 2)};\n`);

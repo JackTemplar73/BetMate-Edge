@@ -408,17 +408,20 @@ function renderBetHistory() {
   const tableBody = document.querySelector('[data-history-table]');
   const rows = state.betHistory.length > 0
     ? [...state.betHistory].sort((a, b) => new Date(b.last_seen_at || 0) - new Date(a.last_seen_at || 0))
-    : flattenMarkets(getUpcomingFixtures()).map((market) => ({
-        match_name: market.match_name,
-        target_selection: market.target_selection,
-        market_matrix: market.market_matrix,
-        au_bookie: market.au_bookie,
-        opening_odds: market.current_odds,
-        current_odds: market.current_odds,
-        closing_odds: null,
-        clv_percent: null,
-        current_qi: market.metrics.qi
-      })).sort((a, b) => b.current_qi - a.current_qi);
+    : flattenMarkets(getUpcomingFixtures())
+      .filter((market) => market.metrics.qi >= 70)
+      .map((market) => ({
+          match_name: market.match_name,
+          target_selection: market.target_selection,
+          market_matrix: market.market_matrix,
+          au_bookie: market.au_bookie,
+          opening_odds: market.current_odds,
+          current_odds: market.current_odds,
+          closing_odds: null,
+          clv_percent: null,
+          current_qi: market.metrics.qi
+        }))
+      .sort((a, b) => b.current_qi - a.current_qi);
 
   if (rows.length === 0) {
     tableBody.innerHTML = '<tr><td colspan="8">No bets available right now.</td></tr>';
