@@ -58,6 +58,7 @@ function shouldRefresh(dataset, now = getNow()) {
     return { refresh: true, cadence: 'manual' };
   }
 
+  const oneHourMs = 60 * 60 * 1000;
   const twoHoursMs = 2 * 60 * 60 * 1000;
   const upcoming = dataset
     .map((fixture) => ({
@@ -66,16 +67,27 @@ function shouldRefresh(dataset, now = getNow()) {
     }))
     .filter((fixture) => fixture.kickoff > now);
 
+  const insideOneHour = upcoming.some((fixture) => {
+    const untilKickoff = fixture.kickoff - now;
+    return untilKickoff >= 0 && untilKickoff <= oneHourMs;
+  });
+
+  if (insideOneHour) {
+    return { refresh: true, cadence: 'final-hour-5-minute' };
+  }
+
   const insideTwoHours = upcoming.some((fixture) => {
     const untilKickoff = fixture.kickoff - now;
     return untilKickoff >= 0 && untilKickoff <= twoHoursMs;
   });
 
   if (insideTwoHours) {
-    return { refresh: true, cadence: 'final-two-hours' };
+    return now.getMinutes() % 15 === 0
+      ? { refresh: true, cadence: 'final-two-hours-15-minute' }
+      : { refresh: false, cadence: 'skip-between-15-minute-refreshes' };
   }
 
-  if (now.getMinutes() < 15) {
+  if (now.getMinutes() === 0) {
     return { refresh: true, cadence: 'hourly' };
   }
 
