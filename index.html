@@ -140,64 +140,10 @@
       </div>
     </section>
 
-    <section class="table-section data-section" id="all-data">
-      <div class="data-grid">
-        <article>
-          <span>Last refresh</span>
-          <strong data-last-refresh>Not refreshed yet</strong>
-        </article>
-      </div>
-      <p class="refresh-note" data-refresh-note></p>
-      <div class="table-wrap data-table-wrap">
-        <table>
-          <thead>
-            <tr>
-              <th>Match</th>
-              <th>Kickoff</th>
-              <th>Bet Option</th>
-              <th>Odds</th>
-              <th>Model Price</th>
-              <th>QI</th>
-              <th>Book</th>
-            </tr>
-          </thead>
-          <tbody data-source-table>
-            <tr>
-              <td colspan="7">Use http://localhost:4173/ to render the full data table.</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
   </main>
 
   <script src="./src/calculations.js?v=20260612-data-visible"></script>
   <script src="./src/embeddedData.js?v=20260612-full-analysis-all-games"></script>
   <script src="./src/app.js?v=20260612-qi-purple-90"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', function () {
-      window.setTimeout(function () {
-        if (document.documentElement.dataset.betmateAppReady === 'true') return;
-
-        var button = document.querySelector('[data-refresh-odds]');
-        var lastRefresh = document.querySelector('[data-last-refresh]');
-        var note = document.querySelector('[data-refresh-note]');
-
-        if (!button || !lastRefresh || !note) return;
-
-        button.addEventListener('click', function () {
-          var now = new Date();
-          lastRefresh.textContent = now.toLocaleString('en-AU', {
-            weekday: 'short',
-            day: '2-digit',
-            month: 'long',
-            hour: '2-digit',
-            minute: '2-digit'
-          });
-          note.textContent = 'Odds refresh checked from the local file view. Open http://localhost:4173/ for full JSON reloads.';
-        });
-      }, 400);
-    });
-  </script>
 </body>
 </html>

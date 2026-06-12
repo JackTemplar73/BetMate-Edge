@@ -183,9 +183,13 @@ function renderDataPanel() {
   const headerRefreshElement = document.querySelector('[data-header-refresh]');
   const noteElement = document.querySelector('[data-refresh-note]');
 
-  refreshElement.textContent = refreshText;
-  headerRefreshElement.textContent = `Last refresh: ${refreshText}`;
-  if (!noteElement.dataset.userMessage) {
+  if (refreshElement) {
+    refreshElement.textContent = refreshText;
+  }
+  if (headerRefreshElement) {
+    headerRefreshElement.textContent = `Last refresh: ${refreshText}`;
+  }
+  if (noteElement && !noteElement.dataset.userMessage) {
     noteElement.textContent = '';
   }
 }
@@ -204,6 +208,8 @@ function renderViewTabs() {
 
 function renderSourceTable() {
   const tableBody = document.querySelector('[data-source-table]');
+  if (!tableBody) return;
+
   const rows = flattenMarkets(getUpcomingFixtures())
     .sort((a, b) => new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest));
 
@@ -425,8 +431,10 @@ function bindRefreshOdds() {
     button.disabled = false;
     button.textContent = 'Refresh odds';
     const noteElement = document.querySelector('[data-refresh-note]');
-    noteElement.dataset.userMessage = 'true';
-    noteElement.textContent = 'Odds refreshed and QI was recalculated.';
+    if (noteElement) {
+      noteElement.dataset.userMessage = 'true';
+      noteElement.textContent = 'Odds refreshed and QI was recalculated.';
+    }
   });
 }
 
