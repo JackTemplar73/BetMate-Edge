@@ -19,7 +19,7 @@ if git diff --quiet && git diff --cached --quiet && [ -z "$(git ls-files --other
   exit 0
 fi
 
-git add index.html CNAME src data db .gitignore scripts
+git add -A
 
 if git diff --cached --quiet; then
   exit 0
