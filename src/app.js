@@ -1,0 +1,469 @@
+const state = {
+  dataset: [],
+  marketFilter: 'All',
+  sortMode: 'qi',
+  lastRefresh: null,
+  dataSource: 'Not loaded',
+  selectedMatchName: null,
+  activeView: 'matches'
+};
+
+const plainMarketNames = {
+  'Player Prop': 'Player bet',
+  'Exact Score': 'Exact score',
+  Moneyline: 'Match result',
+  Spread: 'Handicap',
+  'Double Chance': 'Double Chance',
+  'Market Watch': 'Market watch',
+  'Market Baseline': 'Market baseline',
+  'Full Match Model': 'Full match model',
+  Totals: 'Goals total',
+  All: 'All'
+};
+
+const plainGameNotes = {
+  'USA vs Paraguay': 'USA are expected to have more of the ball. Paraguay may need to defend for long spells, so the card bet on Omar Alderete stands out.',
+  'Australia vs Turkiye': 'Australia are expected to keep the game tight and physical. The pitch may make Turkiye less smooth in attack, which helps Australia avoid defeat.',
+  'Brazil vs Morocco': 'Brazil should create pressure, but Morocco are set up to defend well. The handicap on Morocco gives protection if Brazil only win by one goal.',
+  'Qatar vs Switzerland': 'Switzerland should control the tempo, while Qatar sit deep. That points toward a low-scoring game.',
+  'Haiti vs Scotland': 'Scotland look better suited to control the match. Haiti rely on speed, but the surface may make those breakaway attacks harder.'
+};
+
+const playerPropBooks = ['Sportsbet', 'Neds', 'PointsBet', 'TAB', 'BetRight'];
+
+const formatter = new Intl.DateTimeFormat('en-AU', {
+  weekday: 'short',
+  day: '2-digit',
+  month: 'short',
+  hour: '2-digit',
+  minute: '2-digit'
+});
+
+async function loadDataset({ bustCache = false } = {}) {
+  if (window.location.protocol === 'file:') {
+    state.dataset = JSON.parse(JSON.stringify(window.embeddedDataset));
+    state.dataSource = 'Embedded local copy from data/weekend_payload.json';
+    state.lastRefresh = new Date();
+    return;
+  }
+
+  try {
+    const url = bustCache ? `./data/weekend_payload.json?t=${Date.now()}` : './data/weekend_payload.json';
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Dataset failed to load: ${response.status}`);
+    }
+    state.dataset = await response.json();
+    state.dataSource = 'data/weekend_payload.json';
+  } catch (error) {
+    state.dataset = JSON.parse(JSON.stringify(window.embeddedDataset));
+    state.dataSource = 'Embedded local copy from data/weekend_payload.json';
+    document.querySelector('[data-app-error]').textContent = `Using embedded data because the JSON file could not be fetched. ${error.message}`;
+  }
+
+  state.lastRefresh = new Date();
+}
+
+function getReferenceDate() {
+  const kickoffDates = state.dataset.map((fixture) => new Date(fixture.kickoff_time_aest));
+  const earliestKickoff = new Date(Math.min(...kickoffDates));
+  const today = new Date();
+  const oneDay = 24 * 60 * 60 * 1000;
+
+  if (Math.abs(earliestKickoff - today) > 180 * oneDay) {
+    return new Date('2026-06-12T00:00:00+10:00');
+  }
+
+  return today;
+}
+
+function getUpcomingFixtures() {
+  const start = getReferenceDate();
+  start.setHours(0, 0, 0, 0);
+
+  const end = new Date(start);
+  end.setDate(end.getDate() + 7);
+  end.setHours(23, 59, 59, 999);
+
+  return state.dataset
+    .filter((fixture) => {
+      const kickoff = new Date(fixture.kickoff_time_aest);
+      return kickoff >= start && kickoff <= end;
+    })
+    .sort((a, b) => new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest));
+}
+
+function getSelectedFixture() {
+  const fixtures = getUpcomingFixtures();
+  const selected = fixtures.find((fixture) => fixture.match_name === state.selectedMatchName);
+
+  if (selected) return selected;
+
+  state.selectedMatchName = fixtures[0]?.match_name || null;
+  return fixtures[0];
+}
+
+function formatKickoff(value) {
+  return `${formatter.format(new Date(value))} AEST`;
+}
+
+function getFilteredMarkets() {
+  const fixture = getSelectedFixture();
+  if (!fixture) return [];
+
+  const rows = flattenMarkets([fixture]);
+  const filtered = state.marketFilter === 'All'
+    ? rows
+    : rows.filter((market) => market.market_matrix === state.marketFilter);
+
+  return filtered.sort((a, b) => {
+    if (state.sortMode === 'ev') return b.metrics.ev - a.metrics.ev;
+    if (state.sortMode === 'odds') return b.current_odds - a.current_odds;
+    return b.metrics.qi - a.metrics.qi;
+  });
+}
+
+function metricClass(qi) {
+  if (!Number.isFinite(qi) || qi <= 0) return 'no-score';
+  if (qi >= 90) return 'elite';
+  if (qi >= 85) return 'strong';
+  if (qi >= 70) return 'good';
+  if (qi >= 50) return 'watch';
+  return 'weak';
+}
+
+function hasModelPrice(market) {
+  return Number.isFinite(Number.parseFloat(market.true_price)) && Number.parseFloat(market.true_price) > 1;
+}
+
+function formatQi(market) {
+  return hasModelPrice(market) ? market.metrics.qi : '-';
+}
+
+function formatModelPrice(market) {
+  return hasModelPrice(market) ? `$${market.true_price.toFixed(2)}` : 'Not priced';
+}
+
+function formatEv(market) {
+  if (!hasModelPrice(market)) return '-';
+  const prefix = market.metrics.ev > 0 ? '+' : '';
+  return `${prefix}${market.metrics.ev.toFixed(2)}%`;
+}
+
+function evClass(market) {
+  if (!hasModelPrice(market)) return '';
+  return market.metrics.ev >= 0 ? 'positive' : 'negative';
+}
+
+function formatBookCell(market) {
+  const book = `<span class="pill">${market.au_bookie}</span>`;
+  if (market.market_matrix !== 'Player Prop') return book;
+
+  return `${book}<span class="sub-cell">Prop books: ${playerPropBooks.join(', ')}</span>`;
+}
+
+function renderSummary() {
+  const fixtures = getUpcomingFixtures();
+  const rows = flattenMarkets(fixtures);
+  const pricedRows = rows.filter(hasModelPrice);
+  const top = [...pricedRows].sort((a, b) => b.metrics.qi - a.metrics.qi)[0];
+  const bestEv = pricedRows.reduce((best, row) => row.metrics.ev > best.metrics.ev ? row : best, pricedRows[0]);
+
+  document.querySelector('[data-summary-fixtures]').textContent = fixtures.length;
+  document.querySelector('[data-summary-markets]').textContent = rows.length;
+  document.querySelector('[data-summary-best]').textContent = top ? `${top.target_selection} (QI = ${top.metrics.qi})` : '-';
+  document.querySelector('[data-summary-ev]').textContent = bestEv ? `${bestEv.target_selection} ${formatEv(bestEv)}` : '-';
+}
+
+function renderDataPanel() {
+  const refreshText = state.lastRefresh
+    ? formatter.format(state.lastRefresh)
+    : 'Not refreshed yet';
+  const refreshElement = document.querySelector('[data-last-refresh]');
+  const headerRefreshElement = document.querySelector('[data-header-refresh]');
+  const noteElement = document.querySelector('[data-refresh-note]');
+
+  refreshElement.textContent = refreshText;
+  headerRefreshElement.textContent = `Last refresh: ${refreshText}`;
+  if (!noteElement.dataset.userMessage) {
+    noteElement.textContent = '';
+  }
+}
+
+function renderViewTabs() {
+  document.querySelectorAll('[data-view-tab]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.viewTab === state.activeView);
+  });
+
+  document.querySelectorAll('[data-view-section]').forEach((section) => {
+    section.classList.toggle('hidden', section.dataset.viewSection !== state.activeView);
+  });
+
+  document.querySelector('[data-history-count]').textContent = flattenMarkets(getUpcomingFixtures()).length;
+}
+
+function renderSourceTable() {
+  const tableBody = document.querySelector('[data-source-table]');
+  const rows = flattenMarkets(getUpcomingFixtures())
+    .sort((a, b) => new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest));
+
+  tableBody.innerHTML = rows.map((market) => `
+    <tr>
+      <td>${market.match_name}</td>
+      <td>${formatKickoff(market.kickoff_time_aest)}</td>
+      <td><span class="primary-cell">${market.target_selection}</span><span class="sub-cell">${plainMarketNames[market.market_matrix] || market.market_matrix}</span></td>
+      <td>$${market.current_odds.toFixed(2)}</td>
+      <td>${formatModelPrice(market)}</td>
+      <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></td>
+      <td>${formatBookCell(market)}</td>
+    </tr>
+  `).join('');
+}
+
+function renderFilters() {
+  const fixture = getSelectedFixture();
+  const filters = ['All', ...new Set(flattenMarkets(fixture ? [fixture] : []).map((market) => market.market_matrix))];
+  const container = document.querySelector('[data-market-filters]');
+
+  container.innerHTML = filters.map((filter) => `
+    <button class="segmented-button ${state.marketFilter === filter ? 'active' : ''}" data-filter="${filter}">
+      ${plainMarketNames[filter] || filter}
+    </button>
+  `).join('');
+
+  container.querySelectorAll('button').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.marketFilter = button.dataset.filter;
+      render();
+    });
+  });
+}
+
+function renderSelectedMarketTitle() {
+  const fixture = getSelectedFixture();
+  document.querySelector('[data-selected-market-title]').textContent = fixture
+    ? `${fixture.match_name} Bet Options`
+    : 'Bet Options';
+}
+
+function renderMarketsTable() {
+  const tableBody = document.querySelector('[data-market-table]');
+  const rows = getFilteredMarkets();
+
+  tableBody.innerHTML = rows.map((market) => `
+    <tr>
+      <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></td>
+      <td>
+        <span class="primary-cell">${market.target_selection}</span>
+        <span class="sub-cell">${market.match_name}</span>
+      </td>
+      <td>${plainMarketNames[market.market_matrix] || market.market_matrix}</td>
+      <td>$${market.current_odds.toFixed(2)}</td>
+      <td>${formatModelPrice(market)}</td>
+      <td class="${evClass(market)}">${formatEv(market)}</td>
+      <td>${formatBookCell(market)}</td>
+    </tr>
+  `).join('');
+}
+
+function renderHighValueBets() {
+  const container = document.querySelector('[data-high-value-bets]');
+  const rows = flattenMarkets(getUpcomingFixtures())
+    .filter(hasModelPrice)
+    .filter((market) => market.metrics.qi >= 80)
+    .sort((a, b) => b.metrics.qi - a.metrics.qi);
+
+  if (rows.length === 0) {
+    container.innerHTML = '<p class="empty-note">No QI 80+ options are available right now.</p>';
+    return;
+  }
+
+  container.innerHTML = rows.map((market) => `
+    <article class="high-value-card">
+      <div class="card-topline">
+        <span class="qi-badge ${metricClass(market.metrics.qi)}">QI ${market.metrics.qi}</span>
+        <span class="pill">${market.au_bookie}</span>
+      </div>
+      <h3>${market.target_selection}</h3>
+      <p>${market.match_name}</p>
+      ${market.market_matrix === 'Player Prop' ? `<p class="source-note">Checked books: ${playerPropBooks.join(', ')}</p>` : ''}
+      <dl>
+        <div><dt>Type</dt><dd>${plainMarketNames[market.market_matrix] || market.market_matrix}</dd></div>
+        <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
+        <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
+        <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
+      </dl>
+    </article>
+  `).join('');
+}
+
+function renderMatchTabs() {
+  const container = document.querySelector('[data-match-tabs]');
+  const fixtures = getUpcomingFixtures();
+
+  if (!state.selectedMatchName && fixtures.length > 0) {
+    state.selectedMatchName = fixtures[0].match_name;
+  }
+
+  container.innerHTML = fixtures.map((fixture) => {
+    const bestOption = fixture.markets
+      .filter(hasModelPrice)
+      .map((market) => ({ ...market, metrics: runVectorCalculations(market) }))
+      .sort((a, b) => b.metrics.qi - a.metrics.qi)[0];
+    const isActive = fixture.match_name === state.selectedMatchName;
+
+    return `
+      <button class="match-tab ${isActive ? 'active' : ''}" data-match-name="${fixture.match_name}" type="button">
+        <span>${fixture.match_name}</span>
+        <small>${formatKickoff(fixture.kickoff_time_aest)} | ${bestOption ? `Top QI ${bestOption.metrics.qi}` : 'Market watch'}</small>
+      </button>
+    `;
+  }).join('');
+
+  container.querySelectorAll('button').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.selectedMatchName = button.dataset.matchName;
+      state.marketFilter = 'All';
+      render();
+    });
+  });
+}
+
+function renderFixturePanels() {
+  const container = document.querySelector('[data-fixtures]');
+  const fixture = getSelectedFixture();
+
+  if (!fixture) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const markets = fixture.markets.map((market) => ({
+      ...market,
+      metrics: runVectorCalculations(market)
+    })).sort((a, b) => b.metrics.qi - a.metrics.qi);
+
+  container.innerHTML = `
+      <section class="fixture-panel">
+        <div class="fixture-heading">
+          <div>
+            <h2>${fixture.match_name}</h2>
+            <p>${fixture.pitch_type} | ${formatKickoff(fixture.kickoff_time_aest)}</p>
+          </div>
+          <span class="official">${fixture.referee_name}</span>
+        </div>
+        <p class="tactical-summary">${plainGameNotes[fixture.match_name] || fixture.tactical_summary}</p>
+        <div class="fixture-meta">
+          <span><strong>Pitch:</strong> ${fixture.pitch_constraints}</span>
+          <span><strong>Referee:</strong> ${fixture.referee_tendencies}</span>
+        </div>
+        <div class="market-grid">
+          ${markets.map((market) => `
+            <article class="market-card">
+              <div class="card-topline">
+                <span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span>
+                <span class="pill">${market.au_bookie}</span>
+              </div>
+              <h3>${market.target_selection}</h3>
+              ${market.market_matrix === 'Player Prop' ? `<p class="source-note">Checked books: ${playerPropBooks.join(', ')}</p>` : ''}
+              <dl>
+                <div><dt>Type</dt><dd>${plainMarketNames[market.market_matrix] || market.market_matrix}</dd></div>
+                <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
+                <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
+                <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
+              </dl>
+            </article>
+          `).join('')}
+        </div>
+      </section>
+    `;
+}
+
+function renderBetHistory() {
+  const tableBody = document.querySelector('[data-history-table]');
+  const rows = flattenMarkets(getUpcomingFixtures())
+    .sort((a, b) => b.metrics.qi - a.metrics.qi);
+
+  if (rows.length === 0) {
+    tableBody.innerHTML = '<tr><td colspan="7">No bets available right now.</td></tr>';
+    return;
+  }
+
+  tableBody.innerHTML = rows.map((market) => `
+    <tr>
+      <td>${market.match_name}</td>
+      <td><span class="primary-cell">${market.target_selection}</span><span class="sub-cell">${plainMarketNames[market.market_matrix] || market.market_matrix}</span></td>
+      <td>$${market.current_odds.toFixed(2)}</td>
+      <td>${formatModelPrice(market)}</td>
+      <td class="${evClass(market)}">${formatEv(market)}</td>
+      <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></td>
+      <td>${formatBookCell(market)}</td>
+    </tr>
+  `).join('');
+}
+
+function bindSortControls() {
+  document.querySelectorAll('[data-sort]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.sortMode = button.dataset.sort;
+      document.querySelectorAll('[data-sort]').forEach((item) => item.classList.toggle('active', item === button));
+      renderMarketsTable();
+    });
+  });
+}
+
+function bindRefreshOdds() {
+  const button = document.querySelector('[data-refresh-odds]');
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    button.textContent = 'Refreshing...';
+    document.querySelector('[data-app-error]').textContent = '';
+
+    await loadDataset({ bustCache: true });
+    render();
+
+    button.disabled = false;
+    button.textContent = 'Refresh odds';
+    const noteElement = document.querySelector('[data-refresh-note]');
+    noteElement.dataset.userMessage = 'true';
+    noteElement.textContent = 'Odds refreshed and QI was recalculated.';
+  });
+}
+
+function bindViewTabs() {
+  document.querySelectorAll('[data-view-tab]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.activeView = button.dataset.viewTab;
+      render();
+    });
+  });
+}
+
+function render() {
+  renderViewTabs();
+  renderDataPanel();
+  renderSourceTable();
+  renderSummary();
+  renderHighValueBets();
+  renderMatchTabs();
+  renderFilters();
+  renderSelectedMarketTitle();
+  renderMarketsTable();
+  renderFixturePanels();
+  renderBetHistory();
+}
+
+loadDataset()
+  .then(() => {
+    window.betmateAppReady = true;
+    document.documentElement.dataset.betmateAppReady = 'true';
+    document.querySelector('[data-app-error]').textContent = '';
+    bindSortControls();
+    bindRefreshOdds();
+    bindViewTabs();
+    render();
+  })
+  .catch((error) => {
+    console.error(error);
+    document.querySelector('[data-app-error]').textContent = '';
+  });

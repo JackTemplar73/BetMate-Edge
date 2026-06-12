@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BetMate Edge: FIFA World Cup 2026</title>
+  <link rel="stylesheet" href="./src/styles.css?v=20260612-qi-purple">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="app-header">
+      <div>
+        <h1>BetMate Edge</h1>
+        <p class="subhead">FIFA World Cup 2026</p>
+      </div>
+      <div class="status-strip">
+        <span class="status-dot"></span>
+        <span data-header-refresh>Last refresh: Not refreshed yet</span>
+      </div>
+      <button class="refresh-button" data-refresh-odds type="button">Refresh odds</button>
+    </header>
+
+    <p class="error" data-app-error></p>
+
+    <section class="summary-grid" aria-label="Games summary">
+      <article>
+        <span>Games</span>
+        <strong data-summary-fixtures>0</strong>
+      </article>
+      <article>
+        <span>Bet Options</span>
+        <strong data-summary-markets>0</strong>
+      </article>
+      <article class="wide">
+        <span>Best Rated Option</span>
+        <strong data-summary-best>-</strong>
+      </article>
+      <article class="wide">
+        <span>Biggest EV</span>
+        <strong data-summary-ev>-</strong>
+      </article>
+    </section>
+
+    <section class="prop-source-strip" aria-label="Player prop price books">
+      <span>Player prop books</span>
+      <strong>Sportsbet, Neds, PointsBet, TAB, BetRight</strong>
+    </section>
+
+    <section class="qi-legend" aria-label="QI color guide">
+      <span>QI guide</span>
+      <strong><span class="qi-dot elite"></span>90+</strong>
+      <strong><span class="qi-dot strong"></span>85-89</strong>
+      <strong><span class="qi-dot good"></span>70-84</strong>
+      <strong><span class="qi-dot watch"></span>50-69</strong>
+      <strong><span class="qi-dot weak"></span>Below 50</strong>
+    </section>
+
+    <section class="table-section high-value-section">
+      <div class="section-heading">
+        <div>
+          <h2>High Value Bets</h2>
+          <p>All available options with QI 80 or higher.</p>
+        </div>
+      </div>
+      <div class="high-value-list" data-high-value-bets></div>
+    </section>
+
+    <nav class="view-tabs" aria-label="Dashboard tabs">
+      <button class="view-tab active" data-view-tab="matches" type="button">Matches</button>
+      <button class="view-tab" data-view-tab="history" type="button">Bet History <span data-history-count>0</span></button>
+    </nav>
+
+    <section class="table-section games-section" data-view-section="matches">
+      <div class="section-heading">
+        <div>
+          <h2>Match Tabs</h2>
+          <p>Pick one game to view its notes and bet options.</p>
+        </div>
+      </div>
+      <nav class="match-tabs" data-match-tabs aria-label="Match tabs"></nav>
+    </section>
+
+    <section class="table-section" data-view-section="matches">
+      <div class="section-heading">
+        <div>
+          <h2 data-selected-market-title>Bet Options</h2>
+          <p>QI means how strong the option looks. EV means how much better the listed odds are than our model price.</p>
+        </div>
+        <div class="sort-controls" aria-label="Sort markets">
+          <button class="icon-button active" data-sort="qi" title="Sort by QI">QI</button>
+          <button class="icon-button" data-sort="ev" title="Sort by EV">EV</button>
+          <button class="icon-button" data-sort="odds" title="Sort by odds">$</button>
+        </div>
+      </div>
+
+      <nav class="segmented" data-market-filters aria-label="Market filters"></nav>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>QI</th>
+              <th>Option</th>
+              <th>Type</th>
+              <th>Odds</th>
+              <th>Model Price</th>
+              <th>EV</th>
+              <th>Book</th>
+            </tr>
+          </thead>
+          <tbody data-market-table></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="fixtures" data-fixtures data-view-section="matches" aria-label="Match analytics"></section>
+
+    <section class="table-section history-section hidden" data-view-section="history">
+      <div class="section-heading">
+        <div>
+          <h2>Bet History</h2>
+          <p>All currently displayed bets are listed here automatically.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Bet</th>
+              <th>Odds</th>
+              <th>Model Price</th>
+              <th>EV</th>
+              <th>QI</th>
+              <th>Book</th>
+            </tr>
+          </thead>
+          <tbody data-history-table></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="table-section data-section" id="all-data">
+      <div class="data-grid">
+        <article>
+          <span>Last refresh</span>
+          <strong data-last-refresh>Not refreshed yet</strong>
+        </article>
+      </div>
+      <p class="refresh-note" data-refresh-note></p>
+      <div class="table-wrap data-table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Kickoff</th>
+              <th>Bet Option</th>
+              <th>Odds</th>
+              <th>Model Price</th>
+              <th>QI</th>
+              <th>Book</th>
+            </tr>
+          </thead>
+          <tbody data-source-table>
+            <tr>
+              <td colspan="7">Use http://localhost:4173/ to render the full data table.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script src="./src/calculations.js?v=20260612-data-visible"></script>
+  <script src="./src/embeddedData.js?v=20260612-full-analysis-all-games"></script>
+  <script src="./src/app.js?v=20260612-qi-purple-90"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {
+      window.setTimeout(function () {
+        if (document.documentElement.dataset.betmateAppReady === 'true') return;
+
+        var button = document.querySelector('[data-refresh-odds]');
+        var lastRefresh = document.querySelector('[data-last-refresh]');
+        var note = document.querySelector('[data-refresh-note]');
+
+        if (!button || !lastRefresh || !note) return;
+
+        button.addEventListener('click', function () {
+          var now = new Date();
+          lastRefresh.textContent = now.toLocaleString('en-AU', {
+            weekday: 'short',
+            day: '2-digit',
+            month: 'long',
+            hour: '2-digit',
+            minute: '2-digit'
+          });
+          note.textContent = 'Odds refresh checked from the local file view. Open http://localhost:4173/ for full JSON reloads.';
+        });
+      }, 400);
+    });
+  </script>
+</body>
+</html>
