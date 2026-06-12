@@ -7,6 +7,8 @@ on:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 concurrency:
   group: refresh-odds
@@ -15,6 +17,9 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
     steps:
       - name: Check out dashboard
         uses: actions/checkout@v4
@@ -34,11 +39,22 @@ jobs:
         run: |
           if git diff --quiet data/weekend_payload.json src/embeddedData.js data/bet_history.json src/embeddedBetHistory.js; then
             echo "No odds changes to publish."
-            exit 0
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/weekend_payload.json src/embeddedData.js data/bet_history.json src/embeddedBetHistory.js
+            git commit -m "Auto refresh odds"
+            git push
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/weekend_payload.json src/embeddedData.js data/bet_history.json src/embeddedBetHistory.js
-          git commit -m "Auto refresh odds"
-          git push
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: Deploy refreshed site
+        id: deploy-pages
+        uses: actions/deploy-pages@v4
