@@ -14,9 +14,11 @@
   <key>WatchPaths</key>
   <array>
     <string>/Users/jjak/Documents/Codex/2026-06-12/this-document-outlines-the-end-to/index.html</string>
+    <string>/Users/jjak/Documents/Codex/2026-06-12/this-document-outlines-the-end-to/CNAME</string>
     <string>/Users/jjak/Documents/Codex/2026-06-12/this-document-outlines-the-end-to/src</string>
     <string>/Users/jjak/Documents/Codex/2026-06-12/this-document-outlines-the-end-to/data</string>
     <string>/Users/jjak/Documents/Codex/2026-06-12/this-document-outlines-the-end-to/db</string>
+    <string>/Users/jjak/Documents/Codex/2026-06-12/this-document-outlines-the-end-to/scripts</string>
   </array>
 
   <key>StandardOutPath</key>
