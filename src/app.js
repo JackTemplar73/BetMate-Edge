@@ -30,8 +30,6 @@ const plainGameNotes = {
   'Haiti vs Scotland': 'Scotland look better suited to control the match. Haiti rely on speed, but the surface may make those breakaway attacks harder.'
 };
 
-const playerPropBooks = ['Sportsbet', 'Neds', 'PointsBet', 'TAB', 'BetRight'];
-
 const formatter = new Intl.DateTimeFormat('en-AU', {
   weekday: 'short',
   day: '2-digit',
@@ -229,9 +227,11 @@ function evClass(market) {
 
 function formatBookCell(market) {
   const book = `<span class="pill">${market.au_bookie}</span>`;
-  if (market.market_matrix !== 'Player Prop') return book;
+  const source = market.odds_refresh_status === 'confirmed_rendered_site'
+    ? 'Confirmed on book site'
+    : 'Odds API';
 
-  return `${book}<span class="sub-cell">Prop books: ${playerPropBooks.join(', ')}</span>`;
+  return `${book}<span class="sub-cell">${source}</span>`;
 }
 
 function formatRefereeStatus(fixture) {
@@ -395,7 +395,7 @@ function renderHighValueBets() {
       </div>
       <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
-      ${market.market_matrix === 'Player Prop' ? `<p class="source-note">Checked books: ${playerPropBooks.join(', ')}</p>` : ''}
+      <p class="source-note">Price source: ${market.odds_refresh_status === 'confirmed_rendered_site' ? 'Book site confirmation' : 'Odds API'}</p>
       <dl>
         <div><dt>Type</dt><dd>${plainMarketNames[market.market_matrix] || market.market_matrix}</dd></div>
         <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
@@ -488,7 +488,7 @@ function renderFixturePanels() {
                 <span class="pill">${market.au_bookie}</span>
               </div>
               <h3>${market.target_selection}</h3>
-              ${market.market_matrix === 'Player Prop' ? `<p class="source-note">Checked books: ${playerPropBooks.join(', ')}</p>` : ''}
+              <p class="source-note">Price source: ${market.odds_refresh_status === 'confirmed_rendered_site' ? 'Book site confirmation' : 'Odds API'}</p>
               <dl>
                 <div><dt>Type</dt><dd>${plainMarketNames[market.market_matrix] || market.market_matrix}</dd></div>
                 <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
