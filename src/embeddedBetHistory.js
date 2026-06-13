@@ -18,7 +18,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.61,
     "current_ev": 11.8,
     "current_qi": 87,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -42,7 +42,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.95,
     "current_ev": 12.82,
     "current_qi": 86,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -66,7 +66,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.74,
     "current_ev": 8.05,
     "current_qi": 81,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -90,7 +90,7 @@ window.embeddedBetHistory = [
     "current_model_price": 4.9,
     "current_ev": 12.24,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -120,7 +120,7 @@ window.embeddedBetHistory = [
     "current_model_price": 6.47,
     "current_ev": 8.19,
     "current_qi": 76,
-    "last_seen_at": "2026-06-13T10:35:36.571Z"
+    "last_seen_at": "2026-06-13T10:43:28.646Z"
   },
   {
     "bet_id": "1053824585cb3671",
@@ -141,7 +141,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.42,
     "current_ev": 19.01,
     "current_qi": 93,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -165,7 +165,7 @@ window.embeddedBetHistory = [
     "current_model_price": 2.45,
     "current_ev": 14.29,
     "current_qi": 84,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -189,7 +189,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.75,
     "current_ev": 9.71,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -213,7 +213,7 @@ window.embeddedBetHistory = [
     "current_model_price": 6.2,
     "current_ev": 12.9,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -237,7 +237,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.9,
     "current_ev": 7.89,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -261,7 +261,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.6,
     "current_ev": 9.38,
     "current_qi": 84,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -285,7 +285,7 @@ window.embeddedBetHistory = [
     "current_model_price": 7.1,
     "current_ev": 12.68,
     "current_qi": 79,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -309,7 +309,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.38,
     "current_ev": 5.07,
     "current_qi": 76,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -333,7 +333,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.65,
     "current_ev": -5.45,
     "current_qi": 22,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -357,7 +357,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.73,
     "current_ev": 21.39,
     "current_qi": 92,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -381,7 +381,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.72,
     "current_ev": 10.47,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -405,19 +405,19 @@ window.embeddedBetHistory = [
     "current_model_price": 1.52,
     "current_ev": 9.87,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
   },
   {
-    "bet_id": "27162dc528bb9a8e",
+    "bet_id": "c1486f4d2c22109c",
     "match_name": "Australia vs Turkiye",
     "kickoff_time_aest": "2026-06-14T14:00:00",
     "market_matrix": "Moneyline",
     "target_selection": "Match to end in a Draw",
-    "au_bookie": "Neds",
-    "first_seen_at": "2026-06-12T13:34:51.251Z",
+    "au_bookie": "Neds / Sportsbet",
+    "first_seen_at": "2026-06-13T10:43:28.646Z",
     "opening_odds": 3.7,
     "opening_model_price": 3.15,
     "opening_ev": 17.46,
@@ -425,14 +425,17 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": null,
+    "result_status": "pending",
+    "result_detail": "Awaiting final result check.",
+    "settlement_source": null,
     "current_odds": 3.7,
     "current_model_price": 3.15,
     "current_ev": 17.46,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
-    "result_status": "pending",
-    "result_detail": "Awaiting final result check.",
-    "settlement_source": null
+    "last_seen_at": "2026-06-13T10:43:28.646Z"
   },
   {
     "bet_id": "362ed1afc48dacbf",
@@ -453,7 +456,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.7,
     "current_ev": 8.82,
     "current_qi": 82,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -477,7 +480,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.75,
     "current_ev": 13.04,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -501,7 +504,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.82,
     "current_ev": 7.69,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -531,16 +534,16 @@ window.embeddedBetHistory = [
     "current_model_price": 14.49,
     "current_ev": 44.93,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T10:35:36.571Z"
+    "last_seen_at": "2026-06-13T10:43:28.646Z"
   },
   {
-    "bet_id": "6c36181236db8215",
+    "bet_id": "11884d93c8d04b63",
     "match_name": "Germany vs Curaçao",
     "kickoff_time_aest": "2026-06-15T03:00:00",
     "market_matrix": "Full Match Model",
     "target_selection": "Curaçao to Win",
-    "au_bookie": "TAB",
-    "first_seen_at": "2026-06-13T08:49:33.335Z",
+    "au_bookie": "TAB / PointsBet",
+    "first_seen_at": "2026-06-13T10:43:28.646Z",
     "opening_odds": 41,
     "opening_model_price": 34.28,
     "opening_ev": 19.6,
@@ -548,14 +551,17 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": null,
+    "result_status": "pending",
+    "result_detail": "Awaiting final result check.",
+    "settlement_source": null,
     "current_odds": 41,
     "current_model_price": 34.28,
     "current_ev": 19.6,
     "current_qi": 78,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
-    "result_status": "pending",
-    "result_detail": "Awaiting final result check.",
-    "settlement_source": null
+    "last_seen_at": "2026-06-13T10:43:28.646Z"
   },
   {
     "bet_id": "cb0529d26ebe1a93",
@@ -576,7 +582,7 @@ window.embeddedBetHistory = [
     "current_model_price": 10.82,
     "current_ev": 29.39,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -600,7 +606,7 @@ window.embeddedBetHistory = [
     "current_model_price": 24.71,
     "current_ev": 5.22,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -624,7 +630,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.25,
     "current_ev": 4.76,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -648,7 +654,7 @@ window.embeddedBetHistory = [
     "current_model_price": 11.44,
     "current_ev": 4.9,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -672,7 +678,7 @@ window.embeddedBetHistory = [
     "current_model_price": 2.6,
     "current_ev": 44.62,
     "current_qi": 95,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 3.76,
@@ -702,7 +708,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 12.36,
     "current_qi": 86,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 2,
@@ -732,7 +738,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 9.55,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 1.95,
@@ -762,7 +768,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.8,
     "current_ev": 12.07,
     "current_qi": 79,
-    "last_seen_at": "2026-06-13T10:35:36.571Z",
+    "last_seen_at": "2026-06-13T10:43:28.646Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 6.5,

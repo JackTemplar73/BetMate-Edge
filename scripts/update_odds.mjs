@@ -748,7 +748,7 @@ function collapseToBestAvailableH2h(fixture) {
   const bestBySelection = new Map();
 
   for (const marketItem of markets) {
-    if (marketItem.market_matrix !== 'Full Match Model') continue;
+    if (!MARKET_MAP.h2h.includes(marketItem.market_matrix)) continue;
     if (!BEST_PRICE_BOOKS.has(normalise(marketItem.au_bookie))) continue;
 
     const key = normalise(marketItem.target_selection);
@@ -759,14 +759,21 @@ function collapseToBestAvailableH2h(fixture) {
     if (!current || price > currentPrice) {
       bestBySelection.set(key, {
         ...marketItem,
-        odds_refresh_note: `${marketItem.odds_refresh_note || 'Checked via Odds API.'} Best available AU book price selected.`
+        odds_refresh_note: `${marketItem.odds_refresh_note || 'Checked via Odds API.'} Best available AU book price selected.`,
+        best_price_tied_books: null
       });
+    } else if (current && price === currentPrice) {
+      const tiedBooks = new Set([
+        ...(String(current.best_price_tied_books || current.au_bookie).split(/\s*\/\s*/).filter(Boolean)),
+        marketItem.au_bookie
+      ]);
+      current.best_price_tied_books = [...tiedBooks].join(' / ');
     }
   }
 
   const seenBest = new Set();
   fixture.markets = markets.filter((marketItem) => {
-    if (marketItem.market_matrix !== 'Full Match Model') return true;
+    if (!MARKET_MAP.h2h.includes(marketItem.market_matrix)) return true;
     if (!BEST_PRICE_BOOKS.has(normalise(marketItem.au_bookie))) return true;
 
     const key = normalise(marketItem.target_selection);
@@ -779,6 +786,7 @@ function collapseToBestAvailableH2h(fixture) {
     if (isBest) {
       Object.assign(marketItem, best);
       marketItem.best_price_checked_books = 'Sportsbet, Neds, TAB, PointsBet, BetRight';
+      marketItem.au_bookie = marketItem.best_price_tied_books || marketItem.au_bookie;
       seenBest.add(key);
       return true;
     }
