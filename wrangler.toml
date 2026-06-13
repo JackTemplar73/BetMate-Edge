@@ -4,10 +4,6 @@ compatibility_date = "2026-06-13"
 account_id = "d1d5ba0776b992b44dce5e29f3113787"
 workers_dev = true
 
-routes = [
-  { pattern = "fifaworldcup-api.betmateedge.com/*", custom_domain = true }
-]
-
 [vars]
 ASSET_BASE_URL = "https://fifaworldcup.betmateedge.com"
 ALLOWED_ORIGIN = "https://fifaworldcup.betmateedge.com"
