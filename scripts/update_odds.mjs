@@ -521,6 +521,21 @@ function hasVerifiedPrice(marketItem) {
   ].includes(marketItem.odds_refresh_status);
 }
 
+function pruneUnverifiedFutureMarkets(dataset, now = getNow()) {
+  let removed = 0;
+
+  for (const fixture of dataset) {
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    if (kickoff <= now) continue;
+
+    const before = (fixture.markets || []).length;
+    fixture.markets = (fixture.markets || []).filter(hasVerifiedPrice);
+    removed += before - fixture.markets.length;
+  }
+
+  return removed;
+}
+
 async function syncBetHistory(dataset, now = getNow(), espnEvents = []) {
   const history = await readHistory();
   const byId = new Map(history
@@ -923,11 +938,13 @@ async function main() {
     collapseToBestAvailableH2h(fixture);
   }
 
+  const prunedMarkets = pruneUnverifiedFutureMarkets(dataset);
+
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
   const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Verified ${refereeUpdates} referee assignments. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Removed ${prunedMarkets} unverified future markets. Verified ${refereeUpdates} referee assignments. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {
