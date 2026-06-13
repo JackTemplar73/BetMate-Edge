@@ -1,12 +1,12 @@
 [
   {
-    "bet_id": "6c00d0a6d298095a",
+    "bet_id": "7449c3112196931f",
     "match_name": "Qatar vs Switzerland",
     "kickoff_time_aest": "2026-06-14T05:00:00",
     "market_matrix": "Full Match Model",
     "target_selection": "Match to end in a Draw",
-    "au_bookie": "PointsBet",
-    "first_seen_at": "2026-06-13T11:30:08.569Z",
+    "au_bookie": "PointsBet / Sportsbet",
+    "first_seen_at": "2026-06-13T13:10:53.493Z",
     "opening_odds": 7,
     "opening_model_price": 6.47,
     "opening_ev": 8.19,
@@ -24,7 +24,7 @@
     "current_model_price": 6.47,
     "current_ev": 8.19,
     "current_qi": 76,
-    "last_seen_at": "2026-06-13T11:30:08.569Z"
+    "last_seen_at": "2026-06-13T13:10:53.493Z"
   },
   {
     "bet_id": "1053824585cb3671",
@@ -45,7 +45,7 @@
     "current_model_price": 1.42,
     "current_ev": 19.01,
     "current_qi": 93,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -65,11 +65,11 @@
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "current_odds": 1.56,
+    "current_odds": 1.53,
     "current_model_price": 1.65,
-    "current_ev": -5.45,
-    "current_qi": 22,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "current_ev": -7.27,
+    "current_qi": 17,
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -99,16 +99,16 @@
     "current_model_price": 14.49,
     "current_ev": 44.93,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T11:30:08.569Z"
+    "last_seen_at": "2026-06-13T13:10:53.493Z"
   },
   {
-    "bet_id": "f86bb9cf57760a25",
+    "bet_id": "15962282b61f0b9f",
     "match_name": "Germany vs Curaçao",
     "kickoff_time_aest": "2026-06-15T03:00:00",
     "market_matrix": "Full Match Model",
     "target_selection": "Curaçao to Win",
-    "au_bookie": "PointsBet / TAB",
-    "first_seen_at": "2026-06-13T11:05:21.583Z",
+    "au_bookie": "PointsBet",
+    "first_seen_at": "2026-06-13T13:10:53.493Z",
     "opening_odds": 41,
     "opening_model_price": 34.28,
     "opening_ev": 19.6,
@@ -126,7 +126,7 @@
     "current_model_price": 34.28,
     "current_ev": 19.6,
     "current_qi": 78,
-    "last_seen_at": "2026-06-13T11:30:08.569Z"
+    "last_seen_at": "2026-06-13T13:10:53.493Z"
   },
   {
     "bet_id": "cb0529d26ebe1a93",
@@ -147,7 +147,7 @@
     "current_model_price": 10.82,
     "current_ev": 20.15,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -171,7 +171,7 @@
     "current_model_price": 24.71,
     "current_ev": 5.22,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -195,7 +195,7 @@
     "current_model_price": 5.25,
     "current_ev": 4.76,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -219,7 +219,7 @@
     "current_model_price": 11.44,
     "current_ev": 4.9,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -243,7 +243,7 @@
     "current_model_price": 2.6,
     "current_ev": 44.62,
     "current_qi": 95,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 3.76,
@@ -273,7 +273,7 @@
     "current_model_price": 1.78,
     "current_ev": 12.36,
     "current_qi": 86,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 2,
@@ -303,7 +303,7 @@
     "current_model_price": 1.78,
     "current_ev": 9.55,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 1.95,
@@ -333,7 +333,7 @@
     "current_model_price": 5.8,
     "current_ev": 12.07,
     "current_qi": 79,
-    "last_seen_at": "2026-06-13T11:30:08.569Z",
+    "last_seen_at": "2026-06-13T13:10:53.493Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 6.5,
