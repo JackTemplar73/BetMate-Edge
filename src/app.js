@@ -259,8 +259,8 @@ function renderSummary() {
 
   document.querySelector('[data-summary-fixtures]').textContent = fixtures.length;
   document.querySelector('[data-summary-markets]').textContent = rows.length;
-  document.querySelector('[data-summary-best]').textContent = top ? `${top.target_selection} (QI = ${top.metrics.qi})` : '-';
-  document.querySelector('[data-summary-ev]').textContent = bestEv ? `${bestEv.target_selection} ${formatEv(bestEv)}` : '-';
+  document.querySelector('[data-summary-best]').textContent = top ? `${top.match_name}: ${top.target_selection} (QI = ${top.metrics.qi})` : '-';
+  document.querySelector('[data-summary-ev]').textContent = bestEv ? `${bestEv.match_name}: ${bestEv.target_selection} ${formatEv(bestEv)}` : '-';
 }
 
 function renderDataPanel() {
@@ -389,8 +389,8 @@ function renderHighValueBets() {
         <span class="qi-badge ${metricClass(market.metrics.qi)}">QI ${market.metrics.qi}</span>
         <span class="pill">${market.au_bookie}</span>
       </div>
+      <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
-      <p>${market.match_name}</p>
       ${market.market_matrix === 'Player Prop' ? `<p class="source-note">Checked books: ${playerPropBooks.join(', ')}</p>` : ''}
       <dl>
         <div><dt>Type</dt><dd>${plainMarketNames[market.market_matrix] || market.market_matrix}</dd></div>
