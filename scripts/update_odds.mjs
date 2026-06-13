@@ -34,6 +34,7 @@ const ESPN_LEAGUES = [
 ];
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
+const CLOSING_WINDOW_MS = 6 * 60 * 1000;
 
 const MARKET_MAP = {
   h2h: ['Full Match Model', 'Moneyline'],
@@ -300,6 +301,26 @@ function clvPercent(openingOdds, closingOdds) {
   return Number.parseFloat((((openingOdds / closingOdds) - 1) * 100).toFixed(2));
 }
 
+function hasFreshClosingPrice(marketItem, kickoff) {
+  const checkedAt = Date.parse(marketItem.odds_checked_at || '');
+  const status = marketItem.odds_refresh_status;
+  const wasChecked = status === 'checked_current' || status === 'updated';
+
+  if (!Number.isFinite(checkedAt) || !wasChecked) {
+    return null;
+  }
+
+  const delta = kickoff.getTime() - checkedAt;
+  if (delta < 0 || delta > CLOSING_WINDOW_MS) {
+    return null;
+  }
+
+  return {
+    checkedAt: new Date(checkedAt),
+    minutesBeforeKickoff: Math.round(delta / 60000)
+  };
+}
+
 async function syncBetHistory(dataset, now = getNow()) {
   const history = await readHistory();
   const byId = new Map(history
@@ -344,11 +365,17 @@ async function syncBetHistory(dataset, now = getNow()) {
       entry.current_qi = metrics.qi;
       entry.last_seen_at = nowIso;
 
-      if (now >= kickoff && entry.closing_odds === null) {
+      const freshClose = hasFreshClosingPrice(marketItem, kickoff);
+      if (freshClose && entry.closing_odds === null) {
         entry.closing_odds = currentOdds;
-        entry.closing_captured_at = nowIso;
-        entry.closing_source = 'Latest saved bookmaker price at or after kickoff';
+        entry.closing_captured_at = freshClose.checkedAt.toISOString();
+        entry.closing_source = `Confirmed Odds API check ${freshClose.minutesBeforeKickoff} min before kickoff`;
+        entry.closing_status = 'confirmed';
         entry.clv_percent = clvPercent(entry.opening_odds, entry.closing_odds);
+      } else if (now >= kickoff && entry.closing_odds === null) {
+        entry.closing_status = 'missing_fresh_close';
+        entry.closing_source = 'No confirmed Odds API check inside 6 minutes before kickoff';
+        entry.clv_percent = null;
       }
 
       byId.set(id, entry);

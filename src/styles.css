@@ -469,6 +469,14 @@ td {
   font-size: 12px;
 }
 
+.confirmed-text {
+  color: var(--green);
+}
+
+.warning-text {
+  color: var(--rust);
+}
+
 .qi-badge,
 .pill,
 .official {

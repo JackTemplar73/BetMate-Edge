@@ -582,9 +582,13 @@ function formatClv(value) {
 }
 
 function formatClosingDetail(bet) {
-  if (!bet.closing_captured_at) return '<span class="sub-cell">Captures at kickoff</span>';
+  if (bet.closing_status === 'missing_fresh_close') {
+    return `<span class="sub-cell warning-text">${bet.closing_source || 'No confirmed fresh close was captured.'}</span>`;
+  }
 
-  return `<span class="sub-cell">${formatter.format(new Date(bet.closing_captured_at))} AEST${bet.closing_source ? ` | ${bet.closing_source}` : ''}</span>`;
+  if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture from Odds API inside 6 minutes before kickoff</span>';
+
+  return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} AEST${bet.closing_source ? ` | ${bet.closing_source}` : ''}</span>`;
 }
 
 function bindSortControls() {
