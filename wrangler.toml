@@ -1,6 +1,7 @@
 name = "betmate-edge-odds"
 main = "cloudflare/odds-worker.js"
 compatibility_date = "2026-06-13"
+account_id = "d1d5ba0776b992b44dce5e29f3113787"
 workers_dev = true
 
 routes = [

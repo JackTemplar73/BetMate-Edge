@@ -9,7 +9,6 @@ Required Cloudflare Worker secrets:
 Required GitHub Actions secrets for automatic Worker deploys:
 
 - `CLOUDFLARE_API_TOKEN`
-- `CLOUDFLARE_ACCOUNT_ID`
 
 Live refresh URL used by the dashboard:
 
