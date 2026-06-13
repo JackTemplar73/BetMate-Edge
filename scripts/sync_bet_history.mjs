@@ -119,6 +119,7 @@ async function main() {
   const byId = new Map(history
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .map((entry) => [entry.bet_id, entry]));
+  const activeBetIds = new Set();
   const now = process.env.BETMATE_NOW ? new Date(process.env.BETMATE_NOW) : new Date();
   const nowIso = now.toISOString();
 
@@ -127,6 +128,7 @@ async function main() {
 
     for (const marketItem of fixture.markets || []) {
       const id = betId(fixture, marketItem);
+      activeBetIds.add(id);
       const metrics = runVectorCalculations(marketItem);
       const currentOdds = Number.parseFloat(marketItem.current_odds);
       const modelPrice = Number.parseFloat(marketItem.true_price);
@@ -198,6 +200,7 @@ async function main() {
 
   const nextHistory = [...byId.values()]
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
+    .filter((entry) => activeBetIds.has(entry.bet_id))
     .sort((a, b) => {
       const aKickoff = parseAest(a.kickoff_time_aest);
       const bKickoff = parseAest(b.kickoff_time_aest);

@@ -17,8 +17,7 @@ const BOOKMAKERS = new Map([
 ]);
 
 const DEFAULT_SPORT_KEYS = [
-  'soccer_fifa_world_cup',
-  'soccer_international_friendlies'
+  'soccer_fifa_world_cup'
 ];
 const ODDS_API_BOOKMAKERS = [
   'sportsbet',
@@ -28,6 +27,14 @@ const ODDS_API_BOOKMAKERS = [
   'pointsbetau',
   'betright'
 ];
+const BEST_PRICE_BOOKS = new Set([
+  'sportsbet',
+  'tab',
+  'neds',
+  'pointsbet',
+  'pointsbetau',
+  'betright'
+]);
 const ESPN_LEAGUES = [
   'fifa.world',
   'fifa.friendly'
@@ -337,6 +344,7 @@ async function syncBetHistory(dataset, now = getNow()) {
   const byId = new Map(history
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .map((entry) => [entry.bet_id, entry]));
+  const activeBetIds = new Set();
   const nowIso = now.toISOString();
 
   for (const fixture of dataset) {
@@ -344,6 +352,7 @@ async function syncBetHistory(dataset, now = getNow()) {
 
     for (const marketItem of fixture.markets || []) {
       const id = betId(fixture, marketItem);
+      activeBetIds.add(id);
       const metrics = runVectorCalculations(marketItem);
       const currentOdds = Number.parseFloat(marketItem.current_odds);
       const modelPrice = Number.parseFloat(marketItem.true_price);
@@ -415,6 +424,7 @@ async function syncBetHistory(dataset, now = getNow()) {
 
   const nextHistory = [...byId.values()]
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
+    .filter((entry) => activeBetIds.has(entry.bet_id))
     .sort((a, b) => {
       const aKickoff = parseAest(a.kickoff_time_aest);
       const bKickoff = parseAest(b.kickoff_time_aest);
@@ -450,6 +460,10 @@ function numberFromSelection(selection) {
   return match ? Number.parseFloat(match[1]) : null;
 }
 
+function comparableName(value) {
+  return String(value || '').replace(/\s*&\s*/g, ' and ');
+}
+
 function outcomeForMarket(marketItem, oddsMarket) {
   const selection = normalise(marketItem.target_selection);
 
@@ -460,7 +474,10 @@ function outcomeForMarket(marketItem, oddsMarket) {
 
     return oddsMarket.outcomes.find((outcome) => {
       const outcomeName = normalise(outcome.name);
-      return selection.includes(outcomeName) || outcomeName.includes(selection.replace('to win', '').trim());
+      const selectionTeam = selection.replace('to win', '').trim();
+      return selection.includes(outcomeName)
+        || outcomeName.includes(selectionTeam)
+        || comparableName(selectionTeam) === comparableName(outcomeName);
     });
   }
 
@@ -490,6 +507,109 @@ function outcomeForMarket(marketItem, oddsMarket) {
   }
 
   return null;
+}
+
+function targetSelectionForH2hOutcome(outcome) {
+  return normalise(outcome.name) === 'draw'
+    ? 'Match to end in a Draw'
+    : `${outcome.name} to Win`;
+}
+
+function findModelPriceForH2h(fixture, targetSelection) {
+  const target = normalise(targetSelection);
+  const match = (fixture.markets || []).find((marketItem) => {
+    return marketItem.market_matrix === 'Full Match Model'
+      && normalise(marketItem.target_selection) === target
+      && Number.isFinite(Number(marketItem.true_price));
+  });
+
+  return match ? Number(match.true_price) : null;
+}
+
+function addMissingH2hRowsFromOddsApi(fixture, event, nowIso) {
+  let added = 0;
+  fixture.markets = fixture.markets || [];
+
+  for (const bookmaker of event.bookmakers || []) {
+    const bookName = BOOKMAKERS.get(bookmaker.key) || bookmaker.title || bookmaker.key;
+    const h2hMarket = findMarket(bookmaker, ['h2h']);
+    if (!h2hMarket) continue;
+
+    for (const outcome of h2hMarket.outcomes || []) {
+      if (!Number.isFinite(Number(outcome.price))) continue;
+
+      const targetSelection = targetSelectionForH2hOutcome(outcome);
+      const exists = fixture.markets.some((marketItem) => {
+        return marketItem.market_matrix === 'Full Match Model'
+          && normalise(marketItem.target_selection) === normalise(targetSelection)
+          && normalise(marketItem.au_bookie) === normalise(bookName);
+      });
+
+      if (exists) continue;
+
+      const modelPrice = findModelPriceForH2h(fixture, targetSelection);
+      if (!Number.isFinite(modelPrice)) continue;
+
+      fixture.markets.push({
+        market_matrix: 'Full Match Model',
+        target_selection: targetSelection,
+        true_price: modelPrice,
+        current_odds: Number(Number(outcome.price).toFixed(2)),
+        au_bookie: bookName,
+        odds_checked_at: nowIso,
+        odds_updated_at: nowIso,
+        odds_refresh_status: 'added_from_oddsapi',
+        odds_refresh_note: `Added ${bookName} h2h price from Odds API.`
+      });
+      added += 1;
+    }
+  }
+
+  return added;
+}
+
+function collapseToBestAvailableH2h(fixture) {
+  const markets = fixture.markets || [];
+  const bestBySelection = new Map();
+
+  for (const marketItem of markets) {
+    if (marketItem.market_matrix !== 'Full Match Model') continue;
+    if (!BEST_PRICE_BOOKS.has(normalise(marketItem.au_bookie))) continue;
+
+    const key = normalise(marketItem.target_selection);
+    const current = bestBySelection.get(key);
+    const price = Number(marketItem.current_odds);
+    const currentPrice = Number(current?.current_odds);
+
+    if (!current || price > currentPrice) {
+      bestBySelection.set(key, {
+        ...marketItem,
+        odds_refresh_note: `${marketItem.odds_refresh_note || 'Checked via Odds API.'} Best available AU book price selected.`
+      });
+    }
+  }
+
+  const seenBest = new Set();
+  fixture.markets = markets.filter((marketItem) => {
+    if (marketItem.market_matrix !== 'Full Match Model') return true;
+    if (!BEST_PRICE_BOOKS.has(normalise(marketItem.au_bookie))) return true;
+
+    const key = normalise(marketItem.target_selection);
+    const best = bestBySelection.get(key);
+    const isBest = best
+      && normalise(best.au_bookie) === normalise(marketItem.au_bookie)
+      && Number(best.current_odds) === Number(marketItem.current_odds)
+      && !seenBest.has(key);
+
+    if (isBest) {
+      Object.assign(marketItem, best);
+      marketItem.best_price_checked_books = 'Sportsbet, Neds, TAB, PointsBet, BetRight';
+      seenBest.add(key);
+      return true;
+    }
+
+    return false;
+  });
 }
 
 async function fetchOddsForSport(sportKey, apiKey) {
@@ -554,6 +674,7 @@ async function main() {
     }
 
     fixture.odds_refresh_note = `Matched Odds API event ${event.id || event.commence_time}.`;
+    updates += addMissingH2hRowsFromOddsApi(fixture, event, nowIso);
 
     for (const marketItem of fixture.markets || []) {
       marketItem.odds_checked_at = nowIso;
@@ -601,6 +722,8 @@ async function main() {
       marketItem.odds_refresh_status = priceChanged ? 'updated' : 'checked_current';
       marketItem.odds_refresh_note = `Checked ${marketItem.au_bookie} via Odds API.`;
     }
+
+    collapseToBestAvailableH2h(fixture);
   }
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);

@@ -37,7 +37,7 @@ jobs:
       - name: Refresh prices when due
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          ODDS_API_SPORT_KEYS: soccer_fifa_world_cup,soccer_international_friendlies
+          ODDS_API_SPORT_KEYS: soccer_fifa_world_cup
         run: node scripts/update_odds.mjs
 
       - name: Publish updated odds
