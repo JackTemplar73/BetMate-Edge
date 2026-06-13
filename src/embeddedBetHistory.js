@@ -18,7 +18,7 @@ window.embeddedBetHistory = [
     "current_model_price": 3.34,
     "current_ev": 408.98,
     "current_qi": 100,
-    "last_seen_at": "2026-06-13T02:30:16.294Z",
+    "last_seen_at": "2026-06-13T06:39:34.473Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff"
   },
@@ -41,7 +41,7 @@ window.embeddedBetHistory = [
     "current_model_price": 4.06,
     "current_ev": 1156.16,
     "current_qi": 100,
-    "last_seen_at": "2026-06-13T02:30:16.294Z",
+    "last_seen_at": "2026-06-13T06:39:34.473Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff"
   },
@@ -64,7 +64,7 @@ window.embeddedBetHistory = [
     "current_model_price": 2.6,
     "current_ev": 44.62,
     "current_qi": 95,
-    "last_seen_at": "2026-06-13T02:30:16.294Z",
+    "last_seen_at": "2026-06-13T06:39:34.473Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close"
   },
@@ -87,7 +87,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 12.36,
     "current_qi": 86,
-    "last_seen_at": "2026-06-13T02:30:16.294Z",
+    "last_seen_at": "2026-06-13T06:39:34.473Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close"
   },
@@ -110,7 +110,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 9.55,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T02:30:16.294Z",
+    "last_seen_at": "2026-06-13T06:39:34.473Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close"
   },
@@ -133,7 +133,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.8,
     "current_ev": 12.07,
     "current_qi": 79,
-    "last_seen_at": "2026-06-13T02:30:16.294Z",
+    "last_seen_at": "2026-06-13T06:39:34.473Z",
     "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
     "closing_status": "missing_fresh_close"
   },
@@ -156,7 +156,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.61,
     "current_ev": 11.8,
     "current_qi": 87,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "cb6552a55d104f7e",
@@ -177,7 +177,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.95,
     "current_ev": 12.82,
     "current_qi": 86,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "81531c5928ca4dc5",
@@ -198,7 +198,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.74,
     "current_ev": 8.05,
     "current_qi": 81,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "abb85b4e18806a03",
@@ -219,7 +219,7 @@ window.embeddedBetHistory = [
     "current_model_price": 4.9,
     "current_ev": 12.24,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "1053824585cb3671",
@@ -240,7 +240,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.42,
     "current_ev": 17.61,
     "current_qi": 92,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "d2ace0ea8439fbff",
@@ -261,7 +261,7 @@ window.embeddedBetHistory = [
     "current_model_price": 2.45,
     "current_ev": 14.29,
     "current_qi": 84,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "d236affd5bf0536a",
@@ -282,7 +282,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.75,
     "current_ev": 9.71,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "49e2a28f37056271",
@@ -303,7 +303,7 @@ window.embeddedBetHistory = [
     "current_model_price": 6.2,
     "current_ev": 12.9,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "0669599084068621",
@@ -324,7 +324,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.9,
     "current_ev": 7.89,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "196a0cda8d87244b",
@@ -345,7 +345,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.6,
     "current_ev": 9.38,
     "current_qi": 84,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "d5ba1c8c41f32233",
@@ -366,7 +366,7 @@ window.embeddedBetHistory = [
     "current_model_price": 7.1,
     "current_ev": 12.68,
     "current_qi": 79,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "ea8adb38452eb1d7",
@@ -387,7 +387,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.38,
     "current_ev": 5.07,
     "current_qi": 76,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "8a8009156f469471",
@@ -404,11 +404,11 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "current_odds": 1.57,
+    "current_odds": 1.56,
     "current_model_price": 1.65,
-    "current_ev": -4.85,
-    "current_qi": 24,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "current_ev": -5.45,
+    "current_qi": 22,
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "810fac3668cabe0a",
@@ -429,7 +429,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.73,
     "current_ev": 21.39,
     "current_qi": 92,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "da44492578a009a0",
@@ -450,7 +450,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.72,
     "current_ev": 10.47,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "2df68f4aa78ff018",
@@ -471,7 +471,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.52,
     "current_ev": 9.87,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "27162dc528bb9a8e",
@@ -488,11 +488,11 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "current_odds": 3.6,
+    "current_odds": 3.7,
     "current_model_price": 3.15,
-    "current_ev": 14.29,
-    "current_qi": 83,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "current_ev": 17.46,
+    "current_qi": 85,
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "362ed1afc48dacbf",
@@ -513,7 +513,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.7,
     "current_ev": 8.82,
     "current_qi": 82,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "d27a65de2c4da6fb",
@@ -534,7 +534,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.75,
     "current_ev": 13.04,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "630fa01612c98b98",
@@ -555,7 +555,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.82,
     "current_ev": 7.69,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "90a91fc6f4f5438f",
@@ -576,28 +576,28 @@ window.embeddedBetHistory = [
     "current_model_price": 14.49,
     "current_ev": 38.03,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
-    "bet_id": "1d3d5c2cc425d229",
+    "bet_id": "cb0529d26ebe1a93",
     "match_name": "Spain vs Cape Verde",
     "kickoff_time_aest": "2026-06-16T02:00:00",
     "market_matrix": "Full Match Model",
-    "target_selection": "Cape Verde to Win",
+    "target_selection": "Match to end in a Draw",
     "au_bookie": "Sportsbet",
     "first_seen_at": "2026-06-12T13:34:51.251Z",
-    "opening_odds": 26,
-    "opening_model_price": 24.71,
-    "opening_ev": 5.22,
-    "opening_qi": 70,
+    "opening_odds": 13,
+    "opening_model_price": 10.82,
+    "opening_ev": 20.15,
+    "opening_qi": 80,
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "current_odds": 26,
-    "current_model_price": 24.71,
-    "current_ev": 5.22,
-    "current_qi": 70,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "current_odds": 13,
+    "current_model_price": 10.82,
+    "current_ev": 20.15,
+    "current_qi": 80,
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "f1bb9e1a5c11312a",
@@ -618,28 +618,28 @@ window.embeddedBetHistory = [
     "current_model_price": 24.71,
     "current_ev": 5.22,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
-    "bet_id": "cb0529d26ebe1a93",
+    "bet_id": "1d3d5c2cc425d229",
     "match_name": "Spain vs Cape Verde",
     "kickoff_time_aest": "2026-06-16T02:00:00",
     "market_matrix": "Full Match Model",
-    "target_selection": "Match to end in a Draw",
+    "target_selection": "Cape Verde to Win",
     "au_bookie": "Sportsbet",
     "first_seen_at": "2026-06-12T13:34:51.251Z",
-    "opening_odds": 13,
-    "opening_model_price": 10.82,
-    "opening_ev": 20.15,
-    "opening_qi": 80,
+    "opening_odds": 26,
+    "opening_model_price": 24.71,
+    "opening_ev": 5.22,
+    "opening_qi": 70,
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "current_odds": 11,
-    "current_model_price": 10.82,
-    "current_ev": 1.66,
-    "current_qi": 58,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "current_odds": 23,
+    "current_model_price": 24.71,
+    "current_ev": -6.92,
+    "current_qi": 26,
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "7b74c1923eb290a0",
@@ -660,7 +660,7 @@ window.embeddedBetHistory = [
     "current_model_price": 14.14,
     "current_ev": 6.08,
     "current_qi": 72,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "33a928f1b54a0991",
@@ -681,7 +681,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.25,
     "current_ev": 4.76,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   },
   {
     "bet_id": "e061d882d2652aa3",
@@ -698,10 +698,10 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "current_odds": 11,
+    "current_odds": 12,
     "current_model_price": 11.44,
-    "current_ev": -3.85,
-    "current_qi": 32,
-    "last_seen_at": "2026-06-13T02:30:16.294Z"
+    "current_ev": 4.9,
+    "current_qi": 70,
+    "last_seen_at": "2026-06-13T06:39:34.473Z"
   }
 ];
