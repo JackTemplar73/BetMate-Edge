@@ -17,3 +17,5 @@ https://fifaworldcup-api.betmateedge.com/refresh
 ```
 
 The static GitHub Pages data remains the fallback. If the Worker is unavailable, the dashboard reloads the latest saved JSON and says so.
+
+Deployment is handled by GitHub Actions whenever the Worker files or `wrangler.toml` change.
