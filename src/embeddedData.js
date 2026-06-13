@@ -5,7 +5,7 @@ window.embeddedDataset = [
     "pitch_type": "No clear pitch edge",
     "pitch_constraints": "No reliable pitch advantage confirmed. The model is mainly using team strength, draw risk, and current bookmaker prices.",
     "referee_name": "Facundo Tello (Argentina)",
-    "referee_tendencies": "Confirmed referee. Treat as strict on time-wasting and game-management rules; no extra card-model boost is added unless a referee profile is separately modelled.",
+    "referee_tendencies": "Verified ref: Facundo Tello is expected to manage time-wasting firmly. That slightly helps bets linked to delays, discipline, and late-game control, but it does not create a standalone card edge.",
     "tactical_summary": "Canada bring direct wide running and fast attacks into space, while Bosnia & Herzegovina bring slower possession and physical central duels. The full match model rates Canada as the most likely winner at about 52.1%, with the draw around 27.2%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
@@ -108,7 +108,7 @@ window.embeddedDataset = [
     "pitch_type": "No clear pitch edge",
     "pitch_constraints": "No reliable pitch advantage confirmed. The model is mainly using team strength, draw risk, and current bookmaker prices.",
     "referee_name": "Danny Makkelie (Netherlands)",
-    "referee_tendencies": "High structural accountability; rapid to penalize tactical line disruption.",
+    "referee_tendencies": "Verified ref: Danny Makkelie usually punishes tactical fouls and cynical stops quickly. That supports the card-risk angle for Paraguay defenders if USA keep attacking in transition.",
     "tactical_summary": "USA bring high-tempo pressing and wide overloads, while Paraguay bring compact defending and counter-attacking phases. The full match model rates USA as the most likely winner at about 45.5%, with the draw around 29.9%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
@@ -251,7 +251,7 @@ window.embeddedDataset = [
     "pitch_type": "No clear pitch edge",
     "pitch_constraints": "No reliable pitch advantage confirmed. The model is mainly using team strength, draw risk, and current bookmaker prices.",
     "referee_name": "Mustapha Ghorbal (Algeria)",
-    "referee_tendencies": "Tolerates standard heavy physical challenges but penalizes late tackles.",
+    "referee_tendencies": "Mustapha Ghorbal (Algeria) is listed in the model notes, but not independently verified yet. Treat any referee angle as a watch item, not a betting edge.",
     "tactical_summary": "Qatar bring deep defensive blocks and low-risk possession, while Switzerland bring controlled midfield tempo and disciplined structure. The full match model rates Switzerland as the most likely winner at about 77.5%, with the draw around 15.5%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
@@ -408,7 +408,7 @@ window.embeddedDataset = [
     "pitch_type": "No clear pitch edge",
     "pitch_constraints": "No reliable pitch advantage confirmed. The model is mainly using team strength, draw risk, and current bookmaker prices.",
     "referee_name": "Clement Turpin (France)",
-    "referee_tendencies": "High compliance standard; strictly punishes persistent professional fouling.",
+    "referee_tendencies": "Clement Turpin (France) is listed in the model notes, but not independently verified yet. Treat any referee angle as a watch item, not a betting edge.",
     "tactical_summary": "Brazil bring technical overloads and individual creation, while Morocco bring compact defensive spacing and fast transitions. The full match model rates Brazil as the most likely winner at about 57.8%, with the draw around 24.9%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
@@ -567,7 +567,7 @@ window.embeddedDataset = [
     "pitch_type": "No clear pitch edge",
     "pitch_constraints": "No reliable pitch advantage confirmed. The model is mainly using team strength, draw risk, and current bookmaker prices.",
     "referee_name": "Wilmar Roldan (Colombia)",
-    "referee_tendencies": "Highly permissive of shoulder-to-shoulder contact; limits match stoppages.",
+    "referee_tendencies": "Wilmar Roldan (Colombia) is listed in the model notes, but not independently verified yet. Treat any referee angle as a watch item, not a betting edge.",
     "tactical_summary": "Haiti bring straight-line speed and transition attacks, while Scotland bring set-piece pressure, width, and physical duels. The full match model rates Scotland as the most likely winner at about 59.9%, with the draw around 23.1%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
@@ -710,7 +710,7 @@ window.embeddedDataset = [
     "pitch_type": "No clear pitch edge",
     "pitch_constraints": "No reliable pitch advantage confirmed. The model is mainly using team strength, draw risk, and current bookmaker prices.",
     "referee_name": "Jesus Valenzuela (Venezuela)",
-    "referee_tendencies": "Highly lenient with physical upper-body challenges.",
+    "referee_tendencies": "Jesus Valenzuela (Venezuela) is listed in the model notes, but not independently verified yet. Treat any referee angle as a watch item, not a betting edge.",
     "tactical_summary": "Australia bring physical defensive structure and direct transitions, while Turkiye bring technical midfield combinations and aggressive forward play. The full match model rates Turkey as the most likely winner at about 55.6%, with the draw around 26.2%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
