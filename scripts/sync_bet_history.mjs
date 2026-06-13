@@ -102,6 +102,17 @@ function hasFreshClosingPrice(marketItem, kickoff) {
   };
 }
 
+function shouldDropCorrectedOutlier(existing, metrics, currentOdds) {
+  const openingOdds = Number.parseFloat(existing?.opening_odds);
+
+  return Boolean(existing)
+    && metrics.qi < MIN_TRACKED_QI
+    && Number(existing.opening_qi) >= MIN_TRACKED_QI
+    && Number.isFinite(openingOdds)
+    && Number.isFinite(currentOdds)
+    && Math.max(openingOdds, currentOdds) / Math.min(openingOdds, currentOdds) >= 3;
+}
+
 async function main() {
   const dataset = JSON.parse(await readFile(DATA_PATH, 'utf8'));
   const history = await readHistory();
@@ -125,6 +136,11 @@ async function main() {
         continue;
       }
 
+      if (shouldDropCorrectedOutlier(existing, metrics, currentOdds)) {
+        byId.delete(id);
+        continue;
+      }
+
       const entry = existing || {
         bet_id: id,
         match_name: fixture.match_name,
@@ -142,9 +158,15 @@ async function main() {
         clv_percent: null,
         estimated_closing_odds: null,
         estimated_clv_percent: null,
-        estimated_closing_source: null
+        estimated_closing_source: null,
+        result_status: 'pending',
+        result_detail: 'Awaiting final result check.',
+        settlement_source: null
       };
 
+      entry.result_status = entry.result_status || 'pending';
+      entry.result_detail = entry.result_detail || 'Awaiting final result check.';
+      entry.settlement_source = entry.settlement_source || null;
       entry.current_odds = currentOdds;
       entry.current_model_price = modelPrice;
       entry.current_ev = metrics.ev;
@@ -177,7 +199,13 @@ async function main() {
   const nextHistory = [...byId.values()]
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .sort((a, b) => {
-      const timeDiff = new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest);
+      const aKickoff = parseAest(a.kickoff_time_aest);
+      const bKickoff = parseAest(b.kickoff_time_aest);
+      const aCompleted = aKickoff <= now;
+      const bCompleted = bKickoff <= now;
+      if (aCompleted !== bCompleted) return aCompleted ? 1 : -1;
+
+      const timeDiff = aKickoff - bKickoff;
       if (timeDiff !== 0) return timeDiff;
       return b.current_qi - a.current_qi;
     });

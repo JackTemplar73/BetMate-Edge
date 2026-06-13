@@ -197,25 +197,25 @@
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.34,
-        "current_odds": 17,
+        "current_odds": 3.2,
         "au_bookie": "TAB",
-        "previous_odds": 3.2,
+        "bad_odds_removed": 17,
         "odds_updated_at": "2026-06-13T01:55:34.076Z",
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
-        "odds_refresh_note": "TAB was not present in the matched Odds API event."
+        "odds_refresh_note": "Bad outlier removed; using latest recorded TAB price before kickoff."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Paraguay to Win",
         "true_price": 4.06,
-        "current_odds": 51,
+        "current_odds": 4,
         "au_bookie": "TAB",
-        "previous_odds": 4,
+        "bad_odds_removed": 51,
         "odds_updated_at": "2026-06-13T01:55:34.076Z",
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
-        "odds_refresh_note": "TAB was not present in the matched Odds API event."
+        "odds_refresh_note": "Bad outlier removed; using latest recorded TAB price before kickoff."
       },
       {
         "market_matrix": "Full Match Model",

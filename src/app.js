@@ -507,7 +507,7 @@ function renderBetHistory() {
   const rows = state.betHistory.length > 0
     ? [...state.betHistory]
       .filter((bet) => Number(bet.opening_qi) >= 70)
-      .sort((a, b) => new Date(b.last_seen_at || 0) - new Date(a.last_seen_at || 0))
+      .sort(sortHistoryRows)
     : flattenMarkets(getUpcomingFixtures())
       .filter((market) => market.metrics.qi >= 70)
       .map((market) => ({
@@ -527,7 +527,7 @@ function renderBetHistory() {
       .sort((a, b) => b.current_qi - a.current_qi);
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="10">No QI 70+ bets available right now.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="11">No QI 70+ bets available right now.</td></tr>';
     return;
   }
 
@@ -541,6 +541,7 @@ function renderBetHistory() {
       <td>${formatDirection(bet)}</td>
       <td>${formatClosingPrice(bet)}${formatClosingDetail(bet)}</td>
       <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
+      <td>${formatBetResult(bet)}</td>
       <td><span class="qi-badge ${metricClass(Number(bet.opening_qi))}">${Number.isFinite(Number(bet.opening_qi)) ? bet.opening_qi : '-'}</span></td>
       <td><span class="qi-badge ${metricClass(bet.current_qi)}">${Number.isFinite(Number(bet.current_qi)) ? bet.current_qi : '-'}</span></td>
     </tr>
@@ -580,6 +581,23 @@ function renderCompletedGames() {
 function formatHistoryPrice(value, fallback = '-') {
   const numeric = Number.parseFloat(value);
   return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : fallback;
+}
+
+function sortHistoryRows(a, b) {
+  const now = new Date();
+  const aKickoff = parseKickoff(a.kickoff_time_aest);
+  const bKickoff = parseKickoff(b.kickoff_time_aest);
+  const aCompleted = aKickoff <= now;
+  const bCompleted = bKickoff <= now;
+
+  if (aCompleted !== bCompleted) {
+    return aCompleted ? 1 : -1;
+  }
+
+  const timeDiff = aKickoff - bKickoff;
+  if (timeDiff !== 0) return timeDiff;
+
+  return Number(b.current_qi || 0) - Number(a.current_qi || 0);
 }
 
 function formatClv(value) {
@@ -669,6 +687,32 @@ function formatClosingDetail(bet) {
   if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture from Odds API inside 2 minutes before kickoff</span>';
 
   return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} AEST${bet.closing_source ? ` | ${bet.closing_source}` : ''}</span>`;
+}
+
+function formatBetResult(bet) {
+  const status = String(bet.result_status || '').toLowerCase();
+  const resultClass = {
+    won: 'positive',
+    win: 'positive',
+    lost: 'negative',
+    loss: 'negative',
+    push: 'neutral-text',
+    void: 'neutral-text',
+    pending: 'neutral-text'
+  }[status] || 'neutral-text';
+
+  const label = {
+    won: 'Won',
+    win: 'Won',
+    lost: 'Lost',
+    loss: 'Lost',
+    push: 'Push',
+    void: 'Void',
+    pending: 'Pending'
+  }[status] || 'Pending';
+
+  const detail = bet.result_detail || bet.settlement_source || 'Awaiting final result check.';
+  return `<span class="primary-cell ${resultClass}">${label}</span><span class="sub-cell">${detail}</span>`;
 }
 
 function bindSortControls() {
