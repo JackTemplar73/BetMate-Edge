@@ -106,7 +106,7 @@ function shouldRefresh(dataset, now = getNow()) {
   }
 
   const oneHourMs = 60 * 60 * 1000;
-  const twoHoursMs = 2 * 60 * 60 * 1000;
+  const fourHoursMs = 4 * 60 * 60 * 1000;
   const latestCheck = latestOddsCheck(dataset);
   const pricesAreStale = !latestCheck || now - latestCheck >= BASELINE_STALE_MS;
   const upcoming = dataset
@@ -122,29 +122,27 @@ function shouldRefresh(dataset, now = getNow()) {
   });
 
   if (insideOneHour) {
-    return { refresh: true, cadence: 'final-hour-5-minute' };
+    return { refresh: true, cadence: 'final-hour-live-5-minute' };
   }
 
-  const insideTwoHours = upcoming.some((fixture) => {
+  const insideFourHours = upcoming.some((fixture) => {
     const untilKickoff = fixture.kickoff - now;
-    return untilKickoff >= 0 && untilKickoff <= twoHoursMs;
+    return untilKickoff > oneHourMs && untilKickoff <= fourHoursMs;
   });
 
-  if (insideTwoHours) {
-    return now.getMinutes() % 15 === 0
-      ? { refresh: true, cadence: 'final-two-hours-15-minute' }
-      : { refresh: false, cadence: 'skip-between-15-minute-refreshes' };
+  if (insideFourHours) {
+    return { refresh: true, cadence: 'four-to-one-hours-5-minute' };
   }
 
   if (pricesAreStale) {
     return { refresh: true, cadence: 'stale-baseline-30-minute' };
   }
 
-  if (now.getMinutes() === 0) {
-    return { refresh: true, cadence: 'hourly' };
+  if (now.getMinutes() % 30 === 0) {
+    return { refresh: true, cadence: 'baseline-30-minute' };
   }
 
-  return { refresh: false, cadence: 'skip-between-hourly-refreshes' };
+  return { refresh: false, cadence: 'skip-between-30-minute-refreshes' };
 }
 
 function splitTeams(matchName) {

@@ -6,6 +6,8 @@ on:
     branches:
       - main
   schedule:
+    # Wake every 5 minutes; scripts/update_odds.mjs decides whether this run
+    # should refresh now based on kickoff proximity.
     - cron: '*/5 * * * *'
 
 permissions:
