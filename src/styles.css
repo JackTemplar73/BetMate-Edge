@@ -369,6 +369,7 @@ h3 {
 }
 
 .high-value-section,
+.match-model-section,
 .player-prop-watchlist {
   margin-bottom: 22px;
 }
@@ -425,6 +426,55 @@ h3 {
 .source-note {
   font-size: 12px;
   line-height: 1.35;
+}
+
+.match-model-list {
+  margin-top: 16px;
+}
+
+.match-model-summary {
+  margin-bottom: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.match-model-scroll {
+  display: grid;
+  gap: 8px;
+  max-height: 520px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+
+.match-model-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(420px, 0.9fr);
+  gap: 14px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.match-model-row strong,
+.match-model-row span {
+  display: block;
+}
+
+.match-model-row strong {
+  line-height: 1.25;
+}
+
+.match-model-row span {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.match-model-row dl {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .match-props-block {
@@ -884,6 +934,14 @@ dd {
 
   .data-grid {
     grid-template-columns: 1fr;
+  }
+
+  .match-model-row {
+    grid-template-columns: 1fr;
+  }
+
+  .match-model-row dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
 }

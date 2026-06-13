@@ -466,6 +466,73 @@ function renderHighValueBets() {
   `).join('');
 }
 
+function getMatchModelHighlights() {
+  const pricedSelections = flattenMarkets(getUpcomingFixtures())
+    .filter(hasModelPrice)
+    .map((market) => ({
+      match_name: market.match_name,
+      selection: market.target_selection,
+      market: plainMarketNames[market.market_matrix] || market.market_matrix,
+      category: 'Priced selection',
+      probability: Number(((1 / Number.parseFloat(market.true_price)) * 100).toFixed(1)),
+      fair_price: Number.parseFloat(market.true_price),
+      odds: hasMarketOdds(market) ? Number.parseFloat(market.current_odds) : null,
+      book: market.au_bookie || 'Model only'
+    }));
+
+  const markovSelections = getUpcomingFixtures().flatMap((fixture) => {
+    return (fixture.markov_market_model || []).map((item) => ({
+      match_name: fixture.match_name,
+      selection: item.selection,
+      market: item.market,
+      category: item.category,
+      probability: Number(item.probability),
+      fair_price: Number(item.fair_price),
+      odds: null,
+      book: 'Model only'
+    }));
+  });
+
+  return [...pricedSelections, ...markovSelections]
+    .filter((item) => Number.isFinite(item.probability) && item.probability >= 55)
+    .sort((a, b) => {
+      if (b.probability !== a.probability) return b.probability - a.probability;
+      return a.match_name.localeCompare(b.match_name) || a.selection.localeCompare(b.selection);
+    });
+}
+
+function renderMatchModelHighlights() {
+  const container = document.querySelector('[data-match-model-highlights]');
+  if (!container) return;
+
+  const rows = getMatchModelHighlights();
+
+  if (rows.length === 0) {
+    container.innerHTML = '<p class="empty-note">No model selections are 55% or higher right now.</p>';
+    return;
+  }
+
+  container.innerHTML = `
+    <div class="match-model-summary">${rows.length} selections at 55%+ model probability</div>
+    <div class="match-model-scroll">
+      ${rows.map((row) => `
+        <article class="match-model-row">
+          <div>
+            <strong>${row.selection}</strong>
+            <span>${row.match_name} | ${row.category} | ${row.market}</span>
+          </div>
+          <dl>
+            <div><dt>Model Prob</dt><dd>${row.probability.toFixed(1)}%</dd></div>
+            <div><dt>Fair Price</dt><dd>$${row.fair_price.toFixed(2)}</dd></div>
+            <div><dt>Odds</dt><dd>${Number.isFinite(row.odds) ? `$${row.odds.toFixed(2)}` : '-'}</dd></div>
+            <div><dt>Book</dt><dd>${row.book}</dd></div>
+          </dl>
+        </article>
+      `).join('')}
+    </div>
+  `;
+}
+
 function formatModelOnlyPrice(value) {
   const numeric = Number.parseFloat(value);
   return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : 'Not priced';
@@ -972,6 +1039,7 @@ function render() {
   renderSourceTable();
   renderSummary();
   renderHighValueBets();
+  renderMatchModelHighlights();
   renderPlayerPropWatchlist();
   renderMatchTabs();
   renderFilters();
