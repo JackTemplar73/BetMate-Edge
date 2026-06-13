@@ -601,7 +601,7 @@ function bindRefreshOdds() {
   const button = document.querySelector('[data-refresh-odds]');
   button.addEventListener('click', async () => {
     button.disabled = true;
-    button.textContent = 'Refreshing...';
+    button.textContent = window.location.protocol === 'file:' ? 'Reloading...' : 'Refreshing...';
     document.querySelector('[data-app-error]').textContent = '';
 
     await loadDataset({ bustCache: true });
@@ -613,7 +613,9 @@ function bindRefreshOdds() {
     const noteElement = document.querySelector('[data-refresh-note]');
     if (noteElement) {
       noteElement.dataset.userMessage = 'true';
-      noteElement.textContent = 'Odds refreshed and QI was recalculated.';
+      noteElement.textContent = window.location.protocol === 'file:'
+        ? 'Local file reloaded saved data. Live odds updates run on the GitHub site.'
+        : 'Latest saved odds data was reloaded.';
     }
   });
 }
@@ -651,6 +653,7 @@ Promise.all([loadDataset(), loadBetHistory()])
     bindRefreshOdds();
     bindViewTabs();
     render();
+    setInterval(render, 30000);
   })
   .catch((error) => {
     console.error(error);
