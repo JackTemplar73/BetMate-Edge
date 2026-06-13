@@ -49,7 +49,7 @@ async function loadDataset({ bustCache = false } = {}) {
   }
 
   try {
-    const url = bustCache ? `./data/weekend_payload.json?t=${Date.now()}` : './data/weekend_payload.json';
+    const url = `./data/weekend_payload.json?t=${Date.now()}`;
     const response = await fetch(url, { cache: 'no-store' });
     if (!response.ok) {
       throw new Error(`Dataset failed to load: ${response.status}`);
@@ -72,7 +72,7 @@ async function loadBetHistory({ bustCache = false } = {}) {
   }
 
   try {
-    const url = bustCache ? `./data/bet_history.json?t=${Date.now()}` : './data/bet_history.json';
+    const url = `./data/bet_history.json?t=${Date.now()}`;
     const response = await fetch(url, { cache: 'no-store' });
     if (!response.ok) {
       throw new Error(`Bet history failed to load: ${response.status}`);
