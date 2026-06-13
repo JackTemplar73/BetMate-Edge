@@ -44,10 +44,15 @@ jobs:
         id: deploy_worker
         continue-on-error: true
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          RAW_CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
         run: |
           set +e
+          clean_token="$RAW_CLOUDFLARE_API_TOKEN"
+          if printf "%s" "$clean_token" | grep -q "Bearer "; then
+            clean_token="$(printf "%s" "$clean_token" | sed -nE 's/.*Bearer[[:space:]]+([^"[:space:]]+).*/\1/p')"
+          fi
+          export CLOUDFLARE_API_TOKEN="$clean_token"
           npx wrangler@latest secret put ODDS_API_KEY --config wrangler.toml < <(printf "%s" "$ODDS_API_KEY") > /tmp/wrangler.log 2>&1
           secret_status=$?
           npx wrangler@latest deploy --config wrangler.toml >> /tmp/wrangler.log 2>&1
