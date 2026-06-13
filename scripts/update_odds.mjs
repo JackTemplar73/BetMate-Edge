@@ -44,10 +44,152 @@ const BASELINE_STALE_MS = 30 * 60 * 1000;
 const CLOSING_WINDOW_MS = 30 * 60 * 1000;
 const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
 
+const ODDS_API_MARKETS = [
+  'h2h',
+  'h2h_3_way',
+  'h2h_lay',
+  'h2h_3_way_lay',
+  'spreads',
+  'alternate_spreads',
+  'totals',
+  'alternate_totals',
+  'team_totals',
+  'alternate_team_totals',
+  'draw_no_bet',
+  'double_chance',
+  'btts',
+  'halftime_fulltime',
+  'odd_even',
+  'h2h_h1',
+  'h2h_h2',
+  'h2h_3_way_h1',
+  'h2h_3_way_h2',
+  'h2h_3_way_h1_lay',
+  'spreads_h1',
+  'alternate_spreads_h1',
+  'alternate_spreads_h2',
+  'totals_h1',
+  'totals_h2',
+  'alternate_totals_h1',
+  'alternate_totals_h2',
+  'alternate_totals_h1_lay',
+  'team_totals_h1',
+  'alternate_team_totals_h1',
+  'alternate_team_totals_h2',
+  'btts_h1',
+  'btts_h2',
+  'double_chance_h1',
+  'double_chance_h2',
+  'odd_even_h1',
+  'alternate_spreads_corners',
+  'alternate_totals_corners',
+  'alternate_totals_corners_h1',
+  'alternate_totals_corners_lay',
+  'alternate_spreads_cards',
+  'alternate_totals_cards',
+  'alternate_totals_cards_lay',
+  'alternate_asian_handicap',
+  'alternate_asian_handicap_lay',
+  'alternate_totals_lay',
+  'btts_lay',
+  'double_chance_lay',
+  'draw_no_bet_lay',
+  'halftime_fulltime_lay',
+  'player_goal_scorer_anytime',
+  'player_goal_scorer_anytime_lay',
+  'player_first_goal_scorer',
+  'player_first_goal_scorer_lay',
+  'player_last_goal_scorer',
+  'player_to_score_or_assist',
+  'player_goals',
+  'player_goals_alternate',
+  'player_assists',
+  'player_assists_alternate',
+  'player_shots',
+  'player_shots_alternate',
+  'player_shots_on_target',
+  'player_shots_on_target_alternate',
+  'player_shots_on_target_alternate_lay',
+  'player_tackles_alternate',
+  'player_fouls',
+  'player_goalie_saves_alternate',
+  'player_to_receive_card',
+  'player_to_receive_card_lay',
+  'player_to_receive_red_card'
+];
+
 const MARKET_MAP = {
   h2h: ['Full Match Model', 'Moneyline'],
+  h2h_3_way: ['Full Match Model', 'Moneyline'],
+  h2h_lay: ['Full Match Model Lay', 'Moneyline Lay'],
+  h2h_3_way_lay: ['Full Match Model Lay', 'Moneyline Lay'],
   spreads: ['Spread'],
-  totals: ['Totals']
+  alternate_spreads: ['Spread', 'Asian Handicap'],
+  alternate_asian_handicap: ['Spread', 'Asian Handicap'],
+  alternate_asian_handicap_lay: ['Asian Handicap Lay'],
+  totals: ['Totals'],
+  alternate_totals: ['Totals'],
+  alternate_totals_lay: ['Totals Lay'],
+  team_totals: ['Team Totals'],
+  alternate_team_totals: ['Team Totals'],
+  draw_no_bet: ['Draw No Bet'],
+  draw_no_bet_lay: ['Draw No Bet Lay'],
+  double_chance: ['Double Chance'],
+  double_chance_lay: ['Double Chance Lay'],
+  btts: ['Both Teams To Score', 'BTTS'],
+  btts_lay: ['Both Teams To Score Lay', 'BTTS Lay'],
+  halftime_fulltime: ['Half Time Full Time'],
+  halftime_fulltime_lay: ['Half Time Full Time Lay'],
+  odd_even: ['Odd Even'],
+  h2h_h1: ['First Half Moneyline'],
+  h2h_h2: ['Second Half Moneyline'],
+  h2h_3_way_h1: ['First Half Moneyline'],
+  h2h_3_way_h2: ['Second Half Moneyline'],
+  h2h_3_way_h1_lay: ['First Half Moneyline Lay'],
+  spreads_h1: ['First Half Spread'],
+  alternate_spreads_h1: ['First Half Spread'],
+  alternate_spreads_h2: ['Second Half Spread'],
+  totals_h1: ['First Half Totals'],
+  totals_h2: ['Second Half Totals'],
+  alternate_totals_h1: ['First Half Totals'],
+  alternate_totals_h2: ['Second Half Totals'],
+  alternate_totals_h1_lay: ['First Half Totals Lay'],
+  team_totals_h1: ['First Half Team Totals'],
+  alternate_team_totals_h1: ['First Half Team Totals'],
+  alternate_team_totals_h2: ['Second Half Team Totals'],
+  btts_h1: ['First Half Both Teams To Score', 'First Half BTTS'],
+  btts_h2: ['Second Half Both Teams To Score', 'Second Half BTTS'],
+  double_chance_h1: ['First Half Double Chance'],
+  double_chance_h2: ['Second Half Double Chance'],
+  odd_even_h1: ['First Half Odd Even'],
+  alternate_spreads_corners: ['Corners Spread'],
+  alternate_totals_corners: ['Corners Totals'],
+  alternate_totals_corners_h1: ['First Half Corners Totals'],
+  alternate_totals_corners_lay: ['Corners Totals Lay'],
+  alternate_spreads_cards: ['Cards Spread'],
+  alternate_totals_cards: ['Cards Totals'],
+  alternate_totals_cards_lay: ['Cards Totals Lay'],
+  player_goal_scorer_anytime: ['Player Prop'],
+  player_goal_scorer_anytime_lay: ['Player Prop Lay'],
+  player_first_goal_scorer: ['Player Prop'],
+  player_first_goal_scorer_lay: ['Player Prop Lay'],
+  player_last_goal_scorer: ['Player Prop'],
+  player_to_score_or_assist: ['Player Prop'],
+  player_goals: ['Player Prop'],
+  player_goals_alternate: ['Player Prop'],
+  player_assists: ['Player Prop'],
+  player_assists_alternate: ['Player Prop'],
+  player_shots: ['Player Prop'],
+  player_shots_alternate: ['Player Prop'],
+  player_shots_on_target: ['Player Prop'],
+  player_shots_on_target_alternate: ['Player Prop'],
+  player_shots_on_target_alternate_lay: ['Player Prop Lay'],
+  player_tackles_alternate: ['Player Prop'],
+  player_fouls: ['Player Prop'],
+  player_goalie_saves_alternate: ['Player Prop'],
+  player_to_receive_card: ['Player Prop'],
+  player_to_receive_card_lay: ['Player Prop Lay'],
+  player_to_receive_red_card: ['Player Prop']
 };
 
 const TEAM_ALIASES = new Map([
@@ -659,6 +801,10 @@ function findMarket(bookmaker, keys) {
   return (bookmaker.markets || []).find((market) => keys.includes(market.key)) || null;
 }
 
+function isMarketKey(marketKey, prefixes) {
+  return prefixes.some((prefix) => marketKey === prefix || marketKey.startsWith(`${prefix}_`) || marketKey.startsWith(`alternate_${prefix}`));
+}
+
 function numberFromSelection(selection) {
   const match = String(selection).match(/([+-]?\d+(?:\.\d+)?)/);
   return match ? Number.parseFloat(match[1]) : null;
@@ -670,8 +816,9 @@ function comparableName(value) {
 
 function outcomeForMarket(marketItem, oddsMarket) {
   const selection = normalise(marketItem.target_selection);
+  const marketKey = oddsMarket.key || '';
 
-  if (MARKET_MAP.h2h.includes(marketItem.market_matrix)) {
+  if (isMarketKey(marketKey, ['h2h']) || MARKET_MAP.h2h.includes(marketItem.market_matrix)) {
     if (selection.includes('draw') || selection.includes('end in a draw')) {
       return oddsMarket.outcomes.find((outcome) => normalise(outcome.name) === 'draw');
     }
@@ -685,7 +832,7 @@ function outcomeForMarket(marketItem, oddsMarket) {
     });
   }
 
-  if (MARKET_MAP.spreads.includes(marketItem.market_matrix)) {
+  if (isMarketKey(marketKey, ['spreads', 'asian_handicap']) || MARKET_MAP.spreads.includes(marketItem.market_matrix)) {
     const targetPoint = numberFromSelection(marketItem.target_selection);
     if (!Number.isFinite(targetPoint)) return null;
 
@@ -697,7 +844,7 @@ function outcomeForMarket(marketItem, oddsMarket) {
     });
   }
 
-  if (MARKET_MAP.totals.includes(marketItem.market_matrix)) {
+  if (isMarketKey(marketKey, ['totals', 'team_totals'])) {
     const targetPoint = numberFromSelection(marketItem.target_selection);
     const wantsUnder = selection.includes('under');
     const wantsOver = selection.includes('over');
@@ -709,6 +856,57 @@ function outcomeForMarket(marketItem, oddsMarket) {
         && ((wantsUnder && outcomeName === 'under') || (wantsOver && outcomeName === 'over'));
     });
   }
+
+  if (marketKey.includes('double_chance')) {
+    return oddsMarket.outcomes.find((outcome) => {
+      const outcomeName = normalise(outcome.name);
+      return selection.includes(outcomeName) || outcomeName.includes(selection);
+    });
+  }
+
+  if (marketKey.includes('draw_no_bet')) {
+    return oddsMarket.outcomes.find((outcome) => {
+      const outcomeName = normalise(outcome.name);
+      return selection.includes(outcomeName) || outcomeName.includes(selection.replace('draw no bet', '').trim());
+    });
+  }
+
+  if (marketKey.includes('btts')) {
+    const wantsYes = selection.includes('yes') || selection.includes('both teams to score');
+    const wantsNo = selection.includes('no') || selection.includes('both teams not to score');
+    return oddsMarket.outcomes.find((outcome) => {
+      const outcomeName = normalise(outcome.name);
+      return (wantsYes && outcomeName === 'yes') || (wantsNo && outcomeName === 'no');
+    });
+  }
+
+  if (marketKey.includes('odd_even')) {
+    const wantsOdd = selection.includes('odd');
+    const wantsEven = selection.includes('even');
+    return oddsMarket.outcomes.find((outcome) => {
+      const outcomeName = normalise(outcome.name);
+      return (wantsOdd && outcomeName === 'odd') || (wantsEven && outcomeName === 'even');
+    });
+  }
+
+  if (marketKey.includes('player_')) {
+    const targetPoint = numberFromSelection(marketItem.target_selection);
+    return oddsMarket.outcomes.find((outcome) => {
+      const outcomeName = normalise(outcome.name);
+      const description = normalise(outcome.description || '');
+      const hasPlayer = selection.includes(outcomeName) || selection.includes(description);
+      const pointMatches = !Number.isFinite(targetPoint)
+        || !Number.isFinite(Number(outcome.point))
+        || Math.abs(Number(outcome.point) - targetPoint) < 0.001;
+      return hasPlayer && pointMatches;
+    });
+  }
+
+  return oddsMarket.outcomes.find((outcome) => {
+    const outcomeName = normalise(outcome.name);
+    const description = normalise(outcome.description || '');
+    return selection.includes(outcomeName) || outcomeName.includes(selection) || (description && selection.includes(description));
+  }) || null;
 
   return null;
 }
@@ -941,7 +1139,7 @@ async function fetchOddsForSport(sportKey, apiKey) {
   const url = new URL(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`);
   url.searchParams.set('apiKey', apiKey);
   url.searchParams.set('bookmakers', ODDS_API_BOOKMAKERS.join(','));
-  url.searchParams.set('markets', 'h2h,spreads,totals');
+  url.searchParams.set('markets', ODDS_API_MARKETS.join(','));
   url.searchParams.set('oddsFormat', 'decimal');
   url.searchParams.set('dateFormat', 'iso');
 
