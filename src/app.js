@@ -464,9 +464,6 @@ function renderPlayerPropWatchlist() {
       <h3>${prop.player}: ${prop.market}</h3>
       <dl>
         <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
-        <div><dt>Market Odds</dt><dd>Not shown</dd></div>
-        <div><dt>Book</dt><dd>Not confirmed</dd></div>
-        <div><dt>Status</dt><dd>Watch only</dd></div>
       </dl>
       <p class="source-note">${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
     </article>

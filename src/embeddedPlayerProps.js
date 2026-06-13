@@ -5,7 +5,7 @@ window.embeddedPlayerProps = [
     "player": "Granit Xhaka",
     "market": "1+ Shots on Target",
     "model_price": 1.95,
-    "model_note": "Switzerland should control more of the ball, which keeps Xhaka involved around the edge of the box. Watch only until a real book price is confirmed."
+    "model_note": "Switzerland should control more of the ball, which keeps Xhaka involved around the edge of the box. Needs a real book price before it becomes a bet."
   },
   {
     "match_name": "Brazil vs Morocco",
@@ -21,7 +21,7 @@ window.embeddedPlayerProps = [
     "player": "John McGinn",
     "market": "2+ Total Shots",
     "model_price": 1.6,
-    "model_note": "Scotland's set-piece and crossing style can put McGinn into shooting positions. Watch only until a real shots price is confirmed."
+    "model_note": "Scotland's set-piece and crossing style can put McGinn into shooting positions. Needs a real shots price before it becomes a bet."
   },
   {
     "match_name": "Australia vs Turkiye",
