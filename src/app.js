@@ -501,7 +501,9 @@ function renderFixturePanels() {
 function renderBetHistory() {
   const tableBody = document.querySelector('[data-history-table]');
   const rows = state.betHistory.length > 0
-    ? [...state.betHistory].sort((a, b) => new Date(b.last_seen_at || 0) - new Date(a.last_seen_at || 0))
+    ? [...state.betHistory]
+      .filter((bet) => Number(bet.opening_qi) >= 70)
+      .sort((a, b) => new Date(b.last_seen_at || 0) - new Date(a.last_seen_at || 0))
     : flattenMarkets(getUpcomingFixtures())
       .filter((market) => market.metrics.qi >= 70)
       .map((market) => ({
@@ -513,12 +515,13 @@ function renderBetHistory() {
           current_odds: market.current_odds,
           closing_odds: null,
           clv_percent: null,
+          opening_qi: market.metrics.qi,
           current_qi: market.metrics.qi
         }))
       .sort((a, b) => b.current_qi - a.current_qi);
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="8">No bets available right now.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="9">No QI 70+ bets available right now.</td></tr>';
     return;
   }
 
@@ -531,6 +534,7 @@ function renderBetHistory() {
       <td>${formatHistoryPrice(bet.current_odds)}</td>
       <td>${formatHistoryPrice(bet.closing_odds, 'Pending')}${formatClosingDetail(bet)}</td>
       <td class="${Number(bet.clv_percent) >= 0 ? 'positive' : Number.isFinite(Number(bet.clv_percent)) ? 'negative' : ''}">${formatClv(bet.clv_percent)}</td>
+      <td><span class="qi-badge ${metricClass(Number(bet.opening_qi))}">${Number.isFinite(Number(bet.opening_qi)) ? bet.opening_qi : '-'}</span></td>
       <td><span class="qi-badge ${metricClass(bet.current_qi)}">${Number.isFinite(Number(bet.current_qi)) ? bet.current_qi : '-'}</span></td>
     </tr>
   `).join('');

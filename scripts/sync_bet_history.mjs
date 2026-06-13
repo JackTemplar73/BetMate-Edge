@@ -85,7 +85,7 @@ async function main() {
   const dataset = JSON.parse(await readFile(DATA_PATH, 'utf8'));
   const history = await readHistory();
   const byId = new Map(history
-    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .map((entry) => [entry.bet_id, entry]));
   const now = process.env.BETMATE_NOW ? new Date(process.env.BETMATE_NOW) : new Date();
   const nowIso = now.toISOString();
@@ -139,7 +139,7 @@ async function main() {
   }
 
   const nextHistory = [...byId.values()]
-    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .sort((a, b) => {
       const timeDiff = new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest);
       if (timeDiff !== 0) return timeDiff;

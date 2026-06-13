@@ -303,7 +303,7 @@ function clvPercent(openingOdds, closingOdds) {
 async function syncBetHistory(dataset, now = getNow()) {
   const history = await readHistory();
   const byId = new Map(history
-    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .map((entry) => [entry.bet_id, entry]));
   const nowIso = now.toISOString();
 
@@ -356,7 +356,7 @@ async function syncBetHistory(dataset, now = getNow()) {
   }
 
   const nextHistory = [...byId.values()]
-    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI || Number(entry.current_qi) >= MIN_TRACKED_QI)
+    .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .sort((a, b) => {
       const timeDiff = new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest);
       if (timeDiff !== 0) return timeDiff;
