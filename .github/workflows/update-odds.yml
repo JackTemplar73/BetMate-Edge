@@ -2,6 +2,9 @@ name: Refresh odds
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
   schedule:
     - cron: '*/5 * * * *'
 
@@ -30,6 +33,7 @@ jobs:
           node-version: '20'
 
       - name: Refresh prices when due
+        continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           ODDS_API_SPORT_KEYS: soccer_fifa_world_cup,soccer_international_friendlies
