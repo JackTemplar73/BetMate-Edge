@@ -6,14 +6,25 @@ const HISTORY_PATH = new URL('../data/bet_history.json', import.meta.url);
 const EMBEDDED_HISTORY_PATH = new URL('../src/embeddedBetHistory.js', import.meta.url);
 const MIN_TRACKED_QI = 70;
 
+const TEAM_ALIASES = new Map([
+  ['usa', 'united states'],
+  ['us', 'united states'],
+  ['turkiye', 'turkey'],
+  ['türkiye', 'turkey'],
+  ['bosnia & herzegovina', 'bosnia and herzegovina']
+]);
+
 function normalise(value) {
-  return String(value || '')
+  const clean = String(value || '')
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
-    .replace(/[^a-z0-9]+/g, ' ')
+    .replace(/\band\b/g, '&')
+    .replace(/[^a-z0-9&]+/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
+
+  return TEAM_ALIASES.get(clean) || clean;
 }
 
 function parseAest(value) {
@@ -119,6 +130,7 @@ async function main() {
       if (now >= kickoff && entry.closing_odds === null) {
         entry.closing_odds = currentOdds;
         entry.closing_captured_at = nowIso;
+        entry.closing_source = 'Latest saved bookmaker price at or after kickoff';
         entry.clv_percent = clvPercent(entry.opening_odds, entry.closing_odds);
       }
 

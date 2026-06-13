@@ -529,7 +529,7 @@ function renderBetHistory() {
       <td><span class="pill">${bet.au_bookie}</span></td>
       <td>${formatHistoryPrice(bet.opening_odds)}</td>
       <td>${formatHistoryPrice(bet.current_odds)}</td>
-      <td>${formatHistoryPrice(bet.closing_odds, 'Pending')}</td>
+      <td>${formatHistoryPrice(bet.closing_odds, 'Pending')}${formatClosingDetail(bet)}</td>
       <td class="${Number(bet.clv_percent) >= 0 ? 'positive' : Number.isFinite(Number(bet.clv_percent)) ? 'negative' : ''}">${formatClv(bet.clv_percent)}</td>
       <td><span class="qi-badge ${metricClass(bet.current_qi)}">${Number.isFinite(Number(bet.current_qi)) ? bet.current_qi : '-'}</span></td>
     </tr>
@@ -575,6 +575,12 @@ function formatClv(value) {
   const numeric = Number.parseFloat(value);
   if (!Number.isFinite(numeric)) return '-';
   return `${numeric > 0 ? '+' : ''}${numeric.toFixed(2)}%`;
+}
+
+function formatClosingDetail(bet) {
+  if (!bet.closing_captured_at) return '<span class="sub-cell">Captures at kickoff</span>';
+
+  return `<span class="sub-cell">${formatter.format(new Date(bet.closing_captured_at))} AEST${bet.closing_source ? ` | ${bet.closing_source}` : ''}</span>`;
 }
 
 function bindSortControls() {

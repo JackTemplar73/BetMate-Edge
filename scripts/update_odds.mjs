@@ -347,6 +347,7 @@ async function syncBetHistory(dataset, now = getNow()) {
       if (now >= kickoff && entry.closing_odds === null) {
         entry.closing_odds = currentOdds;
         entry.closing_captured_at = nowIso;
+        entry.closing_source = 'Latest saved bookmaker price at or after kickoff';
         entry.clv_percent = clvPercent(entry.opening_odds, entry.closing_odds);
       }
 
