@@ -117,6 +117,11 @@ const ODDS_API_MARKETS = [
   'player_to_receive_card_lay',
   'player_to_receive_red_card'
 ];
+const ODDS_API_BULK_MARKETS = [
+  'h2h',
+  'spreads',
+  'totals'
+];
 
 const MARKET_MAP = {
   h2h: ['Full Match Model', 'Moneyline'],
@@ -1033,7 +1038,7 @@ function deriveFixtureGoalModel(fixture) {
 
   const underProbability = [0, 1, 2]
     .reduce((sum, goals) => sum + poissonProbability(totalGoalsMean, goals), 0);
-  const overProbability = 1 - underProbability;
+  const over25Probability = 1 - underProbability;
 
   const scores = [];
   for (let homeGoals = 0; homeGoals <= 5; homeGoals += 1) {
@@ -1049,8 +1054,8 @@ function deriveFixtureGoalModel(fixture) {
 
   fixture.model_totals_25 = {
     line: 2.5,
-    over_probability: Number((overProbability * 100).toFixed(1)),
-    over_fair_price: fairPriceFromProbability(overProbability),
+    over_probability: Number((over25Probability * 100).toFixed(1)),
+    over_fair_price: fairPriceFromProbability(over25Probability),
     under_probability: Number((underProbability * 100).toFixed(1)),
     under_fair_price: fairPriceFromProbability(underProbability),
     total_goals_mean: Number(totalGoalsMean.toFixed(2))
@@ -1228,7 +1233,7 @@ async function fetchOddsForSport(sportKey, apiKey) {
   const url = new URL(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`);
   url.searchParams.set('apiKey', apiKey);
   url.searchParams.set('bookmakers', ODDS_API_BOOKMAKERS.join(','));
-  url.searchParams.set('markets', ODDS_API_MARKETS.join(','));
+  url.searchParams.set('markets', ODDS_API_BULK_MARKETS.join(','));
   url.searchParams.set('oddsFormat', 'decimal');
   url.searchParams.set('dateFormat', 'iso');
 

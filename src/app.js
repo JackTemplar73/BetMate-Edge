@@ -533,6 +533,75 @@ function renderMatchModelHighlights() {
   `;
 }
 
+function getSportsbookScanRows() {
+  return getUpcomingFixtures()
+    .flatMap((fixture) => {
+      const scan = fixture.market_scan || {};
+      return (scan.rows || []).map((row) => ({
+        ...row,
+        match_name: fixture.match_name,
+        kickoff_time_aest: fixture.kickoff_time_aest,
+        bookmaker: row.au_bookie || scan.bookmaker || 'Sportsbet',
+        checked_at: scan.checked_at,
+        offered_market_keys: scan.offered_market_keys || []
+      }));
+    })
+    .filter((row) => Number.isFinite(Number(row.current_odds)) && Number.isFinite(Number(row.model_price)))
+    .sort((a, b) => {
+      const qiDiff = Number(b.qi || 0) - Number(a.qi || 0);
+      if (qiDiff !== 0) return qiDiff;
+      return Number(b.ev || 0) - Number(a.ev || 0);
+    });
+}
+
+function renderSportsbookScan() {
+  const container = document.querySelector('[data-sportsbook-scan]');
+  if (!container) return;
+
+  const rows = getSportsbookScanRows();
+
+  if (rows.length === 0) {
+    container.innerHTML = '<p class="empty-note">No Sportsbet rows are matched to the model right now.</p>';
+    return;
+  }
+
+  const topRows = rows.slice(0, 36);
+
+  container.innerHTML = `
+    <div class="sportsbook-scan-summary">${rows.length} Sportsbet rows matched to model prices. Sorted by QI first, then EV.</div>
+    <div class="sportsbook-scan-table">
+      <table>
+        <thead>
+          <tr>
+            <th>QI</th>
+            <th>Match</th>
+            <th>Selection</th>
+            <th>Odds</th>
+            <th>Model Price</th>
+            <th>Model Prob</th>
+            <th>EV</th>
+            <th>Book</th>
+          </tr>
+        </thead>
+        <tbody>
+          ${topRows.map((row) => `
+            <tr>
+              <td><span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></td>
+              <td><span class="primary-cell">${row.match_name}</span><span class="sub-cell">${formatKickoff(row.kickoff_time_aest)}</span></td>
+              <td><span class="primary-cell">${row.selection}</span><span class="sub-cell">${row.market} | ${row.oddsapi_market}</span></td>
+              <td>$${Number(row.current_odds).toFixed(2)}</td>
+              <td>$${Number(row.model_price).toFixed(2)}</td>
+              <td>${Number(row.model_probability).toFixed(1)}%</td>
+              <td class="${Number(row.ev) >= 0 ? 'positive' : 'negative'}">${Number(row.ev) > 0 ? '+' : ''}${Number(row.ev).toFixed(2)}%</td>
+              <td><span class="pill">${row.bookmaker}</span></td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 function formatModelOnlyPrice(value) {
   const numeric = Number.parseFloat(value);
   return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : 'Not priced';
@@ -597,8 +666,16 @@ function renderFixtureModelBlock(fixture) {
   const totals = fixture.model_totals_25;
   const exactScores = fixture.exact_score_model || [];
   const markovMarkets = fixture.markov_market_model || [];
+  const scan = fixture.market_scan || {};
+  const scanRows = (scan.rows || [])
+    .filter((row) => Number.isFinite(Number(row.current_odds)) && Number.isFinite(Number(row.model_price)))
+    .sort((a, b) => {
+      const qiDiff = Number(b.qi || 0) - Number(a.qi || 0);
+      if (qiDiff !== 0) return qiDiff;
+      return Number(b.ev || 0) - Number(a.ev || 0);
+    });
 
-  if (!totals && exactScores.length === 0 && markovMarkets.length === 0) return '';
+  if (!totals && exactScores.length === 0 && markovMarkets.length === 0 && scanRows.length === 0) return '';
 
   const totalsHtml = totals
     ? `
@@ -650,15 +727,39 @@ function renderFixtureModelBlock(fixture) {
       `
     : '';
 
+  const sportsbetScanHtml = scanRows.length > 0
+    ? `
+        <article class="model-insight-card sportsbet-scan-card">
+          <h3>Sportsbet Market Scan</h3>
+          <p class="source-note">Live Sportsbet markets found through the OddsAPI event scan and matched to our model prices.</p>
+          <div class="fixture-scan-list">
+            ${scanRows.map((row) => `
+              <div>
+                <span>
+                  <strong>${row.selection}</strong>
+                  <em>${row.market} | ${row.oddsapi_market}</em>
+                </span>
+                <span>
+                  <b class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</b>
+                  <em>$${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | ${Number(row.model_probability).toFixed(1)}% | EV ${Number(row.ev) > 0 ? '+' : ''}${Number(row.ev).toFixed(2)}%</em>
+                </span>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+      `
+    : '';
+
   return `
     <div class="fixture-model-block">
       <div class="inline-section-heading">
         <h3>Game Model</h3>
-        <p>Model-only goal and score projections. Use these as fair-price anchors before comparing market odds.</p>
+        <p>Model projections plus Sportsbet markets that were found and matched to our model prices.</p>
       </div>
       <div class="model-insight-grid">
         ${totalsHtml}
         ${exactHtml}
+        ${sportsbetScanHtml}
         ${markovHtml}
       </div>
     </div>
@@ -1040,6 +1141,7 @@ function render() {
   renderSummary();
   renderHighValueBets();
   renderMatchModelHighlights();
+  renderSportsbookScan();
   renderPlayerPropWatchlist();
   renderMatchTabs();
   renderFilters();

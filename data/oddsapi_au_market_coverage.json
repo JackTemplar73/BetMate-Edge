@@ -1,0 +1,279 @@
+{
+  "checked_at": "2026-06-13T22:25:16.830Z",
+  "target_bookmaker": "sportsbet",
+  "events_checked": 22,
+  "market_counts": {
+    "h2h": 22,
+    "btts": 22,
+    "double_chance": 22,
+    "h2h_3_way": 22
+  },
+  "matches": [
+    {
+      "match_name": "Canada vs Bosnia & Herzegovina",
+      "status": "no_oddsapi_event",
+      "offered_market_keys": [],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "USA vs Paraguay",
+      "status": "no_oddsapi_event",
+      "offered_market_keys": [],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Qatar vs Switzerland",
+      "status": "no_oddsapi_event",
+      "offered_market_keys": [],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Brazil vs Morocco",
+      "status": "bookmaker_missing",
+      "offered_market_keys": [],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Haiti vs Scotland",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Australia vs Turkiye",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 3
+    },
+    {
+      "match_name": "Germany vs Curaçao",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Netherlands vs Japan",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Ivory Coast vs Ecuador",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Sweden vs Tunisia",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Spain vs Cape Verde",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Belgium vs Egypt",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Saudi Arabia vs Uruguay",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Iran vs New Zealand",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "France vs Senegal",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Iraq vs Norway",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Argentina vs Algeria",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Austria vs Jordan",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Portugal vs DR Congo",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "England vs Croatia",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Ghana vs Panama",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Uzbekistan vs Colombia",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Czech Republic vs South Africa",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Switzerland vs Bosnia & Herzegovina",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 4
+    },
+    {
+      "match_name": "Canada vs Qatar",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    },
+    {
+      "match_name": "Mexico vs South Korea",
+      "status": "checked",
+      "offered_market_keys": [
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way"
+      ],
+      "matched_rows": 5
+    }
+  ]
+}

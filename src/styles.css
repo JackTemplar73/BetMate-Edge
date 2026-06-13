@@ -370,6 +370,7 @@ h3 {
 
 .high-value-section,
 .match-model-section,
+.sportsbook-scan-section,
 .player-prop-watchlist {
   margin-bottom: 22px;
 }
@@ -477,6 +478,24 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
+.sportsbook-scan-summary {
+  margin: 16px 0 10px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 850;
+}
+
+.sportsbook-scan-table {
+  max-height: 560px;
+  overflow: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.sportsbook-scan-table table {
+  min-width: 980px;
+}
+
 .match-props-block {
   margin-top: 18px;
   padding-top: 16px;
@@ -507,6 +526,10 @@ h3 {
 }
 
 .markov-market-card {
+  grid-column: 1 / -1;
+}
+
+.sportsbet-scan-card {
   grid-column: 1 / -1;
 }
 
@@ -545,7 +568,8 @@ h3 {
   border-radius: 8px;
 }
 
-.markov-market-list div {
+.markov-market-list div,
+.fixture-scan-list div {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 12px;
@@ -554,27 +578,46 @@ h3 {
   border-bottom: 1px solid var(--border);
 }
 
-.markov-market-list div:last-child {
+.markov-market-list div:last-child,
+.fixture-scan-list div:last-child {
   border-bottom: 0;
 }
 
 .markov-market-list strong,
 .markov-market-list em,
-.markov-market-list b {
+.markov-market-list b,
+.fixture-scan-list strong,
+.fixture-scan-list em,
+.fixture-scan-list b {
   display: block;
 }
 
-.markov-market-list em {
+.markov-market-list em,
+.fixture-scan-list em {
   margin-top: 3px;
   color: var(--muted);
   font-size: 12px;
   font-style: normal;
 }
 
-.markov-market-list b {
+.markov-market-list b,
+.fixture-scan-list b {
   color: var(--gold);
   text-align: right;
   white-space: nowrap;
+}
+
+.fixture-scan-list {
+  display: grid;
+  max-height: 340px;
+  overflow-y: auto;
+  margin-top: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.fixture-scan-list div > span:last-child {
+  text-align: right;
 }
 
 .inline-section-heading {
