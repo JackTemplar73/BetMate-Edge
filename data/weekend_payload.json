@@ -305,46 +305,6 @@
     "tactical_summary": "Qatar bring deep defensive blocks and low-risk possession, while Switzerland bring controlled midfield tempo and disciplined structure. The full match model rates Switzerland as the most likely winner at about 77.5%, with the draw around 15.5%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
-        "market_matrix": "Player Prop",
-        "target_selection": "Granit Xhaka: 1+ Shots on Target",
-        "true_price": 1.95,
-        "current_odds": 2.2,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Exact Score",
-        "target_selection": "Switzerland 1-0",
-        "true_price": 4.9,
-        "current_odds": 5.5,
-        "au_bookie": "Ladbrokes",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Totals",
-        "target_selection": "Under 2.5 Goals",
-        "true_price": 1.61,
-        "current_odds": 1.8,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "market_missing",
-        "odds_refresh_note": "Sportsbet did not return this market in Odds API."
-      },
-      {
-        "market_matrix": "Spread",
-        "target_selection": "Switzerland -0.75",
-        "true_price": 1.74,
-        "current_odds": 1.88,
-        "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "market_missing",
-        "odds_refresh_note": "Neds did not return this market in Odds API."
-      },
-      {
         "market_matrix": "Full Match Model",
         "target_selection": "Switzerland to Win",
         "true_price": 1.29,
@@ -404,46 +364,6 @@
     "referee_tendencies": "Clement Turpin (France) is listed in the model notes, but not independently verified yet. Treat any referee angle as a watch item, not a betting edge.",
     "tactical_summary": "Brazil bring technical overloads and individual creation, while Morocco bring compact defensive spacing and fast transitions. The full match model rates Brazil as the most likely winner at about 57.8%, with the draw around 24.9%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
-      {
-        "market_matrix": "Player Prop",
-        "target_selection": "Sofyan Amrabat: To Get Carded",
-        "true_price": 2.45,
-        "current_odds": 2.8,
-        "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Exact Score",
-        "target_selection": "Brazil 2-0",
-        "true_price": 6.2,
-        "current_odds": 7,
-        "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Spread",
-        "target_selection": "Morocco +1.25",
-        "true_price": 1.75,
-        "current_odds": 1.92,
-        "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "market_missing",
-        "odds_refresh_note": "TAB did not return this market in Odds API."
-      },
-      {
-        "market_matrix": "Totals",
-        "target_selection": "Under 2.5 Goals",
-        "true_price": 1.9,
-        "current_odds": 2.05,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "market_missing",
-        "odds_refresh_note": "Sportsbet did not return this market in Odds API."
-      },
       {
         "market_matrix": "Moneyline",
         "target_selection": "Brazil to Win",
@@ -505,26 +425,6 @@
     "tactical_summary": "Haiti bring straight-line speed and transition attacks, while Scotland bring set-piece pressure, width, and physical duels. The full match model rates Scotland as the most likely winner at about 59.9%, with the draw around 23.1%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
-        "market_matrix": "Exact Score",
-        "target_selection": "Scotland 2-0",
-        "true_price": 7.1,
-        "current_odds": 8,
-        "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Player Prop",
-        "target_selection": "John McGinn: 2+ Total Shots",
-        "true_price": 1.6,
-        "current_odds": 1.75,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
         "market_matrix": "Moneyline",
         "target_selection": "Scotland to Win",
         "true_price": 1.65,
@@ -537,26 +437,6 @@
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "PointsBet",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
-      },
-      {
-        "market_matrix": "Spread",
-        "target_selection": "Scotland -0.5",
-        "true_price": 1.65,
-        "current_odds": 1.55,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "market_missing",
-        "odds_refresh_note": "Sportsbet did not return this market in Odds API."
-      },
-      {
-        "market_matrix": "Totals",
-        "target_selection": "Under 3.5 Goals",
-        "true_price": 1.38,
-        "current_odds": 1.45,
-        "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "market_missing",
-        "odds_refresh_note": "TAB did not return this market in Odds API."
       },
       {
         "market_matrix": "Full Match Model",
@@ -604,66 +484,6 @@
     "referee_tendencies": "Jesus Valenzuela (Venezuela) is listed in the model notes, but not independently verified yet. Treat any referee angle as a watch item, not a betting edge.",
     "tactical_summary": "Australia bring physical defensive structure and direct transitions, while Turkiye bring technical midfield combinations and aggressive forward play. The full match model rates Turkey as the most likely winner at about 55.6%, with the draw around 26.2%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
-      {
-        "market_matrix": "Exact Score",
-        "target_selection": "Australia 1-1",
-        "true_price": 5.75,
-        "current_odds": 6.5,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Double Chance",
-        "target_selection": "Australia or Draw",
-        "true_price": 1.73,
-        "current_odds": 2.1,
-        "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Player Prop",
-        "target_selection": "Hakan Calhanoglu: 1+ Shots on Target",
-        "true_price": 1.82,
-        "current_odds": 1.96,
-        "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Player Prop",
-        "target_selection": "Arda Guler: Goal or Assist",
-        "true_price": 1.72,
-        "current_odds": 1.9,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Player Prop",
-        "target_selection": "Cristian Volpato: 1+ Shots on Target",
-        "true_price": 1.52,
-        "current_odds": 1.67,
-        "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "unsupported_by_oddsapi",
-        "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
-      },
-      {
-        "market_matrix": "Totals",
-        "target_selection": "Under 2.5 Goals",
-        "true_price": 1.7,
-        "current_odds": 1.85,
-        "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T10:43:21.168Z",
-        "odds_refresh_status": "market_missing",
-        "odds_refresh_note": "TAB did not return this market in Odds API."
-      },
       {
         "market_matrix": "Moneyline",
         "target_selection": "Match to end in a Draw",

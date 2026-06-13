@@ -512,6 +512,15 @@ function shouldDropCorrectedOutlier(existing, metrics, currentOdds) {
     && Math.max(openingOdds, currentOdds) / Math.min(openingOdds, currentOdds) >= 3;
 }
 
+function hasVerifiedPrice(marketItem) {
+  return [
+    'checked_current',
+    'updated',
+    'added_from_oddsapi',
+    'confirmed_rendered_site'
+  ].includes(marketItem.odds_refresh_status);
+}
+
 async function syncBetHistory(dataset, now = getNow(), espnEvents = []) {
   const history = await readHistory();
   const byId = new Map(history
@@ -525,11 +534,15 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = []) {
 
     for (const marketItem of fixture.markets || []) {
       const id = betId(fixture, marketItem);
+      const existing = byId.get(id);
+      if (kickoff > now && !hasVerifiedPrice(marketItem)) {
+        continue;
+      }
+
       activeBetIds.add(id);
       const metrics = runVectorCalculations(marketItem);
       const currentOdds = Number.parseFloat(marketItem.current_odds);
       const modelPrice = Number.parseFloat(marketItem.true_price);
-      const existing = byId.get(id);
 
       if (!existing && metrics.qi < MIN_TRACKED_QI) {
         continue;

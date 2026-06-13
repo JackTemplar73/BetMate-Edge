@@ -33,14 +33,22 @@ function runVectorCalculations(marketItem) {
 
 function flattenMarkets(dataset) {
   return dataset.flatMap((fixture, fixtureIndex) =>
-    fixture.markets.map((market, marketIndex) => ({
-      ...market,
-      fixture_index: fixtureIndex,
-      market_index: marketIndex,
-      match_name: fixture.match_name,
-      kickoff_time_aest: fixture.kickoff_time_aest,
-      metrics: runVectorCalculations(market)
-    }))
+    fixture.markets
+      .filter((market) => {
+        const status = market.odds_refresh_status;
+        return status === 'checked_current'
+          || status === 'updated'
+          || status === 'added_from_oddsapi'
+          || status === 'confirmed_rendered_site';
+      })
+      .map((market, marketIndex) => ({
+        ...market,
+        fixture_index: fixtureIndex,
+        market_index: marketIndex,
+        match_name: fixture.match_name,
+        kickoff_time_aest: fixture.kickoff_time_aest,
+        metrics: runVectorCalculations(market)
+      }))
   );
 }
 
