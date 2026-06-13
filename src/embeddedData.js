@@ -93,12 +93,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "No matching Odds API event found."
   },
@@ -286,11 +286,11 @@ window.embeddedDataset = [
         "odds_refresh_note": "BetRight was not present in the matched Odds API event."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "No matching Odds API event found.",
     "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries"
@@ -310,7 +310,7 @@ window.embeddedDataset = [
         "true_price": 1.95,
         "current_odds": 2.2,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -320,7 +320,7 @@ window.embeddedDataset = [
         "true_price": 4.9,
         "current_odds": 5.5,
         "au_bookie": "Ladbrokes",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -330,7 +330,7 @@ window.embeddedDataset = [
         "true_price": 1.61,
         "current_odds": 1.8,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "market_missing",
         "odds_refresh_note": "Sportsbet did not return this market in Odds API."
       },
@@ -340,7 +340,7 @@ window.embeddedDataset = [
         "true_price": 1.74,
         "current_odds": 1.88,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "market_missing",
         "odds_refresh_note": "Neds did not return this market in Odds API."
       },
@@ -348,35 +348,35 @@ window.embeddedDataset = [
         "market_matrix": "Moneyline",
         "target_selection": "Switzerland to Win",
         "true_price": 1.55,
-        "current_odds": 1.22,
+        "current_odds": 1.21,
         "au_bookie": "BetRight",
-        "previous_odds": 1.23,
-        "odds_updated_at": "2026-06-13T01:55:34.076Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 1.22,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Qatar to Win",
         "true_price": 14.66,
-        "current_odds": 12,
+        "current_odds": 11,
         "au_bookie": "Neds",
-        "previous_odds": 13,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 12,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 6.47,
-        "current_odds": 6,
+        "current_odds": 6.25,
         "au_bookie": "Neds",
-        "previous_odds": 5.8,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "previous_odds": 6,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -384,11 +384,11 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Switzerland to Win",
         "true_price": 1.29,
-        "current_odds": 1.22,
+        "current_odds": 1.24,
         "au_bookie": "Neds",
-        "previous_odds": 1.24,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "previous_odds": 1.22,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -396,12 +396,12 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Qatar to Win",
         "true_price": 14.66,
-        "current_odds": 14,
+        "current_odds": 15,
         "au_bookie": "Sportsbet",
-        "previous_odds": 15,
-        "odds_updated_at": "2026-06-13T02:30:14.308Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 14,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
       {
@@ -410,8 +410,8 @@ window.embeddedDataset = [
         "true_price": 6.47,
         "current_odds": 6.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 6,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -420,12 +420,12 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Switzerland to Win",
         "true_price": 1.29,
-        "current_odds": 1.2,
+        "current_odds": 1.18,
         "au_bookie": "Sportsbet",
-        "previous_odds": 1.18,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 1.2,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
       {
@@ -436,7 +436,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 15,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -444,11 +444,11 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 6.47,
-        "current_odds": 6.5,
+        "current_odds": 6,
         "au_bookie": "TAB",
-        "previous_odds": 6,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "previous_odds": 6.5,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -460,7 +460,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 1.22,
         "odds_updated_at": "2026-06-13T02:30:14.308Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -468,13 +468,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Qatar to Win",
         "true_price": 14.66,
-        "current_odds": 12,
+        "current_odds": 13,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API.",
-        "previous_odds": 13,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 12,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -484,28 +484,28 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 5.5,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Switzerland to Win",
         "true_price": 1.29,
-        "current_odds": 1.22,
+        "current_odds": 1.21,
         "au_bookie": "BetRight",
-        "previous_odds": 1.23,
-        "odds_updated_at": "2026-06-13T01:55:34.076Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 1.22,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 26634922d3f78c146440816023e40de8."
   },
@@ -524,7 +524,7 @@ window.embeddedDataset = [
         "true_price": 2.45,
         "current_odds": 2.8,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -534,7 +534,7 @@ window.embeddedDataset = [
         "true_price": 6.2,
         "current_odds": 7,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -544,7 +544,7 @@ window.embeddedDataset = [
         "true_price": 1.75,
         "current_odds": 1.92,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "market_missing",
         "odds_refresh_note": "TAB did not return this market in Odds API."
       },
@@ -554,7 +554,7 @@ window.embeddedDataset = [
         "true_price": 1.9,
         "current_odds": 2.05,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "market_missing",
         "odds_refresh_note": "Sportsbet did not return this market in Odds API."
       },
@@ -562,12 +562,12 @@ window.embeddedDataset = [
         "market_matrix": "Moneyline",
         "target_selection": "Brazil to Win",
         "true_price": 1.42,
-        "current_odds": 1.67,
+        "current_odds": 1.69,
         "au_bookie": "PointsBet",
-        "previous_odds": 1.48,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 1.67,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked PointsBet via Odds API."
       },
       {
@@ -578,93 +578,93 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 1.65,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
-      },
-      {
-        "market_matrix": "Full Match Model",
-        "target_selection": "Match to end in a Draw",
-        "true_price": 4.02,
-        "current_odds": 3.75,
-        "au_bookie": "Sportsbet",
-        "previous_odds": 3.7,
-        "odds_updated_at": "2026-06-13T01:55:34.076Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked Sportsbet via Odds API."
-      },
-      {
-        "market_matrix": "Full Match Model",
-        "target_selection": "Morocco to Win",
-        "true_price": 5.76,
-        "current_odds": 5,
-        "au_bookie": "Sportsbet",
-        "previous_odds": 5.5,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked Sportsbet via Odds API."
-      },
-      {
-        "market_matrix": "Full Match Model",
-        "target_selection": "Brazil to Win",
-        "true_price": 1.73,
-        "current_odds": 1.65,
-        "au_bookie": "TAB",
-        "previous_odds": 1.68,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
-        "odds_refresh_note": "Checked TAB via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 4.02,
         "current_odds": 3.6,
+        "au_bookie": "Sportsbet",
+        "previous_odds": 3.75,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked Sportsbet via Odds API."
+      },
+      {
+        "market_matrix": "Full Match Model",
+        "target_selection": "Morocco to Win",
+        "true_price": 5.76,
+        "current_odds": 5.5,
+        "au_bookie": "Sportsbet",
+        "previous_odds": 5,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked Sportsbet via Odds API."
+      },
+      {
+        "market_matrix": "Full Match Model",
+        "target_selection": "Brazil to Win",
+        "true_price": 1.73,
+        "current_odds": 1.68,
         "au_bookie": "TAB",
-        "previous_odds": 3.7,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 1.65,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked TAB via Odds API."
+      },
+      {
+        "market_matrix": "Full Match Model",
+        "target_selection": "Match to end in a Draw",
+        "true_price": 4.02,
+        "current_odds": 3.5,
+        "au_bookie": "TAB",
+        "previous_odds": 3.6,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Morocco to Win",
         "true_price": 5.76,
-        "current_odds": 5,
+        "current_odds": 5.5,
         "au_bookie": "TAB",
-        "previous_odds": 5.5,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 5,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Brazil to Win",
         "true_price": 1.73,
-        "current_odds": 1.65,
+        "current_odds": 1.67,
         "au_bookie": "Neds",
-        "previous_odds": 1.62,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 1.65,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 4.02,
-        "current_odds": 3.75,
+        "current_odds": 3.7,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Neds via Odds API.",
-        "previous_odds": 3.9,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 3.75,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -674,50 +674,52 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 5,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Brazil to Win",
         "true_price": 1.73,
-        "current_odds": 1.62,
+        "current_odds": 1.65,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked BetRight via Odds API."
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked BetRight via Odds API.",
+        "previous_odds": 1.62,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 4.02,
-        "current_odds": 3.65,
+        "current_odds": 3.55,
         "au_bookie": "BetRight",
-        "previous_odds": 3.7,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 3.65,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Morocco to Win",
         "true_price": 5.76,
-        "current_odds": 5.5,
+        "current_odds": 5.25,
         "au_bookie": "BetRight",
-        "previous_odds": 5.25,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 5.5,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event f6c8748a16516e0998f95de14235432a."
   },
@@ -736,7 +738,7 @@ window.embeddedDataset = [
         "true_price": 7.1,
         "current_odds": 8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -746,7 +748,7 @@ window.embeddedDataset = [
         "true_price": 1.6,
         "current_odds": 1.75,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -758,8 +760,8 @@ window.embeddedDataset = [
         "au_bookie": "PointsBet",
         "previous_odds": 1.57,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API."
       },
       {
@@ -768,7 +770,7 @@ window.embeddedDataset = [
         "true_price": 1.65,
         "current_odds": 1.55,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "market_missing",
         "odds_refresh_note": "Sportsbet did not return this market in Odds API."
       },
@@ -778,7 +780,7 @@ window.embeddedDataset = [
         "true_price": 1.38,
         "current_odds": 1.45,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "market_missing",
         "odds_refresh_note": "TAB did not return this market in Odds API."
       },
@@ -788,7 +790,7 @@ window.embeddedDataset = [
         "true_price": 5.9,
         "current_odds": 5.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -798,8 +800,8 @@ window.embeddedDataset = [
         "true_price": 4.33,
         "current_odds": 4.33,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 4.2,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -810,8 +812,8 @@ window.embeddedDataset = [
         "true_price": 1.67,
         "current_odds": 1.53,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 1.55,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -824,8 +826,8 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 5.5,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
       {
@@ -834,8 +836,8 @@ window.embeddedDataset = [
         "true_price": 4.33,
         "current_odds": 4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API.",
         "previous_odds": 3.9,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -848,21 +850,21 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 1.58,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Haiti to Win",
         "true_price": 5.9,
-        "current_odds": 5.5,
+        "current_odds": 5.75,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Neds via Odds API.",
-        "previous_odds": 5.4,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 5.5,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -870,7 +872,7 @@ window.embeddedDataset = [
         "true_price": 4.33,
         "current_odds": 4.2,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -878,13 +880,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Scotland to Win",
         "true_price": 1.67,
-        "current_odds": 1.55,
+        "current_odds": 1.53,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Neds via Odds API.",
-        "previous_odds": 1.57,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 1.55,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -892,7 +894,7 @@ window.embeddedDataset = [
         "true_price": 5.9,
         "current_odds": 5.75,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -902,8 +904,8 @@ window.embeddedDataset = [
         "true_price": 4.33,
         "current_odds": 4.1,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API.",
         "previous_odds": 3.95,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -914,18 +916,18 @@ window.embeddedDataset = [
         "true_price": 1.67,
         "current_odds": 1.52,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API.",
         "previous_odds": 1.54,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 5ae41a06735c926eeb7f74006933adce."
   },
@@ -944,7 +946,7 @@ window.embeddedDataset = [
         "true_price": 5.75,
         "current_odds": 6.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -954,7 +956,7 @@ window.embeddedDataset = [
         "true_price": 1.73,
         "current_odds": 2.1,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -964,7 +966,7 @@ window.embeddedDataset = [
         "true_price": 1.82,
         "current_odds": 1.96,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -974,7 +976,7 @@ window.embeddedDataset = [
         "true_price": 1.72,
         "current_odds": 1.9,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -984,7 +986,7 @@ window.embeddedDataset = [
         "true_price": 1.52,
         "current_odds": 1.67,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type."
       },
@@ -994,7 +996,7 @@ window.embeddedDataset = [
         "true_price": 1.7,
         "current_odds": 1.85,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "market_missing",
         "odds_refresh_note": "TAB did not return this market in Odds API."
       },
@@ -1006,8 +1008,8 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 3.6,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
@@ -1016,7 +1018,7 @@ window.embeddedDataset = [
         "true_price": 5.48,
         "current_odds": 5.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1026,8 +1028,8 @@ window.embeddedDataset = [
         "true_price": 3.81,
         "current_odds": 3.75,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 3.7,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1036,11 +1038,11 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Turkey to Win",
         "true_price": 1.8,
-        "current_odds": 1.65,
+        "current_odds": 1.66,
         "au_bookie": "Sportsbet",
-        "previous_odds": 1.66,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "previous_odds": 1.65,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1052,8 +1054,8 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 5.25,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
@@ -1062,8 +1064,8 @@ window.embeddedDataset = [
         "true_price": 3.81,
         "current_odds": 3.7,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API.",
         "previous_odds": 3.6,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1076,8 +1078,8 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 1.7,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
@@ -1086,7 +1088,7 @@ window.embeddedDataset = [
         "true_price": 5.48,
         "current_odds": 5.5,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1096,7 +1098,7 @@ window.embeddedDataset = [
         "true_price": 3.81,
         "current_odds": 3.5,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1106,7 +1108,7 @@ window.embeddedDataset = [
         "true_price": 1.8,
         "current_odds": 1.72,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1114,44 +1116,44 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Australia to Win",
         "true_price": 5.48,
-        "current_odds": 5,
+        "current_odds": 4.75,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API.",
-        "previous_odds": 4.75,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 5,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.81,
-        "current_odds": 3.65,
+        "current_odds": 3.6,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API.",
-        "previous_odds": 3.6,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 3.65,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Turkey to Win",
         "true_price": 1.8,
-        "current_odds": 1.66,
+        "current_odds": 1.71,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API.",
-        "previous_odds": 1.71,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 1.66,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 564084f52cc9f1abcc18187c168a7cdc."
   },
@@ -1170,8 +1172,8 @@ window.embeddedDataset = [
         "true_price": 1.11,
         "current_odds": 1.05,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 1.04,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1182,7 +1184,7 @@ window.embeddedDataset = [
         "true_price": 14.49,
         "current_odds": 20,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1192,8 +1194,8 @@ window.embeddedDataset = [
         "true_price": 34.28,
         "current_odds": 23,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 36,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1202,23 +1204,23 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Germany to Win",
         "true_price": 1.11,
-        "current_odds": 1.06,
+        "current_odds": 1.05,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked TAB via Odds API.",
-        "previous_odds": 1.05,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 1.06,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 14.49,
-        "current_odds": 11,
+        "current_odds": 12,
         "au_bookie": "TAB",
-        "previous_odds": 12,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "previous_odds": 11,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1226,11 +1228,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Curaçao to Win",
         "true_price": 34.28,
-        "current_odds": 34,
+        "current_odds": 41,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked TAB via Odds API."
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked TAB via Odds API.",
+        "previous_odds": 34,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -1238,7 +1242,7 @@ window.embeddedDataset = [
         "true_price": 1.11,
         "current_odds": 1.05,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1250,7 +1254,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 12,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1262,7 +1266,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 29,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1272,7 +1276,7 @@ window.embeddedDataset = [
         "true_price": 1.11,
         "current_odds": 1.04,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -1282,8 +1286,8 @@ window.embeddedDataset = [
         "true_price": 14.49,
         "current_odds": 13,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API.",
         "previous_odds": 12,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1294,16 +1298,16 @@ window.embeddedDataset = [
         "true_price": 34.28,
         "current_odds": 31,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event d79edbd6aaeb578d33e313446b18d333."
   },
@@ -1322,7 +1326,7 @@ window.embeddedDataset = [
         "true_price": 2.11,
         "current_odds": 2,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 1.95,
@@ -1334,7 +1338,7 @@ window.embeddedDataset = [
         "true_price": 3.7,
         "current_odds": 3.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1344,7 +1348,7 @@ window.embeddedDataset = [
         "true_price": 3.9,
         "current_odds": 3.7,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 3.8,
@@ -1356,7 +1360,7 @@ window.embeddedDataset = [
         "true_price": 2.11,
         "current_odds": 2,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1366,7 +1370,7 @@ window.embeddedDataset = [
         "true_price": 3.7,
         "current_odds": 3.4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1376,7 +1380,7 @@ window.embeddedDataset = [
         "true_price": 3.9,
         "current_odds": 3.6,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1386,7 +1390,7 @@ window.embeddedDataset = [
         "true_price": 2.11,
         "current_odds": 2,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1396,7 +1400,7 @@ window.embeddedDataset = [
         "true_price": 3.7,
         "current_odds": 3.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1406,7 +1410,7 @@ window.embeddedDataset = [
         "true_price": 3.9,
         "current_odds": 3.6,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1416,7 +1420,7 @@ window.embeddedDataset = [
         "true_price": 2.11,
         "current_odds": 1.97,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -1426,7 +1430,7 @@ window.embeddedDataset = [
         "true_price": 3.7,
         "current_odds": 3.45,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -1436,16 +1440,16 @@ window.embeddedDataset = [
         "true_price": 3.9,
         "current_odds": 3.6,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 32ec06abda2398ac41501c86eb9aa376."
   },
@@ -1466,7 +1470,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 3.5,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1476,7 +1480,7 @@ window.embeddedDataset = [
         "true_price": 3,
         "current_odds": 2.8,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1488,7 +1492,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 2.4,
         "odds_updated_at": "2026-06-13T01:55:34.076Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1498,7 +1502,7 @@ window.embeddedDataset = [
         "true_price": 3.63,
         "current_odds": 3.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1508,7 +1512,7 @@ window.embeddedDataset = [
         "true_price": 3,
         "current_odds": 2.8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1518,7 +1522,7 @@ window.embeddedDataset = [
         "true_price": 2.56,
         "current_odds": 2.4,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1530,7 +1534,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 3.3,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1540,7 +1544,7 @@ window.embeddedDataset = [
         "true_price": 3,
         "current_odds": 2.8,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1550,7 +1554,7 @@ window.embeddedDataset = [
         "true_price": 2.56,
         "current_odds": 2.4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1560,8 +1564,8 @@ window.embeddedDataset = [
         "true_price": 3.63,
         "current_odds": 3.4,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API.",
         "previous_odds": 3.35,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1572,8 +1576,8 @@ window.embeddedDataset = [
         "true_price": 3,
         "current_odds": 2.8,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API.",
         "previous_odds": 2.85,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1584,16 +1588,16 @@ window.embeddedDataset = [
         "true_price": 2.56,
         "current_odds": 2.35,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 05752bb341e197001387b64f3a06b9b2."
   },
@@ -1610,11 +1614,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Sweden to Win",
         "true_price": 2.01,
-        "current_odds": 1.85,
+        "current_odds": 1.86,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked Sportsbet via Odds API."
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked Sportsbet via Odds API.",
+        "previous_odds": 1.85,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -1622,7 +1628,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.4,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1630,11 +1636,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Tunisia to Win",
         "true_price": 4.47,
-        "current_odds": 4.4,
+        "current_odds": 4.33,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked Sportsbet via Odds API."
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked Sportsbet via Odds API.",
+        "previous_odds": 4.4,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -1642,7 +1650,7 @@ window.embeddedDataset = [
         "true_price": 2.01,
         "current_odds": 1.9,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1652,7 +1660,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.3,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1662,7 +1670,7 @@ window.embeddedDataset = [
         "true_price": 4.47,
         "current_odds": 4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1672,7 +1680,7 @@ window.embeddedDataset = [
         "true_price": 2.01,
         "current_odds": 1.9,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1682,7 +1690,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.35,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1692,7 +1700,7 @@ window.embeddedDataset = [
         "true_price": 4.47,
         "current_odds": 4.1,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1702,7 +1710,7 @@ window.embeddedDataset = [
         "true_price": 2.01,
         "current_odds": 1.86,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -1712,7 +1720,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.35,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -1722,16 +1730,16 @@ window.embeddedDataset = [
         "true_price": 4.47,
         "current_odds": 4.2,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event b55f9569de3f4d731bc5537ff5ff43e4."
   },
@@ -1752,8 +1760,8 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 1.08,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
       {
@@ -1764,8 +1772,8 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 11,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
       {
@@ -1774,8 +1782,8 @@ window.embeddedDataset = [
         "true_price": 24.71,
         "current_odds": 23,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 26,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -1786,7 +1794,7 @@ window.embeddedDataset = [
         "true_price": 1.15,
         "current_odds": 1.08,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1796,7 +1804,7 @@ window.embeddedDataset = [
         "true_price": 10.82,
         "current_odds": 10,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1806,7 +1814,7 @@ window.embeddedDataset = [
         "true_price": 24.71,
         "current_odds": 26,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1816,7 +1824,7 @@ window.embeddedDataset = [
         "true_price": 1.15,
         "current_odds": 1.1,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1826,7 +1834,7 @@ window.embeddedDataset = [
         "true_price": 10.82,
         "current_odds": 9.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1836,7 +1844,7 @@ window.embeddedDataset = [
         "true_price": 24.71,
         "current_odds": 21,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1848,7 +1856,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 1.1,
         "odds_updated_at": "2026-06-13T01:55:34.076Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -1858,7 +1866,7 @@ window.embeddedDataset = [
         "true_price": 10.82,
         "current_odds": 9,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -1870,16 +1878,16 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 19,
         "odds_updated_at": "2026-06-13T01:55:34.076Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event c54f00b11925751d2b62988775c6c239."
   },
@@ -1898,7 +1906,7 @@ window.embeddedDataset = [
         "true_price": 1.72,
         "current_odds": 1.57,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1908,7 +1916,7 @@ window.embeddedDataset = [
         "true_price": 4.06,
         "current_odds": 3.9,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1918,7 +1926,7 @@ window.embeddedDataset = [
         "true_price": 5.84,
         "current_odds": 5.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -1928,7 +1936,7 @@ window.embeddedDataset = [
         "true_price": 1.72,
         "current_odds": 1.65,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1938,7 +1946,7 @@ window.embeddedDataset = [
         "true_price": 4.06,
         "current_odds": 3.7,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1948,7 +1956,7 @@ window.embeddedDataset = [
         "true_price": 5.84,
         "current_odds": 5.5,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -1958,7 +1966,7 @@ window.embeddedDataset = [
         "true_price": 1.72,
         "current_odds": 1.62,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1968,7 +1976,7 @@ window.embeddedDataset = [
         "true_price": 4.06,
         "current_odds": 3.9,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1978,7 +1986,7 @@ window.embeddedDataset = [
         "true_price": 5.84,
         "current_odds": 5.4,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -1988,8 +1996,8 @@ window.embeddedDataset = [
         "true_price": 1.72,
         "current_odds": 1.58,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API.",
         "previous_odds": 1.6,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -2000,8 +2008,8 @@ window.embeddedDataset = [
         "true_price": 4.06,
         "current_odds": 3.8,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API.",
         "previous_odds": 3.75,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -2012,16 +2020,16 @@ window.embeddedDataset = [
         "true_price": 5.84,
         "current_odds": 5.5,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event fbfb95c62003fd6d828b309f96ee1f9b."
   },
@@ -2040,7 +2048,7 @@ window.embeddedDataset = [
         "true_price": 8.24,
         "current_odds": 8,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2052,7 +2060,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 4.4,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2062,7 +2070,7 @@ window.embeddedDataset = [
         "true_price": 1.52,
         "current_odds": 1.4,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2070,12 +2078,12 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Saudi Arabia to Win",
         "true_price": 8.24,
-        "current_odds": 8.5,
+        "current_odds": 8,
         "au_bookie": "TAB",
-        "previous_odds": 8,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 8.5,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
       {
@@ -2084,7 +2092,7 @@ window.embeddedDataset = [
         "true_price": 4.5,
         "current_odds": 4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2094,7 +2102,7 @@ window.embeddedDataset = [
         "true_price": 1.52,
         "current_odds": 1.45,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2104,7 +2112,7 @@ window.embeddedDataset = [
         "true_price": 8.24,
         "current_odds": 7,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2116,7 +2124,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 4.4,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2126,7 +2134,7 @@ window.embeddedDataset = [
         "true_price": 1.52,
         "current_odds": 1.44,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2136,7 +2144,7 @@ window.embeddedDataset = [
         "true_price": 8.24,
         "current_odds": 8,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2146,7 +2154,7 @@ window.embeddedDataset = [
         "true_price": 4.5,
         "current_odds": 4.1,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2156,16 +2164,16 @@ window.embeddedDataset = [
         "true_price": 1.52,
         "current_odds": 1.42,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 64b91c5f2db61c7358a4f05459e83c52."
   },
@@ -2184,7 +2192,7 @@ window.embeddedDataset = [
         "true_price": 1.94,
         "current_odds": 1.8,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2194,7 +2202,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.4,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2204,7 +2212,7 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.6,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2214,7 +2222,7 @@ window.embeddedDataset = [
         "true_price": 1.94,
         "current_odds": 1.85,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2224,7 +2232,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2234,7 +2242,7 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.5,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2244,7 +2252,7 @@ window.embeddedDataset = [
         "true_price": 1.94,
         "current_odds": 1.83,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2254,7 +2262,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.4,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2264,7 +2272,7 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2274,7 +2282,7 @@ window.embeddedDataset = [
         "true_price": 1.94,
         "current_odds": 1.81,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2284,7 +2292,7 @@ window.embeddedDataset = [
         "true_price": 3.59,
         "current_odds": 3.3,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2294,16 +2302,16 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.6,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event ec51b9c44ad5e34552f3ab53f7262813."
   },
@@ -2322,7 +2330,7 @@ window.embeddedDataset = [
         "true_price": 1.55,
         "current_odds": 1.44,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2332,7 +2340,7 @@ window.embeddedDataset = [
         "true_price": 4.47,
         "current_odds": 4.33,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2342,7 +2350,7 @@ window.embeddedDataset = [
         "true_price": 7.52,
         "current_odds": 7.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2352,7 +2360,7 @@ window.embeddedDataset = [
         "true_price": 1.55,
         "current_odds": 1.48,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2362,7 +2370,7 @@ window.embeddedDataset = [
         "true_price": 4.47,
         "current_odds": 4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2374,7 +2382,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 7,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2384,7 +2392,7 @@ window.embeddedDataset = [
         "true_price": 1.55,
         "current_odds": 1.46,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2394,7 +2402,7 @@ window.embeddedDataset = [
         "true_price": 4.47,
         "current_odds": 4.25,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2404,7 +2412,7 @@ window.embeddedDataset = [
         "true_price": 7.52,
         "current_odds": 6.75,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2414,10 +2422,10 @@ window.embeddedDataset = [
         "true_price": 1.55,
         "current_odds": 1.45,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "previous_odds": 1.46,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
       {
@@ -2426,7 +2434,7 @@ window.embeddedDataset = [
         "true_price": 4.47,
         "current_odds": 4.1,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "previous_odds": 4.2,
         "odds_updated_at": "2026-06-13T01:55:34.076Z",
         "odds_refresh_status": "checked_current",
@@ -2438,16 +2446,16 @@ window.embeddedDataset = [
         "true_price": 7.52,
         "current_odds": 7,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 73a4fcd14cc9766b9b9bfd50b8ca153a."
   },
@@ -2466,7 +2474,7 @@ window.embeddedDataset = [
         "true_price": 14.14,
         "current_odds": 15,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2476,7 +2484,7 @@ window.embeddedDataset = [
         "true_price": 6.74,
         "current_odds": 5.5,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2486,7 +2494,7 @@ window.embeddedDataset = [
         "true_price": 1.28,
         "current_odds": 1.22,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2496,7 +2504,7 @@ window.embeddedDataset = [
         "true_price": 14.14,
         "current_odds": 11.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2506,7 +2514,7 @@ window.embeddedDataset = [
         "true_price": 6.74,
         "current_odds": 7,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2516,7 +2524,7 @@ window.embeddedDataset = [
         "true_price": 1.28,
         "current_odds": 1.2,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2526,7 +2534,7 @@ window.embeddedDataset = [
         "true_price": 14.14,
         "current_odds": 14,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2536,7 +2544,7 @@ window.embeddedDataset = [
         "true_price": 6.74,
         "current_odds": 7,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2548,7 +2556,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 1.18,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2558,7 +2566,7 @@ window.embeddedDataset = [
         "true_price": 14.14,
         "current_odds": 13,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2568,7 +2576,7 @@ window.embeddedDataset = [
         "true_price": 6.74,
         "current_odds": 6,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2578,16 +2586,16 @@ window.embeddedDataset = [
         "true_price": 1.28,
         "current_odds": 1.2,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 4d4f2b9b78182b557d4fbf8dcf4f4af2."
   },
@@ -2606,7 +2614,7 @@ window.embeddedDataset = [
         "true_price": 1.47,
         "current_odds": 1.36,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2616,7 +2624,7 @@ window.embeddedDataset = [
         "true_price": 4.72,
         "current_odds": 4.6,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2628,7 +2636,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 9,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2638,7 +2646,7 @@ window.embeddedDataset = [
         "true_price": 1.47,
         "current_odds": 1.4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2648,7 +2656,7 @@ window.embeddedDataset = [
         "true_price": 4.72,
         "current_odds": 4.25,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2658,7 +2666,7 @@ window.embeddedDataset = [
         "true_price": 9.17,
         "current_odds": 9,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2668,7 +2676,7 @@ window.embeddedDataset = [
         "true_price": 1.47,
         "current_odds": 1.4,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2678,7 +2686,7 @@ window.embeddedDataset = [
         "true_price": 4.72,
         "current_odds": 4.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2688,7 +2696,7 @@ window.embeddedDataset = [
         "true_price": 9.17,
         "current_odds": 8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2698,7 +2706,7 @@ window.embeddedDataset = [
         "true_price": 1.47,
         "current_odds": 1.37,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2708,7 +2716,7 @@ window.embeddedDataset = [
         "true_price": 4.72,
         "current_odds": 4.4,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2718,16 +2726,16 @@ window.embeddedDataset = [
         "true_price": 9.17,
         "current_odds": 8.5,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event f31b2ee9e1cc6f7e641467f8237eaa21."
   },
@@ -2746,7 +2754,7 @@ window.embeddedDataset = [
         "true_price": 1.41,
         "current_odds": 1.35,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2756,7 +2764,7 @@ window.embeddedDataset = [
         "true_price": 5.42,
         "current_odds": 4.75,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2766,7 +2774,7 @@ window.embeddedDataset = [
         "true_price": 9.56,
         "current_odds": 9,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2776,7 +2784,7 @@ window.embeddedDataset = [
         "true_price": 1.41,
         "current_odds": 1.3,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2786,7 +2794,7 @@ window.embeddedDataset = [
         "true_price": 5.42,
         "current_odds": 5.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2798,7 +2806,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 9.5,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2808,7 +2816,7 @@ window.embeddedDataset = [
         "true_price": 1.41,
         "current_odds": 1.33,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2818,7 +2826,7 @@ window.embeddedDataset = [
         "true_price": 5.42,
         "current_odds": 5.2,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2828,7 +2836,7 @@ window.embeddedDataset = [
         "true_price": 9.56,
         "current_odds": 8.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2838,7 +2846,7 @@ window.embeddedDataset = [
         "true_price": 1.41,
         "current_odds": 1.31,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2848,7 +2856,7 @@ window.embeddedDataset = [
         "true_price": 5.42,
         "current_odds": 5,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2858,16 +2866,16 @@ window.embeddedDataset = [
         "true_price": 9.56,
         "current_odds": 9,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 25161cf6cf0cd9be17ae2e7e224a1f45."
   },
@@ -2886,7 +2894,7 @@ window.embeddedDataset = [
         "true_price": 1.37,
         "current_odds": 1.25,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2896,7 +2904,7 @@ window.embeddedDataset = [
         "true_price": 5.56,
         "current_odds": 5.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2906,7 +2914,7 @@ window.embeddedDataset = [
         "true_price": 11.26,
         "current_odds": 11,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -2918,7 +2926,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 1.3,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2930,7 +2938,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 4.75,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2940,7 +2948,7 @@ window.embeddedDataset = [
         "true_price": 11.26,
         "current_odds": 11,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -2950,7 +2958,7 @@ window.embeddedDataset = [
         "true_price": 1.37,
         "current_odds": 1.28,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2960,7 +2968,7 @@ window.embeddedDataset = [
         "true_price": 5.56,
         "current_odds": 5.6,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2970,7 +2978,7 @@ window.embeddedDataset = [
         "true_price": 11.26,
         "current_odds": 9.25,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -2980,7 +2988,7 @@ window.embeddedDataset = [
         "true_price": 1.37,
         "current_odds": 1.27,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -2990,7 +2998,7 @@ window.embeddedDataset = [
         "true_price": 5.56,
         "current_odds": 5,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3000,16 +3008,16 @@ window.embeddedDataset = [
         "true_price": 11.26,
         "current_odds": 11,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 6cc871c121a1869b4612d3fb22fa9d55."
   },
@@ -3028,7 +3036,7 @@ window.embeddedDataset = [
         "true_price": 1.83,
         "current_odds": 1.7,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3036,11 +3044,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.82,
-        "current_odds": 3.75,
+        "current_odds": 3.7,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked Sportsbet via Odds API."
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
+        "odds_refresh_note": "Checked Sportsbet via Odds API.",
+        "previous_odds": 3.75,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -3048,7 +3058,7 @@ window.embeddedDataset = [
         "true_price": 5.18,
         "current_odds": 5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3060,7 +3070,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 1.75,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3070,7 +3080,7 @@ window.embeddedDataset = [
         "true_price": 3.82,
         "current_odds": 3.5,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3082,7 +3092,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 4.75,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3092,7 +3102,7 @@ window.embeddedDataset = [
         "true_price": 1.83,
         "current_odds": 1.73,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3102,7 +3112,7 @@ window.embeddedDataset = [
         "true_price": 3.82,
         "current_odds": 3.6,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3112,7 +3122,7 @@ window.embeddedDataset = [
         "true_price": 5.18,
         "current_odds": 4.8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3122,7 +3132,7 @@ window.embeddedDataset = [
         "true_price": 1.83,
         "current_odds": 1.71,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3132,7 +3142,7 @@ window.embeddedDataset = [
         "true_price": 3.82,
         "current_odds": 3.5,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3142,16 +3152,16 @@ window.embeddedDataset = [
         "true_price": 5.18,
         "current_odds": 4.9,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 689096c8cd7e2753b9fec95321943c5d."
   },
@@ -3172,7 +3182,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 2.1,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3184,7 +3194,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 3.4,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3194,7 +3204,7 @@ window.embeddedDataset = [
         "true_price": 3.75,
         "current_odds": 3.4,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3204,7 +3214,7 @@ window.embeddedDataset = [
         "true_price": 2.23,
         "current_odds": 2.15,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3214,7 +3224,7 @@ window.embeddedDataset = [
         "true_price": 3.5,
         "current_odds": 3.2,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3224,7 +3234,7 @@ window.embeddedDataset = [
         "true_price": 3.75,
         "current_odds": 3.4,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3236,7 +3246,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 2.05,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3248,7 +3258,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 3.3,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3260,7 +3270,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 3.6,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3272,7 +3282,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 2.05,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3284,7 +3294,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 3.2,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3296,16 +3306,16 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 3.65,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 87afdb85c977b451e1c00f5e3e632601."
   },
@@ -3324,7 +3334,7 @@ window.embeddedDataset = [
         "true_price": 9.44,
         "current_odds": 9.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3334,7 +3344,7 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.6,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3344,7 +3354,7 @@ window.embeddedDataset = [
         "true_price": 1.45,
         "current_odds": 1.36,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3354,7 +3364,7 @@ window.embeddedDataset = [
         "true_price": 9.44,
         "current_odds": 9,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3364,7 +3374,7 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.25,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3374,7 +3384,7 @@ window.embeddedDataset = [
         "true_price": 1.45,
         "current_odds": 1.38,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3384,7 +3394,7 @@ window.embeddedDataset = [
         "true_price": 9.44,
         "current_odds": 8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3394,7 +3404,7 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3404,7 +3414,7 @@ window.embeddedDataset = [
         "true_price": 1.45,
         "current_odds": 1.36,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3414,7 +3424,7 @@ window.embeddedDataset = [
         "true_price": 9.44,
         "current_odds": 9,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3424,7 +3434,7 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 4.5,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3434,16 +3444,16 @@ window.embeddedDataset = [
         "true_price": 1.45,
         "current_odds": 1.35,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 22083e7a8e5362c711bc05c1e1319a1f."
   },
@@ -3464,7 +3474,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 1.66,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3474,7 +3484,7 @@ window.embeddedDataset = [
         "true_price": 3.93,
         "current_odds": 3.55,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3486,7 +3496,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 5.25,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3498,7 +3508,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 1.66,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3510,7 +3520,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 3.8,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3522,7 +3532,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 5,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3534,7 +3544,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 1.7,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3546,7 +3556,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 3.7,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3558,7 +3568,7 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 5,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3570,7 +3580,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 1.68,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3582,7 +3592,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 3.7,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3594,16 +3604,16 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 5,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09."
   },
@@ -3624,7 +3634,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 1.55,
         "odds_updated_at": "2026-06-13T00:49:01.961Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3636,8 +3646,8 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 3.75,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
       {
@@ -3646,7 +3656,7 @@ window.embeddedDataset = [
         "true_price": 6.12,
         "current_odds": 6,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "selection_missing",
         "odds_refresh_note": "The exact selection could not be matched in Odds API."
       },
@@ -3656,8 +3666,8 @@ window.embeddedDataset = [
         "true_price": 1.69,
         "current_odds": 1.57,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 1.55,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -3666,13 +3676,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 4.09,
-        "current_odds": 3.9,
+        "current_odds": 4,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
-        "previous_odds": 4,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 3.9,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -3680,7 +3690,7 @@ window.embeddedDataset = [
         "true_price": 6.12,
         "current_odds": 5.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "selection_missing",
         "odds_refresh_note": "The exact selection could not be matched in Odds API."
       },
@@ -3690,7 +3700,7 @@ window.embeddedDataset = [
         "true_price": 1.69,
         "current_odds": 1.6,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3700,7 +3710,7 @@ window.embeddedDataset = [
         "true_price": 4.09,
         "current_odds": 3.9,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3710,7 +3720,7 @@ window.embeddedDataset = [
         "true_price": 6.12,
         "current_odds": 5.5,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "selection_missing",
         "odds_refresh_note": "The exact selection could not be matched in Odds API."
       },
@@ -3722,7 +3732,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 1.6,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3732,7 +3742,7 @@ window.embeddedDataset = [
         "true_price": 4.09,
         "current_odds": 3.7,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3742,16 +3752,16 @@ window.embeddedDataset = [
         "true_price": 6.12,
         "current_odds": 6,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "selection_missing",
         "odds_refresh_note": "The exact selection could not be matched in Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad."
   },
@@ -3768,13 +3778,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Canada to Win",
         "true_price": 1.38,
-        "current_odds": 1.29,
+        "current_odds": 1.28,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API.",
-        "previous_odds": 1.28,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 1.29,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -3782,7 +3792,7 @@ window.embeddedDataset = [
         "true_price": 5.25,
         "current_odds": 4.9,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3790,13 +3800,13 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Qatar to Win",
         "true_price": 11.44,
-        "current_odds": 10,
+        "current_odds": 11,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked BetRight via Odds API.",
-        "previous_odds": 11,
-        "odds_updated_at": "2026-06-13T06:39:32.791Z"
+        "previous_odds": 10,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -3806,7 +3816,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 1.25,
         "odds_updated_at": "2026-06-13T02:30:14.308Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3818,7 +3828,7 @@ window.embeddedDataset = [
         "au_bookie": "Sportsbet",
         "previous_odds": 5,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3828,8 +3838,8 @@ window.embeddedDataset = [
         "true_price": 11.44,
         "current_odds": 10.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API.",
         "previous_odds": 11,
         "odds_updated_at": "2026-06-13T06:39:32.791Z"
@@ -3840,7 +3850,7 @@ window.embeddedDataset = [
         "true_price": 1.38,
         "current_odds": 1.3,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -3852,8 +3862,8 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 5.2,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
@@ -3864,8 +3874,8 @@ window.embeddedDataset = [
         "au_bookie": "Neds",
         "previous_odds": 9.75,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
       {
@@ -3876,7 +3886,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 1.3,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3888,7 +3898,7 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 4.5,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -3900,16 +3910,16 @@ window.embeddedDataset = [
         "au_bookie": "TAB",
         "previous_odds": 11,
         "odds_updated_at": "2026-06-13T06:39:32.791Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "updated",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc."
   },
@@ -3930,7 +3940,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 1.92,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3942,7 +3952,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 3.2,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3954,7 +3964,7 @@ window.embeddedDataset = [
         "au_bookie": "BetRight",
         "previous_odds": 4.1,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API."
       },
@@ -3964,7 +3974,7 @@ window.embeddedDataset = [
         "true_price": 2.11,
         "current_odds": 2,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3972,12 +3982,12 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.44,
-        "current_odds": 3.25,
+        "current_odds": 3.3,
         "au_bookie": "Sportsbet",
-        "previous_odds": 3.3,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 3.25,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
       {
@@ -3986,7 +3996,7 @@ window.embeddedDataset = [
         "true_price": 4.24,
         "current_odds": 4,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API."
       },
@@ -3996,7 +4006,7 @@ window.embeddedDataset = [
         "true_price": 2.11,
         "current_odds": 2,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -4006,7 +4016,7 @@ window.embeddedDataset = [
         "true_price": 3.44,
         "current_odds": 3.2,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -4016,7 +4026,7 @@ window.embeddedDataset = [
         "true_price": 4.24,
         "current_odds": 4,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API."
       },
@@ -4026,7 +4036,7 @@ window.embeddedDataset = [
         "true_price": 2.11,
         "current_odds": 2,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
@@ -4034,12 +4044,12 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.44,
-        "current_odds": 3.2,
+        "current_odds": 3.25,
         "au_bookie": "TAB",
-        "previous_odds": 3.25,
-        "odds_updated_at": "2026-06-13T01:55:34.076Z",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
-        "odds_refresh_status": "checked_current",
+        "previous_odds": 3.2,
+        "odds_updated_at": "2026-06-13T08:49:31.529Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked TAB via Odds API."
       },
       {
@@ -4048,16 +4058,16 @@ window.embeddedDataset = [
         "true_price": 4.24,
         "current_odds": 3.8,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-13T06:39:32.791Z",
+        "odds_checked_at": "2026-06-13T08:49:31.529Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API."
       }
     ],
-    "referee_last_checked": "2026-06-13T06:39:32.791Z",
+    "referee_last_checked": "2026-06-13T08:49:31.529Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-13T06:39:32.791Z",
+    "odds_last_checked": "2026-06-13T08:49:31.529Z",
     "odds_refresh_cadence": "stale-baseline-30-minute",
     "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d."
   }
