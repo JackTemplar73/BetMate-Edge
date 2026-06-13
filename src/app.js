@@ -126,6 +126,45 @@ function formatKickoff(value) {
   return `${formatter.format(new Date(value))} AEST`;
 }
 
+function minutesSince(value) {
+  const timestamp = Date.parse(value || '');
+  if (!Number.isFinite(timestamp)) return null;
+  return Math.max(0, Math.round((Date.now() - timestamp) / 60000));
+}
+
+function priceFreshness(fixture) {
+  const minutes = minutesSince(fixture.odds_last_checked);
+  if (minutes === null) {
+    return {
+      className: 'stale',
+      label: 'Prices not checked',
+      detail: 'No Odds API refresh timestamp is saved for this match.'
+    };
+  }
+
+  if (minutes <= 20) {
+    return {
+      className: 'fresh',
+      label: `Prices fresh (${minutes} min ago)`,
+      detail: fixture.odds_refresh_note || 'Odds API checked recently.'
+    };
+  }
+
+  if (minutes <= 45) {
+    return {
+      className: 'watch',
+      label: `Prices checked ${minutes} min ago`,
+      detail: fixture.odds_refresh_note || 'Odds API checked recently.'
+    };
+  }
+
+  return {
+    className: 'stale',
+    label: `STALE prices (${minutes} min old)`,
+    detail: fixture.odds_refresh_note || 'Needs a fresh Odds API check.'
+  };
+}
+
 function getFilteredMarkets() {
   const fixture = getSelectedFixture();
   if (!fixture) return [];
@@ -356,7 +395,7 @@ function renderMatchTabs() {
     return `
       <button class="match-tab ${isActive ? 'active' : ''}" data-match-name="${fixture.match_name}" type="button">
         <span>${fixture.match_name}</span>
-        <small>${formatKickoff(fixture.kickoff_time_aest)} | ${bestOption ? `Top QI ${bestOption.metrics.qi}` : 'Market watch'}</small>
+        <small>${formatKickoff(fixture.kickoff_time_aest)} | ${bestOption ? `Top QI ${bestOption.metrics.qi}` : 'Market watch'} | ${priceFreshness(fixture).label}</small>
       </button>
     `;
   }).join('');
@@ -383,6 +422,7 @@ function renderFixturePanels() {
       ...market,
       metrics: runVectorCalculations(market)
     })).sort((a, b) => b.metrics.qi - a.metrics.qi);
+  const freshness = priceFreshness(fixture);
 
   container.innerHTML = `
       <section class="fixture-panel">
@@ -398,6 +438,7 @@ function renderFixturePanels() {
         </div>
         <p class="tactical-summary">${plainGameNotes[fixture.match_name] || fixture.tactical_summary}</p>
         <div class="fixture-meta">
+          <span class="price-freshness ${freshness.className}"><strong>Price check:</strong> ${freshness.label}<em>${freshness.detail}</em></span>
           <span><strong>Pitch note:</strong> ${fixture.pitch_constraints}</span>
           <span><strong>Referee implication:</strong> ${fixture.referee_tendencies} ${fixture.referee_source ? `<em>${fixture.referee_source}</em>` : ''}</span>
         </div>

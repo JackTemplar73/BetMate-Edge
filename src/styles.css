@@ -648,6 +648,37 @@ td {
   background: rgba(16, 16, 14, 0.32);
 }
 
+.fixture-meta .price-freshness {
+  grid-column: 1 / -1;
+}
+
+.price-freshness.fresh {
+  border-color: rgba(61, 220, 151, 0.34);
+  background: var(--green-soft);
+}
+
+.price-freshness.fresh strong {
+  color: var(--green);
+}
+
+.price-freshness.watch {
+  border-color: rgba(245, 188, 66, 0.36);
+  background: rgba(245, 188, 66, 0.12);
+}
+
+.price-freshness.watch strong {
+  color: var(--gold);
+}
+
+.price-freshness.stale {
+  border-color: rgba(217, 108, 69, 0.45);
+  background: rgba(217, 108, 69, 0.14);
+}
+
+.price-freshness.stale strong {
+  color: var(--rust);
+}
+
 .fixture-meta em {
   display: block;
   margin-top: 6px;

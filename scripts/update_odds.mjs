@@ -20,11 +20,20 @@ const DEFAULT_SPORT_KEYS = [
   'soccer_fifa_world_cup',
   'soccer_international_friendlies'
 ];
+const ODDS_API_BOOKMAKERS = [
+  'sportsbet',
+  'tab',
+  'neds',
+  'ladbrokes',
+  'pointsbetau',
+  'betright'
+];
 const ESPN_LEAGUES = [
   'fifa.world',
   'fifa.friendly'
 ];
 const MIN_TRACKED_QI = 70;
+const BASELINE_STALE_MS = 30 * 60 * 1000;
 
 const MARKET_MAP = {
   h2h: ['Full Match Model', 'Moneyline'],
@@ -61,6 +70,14 @@ function getNow() {
   return process.env.BETMATE_NOW ? new Date(process.env.BETMATE_NOW) : new Date();
 }
 
+function latestOddsCheck(dataset) {
+  const timestamps = dataset
+    .map((fixture) => Date.parse(fixture.odds_last_checked || ''))
+    .filter(Number.isFinite);
+
+  return timestamps.length ? new Date(Math.max(...timestamps)) : null;
+}
+
 function runVectorCalculations(marketItem) {
   const truePrice = Number.parseFloat(marketItem.true_price);
   const currentOdds = Number.parseFloat(marketItem.current_odds);
@@ -90,6 +107,8 @@ function shouldRefresh(dataset, now = getNow()) {
 
   const oneHourMs = 60 * 60 * 1000;
   const twoHoursMs = 2 * 60 * 60 * 1000;
+  const latestCheck = latestOddsCheck(dataset);
+  const pricesAreStale = !latestCheck || now - latestCheck >= BASELINE_STALE_MS;
   const upcoming = dataset
     .map((fixture) => ({
       name: fixture.match_name,
@@ -115,6 +134,10 @@ function shouldRefresh(dataset, now = getNow()) {
     return now.getMinutes() % 15 === 0
       ? { refresh: true, cadence: 'final-two-hours-15-minute' }
       : { refresh: false, cadence: 'skip-between-15-minute-refreshes' };
+  }
+
+  if (pricesAreStale) {
+    return { refresh: true, cadence: 'stale-baseline-30-minute' };
   }
 
   if (now.getMinutes() === 0) {
@@ -409,7 +432,7 @@ function outcomeForMarket(marketItem, oddsMarket) {
 async function fetchOddsForSport(sportKey, apiKey) {
   const url = new URL(`https://api.the-odds-api.com/v4/sports/${sportKey}/odds`);
   url.searchParams.set('apiKey', apiKey);
-  url.searchParams.set('regions', 'au');
+  url.searchParams.set('bookmakers', ODDS_API_BOOKMAKERS.join(','));
   url.searchParams.set('markets', 'h2h,spreads,totals');
   url.searchParams.set('oddsFormat', 'decimal');
   url.searchParams.set('dateFormat', 'iso');
@@ -470,24 +493,50 @@ async function main() {
     fixture.odds_refresh_note = `Matched Odds API event ${event.id || event.commence_time}.`;
 
     for (const marketItem of fixture.markets || []) {
-      const bookmaker = getBookmaker(event, marketItem.au_bookie);
-      if (!bookmaker) continue;
+      marketItem.odds_checked_at = nowIso;
 
-      const oddsMarket = findMarket(bookmaker, Object.entries(MARKET_MAP)
+      const oddsMarketKeys = Object.entries(MARKET_MAP)
         .filter(([, localTypes]) => localTypes.includes(marketItem.market_matrix))
-        .map(([key]) => key));
-      if (!oddsMarket) continue;
+        .map(([key]) => key);
+
+      if (oddsMarketKeys.length === 0) {
+        marketItem.odds_refresh_status = 'unsupported_by_oddsapi';
+        marketItem.odds_refresh_note = 'Odds API standard soccer feed does not cover this market type.';
+        continue;
+      }
+
+      const bookmaker = getBookmaker(event, marketItem.au_bookie);
+      if (!bookmaker) {
+        marketItem.odds_refresh_status = 'bookmaker_missing';
+        marketItem.odds_refresh_note = `${marketItem.au_bookie} was not present in the matched Odds API event.`;
+        continue;
+      }
+
+      const oddsMarket = findMarket(bookmaker, oddsMarketKeys);
+      if (!oddsMarket) {
+        marketItem.odds_refresh_status = 'market_missing';
+        marketItem.odds_refresh_note = `${marketItem.au_bookie} did not return this market in Odds API.`;
+        continue;
+      }
 
       const outcome = outcomeForMarket(marketItem, oddsMarket);
-      if (!outcome || !Number.isFinite(Number(outcome.price))) continue;
+      if (!outcome || !Number.isFinite(Number(outcome.price))) {
+        marketItem.odds_refresh_status = 'selection_missing';
+        marketItem.odds_refresh_note = 'The exact selection could not be matched in Odds API.';
+        continue;
+      }
 
       const nextPrice = Number(Number(outcome.price).toFixed(2));
-      if (nextPrice !== Number(marketItem.current_odds)) {
+      const priceChanged = nextPrice !== Number(marketItem.current_odds);
+      if (priceChanged) {
         marketItem.previous_odds = marketItem.current_odds;
         marketItem.current_odds = nextPrice;
         marketItem.odds_updated_at = nowIso;
         updates += 1;
       }
+
+      marketItem.odds_refresh_status = priceChanged ? 'updated' : 'checked_current';
+      marketItem.odds_refresh_note = `Checked ${marketItem.au_bookie} via Odds API.`;
     }
   }
 
