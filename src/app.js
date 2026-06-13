@@ -519,13 +519,15 @@ function renderBetHistory() {
           current_odds: market.current_odds,
           closing_odds: null,
           clv_percent: null,
+          estimated_closing_odds: null,
+          estimated_clv_percent: null,
           opening_qi: market.metrics.qi,
           current_qi: market.metrics.qi
         }))
       .sort((a, b) => b.current_qi - a.current_qi);
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="9">No QI 70+ bets available right now.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="10">No QI 70+ bets available right now.</td></tr>';
     return;
   }
 
@@ -536,8 +538,9 @@ function renderBetHistory() {
       <td><span class="pill">${bet.au_bookie}</span></td>
       <td>${formatHistoryPrice(bet.opening_odds)}</td>
       <td>${formatHistoryPrice(bet.current_odds)}</td>
-      <td>${formatHistoryPrice(bet.closing_odds, 'Pending')}${formatClosingDetail(bet)}</td>
-      <td class="${Number(bet.clv_percent) >= 0 ? 'positive' : Number.isFinite(Number(bet.clv_percent)) ? 'negative' : ''}">${formatClv(bet.clv_percent)}</td>
+      <td>${formatDirection(bet)}</td>
+      <td>${formatClosingPrice(bet)}${formatClosingDetail(bet)}</td>
+      <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
       <td><span class="qi-badge ${metricClass(Number(bet.opening_qi))}">${Number.isFinite(Number(bet.opening_qi)) ? bet.opening_qi : '-'}</span></td>
       <td><span class="qi-badge ${metricClass(bet.current_qi)}">${Number.isFinite(Number(bet.current_qi)) ? bet.current_qi : '-'}</span></td>
     </tr>
@@ -585,9 +588,82 @@ function formatClv(value) {
   return `${numeric > 0 ? '+' : ''}${numeric.toFixed(2)}%`;
 }
 
+function formatClosingPrice(bet) {
+  if (Number.isFinite(Number(bet.closing_odds))) {
+    return formatHistoryPrice(bet.closing_odds);
+  }
+
+  if (Number.isFinite(Number(bet.estimated_closing_odds))) {
+    return `Est. ${formatHistoryPrice(bet.estimated_closing_odds)}`;
+  }
+
+  return 'Pending';
+}
+
+function formatHistoryClv(bet) {
+  if (Number.isFinite(Number(bet.clv_percent))) {
+    return formatClv(bet.clv_percent);
+  }
+
+  if (Number.isFinite(Number(bet.estimated_clv_percent))) {
+    return `Est. ${formatClv(bet.estimated_clv_percent)}`;
+  }
+
+  return '-';
+}
+
+function priceDirection(bet) {
+  const opening = Number.parseFloat(bet.opening_odds);
+  const current = Number.parseFloat(bet.current_odds);
+
+  if (!Number.isFinite(opening) || !Number.isFinite(current)) {
+    return {
+      className: '',
+      label: '-',
+      detail: 'No price comparison available.'
+    };
+  }
+
+  if (opening > current) {
+    return {
+      className: 'positive',
+      label: 'Positive',
+      detail: 'Opening higher than current odds.'
+    };
+  }
+
+  if (opening < current) {
+    return {
+      className: 'negative',
+      label: 'Negative',
+      detail: 'Opening lower than current odds.'
+    };
+  }
+
+  return {
+    className: 'neutral-text',
+    label: 'Neutral',
+    detail: 'Opening equals current odds.'
+  };
+}
+
+function formatDirection(bet) {
+  const direction = priceDirection(bet);
+  return `<span class="primary-cell ${direction.className}">${direction.label}</span><span class="sub-cell">${direction.detail}</span>`;
+}
+
+function clvClass(bet) {
+  const value = Number.isFinite(Number(bet.clv_percent))
+    ? Number(bet.clv_percent)
+    : Number(bet.estimated_clv_percent);
+
+  if (!Number.isFinite(value)) return '';
+  return value >= 0 ? 'positive' : 'negative';
+}
+
 function formatClosingDetail(bet) {
   if (bet.closing_status === 'missing_fresh_close') {
-    return `<span class="sub-cell warning-text">${bet.closing_source || 'No confirmed fresh close was captured.'}</span>`;
+    return `<span class="sub-cell warning-text">${bet.estimated_closing_source || bet.closing_source || 'No confirmed fresh close was captured.'}</span>`;
   }
 
   if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture from Odds API inside 2 minutes before kickoff</span>';

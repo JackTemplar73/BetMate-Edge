@@ -484,6 +484,10 @@ td {
   color: var(--rust);
 }
 
+.neutral-text {
+  color: var(--muted);
+}
+
 .qi-badge,
 .pill,
 .official {

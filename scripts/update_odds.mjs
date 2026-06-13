@@ -356,7 +356,10 @@ async function syncBetHistory(dataset, now = getNow()) {
         opening_qi: metrics.qi,
         closing_odds: null,
         closing_captured_at: null,
-        clv_percent: null
+        clv_percent: null,
+        estimated_closing_odds: null,
+        estimated_clv_percent: null,
+        estimated_closing_source: null
       };
 
       entry.current_odds = currentOdds;
@@ -372,10 +375,16 @@ async function syncBetHistory(dataset, now = getNow()) {
         entry.closing_source = `Confirmed Odds API check ${freshClose.minutesBeforeKickoff} min before kickoff`;
         entry.closing_status = 'confirmed';
         entry.clv_percent = clvPercent(entry.opening_odds, entry.closing_odds);
+        entry.estimated_closing_odds = null;
+        entry.estimated_clv_percent = null;
+        entry.estimated_closing_source = null;
       } else if (now >= kickoff && entry.closing_odds === null) {
         entry.closing_status = 'missing_fresh_close';
         entry.closing_source = 'No confirmed Odds API check inside 2 minutes before kickoff';
         entry.clv_percent = null;
+        entry.estimated_closing_odds = currentOdds;
+        entry.estimated_clv_percent = clvPercent(entry.opening_odds, currentOdds);
+        entry.estimated_closing_source = 'Estimated from nearest saved price; not an official closing line.';
       }
 
       byId.set(id, entry);
