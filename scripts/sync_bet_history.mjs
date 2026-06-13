@@ -118,7 +118,8 @@ function hasVerifiedPrice(marketItem) {
     'checked_current',
     'updated',
     'added_from_oddsapi',
-    'confirmed_rendered_site'
+    'confirmed_rendered_site',
+    'model_only'
   ].includes(marketItem.odds_refresh_status);
 }
 

@@ -544,6 +544,16 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
+      },
+      {
+        "market_matrix": "Full Match Model",
+        "target_selection": "Match to end in a Draw",
+        "true_price": 3.82,
+        "current_odds": null,
+        "au_bookie": "Model only",
+        "odds_checked_at": "2026-06-13T11:30:06.923Z",
+        "odds_refresh_status": "model_only",
+        "odds_refresh_note": "Model-only draw price restored from full match model probability; no live book price confirmed yet."
       }
     ],
     "referee_last_checked": "2026-06-13T20:56:07.950Z",

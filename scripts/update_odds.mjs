@@ -517,7 +517,8 @@ function hasVerifiedPrice(marketItem) {
     'checked_current',
     'updated',
     'added_from_oddsapi',
-    'confirmed_rendered_site'
+    'confirmed_rendered_site',
+    'model_only'
   ].includes(marketItem.odds_refresh_status);
 }
 
@@ -889,6 +890,12 @@ async function main() {
     updates += addMissingH2hRowsFromOddsApi(fixture, event, nowIso);
 
     for (const marketItem of fixture.markets || []) {
+      if (marketItem.odds_refresh_status === 'model_only') {
+        marketItem.odds_checked_at = nowIso;
+        marketItem.odds_refresh_note = marketItem.odds_refresh_note || 'Model-only selection; no live book price confirmed yet.';
+        continue;
+      }
+
       marketItem.odds_checked_at = nowIso;
 
       const oddsMarketKeys = Object.entries(MARKET_MAP)

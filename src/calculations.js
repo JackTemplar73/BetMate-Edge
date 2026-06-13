@@ -39,7 +39,8 @@ function flattenMarkets(dataset) {
         return status === 'checked_current'
           || status === 'updated'
           || status === 'added_from_oddsapi'
-          || status === 'confirmed_rendered_site';
+          || status === 'confirmed_rendered_site'
+          || status === 'model_only';
       })
       .map((market, marketIndex) => ({
         ...market,

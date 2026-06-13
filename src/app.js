@@ -214,7 +214,7 @@ function getFilteredMarkets() {
 
   return filtered.sort((a, b) => {
     if (state.sortMode === 'ev') return b.metrics.ev - a.metrics.ev;
-    if (state.sortMode === 'odds') return b.current_odds - a.current_odds;
+    if (state.sortMode === 'odds') return Number.parseFloat(b.current_odds || 0) - Number.parseFloat(a.current_odds || 0);
     return b.metrics.qi - a.metrics.qi;
   });
 }
@@ -232,27 +232,40 @@ function hasModelPrice(market) {
   return Number.isFinite(Number.parseFloat(market.true_price)) && Number.parseFloat(market.true_price) > 1;
 }
 
+function hasMarketOdds(market) {
+  return Number.isFinite(Number.parseFloat(market.current_odds)) && Number.parseFloat(market.current_odds) > 1;
+}
+
 function formatQi(market) {
-  return hasModelPrice(market) ? market.metrics.qi : '-';
+  return hasModelPrice(market) && hasMarketOdds(market) ? market.metrics.qi : '-';
 }
 
 function formatModelPrice(market) {
   return hasModelPrice(market) ? `$${market.true_price.toFixed(2)}` : 'Not priced';
 }
 
-function formatEv(market) {
+function formatModelProb(market) {
   if (!hasModelPrice(market)) return '-';
+  return `${((1 / Number.parseFloat(market.true_price)) * 100).toFixed(1)}%`;
+}
+
+function formatOdds(market) {
+  return hasMarketOdds(market) ? `$${Number.parseFloat(market.current_odds).toFixed(2)}` : 'Not priced';
+}
+
+function formatEv(market) {
+  if (!hasModelPrice(market) || !hasMarketOdds(market)) return '-';
   const prefix = market.metrics.ev > 0 ? '+' : '';
   return `${prefix}${market.metrics.ev.toFixed(2)}%`;
 }
 
 function evClass(market) {
-  if (!hasModelPrice(market)) return '';
+  if (!hasModelPrice(market) || !hasMarketOdds(market)) return '';
   return market.metrics.ev >= 0 ? 'positive' : 'negative';
 }
 
 function formatBookCell(market) {
-  return `<span class="pill">${market.au_bookie}</span>`;
+  return `<span class="pill">${market.au_bookie || 'Model only'}</span>`;
 }
 
 function formatRefereeStatus(fixture) {
@@ -274,7 +287,7 @@ function refereeStatusClass(fixture) {
 function renderSummary() {
   const fixtures = getUpcomingFixtures();
   const rows = flattenMarkets(fixtures);
-  const pricedRows = rows.filter(hasModelPrice);
+  const pricedRows = rows.filter((row) => hasModelPrice(row) && hasMarketOdds(row));
   const top = [...pricedRows].sort((a, b) => b.metrics.qi - a.metrics.qi)[0];
   const bestEv = pricedRows.reduce((best, row) => row.metrics.ev > best.metrics.ev ? row : best, pricedRows[0]);
 
@@ -332,8 +345,9 @@ function renderSourceTable() {
       <td>${market.match_name}</td>
       <td>${formatKickoff(market.kickoff_time_aest)}</td>
       <td><span class="primary-cell">${market.target_selection}</span><span class="sub-cell">${plainMarketNames[market.market_matrix] || market.market_matrix}</span></td>
-      <td>$${market.current_odds.toFixed(2)}</td>
+      <td>${formatOdds(market)}</td>
       <td>${formatModelPrice(market)}</td>
+      <td>${formatModelProb(market)}</td>
       <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></td>
       <td>${formatBookCell(market)}</td>
     </tr>
@@ -376,7 +390,7 @@ function renderMarketsTable() {
   const rows = getFilteredMarkets();
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="6">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="7">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
     return;
   }
 
@@ -387,8 +401,9 @@ function renderMarketsTable() {
         <span class="primary-cell">${market.target_selection}</span>
         <span class="sub-cell">${market.match_name}</span>
       </td>
-      <td>$${market.current_odds.toFixed(2)}</td>
+      <td>${formatOdds(market)}</td>
       <td>${formatModelPrice(market)}</td>
+      <td>${formatModelProb(market)}</td>
       <td class="${evClass(market)}">${formatEv(market)}</td>
       <td>${formatBookCell(market)}</td>
     </tr>
@@ -399,6 +414,7 @@ function renderHighValueBets() {
   const container = document.querySelector('[data-high-value-bets]');
   const rows = flattenMarkets(getUpcomingFixtures())
     .filter(hasModelPrice)
+    .filter(hasMarketOdds)
     .filter((market) => market.metrics.qi >= 80)
     .sort((a, b) => b.metrics.qi - a.metrics.qi);
 
@@ -416,8 +432,9 @@ function renderHighValueBets() {
       <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
       <dl>
-        <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
+        <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
+        <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
         <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
       </dl>
     </article>
@@ -427,6 +444,11 @@ function renderHighValueBets() {
 function formatModelOnlyPrice(value) {
   const numeric = Number.parseFloat(value);
   return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : 'Not priced';
+}
+
+function formatModelOnlyProb(value) {
+  const numeric = Number.parseFloat(value);
+  return Number.isFinite(numeric) && numeric > 1 ? `${((1 / numeric) * 100).toFixed(1)}%` : '-';
 }
 
 function getUpcomingPlayerProps() {
@@ -458,6 +480,7 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
       <h3>${prop.player}: ${prop.market}</h3>
       <dl>
         <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
+        <div><dt>Model Prob</dt><dd>${formatModelOnlyProb(prop.model_price)}</dd></div>
       </dl>
       <p class="source-note">${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
     </article>
@@ -575,8 +598,9 @@ function renderFixturePanels() {
               </div>
               <h3>${market.target_selection}</h3>
               <dl>
-                <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
+                <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
                 <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
+                <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
                 <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
               </dl>
             </article>
@@ -656,7 +680,7 @@ function renderCompletedGames() {
         <td>${fixture.match_name}</td>
         <td>${formatKickoff(fixture.kickoff_time_aest)}</td>
         <td><span class="primary-cell">${freshness.label}</span><span class="sub-cell">${freshness.detail}</span></td>
-        <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${plainMarketNames[bestOption.market_matrix] || bestOption.market_matrix} | ${bestOption.au_bookie} | $${bestOption.current_odds.toFixed(2)}</span>` : '-'}</td>
+        <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${plainMarketNames[bestOption.market_matrix] || bestOption.market_matrix} | ${bestOption.au_bookie} | ${formatOdds(bestOption)}</span>` : '-'}</td>
         <td>${bestOption ? `<span class="qi-badge ${metricClass(bestOption.metrics.qi)}">${bestOption.metrics.qi}</span>` : '-'}</td>
       </tr>
     `;
