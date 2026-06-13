@@ -713,6 +713,119 @@ function outcomeForMarket(marketItem, oddsMarket) {
   return null;
 }
 
+function poissonProbability(lambda, goals) {
+  let factorial = 1;
+  for (let i = 2; i <= goals; i += 1) factorial *= i;
+  return (Math.exp(-lambda) * Math.pow(lambda, goals)) / factorial;
+}
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
+}
+
+function modelProbabilityFromPrice(price) {
+  const numeric = Number.parseFloat(price);
+  return Number.isFinite(numeric) && numeric > 1 ? 1 / numeric : null;
+}
+
+function fairPriceFromProbability(probability) {
+  return probability > 0 ? Number((1 / probability).toFixed(2)) : null;
+}
+
+function h2hModelProbabilities(fixture) {
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  const result = { home: null, draw: null, away: null };
+
+  for (const marketItem of fixture.markets || []) {
+    if (marketItem.market_matrix !== 'Full Match Model') continue;
+    const probability = modelProbabilityFromPrice(marketItem.true_price);
+    if (!Number.isFinite(probability)) continue;
+
+    const selection = normalise(marketItem.target_selection);
+    if (selection.includes('draw')) {
+      result.draw ??= probability;
+      continue;
+    }
+
+    const selectionTeam = normalise(selection.replace('to win', '').trim());
+    if (comparableName(selectionTeam) === comparableName(teams.home) || selectionTeam.includes(teams.home) || teams.home.includes(selectionTeam)) {
+      result.home ??= probability;
+    } else if (comparableName(selectionTeam) === comparableName(teams.away) || selectionTeam.includes(teams.away) || teams.away.includes(selectionTeam)) {
+      result.away ??= probability;
+    }
+  }
+
+  if (Number.isFinite(result.draw)) {
+    if (!Number.isFinite(result.home) && Number.isFinite(result.away)) {
+      result.home = Math.max(0.01, 1 - result.draw - result.away);
+    }
+    if (!Number.isFinite(result.away) && Number.isFinite(result.home)) {
+      result.away = Math.max(0.01, 1 - result.draw - result.home);
+    }
+  }
+
+  if (![result.home, result.draw, result.away].every(Number.isFinite)) return null;
+  const total = result.home + result.draw + result.away;
+  if (total <= 0) return null;
+
+  return {
+    home: result.home / total,
+    draw: result.draw / total,
+    away: result.away / total
+  };
+}
+
+function deriveFixtureGoalModel(fixture) {
+  const probabilities = h2hModelProbabilities(fixture);
+  const teams = splitTeams(fixture.match_name);
+  if (!probabilities || !teams) return;
+  const displayTeams = fixture.match_name.split(/\s+vs\s+/i);
+  const displayHome = displayTeams[0] || teams.home;
+  const displayAway = displayTeams[1] || teams.away;
+
+  const resultGap = Math.abs(probabilities.home - probabilities.away);
+  const totalGoalsMean = clamp(2.72 - ((probabilities.draw - 0.25) * 3.1) + (resultGap * 0.55), 1.75, 3.65);
+  const homeShare = clamp(0.5 + ((probabilities.home - probabilities.away) * 0.46), 0.23, 0.77);
+  const homeLambda = totalGoalsMean * homeShare;
+  const awayLambda = totalGoalsMean - homeLambda;
+
+  const underProbability = [0, 1, 2]
+    .reduce((sum, goals) => sum + poissonProbability(totalGoalsMean, goals), 0);
+  const overProbability = 1 - underProbability;
+
+  const scores = [];
+  for (let homeGoals = 0; homeGoals <= 5; homeGoals += 1) {
+    for (let awayGoals = 0; awayGoals <= 5; awayGoals += 1) {
+      const probability = poissonProbability(homeLambda, homeGoals) * poissonProbability(awayLambda, awayGoals);
+      scores.push({
+        score: `${displayHome} ${homeGoals}-${awayGoals} ${displayAway}`,
+        probability: Number((probability * 100).toFixed(1)),
+        fair_price: fairPriceFromProbability(probability)
+      });
+    }
+  }
+
+  fixture.model_totals_25 = {
+    line: 2.5,
+    over_probability: Number((overProbability * 100).toFixed(1)),
+    over_fair_price: fairPriceFromProbability(overProbability),
+    under_probability: Number((underProbability * 100).toFixed(1)),
+    under_fair_price: fairPriceFromProbability(underProbability),
+    total_goals_mean: Number(totalGoalsMean.toFixed(2))
+  };
+  fixture.exact_score_model = scores
+    .sort((a, b) => b.probability - a.probability)
+    .slice(0, 5);
+}
+
+function deriveFixtureModels(dataset) {
+  for (const fixture of dataset) {
+    deriveFixtureGoalModel(fixture);
+  }
+}
+
 function targetSelectionForH2hOutcome(outcome) {
   return normalise(outcome.name) === 'draw'
     ? 'Match to end in a Draw'
@@ -946,6 +1059,7 @@ async function main() {
   }
 
   const prunedMarkets = pruneUnverifiedFutureMarkets(dataset);
+  deriveFixtureModels(dataset);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);

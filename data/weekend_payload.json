@@ -100,7 +100,42 @@
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "No matching Odds API event found."
+    "odds_refresh_note": "No matching Odds API event found.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 53.6,
+      "over_fair_price": 1.86,
+      "under_probability": 46.4,
+      "under_fair_price": 2.16,
+      "total_goals_mean": 2.82
+    },
+    "exact_score_model": [
+      {
+        "score": "Canada 1-0 Bosnia & Herzegovina",
+        "probability": 10.8,
+        "fair_price": 9.27
+      },
+      {
+        "score": "Canada 1-1 Bosnia & Herzegovina",
+        "probability": 10.8,
+        "fair_price": 9.22
+      },
+      {
+        "score": "Canada 2-1 Bosnia & Herzegovina",
+        "probability": 9.9,
+        "fair_price": 10.13
+      },
+      {
+        "score": "Canada 2-0 Bosnia & Herzegovina",
+        "probability": 9.8,
+        "fair_price": 10.18
+      },
+      {
+        "score": "Canada 0-1 Bosnia & Herzegovina",
+        "probability": 6,
+        "fair_price": 16.77
+      }
+    ]
   },
   {
     "match_name": "USA vs Paraguay",
@@ -293,7 +328,42 @@
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
     "odds_refresh_note": "No matching Odds API event found.",
-    "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries"
+    "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 50.2,
+      "over_fair_price": 1.99,
+      "under_probability": 49.8,
+      "under_fair_price": 2.01,
+      "total_goals_mean": 2.68
+    },
+    "exact_score_model": [
+      {
+        "score": "USA 1-1 Paraguay",
+        "probability": 11.9,
+        "fair_price": 8.44
+      },
+      {
+        "score": "USA 1-0 Paraguay",
+        "probability": 10.9,
+        "fair_price": 9.14
+      },
+      {
+        "score": "USA 2-1 Paraguay",
+        "probability": 9.5,
+        "fair_price": 10.56
+      },
+      {
+        "score": "USA 2-0 Paraguay",
+        "probability": 8.7,
+        "fair_price": 11.45
+      },
+      {
+        "score": "USA 0-1 Paraguay",
+        "probability": 7.4,
+        "fair_price": 13.48
+      }
+    ]
   },
   {
     "match_name": "Qatar vs Switzerland",
@@ -391,7 +461,42 @@
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "No matching Odds API event found."
+    "odds_refresh_note": "No matching Odds API event found.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 66.1,
+      "over_fair_price": 1.51,
+      "under_probability": 33.9,
+      "under_fair_price": 2.95,
+      "total_goals_mean": 3.4
+    },
+    "exact_score_model": [
+      {
+        "score": "Qatar 0-2 Switzerland",
+        "probability": 11.4,
+        "fair_price": 8.76
+      },
+      {
+        "score": "Qatar 0-3 Switzerland",
+        "probability": 10,
+        "fair_price": 10.02
+      },
+      {
+        "score": "Qatar 1-2 Switzerland",
+        "probability": 8.9,
+        "fair_price": 11.19
+      },
+      {
+        "score": "Qatar 0-1 Switzerland",
+        "probability": 8.7,
+        "fair_price": 11.48
+      },
+      {
+        "score": "Qatar 1-3 Switzerland",
+        "probability": 7.8,
+        "fair_price": 12.8
+      }
+    ]
   },
   {
     "match_name": "Brazil vs Morocco",
@@ -449,7 +554,42 @@
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event f6c8748a16516e0998f95de14235432a."
+    "odds_refresh_note": "Matched Odds API event f6c8748a16516e0998f95de14235432a.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 56.5,
+      "over_fair_price": 1.77,
+      "under_probability": 43.5,
+      "under_fair_price": 2.3,
+      "total_goals_mean": 2.95
+    },
+    "exact_score_model": [
+      {
+        "score": "Brazil 2-0 Morocco",
+        "probability": 10.7,
+        "fair_price": 9.32
+      },
+      {
+        "score": "Brazil 1-0 Morocco",
+        "probability": 10.6,
+        "fair_price": 9.42
+      },
+      {
+        "score": "Brazil 2-1 Morocco",
+        "probability": 9.9,
+        "fair_price": 10.07
+      },
+      {
+        "score": "Brazil 1-1 Morocco",
+        "probability": 9.8,
+        "fair_price": 10.18
+      },
+      {
+        "score": "Brazil 3-0 Morocco",
+        "probability": 7.2,
+        "fair_price": 13.84
+      }
+    ]
   },
   {
     "match_name": "Haiti vs Scotland",
@@ -507,7 +647,42 @@
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 5ae41a06735c926eeb7f74006933adce."
+    "odds_refresh_note": "Matched Odds API event 5ae41a06735c926eeb7f74006933adce.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 58,
+      "over_fair_price": 1.72,
+      "under_probability": 42,
+      "under_fair_price": 2.38,
+      "total_goals_mean": 3.02
+    },
+    "exact_score_model": [
+      {
+        "score": "Haiti 0-2 Scotland",
+        "probability": 10.9,
+        "fair_price": 9.21
+      },
+      {
+        "score": "Haiti 0-1 Scotland",
+        "probability": 10.3,
+        "fair_price": 9.69
+      },
+      {
+        "score": "Haiti 1-2 Scotland",
+        "probability": 9.9,
+        "fair_price": 10.11
+      },
+      {
+        "score": "Haiti 1-1 Scotland",
+        "probability": 9.4,
+        "fair_price": 10.64
+      },
+      {
+        "score": "Haiti 0-3 Scotland",
+        "probability": 7.6,
+        "fair_price": 13.14
+      }
+    ]
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -575,7 +750,42 @@
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 564084f52cc9f1abcc18187c168a7cdc."
+    "odds_refresh_note": "Matched Odds API event 564084f52cc9f1abcc18187c168a7cdc.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 55.1,
+      "over_fair_price": 1.81,
+      "under_probability": 44.9,
+      "under_fair_price": 2.23,
+      "total_goals_mean": 2.89
+    },
+    "exact_score_model": [
+      {
+        "score": "Australia 0-1 Turkiye",
+        "probability": 10.8,
+        "fair_price": 9.26
+      },
+      {
+        "score": "Australia 0-2 Turkiye",
+        "probability": 10.5,
+        "fair_price": 9.55
+      },
+      {
+        "score": "Australia 1-1 Turkiye",
+        "probability": 10.2,
+        "fair_price": 9.76
+      },
+      {
+        "score": "Australia 1-2 Turkiye",
+        "probability": 9.9,
+        "fair_price": 10.07
+      },
+      {
+        "score": "Australia 0-3 Turkiye",
+        "probability": 6.8,
+        "fair_price": 14.76
+      }
+    ]
   },
   {
     "match_name": "Germany vs Curaçao",
@@ -632,7 +842,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event d79edbd6aaeb578d33e313446b18d333."
+    "odds_refresh_note": "Matched Odds API event d79edbd6aaeb578d33e313446b18d333.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 70.6,
+      "over_fair_price": 1.42,
+      "under_probability": 29.4,
+      "under_fair_price": 3.4,
+      "total_goals_mean": 3.65
+    },
+    "exact_score_model": [
+      {
+        "score": "Germany 2-0 Curaçao",
+        "probability": 10.3,
+        "fair_price": 9.74
+      },
+      {
+        "score": "Germany 3-0 Curaçao",
+        "probability": 9.6,
+        "fair_price": 10.4
+      },
+      {
+        "score": "Germany 2-1 Curaçao",
+        "probability": 8.6,
+        "fair_price": 11.6
+      },
+      {
+        "score": "Germany 3-1 Curaçao",
+        "probability": 8.1,
+        "fair_price": 12.39
+      },
+      {
+        "score": "Germany 1-0 Curaçao",
+        "probability": 7.3,
+        "fair_price": 13.69
+      }
+    ]
   },
   {
     "match_name": "Netherlands vs Japan",
@@ -690,7 +935,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 32ec06abda2398ac41501c86eb9aa376."
+    "odds_refresh_note": "Matched Odds API event 32ec06abda2398ac41501c86eb9aa376.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 52.5,
+      "over_fair_price": 1.9,
+      "under_probability": 47.5,
+      "under_fair_price": 2.11,
+      "total_goals_mean": 2.78
+    },
+    "exact_score_model": [
+      {
+        "score": "Netherlands 1-1 Japan",
+        "probability": 11.5,
+        "fair_price": 8.68
+      },
+      {
+        "score": "Netherlands 1-0 Japan",
+        "probability": 10.4,
+        "fair_price": 9.65
+      },
+      {
+        "score": "Netherlands 2-1 Japan",
+        "probability": 9.6,
+        "fair_price": 10.42
+      },
+      {
+        "score": "Netherlands 2-0 Japan",
+        "probability": 8.6,
+        "fair_price": 11.58
+      },
+      {
+        "score": "Netherlands 0-1 Japan",
+        "probability": 6.9,
+        "fair_price": 14.47
+      }
+    ]
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -748,7 +1028,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 05752bb341e197001387b64f3a06b9b2."
+    "odds_refresh_note": "Matched Odds API event 05752bb341e197001387b64f3a06b9b2.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 46.2,
+      "over_fair_price": 2.16,
+      "under_probability": 53.8,
+      "under_fair_price": 1.86,
+      "total_goals_mean": 2.52
+    },
+    "exact_score_model": [
+      {
+        "score": "Ivory Coast 1-1 Ecuador",
+        "probability": 12.6,
+        "fair_price": 7.92
+      },
+      {
+        "score": "Ivory Coast 0-1 Ecuador",
+        "probability": 11.2,
+        "fair_price": 8.94
+      },
+      {
+        "score": "Ivory Coast 1-0 Ecuador",
+        "probability": 9,
+        "fair_price": 11.06
+      },
+      {
+        "score": "Ivory Coast 1-2 Ecuador",
+        "probability": 8.8,
+        "fair_price": 11.35
+      },
+      {
+        "score": "Ivory Coast 0-0 Ecuador",
+        "probability": 8,
+        "fair_price": 12.48
+      }
+    ]
   },
   {
     "match_name": "Sweden vs Tunisia",
@@ -805,7 +1120,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event b55f9569de3f4d731bc5537ff5ff43e4."
+    "odds_refresh_note": "Matched Odds API event b55f9569de3f4d731bc5537ff5ff43e4.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 52.6,
+      "over_fair_price": 1.9,
+      "under_probability": 47.4,
+      "under_fair_price": 2.11,
+      "total_goals_mean": 2.78
+    },
+    "exact_score_model": [
+      {
+        "score": "Sweden 1-1 Tunisia",
+        "probability": 11.2,
+        "fair_price": 8.91
+      },
+      {
+        "score": "Sweden 1-0 Tunisia",
+        "probability": 10.8,
+        "fair_price": 9.27
+      },
+      {
+        "score": "Sweden 2-1 Tunisia",
+        "probability": 9.8,
+        "fair_price": 10.24
+      },
+      {
+        "score": "Sweden 2-0 Tunisia",
+        "probability": 9.4,
+        "fair_price": 10.65
+      },
+      {
+        "score": "Sweden 0-1 Tunisia",
+        "probability": 6.4,
+        "fair_price": 15.52
+      }
+    ]
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -862,7 +1212,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event c54f00b11925751d2b62988775c6c239."
+    "odds_refresh_note": "Matched Odds API event c54f00b11925751d2b62988775c6c239.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 70.6,
+      "over_fair_price": 1.42,
+      "under_probability": 29.4,
+      "under_fair_price": 3.4,
+      "total_goals_mean": 3.65
+    },
+    "exact_score_model": [
+      {
+        "score": "Spain 2-0 Cape Verde",
+        "probability": 10.3,
+        "fair_price": 9.74
+      },
+      {
+        "score": "Spain 3-0 Cape Verde",
+        "probability": 9.6,
+        "fair_price": 10.4
+      },
+      {
+        "score": "Spain 2-1 Cape Verde",
+        "probability": 8.6,
+        "fair_price": 11.6
+      },
+      {
+        "score": "Spain 3-1 Cape Verde",
+        "probability": 8.1,
+        "fair_price": 12.39
+      },
+      {
+        "score": "Spain 1-0 Cape Verde",
+        "probability": 7.3,
+        "fair_price": 13.69
+      }
+    ]
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -906,7 +1291,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event fbfb95c62003fd6d828b309f96ee1f9b."
+    "odds_refresh_note": "Matched Odds API event fbfb95c62003fd6d828b309f96ee1f9b.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 56.7,
+      "over_fair_price": 1.76,
+      "under_probability": 43.3,
+      "under_fair_price": 2.31,
+      "total_goals_mean": 2.96
+    },
+    "exact_score_model": [
+      {
+        "score": "Belgium 2-0 Egypt",
+        "probability": 10.8,
+        "fair_price": 9.27
+      },
+      {
+        "score": "Belgium 1-0 Egypt",
+        "probability": 10.6,
+        "fair_price": 9.45
+      },
+      {
+        "score": "Belgium 2-1 Egypt",
+        "probability": 9.9,
+        "fair_price": 10.08
+      },
+      {
+        "score": "Belgium 1-1 Egypt",
+        "probability": 9.7,
+        "fair_price": 10.27
+      },
+      {
+        "score": "Belgium 3-0 Egypt",
+        "probability": 7.3,
+        "fair_price": 13.64
+      }
+    ]
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -962,7 +1382,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 64b91c5f2db61c7358a4f05459e83c52."
+    "odds_refresh_note": "Matched Odds API event 64b91c5f2db61c7358a4f05459e83c52.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 59.9,
+      "over_fair_price": 1.67,
+      "under_probability": 40.1,
+      "under_fair_price": 2.5,
+      "total_goals_mean": 3.1
+    },
+    "exact_score_model": [
+      {
+        "score": "Saudi Arabia 0-2 Uruguay",
+        "probability": 12.1,
+        "fair_price": 8.3
+      },
+      {
+        "score": "Saudi Arabia 0-1 Uruguay",
+        "probability": 10.4,
+        "fair_price": 9.6
+      },
+      {
+        "score": "Saudi Arabia 1-2 Uruguay",
+        "probability": 9.5,
+        "fair_price": 10.55
+      },
+      {
+        "score": "Saudi Arabia 0-3 Uruguay",
+        "probability": 9.3,
+        "fair_price": 10.75
+      },
+      {
+        "score": "Saudi Arabia 1-1 Uruguay",
+        "probability": 8.2,
+        "fair_price": 12.21
+      }
+    ]
   },
   {
     "match_name": "Iran vs New Zealand",
@@ -1019,7 +1474,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event ec51b9c44ad5e34552f3ab53f7262813."
+    "odds_refresh_note": "Matched Odds API event ec51b9c44ad5e34552f3ab53f7262813.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 53.1,
+      "over_fair_price": 1.88,
+      "under_probability": 46.9,
+      "under_fair_price": 2.13,
+      "total_goals_mean": 2.8
+    },
+    "exact_score_model": [
+      {
+        "score": "Iran 1-1 New Zealand",
+        "probability": 11,
+        "fair_price": 9.13
+      },
+      {
+        "score": "Iran 1-0 New Zealand",
+        "probability": 10.9,
+        "fair_price": 9.16
+      },
+      {
+        "score": "Iran 2-0 New Zealand",
+        "probability": 9.8,
+        "fair_price": 10.18
+      },
+      {
+        "score": "Iran 2-1 New Zealand",
+        "probability": 9.8,
+        "fair_price": 10.15
+      },
+      {
+        "score": "Iran 0-0 New Zealand",
+        "probability": 6.1,
+        "fair_price": 16.47
+      }
+    ]
   },
   {
     "match_name": "France vs Senegal",
@@ -1074,7 +1564,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 73a4fcd14cc9766b9b9bfd50b8ca153a."
+    "odds_refresh_note": "Matched Odds API event 73a4fcd14cc9766b9b9bfd50b8ca153a.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 59.5,
+      "over_fair_price": 1.68,
+      "under_probability": 40.5,
+      "under_fair_price": 2.47,
+      "total_goals_mean": 3.08
+    },
+    "exact_score_model": [
+      {
+        "score": "France 2-0 Senegal",
+        "probability": 11.8,
+        "fair_price": 8.5
+      },
+      {
+        "score": "France 1-0 Senegal",
+        "probability": 10.4,
+        "fair_price": 9.63
+      },
+      {
+        "score": "France 2-1 Senegal",
+        "probability": 9.6,
+        "fair_price": 10.41
+      },
+      {
+        "score": "France 3-0 Senegal",
+        "probability": 8.9,
+        "fair_price": 11.25
+      },
+      {
+        "score": "France 1-1 Senegal",
+        "probability": 8.5,
+        "fair_price": 11.8
+      }
+    ]
   },
   {
     "match_name": "Iraq vs Norway",
@@ -1131,7 +1656,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 4d4f2b9b78182b557d4fbf8dcf4f4af2."
+    "odds_refresh_note": "Matched Odds API event 4d4f2b9b78182b557d4fbf8dcf4f4af2.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 66.5,
+      "over_fair_price": 1.5,
+      "under_probability": 33.5,
+      "under_fair_price": 2.99,
+      "total_goals_mean": 3.43
+    },
+    "exact_score_model": [
+      {
+        "score": "Iraq 0-2 Norway",
+        "probability": 11.3,
+        "fair_price": 8.84
+      },
+      {
+        "score": "Iraq 0-3 Norway",
+        "probability": 9.9,
+        "fair_price": 10.05
+      },
+      {
+        "score": "Iraq 1-2 Norway",
+        "probability": 8.9,
+        "fair_price": 11.22
+      },
+      {
+        "score": "Iraq 0-1 Norway",
+        "probability": 8.6,
+        "fair_price": 11.66
+      },
+      {
+        "score": "Iraq 1-3 Norway",
+        "probability": 7.8,
+        "fair_price": 12.76
+      }
+    ]
   },
   {
     "match_name": "Argentina vs Algeria",
@@ -1174,7 +1734,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event f31b2ee9e1cc6f7e641467f8237eaa21."
+    "odds_refresh_note": "Matched Odds API event f31b2ee9e1cc6f7e641467f8237eaa21.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 61,
+      "over_fair_price": 1.64,
+      "under_probability": 39,
+      "under_fair_price": 2.57,
+      "total_goals_mean": 3.15
+    },
+    "exact_score_model": [
+      {
+        "score": "Argentina 2-0 Algeria",
+        "probability": 12.4,
+        "fair_price": 8.08
+      },
+      {
+        "score": "Argentina 1-0 Algeria",
+        "probability": 10.3,
+        "fair_price": 9.73
+      },
+      {
+        "score": "Argentina 3-0 Algeria",
+        "probability": 9.9,
+        "fair_price": 10.07
+      },
+      {
+        "score": "Argentina 2-1 Algeria",
+        "probability": 9.2,
+        "fair_price": 10.83
+      },
+      {
+        "score": "Argentina 1-1 Algeria",
+        "probability": 7.7,
+        "fair_price": 13.03
+      }
+    ]
   },
   {
     "match_name": "Austria vs Jordan",
@@ -1218,7 +1813,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 25161cf6cf0cd9be17ae2e7e224a1f45."
+    "odds_refresh_note": "Matched Odds API event 25161cf6cf0cd9be17ae2e7e224a1f45.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 63.2,
+      "over_fair_price": 1.58,
+      "under_probability": 36.8,
+      "under_fair_price": 2.72,
+      "total_goals_mean": 3.26
+    },
+    "exact_score_model": [
+      {
+        "score": "Austria 2-0 Jordan",
+        "probability": 12.1,
+        "fair_price": 8.26
+      },
+      {
+        "score": "Austria 3-0 Jordan",
+        "probability": 10.1,
+        "fair_price": 9.88
+      },
+      {
+        "score": "Austria 1-0 Jordan",
+        "probability": 9.7,
+        "fair_price": 10.35
+      },
+      {
+        "score": "Austria 2-1 Jordan",
+        "probability": 9.1,
+        "fair_price": 11.02
+      },
+      {
+        "score": "Austria 3-1 Jordan",
+        "probability": 7.6,
+        "fair_price": 13.19
+      }
+    ]
   },
   {
     "match_name": "Portugal vs DR Congo",
@@ -1274,7 +1904,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 6cc871c121a1869b4612d3fb22fa9d55."
+    "odds_refresh_note": "Matched Odds API event 6cc871c121a1869b4612d3fb22fa9d55.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 63.9,
+      "over_fair_price": 1.57,
+      "under_probability": 36.1,
+      "under_fair_price": 2.77,
+      "total_goals_mean": 3.29
+    },
+    "exact_score_model": [
+      {
+        "score": "Portugal 2-0 DR Congo",
+        "probability": 12,
+        "fair_price": 8.36
+      },
+      {
+        "score": "Portugal 3-0 DR Congo",
+        "probability": 10.1,
+        "fair_price": 9.91
+      },
+      {
+        "score": "Portugal 1-0 DR Congo",
+        "probability": 9.4,
+        "fair_price": 10.59
+      },
+      {
+        "score": "Portugal 2-1 DR Congo",
+        "probability": 9,
+        "fair_price": 11.05
+      },
+      {
+        "score": "Portugal 3-1 DR Congo",
+        "probability": 7.6,
+        "fair_price": 13.09
+      }
+    ]
   },
   {
     "match_name": "England vs Croatia",
@@ -1330,7 +1995,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 689096c8cd7e2753b9fec95321943c5d."
+    "odds_refresh_note": "Matched Odds API event 689096c8cd7e2753b9fec95321943c5d.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 54.9,
+      "over_fair_price": 1.82,
+      "under_probability": 45.1,
+      "under_fair_price": 2.22,
+      "total_goals_mean": 2.88
+    },
+    "exact_score_model": [
+      {
+        "score": "England 1-0 Croatia",
+        "probability": 10.7,
+        "fair_price": 9.33
+      },
+      {
+        "score": "England 1-1 Croatia",
+        "probability": 10.4,
+        "fair_price": 9.6
+      },
+      {
+        "score": "England 2-0 Croatia",
+        "probability": 10.2,
+        "fair_price": 9.79
+      },
+      {
+        "score": "England 2-1 Croatia",
+        "probability": 9.9,
+        "fair_price": 10.07
+      },
+      {
+        "score": "England 3-0 Croatia",
+        "probability": 6.5,
+        "fair_price": 15.4
+      }
+    ]
   },
   {
     "match_name": "Ghana vs Panama",
@@ -1389,7 +2089,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 87afdb85c977b451e1c00f5e3e632601."
+    "odds_refresh_note": "Matched Odds API event 87afdb85c977b451e1c00f5e3e632601.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 50.9,
+      "over_fair_price": 1.97,
+      "under_probability": 49.1,
+      "under_fair_price": 2.04,
+      "total_goals_mean": 2.71
+    },
+    "exact_score_model": [
+      {
+        "score": "Ghana 1-1 Panama",
+        "probability": 11.9,
+        "fair_price": 8.42
+      },
+      {
+        "score": "Ghana 1-0 Panama",
+        "probability": 10.5,
+        "fair_price": 9.5
+      },
+      {
+        "score": "Ghana 2-1 Panama",
+        "probability": 9.4,
+        "fair_price": 10.65
+      },
+      {
+        "score": "Ghana 2-0 Panama",
+        "probability": 8.3,
+        "fair_price": 12.02
+      },
+      {
+        "score": "Ghana 0-1 Panama",
+        "probability": 7.5,
+        "fair_price": 13.32
+      }
+    ]
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -1443,7 +2178,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 22083e7a8e5362c711bc05c1e1319a1f."
+    "odds_refresh_note": "Matched Odds API event 22083e7a8e5362c711bc05c1e1319a1f.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 61.5,
+      "over_fair_price": 1.63,
+      "under_probability": 38.5,
+      "under_fair_price": 2.6,
+      "total_goals_mean": 3.18
+    },
+    "exact_score_model": [
+      {
+        "score": "Uzbekistan 0-2 Colombia",
+        "probability": 12.4,
+        "fair_price": 8.05
+      },
+      {
+        "score": "Uzbekistan 0-1 Colombia",
+        "probability": 10.2,
+        "fair_price": 9.82
+      },
+      {
+        "score": "Uzbekistan 0-3 Colombia",
+        "probability": 10.1,
+        "fair_price": 9.91
+      },
+      {
+        "score": "Uzbekistan 1-2 Colombia",
+        "probability": 9.2,
+        "fair_price": 10.93
+      },
+      {
+        "score": "Uzbekistan 1-1 Colombia",
+        "probability": 7.5,
+        "fair_price": 13.32
+      }
+    ]
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -1501,7 +2271,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09."
+    "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 55.6,
+      "over_fair_price": 1.8,
+      "under_probability": 44.4,
+      "under_fair_price": 2.25,
+      "total_goals_mean": 2.91
+    },
+    "exact_score_model": [
+      {
+        "score": "Czech Republic 1-0 South Africa",
+        "probability": 10.6,
+        "fair_price": 9.39
+      },
+      {
+        "score": "Czech Republic 2-0 South Africa",
+        "probability": 10.4,
+        "fair_price": 9.61
+      },
+      {
+        "score": "Czech Republic 1-1 South Africa",
+        "probability": 10.2,
+        "fair_price": 9.83
+      },
+      {
+        "score": "Czech Republic 2-1 South Africa",
+        "probability": 9.9,
+        "fair_price": 10.06
+      },
+      {
+        "score": "Czech Republic 3-0 South Africa",
+        "probability": 6.8,
+        "fair_price": 14.74
+      }
+    ]
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -1558,7 +2363,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad."
+    "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 57.1,
+      "over_fair_price": 1.75,
+      "under_probability": 42.9,
+      "under_fair_price": 2.33,
+      "total_goals_mean": 2.97
+    },
+    "exact_score_model": [
+      {
+        "score": "Switzerland 2-0 Bosnia & Herzegovina",
+        "probability": 11,
+        "fair_price": 9.1
+      },
+      {
+        "score": "Switzerland 1-0 Bosnia & Herzegovina",
+        "probability": 10.6,
+        "fair_price": 9.43
+      },
+      {
+        "score": "Switzerland 2-1 Bosnia & Herzegovina",
+        "probability": 9.9,
+        "fair_price": 10.11
+      },
+      {
+        "score": "Switzerland 1-1 Bosnia & Herzegovina",
+        "probability": 9.5,
+        "fair_price": 10.47
+      },
+      {
+        "score": "Switzerland 3-0 Bosnia & Herzegovina",
+        "probability": 7.6,
+        "fair_price": 13.18
+      }
+    ]
   },
   {
     "match_name": "Canada vs Qatar",
@@ -1602,7 +2442,42 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc."
+    "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 63.2,
+      "over_fair_price": 1.58,
+      "under_probability": 36.8,
+      "under_fair_price": 2.72,
+      "total_goals_mean": 3.26
+    },
+    "exact_score_model": [
+      {
+        "score": "Canada 2-0 Qatar",
+        "probability": 12.1,
+        "fair_price": 8.26
+      },
+      {
+        "score": "Canada 3-0 Qatar",
+        "probability": 10.1,
+        "fair_price": 9.88
+      },
+      {
+        "score": "Canada 1-0 Qatar",
+        "probability": 9.7,
+        "fair_price": 10.35
+      },
+      {
+        "score": "Canada 2-1 Qatar",
+        "probability": 9.1,
+        "fair_price": 11.02
+      },
+      {
+        "score": "Canada 3-1 Qatar",
+        "probability": 7.6,
+        "fair_price": 13.19
+      }
+    ]
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -1659,6 +2534,41 @@
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
     "odds_last_checked": "2026-06-13T21:42:31.932Z",
     "odds_refresh_cadence": "final-hour-live-5-minute",
-    "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d."
+    "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d.",
+    "model_totals_25": {
+      "line": 2.5,
+      "over_probability": 51.3,
+      "over_fair_price": 1.95,
+      "under_probability": 48.7,
+      "under_fair_price": 2.05,
+      "total_goals_mean": 2.73
+    },
+    "exact_score_model": [
+      {
+        "score": "Mexico 1-1 South Korea",
+        "probability": 11.6,
+        "fair_price": 8.63
+      },
+      {
+        "score": "Mexico 1-0 South Korea",
+        "probability": 10.9,
+        "fair_price": 9.19
+      },
+      {
+        "score": "Mexico 2-1 South Korea",
+        "probability": 9.6,
+        "fair_price": 10.39
+      },
+      {
+        "score": "Mexico 2-0 South Korea",
+        "probability": 9,
+        "fair_price": 11.06
+      },
+      {
+        "score": "Mexico 0-1 South Korea",
+        "probability": 7,
+        "fair_price": 14.34
+      }
+    ]
   }
 ]

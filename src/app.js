@@ -501,6 +501,57 @@ function renderPlayerPropWatchlist() {
   container.innerHTML = props.map((prop) => renderPlayerPropCard(prop)).join('');
 }
 
+function renderFixtureModelBlock(fixture) {
+  const totals = fixture.model_totals_25;
+  const exactScores = fixture.exact_score_model || [];
+
+  if (!totals && exactScores.length === 0) return '';
+
+  const totalsHtml = totals
+    ? `
+        <article class="model-insight-card">
+          <h3>Over / Under 2.5 Goals</h3>
+          <dl>
+            <div><dt>Over 2.5 Prob</dt><dd>${totals.over_probability}%</dd></div>
+            <div><dt>Over Fair Price</dt><dd>$${Number(totals.over_fair_price).toFixed(2)}</dd></div>
+            <div><dt>Under 2.5 Prob</dt><dd>${totals.under_probability}%</dd></div>
+            <div><dt>Under Fair Price</dt><dd>$${Number(totals.under_fair_price).toFixed(2)}</dd></div>
+          </dl>
+          <p class="source-note">Model total goals mean: ${Number(totals.total_goals_mean).toFixed(2)}</p>
+        </article>
+      `
+    : '';
+
+  const exactHtml = exactScores.length > 0
+    ? `
+        <article class="model-insight-card">
+          <h3>Exact Score Model</h3>
+          <div class="score-model-list">
+            ${exactScores.map((score) => `
+              <div>
+                <strong>${score.score}</strong>
+                <span>${score.probability}% | Fair $${Number(score.fair_price).toFixed(2)}</span>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+      `
+    : '';
+
+  return `
+    <div class="fixture-model-block">
+      <div class="inline-section-heading">
+        <h3>Game Model</h3>
+        <p>Model-only goal and score projections. Use these as fair-price anchors before comparing market odds.</p>
+      </div>
+      <div class="model-insight-grid">
+        ${totalsHtml}
+        ${exactHtml}
+      </div>
+    </div>
+  `;
+}
+
 function renderMatchTabs() {
   const container = document.querySelector('[data-match-tabs]');
   const fixtures = getUpcomingFixtures();
@@ -556,6 +607,7 @@ function renderFixturePanels() {
       metrics: runVectorCalculations(market)
     })).sort((a, b) => b.metrics.qi - a.metrics.qi);
   const freshness = priceFreshness(fixture);
+  const fixtureModelHtml = renderFixtureModelBlock(fixture);
   const playerProps = getPlayerPropsForMatch(fixture.match_name);
   const playerPropsHtml = playerProps.length > 0
     ? `
@@ -589,6 +641,7 @@ function renderFixturePanels() {
           <span><strong>Pitch note:</strong> ${fixture.pitch_constraints}</span>
           <span><strong>Referee implication:</strong> ${fixture.referee_tendencies} ${fixture.referee_source ? `<em>${fixture.referee_source}</em>` : ''}</span>
         </div>
+        ${fixtureModelHtml}
         <div class="market-grid">
           ${markets.map((market) => `
             <article class="market-card">
