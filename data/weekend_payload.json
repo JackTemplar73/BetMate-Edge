@@ -4,8 +4,8 @@
     "kickoff_time_aest": "2026-06-13T05:00:00",
     "pitch_type": "Full match model",
     "pitch_constraints": "Full match model for Canada vs Bosnia & Herzegovina. Venue-specific pitch telemetry has not been independently verified, so the model weights team style, market strength, draw risk, and live cross-book price shape.",
-    "referee_name": "Referee not verified",
-    "referee_tendencies": "No referee-specific adjustment applied; card and foul effects are not being overclaimed.",
+    "referee_name": "Facundo Tello (Argentina)",
+    "referee_tendencies": "Confirmed referee. Treat as strict on time-wasting and game-management rules; no extra card-model boost is added unless a referee profile is separately modelled.",
     "tactical_summary": "Canada bring direct wide running and fast attacks into space, while Bosnia & Herzegovina bring slower possession and physical central duels. The full match model rates Canada as the most likely winner at about 52.1%, with the draw around 27.2%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
     "markets": [
       {
@@ -93,10 +93,11 @@
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
-    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
-    "referee_status": "not_verified",
-    "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
+    "referee_last_checked": "2026-06-13T00:34:53.075Z",
+    "referee_check_sources": "FIFA official roster plus post-match referee report; ESPN/FIFA structured feed fallback remains part of scheduled refresh.",
+    "referee_status": "verified",
+    "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
+    "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
     "odds_last_checked": "2026-06-12T23:37:57.285Z",
     "odds_refresh_cadence": "manual",
     "odds_refresh_note": "No matching Odds API event found."
