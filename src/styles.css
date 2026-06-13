@@ -418,6 +418,35 @@ h3 {
   margin-top: auto;
 }
 
+.prop-price-list {
+  display: grid;
+  gap: 8px;
+  margin: 12px 0;
+}
+
+.prop-price-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 8px 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(16, 16, 14, 0.24);
+}
+
+.prop-price-list strong,
+.prop-price-list em {
+  display: block;
+}
+
+.prop-price-list em {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
 .model-only-pill {
   color: var(--gold);
   border: 1px solid rgba(245, 188, 66, 0.34);

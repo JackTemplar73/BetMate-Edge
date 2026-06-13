@@ -13,7 +13,9 @@ window.embeddedPlayerProps = [
     "player": "Sofyan Amrabat",
     "market": "To Get Carded",
     "model_price": 2.45,
-    "model_note": "Morocco are likely to defend for long spells against Brazil pressure. That creates card risk, but this stays model-only until a live card market is confirmed."
+    "model_note": "Morocco are likely to defend for long spells against Brazil pressure. That creates card risk, but this stays model-only until a live card market is confirmed.",
+    "live_prices": [],
+    "last_checked": "2026-06-13T23:00:35.094Z"
   },
   {
     "match_name": "Haiti vs Scotland",
@@ -21,7 +23,9 @@ window.embeddedPlayerProps = [
     "player": "John McGinn",
     "market": "2+ Total Shots",
     "model_price": 1.6,
-    "model_note": "Scotland's set-piece and crossing style can put McGinn into shooting positions. Needs a real shots price before it becomes a bet."
+    "model_note": "Scotland's set-piece and crossing style can put McGinn into shooting positions. Needs a real shots price before it becomes a bet.",
+    "live_prices": [],
+    "last_checked": "2026-06-13T23:00:35.094Z"
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -29,7 +33,9 @@ window.embeddedPlayerProps = [
     "player": "Hakan Calhanoglu",
     "market": "1+ Shots on Target",
     "model_price": 1.82,
-    "model_note": "Set pieces and long-range shooting make this worth monitoring. It is not a bet until a live book price is confirmed."
+    "model_note": "Set pieces and long-range shooting make this worth monitoring. It is not a bet until a live book price is confirmed.",
+    "live_prices": [],
+    "last_checked": "2026-06-13T23:00:35.094Z"
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -37,7 +43,9 @@ window.embeddedPlayerProps = [
     "player": "Arda Guler",
     "market": "Goal or Assist",
     "model_price": 1.72,
-    "model_note": "Guler's creative role keeps him on the watchlist. It needs a confirmed market price before it can be scored as a betting edge."
+    "model_note": "Guler's creative role keeps him on the watchlist. It needs a confirmed market price before it can be scored as a betting edge.",
+    "live_prices": [],
+    "last_checked": "2026-06-13T23:00:35.094Z"
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -45,6 +53,8 @@ window.embeddedPlayerProps = [
     "player": "Cristian Volpato",
     "market": "1+ Shots on Target",
     "model_price": 1.52,
-    "model_note": "Listed as a watch-only model angle. Confirm team role and live book price before showing it as a bet."
+    "model_note": "Listed as a watch-only model angle. Confirm team role and live book price before showing it as a bet.",
+    "live_prices": [],
+    "last_checked": "2026-06-13T23:00:35.094Z"
   }
 ];

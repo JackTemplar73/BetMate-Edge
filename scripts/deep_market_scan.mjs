@@ -3,6 +3,8 @@ import { readFile, writeFile } from 'node:fs/promises';
 const DATA_PATH = new URL('../data/weekend_payload.json', import.meta.url);
 const EMBEDDED_PATH = new URL('../src/embeddedData.js', import.meta.url);
 const COVERAGE_PATH = new URL('../data/oddsapi_au_market_coverage.json', import.meta.url);
+const PLAYER_PROPS_PATH = new URL('../data/player_props_watchlist.json', import.meta.url);
+const EMBEDDED_PLAYER_PROPS_PATH = new URL('../src/embeddedPlayerProps.js', import.meta.url);
 
 const SPORT_KEY = 'soccer_fifa_world_cup';
 const DEFAULT_SCAN_BOOKMAKERS = ['sportsbet', 'tab', 'pointsbetau', 'neds', 'bet365'];
@@ -11,6 +13,7 @@ const SCAN_BOOKMAKERS = (process.env.ODDS_API_TARGET_BOOKMAKERS || process.env.O
   .map((item) => item.trim())
   .filter(Boolean);
 const AU_BOOKMAKERS = [...new Set([...SCAN_BOOKMAKERS, 'betright'])];
+const PLAYER_PROP_BOOKMAKERS = ['sportsbet', 'tab'];
 const CORE_MARKETS = ['h2h', 'spreads', 'totals'];
 const EVENT_MARKETS = [
   'h2h',
@@ -39,9 +42,13 @@ const EVENT_MARKETS = [
   'player_first_goal_scorer',
   'player_to_score_or_assist',
   'player_goals',
+  'player_goals_alternate',
   'player_assists',
+  'player_assists_alternate',
   'player_shots',
+  'player_shots_alternate',
   'player_shots_on_target',
+  'player_shots_on_target_alternate',
   'player_to_receive_card'
 ];
 
@@ -223,6 +230,60 @@ function scanItemsForFixture(fixture) {
   });
 }
 
+function playerPropMarketKeys(prop) {
+  const market = normalise(prop.market);
+  if (market.includes('shots on target')) return ['player_shots_on_target_alternate', 'player_shots_on_target'];
+  if (market.includes('total shots') || market.includes('shots')) return ['player_shots_alternate', 'player_shots'];
+  if (market.includes('goal or assist') || market.includes('score or assist')) return ['player_to_score_or_assist'];
+  if (market.includes('card')) return ['player_to_receive_card'];
+  if (market.includes('assist')) return ['player_assists_alternate', 'player_assists'];
+  if (market.includes('goal')) return ['player_goals_alternate', 'player_goals', 'player_goal_scorer_anytime'];
+  return [];
+}
+
+function playerPropTargetPoint(prop) {
+  const threshold = numberFromSelection(prop.market);
+  if (!Number.isFinite(threshold)) return null;
+  return Math.max(0.5, threshold - 0.5);
+}
+
+function findPlayerPropOutcome(bookmaker, prop) {
+  const keys = playerPropMarketKeys(prop);
+  const player = normalise(prop.player);
+  const marketText = normalise(prop.market);
+  const targetPoint = playerPropTargetPoint(prop);
+
+  for (const key of keys) {
+    const market = (bookmaker.markets || []).find((candidate) => candidate.key === key);
+    if (!market) continue;
+
+    const outcome = (market.outcomes || []).find((candidate) => {
+      const name = normalise(candidate.name);
+      const description = normalise(candidate.description || '');
+      const participant = `${name} ${description}`.trim();
+      const playerMatches = participant.includes(player) || player.includes(participant);
+      const point = Number(candidate.point);
+      const pointMatches = !Number.isFinite(targetPoint) || !Number.isFinite(point) || Math.abs(point - targetPoint) < 0.001;
+
+      if (!playerMatches || !pointMatches) return false;
+      if (marketText.includes('shot') && name && name !== 'over') return false;
+      if (marketText.includes('assist') && key.includes('alternate') && name && name !== 'over') return false;
+      if (marketText.includes('goal') && key.includes('alternate') && name && name !== 'over') return false;
+      return true;
+    });
+
+    if (outcome && Number.isFinite(Number(outcome.price))) {
+      return { marketKey: key, outcome };
+    }
+  }
+
+  return null;
+}
+
+function playerPropsForFixture(playerProps, fixture) {
+  return playerProps.filter((prop) => prop.match_name === fixture.match_name);
+}
+
 async function fetchJson(url) {
   const response = await fetch(url);
   if (!response.ok) {
@@ -271,6 +332,7 @@ async function main() {
   if (!apiKey) throw new Error('ODDS_API_KEY is not set.');
 
   const dataset = JSON.parse(await readFile(DATA_PATH, 'utf8'));
+  const playerProps = JSON.parse(await readFile(PLAYER_PROPS_PATH, 'utf8'));
   const coreEvents = await fetchCoreEvents(apiKey);
   const nowIso = new Date().toISOString();
   const coverageRows = [];
@@ -303,6 +365,12 @@ async function main() {
     }
 
     const rows = [];
+    const fixturePlayerProps = playerPropsForFixture(playerProps, fixture);
+    fixturePlayerProps.forEach((prop) => {
+      prop.live_prices = [];
+      prop.last_checked = nowIso;
+    });
+
     for (const bookmaker of bookmakers) {
       for (const item of scanItemsForFixture(fixture)) {
         const found = findOutcome(bookmaker, item);
@@ -321,10 +389,47 @@ async function main() {
           current_odds: odds,
           au_bookie: bookmaker.title || bookmaker.key,
           bookmaker_key: bookmaker.key,
-        ev: metrics.ev,
-        qi: metrics.qi,
-        price_qi: metrics.price_qi
-      });
+          ev: metrics.ev,
+          qi: metrics.qi,
+          price_qi: metrics.price_qi
+        });
+      }
+
+      if (PLAYER_PROP_BOOKMAKERS.includes(bookmaker.key)) {
+        for (const prop of fixturePlayerProps) {
+          const found = findPlayerPropOutcome(bookmaker, prop);
+          if (!found) continue;
+
+          const odds = Number(Number(found.outcome.price).toFixed(2));
+          const metrics = runVectorCalculations(prop.model_price, odds);
+          const modelProbability = Number(((1 / Number(prop.model_price)) * 100).toFixed(1));
+          const row = {
+            selection: `${prop.player}: ${prop.market}`,
+            category: 'Player Prop',
+            market: prop.market,
+            source: 'Player prop model',
+            oddsapi_market: found.marketKey,
+            model_probability: modelProbability,
+            model_price: Number(prop.model_price),
+            current_odds: odds,
+            au_bookie: bookmaker.title || bookmaker.key,
+            bookmaker_key: bookmaker.key,
+            ev: metrics.ev,
+            qi: metrics.qi,
+            price_qi: metrics.price_qi
+          };
+          rows.push(row);
+          prop.live_prices.push({
+            au_bookie: row.au_bookie,
+            bookmaker_key: row.bookmaker_key,
+            oddsapi_market: row.oddsapi_market,
+            current_odds: row.current_odds,
+            ev: row.ev,
+            qi: row.qi,
+            price_qi: row.price_qi,
+            checked_at: nowIso
+          });
+        }
       }
     }
 
@@ -358,12 +463,15 @@ async function main() {
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
+  await writeFile(PLAYER_PROPS_PATH, `${JSON.stringify(playerProps, null, 2)}\n`);
+  await writeFile(EMBEDDED_PLAYER_PROPS_PATH, `window.embeddedPlayerProps = ${JSON.stringify(playerProps, null, 2)};\n`);
   await writeFile(COVERAGE_PATH, `${JSON.stringify(coverage, null, 2)}\n`);
 
   console.log(JSON.stringify({
     target_bookmakers: SCAN_BOOKMAKERS,
     events_checked: coverage.events_checked,
     matched_rows: dataset.reduce((sum, fixture) => sum + (fixture.market_scan?.matched_rows || 0), 0),
+    player_prop_rows: playerProps.reduce((sum, prop) => sum + (prop.live_prices?.length || 0), 0),
     market_counts: coverage.market_counts
   }, null, 2));
 }

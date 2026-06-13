@@ -668,10 +668,13 @@ function getPlayerPropsForMatch(matchName) {
 }
 
 function renderPlayerPropCard(prop, { showMatch = true } = {}) {
+  const livePrices = [...(prop.live_prices || [])].sort((a, b) => Number(b.qi || 0) - Number(a.qi || 0));
+  const hasLivePrice = livePrices.length > 0;
+
   return `
     <article class="prop-watch-card">
       <div class="card-topline">
-        <span class="pill model-only-pill">Model only</span>
+        <span class="pill ${hasLivePrice ? '' : 'model-only-pill'}">${hasLivePrice ? 'Sportsbet/TAB priced' : 'Model only'}</span>
         <span class="sub-cell">${formatKickoff(prop.kickoff_time_aest)}</span>
       </div>
       ${showMatch ? `<p class="match-name">${prop.match_name}</p>` : ''}
@@ -680,6 +683,19 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
         <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
         <div><dt>Model Prob</dt><dd>${formatModelOnlyProb(prop.model_price)}</dd></div>
       </dl>
+      ${hasLivePrice ? `
+        <div class="prop-price-list">
+          ${livePrices.map((price) => `
+            <div>
+              <span>
+                <strong>${price.au_bookie}</strong>
+                <em>$${Number(price.current_odds).toFixed(2)} | EV ${Number(price.ev) > 0 ? '+' : ''}${Number(price.ev).toFixed(2)}%</em>
+              </span>
+              <b class="qi-badge ${metricClass(Number(price.qi))}">${Number(price.qi)}</b>
+            </div>
+          `).join('')}
+        </div>
+      ` : ''}
       <p class="source-note">${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
     </article>
   `;
