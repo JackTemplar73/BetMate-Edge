@@ -259,8 +259,12 @@ function renderSummary() {
 
   document.querySelector('[data-summary-fixtures]').textContent = fixtures.length;
   document.querySelector('[data-summary-markets]').textContent = rows.length;
-  document.querySelector('[data-summary-best]').textContent = top ? `${top.match_name}: ${top.target_selection} (QI = ${top.metrics.qi})` : '-';
-  document.querySelector('[data-summary-ev]').textContent = bestEv ? `${bestEv.match_name}: ${bestEv.target_selection} ${formatEv(bestEv)}` : '-';
+  document.querySelector('[data-summary-best]').textContent = top
+    ? `${top.match_name}: ${top.target_selection} | QI ${top.metrics.qi} | EV ${formatEv(top)}`
+    : '-';
+  document.querySelector('[data-summary-ev]').textContent = bestEv
+    ? `${bestEv.match_name}: ${bestEv.target_selection} | EV ${formatEv(bestEv)} | QI ${bestEv.metrics.qi}`
+    : '-';
 }
 
 function renderDataPanel() {
