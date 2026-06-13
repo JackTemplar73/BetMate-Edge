@@ -3,7 +3,7 @@ const state = {
   betHistory: [],
   playerPropWatchlist: [],
   marketFilter: 'All',
-  sortMode: 'grade',
+  sortMode: 'qi',
   lastRefresh: null,
   dataSource: 'Not loaded',
   selectedMatchName: null,
@@ -238,11 +238,10 @@ function getFilteredMarkets() {
     : rows.filter((market) => market.market_matrix === state.marketFilter);
 
   return filtered.sort((a, b) => {
-    if (state.sortMode === 'grade') return compareBetQuality(a, b);
     if (state.sortMode === 'edge') return Number(b.quality?.edge || 0) - Number(a.quality?.edge || 0);
     if (state.sortMode === 'ev') return b.metrics.ev - a.metrics.ev;
     if (state.sortMode === 'odds') return Number.parseFloat(b.current_odds || 0) - Number.parseFloat(a.current_odds || 0);
-    return b.metrics.qi - a.metrics.qi;
+    return compareBetQuality(a, b);
   });
 }
 
@@ -306,15 +305,6 @@ function edgeClass(market) {
   return Number(market.quality.edge) >= 0 ? 'positive' : 'negative';
 }
 
-function gradeClass(grade) {
-  return `grade-${String(grade || 'watch').toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-}
-
-function formatBetGrade(market) {
-  const grade = market.quality?.grade || 'Watch';
-  return `<span class="grade-badge ${gradeClass(grade)}">${grade}</span>`;
-}
-
 function formatRisk(market) {
   return `<span class="risk-pill">${market.quality?.risk || 'Watch'}</span>`;
 }
@@ -349,7 +339,7 @@ function renderSummary() {
   document.querySelector('[data-summary-fixtures]').textContent = fixtures.length;
   document.querySelector('[data-summary-markets]').textContent = rows.length;
   document.querySelector('[data-summary-best]').textContent = top
-    ? `${top.match_name}: ${top.target_selection} | Grade ${top.quality.grade} | Edge ${formatEdge(top)} | QI ${top.metrics.qi}`
+    ? `${top.match_name}: ${top.target_selection} | QI ${top.metrics.qi} | Edge ${formatEdge(top)} | Risk ${top.quality.risk}`
     : '-';
   document.querySelector('[data-summary-ev]').textContent = bestEv
     ? `${bestEv.match_name}: ${bestEv.target_selection} | EV ${formatEv(bestEv)} | QI ${bestEv.metrics.qi}`
@@ -445,13 +435,12 @@ function renderMarketsTable() {
   const rows = getFilteredMarkets();
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="11">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="10">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
     return;
   }
 
   tableBody.innerHTML = rows.map((market) => `
     <tr>
-      <td>${formatBetGrade(market)}</td>
       <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></td>
       <td>
         <span class="primary-cell">${market.target_selection}</span>
@@ -485,7 +474,7 @@ function renderHighValueBets() {
   container.innerHTML = rows.map((market) => `
     <article class="high-value-card">
       <div class="card-topline">
-        ${formatBetGrade(market)}
+        <span class="qi-badge ${metricClass(market.metrics.qi)}">QI ${market.metrics.qi}</span>
         <span class="pill">${market.au_bookie}</span>
       </div>
       <p class="match-name">${market.match_name}</p>
@@ -602,14 +591,19 @@ function renderSportsbookScan() {
 
   const topRows = rows.slice(0, 36);
   const bookies = [...new Set(rows.map((row) => row.bookmaker).filter(Boolean))].sort();
+  const livePlayerPropRows = rows.filter((row) => String(row.oddsapi_market || '').startsWith('player_')).length;
+  const watchlistPropCount = getUpcomingPlayerProps().length;
+  const playerPropNote = livePlayerPropRows > 0
+    ? `${livePlayerPropRows} live player prop rows are included in this scan.`
+    : `${watchlistPropCount} model-only player props are on the watchlist, but no live AU bookie player-prop odds were returned by OddsAPI in this scan.`;
 
   container.innerHTML = `
-    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices from ${bookies.join(', ')}. Sorted by Grade first, then Edge/QI.</div>
+    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices from ${bookies.join(', ')}. Sorted by combined QI first, then Edge/EV.</div>
+    <p class="source-note">${playerPropNote}</p>
     <div class="sportsbook-scan-table">
       <table>
         <thead>
           <tr>
-            <th>Grade</th>
             <th>QI</th>
             <th>Match</th>
             <th>Selection</th>
@@ -626,7 +620,6 @@ function renderSportsbookScan() {
         <tbody>
           ${topRows.map((row) => `
             <tr>
-              <td><span class="grade-badge ${gradeClass(row.quality.grade)}">${row.quality.grade}</span></td>
               <td><span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></td>
               <td><span class="primary-cell">${row.match_name}</span><span class="sub-cell">${formatKickoff(row.kickoff_time_aest)}</span></td>
               <td><span class="primary-cell">${row.selection}</span><span class="sub-cell">${row.market} | ${row.oddsapi_market}</span></td>
@@ -784,7 +777,7 @@ function renderFixtureModelBlock(fixture) {
                   <em>${row.au_bookie || 'AU bookie'} | ${row.market} | ${row.oddsapi_market}</em>
                 </span>
                 <span>
-                  <b><span class="grade-badge ${gradeClass(row.quality.grade)}">${row.quality.grade}</span> <span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></b>
+                  <b><span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></b>
                   <em>${row.au_bookie || 'AU bookie'} | $${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | Edge ${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts | ${row.quality.risk} risk</em>
                 </span>
               </div>
@@ -903,7 +896,7 @@ function renderFixturePanels() {
           ${markets.map((market) => `
             <article class="market-card">
               <div class="card-topline">
-                ${formatBetGrade(market)}
+                <span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span>
                 <span class="pill">${market.au_bookie}</span>
               </div>
               <h3>${market.target_selection}</h3>

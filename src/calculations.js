@@ -20,15 +20,36 @@ function runVectorCalculations(marketItem) {
 
   const termEg = Math.tanh(expectedGrowth / 0.25);
   const termEv = Math.tanh(ev / 5);
-  const rawQi = Math.round(50 * (1 + (0.5 * termEg + 0.5 * termEv)));
-  const qi = Math.max(0, Math.min(100, rawQi));
+  const rawPriceQi = Math.max(0, Math.min(100, Math.round(50 * (1 + (0.5 * termEg + 0.5 * termEv)))));
+  const quality = buildBetQualityFromPrices(truePrice, currentOdds);
+  const edgeScore = clamp((Number(quality.edge) / 12) * 100, 0, 100);
+  const probabilityScore = clamp(((Number(quality.model_probability) - 20) / 45) * 100, 0, 100);
+  const riskScore = {
+    Low: 100,
+    Medium: 75,
+    High: 45,
+    'Very high': 20
+  }[quality.risk] || 35;
+  const qi = Math.round(clamp(
+    (rawPriceQi * 0.35) +
+    (edgeScore * 0.3) +
+    (probabilityScore * 0.2) +
+    (riskScore * 0.15),
+    0,
+    100
+  ));
 
   return {
     ev: Number.parseFloat(ev.toFixed(2)),
     qi: Number.parseInt(qi, 10),
+    price_qi: rawPriceQi,
     bet_size: betSize,
     expected_growth: Number.parseFloat(expectedGrowth.toFixed(4))
   };
+}
+
+function clamp(value, min, max) {
+  return Math.max(min, Math.min(max, value));
 }
 
 function buildBetQualityFromPrices(truePriceValue, currentOddsValue) {
@@ -40,46 +61,23 @@ function buildBetQualityFromPrices(truePriceValue, currentOddsValue) {
       model_probability: null,
       book_probability: null,
       edge: null,
-      risk: 'No price',
-      grade: 'Watch',
-      grade_rank: 0
+      risk: 'No price'
     };
   }
 
   const modelProbability = 100 / truePrice;
   const bookProbability = 100 / currentOdds;
   const edge = modelProbability - bookProbability;
-  const ev = ((currentOdds / truePrice) - 1) * 100;
-
   let risk = 'Low';
   if (currentOdds >= 8) risk = 'Very high';
   else if (currentOdds >= 4) risk = 'High';
   else if (currentOdds >= 2.2) risk = 'Medium';
 
-  let grade = 'No bet';
-  let gradeRank = 0;
-
-  if (ev > 0 && edge >= 7 && modelProbability >= 55 && currentOdds <= 3.25) {
-    grade = 'A+';
-    gradeRank = 5;
-  } else if (ev > 0 && edge >= 5 && modelProbability >= 45 && currentOdds <= 4) {
-    grade = 'A';
-    gradeRank = 4;
-  } else if (ev > 0 && edge >= 3.5 && modelProbability >= 35 && currentOdds <= 6) {
-    grade = 'B';
-    gradeRank = 3;
-  } else if (ev > 0 && edge >= 2) {
-    grade = currentOdds >= 8 ? 'Speculative' : 'C';
-    gradeRank = currentOdds >= 8 ? 1 : 2;
-  }
-
   return {
     model_probability: Number.parseFloat(modelProbability.toFixed(2)),
     book_probability: Number.parseFloat(bookProbability.toFixed(2)),
     edge: Number.parseFloat(edge.toFixed(2)),
-    risk,
-    grade,
-    grade_rank: gradeRank
+    risk
   };
 }
 
@@ -90,14 +88,11 @@ function buildBetQuality(marketItem) {
 function compareBetQuality(a, b) {
   const aQuality = a.quality || buildBetQuality(a);
   const bQuality = b.quality || buildBetQuality(b);
-  const gradeDiff = Number(bQuality.grade_rank || 0) - Number(aQuality.grade_rank || 0);
-  if (gradeDiff !== 0) return gradeDiff;
+  const qiDiff = Number(b.metrics?.qi || b.qi || 0) - Number(a.metrics?.qi || a.qi || 0);
+  if (qiDiff !== 0) return qiDiff;
 
   const edgeDiff = Number(bQuality.edge || 0) - Number(aQuality.edge || 0);
   if (edgeDiff !== 0) return edgeDiff;
-
-  const qiDiff = Number(b.metrics?.qi || b.qi || 0) - Number(a.metrics?.qi || a.qi || 0);
-  if (qiDiff !== 0) return qiDiff;
 
   return Number(b.metrics?.ev || b.ev || 0) - Number(a.metrics?.ev || a.ev || 0);
 }

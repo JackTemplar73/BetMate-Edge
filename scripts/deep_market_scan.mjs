@@ -107,11 +107,28 @@ function runVectorCalculations(fairPrice, currentOdds) {
   const betSize = Math.ceil((100 / Math.sqrt(b)) / 5) * 5;
   const fraction = betSize / 10000;
   const expectedGrowth = (p * Math.log(1 + fraction * b) + (1 - p) * Math.log(1 - fraction)) * 100;
-  const qi = Math.max(0, Math.min(100, Math.round(50 * (1 + (0.5 * Math.tanh(expectedGrowth / 0.25) + 0.5 * Math.tanh(ev / 5))))));
+  const priceQi = Math.max(0, Math.min(100, Math.round(50 * (1 + (0.5 * Math.tanh(expectedGrowth / 0.25) + 0.5 * Math.tanh(ev / 5))))));
+  const modelProbability = 100 / truePrice;
+  const bookProbability = 100 / odds;
+  const edge = modelProbability - bookProbability;
+  let risk = 'Low';
+  if (odds >= 8) risk = 'Very high';
+  else if (odds >= 4) risk = 'High';
+  else if (odds >= 2.2) risk = 'Medium';
+  const edgeScore = Math.max(0, Math.min(100, (edge / 12) * 100));
+  const probabilityScore = Math.max(0, Math.min(100, ((modelProbability - 20) / 45) * 100));
+  const riskScore = {
+    Low: 100,
+    Medium: 75,
+    High: 45,
+    'Very high': 20
+  }[risk] || 35;
+  const qi = Math.round(Math.max(0, Math.min(100, (priceQi * 0.35) + (edgeScore * 0.3) + (probabilityScore * 0.2) + (riskScore * 0.15))));
 
   return {
     ev: Number(ev.toFixed(2)),
-    qi
+    qi,
+    price_qi: priceQi
   };
 }
 
@@ -304,9 +321,10 @@ async function main() {
           current_odds: odds,
           au_bookie: bookmaker.title || bookmaker.key,
           bookmaker_key: bookmaker.key,
-          ev: metrics.ev,
-          qi: metrics.qi
-        });
+        ev: metrics.ev,
+        qi: metrics.qi,
+        price_qi: metrics.price_qi
+      });
       }
     }
 

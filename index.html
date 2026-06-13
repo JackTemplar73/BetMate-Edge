@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-bet-grade-v1">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-combined-qi-v1">
 </head>
 <body>
   <main class="app-shell">
@@ -32,7 +32,7 @@
         <strong data-summary-markets>0</strong>
       </article>
       <article class="wide">
-        <span>Best Bet Grade</span>
+        <span>Best QI Bet</span>
         <strong data-summary-best>-</strong>
       </article>
       <article class="wide">
@@ -54,7 +54,7 @@
       <div class="section-heading">
         <div>
           <h2>High Value Bets</h2>
-          <p>Sorted by Bet Grade first. Edge, risk and QI are shown so long-price bets do not look safer than they are.</p>
+          <p>Sorted by combined QI first. Edge, risk and EV explain why the rating is high or low.</p>
         </div>
       </div>
       <div class="high-value-list" data-high-value-bets></div>
@@ -64,7 +64,7 @@
       <div class="section-heading">
         <div>
           <h2>AU Bookie Market Scan</h2>
-          <p>Sportsbet, TAB, PointsBet, Neds and Bet365 markets found through the event scan and matched against our model price to show Grade, Edge, QI and EV.</p>
+          <p>Sportsbet, TAB, PointsBet, Neds and Bet365 markets found through the event scan and matched against our model price to show QI, Edge, Risk and EV.</p>
         </div>
       </div>
       <div data-sportsbook-scan></div>
@@ -102,12 +102,11 @@
       <div class="section-heading">
         <div>
           <h2 data-selected-market-title>Bet Options</h2>
-          <p>Grade is the main quality read. Edge is model chance minus bookmaker chance. QI and EV are supporting signals.</p>
+          <p>QI is the main rating. It combines price value, model edge, win chance and odds risk into one score out of 100.</p>
         </div>
         <div class="sort-controls" aria-label="Sort markets">
-          <button class="icon-button active" data-sort="grade" title="Sort by Bet Grade">Grade</button>
+          <button class="icon-button active" data-sort="qi" title="Sort by QI">QI</button>
           <button class="icon-button" data-sort="edge" title="Sort by Edge">Edge</button>
-          <button class="icon-button" data-sort="qi" title="Sort by QI">QI</button>
           <button class="icon-button" data-sort="ev" title="Sort by EV">EV</button>
           <button class="icon-button" data-sort="odds" title="Sort by odds">$</button>
         </div>
@@ -119,7 +118,6 @@
         <table>
           <thead>
             <tr>
-              <th>Grade</th>
               <th>QI</th>
               <th>Option</th>
               <th>Odds</th>
@@ -191,10 +189,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-bet-grade-v1"></script>
-  <script src="./src/embeddedData.js?v=20260614-bet-grade-v1"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-bet-grade-v1"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-bet-grade-v1"></script>
-  <script src="./src/app.js?v=20260614-bet-grade-v1"></script>
+  <script src="./src/calculations.js?v=20260614-combined-qi-v1"></script>
+  <script src="./src/embeddedData.js?v=20260614-combined-qi-v1"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-combined-qi-v1"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-combined-qi-v1"></script>
+  <script src="./src/app.js?v=20260614-combined-qi-v1"></script>
 </body>
 </html>
