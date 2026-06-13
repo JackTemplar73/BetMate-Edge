@@ -427,6 +427,31 @@ h3 {
   line-height: 1.35;
 }
 
+.match-props-block {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.inline-section-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: end;
+}
+
+.inline-section-heading h3 {
+  margin: 0;
+}
+
+.inline-section-heading p {
+  max-width: 520px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
 .table-wrap {
   overflow-x: auto;
 }
@@ -737,6 +762,7 @@ dd {
 @media (max-width: 900px) {
   .app-header,
   .section-heading,
+  .inline-section-heading,
   .fixture-heading {
     display: block;
   }

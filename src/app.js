@@ -443,6 +443,27 @@ function getUpcomingPlayerProps() {
     });
 }
 
+function getPlayerPropsForMatch(matchName) {
+  return getUpcomingPlayerProps().filter((prop) => prop.match_name === matchName);
+}
+
+function renderPlayerPropCard(prop, { showMatch = true } = {}) {
+  return `
+    <article class="prop-watch-card">
+      <div class="card-topline">
+        <span class="pill model-only-pill">Model only</span>
+        <span class="sub-cell">${formatKickoff(prop.kickoff_time_aest)}</span>
+      </div>
+      ${showMatch ? `<p class="match-name">${prop.match_name}</p>` : ''}
+      <h3>${prop.player}: ${prop.market}</h3>
+      <dl>
+        <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
+      </dl>
+      <p class="source-note">${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
+    </article>
+  `;
+}
+
 function renderPlayerPropWatchlist() {
   const container = document.querySelector('[data-player-prop-watchlist]');
   if (!container) return;
@@ -454,20 +475,7 @@ function renderPlayerPropWatchlist() {
     return;
   }
 
-  container.innerHTML = props.map((prop) => `
-    <article class="prop-watch-card">
-      <div class="card-topline">
-        <span class="pill model-only-pill">Model only</span>
-        <span class="sub-cell">${formatKickoff(prop.kickoff_time_aest)}</span>
-      </div>
-      <p class="match-name">${prop.match_name}</p>
-      <h3>${prop.player}: ${prop.market}</h3>
-      <dl>
-        <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
-      </dl>
-      <p class="source-note">${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
-    </article>
-  `).join('');
+  container.innerHTML = props.map((prop) => renderPlayerPropCard(prop)).join('');
 }
 
 function renderMatchTabs() {
@@ -525,6 +533,20 @@ function renderFixturePanels() {
       metrics: runVectorCalculations(market)
     })).sort((a, b) => b.metrics.qi - a.metrics.qi);
   const freshness = priceFreshness(fixture);
+  const playerProps = getPlayerPropsForMatch(fixture.match_name);
+  const playerPropsHtml = playerProps.length > 0
+    ? `
+        <div class="match-props-block">
+          <div class="inline-section-heading">
+            <h3>Player Props - Model Price Only</h3>
+            <p>Shown for this match only. These are not treated as bets until live market odds are confirmed.</p>
+          </div>
+          <div class="prop-watchlist-grid">
+            ${playerProps.map((prop) => renderPlayerPropCard(prop, { showMatch: false })).join('')}
+          </div>
+        </div>
+      `
+    : '';
 
   container.innerHTML = `
       <section class="fixture-panel">
@@ -560,6 +582,7 @@ function renderFixturePanels() {
             </article>
           `).join('')}
         </div>
+        ${playerPropsHtml}
       </section>
     `;
 }
