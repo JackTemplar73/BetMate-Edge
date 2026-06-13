@@ -601,9 +601,10 @@ function renderSportsbookScan() {
   }
 
   const topRows = rows.slice(0, 36);
+  const bookies = [...new Set(rows.map((row) => row.bookmaker).filter(Boolean))].sort();
 
   container.innerHTML = `
-    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices. Sorted by Grade first, then Edge/QI.</div>
+    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices from ${bookies.join(', ')}. Sorted by Grade first, then Edge/QI.</div>
     <div class="sportsbook-scan-table">
       <table>
         <thead>
@@ -619,7 +620,7 @@ function renderSportsbookScan() {
             <th>Edge</th>
             <th>EV</th>
             <th>Risk</th>
-            <th>Book</th>
+            <th>AU Bookie</th>
           </tr>
         </thead>
         <tbody>
@@ -780,11 +781,11 @@ function renderFixtureModelBlock(fixture) {
               <div>
                 <span>
                   <strong>${row.selection}</strong>
-                  <em>${row.market} | ${row.oddsapi_market}</em>
+                  <em>${row.au_bookie || 'AU bookie'} | ${row.market} | ${row.oddsapi_market}</em>
                 </span>
                 <span>
                   <b><span class="grade-badge ${gradeClass(row.quality.grade)}">${row.quality.grade}</span> <span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></b>
-                  <em>$${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | Edge ${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts | ${row.quality.risk} risk</em>
+                  <em>${row.au_bookie || 'AU bookie'} | $${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | Edge ${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts | ${row.quality.risk} risk</em>
                 </span>
               </div>
             `).join('')}
