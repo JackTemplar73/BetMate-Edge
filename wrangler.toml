@@ -1,0 +1,13 @@
+name = "betmate-edge-odds"
+main = "cloudflare/odds-worker.js"
+compatibility_date = "2026-06-13"
+workers_dev = true
+
+routes = [
+  { pattern = "fifaworldcup-api.betmateedge.com/*", custom_domain = true }
+]
+
+[vars]
+ASSET_BASE_URL = "https://fifaworldcup.betmateedge.com"
+ALLOWED_ORIGIN = "https://fifaworldcup.betmateedge.com"
+ODDS_API_SPORT_KEYS = "soccer_fifa_world_cup,soccer_international_friendlies"

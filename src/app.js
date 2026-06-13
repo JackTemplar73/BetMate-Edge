@@ -31,6 +31,7 @@ const plainGameNotes = {
 };
 
 const playerPropBooks = ['Sportsbet', 'Neds', 'PointsBet', 'TAB', 'BetRight'];
+const liveRefreshEndpoint = window.BETMATE_REFRESH_ENDPOINT || '';
 
 const formatter = new Intl.DateTimeFormat('en-AU', {
   weekday: 'short',
@@ -81,6 +82,46 @@ async function loadBetHistory({ bustCache = false } = {}) {
   } catch {
     state.betHistory = JSON.parse(JSON.stringify(window.embeddedBetHistory || []));
   }
+}
+
+async function refreshLiveOdds() {
+  if (!liveRefreshEndpoint || window.location.protocol === 'file:') {
+    return {
+      ok: false,
+      reason: 'live-refresh-unavailable'
+    };
+  }
+
+  const response = await fetch(`${liveRefreshEndpoint}?t=${Date.now()}`, {
+    method: 'POST',
+    cache: 'no-store',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  });
+
+  if (!response.ok) {
+    const body = await response.text();
+    throw new Error(`Live odds refresh failed: ${response.status} ${body.slice(0, 180)}`);
+  }
+
+  const payload = await response.json();
+  if (!Array.isArray(payload.dataset)) {
+    throw new Error('Live odds refresh did not return a dataset.');
+  }
+
+  state.dataset = payload.dataset;
+  if (Array.isArray(payload.bet_history)) {
+    state.betHistory = payload.bet_history;
+  }
+  state.dataSource = 'Live Odds API refresh';
+  state.lastRefresh = payload.refreshed_at ? new Date(payload.refreshed_at) : new Date();
+
+  return {
+    ok: true,
+    summary: payload.summary || {},
+    errors: payload.errors || []
+  };
 }
 
 function getReferenceDate() {
@@ -607,9 +648,23 @@ function bindRefreshOdds() {
     button.disabled = true;
     button.textContent = window.location.protocol === 'file:' ? 'Reloading...' : 'Refreshing...';
     document.querySelector('[data-app-error]').textContent = '';
+    let liveResult = null;
 
-    await loadDataset({ bustCache: true });
-    await loadBetHistory({ bustCache: true });
+    try {
+      liveResult = await refreshLiveOdds();
+    } catch (error) {
+      document.querySelector('[data-app-error]').textContent = 'Live odds refresh failed, so saved site data was reloaded instead.';
+      liveResult = {
+        ok: false,
+        reason: error.message
+      };
+    }
+
+    if (!liveResult?.ok) {
+      await loadDataset({ bustCache: true });
+      await loadBetHistory({ bustCache: true });
+    }
+
     render();
 
     button.disabled = false;
@@ -617,9 +672,15 @@ function bindRefreshOdds() {
     const noteElement = document.querySelector('[data-refresh-note]');
     if (noteElement) {
       noteElement.dataset.userMessage = 'true';
-      noteElement.textContent = window.location.protocol === 'file:'
-        ? 'Local file reloaded saved data. Live odds updates run on the GitHub site.'
-        : 'Latest saved odds data was reloaded.';
+      if (liveResult?.ok) {
+        const updated = liveResult.summary.updated || 0;
+        const checked = liveResult.summary.checked || 0;
+        noteElement.textContent = `Live Odds API refresh complete. ${checked} prices checked, ${updated} changed.`;
+      } else {
+        noteElement.textContent = window.location.protocol === 'file:'
+          ? 'Local file reloaded saved data. Live odds updates run on the hosted site.'
+          : 'Saved site data was reloaded. Live Odds API refresh is not connected yet.';
+      }
     }
   });
 }
