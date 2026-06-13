@@ -398,7 +398,7 @@ function renderFixturePanels() {
         </div>
         <p class="tactical-summary">${plainGameNotes[fixture.match_name] || fixture.tactical_summary}</p>
         <div class="fixture-meta">
-          <span><strong>Pitch:</strong> ${fixture.pitch_constraints}</span>
+          <span><strong>Pitch note:</strong> ${fixture.pitch_constraints}</span>
           <span><strong>Referee:</strong> ${fixture.referee_tendencies} ${fixture.referee_source ? `<em>${fixture.referee_source}</em>` : ''}</span>
         </div>
         <div class="market-grid">
