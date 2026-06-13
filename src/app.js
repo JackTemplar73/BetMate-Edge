@@ -579,7 +579,7 @@ function getSportsbookScanRows() {
         ...row,
         match_name: fixture.match_name,
         kickoff_time_aest: fixture.kickoff_time_aest,
-        bookmaker: row.au_bookie || scan.bookmaker || 'Sportsbet',
+        bookmaker: row.au_bookie || scan.bookmaker || 'AU bookie',
         checked_at: scan.checked_at,
         offered_market_keys: scan.offered_market_keys || [],
         quality: buildBetQualityFromPrices(row.model_price, row.current_odds)
@@ -596,14 +596,14 @@ function renderSportsbookScan() {
   const rows = getSportsbookScanRows();
 
   if (rows.length === 0) {
-    container.innerHTML = '<p class="empty-note">No Sportsbet rows are matched to the model right now.</p>';
+    container.innerHTML = '<p class="empty-note">No AU bookie rows are matched to the model right now.</p>';
     return;
   }
 
   const topRows = rows.slice(0, 36);
 
   container.innerHTML = `
-    <div class="sportsbook-scan-summary">${rows.length} Sportsbet rows matched to model prices. Sorted by Grade first, then Edge/QI.</div>
+    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices. Sorted by Grade first, then Edge/QI.</div>
     <div class="sportsbook-scan-table">
       <table>
         <thead>
@@ -770,11 +770,11 @@ function renderFixtureModelBlock(fixture) {
       `
     : '';
 
-  const sportsbetScanHtml = scanRows.length > 0
+  const bookieScanHtml = scanRows.length > 0
     ? `
         <article class="model-insight-card sportsbet-scan-card">
-          <h3>Sportsbet Market Scan</h3>
-          <p class="source-note">Live Sportsbet markets found through the OddsAPI event scan and matched to our model prices.</p>
+          <h3>AU Bookie Market Scan</h3>
+          <p class="source-note">Live AU bookie markets found through the OddsAPI event scan and matched to our model prices.</p>
           <div class="fixture-scan-list">
             ${scanRows.map((row) => `
               <div>
@@ -797,12 +797,12 @@ function renderFixtureModelBlock(fixture) {
     <div class="fixture-model-block">
       <div class="inline-section-heading">
         <h3>Game Model</h3>
-        <p>Model projections plus Sportsbet markets that were found and matched to our model prices.</p>
+        <p>Model projections plus AU bookie markets that were found and matched to our model prices.</p>
       </div>
       <div class="model-insight-grid">
         ${totalsHtml}
         ${exactHtml}
-        ${sportsbetScanHtml}
+        ${bookieScanHtml}
         ${markovHtml}
       </div>
     </div>

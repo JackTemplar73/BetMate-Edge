@@ -5,8 +5,12 @@ const EMBEDDED_PATH = new URL('../src/embeddedData.js', import.meta.url);
 const COVERAGE_PATH = new URL('../data/oddsapi_au_market_coverage.json', import.meta.url);
 
 const SPORT_KEY = 'soccer_fifa_world_cup';
-const TARGET_BOOKMAKER = process.env.ODDS_API_TARGET_BOOKMAKER || 'sportsbet';
-const AU_BOOKMAKERS = ['sportsbet', 'tab', 'neds', 'pointsbetau', 'betright'];
+const DEFAULT_SCAN_BOOKMAKERS = ['sportsbet', 'tab', 'pointsbetau', 'neds', 'bet365'];
+const SCAN_BOOKMAKERS = (process.env.ODDS_API_TARGET_BOOKMAKERS || process.env.ODDS_API_TARGET_BOOKMAKER || DEFAULT_SCAN_BOOKMAKERS.join(','))
+  .split(',')
+  .map((item) => item.trim())
+  .filter(Boolean);
+const AU_BOOKMAKERS = [...new Set([...SCAN_BOOKMAKERS, 'betright'])];
 const CORE_MARKETS = ['h2h', 'spreads', 'totals'];
 const EVENT_MARKETS = [
   'h2h',
@@ -117,15 +121,20 @@ function numberFromSelection(value) {
 }
 
 function preferredMarketKeys(item) {
-  const market = normalise(item.market);
+  const market = normalise(item.market || item.market_matrix);
   const category = normalise(item.category);
+  const selection = normalise(item.selection || item.target_selection);
 
+  if (market.includes('team totals')) return category.includes('first half') ? ['alternate_team_totals_h1', 'team_totals_h1'] : ['alternate_team_totals', 'team_totals'];
+  if (market.includes('alternate totals')) return category.includes('first half') ? ['alternate_totals_h1', 'totals_h1'] : ['alternate_totals', 'totals'];
+  if (market.includes('moneyline') || market.includes('match result') || market.includes('full match model')) return ['h2h_3_way', 'h2h'];
+  if (market.includes('spread') || market.includes('handicap')) return ['alternate_spreads', 'spreads'];
+  if (market.includes('totals') || market.includes('goals total') || market === 'total') return ['alternate_totals', 'totals'];
   if (market.includes('double chance')) return ['double_chance'];
   if (market.includes('draw no bet')) return ['draw_no_bet'];
   if (market.includes('both teams') || market.includes('btts')) return category.includes('first half') ? ['btts_h1'] : ['btts'];
+  if (selection.includes('over') || selection.includes('under')) return category.includes('first half') ? ['alternate_totals_h1', 'totals_h1'] : ['alternate_totals', 'totals'];
   if (market.includes('odd')) return category.includes('first half') ? ['odd_even_h1'] : ['odd_even'];
-  if (market.includes('alternate totals')) return category.includes('first half') ? ['alternate_totals_h1', 'totals_h1'] : ['alternate_totals', 'totals'];
-  if (market.includes('team totals')) return category.includes('first half') ? ['alternate_team_totals_h1', 'team_totals_h1'] : ['alternate_team_totals', 'team_totals'];
   if (market.includes('first half result')) return ['h2h_3_way_h1', 'h2h_h1'];
   if (market.includes('first half totals')) return ['alternate_totals_h1', 'totals_h1'];
   return [];
@@ -133,8 +142,9 @@ function preferredMarketKeys(item) {
 
 function findOutcome(bookmaker, item) {
   const keys = preferredMarketKeys(item);
-  const selection = normalise(item.selection);
-  const targetPoint = numberFromSelection(item.selection);
+  const rawSelection = item.selection || item.target_selection;
+  const selection = normalise(rawSelection);
+  const targetPoint = numberFromSelection(rawSelection);
 
   for (const key of keys) {
     const market = (bookmaker.markets || []).find((candidate) => candidate.key === key);
@@ -157,6 +167,7 @@ function findOutcome(bookmaker, item) {
       if (selection.includes('over') && name === 'over') return true;
       if (selection.includes('under') && name === 'under') return true;
       if (selection.includes('draw') && name === 'draw') return true;
+      if (selection.includes('win') && selection.includes(name)) return true;
 
       return false;
     });
@@ -167,6 +178,32 @@ function findOutcome(bookmaker, item) {
   }
 
   return null;
+}
+
+function scanItemsForFixture(fixture) {
+  const pricedItems = (fixture.markets || [])
+    .filter((item) => Number.isFinite(Number(item.true_price)) && Number(item.true_price) > 1)
+    .map((item) => ({
+      selection: item.target_selection,
+      category: item.market_matrix,
+      market: item.market_matrix,
+      probability: Number(((1 / Number(item.true_price)) * 100).toFixed(1)),
+      fair_price: Number(item.true_price),
+      source: 'Priced model'
+    }));
+
+  const modelItems = (fixture.markov_market_model || []).map((item) => ({
+    ...item,
+    source: 'Markov model'
+  }));
+
+  const seen = new Set();
+  return [...pricedItems, ...modelItems].filter((item) => {
+    const key = `${normalise(item.selection)}|${normalise(item.market)}|${Number(item.fair_price).toFixed(3)}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return preferredMarketKeys(item).length > 0;
+  });
 }
 
 async function fetchJson(url) {
@@ -188,10 +225,10 @@ async function fetchCoreEvents(apiKey) {
   return fetchJson(url);
 }
 
-async function fetchEventOdds(apiKey, eventId, bookmakerKey = TARGET_BOOKMAKER) {
+async function fetchEventOdds(apiKey, eventId, bookmakerKeys = SCAN_BOOKMAKERS) {
   const url = new URL(`https://api.the-odds-api.com/v4/sports/${SPORT_KEY}/events/${eventId}/odds`);
   url.searchParams.set('apiKey', apiKey);
-  url.searchParams.set('bookmakers', bookmakerKey);
+  url.searchParams.set('bookmakers', bookmakerKeys.join(','));
   url.searchParams.set('markets', EVENT_MARKETS.join(','));
   url.searchParams.set('oddsFormat', 'decimal');
   url.searchParams.set('dateFormat', 'iso');
@@ -225,7 +262,7 @@ async function main() {
     const event = findEvent(coreEvents, fixture);
     if (!event) {
       fixture.market_scan = {
-        bookmaker: TARGET_BOOKMAKER,
+        bookmakers: SCAN_BOOKMAKERS,
         checked_at: nowIso,
         status: 'no_oddsapi_event',
         rows: []
@@ -233,15 +270,15 @@ async function main() {
       continue;
     }
 
-    const eventOdds = await fetchEventOdds(apiKey, event.id, TARGET_BOOKMAKER);
+    const eventOdds = await fetchEventOdds(apiKey, event.id, SCAN_BOOKMAKERS);
     coverageRows.push(...coverageForEvent(eventOdds).map((row) => ({ ...row, match_name: fixture.match_name })));
-    const bookmaker = (eventOdds.bookmakers || []).find((item) => item.key === TARGET_BOOKMAKER);
+    const bookmakers = (eventOdds.bookmakers || []).filter((item) => SCAN_BOOKMAKERS.includes(item.key));
 
-    if (!bookmaker) {
+    if (bookmakers.length === 0) {
       fixture.market_scan = {
-        bookmaker: TARGET_BOOKMAKER,
+        bookmakers: SCAN_BOOKMAKERS,
         checked_at: nowIso,
-        status: 'bookmaker_missing',
+        status: 'bookmakers_missing',
         oddsapi_event_id: event.id,
         rows: []
       };
@@ -249,32 +286,36 @@ async function main() {
     }
 
     const rows = [];
-    for (const item of fixture.markov_market_model || []) {
-      const found = findOutcome(bookmaker, item);
-      if (!found) continue;
+    for (const bookmaker of bookmakers) {
+      for (const item of scanItemsForFixture(fixture)) {
+        const found = findOutcome(bookmaker, item);
+        if (!found) continue;
 
-      const odds = Number(Number(found.outcome.price).toFixed(2));
-      const metrics = runVectorCalculations(item.fair_price, odds);
-      rows.push({
-        selection: item.selection,
-        category: item.category,
-        market: item.market,
-        oddsapi_market: found.marketKey,
-        model_probability: item.probability,
-        model_price: item.fair_price,
-        current_odds: odds,
-        au_bookie: bookmaker.title || TARGET_BOOKMAKER,
-        ev: metrics.ev,
-        qi: metrics.qi
-      });
+        const odds = Number(Number(found.outcome.price).toFixed(2));
+        const metrics = runVectorCalculations(item.fair_price, odds);
+        rows.push({
+          selection: item.selection,
+          category: item.category,
+          market: item.market,
+          source: item.source,
+          oddsapi_market: found.marketKey,
+          model_probability: item.probability,
+          model_price: item.fair_price,
+          current_odds: odds,
+          au_bookie: bookmaker.title || bookmaker.key,
+          bookmaker_key: bookmaker.key,
+          ev: metrics.ev,
+          qi: metrics.qi
+        });
+      }
     }
 
     fixture.market_scan = {
-      bookmaker: bookmaker.title || TARGET_BOOKMAKER,
+      bookmakers: bookmakers.map((bookmaker) => bookmaker.title || bookmaker.key),
       checked_at: nowIso,
       status: 'checked',
       oddsapi_event_id: event.id,
-      offered_market_keys: [...new Set((bookmaker.markets || []).map((market) => market.key))].sort(),
+      offered_market_keys: [...new Set(bookmakers.flatMap((bookmaker) => (bookmaker.markets || []).map((market) => market.key)))].sort(),
       matched_rows: rows.length,
       rows: rows.sort((a, b) => b.qi - a.qi || b.ev - a.ev)
     };
@@ -282,7 +323,7 @@ async function main() {
 
   const coverage = {
     checked_at: nowIso,
-    target_bookmaker: TARGET_BOOKMAKER,
+    target_bookmakers: SCAN_BOOKMAKERS,
     events_checked: dataset.filter((fixture) => fixture.market_scan?.status === 'checked').length,
     market_counts: coverageRows.reduce((acc, row) => {
       acc[row.market] = (acc[row.market] || 0) + 1;
@@ -291,6 +332,7 @@ async function main() {
     matches: dataset.map((fixture) => ({
       match_name: fixture.match_name,
       status: fixture.market_scan?.status,
+      bookmakers: fixture.market_scan?.bookmakers || [],
       offered_market_keys: fixture.market_scan?.offered_market_keys || [],
       matched_rows: fixture.market_scan?.matched_rows || 0
     }))
@@ -301,7 +343,7 @@ async function main() {
   await writeFile(COVERAGE_PATH, `${JSON.stringify(coverage, null, 2)}\n`);
 
   console.log(JSON.stringify({
-    target_bookmaker: TARGET_BOOKMAKER,
+    target_bookmakers: SCAN_BOOKMAKERS,
     events_checked: coverage.events_checked,
     matched_rows: dataset.reduce((sum, fixture) => sum + (fixture.market_scan?.matched_rows || 0), 0),
     market_counts: coverage.market_counts
