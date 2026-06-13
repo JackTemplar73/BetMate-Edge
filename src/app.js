@@ -529,8 +529,9 @@ function renderPlayerPropWatchlist() {
 function renderFixtureModelBlock(fixture) {
   const totals = fixture.model_totals_25;
   const exactScores = fixture.exact_score_model || [];
+  const markovMarkets = fixture.markov_market_model || [];
 
-  if (!totals && exactScores.length === 0) return '';
+  if (!totals && exactScores.length === 0 && markovMarkets.length === 0) return '';
 
   const totalsHtml = totals
     ? `
@@ -563,6 +564,25 @@ function renderFixtureModelBlock(fixture) {
       `
     : '';
 
+  const markovHtml = markovMarkets.length > 0
+    ? `
+        <article class="model-insight-card markov-market-card">
+          <h3>Markov Market Model</h3>
+          <div class="markov-market-list">
+            ${markovMarkets.map((item) => `
+              <div>
+                <span>
+                  <strong>${item.selection}</strong>
+                  <em>${item.category} | ${item.market}</em>
+                </span>
+                <b>${item.probability}% | Fair $${Number(item.fair_price).toFixed(2)}</b>
+              </div>
+            `).join('')}
+          </div>
+        </article>
+      `
+    : '';
+
   return `
     <div class="fixture-model-block">
       <div class="inline-section-heading">
@@ -572,6 +592,7 @@ function renderFixtureModelBlock(fixture) {
       <div class="model-insight-grid">
         ${totalsHtml}
         ${exactHtml}
+        ${markovHtml}
       </div>
     </div>
   `;

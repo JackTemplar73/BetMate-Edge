@@ -930,6 +930,48 @@ function fairPriceFromProbability(probability) {
   return probability > 0 ? Number((1 / probability).toFixed(2)) : null;
 }
 
+function overProbability(lambda, line) {
+  const maxUnderGoals = Math.floor(line);
+  let underOrEqual = 0;
+  for (let goals = 0; goals <= maxUnderGoals; goals += 1) {
+    underOrEqual += poissonProbability(lambda, goals);
+  }
+  return 1 - underOrEqual;
+}
+
+function resultProbabilitiesFromLambdas(homeLambda, awayLambda) {
+  let home = 0;
+  let draw = 0;
+  let away = 0;
+
+  for (let homeGoals = 0; homeGoals <= 8; homeGoals += 1) {
+    for (let awayGoals = 0; awayGoals <= 8; awayGoals += 1) {
+      const probability = poissonProbability(homeLambda, homeGoals) * poissonProbability(awayLambda, awayGoals);
+      if (homeGoals > awayGoals) home += probability;
+      else if (homeGoals === awayGoals) draw += probability;
+      else away += probability;
+    }
+  }
+
+  const total = home + draw + away;
+  return {
+    home: home / total,
+    draw: draw / total,
+    away: away / total
+  };
+}
+
+function addMarkovMarket(markets, category, market, selection, probability) {
+  if (!Number.isFinite(probability) || probability <= 0 || probability >= 1) return;
+  markets.push({
+    category,
+    market,
+    selection,
+    probability: Number((probability * 100).toFixed(1)),
+    fair_price: fairPriceFromProbability(probability)
+  });
+}
+
 function h2hModelProbabilities(fixture) {
   const teams = splitTeams(fixture.match_name);
   if (!teams) return null;
@@ -1016,6 +1058,53 @@ function deriveFixtureGoalModel(fixture) {
   fixture.exact_score_model = scores
     .sort((a, b) => b.probability - a.probability)
     .slice(0, 5);
+
+  const markovMarkets = [];
+  const bothTeamsScore = (1 - poissonProbability(homeLambda, 0)) * (1 - poissonProbability(awayLambda, 0));
+  const evenGoals = Array.from({ length: 7 }, (_, index) => index * 2)
+    .reduce((sum, goals) => sum + poissonProbability(totalGoalsMean, goals), 0);
+  const firstHalfHomeLambda = homeLambda * 0.45;
+  const firstHalfAwayLambda = awayLambda * 0.45;
+  const firstHalfTotalMean = firstHalfHomeLambda + firstHalfAwayLambda;
+  const firstHalfResult = resultProbabilitiesFromLambdas(firstHalfHomeLambda, firstHalfAwayLambda);
+  const firstHalfBtts = (1 - poissonProbability(firstHalfHomeLambda, 0)) * (1 - poissonProbability(firstHalfAwayLambda, 0));
+
+  addMarkovMarket(markovMarkets, 'Main Match', 'Double Chance', `${displayHome} or Draw`, probabilities.home + probabilities.draw);
+  addMarkovMarket(markovMarkets, 'Main Match', 'Double Chance', `${displayAway} or Draw`, probabilities.away + probabilities.draw);
+  addMarkovMarket(markovMarkets, 'Main Match', 'Double Chance', `${displayHome} or ${displayAway}`, probabilities.home + probabilities.away);
+  addMarkovMarket(markovMarkets, 'Main Match', 'Draw No Bet', `${displayHome} Draw No Bet`, probabilities.home / (probabilities.home + probabilities.away));
+  addMarkovMarket(markovMarkets, 'Main Match', 'Draw No Bet', `${displayAway} Draw No Bet`, probabilities.away / (probabilities.home + probabilities.away));
+  addMarkovMarket(markovMarkets, 'Main Match', 'Both Teams To Score', 'BTTS Yes', bothTeamsScore);
+  addMarkovMarket(markovMarkets, 'Main Match', 'Both Teams To Score', 'BTTS No', 1 - bothTeamsScore);
+  addMarkovMarket(markovMarkets, 'Main Match', 'Odd / Even Goals', 'Odd Goals', 1 - evenGoals);
+  addMarkovMarket(markovMarkets, 'Main Match', 'Odd / Even Goals', 'Even Goals', evenGoals);
+
+  for (const line of [0.5, 1.5, 2.5, 3.5, 4.5]) {
+    const over = overProbability(totalGoalsMean, line);
+    addMarkovMarket(markovMarkets, 'Goal Totals', 'Alternate Totals', `Over ${line} Goals`, over);
+    addMarkovMarket(markovMarkets, 'Goal Totals', 'Alternate Totals', `Under ${line} Goals`, 1 - over);
+  }
+
+  for (const [teamName, lambda] of [[displayHome, homeLambda], [displayAway, awayLambda]]) {
+    for (const line of [0.5, 1.5, 2.5]) {
+      const over = overProbability(lambda, line);
+      addMarkovMarket(markovMarkets, 'Team Totals', 'Team Totals', `${teamName} Over ${line} Goals`, over);
+      addMarkovMarket(markovMarkets, 'Team Totals', 'Team Totals', `${teamName} Under ${line} Goals`, 1 - over);
+    }
+  }
+
+  addMarkovMarket(markovMarkets, 'First Half', 'First Half Result', `${displayHome} 1H Win`, firstHalfResult.home);
+  addMarkovMarket(markovMarkets, 'First Half', 'First Half Result', '1H Draw', firstHalfResult.draw);
+  addMarkovMarket(markovMarkets, 'First Half', 'First Half Result', `${displayAway} 1H Win`, firstHalfResult.away);
+  for (const line of [0.5, 1.5]) {
+    const over = overProbability(firstHalfTotalMean, line);
+    addMarkovMarket(markovMarkets, 'First Half', 'First Half Totals', `1H Over ${line} Goals`, over);
+    addMarkovMarket(markovMarkets, 'First Half', 'First Half Totals', `1H Under ${line} Goals`, 1 - over);
+  }
+  addMarkovMarket(markovMarkets, 'First Half', 'First Half BTTS', '1H BTTS Yes', firstHalfBtts);
+  addMarkovMarket(markovMarkets, 'First Half', 'First Half BTTS', '1H BTTS No', 1 - firstHalfBtts);
+
+  fixture.markov_market_model = markovMarkets;
 }
 
 function deriveFixtureModels(dataset) {
