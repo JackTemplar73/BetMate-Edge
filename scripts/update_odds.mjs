@@ -42,6 +42,7 @@ const ESPN_LEAGUES = [
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
 const CLOSING_WINDOW_MS = 2 * 60 * 1000;
+const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
 
 const MARKET_MAP = {
   h2h: ['Full Match Model', 'Moneyline'],
@@ -230,7 +231,7 @@ async function fetchEspnScoreboard(league, date) {
   return response.json();
 }
 
-async function refreshRefereeData(dataset, nowIso) {
+async function fetchEspnEventsForDataset(dataset) {
   const allEvents = [];
 
   for (const league of ESPN_LEAGUES) {
@@ -244,6 +245,11 @@ async function refreshRefereeData(dataset, nowIso) {
     }
   }
 
+  return allEvents;
+}
+
+async function refreshRefereeData(dataset, nowIso, espnEvents = []) {
+  const allEvents = espnEvents.length ? espnEvents : await fetchEspnEventsForDataset(dataset);
   let verified = 0;
 
   for (const fixture of dataset) {
@@ -278,6 +284,173 @@ async function refreshRefereeData(dataset, nowIso) {
   }
 
   return verified;
+}
+
+function eventSourceUrl(event) {
+  const summaryLink = event.links?.find((link) => (link.rel || []).includes('summary'))?.href;
+  return summaryLink || `https://www.espn.com/soccer/match/_/gameId/${event.id}`;
+}
+
+function eventResult(event) {
+  const competition = event.competitions?.[0];
+  const competitors = competition?.competitors || [];
+  const home = competitors.find((competitor) => competitor.homeAway === 'home');
+  const away = competitors.find((competitor) => competitor.homeAway === 'away');
+  const completed = Boolean(competition?.status?.type?.completed || event.status?.type?.completed);
+
+  if (!home || !away || !completed) return null;
+
+  return {
+    homeName: home.team?.displayName || home.team?.shortDisplayName || 'Home',
+    awayName: away.team?.displayName || away.team?.shortDisplayName || 'Away',
+    homeScore: Number(home.score),
+    awayScore: Number(away.score),
+    details: competition.details || [],
+    source: eventSourceUrl(event)
+  };
+}
+
+function resultLine(result) {
+  return `${result.homeName} ${result.homeScore}-${result.awayScore} ${result.awayName}`;
+}
+
+function selectedTeam(selection) {
+  return normalise(String(selection || '')
+    .replace(/\bto win\b/i, '')
+    .replace(/\bdouble chance\b/i, '')
+    .replace(/[()+-]?\d+(?:\.\d+)?/g, '')
+    .trim());
+}
+
+function exactScoreSelection(selection) {
+  const match = String(selection || '').match(/(.+?)\s+(\d+)\s*[-–]\s*(\d+)$/);
+  if (!match) return null;
+
+  return {
+    team: normalise(match[1]),
+    firstScore: Number(match[2]),
+    secondScore: Number(match[3])
+  };
+}
+
+function cardedPlayers(result) {
+  return result.details
+    .filter((detail) => detail.yellowCard || detail.redCard || normalise(detail.type?.text).includes('card'))
+    .flatMap((detail) => detail.athletesInvolved || [])
+    .map((athlete) => normalise(athlete.displayName || athlete.fullName || athlete.shortName));
+}
+
+function settleAgainstScore(entry, result) {
+  const selection = normalise(entry.target_selection);
+  const home = normalise(result.homeName);
+  const away = normalise(result.awayName);
+  const homeWon = result.homeScore > result.awayScore;
+  const awayWon = result.awayScore > result.homeScore;
+  const draw = result.homeScore === result.awayScore;
+
+  if (entry.market_matrix === 'Exact Score') {
+    const exact = exactScoreSelection(entry.target_selection);
+    if (!exact) return null;
+
+    const expectedHome = exact.team === home ? exact.firstScore : exact.team === away ? exact.secondScore : null;
+    const expectedAway = exact.team === home ? exact.secondScore : exact.team === away ? exact.firstScore : null;
+    if (!Number.isFinite(expectedHome) || !Number.isFinite(expectedAway)) return null;
+
+    return result.homeScore === expectedHome && result.awayScore === expectedAway ? 'won' : 'lost';
+  }
+
+  if (entry.market_matrix === 'Moneyline' || entry.market_matrix === 'Full Match Model') {
+    if (selection.includes('draw') || selection.includes('end in a draw')) {
+      return draw ? 'won' : 'lost';
+    }
+
+    const team = selectedTeam(entry.target_selection);
+    if (team === home) return homeWon ? 'won' : 'lost';
+    if (team === away) return awayWon ? 'won' : 'lost';
+  }
+
+  if (entry.market_matrix === 'Spread') {
+    const point = numberFromSelection(entry.target_selection);
+    const team = selectedTeam(entry.target_selection);
+    if (!Number.isFinite(point)) return null;
+
+    const selectedScore = team === home ? result.homeScore : team === away ? result.awayScore : null;
+    const otherScore = team === home ? result.awayScore : team === away ? result.homeScore : null;
+    if (!Number.isFinite(selectedScore) || !Number.isFinite(otherScore)) return null;
+
+    const adjusted = selectedScore + point;
+    if (adjusted > otherScore) return 'won';
+    if (adjusted < otherScore) return 'lost';
+    return 'push';
+  }
+
+  if (entry.market_matrix === 'Totals') {
+    const point = numberFromSelection(entry.target_selection);
+    if (!Number.isFinite(point)) return null;
+
+    const total = result.homeScore + result.awayScore;
+    if (selection.includes('under')) {
+      if (total < point) return 'won';
+      if (total > point) return 'lost';
+      return 'push';
+    }
+
+    if (selection.includes('over')) {
+      if (total > point) return 'won';
+      if (total < point) return 'lost';
+      return 'push';
+    }
+  }
+
+  if (entry.market_matrix === 'Player Prop' && selection.includes('card')) {
+    const player = normalise(String(entry.target_selection).split(':')[0]);
+    if (!player) return null;
+
+    const cards = cardedPlayers(result);
+    return cards.includes(player) ? 'won' : 'lost';
+  }
+
+  return null;
+}
+
+function settleHistoryResults(entries, dataset, espnEvents, now = getNow()) {
+  let settled = 0;
+  const fixtureByName = new Map(dataset.map((fixture) => [normalise(fixture.match_name), fixture]));
+
+  for (const entry of entries) {
+    if (entry.result_status && entry.result_status !== 'pending') continue;
+
+    const fixture = fixtureByName.get(normalise(entry.match_name));
+    if (!fixture) continue;
+
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    if (now - kickoff < RESULT_SETTLEMENT_BUFFER_MS) continue;
+
+    const event = findEspnEvent(espnEvents, fixture);
+    const result = event ? eventResult(event) : null;
+
+    if (!result) {
+      entry.result_status = 'pending';
+      entry.result_detail = 'Result not verified yet. Will check again on the next automatic refresh.';
+      continue;
+    }
+
+    const status = settleAgainstScore(entry, result);
+    if (!status) {
+      entry.result_status = 'pending';
+      entry.result_detail = `Final score verified: ${resultLine(result)}. This market needs a more detailed settlement feed.`;
+      entry.settlement_source = result.source;
+      continue;
+    }
+
+    entry.result_status = status;
+    entry.result_detail = `ESPN final: ${resultLine(result)}.`;
+    entry.settlement_source = result.source;
+    entry.settled_at = now.toISOString();
+    settled += 1;
+  }
+
+  return settled;
 }
 
 function betId(fixture, marketItem) {
@@ -339,7 +512,7 @@ function shouldDropCorrectedOutlier(existing, metrics, currentOdds) {
     && Math.max(openingOdds, currentOdds) / Math.min(openingOdds, currentOdds) >= 3;
 }
 
-async function syncBetHistory(dataset, now = getNow()) {
+async function syncBetHistory(dataset, now = getNow(), espnEvents = []) {
   const history = await readHistory();
   const byId = new Map(history
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
@@ -437,10 +610,12 @@ async function syncBetHistory(dataset, now = getNow()) {
       return b.current_qi - a.current_qi;
     });
 
+  const settledResults = settleHistoryResults(nextHistory, dataset, espnEvents, now);
+
   await writeFile(HISTORY_PATH, `${JSON.stringify(nextHistory, null, 2)}\n`);
   await writeFile(EMBEDDED_HISTORY_PATH, `window.embeddedBetHistory = ${JSON.stringify(nextHistory, null, 2)};\n`);
 
-  return nextHistory.length;
+  return { historyCount: nextHistory.length, settledResults };
 }
 
 function getBookmaker(event, displayName) {
@@ -661,7 +836,8 @@ async function main() {
 
   let updates = 0;
   const nowIso = new Date().toISOString();
-  const refereeUpdates = await refreshRefereeData(dataset, nowIso);
+  const espnEvents = await fetchEspnEventsForDataset(dataset);
+  const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
 
   for (const fixture of dataset) {
     const event = findEvent(allEvents, fixture);
@@ -728,9 +904,9 @@ async function main() {
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
-  const historyCount = await syncBetHistory(dataset);
+  const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Verified ${refereeUpdates} referee assignments. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Verified ${refereeUpdates} referee assignments. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {
