@@ -687,7 +687,6 @@ function renderFixturePanels() {
           <span><strong>Pitch note:</strong> ${fixture.pitch_constraints}</span>
           <span><strong>Referee implication:</strong> ${fixture.referee_tendencies} ${fixture.referee_source ? `<em>${fixture.referee_source}</em>` : ''}</span>
         </div>
-        ${fixtureModelHtml}
         <div class="market-grid">
           ${markets.map((market) => `
             <article class="market-card">
@@ -705,6 +704,7 @@ function renderFixturePanels() {
             </article>
           `).join('')}
         </div>
+        ${fixtureModelHtml}
         ${playerPropsHtml}
       </section>
     `;
