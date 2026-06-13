@@ -93,13 +93,13 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-13T00:34:53.075Z",
-    "referee_check_sources": "FIFA official roster plus post-match referee report; ESPN/FIFA structured feed fallback remains part of scheduled refresh.",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "No matching Odds API event found."
   },
   {
@@ -182,10 +182,10 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Paraguay to Win",
         "true_price": 4.06,
-        "current_odds": 3.65,
+        "current_odds": 4,
         "au_bookie": "TAB",
-        "previous_odds": 3.8,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z"
+        "previous_odds": 3.65,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -198,10 +198,10 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.34,
-        "current_odds": 3.15,
+        "current_odds": 3.2,
         "au_bookie": "Neds",
-        "previous_odds": 3.2,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z"
+        "previous_odds": 3.15,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -223,25 +223,27 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.34,
-        "current_odds": 3.1,
-        "au_bookie": "BetRight"
+        "current_odds": 3.15,
+        "au_bookie": "BetRight",
+        "previous_odds": 3.1,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Paraguay to Win",
         "true_price": 4.06,
-        "current_odds": 3.7,
+        "current_odds": 3.65,
         "au_bookie": "BetRight",
-        "previous_odds": 3.75,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z"
+        "previous_odds": 3.7,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       }
     ],
-    "referee_last_checked": "2026-06-13T00:39:33.380Z",
-    "referee_check_sources": "Current match-official report plus scheduled ESPN/FIFA structured feed fallback.",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
+    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event c12986f447a515fbe641addd786dbb24.",
     "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries"
   },
@@ -322,8 +324,10 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Qatar to Win",
         "true_price": 14.66,
-        "current_odds": 14,
-        "au_bookie": "Sportsbet"
+        "current_odds": 15,
+        "au_bookie": "Sportsbet",
+        "previous_odds": 14,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -394,12 +398,12 @@ window.embeddedDataset = [
         "odds_updated_at": "2026-06-12T23:03:17.291Z"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 26634922d3f78c146440816023e40de8."
   },
   {
@@ -553,12 +557,12 @@ window.embeddedDataset = [
         "odds_updated_at": "2026-06-12T23:03:17.291Z"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event f6c8748a16516e0998f95de14235432a."
   },
   {
@@ -696,12 +700,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 5ae41a06735c926eeb7f74006933adce."
   },
   {
@@ -782,8 +786,10 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Turkey to Win",
         "true_price": 1.8,
-        "current_odds": 1.65,
-        "au_bookie": "Sportsbet"
+        "current_odds": 1.66,
+        "au_bookie": "Sportsbet",
+        "previous_odds": 1.65,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -853,12 +859,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 564084f52cc9f1abcc18187c168a7cdc."
   },
   {
@@ -961,12 +967,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event d79edbd6aaeb578d33e313446b18d333."
   },
   {
@@ -1063,12 +1069,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 32ec06abda2398ac41501c86eb9aa376."
   },
   {
@@ -1171,12 +1177,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 05752bb341e197001387b64f3a06b9b2."
   },
   {
@@ -1273,12 +1279,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event b55f9569de3f4d731bc5537ff5ff43e4."
   },
   {
@@ -1361,10 +1367,10 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Spain to Win",
         "true_price": 1.15,
-        "current_odds": 1.09,
+        "current_odds": 1.1,
         "au_bookie": "BetRight",
-        "previous_odds": 1.1,
-        "odds_updated_at": "2026-06-12T23:37:57.285Z"
+        "previous_odds": 1.09,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -1377,18 +1383,18 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Cape Verde to Win",
         "true_price": 24.71,
-        "current_odds": 21,
+        "current_odds": 19,
         "au_bookie": "BetRight",
-        "previous_odds": 19,
-        "odds_updated_at": "2026-06-12T23:37:57.285Z"
+        "previous_odds": 21,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event c54f00b11925751d2b62988775c6c239."
   },
   {
@@ -1485,12 +1491,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event fbfb95c62003fd6d828b309f96ee1f9b."
   },
   {
@@ -1593,12 +1599,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 64b91c5f2db61c7358a4f05459e83c52."
   },
   {
@@ -1695,12 +1701,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event ec51b9c44ad5e34552f3ab53f7262813."
   },
   {
@@ -1799,12 +1805,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 73a4fcd14cc9766b9b9bfd50b8ca153a."
   },
   {
@@ -1903,12 +1909,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 4d4f2b9b78182b557d4fbf8dcf4f4af2."
   },
   {
@@ -2007,12 +2013,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event f31b2ee9e1cc6f7e641467f8237eaa21."
   },
   {
@@ -2111,12 +2117,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 25161cf6cf0cd9be17ae2e7e224a1f45."
   },
   {
@@ -2217,12 +2223,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 6cc871c121a1869b4612d3fb22fa9d55."
   },
   {
@@ -2323,12 +2329,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 689096c8cd7e2753b9fec95321943c5d."
   },
   {
@@ -2441,12 +2447,12 @@ window.embeddedDataset = [
         "odds_updated_at": "2026-06-12T23:03:17.291Z"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 87afdb85c977b451e1c00f5e3e632601."
   },
   {
@@ -2543,12 +2549,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 22083e7a8e5362c711bc05c1e1319a1f."
   },
   {
@@ -2667,12 +2673,12 @@ window.embeddedDataset = [
         "odds_updated_at": "2026-06-12T23:03:17.291Z"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09."
   },
   {
@@ -2688,19 +2694,19 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Switzerland to Win",
         "true_price": 1.69,
-        "current_odds": 1.55,
+        "current_odds": 1.56,
         "au_bookie": "BetRight",
-        "previous_odds": 1.56,
-        "odds_updated_at": "2026-06-12T23:37:57.285Z"
+        "previous_odds": 1.55,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 4.09,
-        "current_odds": 3.85,
+        "current_odds": 3.75,
         "au_bookie": "BetRight",
-        "previous_odds": 3.75,
-        "odds_updated_at": "2026-06-12T23:37:57.285Z"
+        "previous_odds": 3.85,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       },
       {
         "market_matrix": "Full Match Model",
@@ -2775,12 +2781,12 @@ window.embeddedDataset = [
         "au_bookie": "TAB"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad."
   },
   {
@@ -2885,18 +2891,18 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Qatar to Win",
         "true_price": 11.44,
-        "current_odds": 12,
+        "current_odds": 11,
         "au_bookie": "TAB",
-        "previous_odds": 11,
-        "odds_updated_at": "2026-06-12T23:03:17.291Z"
+        "previous_odds": 12,
+        "odds_updated_at": "2026-06-13T00:49:01.961Z"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc."
   },
   {
@@ -3003,12 +3009,12 @@ window.embeddedDataset = [
         "au_bookie": "TAB"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
+    "referee_last_checked": "2026-06-13T00:49:01.961Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-12T23:37:57.285Z",
-    "odds_refresh_cadence": "manual",
+    "odds_last_checked": "2026-06-13T00:49:01.961Z",
+    "odds_refresh_cadence": "final-hour-5-minute",
     "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d."
   }
 ];
