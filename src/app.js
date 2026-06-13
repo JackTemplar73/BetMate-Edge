@@ -96,7 +96,11 @@ function getReferenceDate() {
   return today;
 }
 
-function getUpcomingFixtures() {
+function parseKickoff(value) {
+  return new Date(`${value}+10:00`);
+}
+
+function getFixturesInWindow() {
   const start = getReferenceDate();
   start.setHours(0, 0, 0, 0);
 
@@ -106,10 +110,20 @@ function getUpcomingFixtures() {
 
   return state.dataset
     .filter((fixture) => {
-      const kickoff = new Date(fixture.kickoff_time_aest);
+      const kickoff = parseKickoff(fixture.kickoff_time_aest);
       return kickoff >= start && kickoff <= end;
     })
-    .sort((a, b) => new Date(a.kickoff_time_aest) - new Date(b.kickoff_time_aest));
+    .sort((a, b) => parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest));
+}
+
+function getUpcomingFixtures() {
+  const now = new Date();
+  return getFixturesInWindow().filter((fixture) => parseKickoff(fixture.kickoff_time_aest) > now);
+}
+
+function getCompletedFixtures() {
+  const now = new Date();
+  return getFixturesInWindow().filter((fixture) => parseKickoff(fixture.kickoff_time_aest) <= now);
 }
 
 function getSelectedFixture() {
@@ -123,7 +137,7 @@ function getSelectedFixture() {
 }
 
 function formatKickoff(value) {
-  return `${formatter.format(new Date(value))} AEST`;
+  return `${formatter.format(parseKickoff(value))} AEST`;
 }
 
 function minutesSince(value) {
@@ -278,6 +292,7 @@ function renderViewTabs() {
   });
 
   document.querySelector('[data-history-count]').textContent = state.betHistory.length || flattenMarkets(getUpcomingFixtures()).length;
+  document.querySelector('[data-completed-count]').textContent = getCompletedFixtures().length;
 }
 
 function renderSourceTable() {
@@ -305,6 +320,11 @@ function renderFilters() {
   const filters = ['All', ...new Set(flattenMarkets(fixture ? [fixture] : []).map((market) => market.market_matrix))];
   const container = document.querySelector('[data-market-filters]');
 
+  if (!fixture) {
+    container.innerHTML = '';
+    return;
+  }
+
   container.innerHTML = filters.map((filter) => `
     <button class="segmented-button ${state.marketFilter === filter ? 'active' : ''}" data-filter="${filter}">
       ${plainMarketNames[filter] || filter}
@@ -329,6 +349,11 @@ function renderSelectedMarketTitle() {
 function renderMarketsTable() {
   const tableBody = document.querySelector('[data-market-table]');
   const rows = getFilteredMarkets();
+
+  if (rows.length === 0) {
+    tableBody.innerHTML = '<tr><td colspan="7">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
+    return;
+  }
 
   tableBody.innerHTML = rows.map((market) => `
     <tr>
@@ -381,8 +406,17 @@ function renderMatchTabs() {
   const container = document.querySelector('[data-match-tabs]');
   const fixtures = getUpcomingFixtures();
 
+  if (state.selectedMatchName && !fixtures.some((fixture) => fixture.match_name === state.selectedMatchName)) {
+    state.selectedMatchName = null;
+  }
+
   if (!state.selectedMatchName && fixtures.length > 0) {
     state.selectedMatchName = fixtures[0].match_name;
+  }
+
+  if (fixtures.length === 0) {
+    container.innerHTML = '<p class="empty-note">No available games for selection right now. Started games are in the Completed tab.</p>';
+    return;
   }
 
   container.innerHTML = fixtures.map((fixture) => {
@@ -502,6 +536,36 @@ function renderBetHistory() {
   `).join('');
 }
 
+function renderCompletedGames() {
+  const tableBody = document.querySelector('[data-completed-table]');
+  const fixtures = getCompletedFixtures();
+
+  if (!tableBody) return;
+
+  if (fixtures.length === 0) {
+    tableBody.innerHTML = '<tr><td colspan="5">No games have started yet.</td></tr>';
+    return;
+  }
+
+  tableBody.innerHTML = fixtures.map((fixture) => {
+    const bestOption = (fixture.markets || [])
+      .filter(hasModelPrice)
+      .map((market) => ({ ...market, metrics: runVectorCalculations(market) }))
+      .sort((a, b) => b.metrics.qi - a.metrics.qi)[0];
+    const freshness = priceFreshness(fixture);
+
+    return `
+      <tr>
+        <td>${fixture.match_name}</td>
+        <td>${formatKickoff(fixture.kickoff_time_aest)}</td>
+        <td><span class="primary-cell">${freshness.label}</span><span class="sub-cell">${fixture.odds_refresh_note || 'No refresh note saved.'}</span></td>
+        <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${plainMarketNames[bestOption.market_matrix] || bestOption.market_matrix} | ${bestOption.au_bookie} | $${bestOption.current_odds.toFixed(2)}</span>` : '-'}</td>
+        <td>${bestOption ? `<span class="qi-badge ${metricClass(bestOption.metrics.qi)}">${bestOption.metrics.qi}</span>` : '-'}</td>
+      </tr>
+    `;
+  }).join('');
+}
+
 function formatHistoryPrice(value, fallback = '-') {
   const numeric = Number.parseFloat(value);
   return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : fallback;
@@ -564,6 +628,7 @@ function render() {
   renderSelectedMarketTitle();
   renderMarketsTable();
   renderFixturePanels();
+  renderCompletedGames();
   renderBetHistory();
 }
 

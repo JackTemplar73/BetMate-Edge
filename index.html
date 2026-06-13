@@ -67,6 +67,7 @@
 
     <nav class="view-tabs" aria-label="Dashboard tabs">
       <button class="view-tab active" data-view-tab="matches" type="button">Matches</button>
+      <button class="view-tab" data-view-tab="completed" type="button">Completed <span data-completed-count>0</span></button>
       <button class="view-tab" data-view-tab="history" type="button">Bet History <span data-history-count>0</span></button>
     </nav>
 
@@ -115,6 +116,29 @@
       </div>
     </section>
 
+    <section class="table-section hidden" data-view-section="completed">
+      <div class="section-heading">
+        <div>
+          <h2>Completed Games</h2>
+          <p>Games move here once kickoff time has passed, so they are no longer selectable for betting.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Kickoff</th>
+              <th>Price Check</th>
+              <th>Best Recorded Option</th>
+              <th>QI</th>
+            </tr>
+          </thead>
+          <tbody data-completed-table></tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="table-section history-section hidden" data-view-section="history">
       <div class="section-heading">
         <div>
@@ -146,6 +170,6 @@
   <script src="./src/calculations.js?v=20260612-data-visible"></script>
   <script src="./src/embeddedData.js?v=20260612-full-analysis-all-games"></script>
   <script src="./src/embeddedBetHistory.js?v=20260612-clv-history-qi70"></script>
-  <script src="./src/app.js?v=20260612-match-panel-first"></script>
+  <script src="./src/app.js?v=20260613-completed-games"></script>
 </body>
 </html>
