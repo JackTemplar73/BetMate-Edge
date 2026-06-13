@@ -18,7 +18,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.42,
     "current_ev": 17.61,
     "current_qi": 92,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -42,7 +42,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.65,
     "current_ev": -7.27,
     "current_qi": 17,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -72,16 +72,16 @@ window.embeddedBetHistory = [
     "current_model_price": 14.49,
     "current_ev": 44.93,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T19:47:54.872Z"
+    "last_seen_at": "2026-06-13T20:56:09.020Z"
   },
   {
-    "bet_id": "15962282b61f0b9f",
+    "bet_id": "f86bb9cf57760a25",
     "match_name": "Germany vs Curaçao",
     "kickoff_time_aest": "2026-06-15T03:00:00",
     "market_matrix": "Full Match Model",
     "target_selection": "Curaçao to Win",
-    "au_bookie": "PointsBet",
-    "first_seen_at": "2026-06-13T16:45:59.182Z",
+    "au_bookie": "PointsBet / TAB",
+    "first_seen_at": "2026-06-13T20:56:09.020Z",
     "opening_odds": 41,
     "opening_model_price": 34.28,
     "opening_ev": 19.6,
@@ -99,7 +99,7 @@ window.embeddedBetHistory = [
     "current_model_price": 34.28,
     "current_ev": 19.6,
     "current_qi": 78,
-    "last_seen_at": "2026-06-13T19:47:54.872Z"
+    "last_seen_at": "2026-06-13T20:56:09.020Z"
   },
   {
     "bet_id": "cb0529d26ebe1a93",
@@ -120,7 +120,7 @@ window.embeddedBetHistory = [
     "current_model_price": 10.82,
     "current_ev": 10.91,
     "current_qi": 77,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -150,7 +150,7 @@ window.embeddedBetHistory = [
     "current_model_price": 24.71,
     "current_ev": 5.22,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T19:47:54.872Z"
+    "last_seen_at": "2026-06-13T20:56:09.020Z"
   },
   {
     "bet_id": "59153a72676e781d",
@@ -177,7 +177,7 @@ window.embeddedBetHistory = [
     "current_model_price": 14.14,
     "current_ev": 6.08,
     "current_qi": 72,
-    "last_seen_at": "2026-06-13T19:47:54.872Z"
+    "last_seen_at": "2026-06-13T20:56:09.020Z"
   },
   {
     "bet_id": "33a928f1b54a0991",
@@ -198,7 +198,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.25,
     "current_ev": 14.29,
     "current_qi": 81,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -222,7 +222,7 @@ window.embeddedBetHistory = [
     "current_model_price": 2.6,
     "current_ev": 44.62,
     "current_qi": 95,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 3.76,
@@ -252,7 +252,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 12.36,
     "current_qi": 86,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 2,
@@ -282,7 +282,7 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 9.55,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 1.95,
@@ -312,7 +312,7 @@ window.embeddedBetHistory = [
     "current_model_price": 5.8,
     "current_ev": 12.07,
     "current_qi": 79,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 6.5,
@@ -338,28 +338,28 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "estimated_closing_odds": 91,
-    "estimated_clv_percent": 0,
+    "estimated_closing_odds": 251,
+    "estimated_clv_percent": -63.75,
     "estimated_closing_source": "Estimated from nearest saved price; not an official closing line.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
-    "current_odds": 91,
+    "current_odds": 251,
     "current_model_price": 14.66,
-    "current_ev": 520.74,
+    "current_ev": 1612.14,
     "current_qi": 100,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff"
   },
   {
-    "bet_id": "16fbc1cb3e4214de",
+    "bet_id": "6c00d0a6d298095a",
     "match_name": "Qatar vs Switzerland",
     "kickoff_time_aest": "2026-06-14T05:00:00",
     "market_matrix": "Full Match Model",
     "target_selection": "Match to end in a Draw",
-    "au_bookie": "TAB",
-    "first_seen_at": "2026-06-13T19:47:54.872Z",
+    "au_bookie": "PointsBet",
+    "first_seen_at": "2026-06-13T20:56:09.020Z",
     "opening_odds": 21,
     "opening_model_price": 6.47,
     "opening_ev": 224.57,
@@ -377,7 +377,7 @@ window.embeddedBetHistory = [
     "current_model_price": 6.47,
     "current_ev": 224.57,
     "current_qi": 99,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff"
   },
@@ -406,7 +406,7 @@ window.embeddedBetHistory = [
     "current_model_price": 6.47,
     "current_ev": 8.19,
     "current_qi": 76,
-    "last_seen_at": "2026-06-13T19:47:54.872Z",
+    "last_seen_at": "2026-06-13T20:56:09.020Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff"
   }
