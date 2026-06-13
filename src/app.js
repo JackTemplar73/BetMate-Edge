@@ -1,6 +1,7 @@
 const state = {
   dataset: [],
   betHistory: [],
+  playerPropWatchlist: [],
   marketFilter: 'All',
   sortMode: 'qi',
   lastRefresh: null,
@@ -81,6 +82,24 @@ async function loadBetHistory({ bustCache = false } = {}) {
   }
 }
 
+async function loadPlayerPropWatchlist({ bustCache = false } = {}) {
+  if (window.location.protocol === 'file:') {
+    state.playerPropWatchlist = JSON.parse(JSON.stringify(window.embeddedPlayerProps || []));
+    return;
+  }
+
+  try {
+    const url = `./data/player_props_watchlist.json?t=${Date.now()}`;
+    const response = await fetch(url, { cache: 'no-store' });
+    if (!response.ok) {
+      throw new Error(`Player prop watchlist failed to load: ${response.status}`);
+    }
+    state.playerPropWatchlist = await response.json();
+  } catch {
+    state.playerPropWatchlist = JSON.parse(JSON.stringify(window.embeddedPlayerProps || []));
+  }
+}
+
 function getReferenceDate() {
   const kickoffDates = state.dataset.map((fixture) => new Date(fixture.kickoff_time_aest));
   const earliestKickoff = new Date(Math.min(...kickoffDates));
@@ -146,11 +165,18 @@ function minutesSince(value) {
 
 function priceFreshness(fixture) {
   const minutes = minutesSince(fixture.odds_last_checked);
+  const verifiedCount = (fixture.markets || []).filter((market) => {
+    return ['checked_current', 'updated', 'added_from_oddsapi'].includes(market.odds_refresh_status);
+  }).length;
+  const checkedText = verifiedCount > 0
+    ? `${verifiedCount} current prices checked.`
+    : 'Prices checked.';
+
   if (minutes === null) {
     return {
       className: 'stale',
       label: 'Prices not checked',
-      detail: 'No Odds API refresh timestamp is saved for this match.'
+      detail: 'Waiting for the next price refresh.'
     };
   }
 
@@ -158,7 +184,7 @@ function priceFreshness(fixture) {
     return {
       className: 'fresh',
       label: `Prices fresh (${minutes} min ago)`,
-      detail: fixture.odds_refresh_note || 'Odds API checked recently.'
+      detail: checkedText
     };
   }
 
@@ -166,14 +192,14 @@ function priceFreshness(fixture) {
     return {
       className: 'watch',
       label: `Prices checked ${minutes} min ago`,
-      detail: fixture.odds_refresh_note || 'Odds API checked recently.'
+      detail: checkedText
     };
   }
 
   return {
     className: 'stale',
     label: `STALE prices (${minutes} min old)`,
-    detail: fixture.odds_refresh_note || 'Needs a fresh Odds API check.'
+    detail: 'Needs a fresh price refresh.'
   };
 }
 
@@ -226,12 +252,7 @@ function evClass(market) {
 }
 
 function formatBookCell(market) {
-  const book = `<span class="pill">${market.au_bookie}</span>`;
-  const source = market.odds_refresh_status === 'confirmed_rendered_site'
-    ? 'Confirmed on book site'
-    : 'Odds API';
-
-  return `${book}<span class="sub-cell">${source}</span>`;
+  return `<span class="pill">${market.au_bookie}</span>`;
 }
 
 function formatRefereeStatus(fixture) {
@@ -395,13 +416,61 @@ function renderHighValueBets() {
       </div>
       <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
-      <p class="source-note">Price source: ${market.odds_refresh_status === 'confirmed_rendered_site' ? 'Book site confirmation' : 'Odds API'}</p>
       <dl>
         <div><dt>Type</dt><dd>${plainMarketNames[market.market_matrix] || market.market_matrix}</dd></div>
         <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
         <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
       </dl>
+    </article>
+  `).join('');
+}
+
+function formatModelOnlyPrice(value) {
+  const numeric = Number.parseFloat(value);
+  return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : 'Not priced';
+}
+
+function getUpcomingPlayerProps() {
+  const upcomingMatches = new Set(getUpcomingFixtures().map((fixture) => fixture.match_name));
+  const now = new Date();
+
+  return state.playerPropWatchlist
+    .filter((prop) => upcomingMatches.has(prop.match_name))
+    .filter((prop) => parseKickoff(prop.kickoff_time_aest) > now)
+    .sort((a, b) => {
+      const timeDiff = parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest);
+      if (timeDiff !== 0) return timeDiff;
+      return `${a.player} ${a.market}`.localeCompare(`${b.player} ${b.market}`);
+    });
+}
+
+function renderPlayerPropWatchlist() {
+  const container = document.querySelector('[data-player-prop-watchlist]');
+  if (!container) return;
+
+  const props = getUpcomingPlayerProps();
+
+  if (props.length === 0) {
+    container.innerHTML = '<p class="empty-note">No model-only player props are on the watchlist right now.</p>';
+    return;
+  }
+
+  container.innerHTML = props.map((prop) => `
+    <article class="prop-watch-card">
+      <div class="card-topline">
+        <span class="pill model-only-pill">Model only</span>
+        <span class="sub-cell">${formatKickoff(prop.kickoff_time_aest)}</span>
+      </div>
+      <p class="match-name">${prop.match_name}</p>
+      <h3>${prop.player}: ${prop.market}</h3>
+      <dl>
+        <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
+        <div><dt>Market Odds</dt><dd>Not shown</dd></div>
+        <div><dt>Book</dt><dd>Not confirmed</dd></div>
+        <div><dt>Status</dt><dd>Watch only</dd></div>
+      </dl>
+      <p class="source-note">${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
     </article>
   `).join('');
 }
@@ -488,7 +557,6 @@ function renderFixturePanels() {
                 <span class="pill">${market.au_bookie}</span>
               </div>
               <h3>${market.target_selection}</h3>
-              <p class="source-note">Price source: ${market.odds_refresh_status === 'confirmed_rendered_site' ? 'Book site confirmation' : 'Odds API'}</p>
               <dl>
                 <div><dt>Type</dt><dd>${plainMarketNames[market.market_matrix] || market.market_matrix}</dd></div>
                 <div><dt>Odds</dt><dd>$${market.current_odds.toFixed(2)}</dd></div>
@@ -570,7 +638,7 @@ function renderCompletedGames() {
       <tr>
         <td>${fixture.match_name}</td>
         <td>${formatKickoff(fixture.kickoff_time_aest)}</td>
-        <td><span class="primary-cell">${freshness.label}</span><span class="sub-cell">${fixture.odds_refresh_note || 'No refresh note saved.'}</span></td>
+        <td><span class="primary-cell">${freshness.label}</span><span class="sub-cell">${freshness.detail}</span></td>
         <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${plainMarketNames[bestOption.market_matrix] || bestOption.market_matrix} | ${bestOption.au_bookie} | $${bestOption.current_odds.toFixed(2)}</span>` : '-'}</td>
         <td>${bestOption ? `<span class="qi-badge ${metricClass(bestOption.metrics.qi)}">${bestOption.metrics.qi}</span>` : '-'}</td>
       </tr>
@@ -681,12 +749,12 @@ function clvClass(bet) {
 
 function formatClosingDetail(bet) {
   if (bet.closing_status === 'missing_fresh_close') {
-    return `<span class="sub-cell warning-text">${bet.estimated_closing_source || bet.closing_source || 'No confirmed fresh close was captured.'}</span>`;
+    return '<span class="sub-cell warning-text">No confirmed live price was captured in the final 30 minutes before kickoff.</span>';
   }
 
-  if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture from Odds API inside 2 minutes before kickoff</span>';
+  if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture a live price in the final 30 minutes before kickoff</span>';
 
-  return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} AEST${bet.closing_source ? ` | ${bet.closing_source}` : ''}</span>`;
+  return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} AEST | Confirmed live price before kickoff</span>`;
 }
 
 function formatBetResult(bet) {
@@ -733,6 +801,7 @@ function bindRefreshOdds() {
     document.querySelector('[data-app-error]').textContent = '';
     await loadDataset({ bustCache: true });
     await loadBetHistory({ bustCache: true });
+    await loadPlayerPropWatchlist({ bustCache: true });
 
     render();
 
@@ -763,6 +832,7 @@ function render() {
   renderSourceTable();
   renderSummary();
   renderHighValueBets();
+  renderPlayerPropWatchlist();
   renderMatchTabs();
   renderFilters();
   renderSelectedMarketTitle();
@@ -772,7 +842,7 @@ function render() {
   renderBetHistory();
 }
 
-Promise.all([loadDataset(), loadBetHistory()])
+Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
   .then(() => {
     window.betmateAppReady = true;
     document.documentElement.dataset.betmateAppReady = 'true';

@@ -5,7 +5,7 @@ const DATA_PATH = new URL('../data/weekend_payload.json', import.meta.url);
 const HISTORY_PATH = new URL('../data/bet_history.json', import.meta.url);
 const EMBEDDED_HISTORY_PATH = new URL('../src/embeddedBetHistory.js', import.meta.url);
 const MIN_TRACKED_QI = 70;
-const CLOSING_WINDOW_MS = 2 * 60 * 1000;
+const CLOSING_WINDOW_MS = 30 * 60 * 1000;
 
 const TEAM_ALIASES = new Map([
   ['usa', 'united states'],
@@ -192,7 +192,7 @@ async function main() {
       if (freshClose && entry.closing_odds === null) {
         entry.closing_odds = currentOdds;
         entry.closing_captured_at = freshClose.checkedAt.toISOString();
-        entry.closing_source = `Confirmed Odds API check ${freshClose.minutesBeforeKickoff} min before kickoff`;
+        entry.closing_source = `Confirmed live check ${freshClose.minutesBeforeKickoff} min before kickoff`;
         entry.closing_status = 'confirmed';
         entry.clv_percent = clvPercent(entry.opening_odds, entry.closing_odds);
         entry.estimated_closing_odds = null;
@@ -200,7 +200,7 @@ async function main() {
         entry.estimated_closing_source = null;
       } else if (now >= kickoff && entry.closing_odds === null) {
         entry.closing_status = 'missing_fresh_close';
-        entry.closing_source = 'No confirmed Odds API check inside 2 minutes before kickoff';
+        entry.closing_source = 'No confirmed live check in the final 30 minutes before kickoff';
         entry.clv_percent = null;
         entry.estimated_closing_odds = currentOdds;
         entry.estimated_clv_percent = clvPercent(entry.opening_odds, currentOdds);

@@ -18,7 +18,7 @@
     "current_model_price": 1.42,
     "current_ev": 19.01,
     "current_qi": 93,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -42,7 +42,7 @@
     "current_model_price": 1.65,
     "current_ev": -5.45,
     "current_qi": 22,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -72,7 +72,7 @@
     "current_model_price": 14.49,
     "current_ev": 44.93,
     "current_qi": 85,
-    "last_seen_at": "2026-06-13T11:06:07.179Z"
+    "last_seen_at": "2026-06-13T11:22:10.456Z"
   },
   {
     "bet_id": "f86bb9cf57760a25",
@@ -99,7 +99,7 @@
     "current_model_price": 34.28,
     "current_ev": 19.6,
     "current_qi": 78,
-    "last_seen_at": "2026-06-13T11:06:07.179Z"
+    "last_seen_at": "2026-06-13T11:22:10.456Z"
   },
   {
     "bet_id": "cb0529d26ebe1a93",
@@ -120,7 +120,7 @@
     "current_model_price": 10.82,
     "current_ev": 20.15,
     "current_qi": 80,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -144,7 +144,7 @@
     "current_model_price": 24.71,
     "current_ev": 5.22,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -168,7 +168,7 @@
     "current_model_price": 5.25,
     "current_ev": 4.76,
     "current_qi": 70,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -192,7 +192,7 @@
     "current_model_price": 11.44,
     "current_ev": -3.85,
     "current_qi": 32,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -216,8 +216,8 @@
     "current_model_price": 2.6,
     "current_ev": 44.62,
     "current_qi": 95,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
-    "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
+    "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 3.76,
     "estimated_clv_percent": 0,
@@ -246,8 +246,8 @@
     "current_model_price": 1.78,
     "current_ev": 12.36,
     "current_qi": 86,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
-    "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
+    "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 2,
     "estimated_clv_percent": 0,
@@ -276,8 +276,8 @@
     "current_model_price": 1.78,
     "current_ev": 9.55,
     "current_qi": 83,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
-    "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
+    "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 1.95,
     "estimated_clv_percent": 0,
@@ -306,8 +306,8 @@
     "current_model_price": 5.8,
     "current_ev": 12.07,
     "current_qi": 79,
-    "last_seen_at": "2026-06-13T11:06:07.179Z",
-    "closing_source": "No confirmed Odds API check inside 2 minutes before kickoff",
+    "last_seen_at": "2026-06-13T11:22:10.456Z",
+    "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 6.5,
     "estimated_clv_percent": 0,

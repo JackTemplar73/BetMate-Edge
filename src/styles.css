@@ -160,29 +160,6 @@ h3 {
   line-height: 1.15;
 }
 
-.prop-source-strip {
-  display: flex;
-  justify-content: space-between;
-  gap: 16px;
-  align-items: center;
-  margin-bottom: 20px;
-  padding: 14px 16px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: var(--panel);
-}
-
-.prop-source-strip span {
-  color: var(--muted);
-  font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
-}
-
-.prop-source-strip strong {
-  text-align: right;
-}
-
 .qi-legend {
   display: flex;
   flex-wrap: wrap;
@@ -391,18 +368,21 @@ h3 {
   border-radius: 8px;
 }
 
-.high-value-section {
+.high-value-section,
+.player-prop-watchlist {
   margin-bottom: 22px;
 }
 
-.high-value-list {
+.high-value-list,
+.prop-watchlist-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 10px;
   margin-top: 16px;
 }
 
-.high-value-card {
+.high-value-card,
+.prop-watch-card {
   display: flex;
   flex-direction: column;
   min-height: 220px;
@@ -412,11 +392,13 @@ h3 {
   background: var(--panel-2);
 }
 
-.high-value-card h3 {
+.high-value-card h3,
+.prop-watch-card h3 {
   margin-bottom: 8px;
 }
 
-.high-value-card .match-name {
+.high-value-card .match-name,
+.prop-watch-card .match-name {
   margin-bottom: 8px;
   color: var(--text);
   font-size: 15px;
@@ -424,9 +406,20 @@ h3 {
 }
 
 .high-value-card p,
+.prop-watch-card p,
 .empty-note {
   margin: 0 0 14px;
   color: var(--muted);
+}
+
+.prop-watch-card dl {
+  margin-top: auto;
+}
+
+.model-only-pill {
+  color: var(--gold);
+  border: 1px solid rgba(245, 188, 66, 0.34);
+  background: rgba(245, 188, 66, 0.12);
 }
 
 .source-note {
@@ -769,15 +762,6 @@ dd {
     grid-template-columns: 1fr;
   }
 
-  .prop-source-strip {
-    display: block;
-  }
-
-  .prop-source-strip strong {
-    display: block;
-    margin-top: 6px;
-    text-align: left;
-  }
 }
 
 @media (max-width: 560px) {
