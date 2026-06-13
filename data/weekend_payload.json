@@ -236,13 +236,14 @@
         "odds_updated_at": "2026-06-12T23:03:17.291Z"
       }
     ],
-    "referee_last_checked": "2026-06-12T23:37:57.285Z",
-    "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
-    "referee_status": "provided",
-    "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
+    "referee_last_checked": "2026-06-13T00:39:33.380Z",
+    "referee_check_sources": "Current match-official report plus scheduled ESPN/FIFA structured feed fallback.",
+    "referee_status": "verified",
+    "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
     "odds_last_checked": "2026-06-12T23:37:57.285Z",
     "odds_refresh_cadence": "manual",
-    "odds_refresh_note": "Matched Odds API event c12986f447a515fbe641addd786dbb24."
+    "odds_refresh_note": "Matched Odds API event c12986f447a515fbe641addd786dbb24.",
+    "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries"
   },
   {
     "match_name": "Qatar vs Switzerland",
