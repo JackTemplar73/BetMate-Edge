@@ -620,14 +620,14 @@ function formatClosingPrice(bet) {
 
 function formatHistoryClv(bet) {
   if (Number.isFinite(Number(bet.clv_percent))) {
-    return formatClv(bet.clv_percent);
+    return `<span class="primary-cell">${formatClv(bet.clv_percent)}</span><span class="sub-cell confirmed-text">Confirmed closing line</span>`;
   }
 
   if (Number.isFinite(Number(bet.estimated_clv_percent))) {
-    return `Est. ${formatClv(bet.estimated_clv_percent)}`;
+    return `<span class="primary-cell">Estimated CLV ${formatClv(bet.estimated_clv_percent)}</span><span class="sub-cell warning-text">Using latest saved price before kickoff</span>`;
   }
 
-  return '-';
+  return '<span class="primary-cell">Pending</span><span class="sub-cell">Waiting for closing line</span>';
 }
 
 function priceDirection(bet) {
