@@ -716,7 +716,21 @@ function renderPlayerPropWatchlist() {
     return;
   }
 
-  container.innerHTML = props.map((prop) => renderPlayerPropCard(prop)).join('');
+  const categoryCounts = props.reduce((acc, prop) => {
+    const category = prop.category || 'Player Prop';
+    acc[category] = (acc[category] || 0) + 1;
+    return acc;
+  }, {});
+  const livePriceCount = props.reduce((sum, prop) => sum + (prop.live_prices?.length || 0), 0);
+
+  container.innerHTML = `
+    <div class="prop-summary-card">
+      <strong>${props.length} player props shown</strong>
+      <span>${Object.entries(categoryCounts).map(([category, count]) => `${category}: ${count}`).join(' | ')}</span>
+      <span>Sportsbet/TAB live prices found: ${livePriceCount}</span>
+    </div>
+    ${props.map((prop) => renderPlayerPropCard(prop)).join('')}
+  `;
 }
 
 function renderFixtureModelBlock(fixture) {
