@@ -34,7 +34,7 @@ const ESPN_LEAGUES = [
 ];
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
-const CLOSING_WINDOW_MS = 6 * 60 * 1000;
+const CLOSING_WINDOW_MS = 2 * 60 * 1000;
 
 const MARKET_MAP = {
   h2h: ['Full Match Model', 'Moneyline'],
@@ -374,7 +374,7 @@ async function syncBetHistory(dataset, now = getNow()) {
         entry.clv_percent = clvPercent(entry.opening_odds, entry.closing_odds);
       } else if (now >= kickoff && entry.closing_odds === null) {
         entry.closing_status = 'missing_fresh_close';
-        entry.closing_source = 'No confirmed Odds API check inside 6 minutes before kickoff';
+        entry.closing_source = 'No confirmed Odds API check inside 2 minutes before kickoff';
         entry.clv_percent = null;
       }
 
