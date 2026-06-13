@@ -31,6 +31,77 @@ function runVectorCalculations(marketItem) {
   };
 }
 
+function buildBetQualityFromPrices(truePriceValue, currentOddsValue) {
+  const truePrice = Number.parseFloat(truePriceValue);
+  const currentOdds = Number.parseFloat(currentOddsValue);
+
+  if (!Number.isFinite(truePrice) || !Number.isFinite(currentOdds) || truePrice <= 1 || currentOdds <= 1) {
+    return {
+      model_probability: null,
+      book_probability: null,
+      edge: null,
+      risk: 'No price',
+      grade: 'Watch',
+      grade_rank: 0
+    };
+  }
+
+  const modelProbability = 100 / truePrice;
+  const bookProbability = 100 / currentOdds;
+  const edge = modelProbability - bookProbability;
+  const ev = ((currentOdds / truePrice) - 1) * 100;
+
+  let risk = 'Low';
+  if (currentOdds >= 8) risk = 'Very high';
+  else if (currentOdds >= 4) risk = 'High';
+  else if (currentOdds >= 2.2) risk = 'Medium';
+
+  let grade = 'No bet';
+  let gradeRank = 0;
+
+  if (ev > 0 && edge >= 7 && modelProbability >= 55 && currentOdds <= 3.25) {
+    grade = 'A+';
+    gradeRank = 5;
+  } else if (ev > 0 && edge >= 5 && modelProbability >= 45 && currentOdds <= 4) {
+    grade = 'A';
+    gradeRank = 4;
+  } else if (ev > 0 && edge >= 3.5 && modelProbability >= 35 && currentOdds <= 6) {
+    grade = 'B';
+    gradeRank = 3;
+  } else if (ev > 0 && edge >= 2) {
+    grade = currentOdds >= 8 ? 'Speculative' : 'C';
+    gradeRank = currentOdds >= 8 ? 1 : 2;
+  }
+
+  return {
+    model_probability: Number.parseFloat(modelProbability.toFixed(2)),
+    book_probability: Number.parseFloat(bookProbability.toFixed(2)),
+    edge: Number.parseFloat(edge.toFixed(2)),
+    risk,
+    grade,
+    grade_rank: gradeRank
+  };
+}
+
+function buildBetQuality(marketItem) {
+  return buildBetQualityFromPrices(marketItem.true_price, marketItem.current_odds);
+}
+
+function compareBetQuality(a, b) {
+  const aQuality = a.quality || buildBetQuality(a);
+  const bQuality = b.quality || buildBetQuality(b);
+  const gradeDiff = Number(bQuality.grade_rank || 0) - Number(aQuality.grade_rank || 0);
+  if (gradeDiff !== 0) return gradeDiff;
+
+  const edgeDiff = Number(bQuality.edge || 0) - Number(aQuality.edge || 0);
+  if (edgeDiff !== 0) return edgeDiff;
+
+  const qiDiff = Number(b.metrics?.qi || b.qi || 0) - Number(a.metrics?.qi || a.qi || 0);
+  if (qiDiff !== 0) return qiDiff;
+
+  return Number(b.metrics?.ev || b.ev || 0) - Number(a.metrics?.ev || a.ev || 0);
+}
+
 function flattenMarkets(dataset) {
   return dataset.flatMap((fixture, fixtureIndex) =>
     fixture.markets
@@ -48,10 +119,14 @@ function flattenMarkets(dataset) {
         market_index: marketIndex,
         match_name: fixture.match_name,
         kickoff_time_aest: fixture.kickoff_time_aest,
-        metrics: runVectorCalculations(market)
+        metrics: runVectorCalculations(market),
+        quality: buildBetQuality(market)
       }))
   );
 }
 
 window.runVectorCalculations = runVectorCalculations;
+window.buildBetQuality = buildBetQuality;
+window.buildBetQualityFromPrices = buildBetQualityFromPrices;
+window.compareBetQuality = compareBetQuality;
 window.flattenMarkets = flattenMarkets;

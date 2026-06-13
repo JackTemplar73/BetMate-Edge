@@ -493,7 +493,7 @@ h3 {
 }
 
 .sportsbook-scan-table table {
-  min-width: 980px;
+  min-width: 1280px;
 }
 
 .match-props-block {
@@ -645,7 +645,7 @@ h3 {
 
 table {
   width: 100%;
-  min-width: 900px;
+  min-width: 1180px;
   border-collapse: collapse;
 }
 
@@ -694,6 +694,8 @@ td {
 }
 
 .qi-badge,
+.grade-badge,
+.risk-pill,
 .pill,
 .official {
   display: inline-flex;
@@ -745,6 +747,47 @@ td {
   background: var(--panel-2);
   color: var(--muted);
   border-color: var(--border);
+}
+
+.grade-badge,
+.risk-pill {
+  min-width: 44px;
+  padding: 0 9px;
+  font-size: 12px;
+  font-weight: 950;
+  border: 1px solid var(--border);
+}
+
+.grade-a,
+.grade-a- {
+  background: rgba(61, 220, 151, 0.2);
+  color: var(--green);
+  border-color: rgba(61, 220, 151, 0.42);
+}
+
+.grade-b {
+  background: rgba(245, 188, 66, 0.18);
+  color: var(--gold);
+  border-color: rgba(245, 188, 66, 0.36);
+}
+
+.grade-c {
+  background: rgba(217, 108, 69, 0.16);
+  color: #f59e0b;
+  border-color: rgba(217, 108, 69, 0.34);
+}
+
+.grade-speculative {
+  background: rgba(167, 139, 250, 0.16);
+  color: var(--purple);
+  border-color: rgba(167, 139, 250, 0.34);
+}
+
+.grade-no-bet,
+.grade-watch,
+.risk-pill {
+  background: rgba(185, 173, 145, 0.1);
+  color: var(--muted);
 }
 
 .pill,
