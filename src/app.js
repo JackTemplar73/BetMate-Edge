@@ -659,7 +659,9 @@ function getUpcomingPlayerProps() {
     .sort((a, b) => {
       const timeDiff = parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest);
       if (timeDiff !== 0) return timeDiff;
-      return `${a.player} ${a.market}`.localeCompare(`${b.player} ${b.market}`);
+      const probDiff = Number(b.model_probability || 0) - Number(a.model_probability || 0);
+      if (probDiff !== 0) return probDiff;
+      return `${a.category || ''} ${a.player} ${a.market}`.localeCompare(`${b.category || ''} ${b.player} ${b.market}`);
     });
 }
 
@@ -680,8 +682,10 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
       ${showMatch ? `<p class="match-name">${prop.match_name}</p>` : ''}
       <h3>${prop.player}: ${prop.market}</h3>
       <dl>
+        <div><dt>Category</dt><dd>${prop.category || 'Player Prop'}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
-        <div><dt>Model Prob</dt><dd>${formatModelOnlyProb(prop.model_price)}</dd></div>
+        <div><dt>Model Prob</dt><dd>${Number.isFinite(Number(prop.model_probability)) ? `${Number(prop.model_probability).toFixed(1)}%` : formatModelOnlyProb(prop.model_price)}</dd></div>
+        <div><dt>Price Check</dt><dd>Sportsbet/TAB</dd></div>
       </dl>
       ${hasLivePrice ? `
         <div class="prop-price-list">
@@ -696,7 +700,7 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
           `).join('')}
         </div>
       ` : ''}
-      <p class="source-note">${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
+      <p class="source-note">${hasLivePrice ? 'Live Sportsbet/TAB price found and compared to model.' : 'No Sportsbet/TAB live price returned by OddsAPI yet. '} ${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
     </article>
   `;
 }
