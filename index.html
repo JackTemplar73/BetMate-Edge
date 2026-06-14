@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-tabs-v4">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-qiv2-filters-v1">
 </head>
 <body>
   <main class="app-shell">
@@ -81,6 +81,12 @@
           <h2>Player Props</h2>
           <p>Highest-rated props for goals, shots, shots on target, assists and cards. Only props with QI 60+ are shown.</p>
         </div>
+        <div class="sort-controls" aria-label="Sort player props">
+          <button class="icon-button active" data-section-sort="props" data-sort-value="qi" title="Sort by QI">QI</button>
+          <button class="icon-button" data-section-sort="props" data-sort-value="ev" title="Sort by EV">EV</button>
+          <button class="icon-button" data-section-sort="props" data-sort-value="edge" title="Sort by Edge">Edge</button>
+          <button class="icon-button" data-section-sort="props" data-sort-value="date" title="Sort by date">Date</button>
+        </div>
       </div>
       <div class="prop-watchlist-grid" data-player-prop-watchlist></div>
     </section>
@@ -89,7 +95,6 @@
       <div class="section-heading">
         <div>
           <h2>AU Bookie Market Scan</h2>
-          <p>Sportsbet, TAB, PointsBet, Neds and Bet365 markets matched to our model price. Sort by QI, EV, Edge or Date.</p>
         </div>
         <div class="sort-controls" aria-label="Sort AU bookie market scan">
           <button class="icon-button active" data-section-sort="scan" data-sort-value="qi" title="Sort by QI">QI</button>
@@ -134,6 +139,7 @@
           <thead>
             <tr>
               <th>QI</th>
+              <th>Old QI</th>
               <th>Option</th>
               <th>Odds</th>
               <th>Model Price</th>
@@ -230,10 +236,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-tabs-v4"></script>
-  <script src="./src/embeddedData.js?v=20260614-tabs-v4"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-tabs-v4"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-tabs-v4"></script>
-  <script src="./src/app.js?v=20260614-tabs-v4"></script>
+  <script src="./src/calculations.js?v=20260614-qiv2-filters-v1"></script>
+  <script src="./src/embeddedData.js?v=20260614-qiv2-filters-v1"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-qiv2-filters-v1"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-qiv2-filters-v1"></script>
+  <script src="./src/app.js?v=20260614-qiv2-filters-v1"></script>
 </body>
 </html>

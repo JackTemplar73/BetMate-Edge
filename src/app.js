@@ -6,6 +6,9 @@ const state = {
   sortMode: 'qi',
   highValueSortMode: 'qi',
   scanSortMode: 'qi',
+  playerPropSortMode: 'qi',
+  markovMinProbability: 0,
+  markovMaxFairPrice: Infinity,
   lastRefresh: null,
   dataSource: 'Not loaded',
   selectedMatchName: null,
@@ -260,6 +263,7 @@ function getFilteredMarkets() {
 }
 
 function sortValue(row, mode) {
+  if (mode === 'date') return -parseKickoff(row.kickoff_time_aest).getTime();
   if (mode === 'edge') return Number(row.quality?.edge || 0);
   if (mode === 'ev') return Number(row.metrics?.ev ?? row.ev ?? 0);
   return Number(row.metrics?.qi ?? row.qi ?? 0);
@@ -300,6 +304,16 @@ function hasMarketOdds(market) {
 
 function formatQi(market) {
   return hasModelPrice(market) && hasMarketOdds(market) ? market.metrics.qi : '-';
+}
+
+function formatQiBadge(value, label = 'QI') {
+  const numeric = Number(value);
+  return Number.isFinite(numeric) ? `${label} ${numeric}` : '-';
+}
+
+function formatOldQi(market) {
+  const oldQi = market.metrics?.price_qi ?? market.price_qi;
+  return Number.isFinite(Number(oldQi)) ? Number(oldQi) : '-';
 }
 
 function formatModelPrice(market) {
@@ -466,7 +480,11 @@ function renderViewTabs() {
 function renderSectionSortControls() {
   document.querySelectorAll('[data-section-sort]').forEach((button) => {
     const target = button.dataset.sectionSort;
-    const mode = target === 'scan' ? state.scanSortMode : state.highValueSortMode;
+    const mode = target === 'scan'
+      ? state.scanSortMode
+      : target === 'props'
+        ? state.playerPropSortMode
+        : state.highValueSortMode;
     button.classList.toggle('active', button.dataset.sortValue === mode);
   });
 }
@@ -528,13 +546,14 @@ function renderMarketsTable() {
   const rows = getFilteredMarkets();
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="10">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="11">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
     return;
   }
 
   tableBody.innerHTML = rows.map((market) => `
     <tr>
-      <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></td>
+      <td><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQiBadge(formatQi(market))}</span></td>
+      <td><span class="qi-badge ${metricClass(Number(formatOldQi(market)))}">${formatQiBadge(formatOldQi(market), 'Old QI')}</span></td>
       <td>
         <span class="primary-cell">${market.target_selection}</span>
         <span class="sub-cell">${market.match_name}</span>
@@ -578,6 +597,7 @@ function renderHighValueBets() {
         <div><dt>Book Prob</dt><dd>${formatBookProb(market)}</dd></div>
         <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
         <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
+        <div><dt>Old QI</dt><dd><span class="qi-badge ${metricClass(Number(formatOldQi(market)))}">${formatQiBadge(formatOldQi(market), 'Old QI')}</span></dd></div>
         <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
       </dl>
     </article>
@@ -606,6 +626,7 @@ function getCandidateRowsForFixtures(fixtures) {
       au_bookie: row.au_bookie || row.bookmaker,
       metrics: {
         qi: Number(row.qi),
+        price_qi: Number(row.price_qi),
         ev: Number(row.ev)
       },
       quality: row.quality,
@@ -742,21 +763,13 @@ function renderSportsbookScan() {
   }
 
   const topRows = rows.slice(0, 36);
-  const bookies = [...new Set(rows.map((row) => row.bookmaker).filter(Boolean))].sort();
-  const livePlayerPropRows = rows.filter((row) => String(row.oddsapi_market || '').startsWith('player_')).length;
-  const watchlistPropCount = getUpcomingPlayerProps().length;
-  const playerPropNote = livePlayerPropRows > 0
-    ? `${livePlayerPropRows} live player prop rows are included in this scan.`
-    : `${watchlistPropCount} model-only player props are on the watchlist, but no live AU bookie player-prop odds were returned by OddsAPI in this scan.`;
-
   container.innerHTML = `
-    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices from ${bookies.join(', ')}. Sorted by ${state.scanSortMode.toUpperCase()}.</div>
-    <p class="source-note">${playerPropNote}</p>
     <div class="sportsbook-scan-table">
       <table>
         <thead>
           <tr>
             <th>QI</th>
+            <th>Old QI</th>
             <th>Match</th>
             <th>Selection</th>
             <th>AU Bookie</th>
@@ -772,7 +785,8 @@ function renderSportsbookScan() {
         <tbody>
           ${topRows.map((row) => `
             <tr>
-              <td><span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></td>
+              <td><span class="qi-badge ${metricClass(Number(row.qi))}">${formatQiBadge(row.qi)}</span></td>
+              <td><span class="qi-badge ${metricClass(Number(row.price_qi))}">${formatQiBadge(row.price_qi, 'Old QI')}</span></td>
               <td><span class="primary-cell">${row.match_name}</span><span class="sub-cell">${formatKickoff(row.kickoff_time_aest)}</span></td>
               <td><span class="primary-cell">${row.selection}</span><span class="sub-cell">${row.market} | ${row.oddsapi_market}</span></td>
               <td><span class="pill">${row.bookmaker}</span></td>
@@ -822,6 +836,38 @@ function getPlayerPropPrices(prop) {
     .sort((a, b) => Number(b.qi || 0) - Number(a.qi || 0));
 }
 
+function getBestPlayerPropPrice(prop) {
+  return getPlayerPropPrices(prop)[0] || {};
+}
+
+function comparePlayerProps(a, b) {
+  if (state.playerPropSortMode === 'date') {
+    return dateSort(a, b) || comparePlayerPropsByQi(a, b);
+  }
+
+  if (state.playerPropSortMode === 'ev') {
+    const evDiff = Number(getBestPlayerPropPrice(b).ev || 0) - Number(getBestPlayerPropPrice(a).ev || 0);
+    if (evDiff !== 0) return evDiff;
+  }
+
+  if (state.playerPropSortMode === 'edge') {
+    const edgeA = Number(a.model_probability || 0) - (100 / Number(getBestPlayerPropPrice(a).current_odds || Infinity));
+    const edgeB = Number(b.model_probability || 0) - (100 / Number(getBestPlayerPropPrice(b).current_odds || Infinity));
+    const edgeDiff = edgeB - edgeA;
+    if (edgeDiff !== 0) return edgeDiff;
+  }
+
+  return comparePlayerPropsByQi(a, b);
+}
+
+function comparePlayerPropsByQi(a, b) {
+  const qiDiff = Number(getBestPlayerPropPrice(b).qi || 0) - Number(getBestPlayerPropPrice(a).qi || 0);
+  if (qiDiff !== 0) return qiDiff;
+  const probDiff = Number(b.model_probability || 0) - Number(a.model_probability || 0);
+  if (probDiff !== 0) return probDiff;
+  return parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest);
+}
+
 function getUpcomingPlayerProps() {
   const upcomingMatches = new Set(getUpcomingFixtures().map((fixture) => fixture.match_name));
   const now = new Date();
@@ -830,15 +876,7 @@ function getUpcomingPlayerProps() {
     .filter((prop) => upcomingMatches.has(prop.match_name))
     .filter((prop) => parseKickoff(prop.kickoff_time_aest) > now)
     .filter((prop) => getPlayerPropPrices(prop).length > 0)
-    .sort((a, b) => {
-      const timeDiff = parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest);
-      if (timeDiff !== 0) return timeDiff;
-      const qiDiff = Number(getPlayerPropPrices(b)[0]?.qi || 0) - Number(getPlayerPropPrices(a)[0]?.qi || 0);
-      if (qiDiff !== 0) return qiDiff;
-      const probDiff = Number(b.model_probability || 0) - Number(a.model_probability || 0);
-      if (probDiff !== 0) return probDiff;
-      return `${a.category || ''} ${a.player} ${a.market}`.localeCompare(`${b.category || ''} ${b.player} ${b.market}`);
-    });
+    .sort(comparePlayerProps);
 }
 
 function getPlayerPropsForMatch(matchName) {
@@ -898,22 +936,35 @@ function renderPlayerPropWatchlist() {
     acc[category] = (acc[category] || 0) + 1;
     return acc;
   }, {});
-  const livePriceCount = props.reduce((sum, prop) => sum + getPlayerPropPrices(prop).length, 0);
-
   container.innerHTML = `
     <div class="prop-summary-card">
       <strong>${props.length} player props shown</strong>
       <span>${Object.entries(categoryCounts).map(([category, count]) => `${category}: ${count}`).join(' | ')}</span>
-      <span>Only player props with QI 60+ are shown. Live prices found: ${livePriceCount}</span>
     </div>
     ${props.map((prop) => renderPlayerPropCard(prop)).join('')}
   `;
+}
+
+function getFilteredMarkovMarkets(markovMarkets) {
+  return markovMarkets.filter((item) => {
+    const probability = Number(item.probability);
+    const fairPrice = Number(item.fair_price);
+    const probabilityOk = !Number.isFinite(state.markovMinProbability) || probability >= state.markovMinProbability;
+    const fairPriceOk = !Number.isFinite(state.markovMaxFairPrice) || fairPrice <= state.markovMaxFairPrice;
+    return probabilityOk && fairPriceOk;
+  });
+}
+
+function renderMarkovFilterOption(value, label, currentValue) {
+  const selected = String(value) === String(currentValue) || (value === 'all' && !Number.isFinite(currentValue));
+  return `<option value="${value}" ${selected ? 'selected' : ''}>${label}</option>`;
 }
 
 function renderFixtureModelBlock(fixture) {
   const totals = fixture.model_totals_25;
   const exactScores = fixture.exact_score_model || [];
   const markovMarkets = fixture.markov_market_model || [];
+  const filteredMarkovMarkets = getFilteredMarkovMarkets(markovMarkets);
   const scan = fixture.market_scan || {};
   const scanRows = (scan.rows || [])
     .filter((row) => !isConfirmedBenchPlayerPropRow(fixture, row))
@@ -961,8 +1012,30 @@ function renderFixtureModelBlock(fixture) {
     ? `
         <article class="model-insight-card markov-market-card">
           <h3>Markov Market Model</h3>
+          <div class="markov-filter-row">
+            <label>
+              <span>Prob %</span>
+              <select data-markov-prob-filter>
+                ${renderMarkovFilterOption('0', 'All', state.markovMinProbability)}
+                ${renderMarkovFilterOption('50', '50%+', state.markovMinProbability)}
+                ${renderMarkovFilterOption('55', '55%+', state.markovMinProbability)}
+                ${renderMarkovFilterOption('60', '60%+', state.markovMinProbability)}
+                ${renderMarkovFilterOption('70', '70%+', state.markovMinProbability)}
+              </select>
+            </label>
+            <label>
+              <span>Fair Price</span>
+              <select data-markov-fair-filter>
+                ${renderMarkovFilterOption('all', 'All', state.markovMaxFairPrice)}
+                ${renderMarkovFilterOption('1.50', '$1.50 or shorter', state.markovMaxFairPrice)}
+                ${renderMarkovFilterOption('2.00', '$2.00 or shorter', state.markovMaxFairPrice)}
+                ${renderMarkovFilterOption('3.00', '$3.00 or shorter', state.markovMaxFairPrice)}
+                ${renderMarkovFilterOption('5.00', '$5.00 or shorter', state.markovMaxFairPrice)}
+              </select>
+            </label>
+          </div>
           <div class="markov-market-list">
-            ${markovMarkets.map((item) => `
+            ${filteredMarkovMarkets.length === 0 ? '<p class="empty-note markov-empty">No Markov selections match these filters.</p>' : filteredMarkovMarkets.map((item) => `
               <div>
                 <span>
                   <strong>${item.selection}</strong>
@@ -980,7 +1053,6 @@ function renderFixtureModelBlock(fixture) {
     ? `
         <article class="model-insight-card sportsbet-scan-card">
           <h3>AU Bookie Market Scan</h3>
-          <p class="source-note">Live AU bookie markets found through the OddsAPI event scan and matched to our model prices.</p>
           <div class="fixture-scan-list">
             ${scanRows.map((row) => `
               <div>
@@ -989,7 +1061,7 @@ function renderFixtureModelBlock(fixture) {
                   <em>${row.au_bookie || 'AU bookie'} | ${row.market} | ${row.oddsapi_market}</em>
                 </span>
                 <span>
-                  <b><span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></b>
+                  <b><span class="qi-badge ${metricClass(Number(row.qi))}">${formatQiBadge(row.qi)}</span></b>
                   <em>${row.au_bookie || 'AU bookie'} | $${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | Edge ${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts | ${row.quality.risk} risk</em>
                 </span>
               </div>
@@ -1149,6 +1221,7 @@ function renderFixturePanels() {
                 <div><dt>Book Prob</dt><dd>${formatBookProb(market)}</dd></div>
                 <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
                 <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
+                <div><dt>Old QI</dt><dd><span class="qi-badge ${metricClass(Number(formatOldQi(market)))}">${formatQiBadge(formatOldQi(market), 'Old QI')}</span></dd></div>
                 <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
               </dl>
             </article>
@@ -1199,8 +1272,8 @@ function renderBetHistory() {
       <td>${formatClosingPrice(bet)}${formatClosingDetail(bet)}</td>
       <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
       <td>${formatBetResult(bet)}</td>
-      <td><span class="qi-badge ${metricClass(Number(bet.opening_qi))}">${Number.isFinite(Number(bet.opening_qi)) ? bet.opening_qi : '-'}</span></td>
-      <td><span class="qi-badge ${metricClass(bet.current_qi)}">${Number.isFinite(Number(bet.current_qi)) ? bet.current_qi : '-'}</span></td>
+      <td><span class="qi-badge ${metricClass(Number(bet.opening_qi))}">${formatQiBadge(bet.opening_qi)}</span></td>
+      <td><span class="qi-badge ${metricClass(bet.current_qi)}">${formatQiBadge(bet.current_qi)}</span></td>
     </tr>
   `).join('');
 }
@@ -1220,13 +1293,14 @@ function renderHistoryResultSummary(rows) {
   const won = settled.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase())).length;
   const lost = settled.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase())).length;
   const pending = rows.length - settled.length;
+  const profitUnits = settled.reduce((total, bet) => total + calculateProfitUnits(bet), 0);
   const latestSettled = [...settled].sort((a, b) => Date.parse(b.settled_at || '') - Date.parse(a.settled_at || ''))[0];
 
   container.innerHTML = `
     <article>
       <span>Settled</span>
       <strong>${settled.length}</strong>
-      <small>${won} won / ${lost} lost${pending ? ` / ${pending} pending` : ''}</small>
+      <small>${won} won / ${lost} lost${pending ? ` / ${pending} pending` : ''} / ${formatProfitUnits(profitUnits)}</small>
     </article>
     <article>
       <span>Latest Result</span>
@@ -1234,6 +1308,21 @@ function renderHistoryResultSummary(rows) {
       <small>${latestSettled ? `${latestSettled.target_selection}: ${formatResultLabel(latestSettled.result_status)}` : 'No settled result yet'}</small>
     </article>
   `;
+}
+
+function calculateProfitUnits(bet) {
+  const status = String(bet.result_status || '').toLowerCase();
+  if (['lost', 'loss'].includes(status)) return -1;
+  if (['push', 'void'].includes(status)) return 0;
+  if (!['won', 'win'].includes(status)) return 0;
+
+  const settledOdds = Number(bet.closing_odds || bet.current_odds || bet.opening_odds);
+  return Number.isFinite(settledOdds) && settledOdds > 1 ? settledOdds - 1 : 0;
+}
+
+function formatProfitUnits(value) {
+  const prefix = value > 0 ? '+' : '';
+  return `${prefix}${value.toFixed(2)} units`;
 }
 
 function getSettledBets() {
@@ -1295,7 +1384,7 @@ function renderCompletedGames() {
         <td>${formatKickoff(fixture.kickoff_time_aest)}</td>
         <td>${formatCompletedStatus(fixture)}</td>
         <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${plainMarketNames[bestOption.market_matrix] || bestOption.market_matrix} | ${bestOption.au_bookie} | ${formatOdds(bestOption)}</span>` : '-'}</td>
-        <td>${bestOption ? `<span class="qi-badge ${metricClass(bestOption.metrics.qi)}">${bestOption.metrics.qi}</span>` : '-'}</td>
+        <td>${bestOption ? `<span class="qi-badge ${metricClass(bestOption.metrics.qi)}">${formatQiBadge(bestOption.metrics.qi)}</span>` : '-'}</td>
       </tr>
     `;
   }).join('');
@@ -1519,6 +1608,13 @@ function bindSectionSortControls() {
   document.querySelectorAll('[data-section-sort]').forEach((button) => {
     button.addEventListener('click', () => {
       const target = button.dataset.sectionSort;
+      if (target === 'props') {
+        state.playerPropSortMode = button.dataset.sortValue;
+        renderSectionSortControls();
+        renderPlayerPropWatchlist();
+        return;
+      }
+
       if (target === 'scan') {
         state.scanSortMode = button.dataset.sortValue;
         renderSectionSortControls();
@@ -1530,6 +1626,21 @@ function bindSectionSortControls() {
       renderSectionSortControls();
       renderHighValueBets();
     });
+  });
+}
+
+function bindMarkovFilters() {
+  document.addEventListener('change', (event) => {
+    if (event.target.matches('[data-markov-prob-filter]')) {
+      state.markovMinProbability = Number(event.target.value) || 0;
+      renderFixturePanels();
+      return;
+    }
+
+    if (event.target.matches('[data-markov-fair-filter]')) {
+      state.markovMaxFairPrice = event.target.value === 'all' ? Infinity : Number(event.target.value);
+      renderFixturePanels();
+    }
   });
 }
 
@@ -1593,6 +1704,7 @@ Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
     document.querySelector('[data-app-error]').textContent = '';
     bindSortControls();
     bindSectionSortControls();
+    bindMarkovFilters();
     bindRefreshOdds();
     bindViewTabs();
     render();
