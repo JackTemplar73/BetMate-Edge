@@ -214,6 +214,7 @@ async function main() {
 
   const nextHistory = [...byId.values()]
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
+    .filter((entry) => Number(entry.current_qi) >= MIN_TRACKED_QI)
     .filter((entry) => activeBetIds.has(entry.bet_id))
     .sort((a, b) => {
       const aKickoff = parseAest(a.kickoff_time_aest);
