@@ -770,6 +770,10 @@ function renderSportsbookScan() {
   const container = document.querySelector('[data-sportsbook-scan]');
   if (!container) return;
 
+  if (state.scanSortMode === 'edge') {
+    state.scanSortMode = 'qi';
+  }
+
   const rows = getSportsbookScanRows().sort(compareSelectionRows(state.scanSortMode));
 
   if (rows.length === 0) {
@@ -791,7 +795,6 @@ function renderSportsbookScan() {
             <th>Model Price</th>
             <th>Model Prob</th>
             <th>Book Prob</th>
-            <th>Edge</th>
             <th>EV</th>
             <th>Risk</th>
           </tr>
@@ -807,7 +810,6 @@ function renderSportsbookScan() {
               <td>$${Number(row.model_price).toFixed(2)}</td>
               <td>${Number(row.model_probability).toFixed(1)}%</td>
               <td>${Number(row.quality.book_probability).toFixed(1)}%</td>
-              <td class="${Number(row.quality.edge) >= 0 ? 'positive' : 'negative'}">${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts</td>
               <td class="${Number(row.ev) >= 0 ? 'positive' : 'negative'}">${Number(row.ev) > 0 ? '+' : ''}${Number(row.ev).toFixed(2)}%</td>
               <td>${formatRiskValue(row.quality.risk)}</td>
             </tr>
@@ -1075,7 +1077,7 @@ function renderFixtureModelBlock(fixture) {
                 </span>
                 <span>
                   <b><span class="qi-badge ${metricClass(Number(row.qi))}">${formatQiBadge(row.qi)}</span></b>
-                  <em>${row.au_bookie || 'AU bookie'} | $${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | Edge ${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts | ${row.quality.risk} risk</em>
+                  <em>${row.au_bookie || 'AU bookie'} | $${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | ${row.quality.risk} risk</em>
                 </span>
               </div>
             `).join('')}
