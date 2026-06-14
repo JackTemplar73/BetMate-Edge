@@ -1236,6 +1236,49 @@ td {
   gap: 10px;
 }
 
+.summary-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.summary-answer-grid article {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.summary-answer-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.summary-answer-grid strong {
+  display: block;
+  color: var(--text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.summary-factors-card {
+  grid-column: 1 / -1;
+}
+
+.summary-factors-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
 .coefficient-grid article {
   min-height: 108px;
   padding: 14px;
@@ -1501,6 +1544,10 @@ dd {
   }
 
   .model-insight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-answer-grid {
     grid-template-columns: 1fr;
   }
 

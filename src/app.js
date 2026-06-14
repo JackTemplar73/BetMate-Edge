@@ -1309,6 +1309,89 @@ function getMarkovCoefficientCards(fixture) {
   ];
 }
 
+function splitMatchTeams(matchName) {
+  const parts = String(matchName || '').split(/\s+vs\s+/i);
+  return parts.length === 2 ? { home: parts[0], away: parts[1] } : { home: '', away: '' };
+}
+
+function getMatchResultProbabilities(fixture) {
+  const teams = splitMatchTeams(fixture.match_name);
+  const markets = fixture.markets || [];
+  const findTeamPrice = (team) => markets.find((market) => {
+    const selection = normaliseForMatch(market.target_selection);
+    return selection.includes(normaliseForMatch(team)) && selection.includes('win') && Number.isFinite(Number(market.true_price));
+  });
+  const draw = markets.find((market) => /draw/i.test(market.target_selection || '') && Number.isFinite(Number(market.true_price)));
+  const home = findTeamPrice(teams.home);
+  const away = findTeamPrice(teams.away);
+
+  return {
+    homeTeam: teams.home,
+    awayTeam: teams.away,
+    homeProbability: home ? (1 / Number(home.true_price)) * 100 : getTeamMarkovProbability(fixture, teams.home),
+    awayProbability: away ? (1 / Number(away.true_price)) * 100 : getTeamMarkovProbability(fixture, teams.away),
+    drawProbability: draw ? (1 / Number(draw.true_price)) * 100 : null
+  };
+}
+
+function formatPercent(value) {
+  return Number.isFinite(Number(value)) ? `${Number(value).toFixed(1)}%` : '-';
+}
+
+function buildSummaryAnalysis(fixture) {
+  const probabilities = getMatchResultProbabilities(fixture);
+  const winner = probabilities.homeProbability >= probabilities.awayProbability
+    ? { team: probabilities.homeTeam, probability: probabilities.homeProbability, other: probabilities.awayTeam, otherProbability: probabilities.awayProbability }
+    : { team: probabilities.awayTeam, probability: probabilities.awayProbability, other: probabilities.homeTeam, otherProbability: probabilities.homeProbability };
+  const edge = winner.probability - winner.otherProbability;
+  const totals = fixture.model_totals_25 || {};
+  const topExact = (fixture.exact_score_model || [])[0];
+  const lineupStatus = fixture.confirmed_lineups?.status === 'confirmed'
+    ? 'Confirmed teams are loaded, so the model is using the selected starting elevens where available.'
+    : 'Starting elevens are not fully confirmed yet, so late team news can still move the rating.';
+  const drawText = Number.isFinite(Number(probabilities.drawProbability))
+    ? `The draw is rated around ${formatPercent(probabilities.drawProbability)}, so price discipline matters if the favourite is short.`
+    : 'The draw risk is not fully priced in this fixture yet.';
+  const goalText = Number.isFinite(Number(totals.total_goals_mean))
+    ? `The goal model expects about ${Number(totals.total_goals_mean).toFixed(2)} total goals, with Under 2.5 at ${formatPercent(totals.under_probability)} and Over 2.5 at ${formatPercent(totals.over_probability)}.`
+    : 'The goal model is still waiting on a clean total-goals projection.';
+
+  return {
+    who: `${winner.team || 'No clear side'} is the model lean at ${formatPercent(winner.probability)}. ${edge < 6 ? 'This is close rather than dominant.' : `That is ${edge.toFixed(1)} points clear of ${winner.other}.`}`,
+    why: `${plainGameNotes[fixture.match_name] || fixture.tactical_summary || 'The model is balancing team strength, goal expectation, draw risk and market shape.'} ${drawText}`,
+    factors: [
+      goalText,
+      fixture.pitch_constraints ? `Pitch: ${fixture.pitch_constraints}` : null,
+      fixture.referee_tendencies ? `Referee: ${fixture.referee_tendencies}` : null,
+      lineupStatus,
+      topExact ? `Most likely exact score: ${topExact.score} at ${topExact.probability}%.` : null
+    ].filter(Boolean)
+  };
+}
+
+function renderPlainEnglishSummary(fixture) {
+  const analysis = buildSummaryAnalysis(fixture);
+
+  return `
+    <div class="summary-answer-grid">
+      <article>
+        <span>Who should win?</span>
+        <strong>${analysis.who}</strong>
+      </article>
+      <article>
+        <span>Why?</span>
+        <strong>${analysis.why}</strong>
+      </article>
+      <article class="summary-factors-card">
+        <span>Key Factors</span>
+        <ul>
+          ${analysis.factors.map((factor) => `<li>${factor}</li>`).join('')}
+        </ul>
+      </article>
+    </div>
+  `;
+}
+
 function renderMarkovSummaryTab(fixture) {
   const coefficients = getMarkovCoefficientCards(fixture);
   const topRows = getTopMarkovRows(fixture);
@@ -1316,9 +1399,9 @@ function renderMarkovSummaryTab(fixture) {
   return `
     <section class="match-detail-panel">
       <div class="inline-section-heading">
-        <h3>Markov Summary</h3>
+        <h3>Summary</h3>
       </div>
-      <p class="lineup-note">${plainGameNotes[fixture.match_name] || fixture.tactical_summary}</p>
+      ${renderPlainEnglishSummary(fixture)}
       <div class="coefficient-grid">
         ${coefficients.map((item) => `
           <article>
@@ -1398,7 +1481,7 @@ function renderMarketCards(markets, fixture) {
 function renderMatchDetailTabs(fixture, markets, fixtureModelHtml, lineupsHtml, playerPropsHtml) {
   const tabs = [
     ['bets', 'Bet Options'],
-    ['summary', 'Markov Summary'],
+    ['summary', 'Summary'],
     ['formation', 'Formation & Ratings'],
     ['markets', 'Market Summary']
   ];
