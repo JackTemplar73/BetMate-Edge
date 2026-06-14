@@ -1268,23 +1268,21 @@ function renderBetHistory() {
   renderHistoryResultFilterControls();
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="11">No bets match this history filter.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="9">No bets match this history filter.</td></tr>';
     return;
   }
 
   tableBody.innerHTML = rows.map((bet) => `
     <tr>
-      <td>${bet.match_name}</td>
+      <td><span class="primary-cell">${bet.match_name}</span><span class="sub-cell">${formatKickoff(bet.kickoff_time_aest)}</span></td>
       <td><span class="primary-cell">${bet.target_selection}</span>${renderMarketSubCell(bet.market_matrix)}</td>
       <td><span class="pill">${bet.au_bookie}</span></td>
-      <td>${formatTrackedPrice(bet)}</td>
+      <td>${formatOpeningClvCell(bet)}</td>
       <td>${formatLatestOrClosingPrice(bet)}</td>
       <td>${formatDirection(bet)}</td>
       <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
-      <td>${formatBetResult(bet)}</td>
-      <td class="${profitClass(bet)}">${formatBetProfit(bet)}</td>
-      <td><span class="qi-badge ${metricClass(Number(bet.opening_qi))}">${formatQiBadge(bet.opening_qi)}</span></td>
-      <td><span class="qi-badge ${metricClass(getClosingQi(bet))}">${formatQiBadge(getClosingQi(bet))}</span></td>
+      <td>${formatQiMove(bet)}</td>
+      <td class="${profitClass(bet)}">${formatBetResultProfit(bet)}</td>
     </tr>
   `).join('');
 }
@@ -1347,11 +1345,33 @@ function renderHistoryResultSummary(rows) {
   const lost = settled.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase())).length;
   const pending = rows.length - settled.length;
   const profitUnits = settled.reduce((total, bet) => total + calculateProfitUnits(bet), 0);
+  const confirmedClvRows = rows.filter((bet) => Number.isFinite(Number(bet.clv_percent)));
+  const positiveClv = confirmedClvRows.filter((bet) => Number(bet.clv_percent) > 0).length;
+  const negativeClv = confirmedClvRows.filter((bet) => Number(bet.clv_percent) < 0).length;
+  const averageClv = confirmedClvRows.length
+    ? confirmedClvRows.reduce((total, bet) => total + Number(bet.clv_percent), 0) / confirmedClvRows.length
+    : null;
+  const latestOnlyRows = rows.filter((bet) => !Number.isFinite(Number(bet.clv_percent))).length;
   container.innerHTML = `
     <article>
       <span>Settled</span>
       <strong>${settled.length}</strong>
       <small>${won} won / ${lost} lost${pending ? ` / ${pending} pending` : ''} / ${formatProfitUnits(profitUnits)}</small>
+    </article>
+    <article>
+      <span>Confirmed CLV</span>
+      <strong>${confirmedClvRows.length}</strong>
+      <small>${positiveClv} positive / ${negativeClv} negative${averageClv === null ? '' : ` / avg ${formatClv(averageClv)}`}</small>
+    </article>
+    <article>
+      <span>Latest Price Rows</span>
+      <strong>${latestOnlyRows}</strong>
+      <small>Not locked as a closing line yet</small>
+    </article>
+    <article>
+      <span>Profit Units</span>
+      <strong>${formatProfitUnits(profitUnits)}</strong>
+      <small>Flat 1 unit per tracked bet</small>
     </article>
   `;
 }
@@ -1374,6 +1394,10 @@ function formatProfitUnits(value) {
 function formatBetProfit(bet) {
   if (!isSettledResult(bet)) return '<span class="primary-cell">-</span>';
   return `<span class="primary-cell">${formatProfitUnits(calculateProfitUnits(bet))}</span>`;
+}
+
+function formatBetResultProfit(bet) {
+  return `${formatBetResult(bet)}<span class="sub-cell ${profitClass(bet)}">Profit: ${isSettledResult(bet) ? formatProfitUnits(calculateProfitUnits(bet)) : 'Pending'}</span>`;
 }
 
 function profitClass(bet) {
@@ -1405,7 +1429,7 @@ function renderResults() {
 
   const rows = getSettledBets();
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="7">No settled QI 70+ bets yet.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="8">No settled QI 70+ bets yet.</td></tr>';
     return;
   }
 
@@ -1414,12 +1438,26 @@ function renderResults() {
       <td>${bet.match_name}</td>
       <td><span class="primary-cell">${bet.target_selection}</span>${renderMarketSubCell(bet.market_matrix)}</td>
       <td><span class="pill">${bet.au_bookie}</span></td>
+      <td>${formatBetSavedCell(bet)}</td>
       <td>${formatBetResultBadge(bet)}</td>
       <td><span class="sub-cell">${bet.result_detail || bet.settlement_source || 'Result settled.'}</span></td>
       <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
       <td>${formatSettledAt(bet)}</td>
     </tr>
   `).join('');
+}
+
+function formatBetSavedCell(bet) {
+  const savedAt = Date.parse(bet.first_seen_at || '');
+  const savedText = Number.isFinite(savedAt)
+    ? formatter.format(new Date(savedAt))
+    : 'Saved by agent';
+
+  return `
+    <span class="primary-cell">${savedText}</span>
+    <span class="sub-cell">Opening ${formatHistoryPrice(bet.opening_odds)}</span>
+    <span class="sub-cell">QI ${formatQiBadge(bet.opening_qi)}</span>
+  `;
 }
 
 function renderCompletedGames() {
@@ -1472,16 +1510,53 @@ function formatTrackedPrice(bet) {
   return `<span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span><span class="sub-cell">${detail}</span>`;
 }
 
+function formatOpeningClvCell(bet) {
+  const openingQi = Number(bet.opening_qi);
+  const ev = Number(bet.opening_ev);
+  const modelPrice = Number(bet.opening_model_price);
+  const details = [
+    Number.isFinite(modelPrice) ? `Model ${formatHistoryPrice(modelPrice)}` : null,
+    Number.isFinite(ev) ? `EV ${formatClv(ev)}` : null
+  ].filter(Boolean).join(' | ');
+
+  return `
+    <span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span>
+    <span class="sub-cell">${formatFirstSeenLabel(bet)}</span>
+    <span class="sub-cell">Opening QI <span class="qi-badge compact ${metricClass(openingQi)}">${formatQiBadge(openingQi)}</span></span>
+    ${details ? `<span class="sub-cell">${details}</span>` : ''}
+  `;
+}
+
+function formatFirstSeenLabel(bet) {
+  const firstSeen = Date.parse(bet.first_seen_at || '');
+  if (!Number.isFinite(firstSeen)) return 'First saved by agent';
+  return `First saved ${formatter.format(new Date(firstSeen))}`;
+}
+
 function formatLatestOrClosingPrice(bet) {
   if (Number.isFinite(Number(bet.closing_odds))) {
-    return `<span class="primary-cell">${formatHistoryPrice(bet.closing_odds)}</span><span class="sub-cell confirmed-text">Closing price</span>`;
+    return `
+      <span class="primary-cell">${formatHistoryPrice(bet.closing_odds)}</span>
+      <span class="sub-cell confirmed-text">Closing price</span>
+      ${formatCapturedAt(bet.closing_captured_at)}
+      ${formatCurrentSignal(bet)}
+    `;
   }
 
   if (Number.isFinite(Number(bet.estimated_closing_odds))) {
-    return `<span class="primary-cell">${formatHistoryPrice(bet.estimated_closing_odds)}</span><span class="sub-cell warning-text">Latest price</span>`;
+    return `
+      <span class="primary-cell">${formatHistoryPrice(bet.estimated_closing_odds)}</span>
+      <span class="sub-cell warning-text">Latest price</span>
+      ${formatCapturedAt(bet.last_seen_at)}
+      ${formatCurrentSignal(bet)}
+    `;
   }
 
-  return `<span class="primary-cell">${formatHistoryPrice(bet.current_odds)}</span><span class="sub-cell">${formatLatestPriceLabel(bet)}</span>`;
+  return `
+    <span class="primary-cell">${formatHistoryPrice(bet.current_odds)}</span>
+    <span class="sub-cell">${formatLatestPriceLabel(bet)}</span>
+    ${formatCurrentSignal(bet)}
+  `;
 }
 
 function formatLatestPriceLabel(bet) {
@@ -1490,10 +1565,45 @@ function formatLatestPriceLabel(bet) {
   return `Latest price | ${formatter.format(new Date(lastSeen))}`;
 }
 
+function formatCapturedAt(value) {
+  const capturedAt = Date.parse(value || '');
+  if (!Number.isFinite(capturedAt)) return '';
+  return `<span class="sub-cell">${formatter.format(new Date(capturedAt))}</span>`;
+}
+
+function formatCurrentSignal(bet) {
+  const modelPrice = Number(bet.current_model_price);
+  const ev = Number(bet.current_ev);
+  const details = [
+    Number.isFinite(modelPrice) ? `Model ${formatHistoryPrice(modelPrice)}` : null,
+    Number.isFinite(ev) ? `EV ${formatClv(ev)}` : null
+  ].filter(Boolean).join(' | ');
+
+  return details ? `<span class="sub-cell">${details}</span>` : '';
+}
+
 function getClosingQi(bet) {
   const closingQi = Number(bet.closing_qi);
   if (Number.isFinite(closingQi)) return closingQi;
   return Number(bet.current_qi);
+}
+
+function formatQiMove(bet) {
+  const openingQi = Number(bet.opening_qi);
+  const closingQi = getClosingQi(bet);
+  const delta = Number.isFinite(openingQi) && Number.isFinite(closingQi) ? closingQi - openingQi : null;
+  const deltaClass = delta === null ? 'neutral-text' : delta > 0 ? 'positive' : delta < 0 ? 'negative' : 'neutral-text';
+  const deltaText = delta === null ? '-' : `${delta > 0 ? '+' : ''}${delta}`;
+  const closeLabel = Number.isFinite(Number(bet.closing_odds)) ? 'Closing QI' : 'Latest QI';
+
+  return `
+    <span class="history-qi-line">
+      <span class="qi-badge compact ${metricClass(openingQi)}">${formatQiBadge(openingQi)}</span>
+      <span class="history-arrow">to</span>
+      <span class="qi-badge compact ${metricClass(closingQi)}">${formatQiBadge(closingQi)}</span>
+    </span>
+    <span class="sub-cell">${closeLabel} | <span class="${deltaClass}">${deltaText}</span></span>
+  `;
 }
 
 function sortHistoryRows(a, b) {
@@ -1562,7 +1672,8 @@ function hasReliableClvBaseline(bet) {
 
 function priceDirection(bet) {
   const opening = Number.parseFloat(bet.opening_odds);
-  const current = Number.parseFloat(bet.current_odds);
+  const current = getLatestComparableOdds(bet);
+  const comparisonLabel = Number.isFinite(Number(bet.closing_odds)) ? 'closing price' : 'latest price';
 
   if (!Number.isFinite(opening) || !Number.isFinite(current)) {
     return {
@@ -1576,7 +1687,7 @@ function priceDirection(bet) {
     return {
       className: 'positive',
       label: 'Positive',
-      detail: 'First tracked price higher than latest odds.'
+      detail: `Opening price is higher than ${comparisonLabel}.`
     };
   }
 
@@ -1584,15 +1695,21 @@ function priceDirection(bet) {
     return {
       className: 'negative',
       label: 'Negative',
-      detail: 'First tracked price lower than latest odds.'
+      detail: `Opening price is lower than ${comparisonLabel}.`
     };
   }
 
   return {
-    className: 'neutral-text',
-    label: 'Neutral',
-    detail: 'First tracked price equals latest odds.'
-  };
+      className: 'neutral-text',
+      label: 'Neutral',
+      detail: `Opening price equals ${comparisonLabel}.`
+    };
+}
+
+function getLatestComparableOdds(bet) {
+  if (Number.isFinite(Number(bet.closing_odds))) return Number(bet.closing_odds);
+  if (Number.isFinite(Number(bet.estimated_closing_odds))) return Number(bet.estimated_closing_odds);
+  return Number(bet.current_odds);
 }
 
 function formatDirection(bet) {
