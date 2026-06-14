@@ -691,9 +691,12 @@ function getUpcomingPlayerProps() {
   return state.playerPropWatchlist
     .filter((prop) => upcomingMatches.has(prop.match_name))
     .filter((prop) => parseKickoff(prop.kickoff_time_aest) > now)
+    .filter((prop) => Math.max(...(prop.live_prices || []).map((price) => Number(price.qi || 0)), 0) >= 60)
     .sort((a, b) => {
       const timeDiff = parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest);
       if (timeDiff !== 0) return timeDiff;
+      const qiDiff = Math.max(...(b.live_prices || []).map((price) => Number(price.qi || 0)), 0) - Math.max(...(a.live_prices || []).map((price) => Number(price.qi || 0)), 0);
+      if (qiDiff !== 0) return qiDiff;
       const probDiff = Number(b.model_probability || 0) - Number(a.model_probability || 0);
       if (probDiff !== 0) return probDiff;
       return `${a.category || ''} ${a.player} ${a.market}`.localeCompare(`${b.category || ''} ${b.player} ${b.market}`);
@@ -749,7 +752,7 @@ function renderPlayerPropWatchlist() {
   const props = getUpcomingPlayerProps();
 
   if (props.length === 0) {
-    container.innerHTML = '<p class="empty-note">No model-only player props are on the watchlist right now.</p>';
+    container.innerHTML = '<p class="empty-note">No player props with QI 60+ are available right now.</p>';
     return;
   }
 
@@ -764,7 +767,7 @@ function renderPlayerPropWatchlist() {
     <div class="prop-summary-card">
       <strong>${props.length} player props shown</strong>
       <span>${Object.entries(categoryCounts).map(([category, count]) => `${category}: ${count}`).join(' | ')}</span>
-      <span>Sportsbet/TAB live prices found: ${livePriceCount}</span>
+      <span>Only player props with QI 60+ are shown. Sportsbet/TAB live prices found: ${livePriceCount}</span>
     </div>
     ${props.map((prop) => renderPlayerPropCard(prop)).join('')}
   `;
@@ -935,8 +938,8 @@ function renderFixturePanels() {
     ? `
         <div class="match-props-block">
           <div class="inline-section-heading">
-            <h3>Player Props - Model Price Only</h3>
-            <p>Shown for this match only. These are not treated as bets until live market odds are confirmed.</p>
+            <h3>Player Props - QI 60+</h3>
+            <p>Shown for this match only when a live bookmaker price creates a QI rating of 60 or higher.</p>
           </div>
           <div class="prop-watchlist-grid">
             ${playerProps.map((prop) => renderPlayerPropCard(prop, { showMatch: false })).join('')}
