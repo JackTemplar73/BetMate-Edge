@@ -48,10 +48,21 @@ const plainMarketNames = {
   'Cards Totals': 'Cards total',
   'Market Watch': 'Market watch',
   'Market Baseline': 'Market baseline',
-  'Full Match Model': 'Full match model',
+  'Full Match Model': '',
   Totals: 'Goals total',
   All: 'All'
 };
+
+function formatMarketLabel(value, fallback = '') {
+  const mapped = plainMarketNames[value];
+  if (mapped === '') return fallback;
+  return mapped || value || fallback;
+}
+
+function renderMarketSubCell(value) {
+  const label = formatMarketLabel(value);
+  return label ? `<span class="sub-cell">${label}</span>` : '';
+}
 
 const plainGameNotes = {
   'USA vs Paraguay': 'USA are expected to have more of the ball. Paraguay may need to defend for long spells, so the card bet on Omar Alderete stands out.',
@@ -500,7 +511,7 @@ function renderSourceTable() {
     <tr>
       <td>${market.match_name}</td>
       <td>${formatKickoff(market.kickoff_time_aest)}</td>
-      <td><span class="primary-cell">${market.target_selection}</span><span class="sub-cell">${plainMarketNames[market.market_matrix] || market.market_matrix}</span></td>
+      <td><span class="primary-cell">${market.target_selection}</span>${renderMarketSubCell(market.market_matrix)}</td>
       <td>${formatOdds(market)}</td>
       <td>${formatModelPrice(market)}</td>
       <td>${formatModelProb(market)}</td>
@@ -522,7 +533,7 @@ function renderFilters() {
 
   container.innerHTML = filters.map((filter) => `
     <button class="segmented-button ${state.marketFilter === filter ? 'active' : ''}" data-filter="${filter}">
-      ${plainMarketNames[filter] || filter}
+      ${formatMarketLabel(filter, 'Match result')}
     </button>
   `).join('');
 
@@ -649,7 +660,7 @@ function getMatchModelHighlights() {
     .map((market) => ({
       match_name: market.match_name,
       selection: market.target_selection,
-      market: plainMarketNames[market.market_matrix] || market.market_matrix,
+      market: formatMarketLabel(market.market_matrix, 'Match result'),
       category: 'Priced selection',
       probability: Number(((1 / Number.parseFloat(market.true_price)) * 100).toFixed(1)),
       fair_price: Number.parseFloat(market.true_price),
@@ -1264,7 +1275,7 @@ function renderBetHistory() {
   tableBody.innerHTML = rows.map((bet) => `
     <tr>
       <td>${bet.match_name}</td>
-      <td><span class="primary-cell">${bet.target_selection}</span><span class="sub-cell">${plainMarketNames[bet.market_matrix] || bet.market_matrix}</span></td>
+      <td><span class="primary-cell">${bet.target_selection}</span>${renderMarketSubCell(bet.market_matrix)}</td>
       <td><span class="pill">${bet.au_bookie}</span></td>
       <td>${formatTrackedPrice(bet)}</td>
       <td>${formatLatestOrClosingPrice(bet)}</td>
@@ -1379,7 +1390,7 @@ function renderResults() {
   tableBody.innerHTML = rows.map((bet) => `
     <tr>
       <td>${bet.match_name}</td>
-      <td><span class="primary-cell">${bet.target_selection}</span><span class="sub-cell">${plainMarketNames[bet.market_matrix] || bet.market_matrix}</span></td>
+      <td><span class="primary-cell">${bet.target_selection}</span>${renderMarketSubCell(bet.market_matrix)}</td>
       <td><span class="pill">${bet.au_bookie}</span></td>
       <td>${formatBetResultBadge(bet)}</td>
       <td><span class="sub-cell">${bet.result_detail || bet.settlement_source || 'Result settled.'}</span></td>
@@ -1409,7 +1420,7 @@ function renderCompletedGames() {
         <td>${fixture.match_name}</td>
         <td>${formatKickoff(fixture.kickoff_time_aest)}</td>
         <td>${formatCompletedStatus(fixture)}</td>
-        <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${plainMarketNames[bestOption.market_matrix] || bestOption.market_matrix} | ${bestOption.au_bookie} | ${formatOdds(bestOption)}</span>` : '-'}</td>
+        <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${[formatMarketLabel(bestOption.market_matrix), bestOption.au_bookie, formatOdds(bestOption)].filter(Boolean).join(' | ')}</span>` : '-'}</td>
         <td>${bestOption ? `<span class="qi-badge ${metricClass(bestOption.metrics.qi)}">${formatQiBadge(bestOption.metrics.qi)}</span>` : '-'}</td>
       </tr>
     `;
