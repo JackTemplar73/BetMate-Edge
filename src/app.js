@@ -787,7 +787,6 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
         <div><dt>Category</dt><dd>${prop.category || 'Player Prop'}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
         <div><dt>Model Prob</dt><dd>${Number.isFinite(Number(prop.model_probability)) ? `${Number(prop.model_probability).toFixed(1)}%` : formatModelOnlyProb(prop.model_price)}</dd></div>
-        <div><dt>Price</dt><dd>${hasLivePrice ? 'Live price found' : 'Waiting for price'}</dd></div>
       </dl>
       ${hasLivePrice ? `
         <div class="prop-price-list">
