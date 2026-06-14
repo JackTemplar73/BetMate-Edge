@@ -790,7 +790,7 @@ function renderSportsbookScan() {
             <th>QI</th>
             <th>Match</th>
             <th>Selection</th>
-            <th>AU Bookie</th>
+            <th>Bookie</th>
             <th>Odds</th>
             <th>Model Price</th>
             <th>Model Prob</th>
