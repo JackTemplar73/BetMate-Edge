@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-results-v3">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-tabs-v1">
 </head>
 <body>
   <main class="app-shell">
@@ -19,6 +19,14 @@
       </div>
       <button class="refresh-button" data-refresh-odds type="button">Refresh odds</button>
     </header>
+
+    <nav class="view-tabs top-view-tabs" aria-label="Dashboard tabs">
+      <button class="view-tab active" data-view-tab="matches" type="button">Matches</button>
+      <button class="view-tab" data-view-tab="props" type="button">Player Props</button>
+      <button class="view-tab" data-view-tab="scan" type="button">AU Bookie Market Scan</button>
+      <button class="view-tab" data-view-tab="history" type="button">Bet History <span data-history-count>0</span></button>
+      <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
+    </nav>
 
     <p class="error" data-app-error></p>
 
@@ -66,7 +74,7 @@
       <div class="high-value-list" data-high-value-bets></div>
     </section>
 
-    <section class="table-section player-prop-watchlist">
+    <section class="table-section player-prop-watchlist hidden" data-view-section="props">
       <div class="section-heading">
         <div>
           <h2>Player Props</h2>
@@ -76,7 +84,7 @@
       <div class="prop-watchlist-grid" data-player-prop-watchlist></div>
     </section>
 
-    <section class="table-section sportsbook-scan-section">
+    <section class="table-section sportsbook-scan-section hidden" data-view-section="scan">
       <div class="section-heading">
         <div>
           <h2>AU Bookie Market Scan</h2>
@@ -91,13 +99,6 @@
       </div>
       <div data-sportsbook-scan></div>
     </section>
-
-    <nav class="view-tabs" aria-label="Dashboard tabs">
-      <button class="view-tab active" data-view-tab="matches" type="button">Matches</button>
-      <button class="view-tab" data-view-tab="completed" type="button">Completed <span data-completed-count>0</span></button>
-      <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
-      <button class="view-tab" data-view-tab="history" type="button">Bet History <span data-history-count>0</span></button>
-    </nav>
 
     <section class="table-section games-section" data-view-section="matches">
       <div class="section-heading">
@@ -228,10 +229,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-results-v3"></script>
-  <script src="./src/embeddedData.js?v=20260614-results-v3"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-results-v3"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-results-v3"></script>
-  <script src="./src/app.js?v=20260614-results-v3"></script>
+  <script src="./src/calculations.js?v=20260614-tabs-v1"></script>
+  <script src="./src/embeddedData.js?v=20260614-tabs-v1"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-tabs-v1"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-tabs-v1"></script>
+  <script src="./src/app.js?v=20260614-tabs-v1"></script>
 </body>
 </html>

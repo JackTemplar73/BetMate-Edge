@@ -437,9 +437,13 @@ function renderViewTabs() {
     section.classList.toggle('hidden', section.dataset.viewSection !== state.activeView);
   });
 
-  document.querySelector('[data-history-count]').textContent = state.betHistory.length || flattenMarkets(getUpcomingFixtures()).length;
-  document.querySelector('[data-completed-count]').textContent = getCompletedFixtures().length;
-  document.querySelector('[data-results-count]').textContent = getSettledBets().length;
+  const historyCount = document.querySelector('[data-history-count]');
+  const completedCount = document.querySelector('[data-completed-count]');
+  const resultsCount = document.querySelector('[data-results-count]');
+
+  if (historyCount) historyCount.textContent = state.betHistory.length || flattenMarkets(getUpcomingFixtures()).length;
+  if (completedCount) completedCount.textContent = getCompletedFixtures().length;
+  if (resultsCount) resultsCount.textContent = getSettledBets().length;
 }
 
 function renderSectionSortControls() {

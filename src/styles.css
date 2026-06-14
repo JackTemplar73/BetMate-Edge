@@ -324,9 +324,27 @@ h3 {
   flex-wrap: wrap;
 }
 
+.top-view-tabs {
+  margin: -8px 0 18px;
+}
+
 .icon-button,
 .segmented-button,
 .refresh-button,
+.view-tab {
+  padding: 0 14px;
+  white-space: nowrap;
+}
+
+.top-view-tabs .view-tab {
+  min-height: 42px;
+  font-weight: 900;
+}
+
+.top-view-tabs .view-tab span {
+  margin-left: 6px;
+}
+
 .view-tab {
   min-height: 36px;
   border: 1px solid var(--border);
