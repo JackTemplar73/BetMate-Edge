@@ -1052,7 +1052,7 @@ function renderFixtureModelBlock(fixture) {
   const bookieScanHtml = scanRows.length > 0
     ? `
         <article class="model-insight-card sportsbet-scan-card">
-          <h3>AU Bookie Market Scan</h3>
+          <h3>Market Summary</h3>
           <div class="fixture-scan-list">
             ${scanRows.map((row) => `
               <div>
