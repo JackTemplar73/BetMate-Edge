@@ -674,6 +674,7 @@ function renderSportsbookScan() {
             <th>QI</th>
             <th>Match</th>
             <th>Selection</th>
+            <th>AU Bookie</th>
             <th>Odds</th>
             <th>Model Price</th>
             <th>Model Prob</th>
@@ -681,7 +682,6 @@ function renderSportsbookScan() {
             <th>Edge</th>
             <th>EV</th>
             <th>Risk</th>
-            <th>AU Bookie</th>
           </tr>
         </thead>
         <tbody>
@@ -690,6 +690,7 @@ function renderSportsbookScan() {
               <td><span class="qi-badge ${metricClass(Number(row.qi))}">${Number.isFinite(Number(row.qi)) ? row.qi : '-'}</span></td>
               <td><span class="primary-cell">${row.match_name}</span><span class="sub-cell">${formatKickoff(row.kickoff_time_aest)}</span></td>
               <td><span class="primary-cell">${row.selection}</span><span class="sub-cell">${row.market} | ${row.oddsapi_market}</span></td>
+              <td><span class="pill">${row.bookmaker}</span></td>
               <td>$${Number(row.current_odds).toFixed(2)}</td>
               <td>$${Number(row.model_price).toFixed(2)}</td>
               <td>${Number(row.model_probability).toFixed(1)}%</td>
@@ -697,7 +698,6 @@ function renderSportsbookScan() {
               <td class="${Number(row.quality.edge) >= 0 ? 'positive' : 'negative'}">${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts</td>
               <td class="${Number(row.ev) >= 0 ? 'positive' : 'negative'}">${Number(row.ev) > 0 ? '+' : ''}${Number(row.ev).toFixed(2)}%</td>
               <td>${formatRiskValue(row.quality.risk)}</td>
-              <td><span class="pill">${row.bookmaker}</span></td>
             </tr>
           `).join('')}
         </tbody>
