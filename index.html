@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-tabs-v1">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-tabs-v2">
 </head>
 <body>
   <main class="app-shell">
@@ -22,6 +22,7 @@
 
     <nav class="view-tabs top-view-tabs" aria-label="Dashboard tabs">
       <button class="view-tab active" data-view-tab="matches" type="button">Matches</button>
+      <button class="view-tab" data-view-tab="highValue" type="button">High Value Bets</button>
       <button class="view-tab" data-view-tab="props" type="button">Player Props</button>
       <button class="view-tab" data-view-tab="scan" type="button">AU Bookie Market Scan</button>
       <button class="view-tab" data-view-tab="history" type="button">Bet History <span data-history-count>0</span></button>
@@ -58,7 +59,7 @@
       <strong><span class="qi-dot weak"></span>Below 50</strong>
     </section>
 
-    <section class="table-section high-value-section">
+    <section class="table-section high-value-section hidden" data-view-section="highValue">
       <div class="section-heading">
         <div>
           <h2>High Value Bets</h2>
@@ -229,10 +230,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-tabs-v1"></script>
-  <script src="./src/embeddedData.js?v=20260614-tabs-v1"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-tabs-v1"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-tabs-v1"></script>
-  <script src="./src/app.js?v=20260614-tabs-v1"></script>
+  <script src="./src/calculations.js?v=20260614-tabs-v2"></script>
+  <script src="./src/embeddedData.js?v=20260614-tabs-v2"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-tabs-v2"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-tabs-v2"></script>
+  <script src="./src/app.js?v=20260614-tabs-v2"></script>
 </body>
 </html>
