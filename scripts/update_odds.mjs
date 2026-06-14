@@ -42,7 +42,7 @@ const ESPN_LEAGUES = [
 const FIFA_REPORT_HUB_URL = 'https://www.fifatrainingcentre.com/en/fifa-world-cup-2026/match-report-hub.php';
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
-const CLOSING_WINDOW_MS = 30 * 60 * 1000;
+const CLOSING_WINDOW_MS = 5 * 60 * 1000;
 const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
 const LINEUP_CHECK_WINDOW_MS = 60 * 60 * 1000;
 
@@ -386,7 +386,13 @@ function dateKey(value) {
 }
 
 function fixtureDateKeys(dataset) {
-  return [...new Set(dataset.map((fixture) => dateKey(parseAest(fixture.kickoff_time_aest))))];
+  return [...new Set(dataset.flatMap((fixture) => {
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    return [
+      dateKey(kickoff),
+      kickoff.toISOString().slice(0, 10).replace(/-/g, '')
+    ];
+  }))];
 }
 
 function findEspnEvent(events, fixture) {
@@ -524,7 +530,12 @@ function applyFotMobLineups(fixture, details, nowIso) {
   return true;
 }
 
-async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date().toISOString()) {
+function lineupHasSubstitutes(fixture) {
+  const lineups = fixture.confirmed_lineups;
+  return Boolean((lineups?.home_substitutes || []).length || (lineups?.away_substitutes || []).length);
+}
+
+async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date().toISOString(), espnEvents = []) {
   const today = dateKey(now);
   const fixtures = dataset.filter((fixture) => {
     const kickoff = parseAest(fixture.kickoff_time_aest);
@@ -545,18 +556,36 @@ async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date
 
     const fotmobMatch = findFotMobMatch(matchCache.get(date), fixture);
     fixture.lineup_last_checked = nowIso;
-    fixture.lineup_check_source = 'Confirmed match centre';
+    fixture.lineup_check_sources = 'FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.';
+    fixture.lineup_check_source = 'FotMob match centre';
 
     if (!fotmobMatch?.id) {
       fixture.lineup_check_status = 'match_not_found';
-      continue;
+    } else {
+      const details = await fetchFotMobMatchDetails(fotmobMatch.id);
+      fixture.external_lineup_match_id = fotmobMatch.id;
+      fixture.lineup_check_status = applyFotMobLineups(fixture, details, nowIso)
+        ? 'confirmed'
+        : 'not_available_yet';
     }
 
-    const details = await fetchFotMobMatchDetails(fotmobMatch.id);
-    fixture.external_lineup_match_id = fotmobMatch.id;
-    fixture.lineup_check_status = applyFotMobLineups(fixture, details, nowIso)
-      ? 'confirmed'
-      : 'not_available_yet';
+    if (fixture.lineup_check_status !== 'confirmed' || !lineupHasSubstitutes(fixture)) {
+      const espnEvent = findEspnEvent(espnEvents, fixture);
+      if (espnEvent?.id) {
+        try {
+          const summary = await fetchEspnSummary('fifa.world', espnEvent.id);
+          if (applyEspnLineups(fixture, summary, nowIso, espnEvent)) {
+            fixture.lineup_check_status = 'confirmed';
+            fixture.lineup_check_source = fixture.external_lineup_match_id
+              ? 'FotMob match centre; ESPN summary fallback for roster/subs'
+              : 'ESPN summary';
+            fixture.external_espn_match_id = espnEvent.id;
+          }
+        } catch (error) {
+          console.warn(error.message);
+        }
+      }
+    }
 
     if (fixture.lineup_check_status === 'confirmed') {
       updates += 1;
@@ -586,6 +615,68 @@ async function fetchEspnScoreboard(league, date) {
   }
 
   return response.json();
+}
+
+async function fetchEspnSummary(league, eventId) {
+  const url = new URL(`https://site.api.espn.com/apis/site/v2/sports/soccer/${league}/summary`);
+  url.searchParams.set('event', String(eventId));
+
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error(`ESPN ${league} summary request failed: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function playerDisplayName(player) {
+  return player?.athlete?.displayName
+    || player?.athlete?.fullName
+    || player?.displayName
+    || player?.fullName
+    || player?.name
+    || null;
+}
+
+function applyEspnLineups(fixture, summary, nowIso, event) {
+  const rosters = summary?.rosters || [];
+  if (rosters.length < 2) return false;
+
+  const homeRoster = rosters.find((roster) => roster.homeAway === 'home') || rosters[0];
+  const awayRoster = rosters.find((roster) => roster.homeAway === 'away') || rosters[1];
+  const starterNames = (roster) => (roster?.roster || [])
+    .filter((player) => player.starter)
+    .map(playerDisplayName)
+    .filter(Boolean);
+  const substituteNames = (roster) => (roster?.roster || [])
+    .filter((player) => !player.starter)
+    .map(playerDisplayName)
+    .filter(Boolean);
+  const homeStarters = starterNames(homeRoster);
+  const awayStarters = starterNames(awayRoster);
+
+  if (homeStarters.length < 11 || awayStarters.length < 11) return false;
+
+  fixture.confirmed_lineups = {
+    status: 'confirmed',
+    source: 'ESPN match centre',
+    source_url: event?.links?.find((link) => (link.rel || []).includes('summary'))?.href || null,
+    checked_at: nowIso,
+    referee: fixture.referee_name,
+    venue: summary?.gameInfo?.venue?.fullName || '',
+    surface: '',
+    home_team: homeRoster.team?.displayName || homeRoster.team?.name || splitTeams(fixture.match_name)?.home || '',
+    away_team: awayRoster.team?.displayName || awayRoster.team?.name || splitTeams(fixture.match_name)?.away || '',
+    home_formation: homeRoster.formation || '',
+    away_formation: awayRoster.formation || '',
+    home_starting_xi: homeStarters,
+    away_starting_xi: awayStarters,
+    home_substitutes: substituteNames(homeRoster),
+    away_substitutes: substituteNames(awayRoster),
+    model_implication: `Confirmed starting XIs and substitutes are loaded for ${fixture.match_name}. Player-prop ratings now check selected starters and bench players before showing value.`
+  };
+
+  return true;
 }
 
 async function fetchEspnEventsForDataset(dataset) {
@@ -1182,7 +1273,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         entry.estimated_closing_source = null;
       } else if (now >= kickoff && entry.closing_odds === null) {
         entry.closing_status = 'missing_fresh_close';
-        entry.closing_source = 'No confirmed live check in the final 30 minutes before kickoff';
+        entry.closing_source = 'No confirmed live check in the final 5 minutes before kickoff';
         entry.clv_percent = null;
         entry.estimated_closing_odds = currentOdds;
         entry.estimated_clv_percent = clvPercent(entry.opening_odds, currentOdds);
@@ -1337,6 +1428,48 @@ function outcomeForMarket(marketItem, oddsMarket) {
   }) || null;
 
   return null;
+}
+
+function matchingDevigOutcomes(oddsMarket, outcome) {
+  const outcomePoint = Number(outcome.point);
+  const outcomeName = normalise(outcome.name);
+  const outcomeDescription = normalise(outcome.description || '');
+  const isPlayerMarket = String(oddsMarket.key || '').startsWith('player_');
+
+  return (oddsMarket.outcomes || []).filter((candidate) => {
+    if (!Number.isFinite(Number(candidate.price)) || Number(candidate.price) <= 1) return false;
+
+    const candidatePoint = Number(candidate.point);
+    const pointMatches = Number.isFinite(outcomePoint)
+      ? Number.isFinite(candidatePoint) && Math.abs(candidatePoint - outcomePoint) < 0.001
+      : !Number.isFinite(candidatePoint);
+
+    if (!pointMatches) return false;
+
+    if (isPlayerMarket) {
+      const candidateDescription = normalise(candidate.description || '');
+      return candidateDescription && candidateDescription === outcomeDescription;
+    }
+
+    if (['over', 'under'].includes(outcomeName)) {
+      const candidateName = normalise(candidate.name || '');
+      return ['over', 'under'].includes(candidateName);
+    }
+
+    return true;
+  });
+}
+
+function devigBookProbability(oddsMarket, outcome) {
+  if (!oddsMarket || !outcome || !Number.isFinite(Number(outcome.price)) || Number(outcome.price) <= 1) return null;
+
+  const comparableOutcomes = matchingDevigOutcomes(oddsMarket, outcome);
+  if (comparableOutcomes.length < 2) return null;
+
+  const impliedTotal = comparableOutcomes.reduce((total, candidate) => total + (1 / Number(candidate.price)), 0);
+  if (!Number.isFinite(impliedTotal) || impliedTotal <= 0) return null;
+
+  return Number((((1 / Number(outcome.price)) / impliedTotal) * 100).toFixed(2));
 }
 
 function poissonProbability(lambda, goals) {
@@ -1588,6 +1721,7 @@ function addMissingH2hRowsFromOddsApi(fixture, event, nowIso) {
         true_price: modelPrice,
         current_odds: Number(Number(outcome.price).toFixed(2)),
         au_bookie: bookName,
+        devig_book_probability: devigBookProbability(h2hMarket, outcome),
         odds_checked_at: nowIso,
         odds_updated_at: nowIso,
         odds_refresh_status: 'added_from_oddsapi',
@@ -1704,7 +1838,7 @@ async function main() {
   const espnEvents = await fetchEspnEventsForDataset(dataset);
   const fifaReports = await fetchFifaReportsForDataset(dataset, nowIso);
   const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
-  const lineupUpdates = await refreshLastHourLineups(dataset, getNow(), nowIso);
+  const lineupUpdates = await refreshLastHourLineups(dataset, getNow(), nowIso, espnEvents);
 
   for (const fixture of dataset) {
     const event = findEvent(allEvents, fixture);
@@ -1760,6 +1894,7 @@ async function main() {
       }
 
       const nextPrice = Number(Number(outcome.price).toFixed(2));
+      marketItem.devig_book_probability = devigBookProbability(oddsMarket, outcome);
       const priceChanged = nextPrice !== Number(marketItem.current_odds);
       if (priceChanged) {
         marketItem.previous_odds = marketItem.current_odds;

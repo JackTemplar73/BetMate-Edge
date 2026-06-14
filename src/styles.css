@@ -1202,6 +1202,101 @@ td {
   font-style: normal;
 }
 
+.match-detail-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 14px;
+}
+
+.match-detail-tab {
+  min-height: 38px;
+  padding: 0 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+  cursor: pointer;
+  font-weight: 850;
+}
+
+.match-detail-tab.active {
+  border-color: var(--gold);
+  background: var(--gold);
+  color: var(--ink);
+}
+
+.match-detail-panel {
+  display: grid;
+  gap: 16px;
+}
+
+.coefficient-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.coefficient-grid article {
+  min-height: 108px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.coefficient-grid span,
+.coefficient-grid small {
+  display: block;
+  color: var(--muted);
+}
+
+.coefficient-grid span {
+  margin-bottom: 8px;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.coefficient-grid strong {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 19px;
+  line-height: 1.15;
+}
+
+.coefficient-grid small {
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.markov-summary-list {
+  display: grid;
+  gap: 8px;
+}
+
+.markov-summary-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: center;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.markov-summary-list strong,
+.markov-summary-list em {
+  display: block;
+}
+
+.markov-summary-list em {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+  font-style: normal;
+}
+
 .lineups-block {
   margin: 18px 0;
   padding: 18px;
@@ -1263,6 +1358,28 @@ td {
   color: var(--muted);
   font-size: 13px;
   line-height: 1.35;
+}
+
+.rated-player-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+}
+
+.rated-player-list li span {
+  min-width: 0;
+}
+
+.rated-player-list li b {
+  flex: 0 0 auto;
+  min-width: 34px;
+  padding: 2px 7px;
+  border-radius: 999px;
+  background: rgba(245, 188, 66, 0.14);
+  color: var(--gold);
+  font-size: 12px;
+  text-align: center;
 }
 
 .lineup-empty {

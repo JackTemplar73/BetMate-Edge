@@ -204,6 +204,49 @@ function findOutcome(bookmaker, item) {
   return null;
 }
 
+function matchingDevigOutcomes(market, outcome) {
+  const outcomePoint = Number(outcome.point);
+  const outcomeDescription = normalise(outcome.description || '');
+  const outcomeName = normalise(outcome.name || '');
+  const isPlayerMarket = String(market.key || '').startsWith('player_');
+
+  return (market.outcomes || []).filter((candidate) => {
+    if (!Number.isFinite(Number(candidate.price)) || Number(candidate.price) <= 1) return false;
+
+    const candidatePoint = Number(candidate.point);
+    const pointMatches = Number.isFinite(outcomePoint)
+      ? Number.isFinite(candidatePoint) && Math.abs(candidatePoint - outcomePoint) < 0.001
+      : !Number.isFinite(candidatePoint);
+
+    if (!pointMatches) return false;
+
+    if (isPlayerMarket) {
+      const candidateDescription = normalise(candidate.description || '');
+      return candidateDescription && candidateDescription === outcomeDescription;
+    }
+
+    if (['over', 'under'].includes(outcomeName)) {
+      const candidateName = normalise(candidate.name || '');
+      return ['over', 'under'].includes(candidateName);
+    }
+
+    return true;
+  });
+}
+
+function devigBookProbability(bookmaker, marketKey, outcome) {
+  const market = (bookmaker.markets || []).find((candidate) => candidate.key === marketKey);
+  if (!market || !outcome || !Number.isFinite(Number(outcome.price)) || Number(outcome.price) <= 1) return null;
+
+  const comparableOutcomes = matchingDevigOutcomes(market, outcome);
+  if (comparableOutcomes.length < 2) return null;
+
+  const impliedTotal = comparableOutcomes.reduce((total, candidate) => total + (1 / Number(candidate.price)), 0);
+  if (!Number.isFinite(impliedTotal) || impliedTotal <= 0) return null;
+
+  return Number((((1 / Number(outcome.price)) / impliedTotal) * 100).toFixed(2));
+}
+
 function scanItemsForFixture(fixture) {
   const pricedItems = (fixture.markets || [])
     .filter((item) => Number.isFinite(Number(item.true_price)) && Number(item.true_price) > 1)
@@ -395,6 +438,7 @@ async function main() {
 
         const odds = Number(Number(found.outcome.price).toFixed(2));
         const metrics = runVectorCalculations(item.fair_price, odds);
+        const noVigProbability = devigBookProbability(bookmaker, found.marketKey, found.outcome);
         rows.push({
           selection: item.selection,
           category: item.category,
@@ -406,6 +450,7 @@ async function main() {
           current_odds: odds,
           au_bookie: bookmaker.title || bookmaker.key,
           bookmaker_key: bookmaker.key,
+          devig_book_probability: noVigProbability,
           ev: metrics.ev,
           qi: metrics.qi,
           price_qi: metrics.price_qi
@@ -422,6 +467,7 @@ async function main() {
           const odds = Number(Number(found.outcome.price).toFixed(2));
           const metrics = runVectorCalculations(prop.model_price, odds);
           const modelProbability = Number(((1 / Number(prop.model_price)) * 100).toFixed(1));
+          const noVigProbability = devigBookProbability(bookmaker, found.marketKey, found.outcome);
           const row = {
             selection: `${prop.player}: ${prop.market}`,
             category: 'Player Prop',
@@ -433,6 +479,7 @@ async function main() {
             current_odds: odds,
             au_bookie: bookmaker.title || bookmaker.key,
             bookmaker_key: bookmaker.key,
+            devig_book_probability: noVigProbability,
             ev: metrics.ev,
             qi: metrics.qi,
             price_qi: metrics.price_qi
@@ -443,6 +490,7 @@ async function main() {
             bookmaker_key: row.bookmaker_key,
             oddsapi_market: row.oddsapi_market,
             current_odds: row.current_odds,
+            devig_book_probability: row.devig_book_probability,
             ev: row.ev,
             qi: row.qi,
             price_qi: row.price_qi,
