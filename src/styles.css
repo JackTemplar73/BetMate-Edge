@@ -375,8 +375,115 @@ h3 {
 .high-value-section,
 .match-model-section,
 .sportsbook-scan-section,
-.player-prop-watchlist {
+.player-prop-watchlist,
+.sharpness-section {
   margin-bottom: 22px;
+}
+
+.sharpness-card {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  gap: 16px;
+  margin-top: 16px;
+  padding: 16px;
+  border: 1px solid rgba(245, 188, 66, 0.34);
+  border-radius: 8px;
+  background: rgba(245, 188, 66, 0.08);
+}
+
+.sharpness-score {
+  display: grid;
+  gap: 6px;
+  align-content: center;
+  min-height: 142px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.sharpness-score span,
+.sharpness-grid span {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sharpness-score strong {
+  color: var(--gold);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.sharpness-score em {
+  color: var(--text);
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 850;
+  line-height: 1.3;
+}
+
+.sharpness-copy {
+  align-self: center;
+}
+
+.sharpness-copy p,
+.sharpness-actions p {
+  margin: 0 0 10px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.sharpness-copy p:last-child,
+.sharpness-actions p:last-child {
+  margin-bottom: 0;
+}
+
+.sharpness-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.sharpness-grid article,
+.sharpness-actions {
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.sharpness-grid strong {
+  display: block;
+  margin: 8px 0 6px;
+  font-size: 26px;
+  line-height: 1;
+}
+
+.sharpness-grid p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.sharpness-actions {
+  margin-top: 10px;
+}
+
+.sharpness-actions h3 {
+  margin-bottom: 10px;
+}
+
+.sharpness-actions ol {
+  display: grid;
+  gap: 8px;
+  margin: 0 0 12px;
+  padding-left: 20px;
+  color: var(--muted);
+  line-height: 1.45;
 }
 
 .high-value-list,
@@ -1089,6 +1196,11 @@ dd {
   }
 
   .model-insight-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sharpness-card,
+  .sharpness-grid {
     grid-template-columns: 1fr;
   }
 
