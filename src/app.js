@@ -458,7 +458,7 @@ function renderViewTabs() {
   const completedCount = document.querySelector('[data-completed-count]');
   const resultsCount = document.querySelector('[data-results-count]');
 
-  if (historyCount) historyCount.textContent = state.betHistory.length || flattenMarkets(getUpcomingFixtures()).length;
+  if (historyCount) historyCount.textContent = getQualifiedHistoryBets().length || flattenMarkets(getUpcomingFixtures()).length;
   if (completedCount) completedCount.textContent = getCompletedFixtures().length;
   if (resultsCount) resultsCount.textContent = getSettledBets().length;
 }
@@ -1163,9 +1163,7 @@ function renderFixturePanels() {
 function renderBetHistory() {
   const tableBody = document.querySelector('[data-history-table]');
   const rows = state.betHistory.length > 0
-    ? [...state.betHistory]
-      .filter((bet) => Number(bet.opening_qi) >= 70)
-      .sort(sortHistoryRows)
+    ? getQualifiedHistoryBets().sort(sortHistoryRows)
     : flattenMarkets(getUpcomingFixtures())
       .filter((market) => market.metrics.qi >= 70)
       .map((market) => ({
@@ -1207,6 +1205,10 @@ function renderBetHistory() {
   `).join('');
 }
 
+function getQualifiedHistoryBets() {
+  return state.betHistory.filter((bet) => Number(bet.opening_qi) >= 70 && Number(bet.current_qi) >= 70);
+}
+
 function renderHistoryResultSummary(rows) {
   const container = document.querySelector('[data-history-result-summary]');
   if (!container) return;
@@ -1235,8 +1237,7 @@ function renderHistoryResultSummary(rows) {
 }
 
 function getSettledBets() {
-  return state.betHistory
-    .filter((bet) => Number(bet.opening_qi) >= 70)
+  return getQualifiedHistoryBets()
     .filter((bet) => isSettledResult(bet))
     .sort((a, b) => {
       const settledDiff = Date.parse(b.settled_at || '') - Date.parse(a.settled_at || '');
