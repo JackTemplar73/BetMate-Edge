@@ -1317,7 +1317,6 @@ function renderMarkovSummaryTab(fixture) {
     <section class="match-detail-panel">
       <div class="inline-section-heading">
         <h3>Markov Summary</h3>
-        <p>Plain-English model read, key coefficients and strongest probability selections for this match.</p>
       </div>
       <p class="lineup-note">${plainGameNotes[fixture.match_name] || fixture.tactical_summary}</p>
       <div class="coefficient-grid">
