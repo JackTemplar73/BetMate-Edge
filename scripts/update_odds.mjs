@@ -438,8 +438,8 @@ function applyFotMobLineups(fixture, details, nowIso) {
   const infoBox = details?.content?.matchFacts?.infoBox || {};
   fixture.confirmed_lineups = {
     status: 'confirmed',
-    source: 'FotMob match details',
-    source_url: `https://www.fotmob.com/match/${details.general?.matchId || lineup.matchId}`,
+    source: 'Confirmed match centre',
+    source_url: null,
     checked_at: nowIso,
     referee: infoBox.Referee?.text || fixture.referee_name,
     venue: infoBox.Stadium?.name || '',
@@ -458,12 +458,12 @@ function applyFotMobLineups(fixture, details, nowIso) {
   if (infoBox.Referee?.text) {
     fixture.referee_name = `${infoBox.Referee.text}${infoBox.Referee.country ? ` (${infoBox.Referee.country})` : ''}`;
     fixture.referee_status = 'verified';
-    fixture.referee_source = 'FotMob match details';
+    fixture.referee_source = 'Confirmed match centre';
   }
 
   if (infoBox.Stadium?.surface) {
     fixture.pitch_type = infoBox.Stadium.surface;
-    fixture.pitch_constraints = `${infoBox.Stadium.name || 'Venue'} surface listed by FotMob as ${infoBox.Stadium.surface}.`;
+    fixture.pitch_constraints = `${infoBox.Stadium.name || 'Venue'} is being treated as a ${infoBox.Stadium.surface}-surface match.`;
   }
 
   return true;
@@ -489,7 +489,7 @@ async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date
 
     const fotmobMatch = findFotMobMatch(matchCache.get(date), fixture);
     fixture.lineup_last_checked = nowIso;
-    fixture.lineup_check_source = 'FotMob match details';
+    fixture.lineup_check_source = 'Confirmed match centre';
 
     if (!fotmobMatch?.id) {
       fixture.lineup_check_status = 'match_not_found';
@@ -497,7 +497,7 @@ async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date
     }
 
     const details = await fetchFotMobMatchDetails(fotmobMatch.id);
-    fixture.fotmob_match_id = fotmobMatch.id;
+    fixture.external_lineup_match_id = fotmobMatch.id;
     fixture.lineup_check_status = applyFotMobLineups(fixture, details, nowIso)
       ? 'confirmed'
       : 'not_available_yet';

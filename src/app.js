@@ -52,7 +52,7 @@ const plainMarketNames = {
 
 const plainGameNotes = {
   'USA vs Paraguay': 'USA are expected to have more of the ball. Paraguay may need to defend for long spells, so the card bet on Omar Alderete stands out.',
-  'Australia vs Turkiye': 'Australia start with a back three and direct pace through Irankunda, while Turkey start their main creative players. Turkey deserve favouritism, but the best current model read is Over 2.5 Goals.',
+  'Australia vs Turkiye': 'Confirmed teams give Turkey the stronger attacking setup. At current prices, the model prefers the goals angle over the winner market: Over 2.5 Goals is the main value read.',
   'Brazil vs Morocco': 'Brazil should create pressure, but Morocco are set up to defend well. The handicap on Morocco gives protection if Brazil only win by one goal.',
   'Qatar vs Switzerland': 'Switzerland should control the tempo, while Qatar sit deep. That points toward a low-scoring game.',
   'Haiti vs Scotland': 'Scotland look better suited to control the match. Haiti rely on speed, but the surface may make those breakaway attacks harder.'
@@ -1024,7 +1024,7 @@ function renderConfirmedLineupsBlock(fixture) {
     <section class="lineups-block">
       <div class="inline-section-heading">
         <h3>Confirmed Lineups</h3>
-        <p>${lineups.source || 'Verified source'} | ${lineups.checked_at ? `Checked ${new Date(lineups.checked_at).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}` : 'Checked'}</p>
+        <p>Lineups confirmed${lineups.checked_at ? ` | Checked ${new Date(lineups.checked_at).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}` : ''}</p>
       </div>
       <div class="lineup-note">${lineups.model_implication || 'Lineups are confirmed and included in the model view.'}</div>
       <div class="lineup-grid">
@@ -1088,7 +1088,7 @@ function renderFixturePanels() {
         <div class="fixture-meta">
           <span class="price-freshness ${freshness.className}"><strong>Price check:</strong> ${freshness.label}<em>${freshness.detail}</em></span>
           <span><strong>Pitch note:</strong> ${fixture.pitch_constraints}</span>
-          <span><strong>Referee implication:</strong> ${fixture.referee_tendencies} ${fixture.referee_source ? `<em>${fixture.referee_source}</em>` : ''}</span>
+          <span><strong>Referee implication:</strong> ${fixture.referee_tendencies}</span>
         </div>
         ${lineupsHtml}
         <div class="market-grid">

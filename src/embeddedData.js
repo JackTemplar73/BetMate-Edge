@@ -2251,10 +2251,10 @@ window.embeddedDataset = [
     "match_name": "Australia vs Turkiye",
     "kickoff_time_aest": "2026-06-14T14:00:00",
     "pitch_type": "grass",
-    "pitch_constraints": "BC Place Vancouver surface listed by FotMob as grass.",
+    "pitch_constraints": "BC Place Vancouver is being treated as a grass-surface match. No synthetic-turf edge is applied.",
     "referee_name": "Jesús Noel Valenzuela Sáez (Venezuela)",
     "referee_tendencies": "Verified referee: Jesús Noel Valenzuela Sáez. Likely implication: allows some physical contact, but late recovery tackles and tactical stopping fouls can still draw cards.",
-    "tactical_summary": "Australia start with a back three and direct pace through Irankunda, with Touré leading the line. Turkey start a strong creative group with Çalhanoğlu, Arda Güler, Kökcü, Yilmaz and Aktürkoglu, so their attack has more confirmed quality than the early placeholder view. The main betting read is now cleaner: Turkey deserve favouritism, but Over 2.5 Goals is the standout value from the current AU market scan.",
+    "tactical_summary": "Confirmed teams give Turkey the stronger attacking setup. At current prices, the model prefers the goals angle over the winner market: Over 2.5 Goals is the main value read.",
     "markets": [
       {
         "market_matrix": "Full Match Model",
@@ -2309,7 +2309,7 @@ window.embeddedDataset = [
     "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
-    "referee_source": "FotMob match details",
+    "referee_source": "Confirmed match centre",
     "odds_last_checked": "2026-06-14T03:57:52.069Z",
     "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 564084f52cc9f1abcc18187c168a7cdc.",
@@ -3154,8 +3154,8 @@ window.embeddedDataset = [
     },
     "confirmed_lineups": {
       "status": "confirmed",
-      "source": "FotMob match details",
-      "source_url": "https://www.fotmob.com/match/4667772",
+      "source": "Confirmed match centre",
+      "source_url": null,
       "checked_at": "2026-06-14T03:57:52.069Z",
       "referee": "Jesús Noel Valenzuela Sáez",
       "venue": "BC Place Vancouver",
@@ -3227,9 +3227,9 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Australia vs Turkiye. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_last_checked": "2026-06-14T03:57:52.069Z",
-    "lineup_check_source": "FotMob match details",
-    "fotmob_match_id": 4667772,
-    "lineup_check_status": "confirmed"
+    "lineup_check_source": "Confirmed match centre",
+    "lineup_check_status": "confirmed",
+    "external_lineup_match_id": 4667772
   },
   {
     "match_name": "Germany vs Curaçao",
