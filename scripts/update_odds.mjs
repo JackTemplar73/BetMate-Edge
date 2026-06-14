@@ -804,7 +804,76 @@ function cardedPlayers(result) {
     .map((athlete) => normalise(athlete.displayName || athlete.fullName || athlete.shortName));
 }
 
-function settleAgainstScore(entry, result) {
+function playerTeamFromFixture(playerName, fixture) {
+  const player = normalise(playerName);
+  if (!player || !fixture?.confirmed_lineups) return null;
+
+  const homePlayers = [
+    ...(fixture.confirmed_lineups.home_starting_xi || []),
+    ...(fixture.confirmed_lineups.home_substitutes || [])
+  ].map(normalise);
+  const awayPlayers = [
+    ...(fixture.confirmed_lineups.away_starting_xi || []),
+    ...(fixture.confirmed_lineups.away_substitutes || [])
+  ].map(normalise);
+
+  if (homePlayers.includes(player)) return 'home';
+  if (awayPlayers.includes(player)) return 'away';
+  return null;
+}
+
+function settleTotalSelection(selectionText, result) {
+  const point = numberFromSelection(selectionText);
+  if (!Number.isFinite(point)) return null;
+
+  const selection = normalise(selectionText);
+  const total = result.homeScore + result.awayScore;
+  if (selection.includes('under')) {
+    if (total < point) return 'won';
+    if (total > point) return 'lost';
+    return 'push';
+  }
+
+  if (selection.includes('over')) {
+    if (total > point) return 'won';
+    if (total < point) return 'lost';
+    return 'push';
+  }
+
+  return null;
+}
+
+function settleTeamTotalSelection(entry, selection, result) {
+  const point = numberFromSelection(entry.target_selection);
+  if (!Number.isFinite(point)) return null;
+
+  const home = normalise(result.homeName);
+  const away = normalise(result.awayName);
+  const team = normalise(String(entry.target_selection)
+    .replace(/\bover\b/gi, '')
+    .replace(/\bunder\b/gi, '')
+    .replace(/\bgoals?\b/gi, '')
+    .replace(/[()+-]?\d+(?:\.\d+)?/g, '')
+    .trim());
+  const goals = team === home ? result.homeScore : team === away ? result.awayScore : null;
+  if (!Number.isFinite(goals)) return null;
+
+  if (selection.includes('under')) {
+    if (goals < point) return 'won';
+    if (goals > point) return 'lost';
+    return 'push';
+  }
+
+  if (selection.includes('over')) {
+    if (goals > point) return 'won';
+    if (goals < point) return 'lost';
+    return 'push';
+  }
+
+  return null;
+}
+
+function settleAgainstScore(entry, result, fixture = null) {
   const selection = normalise(entry.target_selection);
   const home = normalise(result.homeName);
   const away = normalise(result.awayName);
@@ -848,22 +917,12 @@ function settleAgainstScore(entry, result) {
     return 'push';
   }
 
-  if (entry.market_matrix === 'Totals') {
-    const point = numberFromSelection(entry.target_selection);
-    if (!Number.isFinite(point)) return null;
+  if (entry.market_matrix === 'Totals' || entry.market_matrix === 'Goal Totals') {
+    return settleTotalSelection(entry.target_selection, result);
+  }
 
-    const total = result.homeScore + result.awayScore;
-    if (selection.includes('under')) {
-      if (total < point) return 'won';
-      if (total > point) return 'lost';
-      return 'push';
-    }
-
-    if (selection.includes('over')) {
-      if (total > point) return 'won';
-      if (total < point) return 'lost';
-      return 'push';
-    }
+  if (entry.market_matrix === 'Team Totals') {
+    return settleTeamTotalSelection(entry, selection, result);
   }
 
   if (entry.market_matrix === 'Player Prop' && selection.includes('card')) {
@@ -874,6 +933,14 @@ function settleAgainstScore(entry, result) {
     return cards.includes(player) ? 'won' : 'lost';
   }
 
+  if (entry.market_matrix === 'Player Prop' && (selection.includes('goal or assist') || selection.includes('score or assist'))) {
+    const playerName = String(entry.target_selection).split(':')[0];
+    const playerTeam = playerTeamFromFixture(playerName, fixture);
+    if (playerTeam === 'home' && result.homeScore === 0) return 'lost';
+    if (playerTeam === 'away' && result.awayScore === 0) return 'lost';
+    return null;
+  }
+
   return null;
 }
 
@@ -882,7 +949,7 @@ function settleHistoryResults(entries, dataset, espnEvents, fifaReports = [], no
   const fixtureByName = new Map(dataset.map((fixture) => [normalise(fixture.match_name), fixture]));
 
   for (const entry of entries) {
-    if (entry.result_status && entry.result_status !== 'pending') continue;
+    const previousStatus = entry.result_status || 'pending';
 
     const fixture = fixtureByName.get(normalise(entry.match_name));
     if (!fixture) continue;
@@ -896,24 +963,30 @@ function settleHistoryResults(entries, dataset, espnEvents, fifaReports = [], no
     const result = fifaResult || (event ? eventResult(event) : null);
 
     if (!result) {
-      entry.result_status = 'pending';
-      entry.result_detail = 'Result not verified yet. Will check again on the next automatic refresh.';
+      if (previousStatus === 'pending') {
+        entry.result_status = 'pending';
+        entry.result_detail = 'Result not verified yet. Will check again on the next automatic refresh.';
+      }
       continue;
     }
 
-    const status = settleAgainstScore(entry, result);
+    const status = settleAgainstScore(entry, result, fixture);
     if (!status) {
-      entry.result_status = 'pending';
-      entry.result_detail = `Final score verified: ${resultLine(result)}. This market needs a more detailed settlement feed.`;
-      entry.settlement_source = result.source;
+      if (previousStatus === 'pending') {
+        entry.result_status = 'pending';
+        entry.result_detail = `Final score verified: ${resultLine(result)}. This market needs a more detailed settlement feed.`;
+        entry.settlement_source = result.source;
+      }
       continue;
     }
 
     entry.result_status = status;
     entry.result_detail = `${result.sourceLabel || 'ESPN'} final: ${resultLine(result)}.`;
     entry.settlement_source = result.source;
-    entry.settled_at = now.toISOString();
-    settled += 1;
+    if (previousStatus !== status || !entry.settled_at) {
+      entry.settled_at = now.toISOString();
+      settled += 1;
+    }
   }
 
   return settled;
