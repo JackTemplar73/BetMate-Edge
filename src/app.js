@@ -1458,7 +1458,7 @@ function formatBetSavedCell(bet) {
   return `
     <span class="primary-cell">${savedText}</span>
     <span class="sub-cell">Opening ${formatHistoryPrice(bet.opening_odds)}</span>
-    <span class="sub-cell">QI ${formatQiBadge(bet.opening_qi)}</span>
+    <span class="sub-cell">${formatQiBadge(bet.opening_qi)}</span>
   `;
 }
 
@@ -1533,7 +1533,7 @@ function formatOpeningLineOnly(bet) {
   return `
     <span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span>
     <span class="sub-cell">Opening line</span>
-    <span class="sub-cell">QI ${formatQiBadge(bet.opening_qi)}</span>
+    <span class="sub-cell">${formatQiBadge(bet.opening_qi)}</span>
   `;
 }
 
@@ -1548,6 +1548,7 @@ function formatLatestOrClosingPrice(bet) {
     return `
       <span class="primary-cell">${formatHistoryPrice(bet.closing_odds)}</span>
       <span class="sub-cell confirmed-text">Closing price</span>
+      <span class="sub-cell">${formatClosingQiLabel(bet)}</span>
       ${formatCapturedAt(bet.closing_captured_at)}
       ${formatCurrentSignal(bet)}
     `;
@@ -1557,6 +1558,7 @@ function formatLatestOrClosingPrice(bet) {
     return `
       <span class="primary-cell">${formatHistoryPrice(bet.estimated_closing_odds)}</span>
       <span class="sub-cell warning-text">Latest price</span>
+      <span class="sub-cell">${formatClosingQiLabel(bet)}</span>
       ${formatCapturedAt(bet.last_seen_at)}
       ${formatCurrentSignal(bet)}
     `;
@@ -1565,8 +1567,14 @@ function formatLatestOrClosingPrice(bet) {
   return `
     <span class="primary-cell">${formatHistoryPrice(bet.current_odds)}</span>
     <span class="sub-cell">${formatLatestPriceLabel(bet)}</span>
+    <span class="sub-cell">${formatClosingQiLabel(bet)}</span>
     ${formatCurrentSignal(bet)}
   `;
+}
+
+function formatClosingQiLabel(bet) {
+  const label = Number.isFinite(Number(bet.closing_odds)) ? 'Closing QI' : 'Latest QI';
+  return formatQiBadge(getClosingQi(bet), label);
 }
 
 function formatLatestPriceLabel(bet) {
