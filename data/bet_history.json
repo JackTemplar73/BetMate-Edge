@@ -24,7 +24,7 @@
     "current_model_price": 14.49,
     "current_ev": 44.93,
     "current_qi": 85,
-    "last_seen_at": "2026-06-14T01:39:23.269Z"
+    "last_seen_at": "2026-06-14T02:12:17.051Z"
   },
   {
     "bet_id": "15962282b61f0b9f",
@@ -51,7 +51,7 @@
     "current_model_price": 34.28,
     "current_ev": 19.6,
     "current_qi": 78,
-    "last_seen_at": "2026-06-14T01:39:23.269Z"
+    "last_seen_at": "2026-06-14T02:12:17.051Z"
   },
   {
     "bet_id": "cb0529d26ebe1a93",
@@ -72,7 +72,7 @@
     "current_model_price": 10.82,
     "current_ev": 10.91,
     "current_qi": 77,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null
@@ -102,7 +102,7 @@
     "current_model_price": 24.71,
     "current_ev": 5.22,
     "current_qi": 70,
-    "last_seen_at": "2026-06-14T01:39:23.269Z"
+    "last_seen_at": "2026-06-14T02:12:17.051Z"
   },
   {
     "bet_id": "59153a72676e781d",
@@ -129,7 +129,7 @@
     "current_model_price": 14.14,
     "current_ev": 6.08,
     "current_qi": 72,
-    "last_seen_at": "2026-06-14T01:39:23.269Z"
+    "last_seen_at": "2026-06-14T02:12:17.051Z"
   },
   {
     "bet_id": "7472d2164ed6dbd6",
@@ -156,7 +156,7 @@
     "current_model_price": 5.25,
     "current_ev": 9.52,
     "current_qi": 78,
-    "last_seen_at": "2026-06-14T01:39:23.269Z"
+    "last_seen_at": "2026-06-14T02:12:17.051Z"
   },
   {
     "bet_id": "0cd2e7e6b50a9dfa",
@@ -177,7 +177,7 @@
     "current_model_price": 2.6,
     "current_ev": 44.62,
     "current_qi": 95,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 3.76,
@@ -207,7 +207,7 @@
     "current_model_price": 1.78,
     "current_ev": 12.36,
     "current_qi": 86,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 2,
@@ -237,7 +237,7 @@
     "current_model_price": 1.78,
     "current_ev": 9.55,
     "current_qi": 83,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 1.95,
@@ -267,7 +267,7 @@
     "current_model_price": 5.8,
     "current_ev": 12.07,
     "current_qi": 79,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "closing_status": "missing_fresh_close",
     "estimated_closing_odds": 6.5,
@@ -303,7 +303,7 @@
     "current_model_price": 14.66,
     "current_ev": 1612.14,
     "current_qi": 100,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "settled_at": "2026-06-13T22:15:27.852Z"
@@ -333,7 +333,7 @@
     "current_model_price": 6.47,
     "current_ev": 224.57,
     "current_qi": 99,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "settled_at": "2026-06-13T22:15:27.852Z"
@@ -363,7 +363,7 @@
     "current_model_price": 6.47,
     "current_ev": 8.19,
     "current_qi": 76,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "settled_at": "2026-06-13T22:15:27.852Z"
@@ -387,7 +387,7 @@
     "current_model_price": 1.42,
     "current_ev": 2083.1,
     "current_qi": 100,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "result_status": "lost",
     "result_detail": "ESPN final: Brazil 1-1 Morocco.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760419/morocco-brazil",
@@ -423,37 +423,37 @@
     "current_model_price": 5.76,
     "current_ev": 264.58,
     "current_qi": 100,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff",
     "settled_at": "2026-06-14T01:02:30.916Z"
   },
   {
-    "bet_id": "e6a2acee4c7ca32a",
+    "bet_id": "5f8594e44782db41",
     "match_name": "Haiti vs Scotland",
     "kickoff_time_aest": "2026-06-14T11:00:00",
     "market_matrix": "Full Match Model",
     "target_selection": "Haiti to Win",
-    "au_bookie": "PointsBet",
-    "first_seen_at": "2026-06-14T01:39:23.269Z",
-    "opening_odds": 10,
+    "au_bookie": "TAB",
+    "first_seen_at": "2026-06-14T02:12:17.051Z",
+    "opening_odds": 11,
     "opening_model_price": 5.9,
-    "opening_ev": 69.49,
-    "opening_qi": 93,
+    "opening_ev": 86.44,
+    "opening_qi": 96,
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "estimated_closing_odds": 10,
+    "estimated_closing_odds": 11,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Estimated from nearest saved price; not an official closing line.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
-    "current_odds": 10,
+    "current_odds": 11,
     "current_model_price": 5.9,
-    "current_ev": 69.49,
-    "current_qi": 93,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "current_ev": 86.44,
+    "current_qi": 96,
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff"
   },
@@ -482,7 +482,7 @@
     "current_model_price": 4.33,
     "current_ev": 9.7,
     "current_qi": 79,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "closing_status": "missing_fresh_close",
     "closing_source": "No confirmed live check in the final 30 minutes before kickoff"
   },
@@ -505,7 +505,7 @@
     "current_model_price": 1.65,
     "current_ev": -20.61,
     "current_qi": 2,
-    "last_seen_at": "2026-06-14T01:39:23.269Z",
+    "last_seen_at": "2026-06-14T02:12:17.051Z",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
