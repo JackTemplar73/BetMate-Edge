@@ -93,12 +93,12 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -431,7 +431,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -618,11 +618,11 @@ window.embeddedDataset = [
         "odds_refresh_note": "BetRight was not present in the matched Odds API event."
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries",
@@ -956,7 +956,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -1049,11 +1049,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -1386,7 +1386,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M08-QAT-V-SUI.pdf",
     "final_score": "Qatar 1-1 Switzerland"
@@ -1480,11 +1480,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -1817,7 +1817,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR.pdf",
     "final_score": "Brazil 1-1 Morocco"
@@ -1926,11 +1926,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -2263,7 +2263,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M05-HAI-V-SCO.pdf",
     "final_score": "Haiti 0-1 Scotland"
@@ -2353,11 +2353,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -2768,7 +2768,7 @@ window.embeddedDataset = [
     "lineup_check_source": "Confirmed match centre",
     "lineup_check_status": "confirmed",
     "external_lineup_match_id": 4667772,
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -2820,11 +2820,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -3157,16 +3157,16 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet",
-    "lineup_last_checked": "2026-06-14T23:46:55.175Z",
+    "lineup_last_checked": "2026-06-14T23:52:46.040Z",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667777,
     "confirmed_lineups": {
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-14T23:46:55.175Z",
+      "checked_at": "2026-06-14T23:52:46.040Z",
       "referee": "Jalal Jayed",
       "venue": "Houston Stadium",
       "surface": "grass",
@@ -3289,11 +3289,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -3626,16 +3626,16 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet",
-    "lineup_last_checked": "2026-06-14T23:46:55.175Z",
+    "lineup_last_checked": "2026-06-14T23:52:46.040Z",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667783,
     "confirmed_lineups": {
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-14T23:46:55.175Z",
+      "checked_at": "2026-06-14T23:52:46.040Z",
       "referee": "Ismail Elfath",
       "venue": "Dallas Stadium",
       "surface": "grass",
@@ -3898,11 +3898,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -4775,9 +4775,9 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet",
-    "lineup_last_checked": "2026-06-14T23:46:55.175Z",
+    "lineup_last_checked": "2026-06-14T23:52:46.040Z",
     "lineup_check_source": "FotMob match centre",
     "lineup_check_status": "confirmed",
     "external_lineup_match_id": 4667778,
@@ -4785,7 +4785,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-14T23:46:55.175Z",
+      "checked_at": "2026-06-14T23:52:46.040Z",
       "referee": "Michael Oliver",
       "venue": "Philadelphia Stadium",
       "surface": "grass",
@@ -4870,51 +4870,53 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Sweden to Win",
         "true_price": 2.01,
-        "current_odds": 1.96,
+        "current_odds": 1.95,
         "au_bookie": "Betfair",
-        "devig_book_probability": 50.8,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
-        "odds_updated_at": "2026-06-14T23:36:35.374Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 50.91,
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
+        "odds_updated_at": "2026-06-14T23:52:46.040Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "previous_odds": 1.95
+        "previous_odds": 1.96
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Tunisia to Win",
         "true_price": 4.47,
-        "current_odds": 4.8,
+        "current_odds": 4.7,
         "au_bookie": "Betfair",
-        "devig_book_probability": 20.75,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
-        "odds_updated_at": "2026-06-14T23:15:58.963Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 21.12,
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
+        "odds_updated_at": "2026-06-14T23:52:46.040Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
-        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
+        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
+        "previous_odds": 4.8
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.59,
-        "current_odds": 3.5,
+        "current_odds": 3.55,
         "au_bookie": "Betfair",
-        "devig_book_probability": 28.45,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
-        "odds_updated_at": "2026-06-14T23:15:58.963Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 27.97,
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
+        "odds_updated_at": "2026-06-14T23:52:46.040Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
-        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
+        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
+        "previous_odds": 3.5
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event b55f9569de3f4d731bc5537ff5ff43e4.",
     "model_totals_25": {
@@ -5242,7 +5244,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "b55f9569de3f4d731bc5537ff5ff43e4",
       "offered_market_keys": [
@@ -5441,13 +5443,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 49.8,
           "model_price": 2.01,
-          "current_odds": 1.96,
+          "current_odds": 1.95,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 50.8,
-          "ev": -2.49,
+          "devig_book_probability": 50.91,
+          "ev": -2.99,
           "qi": 40,
-          "price_qi": 35
+          "price_qi": 33
         },
         {
           "selection": "Over 4.5 Goals",
@@ -5464,22 +5466,6 @@ window.embeddedDataset = [
           "ev": 12.11,
           "qi": 38,
           "price_qi": 79
-        },
-        {
-          "selection": "Tunisia to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 22.4,
-          "model_price": 4.47,
-          "current_odds": 4.8,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 20.75,
-          "ev": 7.38,
-          "qi": 38,
-          "price_qi": 76
         },
         {
           "selection": "Sweden or Draw",
@@ -5562,6 +5548,22 @@ window.embeddedDataset = [
           "price_qi": 5
         },
         {
+          "selection": "Tunisia to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 22.4,
+          "model_price": 4.47,
+          "current_odds": 4.7,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 21.12,
+          "ev": 5.15,
+          "qi": 36,
+          "price_qi": 72
+        },
+        {
           "selection": "Tunisia or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -5626,6 +5628,22 @@ window.embeddedDataset = [
           "price_qi": 11
         },
         {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 27.9,
+          "model_price": 3.59,
+          "current_odds": 3.55,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 27.97,
+          "ev": -1.11,
+          "qi": 30,
+          "price_qi": 43
+        },
+        {
           "selection": "BTTS No",
           "category": "Main Match",
           "market": "Both Teams To Score",
@@ -5672,22 +5690,6 @@ window.embeddedDataset = [
           "ev": 0.67,
           "qi": 27,
           "price_qi": 53
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 27.9,
-          "model_price": 3.59,
-          "current_odds": 3.5,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 28.45,
-          "ev": -2.51,
-          "qi": 27,
-          "price_qi": 36
         },
         {
           "selection": "Match to end in a Draw",
@@ -5851,16 +5853,16 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet",
-    "lineup_last_checked": "2026-06-14T23:46:55.175Z",
+    "lineup_last_checked": "2026-06-14T23:52:46.040Z",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667784,
     "confirmed_lineups": {
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-14T23:46:55.175Z",
+      "checked_at": "2026-06-14T23:52:46.040Z",
       "referee": "Yael Falcón Pérez",
       "venue": "Monterrey Stadium",
       "surface": "grass",
@@ -5916,7 +5918,7 @@ window.embeddedDataset = [
         "true_price": 1.15,
         "current_odds": 1.1,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T22:42:40.329Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
@@ -5928,16 +5930,16 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Cape Verde to Win",
         "true_price": 24.71,
-        "current_odds": 36,
+        "current_odds": 38,
         "au_bookie": "Betfair",
-        "devig_book_probability": 2.75,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
-        "odds_updated_at": "2026-06-14T23:36:35.374Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 2.61,
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
+        "odds_updated_at": "2026-06-14T23:52:46.040Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "previous_odds": 32
+        "previous_odds": 36
       },
       {
         "market_matrix": "Full Match Model",
@@ -5945,8 +5947,8 @@ window.embeddedDataset = [
         "true_price": 10.82,
         "current_odds": 15.5,
         "au_bookie": "Betfair",
-        "devig_book_probability": 6.39,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "devig_book_probability": 6.4,
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:36:35.374Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -5955,11 +5957,11 @@ window.embeddedDataset = [
         "previous_odds": 16
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event c54f00b11925751d2b62988775c6c239.",
     "model_totals_25": {
@@ -6287,7 +6289,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "c54f00b11925751d2b62988775c6c239",
       "offered_market_keys": [
@@ -6376,7 +6378,7 @@ window.embeddedDataset = [
           "current_odds": 15.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 6.39,
+          "devig_book_probability": 6.4,
           "ev": 43.25,
           "qi": 40,
           "price_qi": 86
@@ -6392,7 +6394,7 @@ window.embeddedDataset = [
           "current_odds": 1.09,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 90.86,
+          "devig_book_probability": 90.99,
           "ev": -5.22,
           "qi": 40,
           "price_qi": 15
@@ -6478,6 +6480,22 @@ window.embeddedDataset = [
           "price_qi": 5
         },
         {
+          "selection": "Cape Verde to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 4,
+          "model_price": 24.71,
+          "current_odds": 38,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 2.61,
+          "ev": 53.78,
+          "qi": 36,
+          "price_qi": 84
+        },
+        {
           "selection": "Under 3.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -6492,22 +6510,6 @@ window.embeddedDataset = [
           "ev": -6.57,
           "qi": 36,
           "price_qi": 21
-        },
-        {
-          "selection": "Cape Verde to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 4,
-          "model_price": 24.71,
-          "current_odds": 36,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 2.75,
-          "ev": 45.69,
-          "qi": 35,
-          "price_qi": 83
         },
         {
           "selection": "Over 3.5 Goals",
@@ -6702,7 +6704,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -6721,7 +6723,7 @@ window.embeddedDataset = [
         "current_odds": 6.2,
         "au_bookie": "Betfair",
         "devig_book_probability": 16.01,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -6735,7 +6737,7 @@ window.embeddedDataset = [
         "current_odds": 4.1,
         "au_bookie": "Betfair",
         "devig_book_probability": 24.21,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -6743,11 +6745,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event fbfb95c62003fd6d828b309f96ee1f9b.",
     "model_totals_25": {
@@ -7075,7 +7077,7 @@ window.embeddedDataset = [
         "Neds",
         "Betfair"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "fbfb95c62003fd6d828b309f96ee1f9b",
       "offered_market_keys": [
@@ -7604,7 +7606,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -7623,7 +7625,7 @@ window.embeddedDataset = [
         "current_odds": 8.4,
         "au_bookie": "Betfair",
         "devig_book_probability": 11.79,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -7637,7 +7639,7 @@ window.embeddedDataset = [
         "current_odds": 1.52,
         "au_bookie": "Betfair",
         "devig_book_probability": 65.17,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -7651,7 +7653,7 @@ window.embeddedDataset = [
         "current_odds": 4.3,
         "au_bookie": "Betfair",
         "devig_book_probability": 23.04,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -7659,11 +7661,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 64b91c5f2db61c7358a4f05459e83c52.",
     "model_totals_25": {
@@ -7991,7 +7993,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "64b91c5f2db61c7358a4f05459e83c52",
       "offered_market_keys": [
@@ -8600,7 +8602,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -8619,7 +8621,7 @@ window.embeddedDataset = [
         "current_odds": 1.98,
         "au_bookie": "Betfair",
         "devig_book_probability": 50.12,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -8633,7 +8635,7 @@ window.embeddedDataset = [
         "current_odds": 4.7,
         "au_bookie": "Betfair",
         "devig_book_probability": 21.11,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -8647,7 +8649,7 @@ window.embeddedDataset = [
         "current_odds": 3.45,
         "au_bookie": "Betfair",
         "devig_book_probability": 28.76,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -8655,11 +8657,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event ec51b9c44ad5e34552f3ab53f7262813.",
     "model_totals_25": {
@@ -8987,7 +8989,7 @@ window.embeddedDataset = [
         "Neds",
         "Betfair"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "ec51b9c44ad5e34552f3ab53f7262813",
       "offered_market_keys": [
@@ -9596,7 +9598,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -9615,7 +9617,7 @@ window.embeddedDataset = [
         "current_odds": 1.51,
         "au_bookie": "Betfair",
         "devig_book_probability": 65.92,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -9629,7 +9631,7 @@ window.embeddedDataset = [
         "current_odds": 8,
         "au_bookie": "Betfair",
         "devig_book_probability": 12.44,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -9643,7 +9645,7 @@ window.embeddedDataset = [
         "current_odds": 4.6,
         "au_bookie": "Betfair",
         "devig_book_probability": 21.64,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -9651,11 +9653,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 73a4fcd14cc9766b9b9bfd50b8ca153a.",
     "model_totals_25": {
@@ -9983,7 +9985,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "73a4fcd14cc9766b9b9bfd50b8ca153a",
       "offered_market_keys": [
@@ -10592,7 +10594,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -10611,7 +10613,7 @@ window.embeddedDataset = [
         "current_odds": 18.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 5.36,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -10625,7 +10627,7 @@ window.embeddedDataset = [
         "current_odds": 1.21,
         "au_bookie": "Betfair",
         "devig_book_probability": 81.93,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -10639,7 +10641,7 @@ window.embeddedDataset = [
         "current_odds": 7.8,
         "au_bookie": "Betfair",
         "devig_book_probability": 12.71,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -10647,11 +10649,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 4d4f2b9b78182b557d4fbf8dcf4f4af2.",
     "model_totals_25": {
@@ -10979,7 +10981,7 @@ window.embeddedDataset = [
         "SportsBet",
         "Betfair"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "4d4f2b9b78182b557d4fbf8dcf4f4af2",
       "offered_market_keys": [
@@ -11588,7 +11590,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -11607,7 +11609,7 @@ window.embeddedDataset = [
         "current_odds": 1.42,
         "au_bookie": "Betfair",
         "devig_book_probability": 69.55,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -11621,7 +11623,7 @@ window.embeddedDataset = [
         "current_odds": 4.8,
         "au_bookie": "Betfair",
         "devig_book_probability": 20.57,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -11629,11 +11631,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event f31b2ee9e1cc6f7e641467f8237eaa21.",
     "model_totals_25": {
@@ -11961,7 +11963,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "f31b2ee9e1cc6f7e641467f8237eaa21",
       "offered_market_keys": [
@@ -12458,7 +12460,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -12477,7 +12479,7 @@ window.embeddedDataset = [
         "current_odds": 10,
         "au_bookie": "Betfair",
         "devig_book_probability": 9.95,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -12491,7 +12493,7 @@ window.embeddedDataset = [
         "current_odds": 5.7,
         "au_bookie": "Betfair",
         "devig_book_probability": 17.45,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -12499,11 +12501,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 25161cf6cf0cd9be17ae2e7e224a1f45.",
     "model_totals_25": {
@@ -12831,7 +12833,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "25161cf6cf0cd9be17ae2e7e224a1f45",
       "offered_market_keys": [
@@ -13360,7 +13362,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -13379,7 +13381,7 @@ window.embeddedDataset = [
         "current_odds": 12.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 7.97,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -13393,7 +13395,7 @@ window.embeddedDataset = [
         "current_odds": 1.32,
         "au_bookie": "Betfair",
         "devig_book_probability": 75.44,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -13407,7 +13409,7 @@ window.embeddedDataset = [
         "current_odds": 6,
         "au_bookie": "Betfair",
         "devig_book_probability": 16.6,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -13415,11 +13417,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 6cc871c121a1869b4612d3fb22fa9d55.",
     "model_totals_25": {
@@ -13747,7 +13749,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -14324,7 +14326,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -14343,7 +14345,7 @@ window.embeddedDataset = [
         "current_odds": 5.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 18.06,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -14357,7 +14359,7 @@ window.embeddedDataset = [
         "current_odds": 1.77,
         "au_bookie": "Betfair",
         "devig_book_probability": 56.13,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -14371,7 +14373,7 @@ window.embeddedDataset = [
         "current_odds": 3.85,
         "au_bookie": "Betfair",
         "devig_book_probability": 25.81,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -14379,11 +14381,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 689096c8cd7e2753b9fec95321943c5d.",
     "model_totals_25": {
@@ -14711,7 +14713,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -14855,6 +14857,22 @@ window.embeddedDataset = [
           "price_qi": 31
         },
         {
+          "selection": "England to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 54.6,
+          "model_price": 1.83,
+          "current_odds": 1.75,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 54.05,
+          "ev": -4.37,
+          "qi": 40,
+          "price_qi": 27
+        },
+        {
           "selection": "England or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -14962,22 +14980,6 @@ window.embeddedDataset = [
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 55.18,
-          "ev": -7.1,
-          "qi": 37,
-          "price_qi": 19
-        },
-        {
-          "selection": "England to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 54.6,
-          "model_price": 1.83,
-          "current_odds": 1.7,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 54.77,
           "ev": -7.1,
           "qi": 37,
           "price_qi": 19
@@ -15185,7 +15187,7 @@ window.embeddedDataset = [
           "current_odds": 3.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 26.6,
+          "devig_book_probability": 27.03,
           "ev": -8.38,
           "qi": 21,
           "price_qi": 21
@@ -15233,7 +15235,7 @@ window.embeddedDataset = [
           "current_odds": 5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 18.62,
+          "devig_book_probability": 18.92,
           "ev": -3.47,
           "qi": 18,
           "price_qi": 33
@@ -15288,7 +15290,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -15307,7 +15309,7 @@ window.embeddedDataset = [
         "current_odds": 2.26,
         "au_bookie": "Betfair",
         "devig_book_probability": 43.97,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -15321,7 +15323,7 @@ window.embeddedDataset = [
         "current_odds": 3.65,
         "au_bookie": "Betfair",
         "devig_book_probability": 27.23,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -15335,7 +15337,7 @@ window.embeddedDataset = [
         "current_odds": 3.45,
         "au_bookie": "Betfair",
         "devig_book_probability": 28.8,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -15343,11 +15345,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 87afdb85c977b451e1c00f5e3e632601.",
     "model_totals_25": {
@@ -15675,7 +15677,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -16284,7 +16286,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -16303,7 +16305,7 @@ window.embeddedDataset = [
         "current_odds": 1.41,
         "au_bookie": "Betfair",
         "devig_book_probability": 70.32,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -16317,7 +16319,7 @@ window.embeddedDataset = [
         "current_odds": 10.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 9.44,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -16331,7 +16333,7 @@ window.embeddedDataset = [
         "current_odds": 4.9,
         "au_bookie": "Betfair",
         "devig_book_probability": 20.24,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -16339,11 +16341,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 22083e7a8e5362c711bc05c1e1319a1f.",
     "model_totals_25": {
@@ -16671,7 +16673,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -17248,7 +17250,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -17267,7 +17269,7 @@ window.embeddedDataset = [
         "current_odds": 1.83,
         "au_bookie": "Betfair",
         "devig_book_probability": 54.27,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -17281,7 +17283,7 @@ window.embeddedDataset = [
         "current_odds": 4.9,
         "au_bookie": "Betfair",
         "devig_book_probability": 20.27,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -17295,7 +17297,7 @@ window.embeddedDataset = [
         "current_odds": 3.9,
         "au_bookie": "Betfair",
         "devig_book_probability": 25.46,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -17303,11 +17305,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09.",
     "model_totals_25": {
@@ -17635,7 +17637,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -18244,7 +18246,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -18263,7 +18265,7 @@ window.embeddedDataset = [
         "current_odds": 6.6,
         "au_bookie": "Betfair",
         "devig_book_probability": 14.99,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -18277,7 +18279,7 @@ window.embeddedDataset = [
         "current_odds": 1.61,
         "au_bookie": "Betfair",
         "devig_book_probability": 61.45,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -18291,7 +18293,7 @@ window.embeddedDataset = [
         "current_odds": 4.2,
         "au_bookie": "Betfair",
         "devig_book_probability": 23.56,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -18299,11 +18301,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad.",
     "model_totals_25": {
@@ -18631,7 +18633,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
@@ -19080,7 +19082,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -19099,7 +19101,7 @@ window.embeddedDataset = [
         "current_odds": 1.3,
         "au_bookie": "Betfair",
         "devig_book_probability": 76.36,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -19113,7 +19115,7 @@ window.embeddedDataset = [
         "current_odds": 6,
         "au_bookie": "Betfair",
         "devig_book_probability": 16.55,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -19121,11 +19123,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc.",
     "model_totals_25": {
@@ -19453,7 +19455,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -19982,7 +19984,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   },
   {
@@ -20001,7 +20003,7 @@ window.embeddedDataset = [
         "current_odds": 2.02,
         "au_bookie": "Betfair",
         "devig_book_probability": 49.11,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -20015,7 +20017,7 @@ window.embeddedDataset = [
         "current_odds": 4.4,
         "au_bookie": "Betfair",
         "devig_book_probability": 22.55,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -20029,7 +20031,7 @@ window.embeddedDataset = [
         "current_odds": 3.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 28.34,
-        "odds_checked_at": "2026-06-14T23:46:55.175Z",
+        "odds_checked_at": "2026-06-14T23:52:46.040Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -20037,11 +20039,11 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T23:46:55.175Z",
+    "referee_last_checked": "2026-06-14T23:52:46.040Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T23:46:55.175Z",
+    "odds_last_checked": "2026-06-14T23:52:46.040Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d.",
     "model_totals_25": {
@@ -20369,7 +20371,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T23:46:54.095Z",
+      "checked_at": "2026-06-14T23:52:42.729Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
@@ -20978,7 +20980,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-14T23:46:55.175Z",
+    "fifa_report_last_checked": "2026-06-14T23:52:46.040Z",
     "fifa_report_status": "not_found_yet"
   }
 ];
