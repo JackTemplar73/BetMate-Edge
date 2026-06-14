@@ -1500,10 +1500,11 @@ function formatClosingPrice(bet) {
 
 function formatHistoryClv(bet) {
   if (Number.isFinite(Number(bet.clv_percent))) {
+    const detailClass = Number(bet.clv_percent) >= 0 ? 'confirmed-text' : 'negative';
     if (!hasReliableClvBaseline(bet)) {
       return `<span class="primary-cell">Line move ${formatClv(bet.clv_percent)}</span><span class="sub-cell warning-text">First tracked price was too close to kickoff for true opening-to-close CLV</span>`;
     }
-    return `<span class="primary-cell">${formatClv(bet.clv_percent)}</span><span class="sub-cell confirmed-text">Confirmed closing line</span>`;
+    return `<span class="primary-cell">${formatClv(bet.clv_percent)}</span><span class="sub-cell ${detailClass}">Confirmed closing line</span>`;
   }
 
   if (Number.isFinite(Number(bet.estimated_clv_percent))) {
