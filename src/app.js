@@ -1547,16 +1547,20 @@ function formatOpeningClvCell(bet) {
   return `
     <span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span>
     <span class="sub-cell">${formatFirstSeenLabel(bet)}</span>
-    <span class="sub-cell">Opening QI <span class="qi-badge compact ${metricClass(openingQi)}">${formatQiBadge(openingQi)}</span></span>
+    <span class="sub-cell line-price-with-qi"><span>Opening line</span><span class="qi-badge compact ${metricClass(openingQi)}">${formatQiBadge(openingQi, 'Opening QI')}</span></span>
     ${details ? `<span class="sub-cell">${details}</span>` : ''}
   `;
 }
 
 function formatOpeningLineOnly(bet) {
+  const openingQi = Number(bet.opening_qi);
+
   return `
-    <span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span>
+    <span class="primary-cell line-price-with-qi">
+      <span>${formatHistoryPrice(bet.opening_odds)}</span>
+      <span class="qi-badge compact ${metricClass(openingQi)}">${formatQiBadge(openingQi, 'Opening QI')}</span>
+    </span>
     <span class="sub-cell">Opening line</span>
-    <span class="sub-cell">${formatQiBadge(bet.opening_qi)}</span>
   `;
 }
 
