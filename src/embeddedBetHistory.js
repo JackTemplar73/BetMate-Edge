@@ -16,7 +16,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -24,7 +24,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.9,
     "current_ev": 13.16,
     "current_qi": 75,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "8d181b791f1c9f21",
@@ -43,7 +47,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -51,7 +55,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.31,
     "current_ev": 5.34,
     "current_qi": 72,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "769aeb477bc47424",
@@ -70,7 +78,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -78,7 +86,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.87,
     "current_ev": 44.39,
     "current_qi": 90,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "adaa3554f56ca30b",
@@ -97,7 +109,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -105,7 +117,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.76,
     "current_ev": 10.8,
     "current_qi": 75,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "db6c8e2ade8f36af",
@@ -124,7 +140,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -132,7 +148,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.26,
     "current_ev": 4.76,
     "current_qi": 71,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "7e62122b67966bd8",
@@ -151,7 +171,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -159,7 +179,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.67,
     "current_ev": 22.75,
     "current_qi": 93,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "346abbabbda5faab",
@@ -178,7 +202,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -186,7 +210,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.23,
     "current_ev": 8.94,
     "current_qi": 82,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "ab8b1c3501f96cfe",
@@ -205,7 +233,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -213,7 +241,11 @@ window.embeddedBetHistory = [
     "current_model_price": 2.66,
     "current_ev": 35.34,
     "current_qi": 76,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "af0ced9d3ce47d92",
@@ -232,7 +264,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -240,7 +272,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.3,
     "current_ev": 12.31,
     "current_qi": 88,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "02c39f5901f181c2",
@@ -259,7 +295,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -267,7 +303,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.88,
     "current_ev": 25,
     "current_qi": 85,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "bb677a9c5d1e9309",
@@ -286,7 +326,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -294,7 +334,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.89,
     "current_ev": 11.11,
     "current_qi": 72,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "6910eacb2990f872",
@@ -313,7 +357,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -321,7 +365,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.89,
     "current_ev": 11.11,
     "current_qi": 72,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "eb57d398ee780b1f",
@@ -340,7 +388,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -348,7 +396,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.68,
     "current_ev": 11.31,
     "current_qi": 78,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "448b83bf094c4a8e",
@@ -367,7 +419,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -375,7 +427,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.98,
     "current_ev": 21.21,
     "current_qi": 78,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "8c3bb8cbb804d53e",
@@ -394,7 +450,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -402,7 +458,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.98,
     "current_ev": 16.16,
     "current_qi": 73,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "de205448bd845adf",
@@ -421,15 +481,19 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
-    "current_odds": 2,
+    "current_odds": 1.95,
     "current_model_price": 1.64,
-    "current_ev": 21.95,
-    "current_qi": 93,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "current_ev": 18.9,
+    "current_qi": 89,
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "de1336d9b2a0d00f",
@@ -448,15 +512,19 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
-    "current_odds": 1.32,
+    "current_odds": 1.3,
     "current_model_price": 1.22,
-    "current_ev": 8.2,
-    "current_qi": 81,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "current_ev": 6.56,
+    "current_qi": 77,
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "36aba8d84703c3f4",
@@ -475,15 +543,19 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
-    "current_odds": 3.5,
+    "current_odds": 3.3,
     "current_model_price": 2.58,
-    "current_ev": 35.66,
-    "current_qi": 78,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "current_ev": 27.91,
+    "current_qi": 73,
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "a02182554b1dddbe",
@@ -502,7 +574,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -510,7 +582,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.57,
     "current_ev": 7.01,
     "current_qi": 73,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "52454c3cb6713b0f",
@@ -529,7 +605,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -537,7 +613,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.82,
     "current_ev": 18.13,
     "current_qi": 83,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "885bba18cf02a073",
@@ -556,7 +636,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -564,7 +644,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.28,
     "current_ev": 7.81,
     "current_qi": 79,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "1e5664836c7c3bcb",
@@ -583,7 +667,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -591,7 +675,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.33,
     "current_ev": 8.27,
     "current_qi": 79,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "82091f41c32216b8",
@@ -610,7 +698,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -618,7 +706,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.97,
     "current_ev": 16.75,
     "current_qi": 74,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "ed4afff02b7109a1",
@@ -637,7 +729,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -645,7 +737,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.63,
     "current_ev": 19.63,
     "current_qi": 91,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "1a4598dffecc8deb",
@@ -664,7 +760,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -672,7 +768,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.21,
     "current_ev": 7.44,
     "current_qi": 79,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "d913be2851615d1b",
@@ -691,7 +791,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -699,7 +799,11 @@ window.embeddedBetHistory = [
     "current_model_price": 2.55,
     "current_ev": 29.41,
     "current_qi": 74,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "339d071f7d56099e",
@@ -718,7 +822,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -726,7 +830,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.8,
     "current_ev": 13.89,
     "current_qi": 78,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "2021f5aac1b6b399",
@@ -745,7 +853,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -753,7 +861,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.27,
     "current_ev": 5.51,
     "current_qi": 73,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "ce7c72370856e1b5",
@@ -772,7 +884,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -780,7 +892,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.75,
     "current_ev": 20,
     "current_qi": 87,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "caf558fb60c28a34",
@@ -799,7 +915,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -807,7 +923,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.26,
     "current_ev": 7.94,
     "current_qi": 79,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "4156895f22f046fd",
@@ -826,7 +946,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -834,7 +954,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.93,
     "current_ev": 11.4,
     "current_qi": 72,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "02f38cd69a33111f",
@@ -853,7 +977,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -861,7 +985,11 @@ window.embeddedBetHistory = [
     "current_model_price": 2.89,
     "current_ev": 31.49,
     "current_qi": 70,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "20c1851f42468cc1",
@@ -880,7 +1008,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -888,7 +1016,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.58,
     "current_ev": 10.76,
     "current_qi": 80,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "35065341a9dce83f",
@@ -907,7 +1039,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -915,7 +1047,11 @@ window.embeddedBetHistory = [
     "current_model_price": 2.07,
     "current_ev": 20.77,
     "current_qi": 76,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "c0e03e92b1c2deb8",
@@ -934,7 +1070,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -942,7 +1078,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.32,
     "current_ev": 10.61,
     "current_qi": 84,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "96a7f19ba0747777",
@@ -961,7 +1101,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -969,7 +1109,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.95,
     "current_ev": 20.51,
     "current_qi": 78,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "71d9b14cc64d4a47",
@@ -988,7 +1132,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -996,7 +1140,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.88,
     "current_ev": 11.7,
     "current_qi": 73,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "a79449a270587d98",
@@ -1015,7 +1163,7 @@ window.embeddedBetHistory = [
     "clv_percent": null,
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
-    "estimated_closing_source": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
@@ -1023,7 +1171,11 @@ window.embeddedBetHistory = [
     "current_model_price": 1.88,
     "current_ev": 11.7,
     "current_qi": 73,
-    "last_seen_at": "2026-06-14T23:12:16.214Z"
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   },
   {
     "bet_id": "0cd2e7e6b50a9dfa",
@@ -1044,16 +1196,18 @@ window.embeddedBetHistory = [
     "current_model_price": 2.6,
     "current_ev": 44.62,
     "current_qi": 82,
-    "last_seen_at": "2026-06-14T23:12:16.214Z",
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
     "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
     "closing_status": "missing_fresh_close",
-    "estimated_closing_odds": 3.76,
-    "estimated_clv_percent": 0,
-    "estimated_closing_source": "Estimated from nearest saved price; not an official closing line.",
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "lost",
     "result_detail": "ESPN final: United States 4-1 Paraguay.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states",
-    "settled_at": "2026-06-13T10:35:36.571Z"
+    "settled_at": "2026-06-13T10:35:36.571Z",
+    "closing_qi": null,
+    "closing_bookie": null
   },
   {
     "bet_id": "60f23ca7387fc316",
@@ -1074,16 +1228,18 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 12.36,
     "current_qi": 77,
-    "last_seen_at": "2026-06-14T23:12:16.214Z",
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
     "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
     "closing_status": "missing_fresh_close",
-    "estimated_closing_odds": 2,
-    "estimated_clv_percent": 0,
-    "estimated_closing_source": "Estimated from nearest saved price; not an official closing line.",
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "won",
     "result_detail": "ESPN final: United States 4-1 Paraguay.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states",
-    "settled_at": "2026-06-13T10:35:36.571Z"
+    "settled_at": "2026-06-13T10:35:36.571Z",
+    "closing_qi": null,
+    "closing_bookie": null
   },
   {
     "bet_id": "c7bab8ab5c37ec1e",
@@ -1104,16 +1260,18 @@ window.embeddedBetHistory = [
     "current_model_price": 1.78,
     "current_ev": 9.55,
     "current_qi": 72,
-    "last_seen_at": "2026-06-14T23:12:16.214Z",
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
     "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
     "closing_status": "missing_fresh_close",
-    "estimated_closing_odds": 1.95,
-    "estimated_clv_percent": 0,
-    "estimated_closing_source": "Estimated from nearest saved price; not an official closing line.",
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "won",
     "result_detail": "ESPN final: United States 4-1 Paraguay.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states",
-    "settled_at": "2026-06-13T10:35:36.571Z"
+    "settled_at": "2026-06-13T10:35:36.571Z",
+    "closing_qi": null,
+    "closing_bookie": null
   },
   {
     "bet_id": "1053824585cb3671",
@@ -1127,23 +1285,26 @@ window.embeddedBetHistory = [
     "opening_model_price": 1.42,
     "opening_ev": 4.23,
     "opening_qi": 73,
-    "closing_odds": 1.69,
-    "closing_captured_at": "2026-06-13T21:42:31.932Z",
-    "clv_percent": -12.43,
-    "current_odds": 31,
+    "closing_odds": null,
+    "closing_captured_at": null,
+    "clv_percent": null,
+    "current_odds": 1.69,
     "current_model_price": 1.42,
-    "current_ev": 2083.1,
-    "current_qi": 88,
-    "last_seen_at": "2026-06-14T23:12:16.214Z",
+    "current_ev": 19.01,
+    "current_qi": 87,
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
     "result_status": "lost",
     "result_detail": "FIFA final: Brazil 1-1 Morocco.",
     "settlement_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR.pdf",
-    "closing_source": "Confirmed live check 17 min before kickoff",
-    "closing_status": "confirmed",
-    "estimated_closing_odds": null,
-    "estimated_clv_percent": null,
-    "estimated_closing_source": null,
-    "settled_at": "2026-06-14T01:02:30.916Z"
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close",
+    "estimated_closing_odds": 1.69,
+    "estimated_clv_percent": -12.43,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
+    "settled_at": "2026-06-14T01:02:30.916Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "estimated_qi": 87
   },
   {
     "bet_id": "ecdf14cc0d8d6cd8",
@@ -1160,19 +1321,21 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "estimated_closing_odds": 1.55,
-    "estimated_clv_percent": 4.52,
-    "estimated_closing_source": "Estimated from nearest saved price; not an official closing line.",
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
-    "current_odds": 1.55,
+    "current_odds": 1.62,
     "current_model_price": 1.39,
-    "current_ev": 11.51,
-    "current_qi": 84,
-    "last_seen_at": "2026-06-14T23:12:16.214Z",
+    "current_ev": 16.55,
+    "current_qi": 93,
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
     "closing_status": "missing_fresh_close",
-    "closing_source": "No confirmed live check in the final 5 minutes before kickoff"
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_qi": null,
+    "closing_bookie": null
   },
   {
     "bet_id": "580b85ad7affe4cf",
@@ -1189,18 +1352,51 @@ window.embeddedBetHistory = [
     "closing_odds": null,
     "closing_captured_at": null,
     "clv_percent": null,
-    "estimated_closing_odds": 2.7,
-    "estimated_clv_percent": 3.7,
-    "estimated_closing_source": "Estimated from nearest saved price; not an official closing line.",
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
     "result_status": "pending",
     "result_detail": "Awaiting final result check.",
     "settlement_source": null,
-    "current_odds": 2.7,
+    "current_odds": 2.9,
     "current_model_price": 2.16,
-    "current_ev": 25,
-    "current_qi": 78,
-    "last_seen_at": "2026-06-14T23:12:16.214Z",
+    "current_ev": 34.26,
+    "current_qi": 85,
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
     "closing_status": "missing_fresh_close",
-    "closing_source": "No confirmed live check in the final 5 minutes before kickoff"
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_qi": null,
+    "closing_bookie": null
+  },
+  {
+    "bet_id": "5ed8a005004133b3",
+    "match_name": "Ivory Coast vs Ecuador",
+    "kickoff_time_aest": "2026-06-15T09:00:00",
+    "market_matrix": "Main Match",
+    "target_selection": "BTTS Yes",
+    "au_bookie": "TAB",
+    "first_seen_at": "2026-06-14T23:20:20.239Z",
+    "opening_odds": 2.25,
+    "opening_model_price": 1.96,
+    "opening_ev": 14.8,
+    "opening_qi": 72,
+    "closing_odds": null,
+    "closing_captured_at": null,
+    "clv_percent": null,
+    "estimated_closing_odds": null,
+    "estimated_clv_percent": null,
+    "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
+    "result_status": "pending",
+    "result_detail": "Awaiting final result check.",
+    "settlement_source": null,
+    "current_odds": 2.25,
+    "current_model_price": 1.96,
+    "current_ev": 14.8,
+    "current_qi": 72,
+    "last_seen_at": "2026-06-14T23:21:19.051Z",
+    "closing_qi": null,
+    "closing_bookie": null,
+    "closing_source": "No confirmed live check in the final 5 minutes before kickoff",
+    "closing_status": "missing_fresh_close"
   }
 ];

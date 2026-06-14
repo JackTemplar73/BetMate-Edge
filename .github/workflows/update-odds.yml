@@ -37,7 +37,7 @@ jobs:
       - name: Refresh AU market scan when due
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          ODDS_API_TARGET_BOOKMAKERS: sportsbet,tab,pointsbetau,neds,bet365
+          ODDS_API_TARGET_BOOKMAKERS: sportsbet,tab,pointsbetau,neds,bet365,betfair_ex_au
         run: node scripts/deep_market_scan.mjs
 
       - name: Refresh prices when due

@@ -7,7 +7,7 @@ const PLAYER_PROPS_PATH = new URL('../data/player_props_watchlist.json', import.
 const EMBEDDED_PLAYER_PROPS_PATH = new URL('../src/embeddedPlayerProps.js', import.meta.url);
 
 const SPORT_KEY = 'soccer_fifa_world_cup';
-const DEFAULT_SCAN_BOOKMAKERS = ['sportsbet', 'tab', 'pointsbetau', 'neds', 'bet365'];
+const DEFAULT_SCAN_BOOKMAKERS = ['sportsbet', 'tab', 'pointsbetau', 'neds', 'bet365', 'betfair_ex_au'];
 const SCAN_BOOKMAKERS = (process.env.ODDS_API_TARGET_BOOKMAKERS || process.env.ODDS_API_TARGET_BOOKMAKER || DEFAULT_SCAN_BOOKMAKERS.join(','))
   .split(',')
   .map((item) => item.trim())
@@ -395,9 +395,14 @@ async function main() {
   const playerProps = JSON.parse(await readFile(PLAYER_PROPS_PATH, 'utf8'));
   const coreEvents = await fetchCoreEvents(apiKey);
   const nowIso = new Date().toISOString();
+  const now = new Date();
   const coverageRows = [];
 
   for (const fixture of dataset) {
+    if (parseAest(fixture.kickoff_time_aest) <= now) {
+      continue;
+    }
+
     const event = findEvent(coreEvents, fixture);
     if (!event) {
       fixture.market_scan = {

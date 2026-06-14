@@ -1811,7 +1811,7 @@ function formatLatestOrClosingPrice(bet) {
   if (Number.isFinite(Number(bet.closing_odds))) {
     return `
       ${formatLinePriceWithQi(bet.closing_odds, bet)}
-      <span class="sub-cell confirmed-text">Closing price</span>
+      <span class="sub-cell confirmed-text">Closing price${bet.closing_bookie ? ` | ${bet.closing_bookie}` : ''}</span>
       ${formatCapturedAt(bet.closing_captured_at)}
       ${formatCurrentSignal(bet)}
     `;
@@ -1820,7 +1820,7 @@ function formatLatestOrClosingPrice(bet) {
   if (Number.isFinite(Number(bet.estimated_closing_odds))) {
     return `
       ${formatLinePriceWithQi(bet.estimated_closing_odds, bet)}
-      <span class="sub-cell warning-text">Latest price</span>
+      <span class="sub-cell warning-text">Latest price${estimatedSourceLabel(bet)}</span>
       ${formatCapturedAt(bet.last_seen_at)}
       ${formatCurrentSignal(bet)}
     `;
@@ -1831,6 +1831,16 @@ function formatLatestOrClosingPrice(bet) {
     <span class="sub-cell">${formatLatestPriceLabel(bet)}</span>
     ${formatCurrentSignal(bet)}
   `;
+}
+
+function estimatedSourceLabel(bet) {
+  const source = String(bet.estimated_closing_source || '');
+  if (source.includes('Betfair')) return ' | Betfair';
+  if (source.includes('Sportsbet')) return ' | Sportsbet';
+  if (source.includes('TAB')) return ' | TAB';
+  if (source.includes('Neds')) return ' | Neds';
+  if (source.includes('PointsBet')) return ' | PointsBet';
+  return '';
 }
 
 function formatLinePriceWithQi(price, bet) {
@@ -1873,6 +1883,8 @@ function formatCurrentSignal(bet) {
 function getClosingQi(bet) {
   const closingQi = Number(bet.closing_qi);
   if (Number.isFinite(closingQi)) return closingQi;
+  const estimatedQi = Number(bet.estimated_qi);
+  if (Number.isFinite(Number(bet.estimated_closing_odds)) && Number.isFinite(estimatedQi)) return estimatedQi;
   return Number(bet.current_qi);
 }
 
@@ -2040,7 +2052,7 @@ function formatClosingDetail(bet) {
 
   if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture a live price in the final 5 minutes before kickoff</span>';
 
-  return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} | Confirmed live price before kickoff</span>`;
+  return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} | ${bet.closing_bookie || 'Confirmed'} live price before kickoff</span>`;
 }
 
 function formatBetResult(bet) {
