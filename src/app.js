@@ -142,6 +142,11 @@ function parseKickoff(value) {
   return new Date(`${value}+10:00`);
 }
 
+function estimatedFullTime(fixture) {
+  const kickoff = parseKickoff(fixture.kickoff_time_aest);
+  return new Date(kickoff.getTime() + (2 * 60 * 60 * 1000));
+}
+
 function getFixturesInWindow() {
   const start = getReferenceDate();
   start.setHours(0, 0, 0, 0);
@@ -165,7 +170,14 @@ function getUpcomingFixtures() {
 
 function getCompletedFixtures() {
   const now = new Date();
-  return getFixturesInWindow().filter((fixture) => parseKickoff(fixture.kickoff_time_aest) <= now);
+  return getFixturesInWindow().filter((fixture) => estimatedFullTime(fixture) <= now);
+}
+
+function getStartedFixtures() {
+  const now = new Date();
+  return getFixturesInWindow()
+    .filter((fixture) => parseKickoff(fixture.kickoff_time_aest) <= now)
+    .filter((fixture) => estimatedFullTime(fixture) > now);
 }
 
 function getSelectedFixture() {
@@ -507,11 +519,17 @@ function renderHighValueBets() {
 }
 
 function getHighValueCandidateRows() {
-  const fixtureRows = flattenMarkets(getUpcomingFixtures())
+  return getCandidateRowsForFixtures(getUpcomingFixtures());
+}
+
+function getCandidateRowsForFixtures(fixtures) {
+  const fixtureNames = new Set(fixtures.map((fixture) => fixture.match_name));
+  const fixtureRows = flattenMarkets(fixtures)
     .filter(hasModelPrice)
     .filter(hasMarketOdds)
     .map((market) => ({ ...market, source_label: 'Fixture model' }));
-  const scanRows = getSportsbookScanRows()
+  const scanRows = getSportsbookScanRowsForFixtures(fixtures)
+    .filter((row) => fixtureNames.has(row.match_name))
     .map((row) => ({
       match_name: row.match_name,
       kickoff_time_aest: row.kickoff_time_aest,
@@ -606,7 +624,11 @@ function renderMatchModelHighlights() {
 }
 
 function getSportsbookScanRows() {
-  return getUpcomingFixtures()
+  return getSportsbookScanRowsForFixtures(getUpcomingFixtures());
+}
+
+function getSportsbookScanRowsForFixtures(fixtures) {
+  return fixtures
     .flatMap((fixture) => {
       const scan = fixture.market_scan || {};
       return (scan.rows || []).map((row) => ({
@@ -1092,27 +1114,33 @@ function renderCompletedGames() {
   if (!tableBody) return;
 
   if (fixtures.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="5">No games have started yet.</td></tr>';
+    const startedCount = getStartedFixtures().length;
+    tableBody.innerHTML = `<tr><td colspan="5">${startedCount > 0 ? `${startedCount} game${startedCount === 1 ? ' is' : 's are'} in progress. Completed games appear here after the estimated full-time window.` : 'No games are completed yet.'}</td></tr>`;
     return;
   }
 
   tableBody.innerHTML = fixtures.map((fixture) => {
-    const bestOption = (fixture.markets || [])
-      .filter(hasModelPrice)
-      .map((market) => ({ ...market, metrics: runVectorCalculations(market) }))
-      .sort((a, b) => b.metrics.qi - a.metrics.qi)[0];
-    const freshness = priceFreshness(fixture);
+    const bestOption = getCandidateRowsForFixtures([fixture]).sort(compareBetQuality)[0];
 
     return `
       <tr>
         <td>${fixture.match_name}</td>
         <td>${formatKickoff(fixture.kickoff_time_aest)}</td>
-        <td><span class="primary-cell">${freshness.label}</span><span class="sub-cell">${freshness.detail}</span></td>
+        <td>${formatCompletedStatus(fixture)}</td>
         <td>${bestOption ? `<span class="primary-cell">${bestOption.target_selection}</span><span class="sub-cell">${plainMarketNames[bestOption.market_matrix] || bestOption.market_matrix} | ${bestOption.au_bookie} | ${formatOdds(bestOption)}</span>` : '-'}</td>
         <td>${bestOption ? `<span class="qi-badge ${metricClass(bestOption.metrics.qi)}">${bestOption.metrics.qi}</span>` : '-'}</td>
       </tr>
     `;
   }).join('');
+}
+
+function formatCompletedStatus(fixture) {
+  const result = fixture.result || fixture.final_score || fixture.score;
+  if (result) {
+    return `<span class="primary-cell">Result recorded</span><span class="sub-cell">${result}</span>`;
+  }
+
+  return '<span class="primary-cell">Completed</span><span class="sub-cell">Result pending</span>';
 }
 
 function formatHistoryPrice(value, fallback = '-') {
