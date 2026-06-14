@@ -1,22 +1,22 @@
 {
-  "checked_at": "2026-06-14T00:04:39.342Z",
+  "checked_at": "2026-06-14T02:49:32.559Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
     "pointsbetau",
-    "neds"
+    "neds",
+    "bet365"
   ],
-  "events_checked": 23,
+  "events_checked": 22,
   "market_counts": {
-    "h2h": 90,
-    "h2h_3_way": 90,
-    "totals": 1,
-    "double_chance": 41,
-    "draw_no_bet": 21,
-    "alternate_spreads": 19,
-    "btts": 44,
+    "h2h": 86,
+    "h2h_3_way": 86,
+    "btts": 43,
+    "alternate_spreads": 20,
     "alternate_totals": 22,
-    "spreads": 4
+    "double_chance": 38,
+    "draw_no_bet": 19,
+    "spreads": 2
   },
   "matches": [
     {
@@ -26,7 +26,8 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds"
+        "neds",
+        "bet365"
       ],
       "offered_market_keys": [],
       "matched_rows": 0
@@ -38,7 +39,8 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds"
+        "neds",
+        "bet365"
       ],
       "offered_market_keys": [],
       "matched_rows": 0
@@ -50,13 +52,27 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds"
+        "neds",
+        "bet365"
       ],
       "offered_market_keys": [],
       "matched_rows": 0
     },
     {
       "match_name": "Brazil vs Morocco",
+      "status": "no_oddsapi_event",
+      "bookmakers": [
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365"
+      ],
+      "offered_market_keys": [],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Haiti vs Scotland",
       "status": "checked",
       "bookmakers": [
         "PointsBet (AU)",
@@ -64,33 +80,12 @@
       ],
       "offered_market_keys": [
         "alternate_spreads",
-        "double_chance",
-        "draw_no_bet",
-        "h2h",
-        "h2h_3_way",
-        "totals"
-      ],
-      "matched_rows": 13
-    },
-    {
-      "match_name": "Haiti vs Scotland",
-      "status": "checked",
-      "bookmakers": [
-        "SportsBet",
-        "PointsBet (AU)",
-        "TAB",
-        "Neds"
-      ],
-      "offered_market_keys": [
-        "alternate_spreads",
         "alternate_totals",
         "btts",
-        "double_chance",
-        "draw_no_bet",
         "h2h",
         "h2h_3_way"
       ],
-      "matched_rows": 34
+      "matched_rows": 12
     },
     {
       "match_name": "Australia vs Turkiye",
@@ -460,13 +455,13 @@
         "TAB"
       ],
       "offered_market_keys": [
+        "alternate_spreads",
         "alternate_totals",
         "btts",
         "double_chance",
         "draw_no_bet",
         "h2h",
-        "h2h_3_way",
-        "spreads"
+        "h2h_3_way"
       ],
       "matched_rows": 25
     },
@@ -480,13 +475,13 @@
         "TAB"
       ],
       "offered_market_keys": [
+        "alternate_spreads",
         "alternate_totals",
         "btts",
         "double_chance",
         "draw_no_bet",
         "h2h",
-        "h2h_3_way",
-        "spreads"
+        "h2h_3_way"
       ],
       "matched_rows": 30
     },

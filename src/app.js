@@ -52,7 +52,7 @@ const plainMarketNames = {
 
 const plainGameNotes = {
   'USA vs Paraguay': 'USA are expected to have more of the ball. Paraguay may need to defend for long spells, so the card bet on Omar Alderete stands out.',
-  'Australia vs Turkiye': 'Australia are expected to keep the game tight and physical. The pitch may make Turkiye less smooth in attack, which helps Australia avoid defeat.',
+  'Australia vs Turkiye': 'Australia start with a back three and direct pace through Irankunda, while Turkey start their main creative players. Turkey deserve favouritism, but the best current model read is Over 2.5 Goals.',
   'Brazil vs Morocco': 'Brazil should create pressure, but Morocco are set up to defend well. The handicap on Morocco gives protection if Brazil only win by one goal.',
   'Qatar vs Switzerland': 'Switzerland should control the tempo, while Qatar sit deep. That points toward a low-scoring game.',
   'Haiti vs Scotland': 'Scotland look better suited to control the match. Haiti rely on speed, but the surface may make those breakaway attacks harder.'
@@ -746,6 +746,21 @@ function formatPlayerPropNote(prop) {
     .trim();
 }
 
+function getPlayerPropPrices(prop) {
+  const directPrices = Object.entries(prop.direct_checks || {})
+    .filter(([, check]) => check && check.comparable_for_qi && Number.isFinite(Number(check.current_odds)) && Number.isFinite(Number(check.qi)))
+    .map(([bookie, check]) => ({
+      au_bookie: bookie === 'sportsbet' ? 'Sportsbet' : bookie.toUpperCase(),
+      current_odds: Number(check.current_odds),
+      ev: Number(check.ev),
+      qi: Number(check.qi)
+    }));
+
+  return [...(prop.live_prices || []), ...directPrices]
+    .filter((price) => Number(price.qi || 0) >= 60)
+    .sort((a, b) => Number(b.qi || 0) - Number(a.qi || 0));
+}
+
 function getUpcomingPlayerProps() {
   const upcomingMatches = new Set(getUpcomingFixtures().map((fixture) => fixture.match_name));
   const now = new Date();
@@ -753,11 +768,11 @@ function getUpcomingPlayerProps() {
   return state.playerPropWatchlist
     .filter((prop) => upcomingMatches.has(prop.match_name))
     .filter((prop) => parseKickoff(prop.kickoff_time_aest) > now)
-    .filter((prop) => Math.max(...(prop.live_prices || []).map((price) => Number(price.qi || 0)), 0) >= 60)
+    .filter((prop) => getPlayerPropPrices(prop).length > 0)
     .sort((a, b) => {
       const timeDiff = parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest);
       if (timeDiff !== 0) return timeDiff;
-      const qiDiff = Math.max(...(b.live_prices || []).map((price) => Number(price.qi || 0)), 0) - Math.max(...(a.live_prices || []).map((price) => Number(price.qi || 0)), 0);
+      const qiDiff = Number(getPlayerPropPrices(b)[0]?.qi || 0) - Number(getPlayerPropPrices(a)[0]?.qi || 0);
       if (qiDiff !== 0) return qiDiff;
       const probDiff = Number(b.model_probability || 0) - Number(a.model_probability || 0);
       if (probDiff !== 0) return probDiff;
@@ -770,7 +785,7 @@ function getPlayerPropsForMatch(matchName) {
 }
 
 function renderPlayerPropCard(prop, { showMatch = true } = {}) {
-  const livePrices = [...(prop.live_prices || [])].sort((a, b) => Number(b.qi || 0) - Number(a.qi || 0));
+  const livePrices = getPlayerPropPrices(prop);
   const hasLivePrice = livePrices.length > 0;
 
   return `
@@ -822,7 +837,7 @@ function renderPlayerPropWatchlist() {
     acc[category] = (acc[category] || 0) + 1;
     return acc;
   }, {});
-  const livePriceCount = props.reduce((sum, prop) => sum + (prop.live_prices?.length || 0), 0);
+  const livePriceCount = props.reduce((sum, prop) => sum + getPlayerPropPrices(prop).length, 0);
 
   container.innerHTML = `
     <div class="prop-summary-card">
@@ -979,6 +994,33 @@ function renderMatchTabs() {
   });
 }
 
+function renderConfirmedLineupsBlock(fixture) {
+  const lineups = fixture.confirmed_lineups;
+  if (!lineups || lineups.status !== 'confirmed') return '';
+
+  const renderList = (players = []) => players.map((player) => `<li>${player}</li>`).join('');
+
+  return `
+    <section class="lineups-block">
+      <div class="inline-section-heading">
+        <h3>Confirmed Lineups</h3>
+        <p>${lineups.source || 'Verified source'} | ${lineups.checked_at ? `Checked ${new Date(lineups.checked_at).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}` : 'Checked'}</p>
+      </div>
+      <div class="lineup-note">${lineups.model_implication || 'Lineups are confirmed and included in the model view.'}</div>
+      <div class="lineup-grid">
+        <article class="lineup-card">
+          <h4>${lineups.home_team} <span>${lineups.home_formation}</span></h4>
+          <ol>${renderList(lineups.home_starting_xi)}</ol>
+        </article>
+        <article class="lineup-card">
+          <h4>${lineups.away_team} <span>${lineups.away_formation}</span></h4>
+          <ol>${renderList(lineups.away_starting_xi)}</ol>
+        </article>
+      </div>
+    </section>
+  `;
+}
+
 function renderFixturePanels() {
   const container = document.querySelector('[data-fixtures]');
   const fixture = getSelectedFixture();
@@ -994,6 +1036,7 @@ function renderFixturePanels() {
     })).sort((a, b) => b.metrics.qi - a.metrics.qi);
   const freshness = priceFreshness(fixture);
   const fixtureModelHtml = renderFixtureModelBlock(fixture);
+  const lineupsHtml = renderConfirmedLineupsBlock(fixture);
   const playerProps = getPlayerPropsForMatch(fixture.match_name);
   const playerPropsHtml = playerProps.length > 0
     ? `
@@ -1027,6 +1070,7 @@ function renderFixturePanels() {
           <span><strong>Pitch note:</strong> ${fixture.pitch_constraints}</span>
           <span><strong>Referee implication:</strong> ${fixture.referee_tendencies} ${fixture.referee_source ? `<em>${fixture.referee_source}</em>` : ''}</span>
         </div>
+        ${lineupsHtml}
         <div class="market-grid">
           ${markets.map((market) => `
             <article class="market-card">

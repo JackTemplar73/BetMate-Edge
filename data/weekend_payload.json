@@ -2932,11 +2932,11 @@
   {
     "match_name": "Australia vs Turkiye",
     "kickoff_time_aest": "2026-06-14T14:00:00",
-    "pitch_type": "No clear pitch edge",
-    "pitch_constraints": "No reliable pitch advantage confirmed. The model is mainly using team strength, draw risk, and current bookmaker prices.",
-    "referee_name": "Jesus Valenzuela (Venezuela)",
-    "referee_tendencies": "Jesus Valenzuela (Venezuela) is listed in the model notes, but not independently verified yet. Treat any referee angle as a watch item, not a betting edge.",
-    "tactical_summary": "Australia bring physical defensive structure and direct transitions, while Turkiye bring technical midfield combinations and aggressive forward play. The full match model rates Turkey as the most likely winner at about 55.6%, with the draw around 26.2%. The key betting read is price discipline: the favourite is not clearly above model price at the best available book. This is a full match-result analysis using the current AU book prices, no-vig consensus model price, favourite strength, draw risk, and cross-book line shopping.",
+    "pitch_type": "Grass",
+    "pitch_constraints": "BC Place Vancouver. FotMob lists the match surface as grass, so the model now treats this as a standard grass game rather than a synthetic-turf edge.",
+    "referee_name": "Jesús Noel Valenzuela Sáez (Venezuela)",
+    "referee_tendencies": "Verified referee: Jesús Noel Valenzuela Sáez. Likely implication: allows some physical contact, but late recovery tackles and tactical stopping fouls can still draw cards.",
+    "tactical_summary": "Australia start with a back three and direct pace through Irankunda, with Touré leading the line. Turkey start a strong creative group with Çalhanoğlu, Arda Güler, Kökcü, Yilmaz and Aktürkoglu, so their attack has more confirmed quality than the early placeholder view. The main betting read is now cleaner: Turkey deserve favouritism, but Over 2.5 Goals is the standout value from the current AU market scan.",
     "markets": [
       {
         "market_matrix": "Full Match Model",
@@ -2991,8 +2991,8 @@
     ],
     "referee_last_checked": "2026-06-14T02:41:58.632Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
-    "referee_status": "provided",
-    "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
+    "referee_status": "verified",
+    "referee_source": "FotMob match details",
     "odds_last_checked": "2026-06-14T02:41:58.632Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 564084f52cc9f1abcc18187c168a7cdc.",
@@ -3850,6 +3850,80 @@
           "price_qi": 7
         }
       ]
+    },
+    "confirmed_lineups": {
+      "status": "confirmed",
+      "source": "FotMob match details",
+      "source_url": "https://www.fotmob.com/match/4667772",
+      "checked_at": "2026-06-14T03:03:57.215Z",
+      "referee": "Jesús Noel Valenzuela Sáez",
+      "venue": "BC Place Vancouver",
+      "surface": "grass",
+      "home_team": "Australia",
+      "away_team": "Turkiye",
+      "home_formation": "3-4-2-1",
+      "away_formation": "4-2-3-1",
+      "home_starting_xi": [
+        "Patrick Beach",
+        "Alessandro Circati",
+        "Harry Souttar",
+        "Cameron Burgess",
+        "Jacob Italiano",
+        "Aiden O'Neill",
+        "Paul Okon-Engstler",
+        "Jordan Bos",
+        "Nestory Irankunda",
+        "Connor Metcalfe",
+        "Mohamed Touré"
+      ],
+      "away_starting_xi": [
+        "Ugurcan Çakir",
+        "Zeki Çelik",
+        "Merih Demiral",
+        "Abdülkerim Bardakci",
+        "Ferdi Kadioglu",
+        "Hakan Çalhanoglu",
+        "Ismail Yüksek",
+        "Arda Güler",
+        "Orkun Kökcü",
+        "Baris Alper Yilmaz",
+        "Kerem Aktürkoglu"
+      ],
+      "home_substitutes": [
+        "Mathew Ryan",
+        "Paul Izzo",
+        "Aziz Behich",
+        "Jason Geria",
+        "Lucas Herrington",
+        "Milos Degenek",
+        "Ajdin Hrustic",
+        "Cameron Devlin",
+        "Jackson Irvine",
+        "Kai Trewin",
+        "Matthew Leckie",
+        "Awer Mabil",
+        "Cristian Volpato",
+        "Nishan Velupillay",
+        "Tete Yengi"
+      ],
+      "away_substitutes": [
+        "Altay Bayindir",
+        "Mert Günok",
+        "Caglar Söyüncü",
+        "Eren Elmali",
+        "Kaan Ayhan",
+        "Mert Müldür",
+        "Ozan Kabak",
+        "Samet Akaydin",
+        "Can Uzun",
+        "Kenan Yildiz",
+        "Salih Özcan",
+        "Yunus Akgün",
+        "Deniz Gül",
+        "Irfan Kahveci",
+        "Oguz Aydin"
+      ],
+      "model_implication": "Confirmed lineups strengthen Turkey creativity: Çalhanoğlu, Arda Güler, Kökcü, Yilmaz and Aktürkoglu all start. Australia are in a back three with Irankunda and Metcalfe supporting Touré. Volpato is on the bench, so his shot prop is watch-only unless he comes on early."
     }
   },
   {
