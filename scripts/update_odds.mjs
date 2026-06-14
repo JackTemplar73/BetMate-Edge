@@ -43,6 +43,7 @@ const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
 const CLOSING_WINDOW_MS = 30 * 60 * 1000;
 const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
+const LINEUP_CHECK_WINDOW_MS = 60 * 60 * 1000;
 
 const ODDS_API_MARKETS = [
   'h2h',
@@ -354,6 +355,159 @@ function findEspnEvent(events, fixture) {
     const hasTeams = teamNames.includes(teams.home) && teamNames.includes(teams.away);
     return hasTeams && Number.isFinite(eventTime) && Math.abs(eventTime - kickoff) <= maxDriftMs;
   }) || null;
+}
+
+async function fetchFotMobMatchesForDate(date) {
+  const url = new URL('https://www.fotmob.com/api/data/matches');
+  url.searchParams.set('date', date);
+  url.searchParams.set('timezone', 'Australia/Melbourne');
+  url.searchParams.set('ccode3', 'AUS');
+
+  const response = await fetch(url, {
+    headers: {
+      accept: 'application/json, text/plain, */*',
+      'user-agent': 'Mozilla/5.0'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`FotMob matches request failed: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function flattenFotMobMatches(payload) {
+  return (payload.leagues || []).flatMap((league) => (
+    (league.matches || []).map((match) => ({
+      ...match,
+      leagueName: league.name,
+      parentLeagueName: league.parentLeagueName
+    }))
+  ));
+}
+
+function findFotMobMatch(matches, fixture) {
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  const kickoff = parseAest(fixture.kickoff_time_aest).getTime();
+  const maxDriftMs = 36 * 60 * 60 * 1000;
+
+  return matches.find((match) => {
+    const names = [
+      match.home?.name,
+      match.home?.longName,
+      match.away?.name,
+      match.away?.longName
+    ].filter(Boolean).map(normalise);
+    const eventTime = Number(match.timeTS) || Date.parse(match.status?.utcTime || '');
+    const isWorldCup = normalise(match.parentLeagueName || match.leagueName).includes('world cup');
+    return isWorldCup
+      && names.includes(teams.home)
+      && names.includes(teams.away)
+      && Number.isFinite(eventTime)
+      && Math.abs(eventTime - kickoff) <= maxDriftMs;
+  }) || null;
+}
+
+async function fetchFotMobMatchDetails(matchId) {
+  const url = new URL('https://www.fotmob.com/api/data/matchDetails');
+  url.searchParams.set('matchId', String(matchId));
+
+  const response = await fetch(url, {
+    headers: {
+      accept: 'application/json, text/plain, */*',
+      'user-agent': 'Mozilla/5.0'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`FotMob match details request failed: ${response.status}`);
+  }
+
+  return response.json();
+}
+
+function applyFotMobLineups(fixture, details, nowIso) {
+  const lineup = details?.content?.lineup;
+  if (!lineup?.homeTeam?.starters?.length || !lineup?.awayTeam?.starters?.length) {
+    return false;
+  }
+
+  const infoBox = details?.content?.matchFacts?.infoBox || {};
+  fixture.confirmed_lineups = {
+    status: 'confirmed',
+    source: 'FotMob match details',
+    source_url: `https://www.fotmob.com/match/${details.general?.matchId || lineup.matchId}`,
+    checked_at: nowIso,
+    referee: infoBox.Referee?.text || fixture.referee_name,
+    venue: infoBox.Stadium?.name || '',
+    surface: infoBox.Stadium?.surface || '',
+    home_team: lineup.homeTeam.name,
+    away_team: lineup.awayTeam.name,
+    home_formation: lineup.homeTeam.formation,
+    away_formation: lineup.awayTeam.formation,
+    home_starting_xi: lineup.homeTeam.starters.map((player) => player.name),
+    away_starting_xi: lineup.awayTeam.starters.map((player) => player.name),
+    home_substitutes: (lineup.homeTeam.subs || []).map((player) => player.name),
+    away_substitutes: (lineup.awayTeam.subs || []).map((player) => player.name),
+    model_implication: `Confirmed starting XIs are now loaded for ${fixture.match_name}. Re-check player props against starters and bench players before treating any prop as a bet.`
+  };
+
+  if (infoBox.Referee?.text) {
+    fixture.referee_name = `${infoBox.Referee.text}${infoBox.Referee.country ? ` (${infoBox.Referee.country})` : ''}`;
+    fixture.referee_status = 'verified';
+    fixture.referee_source = 'FotMob match details';
+  }
+
+  if (infoBox.Stadium?.surface) {
+    fixture.pitch_type = infoBox.Stadium.surface;
+    fixture.pitch_constraints = `${infoBox.Stadium.name || 'Venue'} surface listed by FotMob as ${infoBox.Stadium.surface}.`;
+  }
+
+  return true;
+}
+
+async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date().toISOString()) {
+  const fixtures = dataset.filter((fixture) => {
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    const untilKickoff = kickoff - now;
+    return untilKickoff >= 0 && untilKickoff <= LINEUP_CHECK_WINDOW_MS;
+  });
+
+  if (!fixtures.length) return 0;
+
+  const matchCache = new Map();
+  let updates = 0;
+
+  for (const fixture of fixtures) {
+    const date = dateKey(parseAest(fixture.kickoff_time_aest));
+    if (!matchCache.has(date)) {
+      matchCache.set(date, flattenFotMobMatches(await fetchFotMobMatchesForDate(date)));
+    }
+
+    const fotmobMatch = findFotMobMatch(matchCache.get(date), fixture);
+    fixture.lineup_last_checked = nowIso;
+    fixture.lineup_check_source = 'FotMob match details';
+
+    if (!fotmobMatch?.id) {
+      fixture.lineup_check_status = 'match_not_found';
+      continue;
+    }
+
+    const details = await fetchFotMobMatchDetails(fotmobMatch.id);
+    fixture.fotmob_match_id = fotmobMatch.id;
+    fixture.lineup_check_status = applyFotMobLineups(fixture, details, nowIso)
+      ? 'confirmed'
+      : 'not_available_yet';
+
+    if (fixture.lineup_check_status === 'confirmed') {
+      updates += 1;
+    }
+  }
+
+  return updates;
 }
 
 function getEspnReferee(event) {
@@ -1280,6 +1434,7 @@ async function main() {
   const nowIso = new Date().toISOString();
   const espnEvents = await fetchEspnEventsForDataset(dataset);
   const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
+  const lineupUpdates = await refreshLastHourLineups(dataset, getNow(), nowIso);
 
   for (const fixture of dataset) {
     const event = findEvent(allEvents, fixture);
@@ -1357,7 +1512,7 @@ async function main() {
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
   const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Removed ${prunedMarkets} unverified future markets. Verified ${refereeUpdates} referee assignments. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Removed ${prunedMarkets} unverified future markets. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {
