@@ -1478,16 +1478,16 @@ function formatLatestOrClosingPrice(bet) {
   }
 
   if (Number.isFinite(Number(bet.estimated_closing_odds))) {
-    return `<span class="primary-cell">Est. ${formatHistoryPrice(bet.estimated_closing_odds)}</span><span class="sub-cell warning-text">Estimated close</span>`;
+    return `<span class="primary-cell">${formatHistoryPrice(bet.estimated_closing_odds)}</span><span class="sub-cell warning-text">Latest price</span>`;
   }
 
-  return `<span class="primary-cell">${formatHistoryPrice(bet.current_odds)}</span><span class="sub-cell">${formatLatestSeenText(bet)}</span>`;
+  return `<span class="primary-cell">${formatHistoryPrice(bet.current_odds)}</span><span class="sub-cell">${formatLatestPriceLabel(bet)}</span>`;
 }
 
-function formatLatestSeenText(bet) {
+function formatLatestPriceLabel(bet) {
   const lastSeen = Date.parse(bet.last_seen_at || '');
-  if (!Number.isFinite(lastSeen)) return 'Latest saved price';
-  return `Latest saved ${formatter.format(new Date(lastSeen))}`;
+  if (!Number.isFinite(lastSeen)) return 'Latest price';
+  return `Latest price | ${formatter.format(new Date(lastSeen))}`;
 }
 
 function getClosingQi(bet) {
