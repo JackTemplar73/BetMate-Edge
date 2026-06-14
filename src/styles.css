@@ -203,7 +203,7 @@ h3 {
 }
 
 .qi-dot.good {
-  background: var(--gold);
+  background: #86efac;
 }
 
 .qi-dot.watch {
@@ -249,6 +249,13 @@ h3 {
   font-size: 12px;
   font-weight: 800;
   line-height: 1.35;
+}
+
+.summary-grid .summary-meta > span {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  min-height: 24px;
 }
 
 .history-result-summary {
@@ -931,9 +938,9 @@ td {
 }
 
 .qi-badge.good {
-  background: rgba(245, 188, 66, 0.18);
-  color: var(--gold);
-  border-color: rgba(245, 188, 66, 0.34);
+  background: rgba(134, 239, 172, 0.18);
+  color: #86efac;
+  border-color: rgba(134, 239, 172, 0.38);
 }
 
 .qi-badge.watch {

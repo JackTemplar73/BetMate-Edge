@@ -207,7 +207,7 @@ function getSelectedFixture() {
 }
 
 function formatKickoff(value) {
-  return `${formatter.format(parseKickoff(value))} AEST`;
+  return formatter.format(parseKickoff(value));
 }
 
 function minutesSince(value) {
@@ -299,7 +299,7 @@ function dateSort(a, b) {
 function metricClass(qi) {
   if (!Number.isFinite(qi) || qi <= 0) return 'no-score';
   if (qi >= 90) return 'elite';
-  if (qi >= 85) return 'strong';
+  if (qi >= 80) return 'strong';
   if (qi >= 70) return 'good';
   if (qi >= 50) return 'watch';
   return 'weak';
@@ -608,7 +608,6 @@ function renderHighValueBets() {
         <div><dt>Book Prob</dt><dd>${formatBookProb(market)}</dd></div>
         <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
         <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
-        <div><dt>Old QI</dt><dd><span class="qi-badge ${metricClass(Number(formatOldQi(market)))}">${formatQiBadge(formatOldQi(market), 'Old QI')}</span></dd></div>
         <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
       </dl>
     </article>
@@ -780,7 +779,6 @@ function renderSportsbookScan() {
         <thead>
           <tr>
             <th>QI</th>
-            <th>Old QI</th>
             <th>Match</th>
             <th>Selection</th>
             <th>AU Bookie</th>
@@ -797,7 +795,6 @@ function renderSportsbookScan() {
           ${topRows.map((row) => `
             <tr>
               <td><span class="qi-badge ${metricClass(Number(row.qi))}">${formatQiBadge(row.qi)}</span></td>
-              <td><span class="qi-badge ${metricClass(Number(row.price_qi))}">${formatQiBadge(row.price_qi, 'Old QI')}</span></td>
               <td><span class="primary-cell">${row.match_name}</span><span class="sub-cell">${formatKickoff(row.kickoff_time_aest)}</span></td>
               <td><span class="primary-cell">${row.selection}</span><span class="sub-cell">${row.market} | ${row.oddsapi_market}</span></td>
               <td><span class="pill">${row.bookmaker}</span></td>
@@ -1444,7 +1441,7 @@ function formatHistoryPrice(value, fallback = '-') {
 function formatTrackedPrice(bet) {
   const firstSeen = Date.parse(bet.first_seen_at || '');
   const detail = Number.isFinite(firstSeen)
-    ? `First saved ${formatter.format(new Date(firstSeen))} AEST`
+    ? `First saved ${formatter.format(new Date(firstSeen))}`
     : 'First saved by agent';
 
   return `<span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span><span class="sub-cell">${detail}</span>`;
@@ -1465,7 +1462,7 @@ function formatLatestOrClosingPrice(bet) {
 function formatLatestSeenText(bet) {
   const lastSeen = Date.parse(bet.last_seen_at || '');
   if (!Number.isFinite(lastSeen)) return 'Latest saved price';
-  return `Latest saved ${formatter.format(new Date(lastSeen))} AEST`;
+  return `Latest saved ${formatter.format(new Date(lastSeen))}`;
 }
 
 function getClosingQi(bet) {
@@ -1594,7 +1591,7 @@ function formatClosingDetail(bet) {
 
   if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture a live price in the final 30 minutes before kickoff</span>';
 
-  return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} AEST | Confirmed live price before kickoff</span>`;
+  return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} | Confirmed live price before kickoff</span>`;
 }
 
 function formatBetResult(bet) {
@@ -1653,7 +1650,7 @@ function formatResultLabel(statusValue) {
 function formatSettledAt(bet) {
   const settled = Date.parse(bet.settled_at || '');
   if (!Number.isFinite(settled)) return '<span class="sub-cell">-</span>';
-  return `<span class="primary-cell">${formatter.format(new Date(settled))}</span><span class="sub-cell">AEST</span>`;
+  return `<span class="primary-cell">${formatter.format(new Date(settled))}</span>`;
 }
 
 function bindSortControls() {
