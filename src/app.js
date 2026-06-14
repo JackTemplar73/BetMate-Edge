@@ -716,40 +716,10 @@ function formatModelOnlyProb(value) {
   return Number.isFinite(numeric) && numeric > 1 ? `${((1 / numeric) * 100).toFixed(1)}%` : '-';
 }
 
-function formatDirectPropCheck(prop) {
-  const sportsbet = prop.direct_checks?.sportsbet;
-  const tab = prop.direct_checks?.tab;
-  const pointsbet = prop.direct_checks?.pointsbet;
-  const neds = prop.direct_checks?.neds;
-  const lines = [];
-
-  if (sportsbet?.exact_market_found) {
-    lines.push(`Sportsbet direct: ${sportsbet.market} $${Number(sportsbet.current_odds).toFixed(2)} | QI ${sportsbet.qi}`);
-  } else if (sportsbet?.status === 'nearby_markets_only') {
-    const nearby = (sportsbet.nearby_markets || [])
-      .slice(0, 2)
-      .map((item) => `${item.market_name} $${Number(item.current_odds).toFixed(2)}`)
-      .join('; ');
-    lines.push(`Sportsbet direct: no exact match. Nearby only: ${nearby}`);
-  } else if (sportsbet?.status === 'checked') {
-    lines.push('Sportsbet direct: checked, no exact matching prop price found.');
-  } else if (sportsbet?.status) {
-    lines.push(`Sportsbet direct: ${sportsbet.status.replaceAll('_', ' ')}.`);
-  }
-
-  if (tab?.status) {
-    lines.push('TAB direct: no confirmed prop endpoint yet; TAB is still checked through OddsAPI.');
-  }
-
-  if (pointsbet?.status) {
-    lines.push('PointsBet direct: no confirmed prop endpoint yet; PointsBet is still checked through OddsAPI.');
-  }
-
-  if (neds?.status) {
-    lines.push('Neds direct: no confirmed prop endpoint yet; Neds is still checked through OddsAPI.');
-  }
-
-  return lines.length ? lines.join(' ') : 'Sportsbet/TAB check pending.';
+function formatPlayerPropNote(prop) {
+  return String(prop.model_note || 'Model-rated player prop.')
+    .replace(/\s*Check Sportsbet\/TAB before showing as a bet\./gi, '')
+    .trim();
 }
 
 function getUpcomingPlayerProps() {
@@ -793,7 +763,7 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
         <div><dt>Category</dt><dd>${prop.category || 'Player Prop'}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelOnlyPrice(prop.model_price)}</dd></div>
         <div><dt>Model Prob</dt><dd>${Number.isFinite(Number(prop.model_probability)) ? `${Number(prop.model_probability).toFixed(1)}%` : formatModelOnlyProb(prop.model_price)}</dd></div>
-        <div><dt>Price Check</dt><dd>Sportsbet/TAB</dd></div>
+        <div><dt>Price</dt><dd>${hasLivePrice ? 'Live price found' : 'Waiting for price'}</dd></div>
       </dl>
       ${hasLivePrice ? `
         <div class="prop-price-list">
@@ -808,7 +778,7 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
           `).join('')}
         </div>
       ` : ''}
-      <p class="source-note">${formatDirectPropCheck(prop)} ${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
+      <p class="source-note">${formatPlayerPropNote(prop)}</p>
     </article>
   `;
 }
@@ -835,7 +805,7 @@ function renderPlayerPropWatchlist() {
     <div class="prop-summary-card">
       <strong>${props.length} player props shown</strong>
       <span>${Object.entries(categoryCounts).map(([category, count]) => `${category}: ${count}`).join(' | ')}</span>
-      <span>Only player props with QI 60+ are shown. Sportsbet/TAB live prices found: ${livePriceCount}</span>
+      <span>Only player props with QI 60+ are shown. Live prices found: ${livePriceCount}</span>
     </div>
     ${props.map((prop) => renderPlayerPropCard(prop)).join('')}
   `;

@@ -155,7 +155,7 @@ const props = seedProps
       category,
       model_probability: probability,
       model_price: Number((100 / probability).toFixed(2)),
-      model_note: `${model_note} Check Sportsbet/TAB before showing as a bet.`,
+      model_note,
       live_prices: [],
       last_checked: null
     };
