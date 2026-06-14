@@ -1457,8 +1457,6 @@ function formatBetSavedCell(bet) {
 
   return `
     <span class="primary-cell">${savedText}</span>
-    <span class="sub-cell">Opening ${formatHistoryPrice(bet.opening_odds)}</span>
-    <span class="sub-cell">${formatQiBadge(bet.opening_qi)}</span>
   `;
 }
 
