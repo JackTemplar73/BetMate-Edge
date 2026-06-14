@@ -3370,24 +3370,8 @@ window.embeddedDataset = [
         "h2h",
         "h2h_3_way"
       ],
-      "matched_rows": 29,
+      "matched_rows": 33,
       "rows": [
-        {
-          "selection": "Cristian Volpato: 1+ Shots on Target",
-          "category": "Player Prop",
-          "market": "1+ Shots on Target",
-          "source": "Sportsbet direct site",
-          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
-          "model_probability": 65.8,
-          "model_price": 1.52,
-          "current_odds": 2.25,
-          "au_bookie": "Sportsbet",
-          "bookmaker_key": "sportsbet",
-          "ev": 48.03,
-          "qi": 96,
-          "price_qi": 98,
-          "checked_at": "2026-06-14T00:04:53.535Z"
-        },
         {
           "selection": "Arda Guler: Goal or Assist",
           "category": "Player Prop",

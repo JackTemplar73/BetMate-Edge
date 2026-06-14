@@ -655,7 +655,9 @@ function getSportsbookScanRowsForFixtures(fixtures) {
   return fixtures
     .flatMap((fixture) => {
       const scan = fixture.market_scan || {};
-      return (scan.rows || []).map((row) => ({
+      return (scan.rows || [])
+      .filter((row) => !isConfirmedBenchPlayerPropRow(fixture, row))
+      .map((row) => ({
         ...row,
         match_name: fixture.match_name,
         kickoff_time_aest: fixture.kickoff_time_aest,
@@ -667,6 +669,23 @@ function getSportsbookScanRowsForFixtures(fixtures) {
     })
     .filter((row) => Number.isFinite(Number(row.current_odds)) && Number.isFinite(Number(row.model_price)))
     .sort(compareBetQuality);
+}
+
+function isConfirmedBenchPlayerPropRow(fixture, row) {
+  if (!fixture.confirmed_lineups || String(row.category || '').toLowerCase() !== 'player prop') return false;
+  const player = String(row.selection || '').split(':')[0].trim().toLowerCase();
+  if (!player) return false;
+
+  const starters = [
+    ...(fixture.confirmed_lineups.home_starting_xi || []),
+    ...(fixture.confirmed_lineups.away_starting_xi || [])
+  ].map((name) => String(name).toLowerCase());
+  const subs = [
+    ...(fixture.confirmed_lineups.home_substitutes || []),
+    ...(fixture.confirmed_lineups.away_substitutes || [])
+  ].map((name) => String(name).toLowerCase());
+
+  return subs.includes(player) && !starters.includes(player);
 }
 
 function renderSportsbookScan() {
@@ -855,6 +874,7 @@ function renderFixtureModelBlock(fixture) {
   const markovMarkets = fixture.markov_market_model || [];
   const scan = fixture.market_scan || {};
   const scanRows = (scan.rows || [])
+    .filter((row) => !isConfirmedBenchPlayerPropRow(fixture, row))
     .filter((row) => Number.isFinite(Number(row.current_odds)) && Number.isFinite(Number(row.model_price)))
     .map((row) => ({
       ...row,
