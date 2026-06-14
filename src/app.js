@@ -1280,7 +1280,7 @@ function renderBetHistory() {
       <td>${formatOpeningClvCell(bet)}</td>
       <td>${formatLatestOrClosingPrice(bet)}</td>
       <td>${formatDirection(bet)}</td>
-      <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
+      <td class="${clvClass(bet)}">${formatLineGap(bet)}</td>
       <td>${formatQiMove(bet)}</td>
       <td class="${profitClass(bet)}">${formatBetResultProfit(bet)}</td>
     </tr>
@@ -1429,7 +1429,7 @@ function renderResults() {
 
   const rows = getSettledBets();
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="8">No settled QI 70+ bets yet.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="10">No settled QI 70+ bets yet.</td></tr>';
     return;
   }
 
@@ -1439,9 +1439,11 @@ function renderResults() {
       <td><span class="primary-cell">${bet.target_selection}</span>${renderMarketSubCell(bet.market_matrix)}</td>
       <td><span class="pill">${bet.au_bookie}</span></td>
       <td>${formatBetSavedCell(bet)}</td>
+      <td>${formatOpeningLineOnly(bet)}</td>
+      <td>${formatLatestOrClosingPrice(bet)}</td>
+      <td class="${clvClass(bet)}">${formatLineGap(bet)}</td>
       <td>${formatBetResultBadge(bet)}</td>
       <td><span class="sub-cell">${bet.result_detail || bet.settlement_source || 'Result settled.'}</span></td>
-      <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
       <td>${formatSettledAt(bet)}</td>
     </tr>
   `).join('');
@@ -1524,6 +1526,14 @@ function formatOpeningClvCell(bet) {
     <span class="sub-cell">${formatFirstSeenLabel(bet)}</span>
     <span class="sub-cell">Opening QI <span class="qi-badge compact ${metricClass(openingQi)}">${formatQiBadge(openingQi)}</span></span>
     ${details ? `<span class="sub-cell">${details}</span>` : ''}
+  `;
+}
+
+function formatOpeningLineOnly(bet) {
+  return `
+    <span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span>
+    <span class="sub-cell">Opening line</span>
+    <span class="sub-cell">QI ${formatQiBadge(bet.opening_qi)}</span>
   `;
 }
 
@@ -1655,6 +1665,25 @@ function formatHistoryClv(bet) {
   }
 
   return '<span class="primary-cell">Pending</span><span class="sub-cell">Waiting for closing line</span>';
+}
+
+function formatLineGap(bet) {
+  const opening = Number.parseFloat(bet.opening_odds);
+  const latest = getLatestComparableOdds(bet);
+
+  if (!Number.isFinite(opening) || !Number.isFinite(latest)) {
+    return '<span class="primary-cell">Pending</span><span class="sub-cell">Waiting for closing/latest line</span>';
+  }
+
+  const gap = opening - latest;
+  const label = Number.isFinite(Number(bet.closing_odds)) ? 'Opening minus closing' : 'Opening minus latest';
+  const gapText = `${gap > 0 ? '+' : ''}${gap.toFixed(2)}`;
+  const clvValue = Number.isFinite(Number(bet.clv_percent))
+    ? Number(bet.clv_percent)
+    : Number(bet.estimated_clv_percent);
+  const clvText = Number.isFinite(clvValue) ? `CLV ${formatClv(clvValue)}` : 'CLV pending';
+
+  return `<span class="primary-cell">${gapText}</span><span class="sub-cell">${label}</span><span class="sub-cell">${clvText}</span>`;
 }
 
 function hasReliableClvBaseline(bet) {
