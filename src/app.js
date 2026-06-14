@@ -475,11 +475,12 @@ function renderHighValueBets() {
     <article class="high-value-card">
       <div class="card-topline">
         <span class="qi-badge card-grade ${metricClass(market.metrics.qi)}">QI ${market.metrics.qi}</span>
-        <span class="pill">${market.au_bookie}</span>
+        <span class="sub-cell date-one-line">${formatKickoff(market.kickoff_time_aest)}</span>
       </div>
       <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
       <dl>
+        <div><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
         <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
         <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
@@ -971,10 +972,11 @@ function renderFixturePanels() {
             <article class="market-card">
               <div class="card-topline">
                 <span class="qi-badge card-grade ${metricClass(market.metrics.qi)}">QI ${formatQi(market)}</span>
-                <span class="pill">${market.au_bookie}</span>
+                <span class="sub-cell date-one-line">${formatKickoff(fixture.kickoff_time_aest)}</span>
               </div>
               <h3>${market.target_selection}</h3>
               <dl>
+                <div><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
                 <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
                 <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
                 <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
