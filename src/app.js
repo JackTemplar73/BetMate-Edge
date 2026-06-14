@@ -8,6 +8,7 @@ const state = {
   scanSortMode: 'qi',
   playerPropSortMode: 'qi',
   historyResultFilter: 'all',
+  resultsResultFilter: 'all',
   markovMinProbability: 0,
   markovMaxFairPrice: Infinity,
   lastRefresh: null,
@@ -447,8 +448,9 @@ function renderSummaryBestMetrics(market) {
 function renderSummaryEvMetrics(market) {
   return [
     `<span class="pill">${formatBookName(market)}</span>`,
-    `<span class="${evClass(market)}">EV ${formatEv(market)}</span>`,
-    `<span class="qi-badge ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics.qi}</span>`
+    `<span class="qi-badge ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics.qi}</span>`,
+    `<span class="${edgeClass(market)}">Edge ${formatEdge(market)}</span>`,
+    formatRiskValue(market.quality?.risk)
   ].join('');
 }
 
@@ -1313,6 +1315,28 @@ function renderHistoryResultFilterControls() {
   });
 }
 
+function filterResultsRowsByResult(rows) {
+  if (state.resultsResultFilter === 'won') {
+    return rows.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase()));
+  }
+
+  if (state.resultsResultFilter === 'lost') {
+    return rows.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase()));
+  }
+
+  if (state.resultsResultFilter === 'pending') {
+    return rows.filter((bet) => !isSettledResult(bet));
+  }
+
+  return rows;
+}
+
+function renderResultsResultFilterControls() {
+  document.querySelectorAll('[data-results-result-filter]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.resultsResultFilter === state.resultsResultFilter);
+  });
+}
+
 function getDedupedHistoryBets(rows) {
   const seen = new Map();
 
@@ -1427,9 +1451,10 @@ function renderResults() {
   const tableBody = document.querySelector('[data-results-table]');
   if (!tableBody) return;
 
-  const rows = getSettledBets();
+  const rows = filterResultsRowsByResult(getQualifiedHistoryBets().sort(sortHistoryRows));
+  renderResultsResultFilterControls();
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="10">No settled QI 70+ bets yet.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="10">No QI 70+ bets match this results filter.</td></tr>';
     return;
   }
 
@@ -1889,6 +1914,15 @@ function bindHistoryResultFilters() {
   });
 }
 
+function bindResultsResultFilters() {
+  document.querySelectorAll('[data-results-result-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.resultsResultFilter = button.dataset.resultsResultFilter;
+      renderResults();
+    });
+  });
+}
+
 function bindRefreshOdds() {
   const button = document.querySelector('[data-refresh-odds]');
   button.addEventListener('click', async () => {
@@ -1951,6 +1985,7 @@ Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
     bindSectionSortControls();
     bindMarkovFilters();
     bindHistoryResultFilters();
+    bindResultsResultFilters();
     bindRefreshOdds();
     bindViewTabs();
     render();

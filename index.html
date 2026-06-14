@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-results-saved-only-v1">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-results-filters-v1">
 </head>
 <body>
   <main class="app-shell">
@@ -183,7 +183,13 @@
       <div class="section-heading">
         <div>
           <h2>Results</h2>
-          <p>Settled QI 70+ tracked bets, including result status, final-score detail and CLV or line move.</p>
+          <p>QI 70+ tracked bets, including result status, final-score detail and CLV or line move.</p>
+        </div>
+        <div class="sort-controls" aria-label="Filter results">
+          <button class="icon-button active" data-results-result-filter="all" type="button">All</button>
+          <button class="icon-button" data-results-result-filter="won" type="button">Won</button>
+          <button class="icon-button" data-results-result-filter="lost" type="button">Lost</button>
+          <button class="icon-button" data-results-result-filter="pending" type="button">Pending</button>
         </div>
       </div>
       <div class="table-wrap">
@@ -243,10 +249,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-results-saved-only-v1"></script>
-  <script src="./src/embeddedData.js?v=20260614-results-saved-only-v1"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-results-saved-only-v1"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-results-saved-only-v1"></script>
-  <script src="./src/app.js?v=20260614-results-saved-only-v1"></script>
+  <script src="./src/calculations.js?v=20260614-results-filters-v1"></script>
+  <script src="./src/embeddedData.js?v=20260614-results-filters-v1"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-results-filters-v1"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-results-filters-v1"></script>
+  <script src="./src/app.js?v=20260614-results-filters-v1"></script>
 </body>
 </html>
