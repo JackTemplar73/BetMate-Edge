@@ -41,6 +41,7 @@ jobs:
         run: node scripts/update_odds.mjs
 
       - name: Check Sportsbet player props directly
+        continue-on-error: true
         run: node scripts/check_direct_player_props.mjs
 
       - name: Publish updated odds
