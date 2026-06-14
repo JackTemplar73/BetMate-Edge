@@ -61,7 +61,7 @@ const plainGameNotes = {
 const formatter = new Intl.DateTimeFormat('en-AU', {
   weekday: 'short',
   day: '2-digit',
-  month: 'short',
+  month: 'long',
   hour: '2-digit',
   minute: '2-digit'
 });
@@ -390,23 +390,40 @@ function renderSummary() {
   document.querySelector('[data-summary-fixtures]').textContent = fixtures.length;
   document.querySelector('[data-summary-markets]').textContent = rows.length;
   document.querySelector('[data-summary-best]').innerHTML = top
-    ? renderSummaryBet(top, [`QI ${top.metrics.qi}`, `Edge ${formatEdge(top)}`, `Risk ${top.quality.risk}`])
+    ? renderSummaryBet(top, renderSummaryBestMetrics(top))
     : '-';
   document.querySelector('[data-summary-ev]').innerHTML = bestEv
-    ? renderSummaryBet(bestEv, [`EV ${formatEv(bestEv)}`, `QI ${bestEv.metrics.qi}`])
+    ? renderSummaryBet(bestEv, renderSummaryEvMetrics(bestEv))
     : '-';
 }
 
-function renderSummaryBet(market, metrics) {
+function renderSummaryBet(market, metricsHtml) {
   return `
     <span class="summary-match">${market.match_name}</span>
     <span class="summary-selection">${market.target_selection}</span>
-    <span class="summary-meta">${formatBookName(market)} | ${metrics.join(' | ')}</span>
+    <span class="summary-meta">${metricsHtml}</span>
   `;
 }
 
 function formatBookName(market) {
   return market.au_bookie || market.bookmaker || 'Model only';
+}
+
+function renderSummaryBestMetrics(market) {
+  return [
+    `<span class="pill">${formatBookName(market)}</span>`,
+    `<span class="qi-badge ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics.qi}</span>`,
+    `<span class="${edgeClass(market)}">Edge ${formatEdge(market)}</span>`,
+    formatRiskValue(market.quality?.risk)
+  ].join('');
+}
+
+function renderSummaryEvMetrics(market) {
+  return [
+    `<span class="pill">${formatBookName(market)}</span>`,
+    `<span class="${evClass(market)}">EV ${formatEv(market)}</span>`,
+    `<span class="qi-badge ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics.qi}</span>`
+  ].join('');
 }
 
 function renderDataPanel() {

@@ -240,6 +240,10 @@ h3 {
 }
 
 .summary-grid .summary-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
   margin-top: 8px;
   color: var(--muted);
   font-size: 12px;
@@ -306,6 +310,7 @@ h3 {
 
 .card-topline {
   min-height: 32px;
+  flex-wrap: wrap;
 }
 
 .section-heading p,
@@ -825,11 +830,11 @@ td {
 }
 
 .date-one-line {
-  flex: 1;
-  max-width: 100%;
+  flex: 0 0 auto;
+  max-width: none;
   margin-top: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  overflow: visible;
+  text-overflow: clip;
   white-space: nowrap;
   text-align: right;
 }
