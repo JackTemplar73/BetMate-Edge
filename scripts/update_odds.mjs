@@ -1163,7 +1163,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       entry.last_seen_at = nowIso;
 
       const freshClose = hasFreshClosingPrice(marketItem, kickoff);
-      if (freshClose && entry.closing_odds === null) {
+      if (freshClose) {
         entry.closing_odds = currentOdds;
         entry.closing_captured_at = freshClose.checkedAt.toISOString();
         entry.closing_source = `Confirmed live check ${freshClose.minutesBeforeKickoff} min before kickoff`;
