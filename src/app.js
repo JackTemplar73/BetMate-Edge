@@ -81,7 +81,7 @@ function renderMarketSubCell(value) {
 
 const plainGameNotes = {
   'USA vs Paraguay': 'USA are expected to have more of the ball. Paraguay may need to defend for long spells, so the card bet on Omar Alderete stands out.',
-  'Australia vs Turkiye': 'Confirmed teams give Turkey the stronger attacking setup. At current prices, the model prefers the goals angle over the winner market: Over 2.5 Goals is the main value read.',
+  'Australia vs Turkiye': 'Confirmed teams give Turkey the stronger attacking setup, but Australia still carry enough transition and set-piece threat to keep the match open. The model reads this as a game where Turkey are more likely to control territory, while the best match path is pressure creating chances at both ends.',
   'Brazil vs Morocco': 'Brazil should create pressure, but Morocco are set up to defend well. The handicap on Morocco gives protection if Brazil only win by one goal.',
   'Qatar vs Switzerland': 'Switzerland should control the tempo, while Qatar sit deep. That points toward a low-scoring game.',
   'Haiti vs Scotland': 'Scotland look better suited to control the match. Haiti rely on speed, but the surface may make those breakaway attacks harder.'
@@ -1350,15 +1350,15 @@ function buildSummaryAnalysis(fixture) {
     ? 'Confirmed teams are loaded, so the model is using the selected starting elevens where available.'
     : 'Starting elevens are not fully confirmed yet, so late team news can still move the rating.';
   const drawText = Number.isFinite(Number(probabilities.drawProbability))
-    ? `The draw is rated around ${formatPercent(probabilities.drawProbability)}, so price discipline matters if the favourite is short.`
-    : 'The draw risk is not fully priced in this fixture yet.';
+    ? `The draw sits around ${formatPercent(probabilities.drawProbability)}, which means the model does not see a simple one-way match.`
+    : 'The draw risk is still unclear, so the model is leaning more on team strength and goal patterns.';
   const goalText = Number.isFinite(Number(totals.total_goals_mean))
     ? `The goal model expects about ${Number(totals.total_goals_mean).toFixed(2)} total goals, with Under 2.5 at ${formatPercent(totals.under_probability)} and Over 2.5 at ${formatPercent(totals.over_probability)}.`
     : 'The goal model is still waiting on a clean total-goals projection.';
 
   return {
     who: `${winner.team || 'No clear side'} is the model lean at ${formatPercent(winner.probability)}. ${edge < 6 ? 'This is close rather than dominant.' : `That is ${edge.toFixed(1)} points clear of ${winner.other}.`}`,
-    why: `${plainGameNotes[fixture.match_name] || fixture.tactical_summary || 'The model is balancing team strength, goal expectation, draw risk and market shape.'} ${drawText}`,
+    why: `${plainGameNotes[fixture.match_name] || fixture.tactical_summary || 'The model is balancing team strength, goal expectation, draw risk, lineup strength and likely game state.'} ${drawText}`,
     factors: [
       goalText,
       fixture.pitch_constraints ? `Pitch: ${fixture.pitch_constraints}` : null,
