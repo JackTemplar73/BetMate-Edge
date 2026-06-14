@@ -236,6 +236,10 @@ h3 {
   align-items: start;
 }
 
+.card-topline {
+  min-height: 32px;
+}
+
 .section-heading p,
 .fixture-heading p,
 .tactical-summary,
@@ -734,6 +738,16 @@ td {
   font-size: 12px;
 }
 
+.date-one-line {
+  flex: 1;
+  max-width: 100%;
+  margin-top: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+}
+
 .confirmed-text {
   color: var(--green);
 }
@@ -763,6 +777,13 @@ td {
   padding: 0 9px;
   font-weight: 900;
   border: 1px solid transparent;
+}
+
+.qi-badge.card-grade {
+  order: -1;
+  flex: 0 0 auto;
+  justify-self: flex-start;
+  align-self: flex-start;
 }
 
 .qi-badge.elite {

@@ -474,13 +474,12 @@ function renderHighValueBets() {
   container.innerHTML = rows.map((market) => `
     <article class="high-value-card">
       <div class="card-topline">
-        <span class="qi-badge ${metricClass(market.metrics.qi)}">QI ${market.metrics.qi}</span>
+        <span class="qi-badge card-grade ${metricClass(market.metrics.qi)}">QI ${market.metrics.qi}</span>
         <span class="pill">${market.au_bookie}</span>
       </div>
       <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
       <dl>
-        <div><dt>QI</dt><dd><span class="qi-badge ${metricClass(market.metrics.qi)}">${market.metrics.qi}</span></dd></div>
         <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
         <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
@@ -712,8 +711,10 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
   return `
     <article class="prop-watch-card">
       <div class="card-topline">
-        <span class="pill ${hasLivePrice ? '' : 'model-only-pill'}">${hasLivePrice ? 'Sportsbet/TAB priced' : 'Model only'}</span>
-        <span class="sub-cell">${formatKickoff(prop.kickoff_time_aest)}</span>
+        ${hasLivePrice
+          ? `<span class="qi-badge card-grade ${metricClass(Number(livePrices[0].qi))}">QI ${Number(livePrices[0].qi)}</span>`
+          : '<span class="pill model-only-pill">Model only</span>'}
+        <span class="sub-cell date-one-line">${formatKickoff(prop.kickoff_time_aest)}</span>
       </div>
       ${showMatch ? `<p class="match-name">${prop.match_name}</p>` : ''}
       <h3>${prop.player}: ${prop.market}</h3>
@@ -731,7 +732,7 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
                 <strong>${price.au_bookie}</strong>
                 <em>$${Number(price.current_odds).toFixed(2)} | EV ${Number(price.ev) > 0 ? '+' : ''}${Number(price.ev).toFixed(2)}%</em>
               </span>
-              <b class="qi-badge ${metricClass(Number(price.qi))}">${Number(price.qi)}</b>
+              <b class="qi-badge ${metricClass(Number(price.qi))}">QI ${Number(price.qi)}</b>
             </div>
           `).join('')}
         </div>
@@ -966,12 +967,11 @@ function renderFixturePanels() {
           ${markets.map((market) => `
             <article class="market-card">
               <div class="card-topline">
-                <span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span>
+                <span class="qi-badge card-grade ${metricClass(market.metrics.qi)}">QI ${formatQi(market)}</span>
                 <span class="pill">${market.au_bookie}</span>
               </div>
               <h3>${market.target_selection}</h3>
               <dl>
-                <div><dt>QI</dt><dd><span class="qi-badge ${metricClass(market.metrics.qi)}">${formatQi(market)}</span></dd></div>
                 <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
                 <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
                 <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
