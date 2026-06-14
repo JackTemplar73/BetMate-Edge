@@ -518,7 +518,7 @@ function renderHighValueBets() {
       <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
       <dl>
-        <div><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
+        <div class="book-stat-row"><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
         <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
         <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
@@ -1014,7 +1014,7 @@ function renderFixturePanels() {
               </div>
               <h3>${market.target_selection}</h3>
               <dl>
-                <div><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
+                <div class="book-stat-row"><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
                 <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
                 <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
                 <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>

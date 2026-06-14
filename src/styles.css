@@ -1052,6 +1052,17 @@ dd {
   font-weight: 850;
 }
 
+.book-stat-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.book-stat-row dd {
+  margin-top: 0;
+}
+
 @media (max-width: 900px) {
   .app-header,
   .section-heading,
