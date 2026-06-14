@@ -241,7 +241,7 @@ function runVectorCalculations(marketItem) {
   const currentOdds = Number.parseFloat(marketItem.current_odds);
 
   if (!Number.isFinite(truePrice) || !Number.isFinite(currentOdds) || truePrice <= 1 || currentOdds <= 1) {
-    return { ev: 0, qi: 0 };
+    return { ev: 0, qi: 0, price_qi: 0 };
   }
 
   const ev = ((currentOdds / truePrice) - 1) * 100;
@@ -250,11 +250,58 @@ function runVectorCalculations(marketItem) {
   const betSize = Math.ceil((100 / Math.sqrt(b)) / 5) * 5;
   const fraction = betSize / 10000;
   const eg = (p * Math.log(1 + fraction * b) + (1 - p) * Math.log(1 - fraction)) * 100;
-  const qi = Math.max(0, Math.min(100, Math.round(50 * (1 + (0.5 * Math.tanh(eg / 0.25) + 0.5 * Math.tanh(ev / 5))))));
+  const rawPriceQi = Math.max(0, Math.min(100, Math.round(50 * (1 + (0.5 * Math.tanh(eg / 0.25) + 0.5 * Math.tanh(ev / 5))))));
+  const quality = buildBetQualityFromPrices(truePrice, currentOdds);
+  const edgeScore = clamp((Number(quality.edge) / 12) * 100, 0, 100);
+  const probabilityScore = clamp(((Number(quality.model_probability) - 20) / 45) * 100, 0, 100);
+  const riskScore = {
+    Low: 100,
+    Medium: 75,
+    High: 45,
+    'Very high': 20
+  }[quality.risk] || 35;
+  const qi = Math.round(clamp(
+    (rawPriceQi * 0.35) +
+    (edgeScore * 0.3) +
+    (probabilityScore * 0.2) +
+    (riskScore * 0.15),
+    0,
+    100
+  ));
 
   return {
     ev: Number.parseFloat(ev.toFixed(2)),
-    qi
+    qi,
+    price_qi: rawPriceQi
+  };
+}
+
+function buildBetQualityFromPrices(truePriceValue, currentOddsValue) {
+  const truePrice = Number.parseFloat(truePriceValue);
+  const currentOdds = Number.parseFloat(currentOddsValue);
+
+  if (!Number.isFinite(truePrice) || !Number.isFinite(currentOdds) || truePrice <= 1 || currentOdds <= 1) {
+    return {
+      model_probability: null,
+      book_probability: null,
+      edge: null,
+      risk: 'No price'
+    };
+  }
+
+  const modelProbability = 100 / truePrice;
+  const bookProbability = 100 / currentOdds;
+  const edge = modelProbability - bookProbability;
+  let risk = 'Low';
+  if (currentOdds >= 8) risk = 'Very high';
+  else if (currentOdds >= 4) risk = 'High';
+  else if (currentOdds >= 2.2) risk = 'Medium';
+
+  return {
+    model_probability: Number.parseFloat(modelProbability.toFixed(2)),
+    book_probability: Number.parseFloat(bookProbability.toFixed(2)),
+    edge: Number.parseFloat(edge.toFixed(2)),
+    risk
   };
 }
 
