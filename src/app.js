@@ -1379,7 +1379,7 @@ function buildSummaryAnalysis(fixture) {
     topExact ? `Its most common single score state is ${topExact.score}, which is only one state inside the wider result tree.` : null,
     topScoreIsDraw ? 'Because the top exact score is a draw, the model is flagging a meaningful stalemate path even if one team still has the higher total win probability.' : null,
     drawText,
-    'The read is driven by expected goal states, transition pressure, defensive resistance, lineups, pitch conditions and referee effect.'
+    'In plain terms, it looks at who should create better chances, who can stop attacks, how the teams are set up, the pitch, and how the referee may shape the game.'
   ].filter(Boolean).join(' ');
 
   return {
