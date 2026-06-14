@@ -4,6 +4,8 @@ const state = {
   playerPropWatchlist: [],
   marketFilter: 'All',
   sortMode: 'qi',
+  highValueSortMode: 'qi',
+  scanSortMode: 'qi',
   lastRefresh: null,
   dataSource: 'Not loaded',
   selectedMatchName: null,
@@ -255,6 +257,20 @@ function getFilteredMarkets() {
     if (state.sortMode === 'odds') return Number.parseFloat(b.current_odds || 0) - Number.parseFloat(a.current_odds || 0);
     return compareBetQuality(a, b);
   });
+}
+
+function sortValue(row, mode) {
+  if (mode === 'edge') return Number(row.quality?.edge || 0);
+  if (mode === 'ev') return Number(row.metrics?.ev ?? row.ev ?? 0);
+  return Number(row.metrics?.qi ?? row.qi ?? 0);
+}
+
+function compareSelectionRows(mode) {
+  return (a, b) => {
+    const primary = sortValue(b, mode) - sortValue(a, mode);
+    if (primary !== 0) return primary;
+    return compareBetQuality(a, b);
+  };
 }
 
 function metricClass(qi) {
@@ -520,6 +536,14 @@ function renderViewTabs() {
   document.querySelector('[data-completed-count]').textContent = getCompletedFixtures().length;
 }
 
+function renderSectionSortControls() {
+  document.querySelectorAll('[data-section-sort]').forEach((button) => {
+    const target = button.dataset.sectionSort;
+    const mode = target === 'scan' ? state.scanSortMode : state.highValueSortMode;
+    button.classList.toggle('active', button.dataset.sortValue === mode);
+  });
+}
+
 function renderSourceTable() {
   const tableBody = document.querySelector('[data-source-table]');
   if (!tableBody) return;
@@ -604,7 +628,7 @@ function renderHighValueBets() {
   const container = document.querySelector('[data-high-value-bets]');
   const rows = getHighValueCandidateRows()
     .filter((market) => Number(market.metrics?.qi) >= 80)
-    .sort(compareBetQuality);
+    .sort(compareSelectionRows(state.highValueSortMode));
 
   if (rows.length === 0) {
     container.innerHTML = '<p class="empty-note">No QI 80+ options are available right now.</p>';
@@ -764,7 +788,7 @@ function renderSportsbookScan() {
   const container = document.querySelector('[data-sportsbook-scan]');
   if (!container) return;
 
-  const rows = getSportsbookScanRows();
+  const rows = getSportsbookScanRows().sort(compareSelectionRows(state.scanSortMode));
 
   if (rows.length === 0) {
     container.innerHTML = '<p class="empty-note">No AU bookie rows are matched to the model right now.</p>';
@@ -780,7 +804,7 @@ function renderSportsbookScan() {
     : `${watchlistPropCount} model-only player props are on the watchlist, but no live AU bookie player-prop odds were returned by OddsAPI in this scan.`;
 
   container.innerHTML = `
-    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices from ${bookies.join(', ')}. Sorted by combined QI first, then Edge/EV.</div>
+    <div class="sportsbook-scan-summary">${rows.length} AU bookie rows matched to model prices from ${bookies.join(', ')}. Sorted by ${state.scanSortMode.toUpperCase()}.</div>
     <p class="source-note">${playerPropNote}</p>
     <div class="sportsbook-scan-table">
       <table>
@@ -1375,6 +1399,24 @@ function bindSortControls() {
   });
 }
 
+function bindSectionSortControls() {
+  document.querySelectorAll('[data-section-sort]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const target = button.dataset.sectionSort;
+      if (target === 'scan') {
+        state.scanSortMode = button.dataset.sortValue;
+        renderSectionSortControls();
+        renderSportsbookScan();
+        return;
+      }
+
+      state.highValueSortMode = button.dataset.sortValue;
+      renderSectionSortControls();
+      renderHighValueBets();
+    });
+  });
+}
+
 function bindRefreshOdds() {
   const button = document.querySelector('[data-refresh-odds]');
   button.addEventListener('click', async () => {
@@ -1410,6 +1452,7 @@ function bindViewTabs() {
 
 function render() {
   renderViewTabs();
+  renderSectionSortControls();
   renderDataPanel();
   renderSourceTable();
   renderSummary();
@@ -1433,6 +1476,7 @@ Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
     document.documentElement.dataset.betmateAppReady = 'true';
     document.querySelector('[data-app-error]').textContent = '';
     bindSortControls();
+    bindSectionSortControls();
     bindRefreshOdds();
     bindViewTabs();
     render();
