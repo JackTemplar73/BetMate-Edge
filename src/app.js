@@ -460,10 +460,35 @@ function renderMarketsTable() {
 
 function renderHighValueBets() {
   const container = document.querySelector('[data-high-value-bets]');
-  const rows = flattenMarkets(getUpcomingFixtures())
+  const fixtureRows = flattenMarkets(getUpcomingFixtures())
     .filter(hasModelPrice)
     .filter(hasMarketOdds)
-    .filter((market) => market.metrics.qi >= 80)
+    .map((market) => ({ ...market, source_label: 'Fixture model' }));
+  const scanRows = getSportsbookScanRows()
+    .map((row) => ({
+      match_name: row.match_name,
+      kickoff_time_aest: row.kickoff_time_aest,
+      target_selection: row.selection,
+      market_matrix: row.category || row.market || 'Market Scan',
+      true_price: Number(row.model_price),
+      current_odds: Number(row.current_odds),
+      au_bookie: row.au_bookie || row.bookmaker,
+      metrics: {
+        qi: Number(row.qi),
+        ev: Number(row.ev)
+      },
+      quality: row.quality,
+      source_label: row.source || 'AU bookie scan'
+    }));
+  const seen = new Set();
+  const rows = [...fixtureRows, ...scanRows]
+    .filter((market) => Number(market.metrics?.qi) >= 80)
+    .filter((market) => {
+      const key = `${market.match_name}|${market.target_selection}|${market.au_bookie}|${market.current_odds}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
     .sort(compareBetQuality);
 
   if (rows.length === 0) {
@@ -480,6 +505,7 @@ function renderHighValueBets() {
       <p class="match-name">${market.match_name}</p>
       <h3>${market.target_selection}</h3>
       <dl>
+        <div><dt>Source</dt><dd>${market.source_label}</dd></div>
         <div><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
         <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
         <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
