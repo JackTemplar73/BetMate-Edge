@@ -375,7 +375,14 @@ function findEvent(events, fixture) {
 }
 
 function dateKey(value) {
-  return value.toISOString().slice(0, 10).replace(/-/g, '');
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Australia/Melbourne',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit'
+  }).formatToParts(value);
+  const lookup = Object.fromEntries(parts.map((part) => [part.type, part.value]));
+  return `${lookup.year}${lookup.month}${lookup.day}`;
 }
 
 function fixtureDateKeys(dataset) {
@@ -518,10 +525,11 @@ function applyFotMobLineups(fixture, details, nowIso) {
 }
 
 async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date().toISOString()) {
+  const today = dateKey(now);
   const fixtures = dataset.filter((fixture) => {
     const kickoff = parseAest(fixture.kickoff_time_aest);
     const untilKickoff = kickoff - now;
-    return untilKickoff >= 0 && untilKickoff <= LINEUP_CHECK_WINDOW_MS;
+    return dateKey(kickoff) === today || (untilKickoff >= 0 && untilKickoff <= LINEUP_CHECK_WINDOW_MS);
   });
 
   if (!fixtures.length) return 0;

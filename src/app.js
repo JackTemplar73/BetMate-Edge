@@ -1148,6 +1148,17 @@ function renderConfirmedLineupsBlock(fixture) {
   if (!lineups || lineups.status !== 'confirmed') return '';
 
   const renderList = (players = []) => players.map((player) => `<li>${player}</li>`).join('');
+  const renderTeamLineup = (team, formation, starters = [], substitutes = []) => `
+    <article class="lineup-card">
+      <h4>${team} <span>${formation || ''}</span></h4>
+      <h5>Starting XI</h5>
+      <ol>${renderList(starters)}</ol>
+      <h5>Substitutes</h5>
+      ${substitutes.length
+        ? `<ol>${renderList(substitutes)}</ol>`
+        : '<p class="lineup-empty">Substitutes not listed by the source yet.</p>'}
+    </article>
+  `;
 
   return `
     <section class="lineups-block">
@@ -1157,14 +1168,8 @@ function renderConfirmedLineupsBlock(fixture) {
       </div>
       <div class="lineup-note">${lineups.model_implication || 'Lineups are confirmed and included in the model view.'}</div>
       <div class="lineup-grid">
-        <article class="lineup-card">
-          <h4>${lineups.home_team} <span>${lineups.home_formation}</span></h4>
-          <ol>${renderList(lineups.home_starting_xi)}</ol>
-        </article>
-        <article class="lineup-card">
-          <h4>${lineups.away_team} <span>${lineups.away_formation}</span></h4>
-          <ol>${renderList(lineups.away_starting_xi)}</ol>
-        </article>
+        ${renderTeamLineup(lineups.home_team, lineups.home_formation, lineups.home_starting_xi, lineups.home_substitutes)}
+        ${renderTeamLineup(lineups.away_team, lineups.away_formation, lineups.away_starting_xi, lineups.away_substitutes)}
       </div>
     </section>
   `;

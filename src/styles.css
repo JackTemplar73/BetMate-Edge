@@ -1247,11 +1247,26 @@ td {
   white-space: nowrap;
 }
 
+.lineup-card h5 {
+  margin: 12px 0 8px;
+  color: var(--text);
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
 .lineup-card ol {
   display: grid;
   gap: 7px;
   margin: 0;
   padding-left: 22px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.lineup-empty {
+  margin: 0;
   color: var(--muted);
   font-size: 13px;
   line-height: 1.35;
