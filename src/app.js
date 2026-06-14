@@ -389,121 +389,6 @@ function renderSummary() {
     : '-';
 }
 
-function getSharpnessStats() {
-  const upcoming = getUpcomingFixtures();
-  const scanRows = getSportsbookScanRowsForFixtures(upcoming);
-  const highValueRows = getHighValueCandidateRows().filter((market) => Number(market.metrics?.qi) >= 80);
-  const eliteRows = getHighValueCandidateRows().filter((market) => Number(market.metrics?.qi) >= 90);
-  const playerProps = getUpcomingPlayerProps();
-  const livePlayerPropCount = playerProps.reduce((sum, prop) => sum + (prop.live_prices?.length || 0), 0);
-  const historyRows = state.betHistory.filter((bet) => Number(bet.opening_qi) >= 70);
-  const clvRows = historyRows.filter((bet) => (
-    Number.isFinite(Number(bet.clv_percent)) || Number.isFinite(Number(bet.estimated_clv_percent))
-  ));
-  const settledRows = historyRows.filter((bet) => {
-    const status = String(bet.result_status || '').toLowerCase();
-    return status && status !== 'pending';
-  });
-
-  return {
-    upcomingGames: upcoming.length,
-    scanRows: scanRows.length,
-    highValueRows: highValueRows.length,
-    eliteRows: eliteRows.length,
-    playerProps: playerProps.length,
-    livePlayerPropCount,
-    historyRows: historyRows.length,
-    clvRows: clvRows.length,
-    settledRows: settledRows.length
-  };
-}
-
-function calculateSharpnessScore(stats) {
-  const marketCoverage = clamp(stats.scanRows / Math.max(stats.upcomingGames * 18, 1), 0, 1);
-  const highValueDepth = clamp(stats.highValueRows / 20, 0, 1);
-  const clvCoverage = stats.historyRows > 0 ? clamp(stats.clvRows / stats.historyRows, 0, 1) : 0;
-  const resultProof = stats.historyRows > 0 ? clamp(stats.settledRows / stats.historyRows, 0, 1) : 0;
-  const historyDepth = clamp(stats.historyRows / 150, 0, 1);
-  const settledDepth = clamp(stats.settledRows / 150, 0, 1);
-  const propDepth = clamp(stats.livePlayerPropCount / 80, 0, 1);
-
-  return Math.round(
-    (marketCoverage * 18) +
-    (highValueDepth * 10) +
-    (clvCoverage * 12) +
-    (resultProof * 8) +
-    (historyDepth * 18) +
-    (settledDepth * 12) +
-    (propDepth * 10) +
-    6
-  );
-}
-
-function sharpnessLabel(score) {
-  if (score >= 80) return 'Strong, but still needs ongoing proof';
-  if (score >= 65) return 'Useful edge scanner, not fully proven yet';
-  if (score >= 50) return 'Promising but still in proof-building mode';
-  return 'Early-stage signal, not sharp enough to rely on alone';
-}
-
-function renderSharpnessReview() {
-  const container = document.querySelector('[data-sharpness-review]');
-  if (!container) return;
-
-  const stats = getSharpnessStats();
-  const score = calculateSharpnessScore(stats);
-  const propText = stats.livePlayerPropCount > 0
-    ? `${stats.livePlayerPropCount} live player-prop prices are attached to ${stats.playerProps} visible props.`
-    : 'Player props are still the weakest area because live prop prices are not consistently captured.';
-
-  container.innerHTML = `
-    <div class="sharpness-card">
-      <div class="sharpness-score">
-        <span>Revised Sharpness</span>
-        <strong>${score}/100</strong>
-        <em>${sharpnessLabel(score)}</em>
-      </div>
-      <div class="sharpness-copy">
-        <p><strong>Severe review:</strong> the dashboard is strongest as a live price-vs-model scanner for main match markets. It is not yet a fully proven betting model because the result sample is still small and player-prop price coverage is uneven.</p>
-        <p><strong>Use it for:</strong> finding where the market price is above model price, then checking QI, edge, risk and closing-line movement before treating the pick as a bet.</p>
-      </div>
-    </div>
-    <div class="sharpness-grid">
-      <article>
-        <span>Market coverage</span>
-        <strong>${stats.scanRows}</strong>
-        <p>AU bookie rows matched to model prices.</p>
-      </article>
-      <article>
-        <span>High value depth</span>
-        <strong>${stats.highValueRows}</strong>
-        <p>Current QI 80+ rows, with ${stats.eliteRows} at QI 90+.</p>
-      </article>
-      <article>
-        <span>CLV proof</span>
-        <strong>${stats.clvRows}/${stats.historyRows}</strong>
-        <p>Tracked QI 70+ bets with a closing or estimated closing line.</p>
-      </article>
-      <article>
-        <span>Results proof</span>
-        <strong>${stats.settledRows}/${stats.historyRows}</strong>
-        <p>Tracked QI 70+ bets with a recorded result.</p>
-      </article>
-    </div>
-    <div class="sharpness-actions">
-      <h3>Key improvements before calling it truly sharp</h3>
-      <ol>
-        <li>Backtest QI bands by market type, especially match result, totals, handicap and player props.</li>
-        <li>Make closing line capture strict: final usable price inside 2 minutes before kickoff, with source and timestamp.</li>
-        <li>Separate player props from main markets until Sportsbet/TAB/PointsBet/Neds prop prices are consistently live.</li>
-        <li>Grade each market type separately so a high-risk exact score cannot look as clean as a liquid match-result edge.</li>
-        <li>Record settled results automatically one hour after full time and show ROI, CLV and hit rate by QI band.</li>
-      </ol>
-      <p>${propText}</p>
-    </div>
-  `;
-}
-
 function renderDataPanel() {
   const refreshText = state.lastRefresh
     ? formatter.format(state.lastRefresh)
@@ -1456,7 +1341,6 @@ function render() {
   renderDataPanel();
   renderSourceTable();
   renderSummary();
-  renderSharpnessReview();
   renderHighValueBets();
   renderMatchModelHighlights();
   renderSportsbookScan();
