@@ -1153,7 +1153,7 @@ function renderBetHistory() {
       <td>${bet.match_name}</td>
       <td><span class="primary-cell">${bet.target_selection}</span><span class="sub-cell">${plainMarketNames[bet.market_matrix] || bet.market_matrix}</span></td>
       <td><span class="pill">${bet.au_bookie}</span></td>
-      <td>${formatHistoryPrice(bet.opening_odds)}</td>
+      <td>${formatTrackedPrice(bet)}</td>
       <td>${formatHistoryPrice(bet.current_odds)}</td>
       <td>${formatDirection(bet)}</td>
       <td>${formatClosingPrice(bet)}${formatClosingDetail(bet)}</td>
@@ -1233,6 +1233,15 @@ function formatHistoryPrice(value, fallback = '-') {
   return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : fallback;
 }
 
+function formatTrackedPrice(bet) {
+  const firstSeen = Date.parse(bet.first_seen_at || '');
+  const detail = Number.isFinite(firstSeen)
+    ? `First saved ${formatter.format(new Date(firstSeen))} AEST`
+    : 'First saved by agent';
+
+  return `<span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span><span class="sub-cell">${detail}</span>`;
+}
+
 function sortHistoryRows(a, b) {
   const now = new Date();
   const aKickoff = parseKickoff(a.kickoff_time_aest);
@@ -1270,14 +1279,30 @@ function formatClosingPrice(bet) {
 
 function formatHistoryClv(bet) {
   if (Number.isFinite(Number(bet.clv_percent))) {
+    if (!hasReliableClvBaseline(bet)) {
+      return `<span class="primary-cell">Line move ${formatClv(bet.clv_percent)}</span><span class="sub-cell warning-text">First tracked price was too close to kickoff for true opening-to-close CLV</span>`;
+    }
     return `<span class="primary-cell">${formatClv(bet.clv_percent)}</span><span class="sub-cell confirmed-text">Confirmed closing line</span>`;
   }
 
   if (Number.isFinite(Number(bet.estimated_clv_percent))) {
-    return `<span class="primary-cell">Estimated CLV ${formatClv(bet.estimated_clv_percent)}</span><span class="sub-cell warning-text">Using latest saved price before kickoff</span>`;
+    return `<span class="primary-cell">Estimated move ${formatClv(bet.estimated_clv_percent)}</span><span class="sub-cell warning-text">No confirmed closing line captured</span>`;
   }
 
   return '<span class="primary-cell">Pending</span><span class="sub-cell">Waiting for closing line</span>';
+}
+
+function hasReliableClvBaseline(bet) {
+  const firstSeen = Date.parse(bet.first_seen_at || '');
+  const closingSeen = Date.parse(bet.closing_captured_at || '');
+  const kickoff = parseKickoff(bet.kickoff_time_aest);
+  const oneHour = 60 * 60 * 1000;
+
+  return Number.isFinite(firstSeen)
+    && Number.isFinite(closingSeen)
+    && Number.isFinite(kickoff.getTime())
+    && firstSeen < closingSeen
+    && kickoff - firstSeen >= oneHour;
 }
 
 function priceDirection(bet) {
@@ -1296,7 +1321,7 @@ function priceDirection(bet) {
     return {
       className: 'positive',
       label: 'Positive',
-      detail: 'Opening higher than current odds.'
+      detail: 'First tracked price higher than latest odds.'
     };
   }
 
@@ -1304,14 +1329,14 @@ function priceDirection(bet) {
     return {
       className: 'negative',
       label: 'Negative',
-      detail: 'Opening lower than current odds.'
+      detail: 'First tracked price lower than latest odds.'
     };
   }
 
   return {
     className: 'neutral-text',
     label: 'Neutral',
-    detail: 'Opening equals current odds.'
+    detail: 'First tracked price equals latest odds.'
   };
 }
 

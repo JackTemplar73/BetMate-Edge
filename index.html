@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-results-v1">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-results-v2">
 </head>
 <body>
   <main class="app-shell">
@@ -172,7 +172,7 @@
       <div class="section-heading">
         <div>
           <h2>Bet History</h2>
-          <p>Only bets that first qualified at QI 70+ are tracked with opening odds, latest odds, direction, closing odds, CLV, and result.</p>
+          <p>Only bets that first qualified at QI 70+ are tracked. First tracked price is not treated as the bookmaker's true opener unless the agent captured it early enough.</p>
         </div>
       </div>
       <div class="history-result-summary" data-history-result-summary></div>
@@ -183,13 +183,13 @@
               <th>Match</th>
               <th>Bet</th>
               <th>Book</th>
-              <th>Opening</th>
-              <th>Odds</th>
+              <th>First Tracked</th>
+              <th>Latest</th>
               <th>Direction</th>
               <th>Closing</th>
-              <th>CLV</th>
+              <th>CLV / Move</th>
               <th>Result</th>
-              <th>Opening QI</th>
+              <th>First QI</th>
               <th>Latest QI</th>
             </tr>
           </thead>
@@ -200,10 +200,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-results-v1"></script>
-  <script src="./src/embeddedData.js?v=20260614-results-v1"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-results-v1"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-results-v1"></script>
-  <script src="./src/app.js?v=20260614-results-v1"></script>
+  <script src="./src/calculations.js?v=20260614-results-v2"></script>
+  <script src="./src/embeddedData.js?v=20260614-results-v2"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-results-v2"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-results-v2"></script>
+  <script src="./src/app.js?v=20260614-results-v2"></script>
 </body>
 </html>
