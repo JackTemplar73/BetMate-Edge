@@ -218,6 +218,45 @@ h3 {
   font-size: 18px;
 }
 
+.history-result-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 0 20px 18px;
+}
+
+.history-result-summary article {
+  min-height: 82px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.history-result-summary span,
+.history-result-summary small {
+  display: block;
+  color: var(--muted);
+}
+
+.history-result-summary span {
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.history-result-summary strong {
+  display: block;
+  font-size: 22px;
+  line-height: 1.15;
+}
+
+.history-result-summary small {
+  margin-top: 6px;
+  font-size: 13px;
+}
+
 .table-section {
   padding: 18px;
   margin-bottom: 22px;

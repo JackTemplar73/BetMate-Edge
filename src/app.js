@@ -1141,6 +1141,7 @@ function renderBetHistory() {
           current_qi: market.metrics.qi
         }))
       .sort((a, b) => b.current_qi - a.current_qi);
+  renderHistoryResultSummary(rows);
 
   if (rows.length === 0) {
     tableBody.innerHTML = '<tr><td colspan="11">No QI 70+ bets available right now.</td></tr>';
@@ -1162,6 +1163,33 @@ function renderBetHistory() {
       <td><span class="qi-badge ${metricClass(bet.current_qi)}">${Number.isFinite(Number(bet.current_qi)) ? bet.current_qi : '-'}</span></td>
     </tr>
   `).join('');
+}
+
+function renderHistoryResultSummary(rows) {
+  const container = document.querySelector('[data-history-result-summary]');
+  if (!container) return;
+
+  const settled = rows.filter((bet) => {
+    const status = String(bet.result_status || '').toLowerCase();
+    return ['won', 'win', 'lost', 'loss', 'push', 'void'].includes(status);
+  });
+  const won = settled.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase())).length;
+  const lost = settled.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase())).length;
+  const pending = rows.length - settled.length;
+  const latestSettled = [...settled].sort((a, b) => Date.parse(b.settled_at || '') - Date.parse(a.settled_at || ''))[0];
+
+  container.innerHTML = `
+    <article>
+      <span>Settled</span>
+      <strong>${settled.length}</strong>
+      <small>${won} won / ${lost} lost${pending ? ` / ${pending} pending` : ''}</small>
+    </article>
+    <article>
+      <span>Latest Result</span>
+      <strong>${latestSettled ? latestSettled.match_name : '-'}</strong>
+      <small>${latestSettled ? `${latestSettled.target_selection}: ${formatResultLabel(latestSettled.result_status)}` : 'No settled result yet'}</small>
+    </article>
+  `;
 }
 
 function renderCompletedGames() {
@@ -1335,6 +1363,19 @@ function formatBetResult(bet) {
 
   const detail = bet.result_detail || bet.settlement_source || 'Awaiting final result check.';
   return `<span class="primary-cell ${resultClass}">${label}</span><span class="sub-cell">${detail}</span>`;
+}
+
+function formatResultLabel(statusValue) {
+  const status = String(statusValue || '').toLowerCase();
+  return {
+    won: 'Won',
+    win: 'Won',
+    lost: 'Lost',
+    loss: 'Lost',
+    push: 'Push',
+    void: 'Void',
+    pending: 'Pending'
+  }[status] || 'Pending';
 }
 
 function bindSortControls() {
