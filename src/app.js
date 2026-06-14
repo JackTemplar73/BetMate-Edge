@@ -252,9 +252,9 @@ function getFilteredMarkets() {
     : rows.filter((market) => market.market_matrix === state.marketFilter);
 
   return filtered.sort((a, b) => {
-    if (state.sortMode === 'edge') return Number(b.quality?.edge || 0) - Number(a.quality?.edge || 0);
     if (state.sortMode === 'ev') return b.metrics.ev - a.metrics.ev;
-    if (state.sortMode === 'odds') return Number.parseFloat(b.current_odds || 0) - Number.parseFloat(a.current_odds || 0);
+    if (state.sortMode === 'edge') return Number(b.quality?.edge || 0) - Number(a.quality?.edge || 0);
+    if (state.sortMode === 'date') return dateSort(a, b) || compareBetQuality(a, b);
     return compareBetQuality(a, b);
   });
 }
@@ -266,11 +266,19 @@ function sortValue(row, mode) {
 }
 
 function compareSelectionRows(mode) {
+  if (mode === 'date') {
+    return (a, b) => dateSort(a, b) || compareBetQuality(a, b);
+  }
+
   return (a, b) => {
     const primary = sortValue(b, mode) - sortValue(a, mode);
     if (primary !== 0) return primary;
     return compareBetQuality(a, b);
   };
+}
+
+function dateSort(a, b) {
+  return parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest);
 }
 
 function metricClass(qi) {
