@@ -863,6 +863,17 @@ td {
   font-size: 14px;
 }
 
+.results-section th,
+.results-section td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.results-section .pill,
+.results-section .qi-badge {
+  margin-inline: auto;
+}
+
 .primary-cell,
 .sub-cell {
   display: block;
