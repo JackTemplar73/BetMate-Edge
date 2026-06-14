@@ -936,6 +936,14 @@ td {
   white-space: nowrap;
 }
 
+.line-price-with-qi {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
 .history-arrow {
   color: var(--muted);
   font-size: 12px;
