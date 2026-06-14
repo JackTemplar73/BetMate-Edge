@@ -7,6 +7,7 @@ const state = {
   highValueSortMode: 'qi',
   scanSortMode: 'qi',
   playerPropSortMode: 'qi',
+  historyResultFilter: 'all',
   markovMinProbability: 0,
   markovMaxFairPrice: Infinity,
   lastRefresh: null,
@@ -1243,7 +1244,7 @@ function renderFixturePanels() {
 
 function renderBetHistory() {
   const tableBody = document.querySelector('[data-history-table]');
-  const rows = state.betHistory.length > 0
+  const allRows = state.betHistory.length > 0
     ? getDedupedHistoryBets(getQualifiedHistoryBets()).sort(sortHistoryRows)
     : flattenMarkets(getUpcomingFixtures())
       .filter((market) => market.metrics.qi >= 70)
@@ -1262,10 +1263,12 @@ function renderBetHistory() {
           current_qi: market.metrics.qi
         }))
       .sort((a, b) => b.current_qi - a.current_qi);
+  const rows = filterHistoryRowsByResult(allRows);
   renderHistoryResultSummary(rows);
+  renderHistoryResultFilterControls();
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="11">No QI 70+ bets available right now.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="11">No bets match this history filter.</td></tr>';
     return;
   }
 
@@ -1288,6 +1291,28 @@ function renderBetHistory() {
 
 function getQualifiedHistoryBets() {
   return state.betHistory.filter((bet) => Number(bet.opening_qi) >= 70 && Number(bet.current_qi) >= 70);
+}
+
+function filterHistoryRowsByResult(rows) {
+  if (state.historyResultFilter === 'won') {
+    return rows.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase()));
+  }
+
+  if (state.historyResultFilter === 'lost') {
+    return rows.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase()));
+  }
+
+  if (state.historyResultFilter === 'pending') {
+    return rows.filter((bet) => !isSettledResult(bet));
+  }
+
+  return rows;
+}
+
+function renderHistoryResultFilterControls() {
+  document.querySelectorAll('[data-history-result-filter]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.historyResultFilter === state.historyResultFilter);
+  });
 }
 
 function getDedupedHistoryBets(rows) {
@@ -1703,6 +1728,15 @@ function bindMarkovFilters() {
   });
 }
 
+function bindHistoryResultFilters() {
+  document.querySelectorAll('[data-history-result-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.historyResultFilter = button.dataset.historyResultFilter;
+      renderBetHistory();
+    });
+  });
+}
+
 function bindRefreshOdds() {
   const button = document.querySelector('[data-refresh-odds]');
   button.addEventListener('click', async () => {
@@ -1764,6 +1798,7 @@ Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
     bindSortControls();
     bindSectionSortControls();
     bindMarkovFilters();
+    bindHistoryResultFilters();
     bindRefreshOdds();
     bindViewTabs();
     render();

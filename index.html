@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-qi-bands-v1">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-history-filter-v1">
 </head>
 <body>
   <main class="app-shell">
@@ -210,6 +210,12 @@
           <h2>Bet History</h2>
           <p>One row per bookie, game, market and unique price. Only QI 70+ bets are tracked.</p>
         </div>
+        <div class="sort-controls" aria-label="Filter bet history results">
+          <button class="icon-button active" data-history-result-filter="all" type="button">All</button>
+          <button class="icon-button" data-history-result-filter="won" type="button">Won</button>
+          <button class="icon-button" data-history-result-filter="lost" type="button">Lost</button>
+          <button class="icon-button" data-history-result-filter="pending" type="button">Pending</button>
+        </div>
       </div>
       <div class="history-result-summary" data-history-result-summary></div>
       <div class="table-wrap">
@@ -236,10 +242,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-qi-bands-v1"></script>
-  <script src="./src/embeddedData.js?v=20260614-qi-bands-v1"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-qi-bands-v1"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-qi-bands-v1"></script>
-  <script src="./src/app.js?v=20260614-qi-bands-v1"></script>
+  <script src="./src/calculations.js?v=20260614-history-filter-v1"></script>
+  <script src="./src/embeddedData.js?v=20260614-history-filter-v1"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-history-filter-v1"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-history-filter-v1"></script>
+  <script src="./src/app.js?v=20260614-history-filter-v1"></script>
 </body>
 </html>
