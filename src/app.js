@@ -389,12 +389,24 @@ function renderSummary() {
 
   document.querySelector('[data-summary-fixtures]').textContent = fixtures.length;
   document.querySelector('[data-summary-markets]').textContent = rows.length;
-  document.querySelector('[data-summary-best]').textContent = top
-    ? `${top.match_name}: ${top.target_selection} | QI ${top.metrics.qi} | Edge ${formatEdge(top)} | Risk ${top.quality.risk}`
+  document.querySelector('[data-summary-best]').innerHTML = top
+    ? renderSummaryBet(top, [`QI ${top.metrics.qi}`, `Edge ${formatEdge(top)}`, `Risk ${top.quality.risk}`])
     : '-';
-  document.querySelector('[data-summary-ev]').textContent = bestEv
-    ? `${bestEv.match_name}: ${bestEv.target_selection} | EV ${formatEv(bestEv)} | QI ${bestEv.metrics.qi}`
+  document.querySelector('[data-summary-ev]').innerHTML = bestEv
+    ? renderSummaryBet(bestEv, [`EV ${formatEv(bestEv)}`, `QI ${bestEv.metrics.qi}`])
     : '-';
+}
+
+function renderSummaryBet(market, metrics) {
+  return `
+    <span class="summary-match">${market.match_name}</span>
+    <span class="summary-selection">${market.target_selection}</span>
+    <span class="summary-meta">${formatBookName(market)} | ${metrics.join(' | ')}</span>
+  `;
+}
+
+function formatBookName(market) {
+  return market.au_bookie || market.bookmaker || 'Model only';
 }
 
 function renderDataPanel() {

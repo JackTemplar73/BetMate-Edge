@@ -218,6 +218,35 @@ h3 {
   font-size: 18px;
 }
 
+.summary-grid .summary-match,
+.summary-grid .summary-selection,
+.summary-grid .summary-meta {
+  margin: 0;
+  text-transform: none;
+}
+
+.summary-grid .summary-match {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 900;
+}
+
+.summary-grid .summary-selection {
+  margin-top: 5px;
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1.15;
+}
+
+.summary-grid .summary-meta {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
 .history-result-summary {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
