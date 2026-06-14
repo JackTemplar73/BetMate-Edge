@@ -427,6 +427,7 @@ function renderViewTabs() {
 
   document.querySelector('[data-history-count]').textContent = state.betHistory.length || flattenMarkets(getUpcomingFixtures()).length;
   document.querySelector('[data-completed-count]').textContent = getCompletedFixtures().length;
+  document.querySelector('[data-results-count]').textContent = getSettledBets().length;
 }
 
 function renderSectionSortControls() {
@@ -1200,6 +1201,45 @@ function renderHistoryResultSummary(rows) {
   `;
 }
 
+function getSettledBets() {
+  return state.betHistory
+    .filter((bet) => Number(bet.opening_qi) >= 70)
+    .filter((bet) => isSettledResult(bet))
+    .sort((a, b) => {
+      const settledDiff = Date.parse(b.settled_at || '') - Date.parse(a.settled_at || '');
+      if (Number.isFinite(settledDiff) && settledDiff !== 0) return settledDiff;
+      return parseKickoff(b.kickoff_time_aest) - parseKickoff(a.kickoff_time_aest);
+    });
+}
+
+function isSettledResult(bet) {
+  const status = String(bet.result_status || '').toLowerCase();
+  return ['won', 'win', 'lost', 'loss', 'push', 'void'].includes(status);
+}
+
+function renderResults() {
+  const tableBody = document.querySelector('[data-results-table]');
+  if (!tableBody) return;
+
+  const rows = getSettledBets();
+  if (rows.length === 0) {
+    tableBody.innerHTML = '<tr><td colspan="7">No settled QI 70+ bets yet.</td></tr>';
+    return;
+  }
+
+  tableBody.innerHTML = rows.map((bet) => `
+    <tr>
+      <td>${bet.match_name}</td>
+      <td><span class="primary-cell">${bet.target_selection}</span><span class="sub-cell">${plainMarketNames[bet.market_matrix] || bet.market_matrix}</span></td>
+      <td><span class="pill">${bet.au_bookie}</span></td>
+      <td>${formatBetResultBadge(bet)}</td>
+      <td><span class="sub-cell">${bet.result_detail || bet.settlement_source || 'Result settled.'}</span></td>
+      <td class="${clvClass(bet)}">${formatHistoryClv(bet)}</td>
+      <td>${formatSettledAt(bet)}</td>
+    </tr>
+  `).join('');
+}
+
 function renderCompletedGames() {
   const tableBody = document.querySelector('[data-completed-table]');
   const fixtures = getCompletedFixtures();
@@ -1398,6 +1438,20 @@ function formatBetResult(bet) {
   return `<span class="primary-cell ${resultClass}">${label}</span><span class="sub-cell">${detail}</span>`;
 }
 
+function formatBetResultBadge(bet) {
+  const status = String(bet.result_status || '').toLowerCase();
+  const resultClass = {
+    won: 'positive',
+    win: 'positive',
+    lost: 'negative',
+    loss: 'negative',
+    push: 'neutral-text',
+    void: 'neutral-text'
+  }[status] || 'neutral-text';
+
+  return `<span class="primary-cell ${resultClass}">${formatResultLabel(status)}</span>`;
+}
+
 function formatResultLabel(statusValue) {
   const status = String(statusValue || '').toLowerCase();
   return {
@@ -1409,6 +1463,12 @@ function formatResultLabel(statusValue) {
     void: 'Void',
     pending: 'Pending'
   }[status] || 'Pending';
+}
+
+function formatSettledAt(bet) {
+  const settled = Date.parse(bet.settled_at || '');
+  if (!Number.isFinite(settled)) return '<span class="sub-cell">-</span>';
+  return `<span class="primary-cell">${formatter.format(new Date(settled))}</span><span class="sub-cell">AEST</span>`;
 }
 
 function bindSortControls() {
@@ -1488,6 +1548,7 @@ function render() {
   renderMarketsTable();
   renderFixturePanels();
   renderCompletedGames();
+  renderResults();
   renderBetHistory();
 }
 

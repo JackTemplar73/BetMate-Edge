@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260614-results-v2">
+  <link rel="stylesheet" href="./src/styles.css?v=20260614-results-v3">
 </head>
 <body>
   <main class="app-shell">
@@ -95,6 +95,7 @@
     <nav class="view-tabs" aria-label="Dashboard tabs">
       <button class="view-tab active" data-view-tab="matches" type="button">Matches</button>
       <button class="view-tab" data-view-tab="completed" type="button">Completed <span data-completed-count>0</span></button>
+      <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
       <button class="view-tab" data-view-tab="history" type="button">Bet History <span data-history-count>0</span></button>
     </nav>
 
@@ -170,6 +171,31 @@
       </div>
     </section>
 
+    <section class="table-section results-section hidden" data-view-section="results">
+      <div class="section-heading">
+        <div>
+          <h2>Results</h2>
+          <p>Settled QI 70+ tracked bets, including result status, final-score detail and CLV or line move.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Match</th>
+              <th>Bet</th>
+              <th>Book</th>
+              <th>Result</th>
+              <th>Detail</th>
+              <th>CLV / Move</th>
+              <th>Settled</th>
+            </tr>
+          </thead>
+          <tbody data-results-table></tbody>
+        </table>
+      </div>
+    </section>
+
     <section class="table-section history-section hidden" data-view-section="history">
       <div class="section-heading">
         <div>
@@ -202,10 +228,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260614-results-v2"></script>
-  <script src="./src/embeddedData.js?v=20260614-results-v2"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260614-results-v2"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260614-results-v2"></script>
-  <script src="./src/app.js?v=20260614-results-v2"></script>
+  <script src="./src/calculations.js?v=20260614-results-v3"></script>
+  <script src="./src/embeddedData.js?v=20260614-results-v3"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260614-results-v3"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260614-results-v3"></script>
+  <script src="./src/app.js?v=20260614-results-v3"></script>
 </body>
 </html>
