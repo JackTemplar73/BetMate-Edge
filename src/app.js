@@ -474,6 +474,8 @@ function renderDataPanel() {
 }
 
 function renderViewTabs() {
+  document.body.classList.toggle('owner-results-enabled', isOwnerResultsMode());
+
   document.querySelectorAll('[data-view-tab]').forEach((button) => {
     button.classList.toggle('active', button.dataset.viewTab === state.activeView);
   });
@@ -1966,6 +1968,19 @@ function bindViewTabs() {
   });
 }
 
+function isOwnerResultsMode() {
+  const params = new URLSearchParams(window.location.search);
+  return window.location.hash === '#results'
+    || params.get('view') === 'results'
+    || params.get('admin') === 'results';
+}
+
+function applyInitialViewFromUrl() {
+  if (isOwnerResultsMode()) {
+    state.activeView = 'results';
+  }
+}
+
 function render() {
   renderViewTabs();
   renderSectionSortControls();
@@ -1988,6 +2003,7 @@ function render() {
 
 Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
   .then(() => {
+    applyInitialViewFromUrl();
     window.betmateAppReady = true;
     document.documentElement.dataset.betmateAppReady = 'true';
     document.querySelector('[data-app-error]').textContent = '';

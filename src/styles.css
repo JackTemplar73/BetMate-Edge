@@ -340,6 +340,10 @@ h3 {
   margin: -8px 0 18px;
 }
 
+body:not(.owner-results-enabled) [data-owner-only] {
+  display: none;
+}
+
 .icon-button,
 .segmented-button,
 .refresh-button,
