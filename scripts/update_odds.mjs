@@ -39,6 +39,7 @@ const ESPN_LEAGUES = [
   'fifa.world',
   'fifa.friendly'
 ];
+const FIFA_REPORT_HUB_URL = 'https://www.fifatrainingcentre.com/en/fifa-world-cup-2026/match-report-hub.php';
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
 const CLOSING_WINDOW_MS = 30 * 60 * 1000;
@@ -611,6 +612,121 @@ function eventResult(event) {
   };
 }
 
+function stripHtml(value) {
+  return String(value || '')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#039;|&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function absoluteFifaUrl(href) {
+  try {
+    return new URL(href, FIFA_REPORT_HUB_URL).toString();
+  } catch {
+    return FIFA_REPORT_HUB_URL;
+  }
+}
+
+async function fetchFifaReportHub() {
+  const response = await fetch(FIFA_REPORT_HUB_URL, {
+    headers: {
+      accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+      'user-agent': 'Mozilla/5.0'
+    }
+  });
+
+  if (!response.ok) {
+    throw new Error(`FIFA report hub request failed: ${response.status}`);
+  }
+
+  return response.text();
+}
+
+function parseFifaReportHub(html) {
+  const reports = [];
+  const anchorPattern = /<a\b[^>]*href=(["'])(.*?)\1[^>]*>([\s\S]*?)<\/a>/gi;
+  let match;
+
+  while ((match = anchorPattern.exec(html)) !== null) {
+    const text = stripHtml(match[3]);
+    const score = text.match(/\b(\d{1,2})\s*[-–]\s*(\d{1,2})\b/);
+    if (!score) continue;
+
+    reports.push({
+      text,
+      normalisedText: normalise(text),
+      homeScore: Number(score[1]),
+      awayScore: Number(score[2]),
+      source: absoluteFifaUrl(match[2])
+    });
+  }
+
+  return reports;
+}
+
+function findFifaReport(reports, fixture) {
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  return reports.find((report) => (
+    report.normalisedText.includes(teams.home)
+      && report.normalisedText.includes(teams.away)
+  )) || null;
+}
+
+function fifaReportResult(report, fixture) {
+  if (!report) return null;
+
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  const homeIndex = report.normalisedText.indexOf(teams.home);
+  const awayIndex = report.normalisedText.indexOf(teams.away);
+  const homeFirst = homeIndex !== -1 && awayIndex !== -1 && homeIndex < awayIndex;
+
+  return {
+    homeName: fixture.match_name.split(/\s+vs\s+/i)[0] || 'Home',
+    awayName: fixture.match_name.split(/\s+vs\s+/i)[1] || 'Away',
+    homeScore: homeFirst ? report.homeScore : report.awayScore,
+    awayScore: homeFirst ? report.awayScore : report.homeScore,
+    details: [],
+    source: report.source,
+    sourceLabel: 'FIFA'
+  };
+}
+
+async function fetchFifaReportsForDataset(dataset, nowIso) {
+  try {
+    const reports = parseFifaReportHub(await fetchFifaReportHub());
+    for (const fixture of dataset) {
+      fixture.fifa_report_last_checked = nowIso;
+      const report = findFifaReport(reports, fixture);
+      fixture.fifa_report_status = report ? 'found' : 'not_found_yet';
+      if (report) {
+        fixture.fifa_report_source = report.source;
+        const result = fifaReportResult(report, fixture);
+        if (result) {
+          fixture.final_score = resultLine(result);
+        }
+      }
+    }
+    return reports;
+  } catch (error) {
+    console.warn(error.message);
+    for (const fixture of dataset) {
+      fixture.fifa_report_last_checked = nowIso;
+      fixture.fifa_report_status = 'check_failed';
+    }
+    return [];
+  }
+}
+
 function resultLine(result) {
   return `${result.homeName} ${result.homeScore}-${result.awayScore} ${result.awayName}`;
 }
@@ -714,7 +830,7 @@ function settleAgainstScore(entry, result) {
   return null;
 }
 
-function settleHistoryResults(entries, dataset, espnEvents, now = getNow()) {
+function settleHistoryResults(entries, dataset, espnEvents, fifaReports = [], now = getNow()) {
   let settled = 0;
   const fixtureByName = new Map(dataset.map((fixture) => [normalise(fixture.match_name), fixture]));
 
@@ -727,8 +843,10 @@ function settleHistoryResults(entries, dataset, espnEvents, now = getNow()) {
     const kickoff = parseAest(fixture.kickoff_time_aest);
     if (now - kickoff < RESULT_SETTLEMENT_BUFFER_MS) continue;
 
+    const fifaReport = findFifaReport(fifaReports, fixture);
+    const fifaResult = fifaReportResult(fifaReport, fixture);
     const event = findEspnEvent(espnEvents, fixture);
-    const result = event ? eventResult(event) : null;
+    const result = fifaResult || (event ? eventResult(event) : null);
 
     if (!result) {
       entry.result_status = 'pending';
@@ -745,7 +863,7 @@ function settleHistoryResults(entries, dataset, espnEvents, now = getNow()) {
     }
 
     entry.result_status = status;
-    entry.result_detail = `ESPN final: ${resultLine(result)}.`;
+    entry.result_detail = `${result.sourceLabel || 'ESPN'} final: ${resultLine(result)}.`;
     entry.settlement_source = result.source;
     entry.settled_at = now.toISOString();
     settled += 1;
@@ -860,7 +978,7 @@ function pruneUnverifiedFutureMarkets(dataset, now = getNow()) {
   return removed;
 }
 
-async function syncBetHistory(dataset, now = getNow(), espnEvents = []) {
+async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaReports = []) {
   const history = await readHistory();
   const byId = new Map(history
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
@@ -962,7 +1080,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = []) {
       return b.current_qi - a.current_qi;
     });
 
-  const settledResults = settleHistoryResults(nextHistory, dataset, espnEvents, now);
+  const settledResults = settleHistoryResults(nextHistory, dataset, espnEvents, fifaReports, now);
 
   await writeFile(HISTORY_PATH, `${JSON.stringify(nextHistory, null, 2)}\n`);
   await writeFile(EMBEDDED_HISTORY_PATH, `window.embeddedBetHistory = ${JSON.stringify(nextHistory, null, 2)};\n`);
@@ -1455,6 +1573,7 @@ async function main() {
   let updates = 0;
   const nowIso = new Date().toISOString();
   const espnEvents = await fetchEspnEventsForDataset(dataset);
+  const fifaReports = await fetchFifaReportsForDataset(dataset, nowIso);
   const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
   const lineupUpdates = await refreshLastHourLineups(dataset, getNow(), nowIso);
 
@@ -1532,9 +1651,9 @@ async function main() {
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
-  const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents);
+  const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Removed ${prunedMarkets} unverified future markets. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {
