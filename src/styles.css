@@ -391,13 +391,15 @@ body:not(.owner-results-enabled) [data-owner-only] {
 }
 
 .refresh-button {
+  min-height: 36px;
   min-width: 132px;
-  padding: 0 14px;
+  padding: 0 12px;
+  border-radius: 8px;
   border-color: var(--green);
   background: var(--green);
   color: var(--ink);
   font-weight: 900;
-  box-shadow: 0 0 0 3px rgba(61, 220, 151, 0.13);
+  box-shadow: none;
 }
 
 .refresh-button:hover {

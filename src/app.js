@@ -376,9 +376,9 @@ function riskClass(value) {
   return 'risk-watch';
 }
 
-function formatRiskValue(value) {
+function formatRiskValue(value, label = '') {
   const risk = value || 'Watch';
-  return `<span class="risk-pill ${riskClass(risk)}">${risk}</span>`;
+  return `<span class="risk-pill ${riskClass(risk)}">${label}${risk}</span>`;
 }
 
 function formatRisk(market) {
@@ -441,7 +441,7 @@ function renderSummaryBestMetrics(market) {
     `<span class="pill">${formatBookName(market)}</span>`,
     `<span class="qi-badge ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics.qi}</span>`,
     `<span class="${edgeClass(market)}">Edge ${formatEdge(market)}</span>`,
-    formatRiskValue(market.quality?.risk)
+    formatRiskValue(market.quality?.risk, 'Risk ')
   ].join('');
 }
 
@@ -450,7 +450,7 @@ function renderSummaryEvMetrics(market) {
     `<span class="pill">${formatBookName(market)}</span>`,
     `<span class="qi-badge ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics.qi}</span>`,
     `<span class="${edgeClass(market)}">Edge ${formatEdge(market)}</span>`,
-    formatRiskValue(market.quality?.risk)
+    formatRiskValue(market.quality?.risk, 'Risk ')
   ].join('');
 }
 
