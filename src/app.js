@@ -649,6 +649,42 @@ function formatModelOnlyProb(value) {
   return Number.isFinite(numeric) && numeric > 1 ? `${((1 / numeric) * 100).toFixed(1)}%` : '-';
 }
 
+function formatDirectPropCheck(prop) {
+  const sportsbet = prop.direct_checks?.sportsbet;
+  const tab = prop.direct_checks?.tab;
+  const pointsbet = prop.direct_checks?.pointsbet;
+  const neds = prop.direct_checks?.neds;
+  const lines = [];
+
+  if (sportsbet?.exact_market_found) {
+    lines.push(`Sportsbet direct: ${sportsbet.market} $${Number(sportsbet.current_odds).toFixed(2)} | QI ${sportsbet.qi}`);
+  } else if (sportsbet?.status === 'nearby_markets_only') {
+    const nearby = (sportsbet.nearby_markets || [])
+      .slice(0, 2)
+      .map((item) => `${item.market_name} $${Number(item.current_odds).toFixed(2)}`)
+      .join('; ');
+    lines.push(`Sportsbet direct: no exact match. Nearby only: ${nearby}`);
+  } else if (sportsbet?.status === 'checked') {
+    lines.push('Sportsbet direct: checked, no exact matching prop price found.');
+  } else if (sportsbet?.status) {
+    lines.push(`Sportsbet direct: ${sportsbet.status.replaceAll('_', ' ')}.`);
+  }
+
+  if (tab?.status) {
+    lines.push('TAB direct: no confirmed prop endpoint yet; TAB is still checked through OddsAPI.');
+  }
+
+  if (pointsbet?.status) {
+    lines.push('PointsBet direct: no confirmed prop endpoint yet; PointsBet is still checked through OddsAPI.');
+  }
+
+  if (neds?.status) {
+    lines.push('Neds direct: no confirmed prop endpoint yet; Neds is still checked through OddsAPI.');
+  }
+
+  return lines.length ? lines.join(' ') : 'Sportsbet/TAB check pending.';
+}
+
 function getUpcomingPlayerProps() {
   const upcomingMatches = new Set(getUpcomingFixtures().map((fixture) => fixture.match_name));
   const now = new Date();
@@ -700,7 +736,7 @@ function renderPlayerPropCard(prop, { showMatch = true } = {}) {
           `).join('')}
         </div>
       ` : ''}
-      <p class="source-note">${hasLivePrice ? 'Live Sportsbet/TAB price found and compared to model.' : 'No Sportsbet/TAB live price returned by OddsAPI yet. '} ${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
+      <p class="source-note">${formatDirectPropCheck(prop)} ${prop.model_note || 'Model-only player prop. It becomes a tracked bet only when a live bookmaker price is confirmed.'}</p>
     </article>
   `;
 }

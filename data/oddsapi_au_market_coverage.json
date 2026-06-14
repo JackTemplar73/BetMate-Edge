@@ -1,21 +1,21 @@
 {
-  "checked_at": "2026-06-13T23:06:23.016Z",
+  "checked_at": "2026-06-14T00:04:39.342Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
     "pointsbetau",
-    "neds",
-    "bet365"
+    "neds"
   ],
   "events_checked": 23,
   "market_counts": {
     "h2h": 90,
     "h2h_3_way": 90,
+    "totals": 1,
     "double_chance": 41,
     "draw_no_bet": 21,
     "alternate_spreads": 19,
-    "alternate_totals": 23,
     "btts": 44,
+    "alternate_totals": 22,
     "spreads": 4
   },
   "matches": [
@@ -26,8 +26,7 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds",
-        "bet365"
+        "neds"
       ],
       "offered_market_keys": [],
       "matched_rows": 0
@@ -39,8 +38,7 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds",
-        "bet365"
+        "neds"
       ],
       "offered_market_keys": [],
       "matched_rows": 0
@@ -52,8 +50,7 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds",
-        "bet365"
+        "neds"
       ],
       "offered_market_keys": [],
       "matched_rows": 0
@@ -67,13 +64,13 @@
       ],
       "offered_market_keys": [
         "alternate_spreads",
-        "alternate_totals",
         "double_chance",
         "draw_no_bet",
         "h2h",
-        "h2h_3_way"
+        "h2h_3_way",
+        "totals"
       ],
-      "matched_rows": 17
+      "matched_rows": 13
     },
     {
       "match_name": "Haiti vs Scotland",

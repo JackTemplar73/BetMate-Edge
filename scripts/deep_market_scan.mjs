@@ -13,7 +13,7 @@ const SCAN_BOOKMAKERS = (process.env.ODDS_API_TARGET_BOOKMAKERS || process.env.O
   .map((item) => item.trim())
   .filter(Boolean);
 const AU_BOOKMAKERS = [...new Set([...SCAN_BOOKMAKERS, 'betright'])];
-const PLAYER_PROP_BOOKMAKERS = ['sportsbet', 'tab'];
+const PLAYER_PROP_BOOKMAKERS = ['sportsbet', 'tab', 'pointsbetau', 'neds'];
 const CORE_MARKETS = ['h2h', 'spreads', 'totals'];
 const EVENT_MARKETS = [
   'h2h',
