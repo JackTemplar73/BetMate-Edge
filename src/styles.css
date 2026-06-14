@@ -835,6 +835,24 @@ td {
   color: var(--muted);
 }
 
+.risk-pill.risk-low {
+  background: var(--green-soft);
+  color: var(--green);
+  border-color: rgba(61, 220, 151, 0.34);
+}
+
+.risk-pill.risk-medium {
+  background: rgba(245, 158, 11, 0.16);
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.38);
+}
+
+.risk-pill.risk-high {
+  background: rgba(239, 68, 68, 0.16);
+  color: #ef4444;
+  border-color: rgba(239, 68, 68, 0.38);
+}
+
 .pill,
 .official {
   padding: 0 10px;

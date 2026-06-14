@@ -305,8 +305,21 @@ function edgeClass(market) {
   return Number(market.quality.edge) >= 0 ? 'positive' : 'negative';
 }
 
+function riskClass(value) {
+  const risk = String(value || '').toLowerCase();
+  if (risk.includes('low')) return 'risk-low';
+  if (risk.includes('medium')) return 'risk-medium';
+  if (risk.includes('high')) return 'risk-high';
+  return 'risk-watch';
+}
+
+function formatRiskValue(value) {
+  const risk = value || 'Watch';
+  return `<span class="risk-pill ${riskClass(risk)}">${risk}</span>`;
+}
+
 function formatRisk(market) {
-  return `<span class="risk-pill">${market.quality?.risk || 'Watch'}</span>`;
+  return formatRiskValue(market.quality?.risk);
 }
 
 function formatBookCell(market) {
@@ -512,7 +525,7 @@ function renderHighValueBets() {
         <div><dt>Book Prob</dt><dd>${formatBookProb(market)}</dd></div>
         <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
         <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
-        <div><dt>Risk</dt><dd>${market.quality.risk}</dd></div>
+        <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
       </dl>
     </article>
   `).join('');
@@ -654,7 +667,7 @@ function renderSportsbookScan() {
               <td>${Number(row.quality.book_probability).toFixed(1)}%</td>
               <td class="${Number(row.quality.edge) >= 0 ? 'positive' : 'negative'}">${Number(row.quality.edge) > 0 ? '+' : ''}${Number(row.quality.edge).toFixed(2)} pts</td>
               <td class="${Number(row.ev) >= 0 ? 'positive' : 'negative'}">${Number(row.ev) > 0 ? '+' : ''}${Number(row.ev).toFixed(2)}%</td>
-              <td><span class="risk-pill">${row.quality.risk}</span></td>
+              <td>${formatRiskValue(row.quality.risk)}</td>
               <td><span class="pill">${row.bookmaker}</span></td>
             </tr>
           `).join('')}
@@ -1008,7 +1021,7 @@ function renderFixturePanels() {
                 <div><dt>Book Prob</dt><dd>${formatBookProb(market)}</dd></div>
                 <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
                 <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
-                <div><dt>Risk</dt><dd>${market.quality.risk}</dd></div>
+                <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
               </dl>
             </article>
           `).join('')}
