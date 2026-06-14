@@ -1338,6 +1338,20 @@ function formatPercent(value) {
   return Number.isFinite(Number(value)) ? `${Number(value).toFixed(1)}%` : '-';
 }
 
+function exactScoreIsDraw(score) {
+  const numbers = String(score || '').match(/\d+/g);
+  if (!numbers || numbers.length < 2) return false;
+  return Number(numbers[numbers.length - 2]) === Number(numbers[numbers.length - 1]);
+}
+
+function goalProfileText(totals) {
+  const mean = Number(totals.total_goals_mean);
+  if (!Number.isFinite(mean)) return 'the total-goals state is not fully formed yet';
+  if (mean >= 3) return `a higher-event game with about ${mean.toFixed(2)} expected goals`;
+  if (mean <= 2.15) return `a tighter, lower-event game with about ${mean.toFixed(2)} expected goals`;
+  return `a moderate-scoring game with about ${mean.toFixed(2)} expected goals`;
+}
+
 function buildSummaryAnalysis(fixture) {
   const probabilities = getMatchResultProbabilities(fixture);
   const winner = probabilities.homeProbability >= probabilities.awayProbability
@@ -1346,25 +1360,38 @@ function buildSummaryAnalysis(fixture) {
   const edge = winner.probability - winner.otherProbability;
   const totals = fixture.model_totals_25 || {};
   const topExact = (fixture.exact_score_model || [])[0];
+  const topScoreIsDraw = exactScoreIsDraw(topExact?.score);
   const lineupStatus = fixture.confirmed_lineups?.status === 'confirmed'
     ? 'Confirmed teams are loaded, so the model is using the selected starting elevens where available.'
     : 'Starting elevens are not fully confirmed yet, so late team news can still move the rating.';
+  const resultSplit = `${probabilities.homeTeam} ${formatPercent(probabilities.homeProbability)}, Draw ${formatPercent(probabilities.drawProbability)}, ${probabilities.awayTeam} ${formatPercent(probabilities.awayProbability)}`;
   const drawText = Number.isFinite(Number(probabilities.drawProbability))
-    ? `The draw sits around ${formatPercent(probabilities.drawProbability)}, which means the model does not see a simple one-way match.`
-    : 'The draw risk is still unclear, so the model is leaning more on team strength and goal patterns.';
+    ? `Draw sits at ${formatPercent(probabilities.drawProbability)} in the result tree.`
+    : 'Draw risk is not fully separated in the result tree yet.';
   const goalText = Number.isFinite(Number(totals.total_goals_mean))
     ? `The goal model expects about ${Number(totals.total_goals_mean).toFixed(2)} total goals, with Under 2.5 at ${formatPercent(totals.under_probability)} and Over 2.5 at ${formatPercent(totals.over_probability)}.`
     : 'The goal model is still waiting on a clean total-goals projection.';
+  const whoText = topScoreIsDraw && edge < 12
+    ? `${winner.team || 'No clear side'} is only the result lean at ${formatPercent(winner.probability)}. The single most common score state is ${topExact.score}, so this is better read as a balanced match with draw risk rather than a strong winner call.`
+    : `${winner.team || 'No clear side'} is the result lean at ${formatPercent(winner.probability)}. ${edge < 6 ? 'The margin over the other side is narrow, so the model is not calling this dominant.' : `That is ${edge.toFixed(1)} points clear of ${winner.other}.`}`;
+  const whyText = [
+    `The Markov model is spreading the match across ${goalProfileText(totals)} and this result split: ${resultSplit}.`,
+    topExact ? `Its most common single score state is ${topExact.score}, which is only one state inside the wider result tree.` : null,
+    topScoreIsDraw ? 'Because the top exact score is a draw, the model is flagging a meaningful stalemate path even if one team still has the higher total win probability.' : null,
+    drawText,
+    'The read is driven by expected goal states, transition pressure, defensive resistance, lineups, pitch conditions and referee effect.'
+  ].filter(Boolean).join(' ');
 
   return {
-    who: `${winner.team || 'No clear side'} is the model lean at ${formatPercent(winner.probability)}. ${edge < 6 ? 'This is close rather than dominant.' : `That is ${edge.toFixed(1)} points clear of ${winner.other}.`}`,
-    why: `${plainGameNotes[fixture.match_name] || fixture.tactical_summary || 'The model is balancing team strength, goal expectation, draw risk, lineup strength and likely game state.'} ${drawText}`,
+    who: whoText,
+    why: whyText,
     factors: [
+      `Result split: ${resultSplit}.`,
       goalText,
       fixture.pitch_constraints ? `Pitch: ${fixture.pitch_constraints}` : null,
       fixture.referee_tendencies ? `Referee: ${fixture.referee_tendencies}` : null,
       lineupStatus,
-      topExact ? `Most likely exact score: ${topExact.score} at ${topExact.probability}%.` : null
+      topExact ? `Most common score state: ${topExact.score} at ${topExact.probability}%.` : null
     ].filter(Boolean)
   };
 }
