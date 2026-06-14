@@ -93,13 +93,13 @@
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "No matching Odds API event found.",
     "model_totals_25": {
       "line": 2.5,
@@ -423,9 +423,10 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds"
+        "neds",
+        "bet365"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -614,12 +615,12 @@
         "odds_refresh_note": "BetRight was not present in the matched Odds API event."
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "No matching Odds API event found.",
     "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries",
     "model_totals_25": {
@@ -944,9 +945,10 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds"
+        "neds",
+        "bet365"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -1041,12 +1043,12 @@
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "No matching Odds API event found.",
     "model_totals_25": {
       "line": 2.5,
@@ -1370,9 +1372,10 @@
         "sportsbet",
         "tab",
         "pointsbetau",
-        "neds"
+        "neds",
+        "bet365"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -1466,12 +1469,12 @@
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "No matching Odds API event found.",
     "model_totals_25": {
       "line": 2.5,
@@ -1792,218 +1795,15 @@
     ],
     "market_scan": {
       "bookmakers": [
-        "PointsBet (AU)",
-        "TAB"
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
-      "status": "checked",
-      "oddsapi_event_id": "f6c8748a16516e0998f95de14235432a",
-      "offered_market_keys": [
-        "alternate_spreads",
-        "double_chance",
-        "draw_no_bet",
-        "h2h",
-        "h2h_3_way",
-        "totals"
-      ],
-      "matched_rows": 13,
-      "rows": [
-        {
-          "selection": "Brazil or Morocco",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 75.1,
-          "model_price": 1.33,
-          "current_odds": 6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 351.13,
-          "qi": 92,
-          "price_qi": 100
-        },
-        {
-          "selection": "Brazil to Win",
-          "category": "Moneyline",
-          "market": "Moneyline",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 70.4,
-          "model_price": 1.42,
-          "current_odds": 16,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": 1026.76,
-          "qi": 88,
-          "price_qi": 100
-        },
-        {
-          "selection": "Brazil to Win",
-          "category": "Moneyline",
-          "market": "Moneyline",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 70.4,
-          "model_price": 1.42,
-          "current_odds": 8.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 498.59,
-          "qi": 88,
-          "price_qi": 100
-        },
-        {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "totals",
-          "model_probability": 56.5,
-          "model_price": 1.77,
-          "current_odds": 5.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 210.73,
-          "qi": 88,
-          "price_qi": 100
-        },
-        {
-          "selection": "Brazil Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Markov model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 76.9,
-          "model_price": 1.3,
-          "current_odds": 1.45,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 11.54,
-          "qi": 86,
-          "price_qi": 89
-        },
-        {
-          "selection": "Morocco to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 17.4,
-          "model_price": 5.76,
-          "current_odds": 16,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": 177.78,
-          "qi": 65,
-          "price_qi": 99
-        },
-        {
-          "selection": "Morocco to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 17.4,
-          "model_price": 5.76,
-          "current_odds": 15,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 160.42,
-          "qi": 64,
-          "price_qi": 99
-        },
-        {
-          "selection": "Brazil or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 82.6,
-          "model_price": 1.21,
-          "current_odds": 1.03,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -14.88,
-          "qi": 35,
-          "price_qi": 0
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "totals",
-          "model_probability": 43.5,
-          "model_price": 2.3,
-          "current_odds": 1.13,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -50.87,
-          "qi": 25,
-          "price_qi": 0
-        },
-        {
-          "selection": "Morocco or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 42.2,
-          "model_price": 2.37,
-          "current_odds": 1.07,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -54.85,
-          "qi": 25,
-          "price_qi": 0
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 24.9,
-          "model_price": 4.02,
-          "current_odds": 1.14,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -71.64,
-          "qi": 17,
-          "price_qi": 0
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 24.9,
-          "model_price": 4.02,
-          "current_odds": 1.06,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -73.63,
-          "qi": 17,
-          "price_qi": 0
-        },
-        {
-          "selection": "Morocco Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Markov model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 23.1,
-          "model_price": 4.33,
-          "current_odds": 2.6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -39.95,
-          "qi": 14,
-          "price_qi": 3
-        }
-      ]
+      "checked_at": "2026-06-14T03:56:08.383Z",
+      "status": "no_oddsapi_event",
+      "rows": []
     }
   },
   {
@@ -2110,12 +1910,12 @@
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "No matching Odds API event found.",
     "model_totals_25": {
       "line": 2.5,
@@ -2436,536 +2236,15 @@
     ],
     "market_scan": {
       "bookmakers": [
-        "SportsBet",
-        "PointsBet (AU)",
-        "TAB",
-        "Neds"
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
-      "status": "checked",
-      "oddsapi_event_id": "5ae41a06735c926eeb7f74006933adce",
-      "offered_market_keys": [
-        "alternate_spreads",
-        "alternate_totals",
-        "btts",
-        "double_chance",
-        "draw_no_bet",
-        "h2h",
-        "h2h_3_way"
-      ],
-      "matched_rows": 34,
-      "rows": [
-        {
-          "selection": "Haiti or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 40,
-          "model_price": 2.5,
-          "current_odds": 2.65,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": 6,
-          "qi": 52,
-          "price_qi": 75
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 64.4,
-          "model_price": 1.55,
-          "current_odds": 1.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -3.23,
-          "qi": 46,
-          "price_qi": 31
-        },
-        {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 81.3,
-          "model_price": 1.23,
-          "current_odds": 1.18,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -4.07,
-          "qi": 43,
-          "price_qi": 23
-        },
-        {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 95.1,
-          "model_price": 1.05,
-          "current_odds": 1.02,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -2.86,
-          "qi": 42,
-          "price_qi": 20
-        },
-        {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 80.3,
-          "model_price": 1.25,
-          "current_odds": 1.18,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -5.6,
-          "qi": 41,
-          "price_qi": 17
-        },
-        {
-          "selection": "Haiti or Scotland",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 76.9,
-          "model_price": 1.3,
-          "current_odds": 1.22,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.15,
-          "qi": 41,
-          "price_qi": 16
-        },
-        {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 58,
-          "model_price": 1.72,
-          "current_odds": 1.62,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -5.81,
-          "qi": 40,
-          "price_qi": 22
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 47.5,
-          "model_price": 2.11,
-          "current_odds": 2.05,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -2.84,
-          "qi": 39,
-          "price_qi": 34
-        },
-        {
-          "selection": "Scotland or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 83.1,
-          "model_price": 1.2,
-          "current_odds": 1.12,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.67,
-          "qi": 39,
-          "price_qi": 12
-        },
-        {
-          "selection": "Scotland to Win",
-          "category": "Moneyline",
-          "market": "Moneyline",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 60.6,
-          "model_price": 1.65,
-          "current_odds": 1.53,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -7.27,
-          "qi": 39,
-          "price_qi": 17
-        },
-        {
-          "selection": "Scotland to Win",
-          "category": "Moneyline",
-          "market": "Moneyline",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 60.6,
-          "model_price": 1.65,
-          "current_odds": 1.53,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -7.27,
-          "qi": 39,
-          "price_qi": 17
-        },
-        {
-          "selection": "Scotland to Win",
-          "category": "Moneyline",
-          "market": "Moneyline",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 60.6,
-          "model_price": 1.65,
-          "current_odds": 1.53,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "ev": -7.27,
-          "qi": 39,
-          "price_qi": 17
-        },
-        {
-          "selection": "Scotland Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Markov model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 78,
-          "model_price": 1.28,
-          "current_odds": 1.18,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -7.81,
-          "qi": 39,
-          "price_qi": 11
-        },
-        {
-          "selection": "Haiti or Scotland",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 76.9,
-          "model_price": 1.3,
-          "current_odds": 1.19,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -8.46,
-          "qi": 39,
-          "price_qi": 10
-        },
-        {
-          "selection": "Scotland or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 83.1,
-          "model_price": 1.2,
-          "current_odds": 1.11,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -7.5,
-          "qi": 38,
-          "price_qi": 9
-        },
-        {
-          "selection": "Scotland to Win",
-          "category": "Moneyline",
-          "market": "Moneyline",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 60.6,
-          "model_price": 1.65,
-          "current_odds": 1.5,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -9.09,
-          "qi": 38,
-          "price_qi": 14
-        },
-        {
-          "selection": "Haiti or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 40,
-          "model_price": 2.5,
-          "current_odds": 2.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 0,
-          "qi": 37,
-          "price_qi": 49
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 47.5,
-          "model_price": 2.11,
-          "current_odds": 2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -5.21,
-          "qi": 36,
-          "price_qi": 25
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 52.5,
-          "model_price": 1.9,
-          "current_odds": 1.72,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -9.47,
-          "qi": 35,
-          "price_qi": 15
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 52.5,
-          "model_price": 1.9,
-          "current_odds": 1.72,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -9.47,
-          "qi": 35,
-          "price_qi": 15
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 23.1,
-          "model_price": 4.33,
-          "current_odds": 4.5,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": 3.93,
-          "qi": 34,
-          "price_qi": 68
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 42,
-          "model_price": 2.38,
-          "current_odds": 2.25,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -5.46,
-          "qi": 30,
-          "price_qi": 25
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 23.1,
-          "model_price": 4.33,
-          "current_odds": 4.4,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": 1.62,
-          "qi": 29,
-          "price_qi": 58
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 23.1,
-          "model_price": 4.33,
-          "current_odds": 4.4,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "ev": 1.62,
-          "qi": 29,
-          "price_qi": 58
-        },
-        {
-          "selection": "Haiti to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 16.9,
-          "model_price": 5.9,
-          "current_odds": 6,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": 1.69,
-          "qi": 28,
-          "price_qi": 58
-        },
-        {
-          "selection": "Haiti to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 16.9,
-          "model_price": 5.9,
-          "current_odds": 6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 1.69,
-          "qi": 28,
-          "price_qi": 58
-        },
-        {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 35.6,
-          "model_price": 2.81,
-          "current_odds": 2.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -11.03,
-          "qi": 24,
-          "price_qi": 16
-        },
-        {
-          "selection": "Haiti Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Markov model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 22,
-          "model_price": 4.54,
-          "current_odds": 4.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -0.88,
-          "qi": 23,
-          "price_qi": 45
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 23.1,
-          "model_price": 4.33,
-          "current_odds": 4.25,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -1.85,
-          "qi": 22,
-          "price_qi": 39
-        },
-        {
-          "selection": "Haiti to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 16.9,
-          "model_price": 5.9,
-          "current_odds": 5.75,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -2.54,
-          "qi": 19,
-          "price_qi": 36
-        },
-        {
-          "selection": "Haiti to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 16.9,
-          "model_price": 5.9,
-          "current_odds": 5.5,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "ev": -6.78,
-          "qi": 15,
-          "price_qi": 24
-        },
-        {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 19.7,
-          "model_price": 5.08,
-          "current_odds": 4.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -11.42,
-          "qi": 13,
-          "price_qi": 19
-        },
-        {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 18.7,
-          "model_price": 5.34,
-          "current_odds": 4.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -15.73,
-          "qi": 12,
-          "price_qi": 16
-        },
-        {
-          "selection": "Under 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 4.9,
-          "model_price": 20.4,
-          "current_odds": 11,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -46.08,
-          "qi": 7,
-          "price_qi": 11
-        }
-      ]
+      "checked_at": "2026-06-14T03:56:08.383Z",
+      "status": "no_oddsapi_event",
+      "rows": []
     }
   },
   {
@@ -2983,56 +2262,56 @@
         "true_price": 3.82,
         "current_odds": null,
         "au_bookie": "Model only",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "model_only",
         "odds_refresh_note": "Model-only draw price restored from full match model probability; no live book price confirmed yet."
-      },
-      {
-        "market_matrix": "Full Match Model",
-        "target_selection": "Match to end in a Draw",
-        "true_price": 3.82,
-        "current_odds": 3.6,
-        "au_bookie": "PointsBet / Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
-        "best_price_tied_books": "PointsBet / Sportsbet",
-        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
-      },
-      {
-        "market_matrix": "Full Match Model",
-        "target_selection": "Australia to Win",
-        "true_price": 5.48,
-        "current_odds": 5.5,
-        "au_bookie": "Sportsbet / Neds / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
-        "best_price_tied_books": "Sportsbet / Neds / TAB",
-        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Turkey to Win",
         "true_price": 1.8,
         "current_odds": 1.72,
-        "au_bookie": "TAB / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "au_bookie": "BetRight",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:55:30.965Z",
         "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
-        "best_price_tied_books": "TAB / BetRight",
+        "odds_refresh_note": "Checked BetRight via Odds API. Best available AU book price selected.",
+        "best_price_tied_books": null,
+        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
+      },
+      {
+        "market_matrix": "Full Match Model",
+        "target_selection": "Match to end in a Draw",
+        "true_price": 3.82,
+        "current_odds": 3.6,
+        "au_bookie": "PointsBet / Sportsbet / Neds",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
+        "odds_refresh_status": "checked_current",
+        "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
+        "best_price_tied_books": "PointsBet / Sportsbet / Neds",
+        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
+      },
+      {
+        "market_matrix": "Full Match Model",
+        "target_selection": "Australia to Win",
+        "true_price": 5.48,
+        "current_odds": 6,
+        "au_bookie": "Sportsbet / TAB",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
+        "odds_refresh_status": "checked_current",
+        "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
+        "best_price_tied_books": "Sportsbet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "FotMob match details",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 564084f52cc9f1abcc18187c168a7cdc.",
     "model_totals_25": {
       "line": 2.5,
@@ -3358,7 +2637,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "564084f52cc9f1abcc18187c168a7cdc",
       "offered_market_keys": [
@@ -3370,23 +2649,23 @@
         "h2h",
         "h2h_3_way"
       ],
-      "matched_rows": 33,
+      "matched_rows": 29,
       "rows": [
         {
-          "selection": "Arda Guler: Goal or Assist",
+          "selection": "Arda Güler: Goal or Assist",
           "category": "Player Prop",
           "market": "Goal or Assist",
           "source": "Sportsbet direct site",
           "oddsapi_market": "To Score Or Assist",
           "model_probability": 58.1,
           "model_price": 1.72,
-          "current_odds": 2.1,
+          "current_odds": 2,
           "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "ev": 22.09,
-          "qi": 90,
-          "price_qi": 92,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "ev": 16.28,
+          "qi": 83,
+          "price_qi": 89,
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 2.5 Goals",
@@ -3396,12 +2675,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 55.1,
           "model_price": 1.81,
-          "current_odds": 2,
+          "current_odds": 2.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 10.5,
-          "qi": 73,
-          "price_qi": 84
+          "ev": 16.02,
+          "qi": 81,
+          "price_qi": 89
         },
         {
           "selection": "Harry Souttar: To Get Carded",
@@ -3411,13 +2690,13 @@
           "oddsapi_market": "To Be Booked",
           "model_probability": 30.3,
           "model_price": 3.3,
-          "current_odds": 4.8,
+          "current_odds": 5,
           "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "ev": 45.45,
-          "qi": 68,
+          "ev": 51.52,
+          "qi": 70,
           "price_qi": 94,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 1.5 Goals",
@@ -3427,12 +2706,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 78.4,
           "model_price": 1.28,
-          "current_odds": 1.32,
+          "current_odds": 1.34,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 3.13,
-          "qi": 65,
-          "price_qi": 69
+          "ev": 4.69,
+          "qi": 70,
+          "price_qi": 76
         },
         {
           "selection": "Baris Alper Yilmaz: Anytime Goal",
@@ -3442,13 +2721,13 @@
           "oddsapi_market": "Anytime Goalscorer",
           "model_probability": 32.8,
           "model_price": 3.05,
-          "current_odds": 4,
+          "current_odds": 4.2,
           "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "ev": 31.15,
-          "qi": 63,
-          "price_qi": 90,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "ev": 37.7,
+          "qi": 67,
+          "price_qi": 93,
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 3.5 Goals",
@@ -3458,12 +2737,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 32.8,
           "model_price": 3.05,
-          "current_odds": 3.5,
+          "current_odds": 3.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 14.75,
-          "qi": 57,
-          "price_qi": 84
+          "ev": 18.03,
+          "qi": 59,
+          "price_qi": 85
         },
         {
           "selection": "BTTS Yes",
@@ -3496,7 +2775,7 @@
           "price_qi": 49
         },
         {
-          "selection": "Hakan Calhanoglu: 1+ Shots on Target",
+          "selection": "Hakan Çalhanoglu: 1+ Shots on Target",
           "category": "Player Prop",
           "market": "1+ Shots on Target",
           "source": "Sportsbet direct site",
@@ -3509,7 +2788,7 @@
           "ev": 0.55,
           "qi": 50,
           "price_qi": 53,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS Yes",
@@ -3542,19 +2821,49 @@
           "price_qi": 82
         },
         {
-          "selection": "Turkey to Win",
+          "selection": "Australia or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 44.4,
+          "model_price": 2.25,
+          "current_odds": 2.25,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": 0,
+          "qi": 39,
+          "price_qi": 49
+        },
+        {
+          "selection": "Australia to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
           "source": "Priced model",
           "oddsapi_market": "h2h_3_way",
-          "model_probability": 55.6,
-          "model_price": 1.8,
-          "current_odds": 1.7,
+          "model_probability": 18.2,
+          "model_price": 5.48,
+          "current_odds": 6,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": 9.49,
+          "qi": 38,
+          "price_qi": 78
+        },
+        {
+          "selection": "Australia to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 18.2,
+          "model_price": 5.48,
+          "current_odds": 6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -5.56,
-          "qi": 39,
-          "price_qi": 23
+          "ev": 9.49,
+          "qi": 38,
+          "price_qi": 78
         },
         {
           "selection": "Turkey to Win",
@@ -3579,27 +2888,27 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 55.6,
           "model_price": 1.8,
+          "current_odds": 1.68,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -6.67,
+          "qi": 38,
+          "price_qi": 20
+        },
+        {
+          "selection": "Turkey to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 55.6,
+          "model_price": 1.8,
           "current_odds": 1.67,
           "au_bookie": "Neds",
           "bookmaker_key": "neds",
           "ev": -7.22,
           "qi": 37,
           "price_qi": 19
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 67.2,
-          "model_price": 1.49,
-          "current_odds": 1.28,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -14.09,
-          "qi": 37,
-          "price_qi": 5
         },
         {
           "selection": "Turkey to Win",
@@ -3632,19 +2941,19 @@
           "price_qi": 3
         },
         {
-          "selection": "Australia or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 44.4,
-          "model_price": 2.25,
-          "current_odds": 2.2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -2.22,
-          "qi": 35,
-          "price_qi": 37
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 67.2,
+          "model_price": 1.49,
+          "current_odds": 1.26,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -15.44,
+          "qi": 36,
+          "price_qi": 4
         },
         {
           "selection": "Australia or Draw",
@@ -3669,12 +2978,12 @@
           "oddsapi_market": "btts",
           "model_probability": 47.5,
           "model_price": 2.1,
-          "current_odds": 1.83,
+          "current_odds": 1.8,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "ev": -12.86,
+          "ev": -14.29,
           "qi": 31,
-          "price_qi": 12
+          "price_qi": 10
         },
         {
           "selection": "BTTS No",
@@ -3692,21 +3001,6 @@
           "price_qi": 10
         },
         {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 26.2,
-          "model_price": 3.82,
-          "current_odds": 3.75,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -1.83,
-          "qi": 28,
-          "price_qi": 39
-        },
-        {
           "selection": "Under 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -3714,10 +3008,10 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 44.9,
           "model_price": 2.23,
-          "current_odds": 1.75,
+          "current_odds": 1.72,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -21.52,
+          "ev": -22.87,
           "qi": 28,
           "price_qi": 5
         },
@@ -3730,8 +3024,8 @@
           "model_probability": 26.2,
           "model_price": 3.82,
           "current_odds": 3.7,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
           "ev": -3.14,
           "qi": 26,
           "price_qi": 33
@@ -3745,8 +3039,8 @@
           "model_probability": 18.2,
           "model_price": 5.48,
           "current_odds": 5.5,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
           "ev": 0.36,
           "qi": 25,
           "price_qi": 51
@@ -3760,11 +3054,56 @@
           "model_probability": 18.2,
           "model_price": 5.48,
           "current_odds": 5.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
           "ev": 0.36,
           "qi": 25,
           "price_qi": 51
+        },
+        {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 26.2,
+          "model_price": 3.82,
+          "current_odds": 3.6,
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
+          "ev": -5.76,
+          "qi": 23,
+          "price_qi": 25
+        },
+        {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 26.2,
+          "model_price": 3.82,
+          "current_odds": 3.6,
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
+          "ev": -5.76,
+          "qi": 23,
+          "price_qi": 25
+        },
+        {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 26.2,
+          "model_price": 3.82,
+          "current_odds": 3.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -8.38,
+          "qi": 21,
+          "price_qi": 21
         },
         {
           "selection": "Australia Draw No Bet",
@@ -3774,72 +3113,12 @@
           "oddsapi_market": "draw_no_bet",
           "model_probability": 24.7,
           "model_price": 4.04,
-          "current_odds": 4,
+          "current_odds": 3.7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -0.99,
-          "qi": 24,
-          "price_qi": 44
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 26.2,
-          "model_price": 3.82,
-          "current_odds": 3.6,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -5.76,
-          "qi": 23,
-          "price_qi": 25
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 26.2,
-          "model_price": 3.82,
-          "current_odds": 3.6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -5.76,
-          "qi": 23,
-          "price_qi": 25
-        },
-        {
-          "selection": "Australia to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 18.2,
-          "model_price": 5.48,
-          "current_odds": 5.4,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "ev": -1.46,
+          "ev": -8.42,
           "qi": 21,
-          "price_qi": 42
-        },
-        {
-          "selection": "Australia to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 18.2,
-          "model_price": 5.48,
-          "current_odds": 5.25,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -4.2,
-          "qi": 17,
-          "price_qi": 30
+          "price_qi": 21
         },
         {
           "selection": "Under 1.5 Goals",
@@ -3849,10 +3128,10 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 21.6,
           "model_price": 4.62,
-          "current_odds": 3.2,
+          "current_odds": 3.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -30.74,
+          "ev": -32.9,
           "qi": 14,
           "price_qi": 7
         },
@@ -3877,7 +3156,7 @@
       "status": "confirmed",
       "source": "FotMob match details",
       "source_url": "https://www.fotmob.com/match/4667772",
-      "checked_at": "2026-06-14T03:34:34.577Z",
+      "checked_at": "2026-06-14T03:57:52.069Z",
       "referee": "Jesús Noel Valenzuela Sáez",
       "venue": "BC Place Vancouver",
       "surface": "grass",
@@ -3947,7 +3226,7 @@
       ],
       "model_implication": "Confirmed starting XIs are now loaded for Australia vs Turkiye. Re-check player props against starters and bench players before treating any prop as a bet."
     },
-    "lineup_last_checked": "2026-06-14T03:34:34.577Z",
+    "lineup_last_checked": "2026-06-14T03:57:52.069Z",
     "lineup_check_source": "FotMob match details",
     "fotmob_match_id": 4667772,
     "lineup_check_status": "confirmed"
@@ -3967,7 +3246,7 @@
         "true_price": 14.49,
         "current_odds": 21,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T10:20:00.097Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -3980,7 +3259,7 @@
         "true_price": 1.11,
         "current_odds": 1.05,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T15:10:30.300Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
@@ -3993,7 +3272,7 @@
         "true_price": 34.28,
         "current_odds": 41,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T23:08:29.847Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -4001,12 +3280,12 @@
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event d79edbd6aaeb578d33e313446b18d333.",
     "model_totals_25": {
       "line": 2.5,
@@ -4332,7 +3611,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "d79edbd6aaeb578d33e313446b18d333",
       "offered_market_keys": [
@@ -4353,12 +3632,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 69.7,
           "model_price": 1.44,
-          "current_odds": 1.68,
+          "current_odds": 1.72,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 16.67,
-          "qi": 92,
-          "price_qi": 92
+          "ev": 19.44,
+          "qi": 96,
+          "price_qi": 93
         },
         {
           "selection": "BTTS Yes",
@@ -4488,12 +3767,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 90.1,
           "model_price": 1.11,
-          "current_odds": 1.04,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.31,
-          "qi": 37,
-          "price_qi": 7
+          "current_odds": 1.03,
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
+          "ev": -7.21,
+          "qi": 36,
+          "price_qi": 4
         },
         {
           "selection": "Germany to Win",
@@ -4504,11 +3783,26 @@
           "model_probability": 90.1,
           "model_price": 1.11,
           "current_odds": 1.03,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
           "ev": -7.21,
           "qi": 36,
           "price_qi": 4
+        },
+        {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 6.9,
+          "model_price": 14.49,
+          "current_odds": 17,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 17.32,
+          "qi": 33,
+          "price_qi": 79
         },
         {
           "selection": "Curaçao to Win",
@@ -4539,7 +3833,7 @@
           "ev": -28.57,
           "qi": 31,
           "price_qi": 1,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 3.5 Goals",
@@ -4572,21 +3866,6 @@
           "price_qi": 69
         },
         {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 6.9,
-          "model_price": 14.49,
-          "current_odds": 15,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 3.52,
-          "qi": 27,
-          "price_qi": 66
-        },
-        {
           "selection": "Kai Havertz: Anytime Goal",
           "category": "Player Prop",
           "market": "Anytime Goal",
@@ -4600,7 +3879,7 @@
           "ev": -28.84,
           "qi": 27,
           "price_qi": 2,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS No",
@@ -4610,27 +3889,27 @@
           "oddsapi_market": "btts",
           "model_probability": 46.6,
           "model_price": 2.15,
-          "current_odds": 1.45,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -32.56,
-          "qi": 27,
-          "price_qi": 1
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 46.6,
-          "model_price": 2.15,
-          "current_odds": 1.42,
+          "current_odds": 1.4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -33.95,
+          "ev": -34.88,
           "qi": 27,
           "price_qi": 1
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 46.6,
+          "model_price": 2.15,
+          "current_odds": 1.36,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -36.74,
+          "qi": 27,
+          "price_qi": 0
         },
         {
           "selection": "Over 4.5 Goals",
@@ -4640,10 +3919,10 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 30.3,
           "model_price": 3.3,
-          "current_odds": 2.05,
+          "current_odds": 2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -37.88,
+          "ev": -39.39,
           "qi": 20,
           "price_qi": 2
         },
@@ -4661,7 +3940,7 @@
           "ev": -48.9,
           "qi": 20,
           "price_qi": 0,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Curaçao to Win",
@@ -4740,7 +4019,7 @@
         "true_price": 3.7,
         "current_odds": 3.6,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T16:45:58.675Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
@@ -4753,7 +4032,7 @@
         "true_price": 3.9,
         "current_odds": 3.75,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-14T02:34:48.824Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
@@ -4764,22 +4043,22 @@
         "market_matrix": "Full Match Model",
         "target_selection": "Netherlands to Win",
         "true_price": 2.11,
-        "current_odds": 2.05,
-        "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T02:34:48.824Z",
+        "current_odds": 2,
+        "au_bookie": "Sportsbet / TAB",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
-        "best_price_tied_books": null,
+        "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
+        "best_price_tied_books": "Sportsbet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 32ec06abda2398ac41501c86eb9aa376.",
     "model_totals_25": {
       "line": 2.5,
@@ -5105,7 +4384,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "32ec06abda2398ac41501c86eb9aa376",
       "offered_market_keys": [
@@ -5127,12 +4406,27 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 76.5,
           "model_price": 1.31,
-          "current_odds": 1.28,
+          "current_odds": 1.32,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -2.29,
-          "qi": 47,
-          "price_qi": 34
+          "ev": 0.76,
+          "qi": 56,
+          "price_qi": 55
+        },
+        {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Markov model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 52.5,
+          "model_price": 1.9,
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 2.63,
+          "qi": 55,
+          "price_qi": 64
         },
         {
           "selection": "Over 0.5 Goals",
@@ -5150,19 +4444,19 @@
           "price_qi": 32
         },
         {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
           "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 52.5,
-          "model_price": 1.9,
-          "current_odds": 1.87,
+          "oddsapi_market": "btts",
+          "model_probability": 54.4,
+          "model_price": 1.84,
+          "current_odds": 1.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -1.58,
-          "qi": 44,
-          "price_qi": 40
+          "ev": -2.17,
+          "qi": 43,
+          "price_qi": 37
         },
         {
           "selection": "Netherlands or Draw",
@@ -5195,21 +4489,6 @@
           "price_qi": 20
         },
         {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 85.1,
-          "model_price": 1.17,
-          "current_odds": 1.11,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -5.13,
-          "qi": 41,
-          "price_qi": 16
-        },
-        {
           "selection": "Netherlands or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -5217,12 +4496,27 @@
           "oddsapi_market": "double_chance",
           "model_probability": 74.4,
           "model_price": 1.34,
-          "current_odds": 1.25,
+          "current_odds": 1.24,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "ev": -6.72,
+          "ev": -7.46,
           "qi": 40,
-          "price_qi": 15
+          "price_qi": 13
+        },
+        {
+          "selection": "Under 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Markov model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 85.1,
+          "model_price": 1.17,
+          "current_odds": 1.09,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -6.84,
+          "qi": 39,
+          "price_qi": 10
         },
         {
           "selection": "Under 3.5 Goals",
@@ -5232,27 +4526,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 69.7,
           "model_price": 1.43,
-          "current_odds": 1.32,
+          "current_odds": 1.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -7.69,
-          "qi": 40,
-          "price_qi": 14
-        },
-        {
-          "selection": "Japan or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 52.6,
-          "model_price": 1.9,
-          "current_odds": 1.81,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -4.74,
+          "ev": -9.09,
           "qi": 39,
-          "price_qi": 26
+          "price_qi": 11
         },
         {
           "selection": "Japan or Draw",
@@ -5270,19 +4549,19 @@
           "price_qi": 24
         },
         {
-          "selection": "BTTS Yes",
+          "selection": "Japan or Draw",
           "category": "Main Match",
-          "market": "Both Teams To Score",
+          "market": "Double Chance",
           "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 54.4,
-          "model_price": 1.84,
-          "current_odds": 1.72,
+          "oddsapi_market": "double_chance",
+          "model_probability": 52.6,
+          "model_price": 1.9,
+          "current_odds": 1.78,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "ev": -6.52,
+          "ev": -6.32,
           "qi": 37,
-          "price_qi": 20
+          "price_qi": 21
         },
         {
           "selection": "BTTS Yes",
@@ -5293,8 +4572,8 @@
           "model_probability": 54.4,
           "model_price": 1.84,
           "current_odds": 1.72,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
           "ev": -6.52,
           "qi": 37,
           "price_qi": 20
@@ -5345,21 +4624,6 @@
           "price_qi": 22
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 45.6,
-          "model_price": 2.19,
-          "current_odds": 2.05,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.39,
-          "qi": 34,
-          "price_qi": 22
-        },
-        {
           "selection": "Netherlands to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -5373,6 +4637,21 @@
           "ev": -7.58,
           "qi": 34,
           "price_qi": 19
+        },
+        {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Markov model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 30.3,
+          "model_price": 3.3,
+          "current_odds": 3.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 0,
+          "qi": 33,
+          "price_qi": 49
         },
         {
           "selection": "BTTS No",
@@ -5403,7 +4682,7 @@
           "ev": -9.48,
           "qi": 33,
           "price_qi": 16,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Cody Gakpo: 2+ Total Shots",
@@ -5413,28 +4692,13 @@
           "oddsapi_market": "Player To Have 2 Or More Shots",
           "model_probability": 60.4,
           "model_price": 1.66,
-          "current_odds": 1.2,
+          "current_odds": 1.22,
           "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "ev": -27.71,
+          "ev": -26.51,
           "qi": 33,
           "price_qi": 0,
-          "checked_at": "2026-06-14T00:04:53.535Z"
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 47.5,
-          "model_price": 2.11,
-          "current_odds": 1.87,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -11.37,
-          "qi": 32,
-          "price_qi": 14
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Memphis Depay: Anytime Goal",
@@ -5450,22 +4714,37 @@
           "ev": -3.47,
           "qi": 31,
           "price_qi": 32,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
-          "selection": "Over 3.5 Goals",
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 45.6,
+          "model_price": 2.19,
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -10.96,
+          "qi": 31,
+          "price_qi": 14
+        },
+        {
+          "selection": "Under 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Markov model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 30.3,
-          "model_price": 3.3,
-          "current_odds": 3.2,
+          "model_probability": 47.5,
+          "model_price": 2.11,
+          "current_odds": 1.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -3.03,
-          "qi": 28,
-          "price_qi": 34
+          "ev": -14.69,
+          "qi": 31,
+          "price_qi": 10
         },
         {
           "selection": "Match to end in a Draw",
@@ -5490,12 +4769,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 25.6,
           "model_price": 3.9,
-          "current_odds": 3.8,
+          "current_odds": 3.75,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "ev": -2.56,
-          "qi": 26,
-          "price_qi": 36
+          "ev": -3.85,
+          "qi": 25,
+          "price_qi": 31
         },
         {
           "selection": "Japan Draw No Bet",
@@ -5603,21 +4882,6 @@
           "price_qi": 22
         },
         {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 23.5,
-          "model_price": 4.26,
-          "current_odds": 3.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -17.84,
-          "qi": 18,
-          "price_qi": 14
-        },
-        {
           "selection": "Over 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -5625,12 +4889,27 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 14.9,
           "model_price": 6.72,
-          "current_odds": 6,
+          "current_odds": 6.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -10.71,
-          "qi": 14,
-          "price_qi": 20
+          "ev": -3.27,
+          "qi": 19,
+          "price_qi": 34
+        },
+        {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Markov model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 23.5,
+          "model_price": 4.26,
+          "current_odds": 3.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -24.88,
+          "qi": 16,
+          "price_qi": 10
         },
         {
           "selection": "Under 0.5 Goals",
@@ -5665,7 +4944,7 @@
         "true_price": 3.63,
         "current_odds": 3.3,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-14T03:05:07.369Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
@@ -5678,8 +4957,8 @@
         "true_price": 2.56,
         "current_odds": 2.5,
         "au_bookie": "Sportsbet / PointsBet / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet / TAB",
@@ -5691,20 +4970,20 @@
         "true_price": 3,
         "current_odds": 2.85,
         "au_bookie": "PointsBet / Neds / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "PointsBet / Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 05752bb341e197001387b64f3a06b9b2.",
     "model_totals_25": {
       "line": 2.5,
@@ -6030,7 +5309,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "05752bb341e197001387b64f3a06b9b2",
       "offered_market_keys": [
@@ -6052,12 +5331,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 71.8,
           "model_price": 1.39,
-          "current_odds": 1.62,
+          "current_odds": 1.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 16.55,
-          "qi": 93,
-          "price_qi": 92
+          "ev": 15.11,
+          "qi": 90,
+          "price_qi": 91
         },
         {
           "selection": "Over 2.5 Goals",
@@ -6082,12 +5361,12 @@
           "oddsapi_market": "btts",
           "model_probability": 50.9,
           "model_price": 1.96,
-          "current_odds": 2.3,
+          "current_odds": 2.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 17.35,
-          "qi": 75,
-          "price_qi": 88
+          "ev": 14.8,
+          "qi": 72,
+          "price_qi": 87
         },
         {
           "selection": "Pervis Estupinan: Goal or Assist",
@@ -6103,22 +5382,7 @@
           "ev": 56.25,
           "qi": 69,
           "price_qi": 95,
-          "checked_at": "2026-06-14T00:04:53.535Z"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 50.9,
-          "model_price": 1.96,
-          "current_odds": 2.2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": 12.24,
-          "qi": 69,
-          "price_qi": 85
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 0.5 Goals",
@@ -6136,6 +5400,21 @@
           "price_qi": 75
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 50.9,
+          "model_price": 1.96,
+          "current_odds": 2.1,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": 7.14,
+          "qi": 65,
+          "price_qi": 79
+        },
+        {
           "selection": "Over 3.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -6143,12 +5422,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 24.8,
           "model_price": 4.04,
-          "current_odds": 6,
+          "current_odds": 5.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 48.51,
-          "qi": 61,
-          "price_qi": 92
+          "ev": 36.14,
+          "qi": 57,
+          "price_qi": 90
         },
         {
           "selection": "Moises Caicedo: To Get Carded",
@@ -6158,13 +5437,13 @@
           "oddsapi_market": "To Be Booked",
           "model_probability": 29.9,
           "model_price": 3.34,
-          "current_odds": 3.68,
+          "current_odds": 3.64,
           "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "ev": 10.18,
-          "qi": 51,
-          "price_qi": 80,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "ev": 8.98,
+          "qi": 49,
+          "price_qi": 79,
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Enner Valencia: Anytime Goal",
@@ -6174,43 +5453,13 @@
           "oddsapi_market": "Anytime Goalscorer",
           "model_probability": 31.6,
           "model_price": 3.16,
-          "current_odds": 3.3,
+          "current_odds": 3.4,
           "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "ev": 4.43,
-          "qi": 44,
-          "price_qi": 70,
-          "checked_at": "2026-06-14T00:04:53.535Z"
-        },
-        {
-          "selection": "Ivory Coast or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 60.9,
-          "model_price": 1.64,
-          "current_odds": 1.54,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -6.1,
-          "qi": 40,
-          "price_qi": 20
-        },
-        {
-          "selection": "Ecuador or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 72.4,
-          "model_price": 1.38,
-          "current_odds": 1.28,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -7.25,
-          "qi": 40,
-          "price_qi": 15
+          "ev": 7.59,
+          "qi": 49,
+          "price_qi": 77,
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Ecuador Draw No Bet",
@@ -6220,12 +5469,42 @@
           "oddsapi_market": "draw_no_bet",
           "model_probability": 58.6,
           "model_price": 1.71,
-          "current_odds": 1.6,
+          "current_odds": 1.65,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -6.43,
-          "qi": 39,
-          "price_qi": 20
+          "ev": -3.51,
+          "qi": 43,
+          "price_qi": 30
+        },
+        {
+          "selection": "Ecuador or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 72.4,
+          "model_price": 1.38,
+          "current_odds": 1.3,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -5.8,
+          "qi": 42,
+          "price_qi": 19
+        },
+        {
+          "selection": "Ivory Coast or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 60.9,
+          "model_price": 1.64,
+          "current_odds": 1.48,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -9.76,
+          "qi": 38,
+          "price_qi": 13
         },
         {
           "selection": "Over 4.5 Goals",
@@ -6243,6 +5522,21 @@
           "price_qi": 82
         },
         {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Markov model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 75.2,
+          "model_price": 1.33,
+          "current_odds": 1.13,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -15.04,
+          "qi": 36,
+          "price_qi": 2
+        },
+        {
           "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -6258,19 +5552,49 @@
           "price_qi": 1
         },
         {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 75.2,
-          "model_price": 1.33,
-          "current_odds": 1.11,
+          "selection": "Ecuador to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 39.1,
+          "model_price": 2.56,
+          "current_odds": 2.5,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -2.34,
+          "qi": 33,
+          "price_qi": 37
+        },
+        {
+          "selection": "Ecuador to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 39.1,
+          "model_price": 2.56,
+          "current_odds": 2.5,
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
+          "ev": -2.34,
+          "qi": 33,
+          "price_qi": 37
+        },
+        {
+          "selection": "Ecuador to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 39.1,
+          "model_price": 2.56,
+          "current_odds": 2.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -16.54,
-          "qi": 35,
-          "price_qi": 1
+          "ev": -2.34,
+          "qi": 33,
+          "price_qi": 37
         },
         {
           "selection": "Under 2.5 Goals",
@@ -6288,6 +5612,36 @@
           "price_qi": 2
         },
         {
+          "selection": "Ecuador to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 39.1,
+          "model_price": 2.56,
+          "current_odds": 2.45,
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
+          "ev": -4.3,
+          "qi": 30,
+          "price_qi": 28
+        },
+        {
+          "selection": "Ivory Coast Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Markov model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 41.4,
+          "model_price": 2.42,
+          "current_odds": 2.15,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -11.16,
+          "qi": 30,
+          "price_qi": 15
+        },
+        {
           "selection": "BTTS No",
           "category": "Main Match",
           "market": "Both Teams To Score",
@@ -6295,10 +5649,25 @@
           "oddsapi_market": "btts",
           "model_probability": 49.1,
           "model_price": 2.04,
-          "current_odds": 1.62,
+          "current_odds": 1.67,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "ev": -20.59,
+          "ev": -18.14,
+          "qi": 30,
+          "price_qi": 7
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 49.1,
+          "model_price": 2.04,
+          "current_odds": 1.6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -21.57,
           "qi": 30,
           "price_qi": 5
         },
@@ -6316,22 +5685,7 @@
           "ev": -14.89,
           "qi": 29,
           "price_qi": 11,
-          "checked_at": "2026-06-14T00:04:53.535Z"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 49.1,
-          "model_price": 2.04,
-          "current_odds": 1.58,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -22.55,
-          "qi": 29,
-          "price_qi": 4
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -6341,72 +5695,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 33.3,
           "model_price": 3,
-          "current_odds": 2.9,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -3.33,
-          "qi": 28,
-          "price_qi": 32
-        },
-        {
-          "selection": "Ecuador to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 39.1,
-          "model_price": 2.56,
-          "current_odds": 2.4,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -6.25,
-          "qi": 28,
-          "price_qi": 23
-        },
-        {
-          "selection": "Ecuador to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 39.1,
-          "model_price": 2.56,
-          "current_odds": 2.4,
+          "current_odds": 2.85,
           "au_bookie": "PointsBet (AU)",
           "bookmaker_key": "pointsbetau",
-          "ev": -6.25,
-          "qi": 28,
-          "price_qi": 23
-        },
-        {
-          "selection": "Ecuador to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 39.1,
-          "model_price": 2.56,
-          "current_odds": 2.4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.25,
-          "qi": 28,
-          "price_qi": 23
-        },
-        {
-          "selection": "Ivory Coast Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Markov model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 41.4,
-          "model_price": 2.42,
-          "current_odds": 2.25,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -7.02,
-          "qi": 28,
-          "price_qi": 21
+          "ev": -5,
+          "qi": 27,
+          "price_qi": 27
         },
         {
           "selection": "Match to end in a Draw",
@@ -6422,36 +5716,6 @@
           "ev": -5,
           "qi": 27,
           "price_qi": 27
-        },
-        {
-          "selection": "Ivory Coast to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 27.5,
-          "model_price": 3.63,
-          "current_odds": 3.5,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -3.58,
-          "qi": 26,
-          "price_qi": 32
-        },
-        {
-          "selection": "Ecuador to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 39.1,
-          "model_price": 2.56,
-          "current_odds": 2.35,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "ev": -8.2,
-          "qi": 26,
-          "price_qi": 19
         },
         {
           "selection": "Match to end in a Draw",
@@ -6476,42 +5740,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 33.3,
           "model_price": 3,
-          "current_odds": 2.75,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -8.33,
-          "qi": 24,
-          "price_qi": 20
-        },
-        {
-          "selection": "Ivory Coast to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 27.5,
-          "model_price": 3.63,
-          "current_odds": 3.4,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -6.34,
-          "qi": 23,
-          "price_qi": 24
-        },
-        {
-          "selection": "Ivory Coast to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 27.5,
-          "model_price": 3.63,
-          "current_odds": 3.4,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "ev": -6.34,
-          "qi": 23,
-          "price_qi": 24
+          "current_odds": 2.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -6.67,
+          "qi": 25,
+          "price_qi": 23
         },
         {
           "selection": "Ivory Coast to Win",
@@ -6522,11 +5756,56 @@
           "model_probability": 27.5,
           "model_price": 3.63,
           "current_odds": 3.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
           "ev": -9.09,
           "qi": 22,
           "price_qi": 20
+        },
+        {
+          "selection": "Ivory Coast to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 27.5,
+          "model_price": 3.63,
+          "current_odds": 3.25,
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
+          "ev": -10.47,
+          "qi": 21,
+          "price_qi": 18
+        },
+        {
+          "selection": "Ivory Coast to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 27.5,
+          "model_price": 3.63,
+          "current_odds": 3.25,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -10.47,
+          "qi": 21,
+          "price_qi": 18
+        },
+        {
+          "selection": "Ivory Coast to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 27.5,
+          "model_price": 3.63,
+          "current_odds": 3.2,
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
+          "ev": -11.85,
+          "qi": 21,
+          "price_qi": 17
         },
         {
           "selection": "Under 1.5 Goals",
@@ -6536,10 +5815,10 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 28.2,
           "model_price": 3.54,
-          "current_odds": 2.2,
+          "current_odds": 2.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -37.85,
+          "ev": -36.44,
           "qi": 16,
           "price_qi": 3
         },
@@ -6576,7 +5855,7 @@
         "true_price": 3.59,
         "current_odds": 3.45,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-14T02:12:15.698Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
@@ -6589,7 +5868,7 @@
         "true_price": 2.01,
         "current_odds": 1.92,
         "au_bookie": "BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-14T02:39:18.217Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API. Best available AU book price selected.",
@@ -6602,20 +5881,20 @@
         "true_price": 4.47,
         "current_odds": 4.25,
         "au_bookie": "TAB / Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "TAB / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event b55f9569de3f4d731bc5537ff5ff43e4.",
     "model_totals_25": {
       "line": 2.5,
@@ -6941,7 +6220,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "b55f9569de3f4d731bc5537ff5ff43e4",
       "offered_market_keys": [
@@ -6963,12 +6242,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 52.6,
           "model_price": 1.9,
-          "current_odds": 2.15,
+          "current_odds": 2.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 13.16,
-          "qi": 75,
-          "price_qi": 86
+          "ev": 10.53,
+          "qi": 71,
+          "price_qi": 84
         },
         {
           "selection": "Over 1.5 Goals",
@@ -6978,27 +6257,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 76.6,
           "model_price": 1.31,
-          "current_odds": 1.38,
+          "current_odds": 1.36,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 5.34,
-          "qi": 72,
-          "price_qi": 78
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 53.3,
-          "model_price": 1.87,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 4.28,
-          "qi": 60,
-          "price_qi": 71
+          "ev": 3.82,
+          "qi": 67,
+          "price_qi": 72
         },
         {
           "selection": "Over 3.5 Goals",
@@ -7016,21 +6280,6 @@
           "price_qi": 83
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 53.3,
-          "model_price": 1.87,
-          "current_odds": 1.91,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": 2.14,
-          "qi": 54,
-          "price_qi": 62
-        },
-        {
           "selection": "Over 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -7043,6 +6292,21 @@
           "bookmaker_key": "tab",
           "ev": 0,
           "qi": 52,
+          "price_qi": 49
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 53.3,
+          "model_price": 1.87,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 0,
+          "qi": 47,
           "price_qi": 49
         },
         {
@@ -7059,7 +6323,37 @@
           "ev": 2.56,
           "qi": 46,
           "price_qi": 63,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 53.3,
+          "model_price": 1.87,
+          "current_odds": 1.83,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -2.14,
+          "qi": 43,
+          "price_qi": 37
+        },
+        {
+          "selection": "Sweden or Tunisia",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 72.1,
+          "model_price": 1.39,
+          "current_odds": 1.32,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -5.04,
+          "qi": 43,
+          "price_qi": 22
         },
         {
           "selection": "Sweden or Draw",
@@ -7075,21 +6369,6 @@
           "ev": -5.43,
           "qi": 42,
           "price_qi": 19
-        },
-        {
-          "selection": "Sweden or Tunisia",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 72.1,
-          "model_price": 1.39,
-          "current_odds": 1.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.47,
-          "qi": 41,
-          "price_qi": 17
         },
         {
           "selection": "Sweden Draw No Bet",
@@ -7137,21 +6416,6 @@
           "price_qi": 15
         },
         {
-          "selection": "Tunisia or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 50.2,
-          "model_price": 1.99,
-          "current_odds": 1.92,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -3.52,
-          "qi": 39,
-          "price_qi": 31
-        },
-        {
           "selection": "Over 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -7175,11 +6439,56 @@
           "model_probability": 50.2,
           "model_price": 1.99,
           "current_odds": 1.9,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -4.52,
+          "qi": 38,
+          "price_qi": 27
+        },
+        {
+          "selection": "Tunisia or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 50.2,
+          "model_price": 1.99,
+          "current_odds": 1.9,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "ev": -4.52,
           "qi": 38,
           "price_qi": 27
+        },
+        {
+          "selection": "Sweden to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 49.8,
+          "model_price": 2.01,
+          "current_odds": 1.9,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -5.47,
+          "qi": 37,
+          "price_qi": 24
+        },
+        {
+          "selection": "Sweden to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 49.8,
+          "model_price": 2.01,
+          "current_odds": 1.9,
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
+          "ev": -5.47,
+          "qi": 37,
+          "price_qi": 24
         },
         {
           "selection": "Sweden to Win",
@@ -7234,36 +6543,6 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 49.8,
           "model_price": 2.01,
-          "current_odds": 1.87,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": -6.97,
-          "qi": 35,
-          "price_qi": 20
-        },
-        {
-          "selection": "Sweden to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 49.8,
-          "model_price": 2.01,
-          "current_odds": 1.86,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -7.46,
-          "qi": 35,
-          "price_qi": 19
-        },
-        {
-          "selection": "Sweden to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 49.8,
-          "model_price": 2.01,
           "current_odds": 1.85,
           "au_bookie": "Neds",
           "bookmaker_key": "neds",
@@ -7285,7 +6564,22 @@
           "ev": -23.16,
           "qi": 32,
           "price_qi": 2,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 46.7,
+          "model_price": 2.14,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -12.62,
+          "qi": 31,
+          "price_qi": 12
         },
         {
           "selection": "BTTS No",
@@ -7303,21 +6597,6 @@
           "price_qi": 11
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 46.7,
-          "model_price": 2.14,
-          "current_odds": 1.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -15.89,
-          "qi": 30,
-          "price_qi": 9
-        },
-        {
           "selection": "Under 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -7325,27 +6604,27 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 47.4,
           "model_price": 2.11,
-          "current_odds": 1.65,
+          "current_odds": 1.68,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -21.8,
+          "ev": -20.38,
           "qi": 29,
-          "price_qi": 5
+          "price_qi": 6
         },
         {
-          "selection": "Tunisia to Win",
+          "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
           "source": "Priced model",
           "oddsapi_market": "h2h_3_way",
-          "model_probability": 22.4,
-          "model_price": 4.47,
-          "current_odds": 4.5,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "ev": 0.67,
-          "qi": 27,
-          "price_qi": 53
+          "model_probability": 27.9,
+          "model_price": 3.59,
+          "current_odds": 3.45,
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
+          "ev": -3.9,
+          "qi": 26,
+          "price_qi": 31
         },
         {
           "selection": "Match to end in a Draw",
@@ -7386,8 +6665,8 @@
           "model_probability": 27.9,
           "model_price": 3.59,
           "current_odds": 3.4,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
           "ev": -5.29,
           "qi": 24,
           "price_qi": 26
@@ -7415,42 +6694,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 22.4,
           "model_price": 4.47,
-          "current_odds": 4.4,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "ev": -1.57,
-          "qi": 22,
-          "price_qi": 41
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 27.9,
-          "model_price": 3.59,
-          "current_odds": 3.3,
+          "current_odds": 4.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -8.08,
-          "qi": 22,
-          "price_qi": 21
-        },
-        {
-          "selection": "Tunisia to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 22.4,
-          "model_price": 4.47,
-          "current_odds": 4.33,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": -3.13,
-          "qi": 20,
-          "price_qi": 34
+          "ev": -4.92,
+          "qi": 18,
+          "price_qi": 28
         },
         {
           "selection": "Tunisia to Win",
@@ -7461,11 +6710,41 @@
           "model_probability": 22.4,
           "model_price": 4.47,
           "current_odds": 4.25,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
           "ev": -4.92,
           "qi": 18,
           "price_qi": 28
+        },
+        {
+          "selection": "Tunisia to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 22.4,
+          "model_price": 4.47,
+          "current_odds": 4.2,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": -6.04,
+          "qi": 17,
+          "price_qi": 25
+        },
+        {
+          "selection": "Tunisia to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 22.4,
+          "model_price": 4.47,
+          "current_odds": 4.1,
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
+          "ev": -8.28,
+          "qi": 15,
+          "price_qi": 21
         },
         {
           "selection": "Under 1.5 Goals",
@@ -7475,12 +6754,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 23.4,
           "model_price": 4.27,
-          "current_odds": 2.9,
+          "current_odds": 3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -32.08,
+          "ev": -29.74,
           "qi": 15,
-          "price_qi": 6
+          "price_qi": 7
         },
         {
           "selection": "Under 0.5 Goals",
@@ -7517,7 +6796,7 @@
         "au_bookie": "Sportsbet",
         "previous_odds": 13,
         "odds_updated_at": "2026-06-13T15:10:30.300Z",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -7529,8 +6808,8 @@
         "true_price": 24.71,
         "current_odds": 26,
         "au_bookie": "Sportsbet / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / TAB",
@@ -7542,20 +6821,20 @@
         "true_price": 1.15,
         "current_odds": 1.1,
         "au_bookie": "Neds / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event c54f00b11925751d2b62988775c6c239.",
     "model_totals_25": {
       "line": 2.5,
@@ -7881,7 +7160,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "c54f00b11925751d2b62988775c6c239",
       "offered_market_keys": [
@@ -7917,12 +7196,12 @@
           "oddsapi_market": "btts",
           "model_probability": 53.4,
           "model_price": 1.87,
-          "current_odds": 2.6,
+          "current_odds": 2.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 39.04,
-          "qi": 90,
-          "price_qi": 96
+          "ev": 33.69,
+          "qi": 89,
+          "price_qi": 95
         },
         {
           "selection": "Spain to Win",
@@ -8127,10 +7406,10 @@
           "oddsapi_market": "btts",
           "model_probability": 46.6,
           "model_price": 2.15,
-          "current_odds": 1.45,
+          "current_odds": 1.48,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -32.56,
+          "ev": -31.16,
           "qi": 27,
           "price_qi": 1
         },
@@ -8271,7 +7550,7 @@
         "true_price": 5.84,
         "current_odds": 5.75,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T10:20:00.097Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -8284,7 +7563,7 @@
         "true_price": 4.06,
         "current_odds": 4,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T10:20:00.097Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -8292,12 +7571,12 @@
         "best_price_tied_books": null
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event fbfb95c62003fd6d828b309f96ee1f9b.",
     "model_totals_25": {
       "line": 2.5,
@@ -8623,7 +7902,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "fbfb95c62003fd6d828b309f96ee1f9b",
       "offered_market_keys": [
@@ -8660,27 +7939,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 79.4,
           "model_price": 1.26,
-          "current_odds": 1.28,
+          "current_odds": 1.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 1.59,
-          "qi": 59,
-          "price_qi": 60
-        },
-        {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 34.3,
-          "model_price": 2.91,
-          "current_odds": 3.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 13.4,
-          "qi": 57,
-          "price_qi": 83
+          "ev": 3.17,
+          "qi": 65,
+          "price_qi": 69
         },
         {
           "selection": "Mohamed Salah: 2+ Total Shots",
@@ -8696,7 +7960,22 @@
           "ev": 1.32,
           "qi": 57,
           "price_qi": 58,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
+        },
+        {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Markov model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 34.3,
+          "model_price": 2.91,
+          "current_odds": 3.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 9.97,
+          "qi": 53,
+          "price_qi": 80
         },
         {
           "selection": "Over 0.5 Goals",
@@ -8742,22 +8021,7 @@
           "ev": 10.08,
           "qi": 43,
           "price_qi": 79,
-          "checked_at": "2026-06-14T00:04:53.535Z"
-        },
-        {
-          "selection": "Belgium or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 82.9,
-          "model_price": 1.21,
-          "current_odds": 1.16,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -4.13,
-          "qi": 43,
-          "price_qi": 23
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS Yes",
@@ -8803,7 +8067,7 @@
           "ev": -3.91,
           "qi": 41,
           "price_qi": 29,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Belgium or Egypt",
@@ -8819,6 +8083,21 @@
           "ev": -6.02,
           "qi": 41,
           "price_qi": 17
+        },
+        {
+          "selection": "Belgium or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 82.9,
+          "model_price": 1.21,
+          "current_odds": 1.14,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -5.79,
+          "qi": 40,
+          "price_qi": 15
         },
         {
           "selection": "Belgium or Egypt",
@@ -8849,7 +8128,7 @@
           "ev": -3.54,
           "qi": 39,
           "price_qi": 31,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Belgium or Draw",
@@ -8904,12 +8183,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 65.7,
           "model_price": 1.52,
-          "current_odds": 1.3,
+          "current_odds": 1.32,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -14.47,
+          "ev": -13.16,
           "qi": 37,
-          "price_qi": 5
+          "price_qi": 6
         },
         {
           "selection": "Over 4.5 Goals",
@@ -8955,7 +8234,7 @@
           "ev": -4.66,
           "qi": 31,
           "price_qi": 27,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS No",
@@ -9048,21 +8327,6 @@
           "price_qi": 41
         },
         {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 24.6,
-          "model_price": 4.06,
-          "current_odds": 3.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.4,
-          "qi": 22,
-          "price_qi": 24
-        },
-        {
           "selection": "Egypt to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -9078,6 +8342,21 @@
           "price_qi": 41
         },
         {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 24.6,
+          "model_price": 4.06,
+          "current_odds": 3.7,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -8.87,
+          "qi": 20,
+          "price_qi": 20
+        },
+        {
           "selection": "Egypt to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -9088,6 +8367,21 @@
           "current_odds": 5.5,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
+          "ev": -5.82,
+          "qi": 16,
+          "price_qi": 26
+        },
+        {
+          "selection": "Egypt to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 17.1,
+          "model_price": 5.84,
+          "current_odds": 5.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
           "ev": -5.82,
           "qi": 16,
           "price_qi": 26
@@ -9108,21 +8402,6 @@
           "price_qi": 20
         },
         {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 20.6,
-          "model_price": 4.86,
-          "current_odds": 3.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -27.98,
-          "qi": 15,
-          "price_qi": 9
-        },
-        {
           "selection": "Egypt to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -9138,19 +8417,19 @@
           "price_qi": 20
         },
         {
-          "selection": "Egypt to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 17.1,
-          "model_price": 5.84,
-          "current_odds": 5,
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Markov model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 20.6,
+          "model_price": 4.86,
+          "current_odds": 3.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -14.38,
-          "qi": 13,
-          "price_qi": 18
+          "ev": -32.1,
+          "qi": 14,
+          "price_qi": 7
         },
         {
           "selection": "Under 0.5 Goals",
@@ -9185,7 +8464,7 @@
         "true_price": 1.52,
         "current_odds": 1.45,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -9197,7 +8476,7 @@
         "true_price": 4.5,
         "current_odds": 4.5,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T11:05:15.881Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -9210,20 +8489,20 @@
         "true_price": 8.24,
         "current_odds": 8,
         "au_bookie": "Sportsbet / PointsBet / TAB / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 64b91c5f2db61c7358a4f05459e83c52.",
     "model_totals_25": {
       "line": 2.5,
@@ -9549,7 +8828,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "64b91c5f2db61c7358a4f05459e83c52",
       "offered_market_keys": [
@@ -9712,7 +8991,7 @@
           "ev": 0.88,
           "qi": 42,
           "price_qi": 55,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Saudi Arabia or Uruguay",
@@ -9863,7 +9142,7 @@
           "ev": -26.47,
           "qi": 33,
           "price_qi": 1,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS No",
@@ -9924,7 +9203,7 @@
           "ev": -33.33,
           "qi": 30,
           "price_qi": 0,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -9985,7 +9264,7 @@
           "ev": -35.58,
           "qi": 23,
           "price_qi": 2,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Rodrigo Bentancur: To Get Carded",
@@ -10001,7 +9280,7 @@
           "ev": -7.65,
           "qi": 22,
           "price_qi": 22,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -10171,7 +9450,7 @@
         "true_price": 1.94,
         "current_odds": 1.85,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T16:45:58.675Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
@@ -10184,7 +9463,7 @@
         "true_price": 4.84,
         "current_odds": 4.75,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T16:45:58.675Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
@@ -10197,20 +9476,20 @@
         "true_price": 3.59,
         "current_odds": 3.4,
         "au_bookie": "Sportsbet / PointsBet / Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event ec51b9c44ad5e34552f3ab53f7262813.",
     "model_totals_25": {
       "line": 2.5,
@@ -10536,7 +9815,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "ec51b9c44ad5e34552f3ab53f7262813",
       "offered_market_keys": [
@@ -10609,7 +9888,7 @@
           "ev": 43.34,
           "qi": 72,
           "price_qi": 94,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS Yes",
@@ -10640,7 +9919,7 @@
           "ev": 18.52,
           "qi": 67,
           "price_qi": 87,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 3.5 Goals",
@@ -10896,7 +10175,7 @@
           "ev": -32.93,
           "qi": 33,
           "price_qi": 0,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS No",
@@ -11126,7 +10405,7 @@
         "true_price": 4.47,
         "current_odds": 4.33,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -11138,7 +10417,7 @@
         "true_price": 1.55,
         "current_odds": 1.48,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -11150,20 +10429,20 @@
         "true_price": 7.52,
         "current_odds": 7,
         "au_bookie": "Sportsbet / PointsBet / TAB / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 73a4fcd14cc9766b9b9bfd50b8ca153a.",
     "model_totals_25": {
       "line": 2.5,
@@ -11489,7 +10768,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "73a4fcd14cc9766b9b9bfd50b8ca153a",
       "offered_market_keys": [
@@ -11787,7 +11066,7 @@
           "ev": -9.05,
           "qi": 33,
           "price_qi": 17,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS No",
@@ -11848,7 +11127,7 @@
           "ev": -16.59,
           "qi": 29,
           "price_qi": 10,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Senegal or Draw",
@@ -12063,7 +11342,7 @@
         "true_price": 14.14,
         "current_odds": 15,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T15:10:30.300Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
@@ -12076,8 +11355,8 @@
         "true_price": 1.28,
         "current_odds": 1.19,
         "au_bookie": "Neds / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Neds / BetRight",
@@ -12089,20 +11368,20 @@
         "true_price": 6.74,
         "current_odds": 7,
         "au_bookie": "PointsBet / Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "PointsBet / Sportsbet",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 4d4f2b9b78182b557d4fbf8dcf4f4af2.",
     "model_totals_25": {
       "line": 2.5,
@@ -12428,7 +11707,7 @@
         "PointsBet (AU)",
         "SportsBet"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "4d4f2b9b78182b557d4fbf8dcf4f4af2",
       "offered_market_keys": [
@@ -12621,7 +11900,7 @@
           "ev": -4.02,
           "qi": 39,
           "price_qi": 29,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Norway to Win",
@@ -12802,7 +12081,7 @@
           "ev": -18.99,
           "qi": 32,
           "price_qi": 4,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Iraq to Win",
@@ -13002,7 +12281,7 @@
         "true_price": 4.72,
         "current_odds": 4.6,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -13014,20 +12293,20 @@
         "true_price": 1.47,
         "current_odds": 1.4,
         "au_bookie": "TAB / Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "TAB / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event f31b2ee9e1cc6f7e641467f8237eaa21.",
     "model_totals_25": {
       "line": 2.5,
@@ -13353,7 +12632,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "f31b2ee9e1cc6f7e641467f8237eaa21",
       "offered_market_keys": [
@@ -13428,6 +12707,21 @@
           "price_qi": 82
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 47.8,
+          "model_price": 2.09,
+          "current_odds": 2.25,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 7.66,
+          "qi": 60,
+          "price_qi": 79
+        },
+        {
           "selection": "Over 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -13443,21 +12737,6 @@
           "price_qi": 59
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 47.8,
-          "model_price": 2.09,
-          "current_odds": 2.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 5.26,
-          "qi": 56,
-          "price_qi": 74
-        },
-        {
           "selection": "Over 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -13465,12 +12744,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 21.1,
           "model_price": 4.74,
-          "current_odds": 6,
+          "current_odds": 6.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": 26.58,
-          "qi": 48,
-          "price_qi": 86
+          "ev": 37.13,
+          "qi": 53,
+          "price_qi": 89
         },
         {
           "selection": "Argentina to Win",
@@ -13501,21 +12780,6 @@
           "ev": -4.76,
           "qi": 43,
           "price_qi": 24
-        },
-        {
-          "selection": "Argentina Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Markov model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 86.3,
-          "model_price": 1.16,
-          "current_odds": 1.1,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -5.17,
-          "qi": 41,
-          "price_qi": 16
         },
         {
           "selection": "Argentina to Win",
@@ -13563,6 +12827,21 @@
           "price_qi": 12
         },
         {
+          "selection": "Argentina Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Markov model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 86.3,
+          "model_price": 1.16,
+          "current_odds": 1.09,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -6.03,
+          "qi": 39,
+          "price_qi": 12
+        },
+        {
           "selection": "Argentina or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -13600,12 +12879,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 78.9,
           "model_price": 1.27,
-          "current_odds": 1.11,
+          "current_odds": 1.09,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -12.6,
-          "qi": 36,
-          "price_qi": 2
+          "ev": -14.17,
+          "qi": 35,
+          "price_qi": 1
         },
         {
           "selection": "Under 3.5 Goals",
@@ -13630,12 +12909,12 @@
           "oddsapi_market": "btts",
           "model_probability": 52.2,
           "model_price": 1.92,
-          "current_odds": 1.62,
+          "current_odds": 1.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -15.62,
+          "ev": -16.67,
           "qi": 32,
-          "price_qi": 8
+          "price_qi": 7
         },
         {
           "selection": "BTTS No",
@@ -13666,7 +12945,7 @@
           "ev": -22.65,
           "qi": 31,
           "price_qi": 2,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Julian Alvarez: Anytime Goal",
@@ -13682,7 +12961,7 @@
           "ev": -14.29,
           "qi": 28,
           "price_qi": 12,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Algeria or Draw",
@@ -13782,12 +13061,12 @@
           "oddsapi_market": "draw_no_bet",
           "model_probability": 13.7,
           "model_price": 7.31,
-          "current_odds": 6,
+          "current_odds": 6.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -17.92,
-          "qi": 13,
-          "price_qi": 17
+          "ev": -11.08,
+          "qi": 14,
+          "price_qi": 20
         },
         {
           "selection": "Under 1.5 Goals",
@@ -13837,7 +13116,7 @@
         "true_price": 5.42,
         "current_odds": 5.5,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T15:10:30.300Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -13850,20 +13129,20 @@
         "true_price": 9.56,
         "current_odds": 9,
         "au_bookie": "TAB / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 25161cf6cf0cd9be17ae2e7e224a1f45.",
     "model_totals_25": {
       "line": 2.5,
@@ -14189,7 +13468,7 @@
         "PointsBet (AU)",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "25161cf6cf0cd9be17ae2e7e224a1f45",
       "offered_market_keys": [
@@ -14502,7 +13781,7 @@
           "ev": -25.09,
           "qi": 25,
           "price_qi": 6,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Jordan or Draw",
@@ -14687,7 +13966,7 @@
         "true_price": 5.56,
         "current_odds": 5.6,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -14699,7 +13978,7 @@
         "true_price": 1.37,
         "current_odds": 1.29,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T20:56:07.950Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -14712,20 +13991,20 @@
         "true_price": 11.26,
         "current_odds": 11,
         "au_bookie": "Sportsbet / TAB / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 6cc871c121a1869b4612d3fb22fa9d55.",
     "model_totals_25": {
       "line": 2.5,
@@ -15051,7 +14330,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -15096,6 +14375,21 @@
           "price_qi": 86
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 48.9,
+          "model_price": 2.05,
+          "current_odds": 2.25,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": 9.76,
+          "qi": 64,
+          "price_qi": 82
+        },
+        {
           "selection": "Over 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -15109,21 +14403,6 @@
           "ev": 2.52,
           "qi": 64,
           "price_qi": 67
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 48.9,
-          "model_price": 2.05,
-          "current_odds": 2.2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": 7.32,
-          "qi": 60,
-          "price_qi": 79
         },
         {
           "selection": "BTTS Yes",
@@ -15169,21 +14448,6 @@
           "ev": 17.65,
           "qi": 46,
           "price_qi": 83
-        },
-        {
-          "selection": "DR Congo or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 26.9,
-          "model_price": 3.72,
-          "current_odds": 3.9,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "ev": 4.84,
-          "qi": 42,
-          "price_qi": 71
         },
         {
           "selection": "Portugal to Win",
@@ -15276,6 +14540,21 @@
           "price_qi": 11
         },
         {
+          "selection": "DR Congo or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 26.9,
+          "model_price": 3.72,
+          "current_odds": 3.8,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "ev": 2.15,
+          "qi": 37,
+          "price_qi": 61
+        },
+        {
           "selection": "Portugal or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -15304,7 +14583,7 @@
           "ev": -0.38,
           "qi": 36,
           "price_qi": 47,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Under 4.5 Goals",
@@ -15579,7 +14858,7 @@
         "true_price": 1.83,
         "current_odds": 1.73,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -15591,7 +14870,7 @@
         "true_price": 3.82,
         "current_odds": 3.8,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T10:20:00.097Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -15604,20 +14883,20 @@
         "true_price": 5.18,
         "current_odds": 5,
         "au_bookie": "Sportsbet / PointsBet / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 689096c8cd7e2753b9fec95321943c5d.",
     "model_totals_25": {
       "line": 2.5,
@@ -15943,7 +15222,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -16061,7 +15340,7 @@
           "ev": 28.57,
           "qi": 57,
           "price_qi": 88,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 4.5 Goals",
@@ -16107,7 +15386,7 @@
           "ev": 0.45,
           "qi": 41,
           "price_qi": 52,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "England or Draw",
@@ -16183,7 +15462,7 @@
           "ev": -5.45,
           "qi": 37,
           "price_qi": 24,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "England to Win",
@@ -16505,7 +15784,7 @@
         "au_bookie": "Neds",
         "previous_odds": 3.6,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -16517,7 +15796,7 @@
         "true_price": 3.5,
         "current_odds": 3.4,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T10:20:00.097Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -16530,20 +15809,20 @@
         "true_price": 2.23,
         "current_odds": 2.15,
         "au_bookie": "Sportsbet / PointsBet / TAB / Neds / BetRight",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet / TAB / Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 87afdb85c977b451e1c00f5e3e632601.",
     "model_totals_25": {
       "line": 2.5,
@@ -16869,7 +16148,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -16914,6 +16193,21 @@
           "price_qi": 88
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Markov model",
+          "oddsapi_market": "btts",
+          "model_probability": 53.7,
+          "model_price": 1.86,
+          "current_odds": 2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 7.53,
+          "qi": 67,
+          "price_qi": 80
+        },
+        {
           "selection": "Inaki Williams: Anytime Goal",
           "category": "Player Prop",
           "market": "Anytime Goal",
@@ -16927,37 +16221,7 @@
           "ev": 17.86,
           "qi": 62,
           "price_qi": 86,
-          "checked_at": "2026-06-14T00:04:53.535Z"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Markov model",
-          "oddsapi_market": "btts",
-          "model_probability": 53.7,
-          "model_price": 1.86,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 4.84,
-          "qi": 62,
-          "price_qi": 73
-        },
-        {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Markov model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 93.3,
-          "model_price": 1.07,
-          "current_odds": 1.08,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": 0.93,
-          "qi": 57,
-          "price_qi": 57
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS Yes",
@@ -16990,19 +16254,19 @@
           "price_qi": 86
         },
         {
-          "selection": "Ghana or Panama",
-          "category": "Main Match",
-          "market": "Double Chance",
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 71.5,
-          "model_price": 1.4,
-          "current_odds": 1.35,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 93.3,
+          "model_price": 1.07,
+          "current_odds": 1.07,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -3.57,
-          "qi": 45,
-          "price_qi": 28
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49
         },
         {
           "selection": "Ghana Draw No Bet",
@@ -17057,12 +16321,42 @@
           "oddsapi_market": "double_chance",
           "model_probability": 71.5,
           "model_price": 1.4,
+          "current_odds": 1.32,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -5.71,
+          "qi": 42,
+          "price_qi": 19
+        },
+        {
+          "selection": "Ghana or Panama",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 71.5,
+          "model_price": 1.4,
           "current_odds": 1.31,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "ev": -6.43,
           "qi": 41,
           "price_qi": 17
+        },
+        {
+          "selection": "Panama or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Markov model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 55.2,
+          "model_price": 1.81,
+          "current_odds": 1.7,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": -6.08,
+          "qi": 38,
+          "price_qi": 21
         },
         {
           "selection": "Over 4.5 Goals",
@@ -17155,21 +16449,6 @@
           "price_qi": 19
         },
         {
-          "selection": "Panama or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Markov model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 55.2,
-          "model_price": 1.81,
-          "current_odds": 1.68,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -7.18,
-          "qi": 37,
-          "price_qi": 19
-        },
-        {
           "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -17222,12 +16501,12 @@
           "oddsapi_market": "btts",
           "model_probability": 46.3,
           "model_price": 2.16,
-          "current_odds": 1.8,
+          "current_odds": 1.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -16.67,
-          "qi": 30,
-          "price_qi": 9
+          "ev": -18.98,
+          "qi": 29,
+          "price_qi": 7
         },
         {
           "selection": "Under 2.5 Goals",
@@ -17402,12 +16681,12 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 6.7,
           "model_price": 15.03,
-          "current_odds": 7,
+          "current_odds": 7.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -53.43,
-          "qi": 9,
-          "price_qi": 6
+          "ev": -50.1,
+          "qi": 10,
+          "price_qi": 8
         }
       ]
     }
@@ -17427,7 +16706,7 @@
         "true_price": 9.44,
         "current_odds": 9.5,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -17439,7 +16718,7 @@
         "true_price": 1.45,
         "current_odds": 1.38,
         "au_bookie": "TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -17451,19 +16730,19 @@
         "true_price": 4.84,
         "current_odds": 4.8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "best_price_tied_books": null
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 22083e7a8e5362c711bc05c1e1319a1f.",
     "model_totals_25": {
       "line": 2.5,
@@ -17789,7 +17068,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -18303,7 +17582,7 @@
         "au_bookie": "Sportsbet",
         "previous_odds": 3.8,
         "odds_updated_at": "2026-06-12T23:03:17.291Z",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -18315,7 +17594,7 @@
         "true_price": 1.79,
         "current_odds": 1.8,
         "au_bookie": "Neds",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T13:10:53.158Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
@@ -18328,20 +17607,20 @@
         "true_price": 5.39,
         "current_odds": 4.75,
         "au_bookie": "PointsBet / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09.",
     "model_totals_25": {
       "line": 2.5,
@@ -18667,7 +17946,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -19025,7 +18304,7 @@
           "ev": -6.88,
           "qi": 28,
           "price_qi": 21,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Under 2.5 Goals",
@@ -19225,7 +18504,7 @@
         "true_price": 1.69,
         "current_odds": 1.59,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T21:42:31.932Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -19238,8 +18517,8 @@
         "true_price": 6.12,
         "current_odds": 6,
         "au_bookie": "BetRight / Sportsbet / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked BetRight via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "BetRight / Sportsbet / TAB",
@@ -19251,20 +18530,20 @@
         "true_price": 4.09,
         "current_odds": 4,
         "au_bookie": "Sportsbet / PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad.",
     "model_totals_25": {
       "line": 2.5,
@@ -19590,17 +18869,17 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
+        "alternate_spreads",
         "alternate_totals",
         "btts",
         "double_chance",
         "draw_no_bet",
         "h2h",
-        "h2h_3_way",
-        "spreads"
+        "h2h_3_way"
       ],
       "matched_rows": 25,
       "rows": [
@@ -19678,7 +18957,7 @@
           "ev": 38.34,
           "qi": 66,
           "price_qi": 92,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "BTTS Yes",
@@ -19763,21 +19042,6 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 59.2,
           "model_price": 1.69,
-          "current_odds": 1.58,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "ev": -6.51,
-          "qi": 39,
-          "price_qi": 20
-        },
-        {
-          "selection": "Switzerland to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 59.2,
-          "model_price": 1.69,
           "current_odds": 1.57,
           "au_bookie": "Neds",
           "bookmaker_key": "neds",
@@ -19826,6 +19090,21 @@
           "current_odds": 1.55,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
+          "ev": -8.28,
+          "qi": 38,
+          "price_qi": 16
+        },
+        {
+          "selection": "Switzerland to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 59.2,
+          "model_price": 1.69,
+          "current_odds": 1.55,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
           "ev": -8.28,
           "qi": 38,
           "price_qi": 16
@@ -19964,7 +19243,7 @@
           "ev": -17.58,
           "qi": 22,
           "price_qi": 11,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -19974,12 +19253,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 24.4,
           "model_price": 4.09,
-          "current_odds": 3.7,
+          "current_odds": 3.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "ev": -9.54,
-          "qi": 20,
-          "price_qi": 20
+          "ev": -7.09,
+          "qi": 21,
+          "price_qi": 23
         },
         {
           "selection": "Under 1.5 Goals",
@@ -20029,7 +19308,7 @@
         "true_price": 5.25,
         "current_odds": 5.75,
         "au_bookie": "PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T21:42:31.932Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
@@ -20042,20 +19321,20 @@
         "true_price": 1.38,
         "current_odds": 1.28,
         "au_bookie": "Neds / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Neds / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc.",
     "model_totals_25": {
       "line": 2.5,
@@ -20381,17 +19660,17 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
+        "alternate_spreads",
         "alternate_totals",
         "btts",
         "double_chance",
         "draw_no_bet",
         "h2h",
-        "h2h_3_way",
-        "spreads"
+        "h2h_3_way"
       ],
       "matched_rows": 30,
       "rows": [
@@ -20784,7 +20063,7 @@
           "ev": -16.67,
           "qi": 27,
           "price_qi": 10,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Under 2.5 Goals",
@@ -20879,7 +20158,7 @@
         "true_price": 4.24,
         "current_odds": 4.2,
         "au_bookie": "Sportsbet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
         "odds_updated_at": "2026-06-13T20:56:07.950Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
@@ -20892,8 +20171,8 @@
         "true_price": 3.44,
         "current_odds": 3.3,
         "au_bookie": "Sportsbet / PointsBet",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet",
@@ -20905,20 +20184,20 @@
         "true_price": 2.11,
         "current_odds": 2,
         "au_bookie": "Neds / TAB",
-        "odds_checked_at": "2026-06-14T03:34:34.577Z",
-        "odds_updated_at": "2026-06-14T03:34:34.577Z",
+        "odds_checked_at": "2026-06-14T03:57:52.069Z",
+        "odds_updated_at": "2026-06-14T03:57:52.069Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Neds via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Neds / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-14T03:34:34.577Z",
+    "referee_last_checked": "2026-06-14T03:57:52.069Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-14T03:34:34.577Z",
-    "odds_refresh_cadence": "final-hour-live-5-minute",
+    "odds_last_checked": "2026-06-14T03:57:52.069Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d.",
     "model_totals_25": {
       "line": 2.5,
@@ -21244,7 +20523,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-14T00:04:39.342Z",
+      "checked_at": "2026-06-14T03:56:08.383Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
@@ -21332,7 +20611,7 @@
           "ev": 13.21,
           "qi": 60,
           "price_qi": 84,
-          "checked_at": "2026-06-14T00:04:53.535Z"
+          "checked_at": "2026-06-14T03:57:12.279Z"
         },
         {
           "selection": "Over 3.5 Goals",

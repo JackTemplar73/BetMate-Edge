@@ -8,19 +8,31 @@ window.embeddedPlayerProps = [
     "model_probability": 32.8,
     "model_price": 3.05,
     "model_note": "Confirmed starter. Direct running and penalty-box touches give Yilmaz the best Turkey goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 4.2,
+        "ev": 37.7,
+        "qi": 67,
+        "price_qi": 93,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 10323212,
         "market": "Anytime Goalscorer",
-        "current_odds": 4,
-        "qi": 63,
-        "ev": 31.15,
+        "current_odds": 4.2,
+        "qi": 67,
+        "ev": 37.7,
         "nearby_markets": []
       },
       "tab": {
@@ -57,18 +69,15 @@ window.embeddedPlayerProps = [
     "model_price": 3.57,
     "model_note": "Confirmed lineup: Volpato is on the bench. Treat as watch-only unless he comes on early; pre-match starter-based value is removed.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
+        "checked_at": "2026-06-14T03:57:12.279Z",
+        "status": "exact_market_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
         "event_id": 10323212,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 2.25,
-        "qi": 3,
-        "ev": -36.97,
+        "market": null,
         "nearby_markets": []
       },
       "tab": {
@@ -104,11 +113,23 @@ window.embeddedPlayerProps = [
     "model_probability": 54.9,
     "model_price": 1.82,
     "model_note": "Confirmed starter. Set pieces and long-range shooting keep Çalhanoğlu as Turkey's strongest shot-on-target profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.83,
+        "ev": 0.55,
+        "qi": 50,
+        "price_qi": 53,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -152,19 +173,31 @@ window.embeddedPlayerProps = [
     "model_probability": 58.1,
     "model_price": 1.72,
     "model_note": "Confirmed starter. Güler is the main creative link when Turkey break Australia's defensive block.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 2,
+        "ev": 16.28,
+        "qi": 83,
+        "price_qi": 89,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 10323212,
         "market": "To Score Or Assist",
-        "current_odds": 2.1,
-        "qi": 90,
-        "ev": 22.09,
+        "current_odds": 2,
+        "qi": 83,
+        "ev": 16.28,
         "nearby_markets": []
       },
       "tab": {
@@ -200,19 +233,31 @@ window.embeddedPlayerProps = [
     "model_probability": 30.3,
     "model_price": 3.3,
     "model_note": "Confirmed starter. Souttar can be exposed by Turkey's quick central rotations and late recovery tackles.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 5,
+        "ev": 51.52,
+        "qi": 70,
+        "price_qi": 94,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 10323212,
         "market": "To Be Booked",
-        "current_odds": 4.8,
-        "qi": 68,
-        "ev": 45.45,
+        "current_odds": 5,
+        "qi": 70,
+        "ev": 51.52,
         "nearby_markets": []
       },
       "tab": {
@@ -248,11 +293,23 @@ window.embeddedPlayerProps = [
     "model_probability": 46.5,
     "model_price": 2.15,
     "model_note": "Germany's team total gives Havertz the clearest goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 1.53,
+        "ev": -28.84,
+        "qi": 27,
+        "price_qi": 2,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -296,7 +353,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.57,
     "model_note": "Musiala should receive high-volume touches around the box.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -370,11 +427,23 @@ window.embeddedPlayerProps = [
     "model_probability": 31.5,
     "model_price": 3.17,
     "model_note": "Kimmich projects as a lower-probability edge through set pieces and late box entries.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.62,
+        "ev": -48.9,
+        "qi": 20,
+        "price_qi": 0,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -417,11 +486,23 @@ window.embeddedPlayerProps = [
     "model_probability": 54.8,
     "model_price": 1.82,
     "model_note": "Wirtz carries the best final-pass and secondary-assist profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.3,
+        "ev": -28.57,
+        "qi": 31,
+        "price_qi": 1,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -465,10 +546,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.73,
     "model_note": "Curaçao defenders face repeated pressure if Germany dominate territory.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -508,11 +589,23 @@ window.embeddedPlayerProps = [
     "model_probability": 38.6,
     "model_price": 2.59,
     "model_note": "Depay remains the highest Dutch central finishing profile when selected.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.5,
+        "ev": -3.47,
+        "qi": 31,
+        "price_qi": 32,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -555,19 +648,31 @@ window.embeddedPlayerProps = [
     "model_probability": 60.4,
     "model_price": 1.66,
     "model_note": "Gakpo projects as the Netherlands forward most likely to generate shot volume.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 1.22,
+        "ev": -26.51,
+        "qi": 33,
+        "price_qi": 0,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 9924169,
         "market": "Player To Have 2 Or More Shots",
-        "current_odds": 1.2,
+        "current_odds": 1.22,
         "qi": 33,
-        "ev": -27.71,
+        "ev": -26.51,
         "nearby_markets": []
       },
       "tab": {
@@ -602,11 +707,23 @@ window.embeddedPlayerProps = [
     "model_probability": 47.5,
     "model_price": 2.11,
     "model_note": "Kubo is Japan's best left-footed shot creation profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.91,
+        "ev": -9.48,
+        "qi": 33,
+        "price_qi": 16,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -650,10 +767,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.37,
     "model_note": "Simons rates well for involvement without needing to score himself.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -694,10 +811,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.61,
     "model_note": "Endo can be forced into tactical fouls against Dutch transition runners.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -738,10 +855,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.87,
     "model_note": "Haller has the strongest Ivory Coast central goal share.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -781,19 +898,31 @@ window.embeddedPlayerProps = [
     "model_probability": 31.6,
     "model_price": 3.16,
     "model_note": "Valencia remains Ecuador's main penalty-box finisher.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 3.4,
+        "ev": 7.59,
+        "qi": 49,
+        "price_qi": 77,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 9924014,
         "market": "Anytime Goalscorer",
-        "current_odds": 3.3,
-        "qi": 44,
-        "ev": 4.43,
+        "current_odds": 3.4,
+        "qi": 49,
+        "ev": 7.59,
         "nearby_markets": []
       },
       "tab": {
@@ -828,11 +957,23 @@ window.embeddedPlayerProps = [
     "model_probability": 42.6,
     "model_price": 2.35,
     "model_note": "Pepe is the higher-variance Ivory Coast shot-on-target option.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 2,
+        "ev": -14.89,
+        "qi": 29,
+        "price_qi": 11,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -875,11 +1016,23 @@ window.embeddedPlayerProps = [
     "model_probability": 28.4,
     "model_price": 3.52,
     "model_note": "Estupinan creates enough wide service to stay on the assist watchlist.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 5.5,
+        "ev": 56.25,
+        "qi": 69,
+        "price_qi": 95,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -922,19 +1075,31 @@ window.embeddedPlayerProps = [
     "model_probability": 29.9,
     "model_price": 3.34,
     "model_note": "Caicedo profiles as Ecuador's highest tactical-foul card risk.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 3.64,
+        "ev": 8.98,
+        "qi": 49,
+        "price_qi": 79,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 9924014,
         "market": "To Be Booked",
-        "current_odds": 3.68,
-        "qi": 51,
-        "ev": 10.18,
+        "current_odds": 3.64,
+        "qi": 49,
+        "ev": 8.98,
         "nearby_markets": []
       },
       "tab": {
@@ -969,11 +1134,23 @@ window.embeddedPlayerProps = [
     "model_probability": 42.7,
     "model_price": 2.34,
     "model_note": "Isak is Sweden's highest goal-probability player.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.4,
+        "ev": 2.56,
+        "qi": 46,
+        "price_qi": 63,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1017,10 +1194,10 @@ window.embeddedPlayerProps = [
     "model_price": 1.75,
     "model_note": "Kulusevski carries strong shot volume from carries and cut-ins.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1060,11 +1237,23 @@ window.embeddedPlayerProps = [
     "model_probability": 56.5,
     "model_price": 1.77,
     "model_note": "Isak projects as Sweden's cleanest shot-on-target angle.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.36,
+        "ev": -23.16,
+        "qi": 32,
+        "price_qi": 2,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1108,10 +1297,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.23,
     "model_note": "Kulusevski is also Sweden's best creative prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1152,10 +1341,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.32,
     "model_note": "Laidouni is Tunisia's most likely midfield card profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1196,10 +1385,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.18,
     "model_note": "Spain's expected territory gives Morata a strong goal profile if starting.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1240,10 +1429,10 @@ window.embeddedPlayerProps = [
     "model_price": 1.81,
     "model_note": "Yamal rates well for volume even when Spain spread chances around.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1284,10 +1473,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.02,
     "model_note": "Olmo gets central shooting positions against deep blocks.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1328,10 +1517,10 @@ window.embeddedPlayerProps = [
     "model_price": 1.92,
     "model_note": "Yamal projects as Spain's best wide creation angle.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1372,10 +1561,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.47,
     "model_note": "Cape Verde defenders face repeated wide isolation risk.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -1415,11 +1604,23 @@ window.embeddedPlayerProps = [
     "model_probability": 42.4,
     "model_price": 2.36,
     "model_note": "Lukaku has the highest Belgium goal share if starting.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.25,
+        "ev": -4.66,
+        "qi": 31,
+        "price_qi": 27,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1462,11 +1663,23 @@ window.embeddedPlayerProps = [
     "model_probability": 66.2,
     "model_price": 1.51,
     "model_note": "Salah projects for high shot involvement regardless of match state.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 1.53,
+        "ev": 1.32,
+        "qi": 57,
+        "price_qi": 58,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1509,11 +1722,23 @@ window.embeddedPlayerProps = [
     "model_probability": 55.8,
     "model_price": 1.79,
     "model_note": "Salah is Egypt's highest-probability shot-on-target player.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.72,
+        "ev": -3.91,
+        "qi": 41,
+        "price_qi": 29,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1556,11 +1781,23 @@ window.embeddedPlayerProps = [
     "model_probability": 50.6,
     "model_price": 1.98,
     "model_note": "De Bruyne owns Belgium's best assist probability.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.91,
+        "ev": -3.54,
+        "qi": 39,
+        "price_qi": 31,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1603,11 +1840,23 @@ window.embeddedPlayerProps = [
     "model_probability": 26.5,
     "model_price": 3.77,
     "model_note": "Onana can be exposed defending Egypt counters.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 4.15,
+        "ev": 10.08,
+        "qi": 43,
+        "price_qi": 79,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1650,11 +1899,23 @@ window.embeddedPlayerProps = [
     "model_probability": 43.8,
     "model_price": 2.28,
     "model_note": "Nunez is Uruguay's highest goal-volume forward.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.3,
+        "ev": 0.88,
+        "qi": 42,
+        "price_qi": 55,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1697,11 +1958,23 @@ window.embeddedPlayerProps = [
     "model_probability": 54.6,
     "model_price": 1.83,
     "model_note": "Valverde projects for shots from distance and second balls.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 1.22,
+        "ev": -33.33,
+        "qi": 30,
+        "price_qi": 0,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1744,11 +2017,23 @@ window.embeddedPlayerProps = [
     "model_probability": 58.7,
     "model_price": 1.7,
     "model_note": "Nunez has the best Uruguay shot-on-target profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.25,
+        "ev": -26.47,
+        "qi": 33,
+        "price_qi": 1,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1791,11 +2076,23 @@ window.embeddedPlayerProps = [
     "model_probability": 37.5,
     "model_price": 2.67,
     "model_note": "De Arrascaeta rates as a creator if Uruguay control possession.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.72,
+        "ev": -35.58,
+        "qi": 23,
+        "price_qi": 2,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1838,11 +2135,23 @@ window.embeddedPlayerProps = [
     "model_probability": 27.3,
     "model_price": 3.66,
     "model_note": "Bentancur carries midfield challenge risk in transition.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 3.38,
+        "ev": -7.65,
+        "qi": 22,
+        "price_qi": 22,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1885,11 +2194,23 @@ window.embeddedPlayerProps = [
     "model_probability": 41.2,
     "model_price": 2.43,
     "model_note": "Taremi is Iran's clearest goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.88,
+        "ev": 18.52,
+        "qi": 67,
+        "price_qi": 87,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1932,11 +2253,23 @@ window.embeddedPlayerProps = [
     "model_probability": 34.1,
     "model_price": 2.93,
     "model_note": "Wood owns New Zealand's main set-piece and crossing goal threat.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 4.2,
+        "ev": 43.34,
+        "qi": 72,
+        "price_qi": 94,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -1979,11 +2312,23 @@ window.embeddedPlayerProps = [
     "model_probability": 59.8,
     "model_price": 1.67,
     "model_note": "Taremi projects for the best shot volume in this game.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 1.12,
+        "ev": -32.93,
+        "qi": 33,
+        "price_qi": 0,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2027,10 +2372,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.03,
     "model_note": "Azmoun is a strong secondary Iran shot-on-target option.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -2071,10 +2416,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.94,
     "model_note": "New Zealand centre-backs can be stressed by Iran forwards.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -2114,11 +2459,23 @@ window.embeddedPlayerProps = [
     "model_probability": 47.6,
     "model_price": 2.1,
     "model_note": "Mbappe is France's highest goal-probability player.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 1.91,
+        "ev": -9.05,
+        "qi": 33,
+        "price_qi": 17,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2162,7 +2519,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.42,
     "model_note": "Mbappe projects as the highest shot-volume player on the slate.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2237,7 +2594,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.88,
     "model_note": "Sarr is Senegal's main transition shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2311,11 +2668,23 @@ window.embeddedPlayerProps = [
     "model_probability": 43.6,
     "model_price": 2.29,
     "model_note": "Dembele rates well for chance creation from wide areas.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.91,
+        "ev": -16.59,
+        "qi": 29,
+        "price_qi": 10,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2359,7 +2728,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.21,
     "model_note": "Gueye profiles as Senegal's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2433,11 +2802,23 @@ window.embeddedPlayerProps = [
     "model_probability": 55.9,
     "model_price": 1.79,
     "model_note": "Haaland is the strongest goal-probability prop in the model.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 1.45,
+        "ev": -18.99,
+        "qi": 32,
+        "price_qi": 4,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2481,7 +2862,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.43,
     "model_note": "Haaland projects as Norway's cleanest shot-on-target angle.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2556,7 +2937,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.06,
     "model_note": "Hussein is Iraq's strongest attacking watch profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2630,11 +3011,23 @@ window.embeddedPlayerProps = [
     "model_probability": 50.3,
     "model_price": 1.99,
     "model_note": "Odegaard carries Norway's best creative involvement profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.91,
+        "ev": -4.02,
+        "qi": 39,
+        "price_qi": 29,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2678,7 +3071,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.86,
     "model_note": "Iqbal can be drawn into midfield recovery fouls.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2752,11 +3145,23 @@ window.embeddedPlayerProps = [
     "model_probability": 40.8,
     "model_price": 2.45,
     "model_note": "Alvarez projects as Argentina's safest forward goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.1,
+        "ev": -14.29,
+        "qi": 28,
+        "price_qi": 12,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2800,7 +3205,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.28,
     "model_note": "Mahrez carries Algeria's strongest shot volume.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2875,7 +3280,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.87,
     "model_note": "Lautaro rates strongly for central penalty-box shots.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2949,11 +3354,23 @@ window.embeddedPlayerProps = [
     "model_probability": 55.2,
     "model_price": 1.81,
     "model_note": "Messi is treated as watchlist only until selection is confirmed.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.4,
+        "ev": -22.65,
+        "qi": 31,
+        "price_qi": 2,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2997,10 +3414,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.38,
     "model_note": "Bennacer profiles as Algeria's most likely tactical-foul card.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -3040,11 +3457,23 @@ window.embeddedPlayerProps = [
     "model_probability": 37.4,
     "model_price": 2.67,
     "model_note": "Arnautovic has Austria's strongest central finishing profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2,
+        "ev": -25.09,
+        "qi": 25,
+        "price_qi": 6,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3088,7 +3517,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.9,
     "model_note": "Sabitzer rates well for shots from midfield and set pieces.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3153,10 +3582,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.16,
     "model_note": "Baumgartner gets strong advanced midfield shot positions.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -3197,10 +3626,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.82,
     "model_note": "Al-Taamari is Jordan's main attacking outlet.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -3241,7 +3670,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.69,
     "model_note": "Schlager carries pressing and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3305,11 +3734,23 @@ window.embeddedPlayerProps = [
     "model_probability": 38.3,
     "model_price": 2.61,
     "model_note": "Leao is Portugal's most explosive goal profile if starting.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.6,
+        "ev": -0.38,
+        "qi": 36,
+        "price_qi": 47,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3353,7 +3794,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.73,
     "model_note": "Bruno projects well for shots and set-piece attempts.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3428,7 +3869,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.27,
     "model_note": "Bakambu is DR Congo's main goal outlet.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3493,7 +3934,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.83,
     "model_note": "Bruno has Portugal's best chance-creation profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3568,7 +4009,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.73,
     "model_note": "Mbemba faces high defensive workload against Portugal attackers.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3632,11 +4073,23 @@ window.embeddedPlayerProps = [
     "model_probability": 44.6,
     "model_price": 2.24,
     "model_note": "Kane is England's highest goal-probability player.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.25,
+        "ev": 0.45,
+        "qi": 41,
+        "price_qi": 52,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3680,10 +4133,10 @@ window.embeddedPlayerProps = [
     "model_price": 1.76,
     "model_note": "Foden rates well for shot volume from inside-right channels.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -3723,11 +4176,23 @@ window.embeddedPlayerProps = [
     "model_probability": 49.5,
     "model_price": 2.02,
     "model_note": "Bellingham carries strong box-entry and second-phase shot value.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.91,
+        "ev": -5.45,
+        "qi": 37,
+        "price_qi": 24,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3770,11 +4235,23 @@ window.embeddedPlayerProps = [
     "model_probability": 28.6,
     "model_price": 3.5,
     "model_note": "Modric remains Croatia's key chance-creation profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 4.5,
+        "ev": 28.57,
+        "qi": 57,
+        "price_qi": 88,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3818,7 +4295,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.6,
     "model_note": "Kovacic can be forced into tactical fouls against England runners.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3892,11 +4369,23 @@ window.embeddedPlayerProps = [
     "model_probability": 35.7,
     "model_price": 2.8,
     "model_note": "Williams is Ghana's leading central goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 3.3,
+        "ev": 17.86,
+        "qi": 62,
+        "price_qi": 86,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3940,10 +4429,10 @@ window.embeddedPlayerProps = [
     "model_price": 1.97,
     "model_note": "Kudus owns Ghana's strongest direct shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -3984,7 +4473,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.55,
     "model_note": "Fajardo is Panama's main forward target.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4049,10 +4538,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.28,
     "model_note": "Kudus is also Ghana's best creative involvement angle.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4093,7 +4582,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.44,
     "model_note": "Carrasquilla carries Panama's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4158,10 +4647,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.57,
     "model_note": "Duran rates as Colombia's most direct goal threat.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4202,7 +4691,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.8,
     "model_note": "Diaz is Colombia's strongest shot-on-target player.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4267,7 +4756,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.25,
     "model_note": "Masharipov is Uzbekistan's main creative shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4332,7 +4821,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.21,
     "model_note": "James has Colombia's highest set-piece and assist profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4397,10 +4886,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.53,
     "model_note": "Barrios carries Colombia's highest ball-winning card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4440,11 +4929,23 @@ window.embeddedPlayerProps = [
     "model_probability": 40.5,
     "model_price": 2.47,
     "model_note": "Schick is Czech Republic's highest goal share.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.3,
+        "ev": -6.88,
+        "qi": 28,
+        "price_qi": 21,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -4488,7 +4989,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.18,
     "model_note": "Soucek rates well from set pieces and second balls.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4553,7 +5054,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.33,
     "model_note": "Hlozek projects as a strong secondary Czech shooter.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4618,10 +5119,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.17,
     "model_note": "Tau is South Africa's main transition shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4662,7 +5163,7 @@ window.embeddedPlayerProps = [
     "model_price": 4.22,
     "model_note": "Soucek has aerial-duel and midfield challenge card exposure.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4726,11 +5227,23 @@ window.embeddedPlayerProps = [
     "model_probability": 36.6,
     "model_price": 2.73,
     "model_note": "Embolo has Switzerland's best central goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.25,
+        "ev": -17.58,
+        "qi": 22,
+        "price_qi": 11,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -4773,11 +5286,23 @@ window.embeddedPlayerProps = [
     "model_probability": 31.9,
     "model_price": 3.13,
     "model_note": "Dzeko is Bosnia's strongest penalty-box goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 4.33,
+        "ev": 38.34,
+        "qi": 66,
+        "price_qi": 92,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -4821,7 +5346,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.26,
     "model_note": "Xhaka projects well if Switzerland control territory.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4886,10 +5411,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.58,
     "model_note": "Shaqiri remains watchlist only until role is confirmed.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4930,7 +5455,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.42,
     "model_note": "Kolasinac carries high duel and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4994,11 +5519,23 @@ window.embeddedPlayerProps = [
     "model_probability": 39.7,
     "model_price": 2.52,
     "model_note": "David is Canada's strongest goal-probability player.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.1,
+        "ev": -16.67,
+        "qi": 27,
+        "price_qi": 10,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -5042,7 +5579,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.89,
     "model_note": "David projects as Canada's cleanest shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5107,7 +5644,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.89,
     "model_note": "Afif is Qatar's main attacking prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5172,7 +5709,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.4,
     "model_note": "Davies carries Canada's strongest wide creation angle.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5237,7 +5774,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.72,
     "model_note": "Madibo profiles as Qatar's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5301,11 +5838,23 @@ window.embeddedPlayerProps = [
     "model_probability": 37.8,
     "model_price": 2.65,
     "model_note": "Gimenez is Mexico's strongest goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 3,
+        "ev": 13.21,
+        "qi": 60,
+        "price_qi": 84,
+        "checked_at": "2026-06-14T03:57:12.279Z"
+      }
+    ],
+    "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
+        "checked_at": "2026-06-14T03:57:12.279Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -5349,7 +5898,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.07,
     "model_note": "Lozano rates well for Mexico shot volume from wide areas.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5404,7 +5953,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.78,
     "model_note": "Son is South Korea's best shot-on-target prop.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5469,7 +6018,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.53,
     "model_note": "Lee projects as South Korea's best creator.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5534,7 +6083,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.18,
     "model_note": "Alvarez carries Mexico's strongest card profile.",
     "live_prices": [],
-    "last_checked": "2026-06-14T02:49:32.559Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",

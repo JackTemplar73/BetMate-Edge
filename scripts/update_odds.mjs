@@ -766,6 +766,28 @@ function betId(fixture, marketItem) {
   return createHash('sha1').update(raw).digest('hex').slice(0, 16);
 }
 
+function scanRowToMarketItem(row, fixture) {
+  return {
+    market_matrix: row.category || row.market || 'AU Bookie Market Scan',
+    target_selection: row.selection,
+    true_price: Number(row.model_price),
+    current_odds: Number(row.current_odds),
+    au_bookie: row.au_bookie || row.bookmaker || row.bookmaker_key || 'AU bookie',
+    odds_checked_at: row.checked_at || fixture.market_scan?.checked_at || fixture.odds_last_checked,
+    odds_refresh_status: Number.isFinite(Number(row.current_odds)) ? 'checked_current' : 'selection_missing',
+    odds_refresh_note: row.source || 'AU bookie market scan'
+  };
+}
+
+function trackedMarketsForFixture(fixture) {
+  const fixtureMarkets = fixture.markets || [];
+  const scanMarkets = (fixture.market_scan?.rows || [])
+    .filter((row) => Number(row.qi) >= MIN_TRACKED_QI)
+    .map((row) => scanRowToMarketItem(row, fixture));
+
+  return [...fixtureMarkets, ...scanMarkets];
+}
+
 async function readHistory() {
   try {
     return JSON.parse(await readFile(HISTORY_PATH, 'utf8'));
@@ -849,7 +871,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = []) {
   for (const fixture of dataset) {
     const kickoff = parseAest(fixture.kickoff_time_aest);
 
-    for (const marketItem of fixture.markets || []) {
+    for (const marketItem of trackedMarketsForFixture(fixture)) {
       const id = betId(fixture, marketItem);
       const existing = byId.get(id);
       if (kickoff > now && !hasVerifiedPrice(marketItem)) {

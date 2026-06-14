@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-14T02:49:32.559Z",
+  "checked_at": "2026-06-14T03:56:08.383Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -7,15 +7,15 @@
     "neds",
     "bet365"
   ],
-  "events_checked": 22,
+  "events_checked": 21,
   "market_counts": {
-    "h2h": 86,
-    "h2h_3_way": 86,
-    "btts": 43,
-    "alternate_spreads": 20,
-    "alternate_totals": 22,
+    "h2h": 84,
+    "h2h_3_way": 84,
+    "btts": 42,
     "double_chance": 38,
     "draw_no_bet": 19,
+    "alternate_spreads": 19,
+    "alternate_totals": 21,
     "spreads": 2
   },
   "matches": [
@@ -73,19 +73,16 @@
     },
     {
       "match_name": "Haiti vs Scotland",
-      "status": "checked",
+      "status": "no_oddsapi_event",
       "bookmakers": [
-        "PointsBet (AU)",
-        "TAB"
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365"
       ],
-      "offered_market_keys": [
-        "alternate_spreads",
-        "alternate_totals",
-        "btts",
-        "h2h",
-        "h2h_3_way"
-      ],
-      "matched_rows": 12
+      "offered_market_keys": [],
+      "matched_rows": 0
     },
     {
       "match_name": "Australia vs Turkiye",
