@@ -1365,6 +1365,20 @@ function splitMatchTeams(matchName) {
 
 function getMatchResultProbabilities(fixture) {
   const teams = splitMatchTeams(fixture.match_name);
+  const calibration = fixture.model_calibration || {};
+  const calibratedHome = Number(calibration.calibrated_home_probability);
+  const calibratedDraw = Number(calibration.calibrated_draw_probability);
+  const calibratedAway = Number(calibration.calibrated_away_probability);
+  if ([calibratedHome, calibratedDraw, calibratedAway].every(Number.isFinite)) {
+    return {
+      homeTeam: teams.home,
+      awayTeam: teams.away,
+      homeProbability: calibratedHome,
+      awayProbability: calibratedAway,
+      drawProbability: calibratedDraw
+    };
+  }
+
   const markets = fixture.markets || [];
   const findTeamPrice = (team) => markets.find((market) => {
     const selection = normaliseForMatch(market.target_selection);

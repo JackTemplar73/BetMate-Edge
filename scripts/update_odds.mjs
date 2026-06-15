@@ -1696,16 +1696,102 @@ function h2hModelProbabilities(fixture) {
   };
 }
 
+function calibratedResultProbabilities(probabilities) {
+  const raw = { ...probabilities };
+  const favorite = Math.max(raw.home, raw.away);
+  const underdog = Math.min(raw.home, raw.away);
+  const gap = favorite - underdog;
+
+  let drawLift = 0;
+  if (raw.draw < 0.24 && gap < 0.28) drawLift += 0.035;
+  if (raw.draw < 0.20 && gap >= 0.28) drawLift += 0.025;
+  if (raw.draw < 0.16) drawLift += 0.02;
+
+  const favouriteCompression = favorite > 0.62 ? Math.min(0.055, (favorite - 0.62) * 0.45) : 0;
+  drawLift += favouriteCompression * 0.55;
+
+  let home = raw.home;
+  let away = raw.away;
+  let draw = raw.draw + drawLift;
+
+  if (raw.home >= raw.away) {
+    home -= drawLift * 0.72 + favouriteCompression * 0.28;
+    away += favouriteCompression * 0.28;
+  } else {
+    away -= drawLift * 0.72 + favouriteCompression * 0.28;
+    home += favouriteCompression * 0.28;
+  }
+
+  home = clamp(home, 0.03, 0.92);
+  away = clamp(away, 0.03, 0.92);
+  draw = clamp(draw, 0.08, 0.38);
+
+  const total = home + draw + away;
+  return {
+    home: home / total,
+    draw: draw / total,
+    away: away / total,
+    calibration: {
+      draw_lift_points: Number((drawLift * 100).toFixed(1)),
+      favourite_compression_points: Number((favouriteCompression * 100).toFixed(1)),
+      note: 'Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance.'
+    }
+  };
+}
+
+function fixtureTempoAdjustment(fixture) {
+  const text = [
+    fixture.tactical_summary,
+    fixture.pitch_constraints,
+    fixture.referee_tendencies
+  ].filter(Boolean).join(' ').toLowerCase();
+
+  const highEventSignals = [
+    'high-tempo',
+    'pressing',
+    'transition',
+    'fast attacks',
+    'wide overloads',
+    'attacking width',
+    'final-third pressure',
+    'box entries',
+    'counter pressure',
+    'pace',
+    'direct forward threat'
+  ];
+  const lowEventSignals = [
+    'deep defensive',
+    'low-risk possession',
+    'low block',
+    'compact',
+    'controlled midfield',
+    'disciplined structure',
+    'defensive compression',
+    'slow tempo',
+    'low-possession',
+    'defensive numbers'
+  ];
+
+  const highCount = highEventSignals.filter((signal) => text.includes(signal)).length;
+  const lowCount = lowEventSignals.filter((signal) => text.includes(signal)).length;
+  return clamp((highCount * 0.11) - (lowCount * 0.09), -0.28, 0.32);
+}
+
 function deriveFixtureGoalModel(fixture) {
-  const probabilities = h2hModelProbabilities(fixture);
+  const baseProbabilities = h2hModelProbabilities(fixture);
   const teams = splitTeams(fixture.match_name);
-  if (!probabilities || !teams) return;
+  if (!baseProbabilities || !teams) return;
+  const probabilities = calibratedResultProbabilities(baseProbabilities);
   const displayTeams = fixture.match_name.split(/\s+vs\s+/i);
   const displayHome = displayTeams[0] || teams.home;
   const displayAway = displayTeams[1] || teams.away;
 
   const resultGap = Math.abs(probabilities.home - probabilities.away);
-  const totalGoalsMean = clamp(2.72 - ((probabilities.draw - 0.25) * 3.1) + (resultGap * 0.55), 1.75, 3.65);
+  const favorite = Math.max(probabilities.home, probabilities.away);
+  const drawBrake = Math.max(0, probabilities.draw - 0.22) * 2.35;
+  const favouriteEventBoost = Math.max(0, favorite - 0.62) * 0.55;
+  const tempoAdjustment = fixtureTempoAdjustment(fixture);
+  const totalGoalsMean = clamp(2.46 - drawBrake + (resultGap * 0.32) + favouriteEventBoost + tempoAdjustment, 1.65, 3.35);
   const homeShare = clamp(0.5 + ((probabilities.home - probabilities.away) * 0.46), 0.23, 0.77);
   const homeLambda = totalGoalsMean * homeShare;
   const awayLambda = totalGoalsMean - homeLambda;
@@ -1732,7 +1818,20 @@ function deriveFixtureGoalModel(fixture) {
     over_fair_price: fairPriceFromProbability(over25Probability),
     under_probability: Number((underProbability * 100).toFixed(1)),
     under_fair_price: fairPriceFromProbability(underProbability),
-    total_goals_mean: Number(totalGoalsMean.toFixed(2))
+    total_goals_mean: Number(totalGoalsMean.toFixed(2)),
+    tempo_adjustment: Number(tempoAdjustment.toFixed(2)),
+    calibration_note: probabilities.calibration.note
+  };
+  fixture.model_calibration = {
+    base_home_probability: Number((baseProbabilities.home * 100).toFixed(1)),
+    base_draw_probability: Number((baseProbabilities.draw * 100).toFixed(1)),
+    base_away_probability: Number((baseProbabilities.away * 100).toFixed(1)),
+    calibrated_home_probability: Number((probabilities.home * 100).toFixed(1)),
+    calibrated_draw_probability: Number((probabilities.draw * 100).toFixed(1)),
+    calibrated_away_probability: Number((probabilities.away * 100).toFixed(1)),
+    total_goals_mean: Number(totalGoalsMean.toFixed(2)),
+    tempo_adjustment: Number(tempoAdjustment.toFixed(2)),
+    ...probabilities.calibration
   };
   fixture.exact_score_model = scores
     .sort((a, b) => b.probability - a.probability)
