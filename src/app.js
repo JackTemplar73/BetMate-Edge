@@ -1223,7 +1223,7 @@ function renderConfirmedLineupsBlock(fixture) {
       <h5>Substitutes</h5>
       ${substitutes.length
         ? `<ol class="rated-player-list">${renderList(substitutes, team, formation, true)}</ol>`
-        : '<p class="lineup-empty">Substitutes not listed by the source yet.</p>'}
+        : '<p class="lineup-empty">Bench not supplied by the lineup source yet.</p>'}
     </article>
   `;
 
