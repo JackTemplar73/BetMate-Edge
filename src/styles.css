@@ -1415,14 +1415,23 @@ td {
 }
 
 .rated-player-list li {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr) auto;
   gap: 10px;
   align-items: center;
 }
 
-.rated-player-list li span {
+.rated-player-list .player-name {
   min-width: 0;
+}
+
+.rated-player-list .player-position {
+  min-width: 36px;
+  color: var(--gold);
+  font-size: 11px;
+  font-weight: 900;
+  text-align: left;
+  white-space: nowrap;
 }
 
 .rated-player-list li b {

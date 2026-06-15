@@ -1205,20 +1205,24 @@ function renderConfirmedLineupsBlock(fixture) {
   const lineups = fixture.confirmed_lineups;
   if (!lineups || lineups.status !== 'confirmed') return '';
 
-  const renderList = (players = [], teamName = '', isSub = false) => players.map((player, index) => `
+  const renderList = (players = [], teamName = '', formation = '', isSub = false) => {
+    const positions = buildFormationPositions(formation, players.length, isSub);
+    return players.map((player, index) => `
     <li>
-      <span>${player}</span>
+      <span class="player-position">${positions[index] || (isSub ? 'SUB' : '-')}</span>
+      <span class="player-name">${player}</span>
       <b>${calculatePlayerModelRating(fixture, teamName, index, isSub)}</b>
     </li>
   `).join('');
+  };
   const renderTeamLineup = (team, formation, starters = [], substitutes = []) => `
     <article class="lineup-card">
       <h4>${team} <span>${formation || ''}</span></h4>
       <h5>Starting XI</h5>
-      <ol class="rated-player-list">${renderList(starters, team, false)}</ol>
+      <ol class="rated-player-list">${renderList(starters, team, formation, false)}</ol>
       <h5>Substitutes</h5>
       ${substitutes.length
-        ? `<ol class="rated-player-list">${renderList(substitutes, team, true)}</ol>`
+        ? `<ol class="rated-player-list">${renderList(substitutes, team, formation, true)}</ol>`
         : '<p class="lineup-empty">Substitutes not listed by the source yet.</p>'}
     </article>
   `;
@@ -1239,6 +1243,48 @@ function renderConfirmedLineupsBlock(fixture) {
       </div>
     </section>
   `;
+}
+
+function buildFormationPositions(formation = '', playerCount = 11, isSub = false) {
+  if (isSub) return Array.from({ length: playerCount }, () => 'SUB');
+
+  const lines = String(formation)
+    .match(/\d+/g)
+    ?.map(Number)
+    .filter((line) => Number.isFinite(line) && line > 0) || [];
+  if (!lines.length) return ['GK', ...Array.from({ length: Math.max(0, playerCount - 1) }, () => '-')];
+
+  const positionRows = [
+    {
+      3: ['RCB', 'CB', 'LCB'],
+      4: ['RB', 'RCB', 'LCB', 'LB'],
+      5: ['RWB', 'RCB', 'CB', 'LCB', 'LWB']
+    },
+    {
+      2: ['DM', 'DM'],
+      3: ['RCM', 'CM', 'LCM'],
+      4: ['RM', 'RCM', 'LCM', 'LM'],
+      5: ['RWB', 'RCM', 'CM', 'LCM', 'LWB']
+    },
+    {
+      1: ['AM'],
+      2: ['RAM', 'LAM'],
+      3: ['RW', 'AM', 'LW']
+    },
+    {
+      1: ['ST'],
+      2: ['ST', 'ST'],
+      3: ['RW', 'ST', 'LW']
+    }
+  ];
+
+  const positions = ['GK'];
+  lines.forEach((line, rowIndex) => {
+    const rowMap = positionRows[Math.min(rowIndex, positionRows.length - 1)] || {};
+    positions.push(...(rowMap[line] || Array.from({ length: line }, (_, index) => `P${index + 1}`)));
+  });
+
+  return positions.slice(0, playerCount);
 }
 
 function getTeamModelProbability(fixture, teamName) {
