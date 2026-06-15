@@ -1324,9 +1324,10 @@ function getModelCoefficientCards(fixture) {
   const totals = fixture.model_totals_25 || {};
   const rows = fixture.model_market_view || [];
   const findSelection = (pattern) => rows.find((row) => pattern.test(row.selection || ''));
-  const under = findSelection(/Under 2\.5/i);
-  const over = findSelection(/Over 2\.5/i);
-  const draw = findSelection(/draw$/i) || (fixture.markets || []).find((item) => /draw/i.test(item.target_selection || ''));
+  const under = findSelection(/^Under 2\.5 Goals$/i);
+  const over = findSelection(/^Over 2\.5 Goals$/i);
+  const calibratedDraw = Number(fixture.model_calibration?.calibrated_draw_probability);
+  const draw = (fixture.markets || []).find((item) => /^Match to end in a Draw$/i.test(item.target_selection || ''));
   const topExact = (fixture.exact_score_model || [])[0];
 
   return [
@@ -1347,8 +1348,8 @@ function getModelCoefficientCards(fixture) {
     },
     {
       label: 'Draw',
-      value: draw?.probability ? `${Number(draw.probability).toFixed(1)}%` : formatModelProb({ true_price: draw?.true_price }),
-      detail: draw?.fair_price ? `Fair ${formatModelOnlyPrice(draw.fair_price)}` : `Fair ${formatModelPrice({ true_price: draw?.true_price })}`
+      value: Number.isFinite(calibratedDraw) ? `${calibratedDraw.toFixed(1)}%` : formatModelProb({ true_price: draw?.true_price }),
+      detail: Number.isFinite(calibratedDraw) ? `Fair ${formatModelOnlyPrice(100 / calibratedDraw)}` : `Fair ${formatModelPrice({ true_price: draw?.true_price })}`
     },
     {
       label: 'Top Score',

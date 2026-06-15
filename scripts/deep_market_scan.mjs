@@ -144,6 +144,17 @@ function numberFromSelection(value) {
   return match ? Number.parseFloat(match[1]) : null;
 }
 
+function pointMatches(targetPoint, outcomePoint) {
+  return Number.isFinite(targetPoint)
+    && Number.isFinite(outcomePoint)
+    && Math.abs(outcomePoint - targetPoint) < 0.001;
+}
+
+function teamTotalTeamMatches(selection, description) {
+  if (!description) return false;
+  return selection.includes(description) || description.includes(selection.replace(/\b(over|under)\b.*$/i, '').trim());
+}
+
 function preferredMarketKeys(item) {
   const market = normalise(item.market || item.market_matrix);
   const category = normalise(item.category);
@@ -168,19 +179,22 @@ function findOutcome(bookmaker, item) {
   const keys = preferredMarketKeys(item);
   const rawSelection = item.selection || item.target_selection;
   const selection = normalise(rawSelection);
+  const itemMarket = normalise(item.market || item.market_matrix);
   const targetPoint = numberFromSelection(rawSelection);
 
   for (const key of keys) {
     const market = (bookmaker.markets || []).find((candidate) => candidate.key === key);
     if (!market) continue;
+    const isTotalsMarket = key.includes('totals');
+    const isTeamTotalsMarket = key.includes('team_totals') || itemMarket.includes('team totals');
 
     const outcome = (market.outcomes || []).find((candidate) => {
       const name = normalise(candidate.name);
       const description = normalise(candidate.description || '');
       const point = Number(candidate.point);
-      const pointMatches = !Number.isFinite(targetPoint) || !Number.isFinite(point) || Math.abs(point - targetPoint) < 0.001;
 
-      if (!pointMatches) return false;
+      if (isTotalsMarket && !pointMatches(targetPoint, point)) return false;
+      if (isTeamTotalsMarket && !teamTotalTeamMatches(selection, description)) return false;
       if (selection.includes(name) || name.includes(selection)) return true;
       if (description && (selection.includes(description) || description.includes(selection))) return true;
 

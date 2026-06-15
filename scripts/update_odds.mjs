@@ -1451,6 +1451,18 @@ function comparableName(value) {
   return String(value || '').replace(/\s*&\s*/g, ' and ');
 }
 
+function pointsMatch(targetPoint, outcomePoint) {
+  return Number.isFinite(targetPoint)
+    && Number.isFinite(outcomePoint)
+    && Math.abs(outcomePoint - targetPoint) < 0.001;
+}
+
+function teamTotalTeamMatches(selection, description) {
+  if (!description) return false;
+  const teamPart = selection.replace(/\b(over|under)\b.*$/i, '').trim();
+  return selection.includes(description) || description.includes(teamPart);
+}
+
 function outcomeForMarket(marketItem, oddsMarket) {
   const selection = normalise(marketItem.target_selection);
   const marketKey = oddsMarket.key || '';
@@ -1481,7 +1493,7 @@ function outcomeForMarket(marketItem, oddsMarket) {
     });
   }
 
-  if (isMarketKey(marketKey, ['totals', 'team_totals'])) {
+  if (isMarketKey(marketKey, ['team_totals']) || MARKET_MAP.team_totals.includes(marketItem.market_matrix)) {
     const targetPoint = numberFromSelection(marketItem.target_selection);
     const wantsUnder = selection.includes('under');
     const wantsOver = selection.includes('over');
@@ -1489,7 +1501,22 @@ function outcomeForMarket(marketItem, oddsMarket) {
 
     return oddsMarket.outcomes.find((outcome) => {
       const outcomeName = normalise(outcome.name);
-      return Math.abs(Number(outcome.point) - targetPoint) < 0.001
+      const description = normalise(outcome.description || '');
+      return pointsMatch(targetPoint, Number(outcome.point))
+        && teamTotalTeamMatches(selection, description)
+        && ((wantsUnder && outcomeName === 'under') || (wantsOver && outcomeName === 'over'));
+    });
+  }
+
+  if (isMarketKey(marketKey, ['totals'])) {
+    const targetPoint = numberFromSelection(marketItem.target_selection);
+    const wantsUnder = selection.includes('under');
+    const wantsOver = selection.includes('over');
+    if (!Number.isFinite(targetPoint) || (!wantsUnder && !wantsOver)) return null;
+
+    return oddsMarket.outcomes.find((outcome) => {
+      const outcomeName = normalise(outcome.name);
+      return pointsMatch(targetPoint, Number(outcome.point))
         && ((wantsUnder && outcomeName === 'under') || (wantsOver && outcomeName === 'over'));
     });
   }
@@ -1891,6 +1918,35 @@ function deriveFixtureModels(dataset) {
   }
 }
 
+function reconcileMarketScanModelValues(dataset) {
+  for (const fixture of dataset) {
+    const modelRows = new Map((fixture.model_market_view || []).map((row) => [
+      `${normalise(row.selection)}|${normalise(row.market)}`,
+      row
+    ]));
+
+    for (const row of fixture.market_scan?.rows || []) {
+      const modelRow = modelRows.get(`${normalise(row.selection)}|${normalise(row.market)}`);
+      if (!modelRow || !Number.isFinite(Number(modelRow.fair_price))) continue;
+
+      row.model_price = Number(modelRow.fair_price);
+      row.model_probability = Number(modelRow.probability);
+
+      const metrics = runVectorCalculations({
+        true_price: row.model_price,
+        current_odds: row.current_odds
+      });
+      const quality = buildBetQualityFromPrices(row.model_price, row.current_odds);
+
+      row.ev = metrics.ev;
+      row.qi = metrics.qi;
+      row.price_qi = metrics.price_qi;
+      row.edge_points = quality.edge;
+      row.risk_rating = quality.risk;
+    }
+  }
+}
+
 function targetSelectionForH2hOutcome(outcome) {
   return normalise(outcome.name) === 'draw'
     ? 'Match to end in a Draw'
@@ -2135,6 +2191,7 @@ async function main() {
 
   const prunedMarkets = pruneUnverifiedFutureMarkets(dataset);
   deriveFixtureModels(dataset);
+  reconcileMarketScanModelValues(dataset);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
