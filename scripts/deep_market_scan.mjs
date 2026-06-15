@@ -261,7 +261,7 @@ function scanItemsForFixture(fixture) {
 
   const modelItems = (fixture.markov_market_model || []).map((item) => ({
     ...item,
-    source: 'Markov model'
+    source: 'Model'
   }));
 
   const seen = new Set();

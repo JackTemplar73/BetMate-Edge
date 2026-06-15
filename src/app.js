@@ -1084,7 +1084,7 @@ function renderFixtureModelBlock(fixture) {
   const markovHtml = markovMarkets.length > 0
     ? `
         <article class="model-insight-card markov-market-card">
-          <h3>Markov Market Model</h3>
+          <h3>Model Market View</h3>
           <div class="markov-filter-row">
             <label>
               <span>Prob %</span>
@@ -1108,7 +1108,7 @@ function renderFixtureModelBlock(fixture) {
             </label>
           </div>
           <div class="markov-market-list">
-            ${filteredMarkovMarkets.length === 0 ? '<p class="empty-note markov-empty">No Markov selections match these filters.</p>' : filteredMarkovMarkets.map((item) => `
+            ${filteredMarkovMarkets.length === 0 ? '<p class="empty-note markov-empty">No model selections match these filters.</p>' : filteredMarkovMarkets.map((item) => `
               <div>
                 <span>
                   <strong>${item.selection}</strong>
@@ -1378,7 +1378,7 @@ function buildSummaryAnalysis(fixture) {
     ? `${winner.team || 'No clear side'} is only the result lean at ${formatPercent(winner.probability)}. The single most common score state is ${topExact.score}, so this is better read as a balanced match with draw risk rather than a strong winner call.`
     : `${winner.team || 'No clear side'} is the result lean at ${formatPercent(winner.probability)}. ${edge < 6 ? 'The margin over the other side is narrow, so the model is not calling this dominant.' : `That is ${edge.toFixed(1)} points clear of ${winner.other}.`}`;
   const whyText = [
-    `The Markov model is spreading the match across ${goalProfileText(totals)} and this result split: ${resultSplit}.`,
+    `The model is spreading the match across ${goalProfileText(totals)} and this result split: ${resultSplit}.`,
     topExact ? `Its most common single score state is ${topExact.score}, which is only one state inside the wider result tree.` : null,
     topScoreIsDraw ? 'Because the top exact score is a draw, the model is flagging a meaningful stalemate path even if one team still has the higher total win probability.' : null,
     drawText,
@@ -1453,7 +1453,7 @@ function renderMarkovSummaryTab(fixture) {
             </div>
           `).join('')}
         </div>
-      ` : '<p class="empty-note">Markov market rows are not loaded for this match yet.</p>'}
+      ` : '<p class="empty-note">Model market rows are not loaded for this match yet.</p>'}
     </section>
   `;
 }
