@@ -1229,6 +1229,9 @@ function renderConfirmedLineupsBlock(fixture) {
         <h3>Confirmed Lineups</h3>
         <p>Lineups confirmed${lineups.checked_at ? ` | Checked ${new Date(lineups.checked_at).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}` : ''}</p>
       </div>
+      <div class="lineup-rating-note">
+        The number beside each player is a match-impact rating out of 100. It is not a general player ability score. It shows how much that player is expected to matter in this specific game, using the team setup, starting role, likely game flow, pitch and referee effect.
+      </div>
       <div class="lineup-note">${lineups.model_implication || 'Lineups are confirmed and included in the model view.'}</div>
       <div class="lineup-grid">
         ${renderTeamLineup(lineups.home_team, lineups.home_formation, lineups.home_starting_xi, lineups.home_substitutes)}
