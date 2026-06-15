@@ -48,6 +48,8 @@ const FIFA_REPORT_HUB_URL = 'https://www.fifatrainingcentre.com/en/fifa-world-cu
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
 const CLOSING_WINDOW_MS = 5 * 60 * 1000;
+const LATEST_PRE_KICKOFF_WINDOW_MS = 4 * 60 * 60 * 1000;
+const MAX_CLV_PRICE_RATIO = 3;
 const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
 const LINEUP_CHECK_WINDOW_MS = 60 * 60 * 1000;
 
@@ -1134,51 +1136,91 @@ function isBetfairMarket(row) {
   return book === 'betfair ex au' || book === 'betfair';
 }
 
-function betfairClosingCandidate(fixture, marketItem) {
-  return (fixture.market_scan?.rows || [])
-    .filter(isBetfairMarket)
+function checkedAtTime(marketItem) {
+  const checkedAt = Date.parse(marketItem.odds_checked_at || marketItem.checked_at || '');
+  return Number.isFinite(checkedAt) ? checkedAt : null;
+}
+
+function wasPriceChecked(marketItem) {
+  return ['checked_current', 'updated', 'added_from_oddsapi', 'confirmed_rendered_site'].includes(marketItem.odds_refresh_status);
+}
+
+function preKickoffSnapshot(marketItem, kickoff, maxWindowMs) {
+  const checkedAt = checkedAtTime(marketItem);
+  if (!Number.isFinite(checkedAt) || !wasPriceChecked(marketItem)) return null;
+
+  const delta = kickoff.getTime() - checkedAt;
+  if (delta < 0 || delta > maxWindowMs) return null;
+
+  return {
+    checkedAt: new Date(checkedAt),
+    minutesBeforeKickoff: Math.round(delta / 60000)
+  };
+}
+
+function saneClvReference(openingOdds, referenceOdds) {
+  if (!Number.isFinite(openingOdds) || !Number.isFinite(referenceOdds) || openingOdds <= 1 || referenceOdds <= 1) {
+    return false;
+  }
+
+  const ratio = Math.max(openingOdds, referenceOdds) / Math.min(openingOdds, referenceOdds);
+  return ratio <= MAX_CLV_PRICE_RATIO;
+}
+
+function referenceMarketCandidates(fixture, marketItem) {
+  const ownBook = {
+    marketItem,
+    reference: marketItem.au_bookie || 'Own book',
+    priority: isBetfairMarket(marketItem) ? 0 : 1
+  };
+  const scanCandidates = (fixture.market_scan?.rows || [])
     .map((row) => scanRowToMarketItem(row, fixture))
-    .find((candidate) => sameClosingMarket(candidate, marketItem)) || null;
+    .filter((candidate) => sameClosingMarket(candidate, marketItem))
+    .map((candidate) => ({
+      marketItem: candidate,
+      reference: candidate.au_bookie || 'Market scan',
+      priority: isBetfairMarket(candidate) ? 0 : normalise(candidate.au_bookie) === normalise(marketItem.au_bookie) ? 1 : 2
+    }));
+
+  const candidates = [ownBook, ...scanCandidates]
+    .filter((candidate) => Number.isFinite(Number(candidate.marketItem.current_odds)));
+  const seen = new Set();
+  return candidates.filter((candidate) => {
+    const key = [
+      normalise(candidate.reference),
+      Number(candidate.marketItem.current_odds).toFixed(4),
+      checkedAtTime(candidate.marketItem) || ''
+    ].join('|');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
 }
 
-function preferredClosingMarket(fixture, marketItem, kickoff) {
-  const betfairCandidate = betfairClosingCandidate(fixture, marketItem);
-  const freshBetfair = betfairCandidate ? hasFreshClosingPrice(betfairCandidate, kickoff) : null;
-  if (freshBetfair) {
-    return {
-      marketItem: betfairCandidate,
-      freshClose: freshBetfair,
-      reference: 'Betfair'
-    };
-  }
-
-  const freshOwnBook = hasFreshClosingPrice(marketItem, kickoff);
-  if (!freshOwnBook) return null;
-
-  return {
-    marketItem,
-    freshClose: freshOwnBook,
-    reference: marketItem.au_bookie || 'Own book'
-  };
+function preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, maxWindowMs, openingOdds) {
+  return referenceMarketCandidates(fixture, marketItem)
+    .map((candidate) => ({
+      ...candidate,
+      snapshot: preKickoffSnapshot(candidate.marketItem, kickoff, maxWindowMs),
+      odds: Number.parseFloat(candidate.marketItem.current_odds)
+    }))
+    .filter((candidate) => candidate.snapshot && saneClvReference(openingOdds, candidate.odds))
+    .sort((a, b) => {
+      if (a.priority !== b.priority) return a.priority - b.priority;
+      return b.snapshot.checkedAt - a.snapshot.checkedAt;
+    })[0] || null;
 }
 
-function preferredLatestReferenceMarket(fixture, marketItem) {
-  const betfairCandidate = betfairClosingCandidate(fixture, marketItem);
-  if (betfairCandidate && Number.isFinite(Number(betfairCandidate.current_odds))) {
-    return {
-      marketItem: betfairCandidate,
-      reference: 'Betfair'
-    };
-  }
+function preferredClosingMarket(fixture, marketItem, kickoff, openingOdds) {
+  return preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, CLOSING_WINDOW_MS, openingOdds);
+}
 
-  return {
-    marketItem,
-    reference: marketItem.au_bookie || 'Own book'
-  };
+function preferredLatestReferenceMarket(fixture, marketItem, kickoff, openingOdds) {
+  return preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, LATEST_PRE_KICKOFF_WINDOW_MS, openingOdds);
 }
 
 function wasCheckedBeforeKickoff(marketItem, kickoff) {
-  const checkedAt = Date.parse(marketItem.odds_checked_at || '');
+  const checkedAt = checkedAtTime(marketItem);
   return Number.isFinite(checkedAt) && checkedAt <= kickoff.getTime();
 }
 
@@ -1333,6 +1375,12 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         closing_odds: null,
         closing_captured_at: null,
         clv_percent: null,
+        latest_pre_kickoff_odds: null,
+        latest_pre_kickoff_at: null,
+        latest_pre_kickoff_bookie: null,
+        latest_pre_kickoff_clv_percent: null,
+        latest_pre_kickoff_qi: null,
+        latest_pre_kickoff_source: null,
         estimated_closing_odds: null,
         estimated_clv_percent: null,
         estimated_closing_source: null,
@@ -1344,44 +1392,84 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       entry.result_status = entry.result_status || 'pending';
       entry.result_detail = entry.result_detail || 'Awaiting final result check.';
       entry.settlement_source = entry.settlement_source || null;
-      entry.current_odds = currentOdds;
-      entry.current_model_price = modelPrice;
-      entry.current_ev = metrics.ev;
-      entry.current_qi = metrics.qi;
-      entry.last_seen_at = nowIso;
+      entry.latest_pre_kickoff_odds = entry.latest_pre_kickoff_odds ?? null;
+      entry.latest_pre_kickoff_at = entry.latest_pre_kickoff_at ?? null;
+      entry.latest_pre_kickoff_bookie = entry.latest_pre_kickoff_bookie ?? null;
+      entry.latest_pre_kickoff_clv_percent = entry.latest_pre_kickoff_clv_percent ?? null;
+      entry.latest_pre_kickoff_qi = entry.latest_pre_kickoff_qi ?? null;
+      entry.latest_pre_kickoff_source = entry.latest_pre_kickoff_source ?? null;
+      if (!Number.isFinite(Number.parseFloat(entry.estimated_closing_odds))) {
+        entry.estimated_closing_odds = null;
+        entry.estimated_clv_percent = null;
+        entry.estimated_qi = null;
+        entry.estimated_closing_source = null;
+      }
+      const marketSnapshot = preKickoffSnapshot(marketItem, kickoff, LATEST_PRE_KICKOFF_WINDOW_MS);
+      const canUpdateCurrent = kickoff > now || Boolean(marketSnapshot);
+      if (canUpdateCurrent) {
+        entry.current_odds = currentOdds;
+        entry.current_model_price = modelPrice;
+        entry.current_ev = metrics.ev;
+        entry.current_qi = metrics.qi;
+        entry.last_seen_at = nowIso;
+      }
       downgradeLegacyClosingOutsideWindow(entry, kickoff);
 
-      const closingMarket = preferredClosingMarket(fixture, marketItem, kickoff);
+      const latestReference = preferredLatestReferenceMarket(fixture, marketItem, kickoff, entry.opening_odds);
+      if (latestReference) {
+        const latestOdds = Number.parseFloat(latestReference.marketItem.current_odds);
+        const latestMetrics = runVectorCalculations({
+          ...marketItem,
+          current_odds: latestOdds
+        });
+        const latestCheckedAt = latestReference.snapshot.checkedAt.toISOString();
+        if (!entry.latest_pre_kickoff_at || Date.parse(latestCheckedAt) >= Date.parse(entry.latest_pre_kickoff_at)) {
+          entry.latest_pre_kickoff_odds = latestOdds;
+          entry.latest_pre_kickoff_at = latestCheckedAt;
+          entry.latest_pre_kickoff_bookie = latestReference.reference;
+          entry.latest_pre_kickoff_qi = latestMetrics.qi;
+          entry.latest_pre_kickoff_clv_percent = clvPercent(entry.opening_odds, latestOdds);
+          entry.latest_pre_kickoff_source = `${latestReference.reference} pre-kickoff check ${latestReference.snapshot.minutesBeforeKickoff} min before kickoff`;
+        }
+      }
+
+      const closingMarket = preferredClosingMarket(fixture, marketItem, kickoff, entry.opening_odds);
       if (closingMarket) {
         const closingOdds = Number.parseFloat(closingMarket.marketItem.current_odds);
         const closingMetrics = runVectorCalculations(closingMarket.marketItem);
         entry.closing_odds = closingOdds;
         entry.closing_bookie = closingMarket.reference;
         entry.closing_qi = closingMetrics.qi;
-        entry.closing_captured_at = closingMarket.freshClose.checkedAt.toISOString();
-        entry.closing_source = `${closingMarket.reference} live check ${closingMarket.freshClose.minutesBeforeKickoff} min before kickoff`;
+        entry.closing_captured_at = closingMarket.snapshot.checkedAt.toISOString();
+        entry.closing_source = `${closingMarket.reference} live check ${closingMarket.snapshot.minutesBeforeKickoff} min before kickoff`;
         entry.closing_status = 'confirmed';
         entry.clv_percent = clvPercent(entry.opening_odds, entry.closing_odds);
         entry.estimated_closing_odds = null;
         entry.estimated_clv_percent = null;
         entry.estimated_closing_source = null;
+        entry.latest_pre_kickoff_odds = closingOdds;
+        entry.latest_pre_kickoff_at = entry.closing_captured_at;
+        entry.latest_pre_kickoff_bookie = closingMarket.reference;
+        entry.latest_pre_kickoff_qi = closingMetrics.qi;
+        entry.latest_pre_kickoff_clv_percent = entry.clv_percent;
+        entry.latest_pre_kickoff_source = entry.closing_source;
       } else if (now >= kickoff && entry.closing_odds === null) {
-        const latestReference = preferredLatestReferenceMarket(fixture, marketItem);
-        const latestReferenceOdds = wasCheckedBeforeKickoff(latestReference.marketItem, kickoff)
-          ? Number.parseFloat(latestReference.marketItem.current_odds)
-          : null;
-        const ownBookOdds = wasCheckedBeforeKickoff(marketItem, kickoff) ? currentOdds : null;
+        const latestReferenceOdds = Number.parseFloat(entry.latest_pre_kickoff_odds);
+        const latestReferenceBook = entry.latest_pre_kickoff_bookie || marketItem.au_bookie || 'own book';
         const existingEstimate = Number.parseFloat(entry.estimated_closing_odds);
-        const estimatedOdds = Number.isFinite(existingEstimate)
-          ? existingEstimate
-          : Number.isFinite(latestReferenceOdds)
-            ? latestReferenceOdds
-            : ownBookOdds;
+        const estimatedOdds = Number.isFinite(latestReferenceOdds)
+          ? latestReferenceOdds
+          : Number.isFinite(existingEstimate) && saneClvReference(entry.opening_odds, existingEstimate)
+            ? existingEstimate
+            : null;
         if (!Number.isFinite(estimatedOdds)) {
+          entry.closing_status = 'missing_fresh_close';
+          entry.closing_source = 'No confirmed pre-kickoff price captured close enough to kickoff';
+          entry.clv_percent = null;
           byId.set(id, entry);
           continue;
         }
-        entry.closing_status = 'missing_fresh_close';
+        entry.closing_status = 'latest_pre_kickoff';
         entry.closing_source = 'No confirmed live check in the final 5 minutes before kickoff';
         entry.clv_percent = null;
         entry.estimated_closing_odds = estimatedOdds;
@@ -1395,7 +1483,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         entry.current_ev = estimatedMetrics.ev;
         entry.current_qi = estimatedMetrics.qi;
         entry.estimated_closing_source = entry.estimated_closing_source
-          || `Estimated from nearest saved ${Number.isFinite(latestReferenceOdds) ? latestReference.reference : marketItem.au_bookie || 'own book'} price; not an official closing line.`;
+          || `Latest saved ${latestReferenceBook} price before kickoff; not an official closing line.`;
       }
 
       byId.set(id, entry);

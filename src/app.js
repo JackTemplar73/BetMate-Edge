@@ -1779,13 +1779,14 @@ function renderHistoryResultSummary(rows) {
   const lost = settled.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase())).length;
   const pending = rows.length - settled.length;
   const profitUnits = settled.reduce((total, bet) => total + calculateProfitUnits(bet), 0);
-  const confirmedClvRows = rows.filter((bet) => Number.isFinite(Number(bet.clv_percent)));
+  const confirmedClvRows = rows.filter((bet) => hasNumericValue(bet.clv_percent));
   const positiveClv = confirmedClvRows.filter((bet) => Number(bet.clv_percent) > 0).length;
   const negativeClv = confirmedClvRows.filter((bet) => Number(bet.clv_percent) < 0).length;
   const averageClv = confirmedClvRows.length
     ? confirmedClvRows.reduce((total, bet) => total + Number(bet.clv_percent), 0) / confirmedClvRows.length
     : null;
-  const latestOnlyRows = rows.filter((bet) => !Number.isFinite(Number(bet.clv_percent))).length;
+  const latestPreKickoffRows = rows.filter((bet) => !hasNumericValue(bet.clv_percent) && hasNumericValue(bet.latest_pre_kickoff_odds)).length;
+  const latestOnlyRows = rows.filter((bet) => !hasNumericValue(bet.clv_percent) && !hasNumericValue(bet.latest_pre_kickoff_odds)).length;
   container.innerHTML = `
     <article>
       <span>Settled</span>
@@ -1798,14 +1799,14 @@ function renderHistoryResultSummary(rows) {
       <small>${positiveClv} positive / ${negativeClv} negative${averageClv === null ? '' : ` / avg ${formatClv(averageClv)}`}</small>
     </article>
     <article>
-      <span>Latest Price Rows</span>
-      <strong>${latestOnlyRows}</strong>
-      <small>Not locked as a closing line yet</small>
+      <span>Latest Pre-Kickoff</span>
+      <strong>${latestPreKickoffRows}</strong>
+      <small>Useful line movement, not final-window CLV</small>
     </article>
     <article>
-      <span>Profit Units</span>
-      <strong>${formatProfitUnits(profitUnits)}</strong>
-      <small>Flat 1 unit per tracked bet</small>
+      <span>Waiting Close</span>
+      <strong>${latestOnlyRows}</strong>
+      <small>Needs a final-window price check</small>
     </article>
   `;
 }
@@ -1936,6 +1937,16 @@ function formatHistoryPrice(value, fallback = '-') {
   return Number.isFinite(numeric) ? `$${numeric.toFixed(2)}` : fallback;
 }
 
+function numericOrNull(value) {
+  if (value === null || value === undefined || value === '') return null;
+  const numeric = Number(value);
+  return Number.isFinite(numeric) ? numeric : null;
+}
+
+function hasNumericValue(value) {
+  return numericOrNull(value) !== null;
+}
+
 function formatTrackedPrice(bet) {
   const firstSeen = Date.parse(bet.first_seen_at || '');
   const detail = Number.isFinite(firstSeen)
@@ -1981,7 +1992,7 @@ function formatFirstSeenLabel(bet) {
 }
 
 function formatLatestOrClosingPrice(bet) {
-  if (Number.isFinite(Number(bet.closing_odds))) {
+  if (hasNumericValue(bet.closing_odds)) {
     return `
       ${formatLinePriceWithQi(bet.closing_odds, bet)}
       <span class="sub-cell confirmed-text">Closing price${bet.closing_bookie ? ` | ${bet.closing_bookie}` : ''}</span>
@@ -1990,10 +2001,19 @@ function formatLatestOrClosingPrice(bet) {
     `;
   }
 
-  if (Number.isFinite(Number(bet.estimated_closing_odds))) {
+  if (hasNumericValue(bet.latest_pre_kickoff_odds)) {
+    return `
+      ${formatLinePriceWithQi(bet.latest_pre_kickoff_odds, bet)}
+      <span class="sub-cell warning-text">Latest pre-kickoff${bet.latest_pre_kickoff_bookie ? ` | ${bet.latest_pre_kickoff_bookie}` : ''}</span>
+      ${formatCapturedAt(bet.latest_pre_kickoff_at)}
+      ${formatCurrentSignal(bet)}
+    `;
+  }
+
+  if (hasNumericValue(bet.estimated_closing_odds)) {
     return `
       ${formatLinePriceWithQi(bet.estimated_closing_odds, bet)}
-      <span class="sub-cell warning-text">Latest price${estimatedSourceLabel(bet)}</span>
+      <span class="sub-cell warning-text">Estimated pre-kickoff${estimatedSourceLabel(bet)}</span>
       ${formatCapturedAt(bet.last_seen_at)}
       ${formatCurrentSignal(bet)}
     `;
@@ -2026,7 +2046,11 @@ function formatLinePriceWithQi(price, bet) {
 }
 
 function formatClosingQiLabel(bet) {
-  const label = Number.isFinite(Number(bet.closing_odds)) ? 'Closing QI' : 'Latest QI';
+  const label = hasNumericValue(bet.closing_odds)
+    ? 'Closing QI'
+    : hasNumericValue(bet.latest_pre_kickoff_odds)
+      ? 'Latest QI'
+      : 'Latest QI';
   return formatQiBadge(getClosingQi(bet), label);
 }
 
@@ -2054,10 +2078,12 @@ function formatCurrentSignal(bet) {
 }
 
 function getClosingQi(bet) {
-  const closingQi = Number(bet.closing_qi);
-  if (Number.isFinite(closingQi)) return closingQi;
-  const estimatedQi = Number(bet.estimated_qi);
-  if (Number.isFinite(Number(bet.estimated_closing_odds)) && Number.isFinite(estimatedQi)) return estimatedQi;
+  const closingQi = numericOrNull(bet.closing_qi);
+  if (closingQi !== null) return closingQi;
+  const latestQi = numericOrNull(bet.latest_pre_kickoff_qi);
+  if (hasNumericValue(bet.latest_pre_kickoff_odds) && latestQi !== null) return latestQi;
+  const estimatedQi = numericOrNull(bet.estimated_qi);
+  if (hasNumericValue(bet.estimated_closing_odds) && estimatedQi !== null) return estimatedQi;
   return Number(bet.current_qi);
 }
 
@@ -2067,7 +2093,11 @@ function formatQiMove(bet) {
   const delta = Number.isFinite(openingQi) && Number.isFinite(closingQi) ? closingQi - openingQi : null;
   const deltaClass = delta === null ? 'neutral-text' : delta > 0 ? 'positive' : delta < 0 ? 'negative' : 'neutral-text';
   const deltaText = delta === null ? '-' : `${delta > 0 ? '+' : ''}${delta}`;
-  const closeLabel = Number.isFinite(Number(bet.closing_odds)) ? 'Closing QI' : 'Latest QI';
+  const closeLabel = hasNumericValue(bet.closing_odds)
+    ? 'Closing QI'
+    : hasNumericValue(bet.latest_pre_kickoff_odds)
+      ? 'Latest pre-kickoff QI'
+      : 'Latest QI';
 
   return `
     <span class="history-qi-line">
@@ -2103,11 +2133,15 @@ function formatClv(value) {
 }
 
 function formatClosingPrice(bet) {
-  if (Number.isFinite(Number(bet.closing_odds))) {
+  if (hasNumericValue(bet.closing_odds)) {
     return formatHistoryPrice(bet.closing_odds);
   }
 
-  if (Number.isFinite(Number(bet.estimated_closing_odds))) {
+  if (hasNumericValue(bet.latest_pre_kickoff_odds)) {
+    return `Latest ${formatHistoryPrice(bet.latest_pre_kickoff_odds)}`;
+  }
+
+  if (hasNumericValue(bet.estimated_closing_odds)) {
     return `Est. ${formatHistoryPrice(bet.estimated_closing_odds)}`;
   }
 
@@ -2115,7 +2149,7 @@ function formatClosingPrice(bet) {
 }
 
 function formatHistoryClv(bet) {
-  if (Number.isFinite(Number(bet.clv_percent))) {
+  if (hasNumericValue(bet.clv_percent)) {
     const detailClass = Number(bet.clv_percent) >= 0 ? 'confirmed-text' : 'negative';
     if (!hasReliableClvBaseline(bet)) {
       return `<span class="primary-cell">Line move ${formatClv(bet.clv_percent)}</span><span class="sub-cell warning-text">First tracked price was too close to kickoff for true opening-to-close CLV</span>`;
@@ -2123,8 +2157,12 @@ function formatHistoryClv(bet) {
     return `<span class="primary-cell">${formatClv(bet.clv_percent)}</span><span class="sub-cell ${detailClass}">Confirmed closing line</span>`;
   }
 
-  if (Number.isFinite(Number(bet.estimated_clv_percent))) {
-    return `<span class="primary-cell">Estimated move ${formatClv(bet.estimated_clv_percent)}</span><span class="sub-cell warning-text">No confirmed closing line captured</span>`;
+  if (hasNumericValue(bet.latest_pre_kickoff_clv_percent)) {
+    return `<span class="primary-cell">Latest move ${formatClv(bet.latest_pre_kickoff_clv_percent)}</span><span class="sub-cell warning-text">Latest pre-kickoff line only</span>`;
+  }
+
+  if (hasNumericValue(bet.estimated_clv_percent)) {
+    return `<span class="primary-cell">Latest move ${formatClv(bet.estimated_clv_percent)}</span><span class="sub-cell warning-text">No confirmed closing line captured</span>`;
   }
 
   return '<span class="primary-cell">Pending</span><span class="sub-cell">Waiting for closing line</span>';
@@ -2139,11 +2177,17 @@ function formatLineGap(bet) {
   }
 
   const gap = opening - latest;
-  const label = Number.isFinite(Number(bet.closing_odds)) ? 'Opening minus closing' : 'Opening minus latest';
+  const label = hasNumericValue(bet.closing_odds)
+    ? 'Opening minus closing'
+    : hasNumericValue(bet.latest_pre_kickoff_odds)
+      ? 'Opening minus latest pre-kickoff'
+      : 'Opening minus latest';
   const gapText = `${gap > 0 ? '+' : ''}${gap.toFixed(2)}`;
-  const clvValue = Number.isFinite(Number(bet.clv_percent))
+  const clvValue = hasNumericValue(bet.clv_percent)
     ? Number(bet.clv_percent)
-    : Number(bet.estimated_clv_percent);
+    : hasNumericValue(bet.latest_pre_kickoff_clv_percent)
+      ? Number(bet.latest_pre_kickoff_clv_percent)
+      : Number(bet.estimated_clv_percent);
   const clvText = Number.isFinite(clvValue) ? `CLV ${formatClv(clvValue)}` : 'CLV pending';
 
   return `<span class="primary-cell">${gapText}</span><span class="sub-cell">${label}</span><span class="sub-cell">${clvText}</span>`;
@@ -2165,7 +2209,7 @@ function hasReliableClvBaseline(bet) {
 function priceDirection(bet) {
   const opening = Number.parseFloat(bet.opening_odds);
   const current = getLatestComparableOdds(bet);
-  const comparisonLabel = Number.isFinite(Number(bet.closing_odds)) ? 'closing price' : 'latest price';
+  const comparisonLabel = hasNumericValue(bet.closing_odds) ? 'closing price' : 'latest price';
 
   if (!Number.isFinite(opening) || !Number.isFinite(current)) {
     return {
@@ -2199,8 +2243,9 @@ function priceDirection(bet) {
 }
 
 function getLatestComparableOdds(bet) {
-  if (Number.isFinite(Number(bet.closing_odds))) return Number(bet.closing_odds);
-  if (Number.isFinite(Number(bet.estimated_closing_odds))) return Number(bet.estimated_closing_odds);
+  if (hasNumericValue(bet.closing_odds)) return Number(bet.closing_odds);
+  if (hasNumericValue(bet.latest_pre_kickoff_odds)) return Number(bet.latest_pre_kickoff_odds);
+  if (hasNumericValue(bet.estimated_closing_odds)) return Number(bet.estimated_closing_odds);
   return Number(bet.current_odds);
 }
 
@@ -2210,15 +2255,21 @@ function formatDirection(bet) {
 }
 
 function clvClass(bet) {
-  const value = Number.isFinite(Number(bet.clv_percent))
+  const value = hasNumericValue(bet.clv_percent)
     ? Number(bet.clv_percent)
-    : Number(bet.estimated_clv_percent);
+    : hasNumericValue(bet.latest_pre_kickoff_clv_percent)
+      ? Number(bet.latest_pre_kickoff_clv_percent)
+      : Number(bet.estimated_clv_percent);
 
   if (!Number.isFinite(value)) return '';
   return value >= 0 ? 'positive' : 'negative';
 }
 
 function formatClosingDetail(bet) {
+  if (bet.closing_status === 'latest_pre_kickoff') {
+    return '<span class="sub-cell warning-text">Latest pre-kickoff line captured, but no final 5-minute close.</span>';
+  }
+
   if (bet.closing_status === 'missing_fresh_close') {
     return '<span class="sub-cell warning-text">No confirmed live price was captured in the final 5 minutes before kickoff.</span>';
   }
