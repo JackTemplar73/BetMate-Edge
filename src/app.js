@@ -9,8 +9,8 @@ const state = {
   playerPropSortMode: 'qi',
   historyResultFilter: 'all',
   resultsResultFilter: 'all',
-  markovMinProbability: 0,
-  markovMaxFairPrice: Infinity,
+  modelMinProbability: 0,
+  modelMaxFairPrice: Infinity,
   lastRefresh: null,
   dataSource: 'Not loaded',
   selectedMatchName: null,
@@ -713,8 +713,8 @@ function getMatchModelHighlights() {
       book: market.au_bookie || 'Model only'
     }));
 
-  const markovSelections = getUpcomingFixtures().flatMap((fixture) => {
-    return (fixture.markov_market_model || []).map((item) => ({
+  const modelSelections = getUpcomingFixtures().flatMap((fixture) => {
+    return (fixture.model_market_view || []).map((item) => ({
       match_name: fixture.match_name,
       selection: item.selection,
       market: item.market,
@@ -726,7 +726,7 @@ function getMatchModelHighlights() {
     }));
   });
 
-  return [...pricedSelections, ...markovSelections]
+  return [...pricedSelections, ...modelSelections]
     .filter((item) => Number.isFinite(item.probability) && item.probability >= 55)
     .sort((a, b) => {
       if (b.probability !== a.probability) return b.probability - a.probability;
@@ -1018,17 +1018,17 @@ function renderPlayerPropWatchlist() {
   `;
 }
 
-function getFilteredMarkovMarkets(markovMarkets) {
-  return markovMarkets.filter((item) => {
+function getFilteredModelMarkets(modelMarkets) {
+  return modelMarkets.filter((item) => {
     const probability = Number(item.probability);
     const fairPrice = Number(item.fair_price);
-    const probabilityOk = !Number.isFinite(state.markovMinProbability) || probability >= state.markovMinProbability;
-    const fairPriceOk = !Number.isFinite(state.markovMaxFairPrice) || fairPrice <= state.markovMaxFairPrice;
+    const probabilityOk = !Number.isFinite(state.modelMinProbability) || probability >= state.modelMinProbability;
+    const fairPriceOk = !Number.isFinite(state.modelMaxFairPrice) || fairPrice <= state.modelMaxFairPrice;
     return probabilityOk && fairPriceOk;
   });
 }
 
-function renderMarkovFilterOption(value, label, currentValue) {
+function renderModelFilterOption(value, label, currentValue) {
   const selected = String(value) === String(currentValue) || (value === 'all' && !Number.isFinite(currentValue));
   return `<option value="${value}" ${selected ? 'selected' : ''}>${label}</option>`;
 }
@@ -1036,8 +1036,8 @@ function renderMarkovFilterOption(value, label, currentValue) {
 function renderFixtureModelBlock(fixture) {
   const totals = fixture.model_totals_25;
   const exactScores = fixture.exact_score_model || [];
-  const markovMarkets = fixture.markov_market_model || [];
-  const filteredMarkovMarkets = getFilteredMarkovMarkets(markovMarkets);
+  const modelMarkets = fixture.model_market_view || [];
+  const filteredModelMarkets = getFilteredModelMarkets(modelMarkets);
   const scan = fixture.market_scan || {};
   const scanRows = (scan.rows || [])
     .filter((row) => !isConfirmedBenchPlayerPropRow(fixture, row))
@@ -1048,7 +1048,7 @@ function renderFixtureModelBlock(fixture) {
     }))
     .sort(compareBetQuality);
 
-  if (!totals && exactScores.length === 0 && markovMarkets.length === 0 && scanRows.length === 0) return '';
+  if (!totals && exactScores.length === 0 && modelMarkets.length === 0 && scanRows.length === 0) return '';
 
   const totalsHtml = totals
     ? `
@@ -1081,34 +1081,34 @@ function renderFixtureModelBlock(fixture) {
       `
     : '';
 
-  const markovHtml = markovMarkets.length > 0
+  const modelHtml = modelMarkets.length > 0
     ? `
-        <article class="model-insight-card markov-market-card">
+        <article class="model-insight-card model-market-card">
           <h3>Model Market View</h3>
-          <div class="markov-filter-row">
+          <div class="model-filter-row">
             <label>
               <span>Prob %</span>
-              <select data-markov-prob-filter>
-                ${renderMarkovFilterOption('0', 'All', state.markovMinProbability)}
-                ${renderMarkovFilterOption('50', '50%+', state.markovMinProbability)}
-                ${renderMarkovFilterOption('55', '55%+', state.markovMinProbability)}
-                ${renderMarkovFilterOption('60', '60%+', state.markovMinProbability)}
-                ${renderMarkovFilterOption('70', '70%+', state.markovMinProbability)}
+              <select data-model-prob-filter>
+                ${renderModelFilterOption('0', 'All', state.modelMinProbability)}
+                ${renderModelFilterOption('50', '50%+', state.modelMinProbability)}
+                ${renderModelFilterOption('55', '55%+', state.modelMinProbability)}
+                ${renderModelFilterOption('60', '60%+', state.modelMinProbability)}
+                ${renderModelFilterOption('70', '70%+', state.modelMinProbability)}
               </select>
             </label>
             <label>
               <span>Fair Price</span>
-              <select data-markov-fair-filter>
-                ${renderMarkovFilterOption('all', 'All', state.markovMaxFairPrice)}
-                ${renderMarkovFilterOption('1.50', '$1.50 or shorter', state.markovMaxFairPrice)}
-                ${renderMarkovFilterOption('2.00', '$2.00 or shorter', state.markovMaxFairPrice)}
-                ${renderMarkovFilterOption('3.00', '$3.00 or shorter', state.markovMaxFairPrice)}
-                ${renderMarkovFilterOption('5.00', '$5.00 or shorter', state.markovMaxFairPrice)}
+              <select data-model-fair-filter>
+                ${renderModelFilterOption('all', 'All', state.modelMaxFairPrice)}
+                ${renderModelFilterOption('1.50', '$1.50 or shorter', state.modelMaxFairPrice)}
+                ${renderModelFilterOption('2.00', '$2.00 or shorter', state.modelMaxFairPrice)}
+                ${renderModelFilterOption('3.00', '$3.00 or shorter', state.modelMaxFairPrice)}
+                ${renderModelFilterOption('5.00', '$5.00 or shorter', state.modelMaxFairPrice)}
               </select>
             </label>
           </div>
-          <div class="markov-market-list">
-            ${filteredMarkovMarkets.length === 0 ? '<p class="empty-note markov-empty">No model selections match these filters.</p>' : filteredMarkovMarkets.map((item) => `
+          <div class="model-market-list">
+            ${filteredModelMarkets.length === 0 ? '<p class="empty-note model-empty">No model selections match these filters.</p>' : filteredModelMarkets.map((item) => `
               <div>
                 <span>
                   <strong>${item.selection}</strong>
@@ -1154,7 +1154,7 @@ function renderFixtureModelBlock(fixture) {
         ${totalsHtml}
         ${exactHtml}
         ${bookieScanHtml}
-        ${markovHtml}
+        ${modelHtml}
       </div>
     </div>
   `;
@@ -1208,7 +1208,7 @@ function renderConfirmedLineupsBlock(fixture) {
   const renderList = (players = [], teamName = '', isSub = false) => players.map((player, index) => `
     <li>
       <span>${player}</span>
-      <b>${calculatePlayerMarkovRating(fixture, teamName, index, isSub)}</b>
+      <b>${calculatePlayerModelRating(fixture, teamName, index, isSub)}</b>
     </li>
   `).join('');
   const renderTeamLineup = (team, formation, starters = [], substitutes = []) => `
@@ -1241,9 +1241,9 @@ function renderConfirmedLineupsBlock(fixture) {
   `;
 }
 
-function getTeamMarkovProbability(fixture, teamName) {
+function getTeamModelProbability(fixture, teamName) {
   const team = normaliseForMatch(teamName);
-  const rows = fixture.markov_market_model || [];
+  const rows = fixture.model_market_view || [];
   const winRow = rows.find((row) => {
     const selection = normaliseForMatch(row.selection);
     return selection.includes(team) && /win|to win/.test(selection);
@@ -1259,24 +1259,24 @@ function getTeamMarkovProbability(fixture, teamName) {
   return 50;
 }
 
-function calculatePlayerMarkovRating(fixture, teamName, index, isSub = false) {
-  const teamProb = getTeamMarkovProbability(fixture, teamName);
+function calculatePlayerModelRating(fixture, teamName, index, isSub = false) {
+  const teamProb = getTeamModelProbability(fixture, teamName);
   const slotWeight = isSub ? Math.max(0, 8 - (index * 0.4)) : Math.max(0, 10 - (index * 0.55));
   const starterBoost = isSub ? -5 : 7;
   const rating = Math.round(44 + (teamProb * 0.42) + slotWeight + starterBoost);
   return Math.max(45, Math.min(92, rating));
 }
 
-function getTopMarkovRows(fixture, limit = 8) {
-  return [...(fixture.markov_market_model || [])]
+function getTopModelRows(fixture, limit = 8) {
+  return [...(fixture.model_market_view || [])]
     .filter((item) => Number.isFinite(Number(item.probability)) && Number.isFinite(Number(item.fair_price)))
     .sort((a, b) => Number(b.probability) - Number(a.probability))
     .slice(0, limit);
 }
 
-function getMarkovCoefficientCards(fixture) {
+function getModelCoefficientCards(fixture) {
   const totals = fixture.model_totals_25 || {};
-  const rows = fixture.markov_market_model || [];
+  const rows = fixture.model_market_view || [];
   const findSelection = (pattern) => rows.find((row) => pattern.test(row.selection || ''));
   const under = findSelection(/Under 2\.5/i);
   const over = findSelection(/Over 2\.5/i);
@@ -1331,8 +1331,8 @@ function getMatchResultProbabilities(fixture) {
   return {
     homeTeam: teams.home,
     awayTeam: teams.away,
-    homeProbability: home ? (1 / Number(home.true_price)) * 100 : getTeamMarkovProbability(fixture, teams.home),
-    awayProbability: away ? (1 / Number(away.true_price)) * 100 : getTeamMarkovProbability(fixture, teams.away),
+    homeProbability: home ? (1 / Number(home.true_price)) * 100 : getTeamModelProbability(fixture, teams.home),
+    awayProbability: away ? (1 / Number(away.true_price)) * 100 : getTeamModelProbability(fixture, teams.away),
     drawProbability: draw ? (1 / Number(draw.true_price)) * 100 : null
   };
 }
@@ -1422,9 +1422,9 @@ function renderPlainEnglishSummary(fixture) {
   `;
 }
 
-function renderMarkovSummaryTab(fixture) {
-  const coefficients = getMarkovCoefficientCards(fixture);
-  const topRows = getTopMarkovRows(fixture);
+function renderModelSummaryTab(fixture) {
+  const coefficients = getModelCoefficientCards(fixture);
+  const topRows = getTopModelRows(fixture);
 
   return `
     <section class="match-detail-panel">
@@ -1442,7 +1442,7 @@ function renderMarkovSummaryTab(fixture) {
         `).join('')}
       </div>
       ${topRows.length ? `
-        <div class="markov-summary-list">
+        <div class="model-summary-list">
           ${topRows.map((row) => `
             <div>
               <span>
@@ -1523,7 +1523,7 @@ function renderMatchDetailTabs(fixture, markets, fixtureModelHtml, lineupsHtml, 
         ${playerPropsHtml}
       </section>
     `,
-    summary: renderMarkovSummaryTab(fixture),
+    summary: renderModelSummaryTab(fixture),
     formation: renderFormationRatingsTab(fixture, lineupsHtml),
     markets: fixtureModelHtml || '<section class="match-detail-panel"><p class="empty-note">No market summary is loaded for this match yet.</p></section>'
   };
@@ -2261,16 +2261,16 @@ function bindSectionSortControls() {
   });
 }
 
-function bindMarkovFilters() {
+function bindModelFilters() {
   document.addEventListener('change', (event) => {
-    if (event.target.matches('[data-markov-prob-filter]')) {
-      state.markovMinProbability = Number(event.target.value) || 0;
+    if (event.target.matches('[data-model-prob-filter]')) {
+      state.modelMinProbability = Number(event.target.value) || 0;
       renderFixturePanels();
       return;
     }
 
-    if (event.target.matches('[data-markov-fair-filter]')) {
-      state.markovMaxFairPrice = event.target.value === 'all' ? Infinity : Number(event.target.value);
+    if (event.target.matches('[data-model-fair-filter]')) {
+      state.modelMaxFairPrice = event.target.value === 'all' ? Infinity : Number(event.target.value);
       renderFixturePanels();
     }
   });
@@ -2377,7 +2377,7 @@ Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
     document.querySelector('[data-app-error]').textContent = '';
     bindSortControls();
     bindSectionSortControls();
-    bindMarkovFilters();
+    bindModelFilters();
     bindHistoryResultFilters();
     bindResultsResultFilters();
     bindRefreshOdds();

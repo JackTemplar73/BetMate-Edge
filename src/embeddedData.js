@@ -136,7 +136,7 @@ window.embeddedDataset = [
         "fair_price": 16.77
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -661,7 +661,7 @@ window.embeddedDataset = [
         "fair_price": 13.48
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -1091,7 +1091,7 @@ window.embeddedDataset = [
         "fair_price": 12.8
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -1522,7 +1522,7 @@ window.embeddedDataset = [
         "fair_price": 13.84
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -1968,7 +1968,7 @@ window.embeddedDataset = [
         "fair_price": 13.14
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -2395,7 +2395,7 @@ window.embeddedDataset = [
         "fair_price": 14.76
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -2862,7 +2862,7 @@ window.embeddedDataset = [
         "fair_price": 13.69
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -3331,7 +3331,7 @@ window.embeddedDataset = [
         "fair_price": 14.47
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -3940,7 +3940,7 @@ window.embeddedDataset = [
         "fair_price": 12.48
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -4954,7 +4954,7 @@ window.embeddedDataset = [
         "fair_price": 15.52
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -5999,7 +5999,7 @@ window.embeddedDataset = [
         "fair_price": 13.69
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -6787,7 +6787,7 @@ window.embeddedDataset = [
         "fair_price": 13.64
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -7703,7 +7703,7 @@ window.embeddedDataset = [
         "fair_price": 12.21
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -8699,7 +8699,7 @@ window.embeddedDataset = [
         "fair_price": 16.47
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -9695,7 +9695,7 @@ window.embeddedDataset = [
         "fair_price": 11.8
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -10691,7 +10691,7 @@ window.embeddedDataset = [
         "fair_price": 12.76
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -11673,7 +11673,7 @@ window.embeddedDataset = [
         "fair_price": 13.03
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -12543,7 +12543,7 @@ window.embeddedDataset = [
         "fair_price": 13.19
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -13459,7 +13459,7 @@ window.embeddedDataset = [
         "fair_price": 13.09
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -14423,7 +14423,7 @@ window.embeddedDataset = [
         "fair_price": 15.4
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -15387,7 +15387,7 @@ window.embeddedDataset = [
         "fair_price": 13.32
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -16383,7 +16383,7 @@ window.embeddedDataset = [
         "fair_price": 13.32
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -17347,7 +17347,7 @@ window.embeddedDataset = [
         "fair_price": 14.74
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -18343,7 +18343,7 @@ window.embeddedDataset = [
         "fair_price": 13.18
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -19165,7 +19165,7 @@ window.embeddedDataset = [
         "fair_price": 13.19
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",
@@ -20081,7 +20081,7 @@ window.embeddedDataset = [
         "fair_price": 14.34
       }
     ],
-    "markov_market_model": [
+    "model_market_view": [
       {
         "category": "Main Match",
         "market": "Double Chance",

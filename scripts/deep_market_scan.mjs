@@ -259,7 +259,7 @@ function scanItemsForFixture(fixture) {
       source: 'Priced model'
     }));
 
-  const modelItems = (fixture.markov_market_model || []).map((item) => ({
+  const modelItems = (fixture.model_market_view || []).map((item) => ({
     ...item,
     source: 'Model'
   }));

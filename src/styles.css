@@ -695,18 +695,18 @@ body:not(.owner-results-enabled) [data-owner-only] {
   background: var(--panel-2);
 }
 
-.markov-market-card {
+.model-market-card {
   grid-column: 1 / -1;
 }
 
-.markov-filter-row {
+.model-filter-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
   margin-bottom: 12px;
 }
 
-.markov-filter-row label {
+.model-filter-row label {
   display: grid;
   gap: 5px;
   min-width: 170px;
@@ -716,7 +716,7 @@ body:not(.owner-results-enabled) [data-owner-only] {
   text-transform: uppercase;
 }
 
-.markov-filter-row select {
+.model-filter-row select {
   min-height: 36px;
   padding: 0 10px;
   border: 1px solid var(--border);
@@ -758,7 +758,7 @@ body:not(.owner-results-enabled) [data-owner-only] {
   text-align: right;
 }
 
-.markov-market-list {
+.model-market-list {
   display: grid;
   max-height: 420px;
   overflow-y: auto;
@@ -766,7 +766,7 @@ body:not(.owner-results-enabled) [data-owner-only] {
   border-radius: 8px;
 }
 
-.markov-market-list div,
+.model-market-list div,
 .fixture-scan-list div {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
@@ -776,21 +776,21 @@ body:not(.owner-results-enabled) [data-owner-only] {
   border-bottom: 1px solid var(--border);
 }
 
-.markov-market-list div:last-child,
+.model-market-list div:last-child,
 .fixture-scan-list div:last-child {
   border-bottom: 0;
 }
 
-.markov-market-list strong,
-.markov-market-list em,
-.markov-market-list b,
+.model-market-list strong,
+.model-market-list em,
+.model-market-list b,
 .fixture-scan-list strong,
 .fixture-scan-list em,
 .fixture-scan-list b {
   display: block;
 }
 
-.markov-market-list em,
+.model-market-list em,
 .fixture-scan-list em {
   margin-top: 3px;
   color: var(--muted);
@@ -798,14 +798,14 @@ body:not(.owner-results-enabled) [data-owner-only] {
   font-style: normal;
 }
 
-.markov-market-list b,
+.model-market-list b,
 .fixture-scan-list b {
   color: var(--gold);
   text-align: right;
   white-space: nowrap;
 }
 
-.markov-empty {
+.model-empty {
   padding: 12px;
 }
 
@@ -1312,12 +1312,12 @@ td {
   line-height: 1.35;
 }
 
-.markov-summary-list {
+.model-summary-list {
   display: grid;
   gap: 8px;
 }
 
-.markov-summary-list > div {
+.model-summary-list > div {
   display: flex;
   justify-content: space-between;
   gap: 16px;
@@ -1328,12 +1328,12 @@ td {
   background: var(--panel-2);
 }
 
-.markov-summary-list strong,
-.markov-summary-list em {
+.model-summary-list strong,
+.model-summary-list em {
   display: block;
 }
 
-.markov-summary-list em {
+.model-summary-list em {
   margin-top: 3px;
   color: var(--muted);
   font-size: 12px;
