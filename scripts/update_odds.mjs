@@ -765,6 +765,88 @@ function eventResult(event) {
   };
 }
 
+function normaliseStatName(name) {
+  return normalise(name)
+    .replace(/\bpct\b/g, 'percent')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function numericStatValue(value) {
+  const match = String(value ?? '').match(/-?\d+(?:\.\d+)?/);
+  return match ? Number.parseFloat(match[0]) : null;
+}
+
+function extractTeamStatsFromEspnSummary(summary) {
+  const teams = summary?.boxscore?.teams || summary?.boxscore?.statistics || [];
+  if (!Array.isArray(teams) || teams.length < 2) return null;
+
+  const parseTeam = (teamBlock) => {
+    const stats = {};
+    for (const stat of teamBlock.statistics || teamBlock.stats || []) {
+      const key = normaliseStatName(stat.name || stat.label || stat.displayName || stat.abbreviation);
+      const value = numericStatValue(stat.displayValue ?? stat.value ?? stat.display_value);
+      if (key && Number.isFinite(value)) stats[key] = value;
+    }
+    return {
+      team: teamBlock.team?.displayName || teamBlock.team?.shortDisplayName || teamBlock.displayName || '',
+      stats
+    };
+  };
+
+  const home = teams.find((team) => team.homeAway === 'home') || teams[0];
+  const away = teams.find((team) => team.homeAway === 'away') || teams[1];
+  const parsedHome = parseTeam(home);
+  const parsedAway = parseTeam(away);
+  if (!Object.keys(parsedHome.stats).length && !Object.keys(parsedAway.stats).length) return null;
+
+  return {
+    source: 'ESPN structured match summary',
+    home: parsedHome,
+    away: parsedAway
+  };
+}
+
+async function refreshPostMatchStats(dataset, espnEvents, nowIso, now = getNow()) {
+  let updated = 0;
+
+  for (const fixture of dataset) {
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    if (now - kickoff < RESULT_SETTLEMENT_BUFFER_MS) continue;
+
+    const event = findEspnEvent(espnEvents, fixture);
+    if (!event?.id) continue;
+
+    try {
+      let summary = null;
+      let lastError = null;
+      for (const league of ESPN_LEAGUES) {
+        try {
+          summary = await fetchEspnSummary(league, event.id);
+          break;
+        } catch (error) {
+          lastError = error;
+        }
+      }
+      if (!summary && lastError) throw lastError;
+      const stats = extractTeamStatsFromEspnSummary(summary);
+      fixture.post_match_stats_last_checked = nowIso;
+      if (!stats) {
+        fixture.post_match_stats_status = 'not_available';
+        continue;
+      }
+      fixture.post_match_stats = stats;
+      fixture.post_match_stats_status = 'found';
+      updated += 1;
+    } catch (error) {
+      fixture.post_match_stats_last_checked = nowIso;
+      fixture.post_match_stats_status = `check_failed: ${error.message}`;
+    }
+  }
+
+  return updated;
+}
+
 function stripHtml(value) {
   return String(value || '')
     .replace(/<script[\s\S]*?<\/script>/gi, ' ')
@@ -1098,6 +1180,112 @@ function settleHistoryResults(entries, dataset, espnEvents, fifaReports = [], no
   return settled;
 }
 
+function fixtureVerifiedResult(fixture, espnEvents, fifaReports) {
+  const fifaReport = findFifaReport(fifaReports, fixture);
+  const fifaResult = fifaReportResult(fifaReport, fixture);
+  if (fifaResult) return fifaResult;
+
+  const event = findEspnEvent(espnEvents, fixture);
+  return event ? eventResult(event) : null;
+}
+
+function predictedResultFromCalibration(fixture) {
+  const calibration = fixture.model_calibration || {};
+  const teams = fixture.match_name.split(/\s+vs\s+/i);
+  const home = Number(calibration.calibrated_home_probability);
+  const draw = Number(calibration.calibrated_draw_probability);
+  const away = Number(calibration.calibrated_away_probability);
+  if (![home, draw, away].every(Number.isFinite)) return null;
+
+  const max = Math.max(home, draw, away);
+  if (max === draw) return { label: 'Draw', probability: draw };
+  if (max === home) return { label: `${teams[0] || 'Home'} win`, probability: home };
+  return { label: `${teams[1] || 'Away'} win`, probability: away };
+}
+
+function actualResultLabel(result) {
+  if (result.homeScore === result.awayScore) return 'Draw';
+  return result.homeScore > result.awayScore
+    ? `${result.homeName} win`
+    : `${result.awayName} win`;
+}
+
+function statValue(teamStats, names) {
+  if (!teamStats) return null;
+  const compactStats = new Map(Object.entries(teamStats).map(([key, value]) => [normaliseStatName(key).replace(/\s+/g, ''), value]));
+  for (const name of names) {
+    const value = teamStats[normaliseStatName(name)];
+    if (Number.isFinite(value)) return value;
+    const compactValue = compactStats.get(normaliseStatName(name).replace(/\s+/g, ''));
+    if (Number.isFinite(compactValue)) return compactValue;
+  }
+  return null;
+}
+
+function applyPostMatchLearning(dataset, espnEvents, fifaReports, now = getNow()) {
+  let learned = 0;
+
+  for (const fixture of dataset) {
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    if (now - kickoff < RESULT_SETTLEMENT_BUFFER_MS) continue;
+
+    const result = fixtureVerifiedResult(fixture, espnEvents, fifaReports);
+    if (!result) continue;
+
+    const predicted = predictedResultFromCalibration(fixture);
+    const actualTotal = result.homeScore + result.awayScore;
+    const expectedTotal = Number(fixture.model_totals_25?.total_goals_mean);
+    const actual = actualResultLabel(result);
+    const flags = [];
+    const stats = fixture.post_match_stats || null;
+    const homeShots = statValue(stats?.home?.stats, ['shots', 'total shots']);
+    const awayShots = statValue(stats?.away?.stats, ['shots', 'total shots']);
+    const homeSot = statValue(stats?.home?.stats, ['shots on target', 'shots on goal']);
+    const awaySot = statValue(stats?.away?.stats, ['shots on target', 'shots on goal']);
+
+    if (predicted && actual === 'Draw' && !String(predicted.label).includes('Draw')) {
+      flags.push('draw-risk-underestimated');
+    }
+    if (predicted && !String(actual).includes(String(predicted.label).replace(' win', '')) && predicted.probability >= 65) {
+      flags.push('favourite-confidence-too-high');
+    }
+    if (Number.isFinite(expectedTotal) && actualTotal <= 1 && expectedTotal >= 2.45) {
+      flags.push('goal-suppression-underweighted');
+    }
+    if (Number.isFinite(expectedTotal) && actualTotal >= 5 && expectedTotal <= 2.65) {
+      flags.push('break-open-risk-underweighted');
+    }
+    if (Number.isFinite(homeShots) && Number.isFinite(awayShots) && predicted?.label?.includes(result.homeName) && homeShots <= awayShots) {
+      flags.push('territory-did-not-become-shot-volume');
+    }
+    if (Number.isFinite(homeSot) && Number.isFinite(awaySot) && predicted?.label?.includes(result.homeName) && homeSot <= awaySot) {
+      flags.push('chance-quality-overstated');
+    }
+
+    fixture.post_match_learning = {
+      checked_at: now.toISOString(),
+      result: resultLine(result),
+      source: result.sourceLabel || 'ESPN',
+      source_url: result.source,
+      predicted_result: predicted?.label || 'Unavailable',
+      predicted_probability: predicted?.probability || null,
+      actual_result: actual,
+      expected_total_goals: Number.isFinite(expectedTotal) ? Number(expectedTotal.toFixed(2)) : null,
+      actual_total_goals: actualTotal,
+      stats_used: Boolean(stats),
+      shot_count: Number.isFinite(homeShots) && Number.isFinite(awayShots) ? `${homeShots}-${awayShots}` : null,
+      shots_on_target: Number.isFinite(homeSot) && Number.isFinite(awaySot) ? `${homeSot}-${awaySot}` : null,
+      flags,
+      summary: flags.length
+        ? `Learning flags: ${flags.join(', ')}.`
+        : 'Result was broadly inside the expected model shape.'
+    };
+    learned += 1;
+  }
+
+  return learned;
+}
+
 function betId(fixture, marketItem) {
   const raw = [
     fixture.match_name,
@@ -1328,6 +1516,42 @@ function pruneUnverifiedFutureMarkets(dataset, now = getNow()) {
   return removed;
 }
 
+function sanitizePostKickoffMarketPrices(dataset, now = getNow()) {
+  let corrected = 0;
+
+  for (const fixture of dataset) {
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    if (kickoff > now) continue;
+
+    for (const marketItem of fixture.markets || []) {
+      const currentOdds = Number.parseFloat(marketItem.current_odds);
+      const previousOdds = Number.parseFloat(marketItem.previous_odds);
+      if (!saneClvReference(previousOdds, currentOdds) && Number.isFinite(previousOdds) && previousOdds > 1) {
+        marketItem.rejected_post_start_odds = currentOdds;
+        marketItem.current_odds = previousOdds;
+        marketItem.odds_refresh_status = 'frozen_post_kickoff';
+        marketItem.odds_refresh_note = 'Post-kickoff or stale outlier rejected; restored last sane pre-match price.';
+        corrected += 1;
+      }
+    }
+  }
+
+  return corrected;
+}
+
+function sanitizeHistoryCurrentPrice(entry) {
+  const openingOdds = Number.parseFloat(entry.opening_odds);
+  const currentOdds = Number.parseFloat(entry.current_odds);
+  if (saneClvReference(openingOdds, currentOdds)) return;
+
+  entry.rejected_current_odds = currentOdds;
+  entry.current_odds = openingOdds;
+  entry.current_model_price = entry.opening_model_price;
+  entry.current_ev = entry.opening_ev;
+  entry.current_qi = entry.opening_qi;
+  entry.current_price_note = 'Post-start or stale outlier rejected; restored opening price for clean history display.';
+}
+
 async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaReports = []) {
   const history = await readHistory();
   const byId = new Map(history
@@ -1413,6 +1637,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         entry.current_qi = metrics.qi;
         entry.last_seen_at = nowIso;
       }
+      sanitizeHistoryCurrentPrice(entry);
       downgradeLegacyClosingOutsideWindow(entry, kickoff);
 
       const latestReference = preferredLatestReferenceMarket(fixture, marketItem, kickoff, entry.opening_odds);
@@ -1854,6 +2079,131 @@ function calibratedResultProbabilities(probabilities) {
   };
 }
 
+function fixtureSignalText(fixture) {
+  return [
+    fixture.tactical_summary,
+    fixture.pitch_constraints,
+    fixture.referee_tendencies,
+    fixture.lineup_model_note,
+    fixture.confirmed_lineups?.model_implication
+  ].filter(Boolean).join(' ').toLowerCase();
+}
+
+function countSignals(text, signals) {
+  return signals.filter((signal) => text.includes(signal)).length;
+}
+
+function fixtureLearningProfile(fixture) {
+  const text = fixtureSignalText(fixture);
+  const lowBlockSignals = [
+    'low block',
+    'deep defensive',
+    'defensive compression',
+    'compact',
+    'containment',
+    'park',
+    'slow possession',
+    'low-risk possession',
+    'disciplined structure'
+  ];
+  const chanceCreationSignals = [
+    'box entries',
+    'shots on target',
+    'chance creation',
+    'final-third pressure',
+    'set-piece pressure',
+    'aerial pressure',
+    'overloads',
+    'individual creation'
+  ];
+  const breakOpenSignals = [
+    'high-tempo',
+    'pressing',
+    'transition',
+    'fast attacks',
+    'wide overloads',
+    'attacking width',
+    'pace',
+    'direct forward threat',
+    'counter pressure'
+  ];
+  const fatigueSignals = [
+    'fatigue',
+    'synthetic',
+    'fast turf',
+    'high rebound',
+    'heavy physical',
+    'late tackles'
+  ];
+
+  const lowBlock = countSignals(text, lowBlockSignals);
+  const chanceCreation = countSignals(text, chanceCreationSignals);
+  const breakOpen = countSignals(text, breakOpenSignals);
+  const fatigue = countSignals(text, fatigueSignals);
+
+  return {
+    lowBlock,
+    chanceCreation,
+    breakOpen,
+    fatigue,
+    drawRisk: clamp((lowBlock * 0.014) - (chanceCreation * 0.006), 0, 0.055),
+    goalSuppression: clamp((lowBlock * 0.07) - (chanceCreation * 0.035), 0, 0.26),
+    breakOpenRisk: clamp((breakOpen * 0.045) + (fatigue * 0.025) - (lowBlock * 0.025), 0, 0.28)
+  };
+}
+
+function calibratedResultProbabilitiesForFixture(probabilities, fixture) {
+  const profile = fixtureLearningProfile(fixture);
+  const raw = { ...probabilities };
+  const favorite = Math.max(raw.home, raw.away);
+  const underdog = Math.min(raw.home, raw.away);
+  const gap = favorite - underdog;
+
+  let drawLift = profile.drawRisk;
+  if (raw.draw < 0.24 && gap < 0.28) drawLift += 0.035;
+  if (raw.draw < 0.20 && gap >= 0.28) drawLift += 0.025;
+  if (raw.draw < 0.16) drawLift += 0.02;
+
+  let favouriteCompression = favorite > 0.62 ? Math.min(0.075, (favorite - 0.62) * 0.52) : 0;
+  if (favorite > 0.78 && profile.lowBlock > profile.chanceCreation) {
+    favouriteCompression += 0.025;
+  }
+
+  drawLift += favouriteCompression * 0.55;
+
+  let home = raw.home;
+  let away = raw.away;
+  let draw = raw.draw + drawLift;
+
+  if (raw.home >= raw.away) {
+    home -= drawLift * 0.72 + favouriteCompression * 0.28;
+    away += favouriteCompression * 0.28;
+  } else {
+    away -= drawLift * 0.72 + favouriteCompression * 0.28;
+    home += favouriteCompression * 0.28;
+  }
+
+  home = clamp(home, 0.03, 0.92);
+  away = clamp(away, 0.03, 0.92);
+  draw = clamp(draw, 0.08, 0.38);
+
+  const total = home + draw + away;
+  return {
+    home: home / total,
+    draw: draw / total,
+    away: away / total,
+    profile,
+    calibration: {
+      draw_lift_points: Number((drawLift * 100).toFixed(1)),
+      favourite_compression_points: Number((favouriteCompression * 100).toFixed(1)),
+      low_block_draw_risk_points: Number((profile.drawRisk * 100).toFixed(1)),
+      goal_suppression_points: Number(profile.goalSuppression.toFixed(2)),
+      break_open_risk_points: Number(profile.breakOpenRisk.toFixed(2)),
+      note: 'Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk.'
+    }
+  };
+}
+
 function fixtureTempoAdjustment(fixture) {
   const text = [
     fixture.tactical_summary,
@@ -1896,7 +2246,7 @@ function deriveFixtureGoalModel(fixture) {
   const baseProbabilities = h2hModelProbabilities(fixture);
   const teams = splitTeams(fixture.match_name);
   if (!baseProbabilities || !teams) return;
-  const probabilities = calibratedResultProbabilities(baseProbabilities);
+  const probabilities = calibratedResultProbabilitiesForFixture(baseProbabilities, fixture);
   const displayTeams = fixture.match_name.split(/\s+vs\s+/i);
   const displayHome = displayTeams[0] || teams.home;
   const displayAway = displayTeams[1] || teams.away;
@@ -1906,7 +2256,9 @@ function deriveFixtureGoalModel(fixture) {
   const drawBrake = Math.max(0, probabilities.draw - 0.22) * 2.35;
   const favouriteEventBoost = Math.max(0, favorite - 0.62) * 0.55;
   const tempoAdjustment = fixtureTempoAdjustment(fixture);
-  const totalGoalsMean = clamp(2.46 - drawBrake + (resultGap * 0.32) + favouriteEventBoost + tempoAdjustment, 1.65, 3.35);
+  const goalSuppression = probabilities.profile?.goalSuppression || 0;
+  const breakOpenRisk = probabilities.profile?.breakOpenRisk || 0;
+  const totalGoalsMean = clamp(2.46 - drawBrake + (resultGap * 0.32) + favouriteEventBoost + tempoAdjustment - goalSuppression + breakOpenRisk, 1.55, 3.55);
   const homeShare = clamp(0.5 + ((probabilities.home - probabilities.away) * 0.46), 0.23, 0.77);
   const homeLambda = totalGoalsMean * homeShare;
   const awayLambda = totalGoalsMean - homeLambda;
@@ -1935,6 +2287,8 @@ function deriveFixtureGoalModel(fixture) {
     under_fair_price: fairPriceFromProbability(underProbability),
     total_goals_mean: Number(totalGoalsMean.toFixed(2)),
     tempo_adjustment: Number(tempoAdjustment.toFixed(2)),
+    goal_suppression: Number(goalSuppression.toFixed(2)),
+    break_open_risk: Number(breakOpenRisk.toFixed(2)),
     calibration_note: probabilities.calibration.note
   };
   fixture.model_calibration = {
@@ -1946,6 +2300,8 @@ function deriveFixtureGoalModel(fixture) {
     calibrated_away_probability: Number((probabilities.away * 100).toFixed(1)),
     total_goals_mean: Number(totalGoalsMean.toFixed(2)),
     tempo_adjustment: Number(tempoAdjustment.toFixed(2)),
+    goal_suppression: Number(goalSuppression.toFixed(2)),
+    break_open_risk: Number(breakOpenRisk.toFixed(2)),
     ...probabilities.calibration
   };
   fixture.exact_score_model = scores
@@ -2200,6 +2556,7 @@ async function main() {
   const fifaReports = await fetchFifaReportsForDataset(dataset, nowIso);
   const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
   const lineupUpdates = await refreshLastHourLineups(dataset, getNow(), nowIso, espnEvents);
+  const postMatchStatsUpdates = await refreshPostMatchStats(dataset, espnEvents, nowIso);
 
   for (const fixture of dataset) {
     const event = findEvent(allEvents, fixture);
@@ -2277,15 +2634,17 @@ async function main() {
     collapseToBestAvailableH2h(fixture);
   }
 
+  const correctedOutlierPrices = sanitizePostKickoffMarketPrices(dataset);
   const prunedMarkets = pruneUnverifiedFutureMarkets(dataset);
   deriveFixtureModels(dataset);
+  const learnedMatches = applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
   reconcileMarketScanModelValues(dataset);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
   const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {

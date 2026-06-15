@@ -8,32 +8,18 @@ window.embeddedPlayerProps = [
     "model_probability": 32.8,
     "model_price": 3.05,
     "model_note": "Confirmed starter. Direct running and penalty-box touches give Yilmaz the best Turkey goal profile.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "Anytime Goalscorer",
-        "current_odds": 4.2,
-        "ev": 37.7,
-        "qi": 67,
-        "price_qi": 93,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 10323212,
-        "market": "Anytime Goalscorer",
-        "current_odds": 4.2,
-        "qi": 67,
-        "ev": 37.7,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -57,7 +43,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_status": "2026-06-14T03:03:57.215Z"
+    "lineup_status": "2026-06-14T03:03:57.215Z",
+    "lineup_role": "starter"
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -67,18 +54,19 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 28,
     "model_price": 3.57,
-    "model_note": "Confirmed lineup: Volpato is on the bench. Treat as watch-only unless he comes on early; pre-match starter-based value is removed.",
+    "model_note": "Cristian Volpato is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 10323212,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "bench"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -102,7 +90,9 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_status": "2026-06-14T03:03:57.215Z"
+    "lineup_status": "2026-06-14T03:03:57.215Z",
+    "lineup_role": "bench",
+    "status": "watch_only"
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -113,32 +103,18 @@ window.embeddedPlayerProps = [
     "model_probability": 54.9,
     "model_price": 1.82,
     "model_note": "Confirmed starter. Set pieces and long-range shooting keep Çalhanoğlu as Turkey's strongest shot-on-target profile.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.83,
-        "ev": 0.55,
-        "qi": 50,
-        "price_qi": 53,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 10323212,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.83,
-        "qi": 50,
-        "ev": 0.55,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -162,7 +138,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_status": "2026-06-14T03:03:57.215Z"
+    "lineup_status": "2026-06-14T03:03:57.215Z",
+    "lineup_role": "starter"
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -173,32 +150,18 @@ window.embeddedPlayerProps = [
     "model_probability": 58.1,
     "model_price": 1.72,
     "model_note": "Confirmed starter. Güler is the main creative link when Turkey break Australia's defensive block.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "To Score Or Assist",
-        "current_odds": 2,
-        "ev": 16.28,
-        "qi": 83,
-        "price_qi": 89,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 10323212,
-        "market": "To Score Or Assist",
-        "current_odds": 2,
-        "qi": 83,
-        "ev": 16.28,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -222,7 +185,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_status": "2026-06-14T03:03:57.215Z"
+    "lineup_status": "2026-06-14T03:03:57.215Z",
+    "lineup_role": "starter"
   },
   {
     "match_name": "Australia vs Turkiye",
@@ -233,32 +197,18 @@ window.embeddedPlayerProps = [
     "model_probability": 30.3,
     "model_price": 3.3,
     "model_note": "Confirmed starter. Souttar can be exposed by Turkey's quick central rotations and late recovery tackles.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "To Be Booked",
-        "current_odds": 5,
-        "ev": 51.52,
-        "qi": 70,
-        "price_qi": 94,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 10323212,
-        "market": "To Be Booked",
-        "current_odds": 5,
-        "qi": 70,
-        "ev": 51.52,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -282,7 +232,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_status": "2026-06-14T03:03:57.215Z"
+    "lineup_status": "2026-06-14T03:03:57.215Z",
+    "lineup_role": "starter"
   },
   {
     "match_name": "Germany vs Curaçao",
@@ -293,32 +244,18 @@ window.embeddedPlayerProps = [
     "model_probability": 46.5,
     "model_price": 2.15,
     "model_note": "Germany's team total gives Havertz the clearest goal profile.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "Anytime Goalscorer",
-        "current_odds": 1.53,
-        "ev": -28.84,
-        "qi": 27,
-        "price_qi": 2,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924151,
-        "market": "Anytime Goalscorer",
-        "current_odds": 1.53,
-        "qi": 27,
-        "ev": -28.84,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -341,7 +278,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Germany vs Curaçao",
@@ -356,44 +294,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924151,
+        "event_id": null,
         "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 1.72,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 4.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 1.33,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 1.72,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 4.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 1.33,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -416,7 +324,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Germany vs Curaçao",
@@ -427,32 +336,18 @@ window.embeddedPlayerProps = [
     "model_probability": 31.5,
     "model_price": 3.17,
     "model_note": "Kimmich projects as a lower-probability edge through set pieces and late box entries.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.62,
-        "ev": -48.9,
-        "qi": 20,
-        "price_qi": 0,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924151,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.62,
-        "qi": 20,
-        "ev": -48.9,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -475,7 +370,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Germany vs Curaçao",
@@ -486,32 +382,18 @@ window.embeddedPlayerProps = [
     "model_probability": 54.8,
     "model_price": 1.82,
     "model_note": "Wirtz carries the best final-pass and secondary-assist profile.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "To Score Or Assist",
-        "current_odds": 1.3,
-        "ev": -28.57,
-        "qi": 31,
-        "price_qi": 1,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924151,
-        "market": "To Score Or Assist",
-        "current_odds": 1.3,
-        "qi": 31,
-        "ev": -28.57,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -534,7 +416,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Germany vs Curaçao",
@@ -544,18 +427,19 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 26.8,
     "model_price": 3.73,
-    "model_note": "Curaçao defenders face repeated pressure if Germany dominate territory.",
+    "model_note": "Cuco Martina is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924151,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -578,7 +462,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Netherlands vs Japan",
@@ -588,33 +474,19 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 38.6,
     "model_price": 2.59,
-    "model_note": "Depay remains the highest Dutch central finishing profile when selected.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "Anytime Goalscorer",
-        "current_odds": 2.5,
-        "ev": -3.47,
-        "qi": 31,
-        "price_qi": 32,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "model_note": "Memphis Depay is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924169,
-        "market": "Anytime Goalscorer",
-        "current_odds": 2.5,
-        "qi": 31,
-        "ev": -3.47,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "bench"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -637,7 +509,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "bench",
+    "status": "watch_only"
   },
   {
     "match_name": "Netherlands vs Japan",
@@ -648,32 +522,18 @@ window.embeddedPlayerProps = [
     "model_probability": 60.4,
     "model_price": 1.66,
     "model_note": "Gakpo projects as the Netherlands forward most likely to generate shot volume.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "Player To Have 2 Or More Shots",
-        "current_odds": 1.22,
-        "ev": -26.51,
-        "qi": 33,
-        "price_qi": 0,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924169,
-        "market": "Player To Have 2 Or More Shots",
-        "current_odds": 1.22,
-        "qi": 33,
-        "ev": -26.51,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -696,7 +556,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Netherlands vs Japan",
@@ -707,32 +568,18 @@ window.embeddedPlayerProps = [
     "model_probability": 47.5,
     "model_price": 2.11,
     "model_note": "Kubo is Japan's best left-footed shot creation profile.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "Sportsbet direct site",
-        "market_name": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.91,
-        "ev": -9.48,
-        "qi": 33,
-        "price_qi": 16,
-        "checked_at": "2026-06-14T03:57:12.279Z"
-      }
-    ],
+    "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924169,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.91,
-        "qi": 33,
-        "ev": -9.48,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -755,7 +602,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Netherlands vs Japan",
@@ -765,18 +613,19 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 42.2,
     "model_price": 2.37,
-    "model_note": "Simons rates well for involvement without needing to score himself.",
+    "model_note": "Xavi Simons is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924169,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -799,7 +648,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Netherlands vs Japan",
@@ -809,18 +660,19 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 27.7,
     "model_price": 3.61,
-    "model_note": "Endo can be forced into tactical fouls against Dutch transition runners.",
+    "model_note": "Wataru Endo is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-14T03:57:12.279Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924169,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -843,7 +695,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -853,18 +707,19 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 34.9,
     "model_price": 2.87,
-    "model_note": "Haller has the strongest Ivory Coast central goal share.",
+    "model_note": "Sebastien Haller is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-14T23:15:35.372Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924014,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -887,7 +742,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -902,16 +759,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-14T23:15:35.372Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924014,
-        "market": "Anytime Goalscorer",
-        "current_odds": 3.4,
-        "qi": 49,
-        "ev": 7.59,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -934,7 +789,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -949,16 +805,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-14T23:15:35.372Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924014,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 2,
-        "qi": 29,
-        "ev": -14.89,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -981,7 +835,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -991,21 +846,19 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 28.4,
     "model_price": 3.52,
-    "model_note": "Estupinan creates enough wide service to stay on the assist watchlist.",
+    "model_note": "Pervis Estupinan is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-14T23:15:35.372Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924014,
-        "market": "To Score Or Assist",
-        "current_odds": 5.5,
-        "qi": 69,
-        "ev": 56.25,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "bench"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1028,7 +881,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "bench",
+    "status": "watch_only"
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -1043,16 +898,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-14T23:15:35.372Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924014,
-        "market": "To Be Booked",
-        "current_odds": 3.64,
-        "qi": 49,
-        "ev": 8.98,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1075,7 +928,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Sweden vs Tunisia",
@@ -1090,16 +944,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-15T00:59:04.021Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 10322975,
-        "market": "Anytime Goalscorer",
-        "current_odds": 2.4,
-        "qi": 46,
-        "ev": 2.56,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1122,7 +974,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Sweden vs Tunisia",
@@ -1132,18 +985,19 @@ window.embeddedPlayerProps = [
     "category": "Shots",
     "model_probability": 57.3,
     "model_price": 1.75,
-    "model_note": "Kulusevski carries strong shot volume from carries and cut-ins.",
+    "model_note": "Dejan Kulusevski is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T00:59:04.021Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 10322975,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1166,7 +1020,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Sweden vs Tunisia",
@@ -1181,16 +1037,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-15T00:59:04.021Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 10322975,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.36,
-        "qi": 32,
-        "ev": -23.16,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1213,7 +1067,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Sweden vs Tunisia",
@@ -1223,18 +1078,19 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 44.9,
     "model_price": 2.23,
-    "model_note": "Kulusevski is also Sweden's best creative prop profile.",
+    "model_note": "Dejan Kulusevski is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T00:59:04.021Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 10322975,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1257,7 +1113,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Sweden vs Tunisia",
@@ -1267,18 +1125,19 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 30.1,
     "model_price": 3.32,
-    "model_note": "Laidouni is Tunisia's most likely midfield card profile.",
+    "model_note": "Aissa Laidouni is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T00:59:04.021Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 10322975,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1301,7 +1160,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -1311,18 +1172,19 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 45.9,
     "model_price": 2.18,
-    "model_note": "Spain's expected territory gives Morata a strong goal profile if starting.",
+    "model_note": "Alvaro Morata is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T11:28:48.213Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924149,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1345,7 +1207,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -1355,18 +1219,19 @@ window.embeddedPlayerProps = [
     "category": "Shots",
     "model_probability": 55.1,
     "model_price": 1.81,
-    "model_note": "Yamal rates well for volume even when Spain spread chances around.",
+    "model_note": "Lamine Yamal is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T11:28:48.213Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924149,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "bench"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1389,7 +1254,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "bench",
+    "status": "watch_only"
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -1399,18 +1266,19 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 49.4,
     "model_price": 2.02,
-    "model_note": "Olmo gets central shooting positions against deep blocks.",
+    "model_note": "Dani Olmo is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T11:28:48.213Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924149,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "bench"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1433,7 +1301,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "bench",
+    "status": "watch_only"
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -1443,18 +1313,19 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 52.2,
     "model_price": 1.92,
-    "model_note": "Yamal projects as Spain's best wide creation angle.",
+    "model_note": "Lamine Yamal is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T11:28:48.213Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924149,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "bench"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1477,7 +1348,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "bench",
+    "status": "watch_only"
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -1492,13 +1365,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-15T11:28:48.213Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
-        "event_id": 9924149,
+        "event_id": null,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1521,7 +1395,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -1531,21 +1406,19 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 42.4,
     "model_price": 2.36,
-    "model_note": "Lukaku has the highest Belgium goal share if starting.",
+    "model_note": "Romelu Lukaku is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T16:28:55.844Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924157,
-        "market": "Anytime Goalscorer",
-        "current_odds": 2.25,
-        "qi": 31,
-        "ev": -4.66,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "bench"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1568,7 +1441,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "bench",
+    "status": "watch_only"
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -1583,16 +1458,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-15T16:28:55.844Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924157,
-        "market": "Player To Have 2 Or More Shots",
-        "current_odds": 1.53,
-        "qi": 57,
-        "ev": 1.32,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1615,7 +1488,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -1630,16 +1504,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-15T16:28:55.844Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924157,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.72,
-        "qi": 41,
-        "ev": -3.91,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1662,7 +1534,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -1677,16 +1550,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-15T16:28:55.844Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924157,
-        "market": "To Score Or Assist",
-        "current_odds": 1.91,
-        "qi": 39,
-        "ev": -3.54,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1709,7 +1580,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -1724,16 +1596,14 @@ window.embeddedPlayerProps = [
     "last_checked": "2026-06-15T16:28:55.844Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
-        "event_id": 9924157,
-        "market": "To Be Booked",
-        "current_odds": 4.15,
-        "qi": 43,
-        "ev": 10.08,
-        "nearby_markets": []
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "event_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": null,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1756,7 +1626,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -1768,19 +1639,17 @@ window.embeddedPlayerProps = [
     "model_price": 2.28,
     "model_note": "Nunez is Uruguay's highest goal-volume forward.",
     "live_prices": [],
-    "last_checked": "2026-06-15T20:03:51.035Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
         "event_id": 9924166,
-        "market": "Anytime Goalscorer",
-        "current_odds": 2.3,
-        "qi": 42,
-        "ev": 0.88,
-        "nearby_markets": []
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1803,7 +1672,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -1815,19 +1685,48 @@ window.embeddedPlayerProps = [
     "model_price": 1.83,
     "model_note": "Valverde projects for shots from distance and second balls.",
     "live_prices": [],
-    "last_checked": "2026-06-15T20:03:51.035Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "nearby_markets_only",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
         "event_id": 9924166,
-        "market": "Player To Have 2 Or More Shots",
-        "current_odds": 1.22,
-        "qi": 30,
-        "ev": -33.33,
-        "nearby_markets": []
+        "market": null,
+        "nearby_markets": [
+          {
+            "market_name": "To Score Or Assist",
+            "current_odds": 6,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "To Score 2 or More Goals",
+            "current_odds": 201,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "Anytime Assist",
+            "current_odds": 11,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "Anytime Goalscorer",
+            "current_odds": 11,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "Third Goalscorer",
+            "current_odds": 12.5,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "To Score Or To Be Shown A Card",
+            "current_odds": 7.5,
+            "au_bookie": "Sportsbet"
+          }
+        ],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1850,7 +1749,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -1862,19 +1762,17 @@ window.embeddedPlayerProps = [
     "model_price": 1.7,
     "model_note": "Nunez has the best Uruguay shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-15T20:03:51.035Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
         "event_id": 9924166,
-        "market": "Player To Have 1 Or More Shots On Target",
-        "current_odds": 1.25,
-        "qi": 33,
-        "ev": -26.47,
-        "nearby_markets": []
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1897,7 +1795,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -1907,21 +1806,19 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 37.5,
     "model_price": 2.67,
-    "model_note": "De Arrascaeta rates as a creator if Uruguay control possession.",
+    "model_note": "Giorgian de Arrascaeta is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T20:03:51.035Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
         "event_id": 9924166,
-        "market": "To Score Or Assist",
-        "current_odds": 1.72,
-        "qi": 23,
-        "ev": -35.58,
-        "nearby_markets": []
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1944,7 +1841,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -1956,19 +1855,48 @@ window.embeddedPlayerProps = [
     "model_price": 3.66,
     "model_note": "Bentancur carries midfield challenge risk in transition.",
     "live_prices": [],
-    "last_checked": "2026-06-15T20:03:51.035Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_found",
-        "exact_market_found": true,
-        "comparable_for_qi": true,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "nearby_markets_only",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
         "event_id": 9924166,
-        "market": "To Be Booked",
-        "current_odds": 3.38,
-        "qi": 22,
-        "ev": -7.65,
-        "nearby_markets": []
+        "market": null,
+        "nearby_markets": [
+          {
+            "market_name": "To Score Or Assist",
+            "current_odds": 12,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "To Score 2 or More Goals",
+            "current_odds": 201,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "Anytime Assist",
+            "current_odds": 14,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "Anytime Goalscorer",
+            "current_odds": 23,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "Third Goalscorer",
+            "current_odds": 23,
+            "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "To Score Or To Be Shown A Card",
+            "current_odds": 8,
+            "au_bookie": "Sportsbet"
+          }
+        ],
+        "lineup_role": "starter"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -1991,7 +1919,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Iran vs New Zealand",
@@ -2002,11 +1931,23 @@ window.embeddedPlayerProps = [
     "model_probability": 41.2,
     "model_price": 2.43,
     "model_note": "Taremi is Iran's clearest goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.88,
+        "ev": 18.52,
+        "qi": 67,
+        "price_qi": 87,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2038,7 +1979,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Iran vs New Zealand",
@@ -2049,19 +1991,31 @@ window.embeddedPlayerProps = [
     "model_probability": 34.1,
     "model_price": 2.93,
     "model_note": "Wood owns New Zealand's main set-piece and crossing goal threat.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 4.5,
+        "ev": 53.58,
+        "qi": 76,
+        "price_qi": 95,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 9927167,
         "market": "Anytime Goalscorer",
-        "current_odds": 4.2,
-        "qi": 72,
-        "ev": 43.34,
+        "current_odds": 4.5,
+        "qi": 76,
+        "ev": 53.58,
         "nearby_markets": []
       },
       "tab": {
@@ -2085,7 +2039,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Iran vs New Zealand",
@@ -2096,11 +2051,23 @@ window.embeddedPlayerProps = [
     "model_probability": 59.8,
     "model_price": 1.67,
     "model_note": "Taremi projects for the best shot volume in this game.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 1.12,
+        "ev": -32.93,
+        "qi": 33,
+        "price_qi": 0,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2132,7 +2099,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "starter"
   },
   {
     "match_name": "Iran vs New Zealand",
@@ -2142,18 +2110,19 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 49.2,
     "model_price": 2.03,
-    "model_note": "Azmoun is a strong secondary Iran shot-on-target option.",
+    "model_note": "Sardar Azmoun is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T23:34:23.824Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9927167,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2176,7 +2145,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Iran vs New Zealand",
@@ -2186,18 +2157,19 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 25.4,
     "model_price": 3.94,
-    "model_note": "New Zealand centre-backs can be stressed by Iran forwards.",
+    "model_note": "Winston Reid is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
     "last_checked": "2026-06-15T23:34:23.824Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "lineup_watch_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9927167,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "not_listed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2220,7 +2192,9 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "France vs Senegal",
@@ -2231,11 +2205,23 @@ window.embeddedPlayerProps = [
     "model_probability": 47.6,
     "model_price": 2.1,
     "model_note": "Mbappe is France's highest goal-probability player.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 1.91,
+        "ev": -9.05,
+        "qi": 33,
+        "price_qi": 17,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2267,7 +2253,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "France vs Senegal",
@@ -2279,7 +2266,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.42,
     "model_note": "Mbappe projects as the highest shot-volume player on the slate.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2319,7 +2306,8 @@ window.embeddedPlayerProps = [
             "current_odds": 1.57,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2342,7 +2330,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "France vs Senegal",
@@ -2353,48 +2342,32 @@ window.embeddedPlayerProps = [
     "model_probability": 34.7,
     "model_price": 2.88,
     "model_note": "Sarr is Senegal's main transition shot profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 2.4,
+        "ev": -16.67,
+        "qi": 22,
+        "price_qi": 12,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 9924170,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 11,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 4.2,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 11,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 4.2,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 2.4,
+        "qi": 22,
+        "ev": -16.67,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2417,7 +2390,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "France vs Senegal",
@@ -2428,11 +2402,23 @@ window.embeddedPlayerProps = [
     "model_probability": 43.6,
     "model_price": 2.29,
     "model_note": "Dembele rates well for chance creation from wide areas.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.91,
+        "ev": -16.59,
+        "qi": 29,
+        "price_qi": 10,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2464,7 +2450,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "France vs Senegal",
@@ -2475,48 +2462,32 @@ window.embeddedPlayerProps = [
     "model_probability": 31.2,
     "model_price": 3.21,
     "model_note": "Gueye profiles as Senegal's highest midfield card risk.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 3.22,
+        "ev": 0.31,
+        "qi": 34,
+        "price_qi": 51,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 9924170,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 19,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 41,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 9.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 19,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 41,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 9.5,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "To Be Booked",
+        "current_odds": 3.22,
+        "qi": 34,
+        "ev": 0.31,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2539,7 +2510,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Iraq vs Norway",
@@ -2550,19 +2522,31 @@ window.embeddedPlayerProps = [
     "model_probability": 55.9,
     "model_price": 1.79,
     "model_note": "Haaland is the strongest goal-probability prop in the model.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 1.4,
+        "ev": -21.79,
+        "qi": 32,
+        "price_qi": 3,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 10326819,
         "market": "Anytime Goalscorer",
-        "current_odds": 1.45,
+        "current_odds": 1.4,
         "qi": 32,
-        "ev": -18.99,
+        "ev": -21.79,
         "nearby_markets": []
       },
       "tab": {
@@ -2586,7 +2570,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Iraq vs Norway",
@@ -2597,169 +2582,31 @@ window.embeddedPlayerProps = [
     "model_probability": 70.1,
     "model_price": 1.43,
     "model_note": "Haaland projects as Norway's cleanest shot-on-target angle.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
-    "direct_checks": {
-      "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "event_id": 10326819,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 1.45,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 2.8,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 1.36,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 1.45,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 2.8,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 1.36,
-            "au_bookie": "Sportsbet"
-          }
-        ]
-      },
-      "tab": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
-      },
-      "pointsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
-      },
-      "neds": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.04,
+        "ev": -27.27,
+        "qi": 35,
+        "price_qi": 0,
+        "checked_at": "2026-06-15T23:48:05.426Z"
       }
-    }
-  },
-  {
-    "match_name": "Iraq vs Norway",
-    "kickoff_time_aest": "2026-06-17T08:00:00",
-    "player": "Aymen Hussein",
-    "market": "1+ Shots on Target",
-    "category": "Shots on Target",
-    "model_probability": 32.7,
-    "model_price": 3.06,
-    "model_note": "Hussein is Iraq's strongest attacking watch profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "event_id": 10326819,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 7,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 15,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 7,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 15,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 5,
-            "au_bookie": "Sportsbet"
-          }
-        ]
-      },
-      "tab": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
-      },
-      "pointsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
-      },
-      "neds": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
-      }
-    }
-  },
-  {
-    "match_name": "Iraq vs Norway",
-    "kickoff_time_aest": "2026-06-17T08:00:00",
-    "player": "Martin Odegaard",
-    "market": "Goal or Assist",
-    "category": "Assists",
-    "model_probability": 50.3,
-    "model_price": 1.99,
-    "model_note": "Odegaard carries Norway's best creative involvement profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
-    "direct_checks": {
-      "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 10326819,
-        "market": "To Score Or Assist",
-        "current_odds": 1.91,
-        "qi": 39,
-        "ev": -4.02,
+        "market": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.04,
+        "qi": 35,
+        "ev": -27.27,
         "nearby_markets": []
       },
       "tab": {
@@ -2783,59 +2630,44 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Iraq vs Norway",
     "kickoff_time_aest": "2026-06-17T08:00:00",
-    "player": "Zidane Iqbal",
-    "market": "To Get Carded",
-    "category": "Cards",
-    "model_probability": 25.9,
-    "model_price": 3.86,
-    "model_note": "Iqbal can be drawn into midfield recovery fouls.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "player": "Aymen Hussein",
+    "market": "1+ Shots on Target",
+    "category": "Shots on Target",
+    "model_probability": 32.7,
+    "model_price": 3.06,
+    "model_note": "Hussein is Iraq's strongest attacking watch profile.",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 2,
+        "ev": -34.64,
+        "qi": 22,
+        "price_qi": 3,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 10326819,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 15,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 36,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 9.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 15,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 36,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 9.5,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 2,
+        "qi": 22,
+        "ev": -34.64,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2858,7 +2690,128 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
+  },
+  {
+    "match_name": "Iraq vs Norway",
+    "kickoff_time_aest": "2026-06-17T08:00:00",
+    "player": "Martin Odegaard",
+    "market": "Goal or Assist",
+    "category": "Assists",
+    "model_probability": 50.3,
+    "model_price": 1.99,
+    "model_note": "Odegaard carries Norway's best creative involvement profile.",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.83,
+        "ev": -8.04,
+        "qi": 35,
+        "price_qi": 18,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
+    "direct_checks": {
+      "sportsbet": {
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
+        "event_id": 10326819,
+        "market": "To Score Or Assist",
+        "current_odds": 1.83,
+        "qi": 35,
+        "ev": -8.04,
+        "nearby_markets": []
+      },
+      "tab": {
+        "checked_at": "2026-06-13T23:57:18.626Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
+      },
+      "pointsbet": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
+      },
+      "neds": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+      }
+    },
+    "lineup_role": "unconfirmed"
+  },
+  {
+    "match_name": "Iraq vs Norway",
+    "kickoff_time_aest": "2026-06-17T08:00:00",
+    "player": "Zidane Iqbal",
+    "market": "To Get Carded",
+    "category": "Cards",
+    "model_probability": 25.9,
+    "model_price": 3.86,
+    "model_note": "Iqbal can be drawn into midfield recovery fouls.",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 3.72,
+        "ev": -3.63,
+        "qi": 25,
+        "price_qi": 32,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
+    "direct_checks": {
+      "sportsbet": {
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
+        "event_id": 10326819,
+        "market": "To Be Booked",
+        "current_odds": 3.72,
+        "qi": 25,
+        "ev": -3.63,
+        "nearby_markets": []
+      },
+      "tab": {
+        "checked_at": "2026-06-13T23:57:18.626Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
+      },
+      "pointsbet": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
+      },
+      "neds": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+      }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Argentina vs Algeria",
@@ -2869,11 +2822,23 @@ window.embeddedPlayerProps = [
     "model_probability": 40.8,
     "model_price": 2.45,
     "model_note": "Alvarez projects as Argentina's safest forward goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.1,
+        "ev": -14.29,
+        "qi": 28,
+        "price_qi": 12,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -2905,7 +2870,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Argentina vs Algeria",
@@ -2916,48 +2882,32 @@ window.embeddedPlayerProps = [
     "model_probability": 43.8,
     "model_price": 2.28,
     "model_note": "Mahrez carries Algeria's strongest shot volume.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 2.25,
+        "ev": -1.32,
+        "qi": 37,
+        "price_qi": 42,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 9924168,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 11,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 3.75,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 11,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 3.75,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "Player To Have 2 Or More Shots",
+        "current_odds": 2.25,
+        "qi": 37,
+        "ev": -1.32,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2980,7 +2930,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Argentina vs Algeria",
@@ -2991,48 +2942,32 @@ window.embeddedPlayerProps = [
     "model_probability": 53.4,
     "model_price": 1.87,
     "model_note": "Lautaro rates strongly for central penalty-box shots.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.2,
+        "ev": -35.83,
+        "qi": 30,
+        "price_qi": 0,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 9924168,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.1,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 4,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 1.72,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.1,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 4,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 1.72,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.2,
+        "qi": 30,
+        "ev": -35.83,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3055,7 +2990,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Argentina vs Algeria",
@@ -3066,11 +3002,23 @@ window.embeddedPlayerProps = [
     "model_probability": 55.2,
     "model_price": 1.81,
     "model_note": "Messi is treated as watchlist only until selection is confirmed.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.4,
+        "ev": -22.65,
+        "qi": 31,
+        "price_qi": 2,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3102,7 +3050,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Argentina vs Algeria",
@@ -3114,16 +3063,17 @@ window.embeddedPlayerProps = [
     "model_price": 3.38,
     "model_note": "Bennacer profiles as Algeria's most likely tactical-foul card.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924168,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3146,7 +3096,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Austria vs Jordan",
@@ -3157,11 +3108,23 @@ window.embeddedPlayerProps = [
     "model_probability": 37.4,
     "model_price": 2.67,
     "model_note": "Arnautovic has Austria's strongest central finishing profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2,
+        "ev": -25.09,
+        "qi": 25,
+        "price_qi": 6,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3193,7 +3156,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Austria vs Jordan",
@@ -3204,38 +3168,32 @@ window.embeddedPlayerProps = [
     "model_probability": 52.6,
     "model_price": 1.9,
     "model_note": "Sabitzer rates well for shots from midfield and set pieces.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 1.11,
+        "ev": -41.58,
+        "qi": 30,
+        "price_qi": 0,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 9924152,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.7,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.7,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "Player To Have 2 Or More Shots",
+        "current_odds": 1.11,
+        "qi": 30,
+        "ev": -41.58,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3258,7 +3216,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Austria vs Jordan",
@@ -3270,16 +3229,17 @@ window.embeddedPlayerProps = [
     "model_price": 2.16,
     "model_note": "Baumgartner gets strong advanced midfield shot positions.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924152,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3302,7 +3262,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Austria vs Jordan",
@@ -3314,15 +3275,76 @@ window.embeddedPlayerProps = [
     "model_price": 2.82,
     "model_note": "Al-Taamari is Jordan's main attacking outlet.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924152,
         "market": null,
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
+      },
+      "tab": {
+        "checked_at": "2026-06-13T23:57:18.626Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
+      },
+      "pointsbet": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
+      },
+      "neds": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+      }
+    },
+    "lineup_role": "unconfirmed"
+  },
+  {
+    "match_name": "Austria vs Jordan",
+    "kickoff_time_aest": "2026-06-17T14:00:00",
+    "player": "Xaver Schlager",
+    "market": "To Get Carded",
+    "category": "Cards",
+    "model_probability": 27.1,
+    "model_price": 3.69,
+    "model_note": "Schlager carries pressing and recovery-foul card risk.",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 5.6,
+        "ev": 51.76,
+        "qi": 66,
+        "price_qi": 94,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
+    "direct_checks": {
+      "sportsbet": {
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
+        "event_id": 9924152,
+        "market": "To Be Booked",
+        "current_odds": 5.6,
+        "qi": 66,
+        "ev": 51.76,
         "nearby_markets": []
       },
       "tab": {
@@ -3346,72 +3368,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
-  },
-  {
-    "match_name": "Austria vs Jordan",
-    "kickoff_time_aest": "2026-06-17T14:00:00",
-    "player": "Xaver Schlager",
-    "market": "To Get Carded",
-    "category": "Cards",
-    "model_probability": 27.1,
-    "model_price": 3.69,
-    "model_note": "Schlager carries pressing and recovery-foul card risk.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
-    "direct_checks": {
-      "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "event_id": 9924152,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 12,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 12,
-            "au_bookie": "Sportsbet"
-          }
-        ]
-      },
-      "tab": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
-      },
-      "pointsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
-      },
-      "neds": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
-      }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Portugal vs DR Congo",
@@ -3422,11 +3380,23 @@ window.embeddedPlayerProps = [
     "model_probability": 38.3,
     "model_price": 2.61,
     "model_note": "Leao is Portugal's most explosive goal profile if starting.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.6,
+        "ev": -0.38,
+        "qi": 36,
+        "price_qi": 47,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3458,7 +3428,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Portugal vs DR Congo",
@@ -3469,48 +3440,32 @@ window.embeddedPlayerProps = [
     "model_probability": 57.7,
     "model_price": 1.73,
     "model_note": "Bruno projects well for shots and set-piece attempts.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 2 Or More Shots",
+        "current_odds": 1.1,
+        "ev": -36.42,
+        "qi": 32,
+        "price_qi": 0,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 10323733,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Both Teams To Score",
-            "current_odds": 1.62,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.88,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 6,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Both Teams To Score",
-            "current_odds": 1.62,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.88,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 6,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "Player To Have 2 Or More Shots",
+        "current_odds": 1.1,
+        "qi": 32,
+        "ev": -36.42,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3533,7 +3488,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Portugal vs DR Congo",
@@ -3544,38 +3500,32 @@ window.embeddedPlayerProps = [
     "model_probability": 30.6,
     "model_price": 3.27,
     "model_note": "Bakambu is DR Congo's main goal outlet.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 2,
+        "ev": -38.84,
+        "qi": 20,
+        "price_qi": 2,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 10323733,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 6,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 12,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 6,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 12,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 2,
+        "qi": 20,
+        "ev": -38.84,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3598,7 +3548,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Portugal vs DR Congo",
@@ -3609,48 +3560,32 @@ window.embeddedPlayerProps = [
     "model_probability": 54.5,
     "model_price": 1.83,
     "model_note": "Bruno has Portugal's best chance-creation profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.83,
+        "ev": 0,
+        "qi": 48,
+        "price_qi": 49,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 10323733,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Both Teams To Score",
-            "current_odds": 1.62,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.88,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 6,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Both Teams To Score",
-            "current_odds": 1.62,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.88,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 6,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "To Score Or Assist",
+        "current_odds": 1.83,
+        "qi": 48,
+        "ev": 0,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3673,7 +3608,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Portugal vs DR Congo",
@@ -3684,38 +3620,32 @@ window.embeddedPlayerProps = [
     "model_probability": 26.8,
     "model_price": 3.73,
     "model_note": "Mbemba faces high defensive workload against Portugal attackers.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 4.6,
+        "ev": 23.32,
+        "qi": 53,
+        "price_qi": 86,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 10323733,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 15,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 36,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 15,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 36,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "To Be Booked",
+        "current_odds": 4.6,
+        "qi": 53,
+        "ev": 23.32,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3738,7 +3668,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "England vs Croatia",
@@ -3749,11 +3680,23 @@ window.embeddedPlayerProps = [
     "model_probability": 44.6,
     "model_price": 2.24,
     "model_note": "Kane is England's highest goal-probability player.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.25,
+        "ev": 0.45,
+        "qi": 41,
+        "price_qi": 52,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3785,7 +3728,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "England vs Croatia",
@@ -3797,16 +3741,17 @@ window.embeddedPlayerProps = [
     "model_price": 1.76,
     "model_note": "Foden rates well for shot volume from inside-right channels.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924163,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3829,7 +3774,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "England vs Croatia",
@@ -3840,11 +3786,23 @@ window.embeddedPlayerProps = [
     "model_probability": 49.5,
     "model_price": 2.02,
     "model_note": "Bellingham carries strong box-entry and second-phase shot value.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.91,
+        "ev": -5.45,
+        "qi": 37,
+        "price_qi": 24,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3876,7 +3834,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "England vs Croatia",
@@ -3887,11 +3846,23 @@ window.embeddedPlayerProps = [
     "model_probability": 28.6,
     "model_price": 3.5,
     "model_note": "Modric remains Croatia's key chance-creation profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 4.5,
+        "ev": 28.57,
+        "qi": 57,
+        "price_qi": 88,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -3923,7 +3894,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "England vs Croatia",
@@ -3934,48 +3906,32 @@ window.embeddedPlayerProps = [
     "model_probability": 27.8,
     "model_price": 3.6,
     "model_note": "Kovacic can be forced into tactical fouls against England runners.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Be Booked",
+        "current_odds": 3.84,
+        "ev": 6.67,
+        "qi": 45,
+        "price_qi": 75,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 9924163,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 11,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 23,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 7,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 11,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 23,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "To Score Or Assist",
-            "current_odds": 7,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "market": "To Be Booked",
+        "current_odds": 3.84,
+        "qi": 45,
+        "ev": 6.67,
+        "nearby_markets": []
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -3998,7 +3954,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -4009,11 +3966,23 @@ window.embeddedPlayerProps = [
     "model_probability": 35.7,
     "model_price": 2.8,
     "model_note": "Williams is Ghana's leading central goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 3.3,
+        "ev": 17.86,
+        "qi": 62,
+        "price_qi": 86,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -4045,7 +4014,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -4057,15 +4027,76 @@ window.embeddedPlayerProps = [
     "model_price": 1.97,
     "model_note": "Kudus owns Ghana's strongest direct shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924164,
         "market": null,
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
+      },
+      "tab": {
+        "checked_at": "2026-06-13T23:57:18.626Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
+      },
+      "pointsbet": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
+      },
+      "neds": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+      }
+    },
+    "lineup_role": "unconfirmed"
+  },
+  {
+    "match_name": "Ghana vs Panama",
+    "kickoff_time_aest": "2026-06-18T09:00:00",
+    "player": "Jose Fajardo",
+    "market": "1+ Shots on Target",
+    "category": "Shots on Target",
+    "model_probability": 28.2,
+    "model_price": 3.55,
+    "model_note": "Fajardo is Panama's main forward target.",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.53,
+        "ev": -56.9,
+        "qi": 19,
+        "price_qi": 0,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
+    "direct_checks": {
+      "sportsbet": {
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
+        "event_id": 9924164,
+        "market": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.53,
+        "qi": 19,
+        "ev": -56.9,
         "nearby_markets": []
       },
       "tab": {
@@ -4089,72 +4120,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
-  },
-  {
-    "match_name": "Ghana vs Panama",
-    "kickoff_time_aest": "2026-06-18T09:00:00",
-    "player": "Jose Fajardo",
-    "market": "1+ Shots on Target",
-    "category": "Shots on Target",
-    "model_probability": 28.2,
-    "model_price": 3.55,
-    "model_note": "Fajardo is Panama's main forward target.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
-    "direct_checks": {
-      "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "event_id": 9924164,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 4.33,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 7.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 4.33,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 7.5,
-            "au_bookie": "Sportsbet"
-          }
-        ]
-      },
-      "tab": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
-      },
-      "pointsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
-      },
-      "neds": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
-      }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -4166,16 +4133,17 @@ window.embeddedPlayerProps = [
     "model_price": 2.28,
     "model_note": "Kudus is also Ghana's best creative involvement angle.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924164,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4198,7 +4166,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -4210,10 +4179,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.44,
     "model_note": "Carrasquilla carries Panama's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4231,6 +4200,11 @@ window.embeddedPlayerProps = [
             "au_bookie": "Sportsbet"
           },
           {
+            "market_name": "To Score Or Assist",
+            "current_odds": 5,
+            "au_bookie": "Sportsbet"
+          },
+          {
             "market_name": "Anytime Goalscorer",
             "current_odds": 10,
             "au_bookie": "Sportsbet"
@@ -4239,8 +4213,14 @@ window.embeddedPlayerProps = [
             "market_name": "First Goalscorer",
             "current_odds": 19,
             "au_bookie": "Sportsbet"
+          },
+          {
+            "market_name": "To Score Or Assist",
+            "current_odds": 5,
+            "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4263,7 +4243,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -4275,15 +4256,76 @@ window.embeddedPlayerProps = [
     "model_price": 2.57,
     "model_note": "Duran rates as Colombia's most direct goal threat.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924035,
         "market": null,
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
+      },
+      "tab": {
+        "checked_at": "2026-06-13T23:57:18.626Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
+      },
+      "pointsbet": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
+      },
+      "neds": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+      }
+    },
+    "lineup_role": "unconfirmed"
+  },
+  {
+    "match_name": "Uzbekistan vs Colombia",
+    "kickoff_time_aest": "2026-06-18T12:00:00",
+    "player": "Luis Diaz",
+    "market": "1+ Shots on Target",
+    "category": "Shots on Target",
+    "model_probability": 55.5,
+    "model_price": 1.8,
+    "model_note": "Diaz is Colombia's strongest shot-on-target player.",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.12,
+        "ev": -37.78,
+        "qi": 31,
+        "price_qi": 0,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
+    "direct_checks": {
+      "sportsbet": {
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
+        "event_id": 9924035,
+        "market": "Player To Have 1 Or More Shots On Target",
+        "current_odds": 1.12,
+        "qi": 31,
+        "ev": -37.78,
         "nearby_markets": []
       },
       "tab": {
@@ -4307,72 +4349,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
-  },
-  {
-    "match_name": "Uzbekistan vs Colombia",
-    "kickoff_time_aest": "2026-06-18T12:00:00",
-    "player": "Luis Diaz",
-    "market": "1+ Shots on Target",
-    "category": "Shots on Target",
-    "model_probability": 55.5,
-    "model_price": 1.8,
-    "model_note": "Diaz is Colombia's strongest shot-on-target player.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
-    "direct_checks": {
-      "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "event_id": 9924035,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 3.75,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 3.75,
-            "au_bookie": "Sportsbet"
-          }
-        ]
-      },
-      "tab": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
-      },
-      "pointsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
-      },
-      "neds": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
-      }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -4384,37 +4362,17 @@ window.embeddedPlayerProps = [
     "model_price": 3.25,
     "model_note": "Masharipov is Uzbekistan's main creative shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 9924035,
         "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 8.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 17,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 8.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 17,
-            "au_bookie": "Sportsbet"
-          }
-        ]
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4437,7 +4395,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -4448,81 +4407,31 @@ window.embeddedPlayerProps = [
     "model_probability": 45.3,
     "model_price": 2.21,
     "model_note": "James has Colombia's highest set-piece and assist profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
-    "direct_checks": {
-      "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "nearby_markets_only",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "event_id": 9924035,
-        "market": null,
-        "nearby_markets": [
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.88,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "Anytime Goalscorer",
-            "current_odds": 2.88,
-            "au_bookie": "Sportsbet"
-          },
-          {
-            "market_name": "First Goalscorer",
-            "current_odds": 5.5,
-            "au_bookie": "Sportsbet"
-          }
-        ]
-      },
-      "tab": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
-      },
-      "pointsbet": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
-      },
-      "neds": {
-        "checked_at": "2026-06-14T00:04:53.535Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "To Score Or Assist",
+        "current_odds": 1.83,
+        "ev": -17.19,
+        "qi": 29,
+        "price_qi": 9,
+        "checked_at": "2026-06-15T23:48:05.426Z"
       }
-    }
-  },
-  {
-    "match_name": "Uzbekistan vs Colombia",
-    "kickoff_time_aest": "2026-06-18T12:00:00",
-    "player": "Wilmar Barrios",
-    "market": "To Get Carded",
-    "category": "Cards",
-    "model_probability": 28.3,
-    "model_price": 3.53,
-    "model_note": "Barrios carries Colombia's highest ball-winning card risk.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
-        "status": "exact_market_not_found",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_found",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
         "event_id": 9924035,
-        "market": null,
+        "market": "To Score Or Assist",
+        "current_odds": 1.83,
+        "qi": 29,
+        "ev": -17.19,
         "nearby_markets": []
       },
       "tab": {
@@ -4546,7 +4455,54 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
+  },
+  {
+    "match_name": "Uzbekistan vs Colombia",
+    "kickoff_time_aest": "2026-06-18T12:00:00",
+    "player": "Wilmar Barrios",
+    "market": "To Get Carded",
+    "category": "Cards",
+    "model_probability": 28.3,
+    "model_price": 3.53,
+    "model_note": "Barrios carries Colombia's highest ball-winning card risk.",
+    "live_prices": [],
+    "last_checked": "2026-06-15T23:48:05.426Z",
+    "direct_checks": {
+      "sportsbet": {
+        "checked_at": "2026-06-15T23:48:05.426Z",
+        "status": "exact_market_not_found",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "event_id": 9924035,
+        "market": null,
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
+      },
+      "tab": {
+        "checked_at": "2026-06-13T23:57:18.626Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
+      },
+      "pointsbet": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "PointsBet is still checked through OddsAPI in the scheduled scan; no direct PointsBet prop endpoint has been confirmed in this workspace yet."
+      },
+      "neds": {
+        "checked_at": "2026-06-14T00:04:53.535Z",
+        "status": "direct_site_endpoint_not_confirmed",
+        "exact_market_found": false,
+        "comparable_for_qi": false,
+        "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
+      }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -4557,11 +4513,23 @@ window.embeddedPlayerProps = [
     "model_probability": 40.5,
     "model_price": 2.47,
     "model_note": "Schick is Czech Republic's highest goal share.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.3,
+        "ev": -6.88,
+        "qi": 28,
+        "price_qi": 21,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -4593,7 +4561,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -4605,10 +4574,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.18,
     "model_note": "Soucek rates well from set pieces and second balls.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4622,7 +4591,7 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 8.5,
+            "current_odds": 9,
             "au_bookie": "Sportsbet"
           },
           {
@@ -4632,10 +4601,11 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 8.5,
+            "current_odds": 9,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4658,7 +4628,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -4670,10 +4641,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.33,
     "model_note": "Hlozek projects as a strong secondary Czech shooter.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4682,7 +4653,7 @@ window.embeddedPlayerProps = [
         "nearby_markets": [
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 3.5,
+            "current_odds": 3.6,
             "au_bookie": "Sportsbet"
           },
           {
@@ -4692,7 +4663,7 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 3.5,
+            "current_odds": 3.6,
             "au_bookie": "Sportsbet"
           },
           {
@@ -4700,7 +4671,8 @@ window.embeddedPlayerProps = [
             "current_odds": 6.5,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4723,7 +4695,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -4735,16 +4708,17 @@ window.embeddedPlayerProps = [
     "model_price": 3.17,
     "model_note": "Tau is South Africa's main transition shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 10472335,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4767,7 +4741,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -4779,10 +4754,10 @@ window.embeddedPlayerProps = [
     "model_price": 4.22,
     "model_note": "Soucek has aerial-duel and midfield challenge card exposure.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4796,7 +4771,7 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 8.5,
+            "current_odds": 9,
             "au_bookie": "Sportsbet"
           },
           {
@@ -4806,10 +4781,11 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 8.5,
+            "current_odds": 9,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4832,7 +4808,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -4843,19 +4820,31 @@ window.embeddedPlayerProps = [
     "model_probability": 36.6,
     "model_price": 2.73,
     "model_note": "Embolo has Switzerland's best central goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.3,
+        "ev": -15.75,
+        "qi": 23,
+        "price_qi": 12,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 10425262,
         "market": "Anytime Goalscorer",
-        "current_odds": 2.25,
-        "qi": 22,
-        "ev": -17.58,
+        "current_odds": 2.3,
+        "qi": 23,
+        "ev": -15.75,
         "nearby_markets": []
       },
       "tab": {
@@ -4879,7 +4868,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -4890,11 +4880,23 @@ window.embeddedPlayerProps = [
     "model_probability": 31.9,
     "model_price": 3.13,
     "model_note": "Dzeko is Bosnia's strongest penalty-box goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 4.33,
+        "ev": 38.34,
+        "qi": 66,
+        "price_qi": 92,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -4926,7 +4928,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -4938,10 +4941,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.26,
     "model_note": "Xhaka projects well if Switzerland control territory.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -4955,7 +4958,7 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 10,
+            "current_odds": 9.5,
             "au_bookie": "Sportsbet"
           },
           {
@@ -4965,10 +4968,11 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 10,
+            "current_odds": 9.5,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4991,7 +4995,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -5003,16 +5008,17 @@ window.embeddedPlayerProps = [
     "model_price": 2.58,
     "model_note": "Shaqiri remains watchlist only until role is confirmed.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_not_found",
         "exact_market_found": false,
         "comparable_for_qi": false,
         "event_id": 10425262,
         "market": null,
-        "nearby_markets": []
+        "nearby_markets": [],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5035,7 +5041,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -5047,7 +5054,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.42,
     "model_note": "Kolasinac carries high duel and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5077,7 +5084,8 @@ window.embeddedPlayerProps = [
             "current_odds": 61,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5100,7 +5108,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -5111,11 +5120,23 @@ window.embeddedPlayerProps = [
     "model_probability": 39.7,
     "model_price": 2.52,
     "model_note": "David is Canada's strongest goal-probability player.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 2.1,
+        "ev": -16.67,
+        "qi": 27,
+        "price_qi": 10,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
@@ -5147,7 +5168,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -5159,7 +5181,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.89,
     "model_note": "David projects as Canada's cleanest shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5189,7 +5211,8 @@ window.embeddedPlayerProps = [
             "current_odds": 4.2,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5212,7 +5235,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -5224,10 +5248,10 @@ window.embeddedPlayerProps = [
     "model_price": 2.89,
     "model_note": "Afif is Qatar's main attacking prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -5236,25 +5260,26 @@ window.embeddedPlayerProps = [
         "nearby_markets": [
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 7,
+            "current_odds": 6,
             "au_bookie": "Sportsbet"
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 14,
+            "current_odds": 13,
             "au_bookie": "Sportsbet"
           },
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 7,
+            "current_odds": 6,
             "au_bookie": "Sportsbet"
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 14,
+            "current_odds": 13,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5277,7 +5302,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -5289,7 +5315,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.4,
     "model_note": "Davies carries Canada's strongest wide creation angle.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5319,7 +5345,8 @@ window.embeddedPlayerProps = [
             "current_odds": 6,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5342,7 +5369,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -5354,10 +5382,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.72,
     "model_note": "Madibo profiles as Qatar's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -5371,7 +5399,7 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 67,
+            "current_odds": 61,
             "au_bookie": "Sportsbet"
           },
           {
@@ -5381,10 +5409,11 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 67,
+            "current_odds": 61,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5407,7 +5436,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5418,19 +5448,31 @@ window.embeddedPlayerProps = [
     "model_probability": 37.8,
     "model_price": 2.65,
     "model_note": "Gimenez is Mexico's strongest goal profile.",
-    "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "Sportsbet direct site",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 3.1,
+        "ev": 16.98,
+        "qi": 63,
+        "price_qi": 86,
+        "checked_at": "2026-06-15T23:48:05.426Z"
+      }
+    ],
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-14T03:57:12.279Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "exact_market_found",
         "exact_market_found": true,
         "comparable_for_qi": true,
         "event_id": 10425265,
         "market": "Anytime Goalscorer",
-        "current_odds": 3,
-        "qi": 60,
-        "ev": 13.21,
+        "current_odds": 3.1,
+        "qi": 63,
+        "ev": 16.98,
         "nearby_markets": []
       },
       "tab": {
@@ -5454,7 +5496,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5466,7 +5509,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.07,
     "model_note": "Lozano rates well for Mexico shot volume from wide areas.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5486,7 +5529,8 @@ window.embeddedPlayerProps = [
             "current_odds": 1.72,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5509,7 +5553,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5521,10 +5566,10 @@ window.embeddedPlayerProps = [
     "model_price": 1.78,
     "model_note": "Son is South Korea's best shot-on-target prop.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -5533,7 +5578,7 @@ window.embeddedPlayerProps = [
         "nearby_markets": [
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 3.6,
+            "current_odds": 3.5,
             "au_bookie": "Sportsbet"
           },
           {
@@ -5543,7 +5588,7 @@ window.embeddedPlayerProps = [
           },
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 3.6,
+            "current_odds": 3.5,
             "au_bookie": "Sportsbet"
           },
           {
@@ -5551,7 +5596,8 @@ window.embeddedPlayerProps = [
             "current_odds": 6,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5574,7 +5620,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5586,7 +5633,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.53,
     "model_note": "Lee projects as South Korea's best creator.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-13T23:57:18.626Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5616,7 +5663,8 @@ window.embeddedPlayerProps = [
             "current_odds": 10,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5639,7 +5687,8 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5651,10 +5700,10 @@ window.embeddedPlayerProps = [
     "model_price": 3.18,
     "model_note": "Alvarez carries Mexico's strongest card profile.",
     "live_prices": [],
-    "last_checked": "2026-06-15T23:34:23.824Z",
+    "last_checked": "2026-06-15T23:48:05.426Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
+        "checked_at": "2026-06-15T23:48:05.426Z",
         "status": "nearby_markets_only",
         "exact_market_found": false,
         "comparable_for_qi": false,
@@ -5663,25 +5712,26 @@ window.embeddedPlayerProps = [
         "nearby_markets": [
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 10,
+            "current_odds": 11,
             "au_bookie": "Sportsbet"
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 20,
+            "current_odds": 21,
             "au_bookie": "Sportsbet"
           },
           {
             "market_name": "Anytime Goalscorer",
-            "current_odds": 10,
+            "current_odds": 11,
             "au_bookie": "Sportsbet"
           },
           {
             "market_name": "First Goalscorer",
-            "current_odds": 20,
+            "current_odds": 21,
             "au_bookie": "Sportsbet"
           }
-        ]
+        ],
+        "lineup_role": "unconfirmed"
       },
       "tab": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5704,6 +5754,7 @@ window.embeddedPlayerProps = [
         "comparable_for_qi": false,
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
-    }
+    },
+    "lineup_role": "unconfirmed"
   }
 ];

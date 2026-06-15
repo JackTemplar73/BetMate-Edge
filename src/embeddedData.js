@@ -93,49 +93,51 @@ window.embeddedDataset = [
         "au_bookie": "BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 49.6,
-      "over_fair_price": 2.02,
-      "under_probability": 50.4,
-      "under_fair_price": 1.98,
-      "total_goals_mean": 2.66,
+      "over_probability": 51.8,
+      "over_fair_price": 1.93,
+      "under_probability": 48.2,
+      "under_fair_price": 2.08,
+      "total_goals_mean": 2.75,
       "tempo_adjustment": 0.22,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.09,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Canada 1-0 Bosnia & Herzegovina",
-        "probability": 12,
-        "fair_price": 8.34
+        "probability": 11.3,
+        "fair_price": 8.82
       },
       {
         "score": "Canada 1-1 Bosnia & Herzegovina",
-        "probability": 11.3,
-        "fair_price": 8.81
+        "probability": 11.1,
+        "fair_price": 9.02
       },
       {
         "score": "Canada 2-0 Bosnia & Herzegovina",
-        "probability": 10.3,
-        "fair_price": 9.74
+        "probability": 10,
+        "fair_price": 9.97
       },
       {
         "score": "Canada 2-1 Bosnia & Herzegovina",
-        "probability": 9.7,
-        "fair_price": 10.29
+        "probability": 9.8,
+        "fair_price": 10.19
       },
       {
         "score": "Canada 0-0 Bosnia & Herzegovina",
-        "probability": 7,
-        "fair_price": 14.28
+        "probability": 6.4,
+        "fair_price": 15.62
       }
     ],
     "model_market_view": [
@@ -178,15 +180,15 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 50.1,
-        "fair_price": 1.99
+        "probability": 51.8,
+        "fair_price": 1.93
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 49.9,
-        "fair_price": 2.01
+        "probability": 48.2,
+        "fair_price": 2.07
       },
       {
         "category": "Main Match",
@@ -206,218 +208,218 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93,
-        "fair_price": 1.08
+        "probability": 93.6,
+        "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7,
-        "fair_price": 14.28
+        "probability": 6.4,
+        "fair_price": 15.62
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 74.4,
-        "fair_price": 1.34
+        "probability": 76,
+        "fair_price": 1.32
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25.6,
-        "fair_price": 3.9
+        "probability": 24,
+        "fair_price": 4.17
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 49.6,
-        "fair_price": 2.02
+        "probability": 51.8,
+        "fair_price": 1.93
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 50.4,
-        "fair_price": 1.98
+        "probability": 48.2,
+        "fair_price": 2.08
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 27.7,
-        "fair_price": 3.61
+        "probability": 29.7,
+        "fair_price": 3.37
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 72.3,
-        "fair_price": 1.38
+        "probability": 70.3,
+        "fair_price": 1.42
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13.1,
-        "fair_price": 7.63
+        "probability": 14.4,
+        "fair_price": 6.92
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 86.9,
-        "fair_price": 1.15
+        "probability": 85.6,
+        "fair_price": 1.17
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Over 0.5 Goals",
-        "probability": 82,
-        "fair_price": 1.22
+        "probability": 83,
+        "fair_price": 1.21
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Under 0.5 Goals",
-        "probability": 18,
-        "fair_price": 5.54
+        "probability": 17,
+        "fair_price": 5.87
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Over 1.5 Goals",
-        "probability": 51.1,
-        "fair_price": 1.96
+        "probability": 52.8,
+        "fair_price": 1.89
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Under 1.5 Goals",
-        "probability": 48.9,
-        "fair_price": 2.04
+        "probability": 47.2,
+        "fair_price": 2.12
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Over 2.5 Goals",
-        "probability": 24.6,
-        "fair_price": 4.06
+        "probability": 26.2,
+        "fair_price": 3.82
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Under 2.5 Goals",
-        "probability": 75.4,
-        "fair_price": 1.33
+        "probability": 73.8,
+        "fair_price": 1.35
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Over 0.5 Goals",
-        "probability": 61.2,
-        "fair_price": 1.63
+        "probability": 62.4,
+        "fair_price": 1.6
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Under 0.5 Goals",
-        "probability": 38.8,
-        "fair_price": 2.58
+        "probability": 37.6,
+        "fair_price": 2.66
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Over 1.5 Goals",
-        "probability": 24.4,
-        "fair_price": 4.09
+        "probability": 25.6,
+        "fair_price": 3.9
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Under 1.5 Goals",
-        "probability": 75.6,
-        "fair_price": 1.32
+        "probability": 74.4,
+        "fair_price": 1.34
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Over 2.5 Goals",
-        "probability": 7.1,
-        "fair_price": 14.15
+        "probability": 7.6,
+        "fair_price": 13.1
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Under 2.5 Goals",
-        "probability": 92.9,
+        "probability": 92.4,
         "fair_price": 1.08
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Canada 1H Win",
-        "probability": 40.4,
-        "fair_price": 2.48
-      },
-      {
-        "category": "First Half",
-        "market": "First Half Result",
-        "selection": "1H Draw",
-        "probability": 41,
+        "probability": 41.1,
         "fair_price": 2.44
       },
       {
         "category": "First Half",
         "market": "First Half Result",
+        "selection": "1H Draw",
+        "probability": 40.1,
+        "fair_price": 2.49
+      },
+      {
+        "category": "First Half",
+        "market": "First Half Result",
         "selection": "Bosnia & Herzegovina 1H Win",
-        "probability": 18.6,
-        "fair_price": 5.37
+        "probability": 18.8,
+        "fair_price": 5.32
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 69.8,
-        "fair_price": 1.43
+        "probability": 71,
+        "fair_price": 1.41
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30.2,
-        "fair_price": 3.31
+        "probability": 29,
+        "fair_price": 3.44
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 33.6,
-        "fair_price": 2.98
+        "probability": 35.1,
+        "fair_price": 2.85
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66.4,
-        "fair_price": 1.51
+        "probability": 64.9,
+        "fair_price": 1.54
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 18.6,
-        "fair_price": 5.37
+        "probability": 19.6,
+        "fair_price": 5.11
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 81.4,
-        "fair_price": 1.23
+        "probability": 80.4,
+        "fair_price": 1.24
       }
     ],
     "market_scan": {
@@ -433,7 +435,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 52.1,
@@ -442,11 +444,16 @@ window.embeddedDataset = [
       "calibrated_home_probability": 52.1,
       "calibrated_draw_probability": 27.2,
       "calibrated_away_probability": 20.7,
-      "total_goals_mean": 2.66,
+      "total_goals_mean": 2.75,
       "tempo_adjustment": 0.22,
+      "goal_suppression": 0,
+      "break_open_risk": 0.09,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.09,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -633,49 +640,51 @@ window.embeddedDataset = [
         "odds_refresh_note": "BetRight was not present in the matched Odds API event."
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 49.7,
-      "over_fair_price": 2.01,
-      "under_probability": 50.3,
-      "under_fair_price": 1.99,
-      "total_goals_mean": 2.66,
+      "over_probability": 52.1,
+      "over_fair_price": 1.92,
+      "under_probability": 47.9,
+      "under_fair_price": 2.09,
+      "total_goals_mean": 2.76,
       "tempo_adjustment": 0.32,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.04,
+      "break_open_risk": 0.15,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "USA 1-1 Paraguay",
-        "probability": 11.9,
-        "fair_price": 8.39
+        "probability": 11.6,
+        "fair_price": 8.6
       },
       {
         "score": "USA 1-0 Paraguay",
-        "probability": 11.1,
-        "fair_price": 9.02
+        "probability": 10.4,
+        "fair_price": 9.66
       },
       {
         "score": "USA 2-1 Paraguay",
-        "probability": 9.4,
-        "fair_price": 10.59
+        "probability": 9.5,
+        "fair_price": 10.5
       },
       {
         "score": "USA 2-0 Paraguay",
-        "probability": 8.8,
-        "fair_price": 11.39
+        "probability": 8.5,
+        "fair_price": 11.8
       },
       {
         "score": "USA 0-1 Paraguay",
-        "probability": 7.5,
-        "fair_price": 13.3
+        "probability": 7.1,
+        "fair_price": 14.07
       }
     ],
     "model_market_view": [
@@ -690,43 +699,43 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Paraguay or Draw",
-        "probability": 54.6,
-        "fair_price": 1.83
+        "probability": 55.2,
+        "fair_price": 1.81
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "USA or Paraguay",
-        "probability": 70.1,
-        "fair_price": 1.43
+        "probability": 69.3,
+        "fair_price": 1.44
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "USA Draw No Bet",
-        "probability": 64.9,
-        "fair_price": 1.54
+        "probability": 64.6,
+        "fair_price": 1.55
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Paraguay Draw No Bet",
-        "probability": 35.1,
-        "fair_price": 2.85
+        "probability": 35.4,
+        "fair_price": 2.82
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 52.4,
-        "fair_price": 1.91
+        "probability": 54.4,
+        "fair_price": 1.84
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 47.6,
-        "fair_price": 2.1
+        "probability": 45.6,
+        "fair_price": 2.19
       },
       {
         "category": "Main Match",
@@ -746,218 +755,218 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93,
-        "fair_price": 1.08
+        "probability": 93.7,
+        "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7,
-        "fair_price": 14.3
+        "probability": 6.3,
+        "fair_price": 15.82
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 74.4,
-        "fair_price": 1.34
+        "probability": 76.2,
+        "fair_price": 1.31
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25.6,
-        "fair_price": 3.91
+        "probability": 23.8,
+        "fair_price": 4.21
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 49.7,
-        "fair_price": 2.01
+        "probability": 52.1,
+        "fair_price": 1.92
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 50.3,
-        "fair_price": 1.99
+        "probability": 47.9,
+        "fair_price": 2.09
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 27.7,
-        "fair_price": 3.61
+        "probability": 29.9,
+        "fair_price": 3.34
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 72.3,
-        "fair_price": 1.38
+        "probability": 70.1,
+        "fair_price": 1.43
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13.1,
-        "fair_price": 7.62
+        "probability": 14.6,
+        "fair_price": 6.83
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 86.9,
-        "fair_price": 1.15
+        "probability": 85.4,
+        "fair_price": 1.17
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "USA Over 0.5 Goals",
-        "probability": 79.5,
-        "fair_price": 1.26
+        "probability": 80.5,
+        "fair_price": 1.24
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "USA Under 0.5 Goals",
-        "probability": 20.5,
-        "fair_price": 4.88
+        "probability": 19.5,
+        "fair_price": 5.14
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "USA Over 1.5 Goals",
-        "probability": 47,
-        "fair_price": 2.13
+        "probability": 48.7,
+        "fair_price": 2.05
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "USA Under 1.5 Goals",
-        "probability": 53,
-        "fair_price": 1.89
+        "probability": 51.3,
+        "fair_price": 1.95
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "USA Over 2.5 Goals",
-        "probability": 21.3,
-        "fair_price": 4.7
+        "probability": 22.6,
+        "fair_price": 4.42
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "USA Under 2.5 Goals",
-        "probability": 78.7,
-        "fair_price": 1.27
+        "probability": 77.4,
+        "fair_price": 1.29
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Paraguay Over 0.5 Goals",
-        "probability": 65.9,
-        "fair_price": 1.52
+        "probability": 67.5,
+        "fair_price": 1.48
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Paraguay Under 0.5 Goals",
-        "probability": 34.1,
-        "fair_price": 2.93
+        "probability": 32.5,
+        "fair_price": 3.08
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Paraguay Over 1.5 Goals",
-        "probability": 29.2,
-        "fair_price": 3.43
+        "probability": 31,
+        "fair_price": 3.23
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Paraguay Under 1.5 Goals",
-        "probability": 70.8,
-        "fair_price": 1.41
+        "probability": 69,
+        "fair_price": 1.45
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Paraguay Over 2.5 Goals",
-        "probability": 9.5,
-        "fair_price": 10.56
+        "probability": 10.4,
+        "fair_price": 9.57
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Paraguay Under 2.5 Goals",
-        "probability": 90.5,
-        "fair_price": 1.1
+        "probability": 89.6,
+        "fair_price": 1.12
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "USA 1H Win",
-        "probability": 36.5,
-        "fair_price": 2.74
+        "probability": 36.9,
+        "fair_price": 2.71
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 41.6,
-        "fair_price": 2.41
+        "probability": 40.7,
+        "fair_price": 2.46
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Paraguay 1H Win",
-        "probability": 22,
-        "fair_price": 4.56
+        "probability": 22.4,
+        "fair_price": 4.46
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 69.8,
-        "fair_price": 1.43
+        "probability": 71.1,
+        "fair_price": 1.41
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30.2,
-        "fair_price": 3.31
+        "probability": 28.9,
+        "fair_price": 3.46
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 33.6,
-        "fair_price": 2.97
+        "probability": 35.3,
+        "fair_price": 2.84
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66.4,
-        "fair_price": 1.51
+        "probability": 64.7,
+        "fair_price": 1.54
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 19.6,
-        "fair_price": 5.11
+        "probability": 20.7,
+        "fair_price": 4.83
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 80.4,
-        "fair_price": 1.24
+        "probability": 79.3,
+        "fair_price": 1.26
       }
     ],
     "market_scan": {
@@ -973,20 +982,112 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 45.4,
       "base_draw_probability": 29.9,
       "base_away_probability": 24.6,
-      "calibrated_home_probability": 45.4,
-      "calibrated_draw_probability": 29.9,
+      "calibrated_home_probability": 44.8,
+      "calibrated_draw_probability": 30.7,
       "calibrated_away_probability": 24.6,
-      "total_goals_mean": 2.66,
+      "total_goals_mean": 2.76,
       "tempo_adjustment": 0.32,
-      "draw_lift_points": 0,
+      "goal_suppression": 0.04,
+      "break_open_risk": 0.15,
+      "draw_lift_points": 0.8,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0.8,
+      "goal_suppression_points": 0.04,
+      "break_open_risk_points": 0.15,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
+    },
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "United States",
+        "stats": {
+          "foulscommitted": 13,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 2,
+          "woncorners": 3,
+          "saves": 1,
+          "possessionpct": 65.3,
+          "totalshots": 16,
+          "shotsontarget": 6,
+          "shotpct": 0.4,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 509,
+          "totalpasses": 598,
+          "passpct": 0.9,
+          "accuratecrosses": 3,
+          "totalcrosses": 19,
+          "crosspct": 0.2,
+          "totallongballs": 48,
+          "accuratelongballs": 26,
+          "longballpct": 0.5,
+          "blockedshots": 4,
+          "effectivetackles": 7,
+          "totaltackles": 9,
+          "tacklepct": 0.8,
+          "interceptions": 9,
+          "effectiveclearance": 15,
+          "totalclearance": 15
+        }
+      },
+      "away": {
+        "team": "Paraguay",
+        "stats": {
+          "foulscommitted": 17,
+          "yellowcards": 5,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 1,
+          "saves": 3,
+          "possessionpct": 34.7,
+          "totalshots": 9,
+          "shotsontarget": 1,
+          "shotpct": 0.1,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 232,
+          "totalpasses": 319,
+          "passpct": 0.7,
+          "accuratecrosses": 1,
+          "totalcrosses": 5,
+          "crosspct": 0,
+          "totallongballs": 59,
+          "accuratelongballs": 20,
+          "longballpct": 0.3,
+          "blockedshots": 5,
+          "effectivetackles": 16,
+          "totaltackles": 21,
+          "tacklepct": 0.8,
+          "interceptions": 10,
+          "effectiveclearance": 33,
+          "totalclearance": 33
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "United States 4-1 Paraguay",
+      "source": "ESPN",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states",
+      "predicted_result": "USA win",
+      "predicted_probability": 44.8,
+      "actual_result": "United States win",
+      "expected_total_goals": 2.76,
+      "actual_total_goals": 5,
+      "stats_used": true,
+      "shot_count": "16-9",
+      "shots_on_target": "6-1",
+      "flags": [],
+      "summary": "Result was broadly inside the expected model shape."
     }
   },
   {
@@ -1079,48 +1180,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 43.1,
-      "over_fair_price": 2.32,
-      "under_probability": 56.9,
-      "under_fair_price": 1.76,
-      "total_goals_mean": 2.4,
+      "over_probability": 33.2,
+      "over_fair_price": 3.01,
+      "under_probability": 66.8,
+      "under_fair_price": 1.5,
+      "total_goals_mean": 2.03,
       "tempo_adjustment": -0.28,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.21,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Qatar 0-1 Switzerland",
-        "probability": 16.7,
-        "fair_price": 5.97
+        "probability": 20.1,
+        "fair_price": 4.98
       },
       {
         "score": "Qatar 0-2 Switzerland",
-        "probability": 15.5,
-        "fair_price": 6.46
-      },
-      {
-        "score": "Qatar 0-3 Switzerland",
-        "probability": 9.5,
-        "fair_price": 10.47
-      },
-      {
-        "score": "Qatar 1-1 Switzerland",
-        "probability": 9.2,
-        "fair_price": 10.81
+        "probability": 15.4,
+        "fair_price": 6.48
       },
       {
         "score": "Qatar 0-0 Switzerland",
-        "probability": 9,
-        "fair_price": 11.05
+        "probability": 13.1,
+        "fair_price": 7.64
+      },
+      {
+        "score": "Qatar 1-1 Switzerland",
+        "probability": 10,
+        "fair_price": 9.99
+      },
+      {
+        "score": "Qatar 0-3 Switzerland",
+        "probability": 7.9,
+        "fair_price": 12.67
       }
     ],
     "model_market_view": [
@@ -1128,281 +1231,281 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Qatar or Draw",
-        "probability": 30.7,
-        "fair_price": 3.25
+        "probability": 36,
+        "fair_price": 2.78
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Switzerland or Draw",
-        "probability": 91.8,
+        "probability": 91.4,
         "fair_price": 1.09
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Qatar or Switzerland",
-        "probability": 77.5,
-        "fair_price": 1.29
+        "probability": 72.7,
+        "fair_price": 1.38
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Qatar Draw No Bet",
-        "probability": 10.6,
-        "fair_price": 9.44
+        "probability": 11.9,
+        "fair_price": 8.42
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Switzerland Draw No Bet",
-        "probability": 89.4,
-        "fair_price": 1.12
+        "probability": 88.1,
+        "fair_price": 1.13
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 35.8,
-        "fair_price": 2.79
+        "probability": 30.8,
+        "fair_price": 3.25
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 64.2,
-        "fair_price": 1.56
+        "probability": 69.2,
+        "fair_price": 1.44
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.6,
-        "fair_price": 2.02
+        "probability": 49.1,
+        "fair_price": 2.03
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.4,
-        "fair_price": 1.98
+        "probability": 50.9,
+        "fair_price": 1.97
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 91,
-        "fair_price": 1.1
+        "probability": 86.9,
+        "fair_price": 1.15
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 9,
-        "fair_price": 11.05
+        "probability": 13.1,
+        "fair_price": 7.64
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 69.2,
-        "fair_price": 1.44
+        "probability": 60.3,
+        "fair_price": 1.66
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 30.8,
-        "fair_price": 3.25
+        "probability": 39.7,
+        "fair_price": 2.52
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 43.1,
-        "fair_price": 2.32
+        "probability": 33.2,
+        "fair_price": 3.01
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 56.9,
-        "fair_price": 1.76
+        "probability": 66.8,
+        "fair_price": 1.5
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 22.2,
-        "fair_price": 4.51
+        "probability": 14.9,
+        "fair_price": 6.71
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 77.8,
-        "fair_price": 1.29
+        "probability": 85.1,
+        "fair_price": 1.17
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 9.6,
-        "fair_price": 10.39
+        "probability": 5.6,
+        "fair_price": 17.95
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 90.4,
-        "fair_price": 1.11
+        "probability": 94.4,
+        "fair_price": 1.06
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Over 0.5 Goals",
-        "probability": 42.5,
-        "fair_price": 2.36
+        "probability": 39.2,
+        "fair_price": 2.55
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Under 0.5 Goals",
-        "probability": 57.5,
-        "fair_price": 1.74
+        "probability": 60.8,
+        "fair_price": 1.65
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Over 1.5 Goals",
-        "probability": 10.7,
-        "fair_price": 9.38
+        "probability": 9,
+        "fair_price": 11.15
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Under 1.5 Goals",
-        "probability": 89.3,
-        "fair_price": 1.12
+        "probability": 91,
+        "fair_price": 1.1
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Over 2.5 Goals",
-        "probability": 1.9,
-        "fair_price": 53.5
+        "probability": 1.4,
+        "fair_price": 70.13
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Under 2.5 Goals",
-        "probability": 98.1,
-        "fair_price": 1.02
+        "probability": 98.6,
+        "fair_price": 1.01
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Over 0.5 Goals",
-        "probability": 84.3,
-        "fair_price": 1.19
+        "probability": 78.5,
+        "fair_price": 1.27
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Under 0.5 Goals",
-        "probability": 15.7,
-        "fair_price": 6.36
+        "probability": 21.5,
+        "fair_price": 4.64
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Over 1.5 Goals",
-        "probability": 55.2,
-        "fair_price": 1.81
+        "probability": 45.4,
+        "fair_price": 2.2
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Under 1.5 Goals",
-        "probability": 44.8,
-        "fair_price": 2.23
+        "probability": 54.6,
+        "fair_price": 1.83
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Over 2.5 Goals",
-        "probability": 28.3,
-        "fair_price": 3.54
+        "probability": 20,
+        "fair_price": 5
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Under 2.5 Goals",
-        "probability": 71.7,
-        "fair_price": 1.39
+        "probability": 80,
+        "fair_price": 1.25
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Qatar 1H Win",
-        "probability": 10.6,
-        "fair_price": 9.47
+        "probability": 10.8,
+        "fair_price": 9.23
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 41.3,
-        "fair_price": 2.42
+        "probability": 46.5,
+        "fair_price": 2.15
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Switzerland 1H Win",
-        "probability": 48.1,
-        "fair_price": 2.08
+        "probability": 42.7,
+        "fair_price": 2.34
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 66.1,
-        "fair_price": 1.51
+        "probability": 59.9,
+        "fair_price": 1.67
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 33.9,
-        "fair_price": 2.95
+        "probability": 40.1,
+        "fair_price": 2.5
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 29.4,
-        "fair_price": 3.4
+        "probability": 23.3,
+        "fair_price": 4.29
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 70.6,
-        "fair_price": 1.42
+        "probability": 76.7,
+        "fair_price": 1.3
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 12.4,
-        "fair_price": 8.04
+        "probability": 10,
+        "fair_price": 9.98
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 87.6,
-        "fair_price": 1.14
+        "probability": 90,
+        "fair_price": 1.11
       }
     ],
     "market_scan": {
@@ -1418,7 +1521,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M08-QAT-V-SUI.pdf",
     "final_score": "Qatar 1-1 Switzerland",
@@ -1426,14 +1529,108 @@ window.embeddedDataset = [
       "base_home_probability": 6.8,
       "base_draw_probability": 15.5,
       "base_away_probability": 77.7,
-      "calibrated_home_probability": 8.2,
-      "calibrated_draw_probability": 22.5,
-      "calibrated_away_probability": 69.3,
-      "total_goals_mean": 2.4,
+      "calibrated_home_probability": 8.6,
+      "calibrated_draw_probability": 27.3,
+      "calibrated_away_probability": 64,
+      "total_goals_mean": 2.03,
       "tempo_adjustment": -0.28,
-      "draw_lift_points": 7.5,
-      "favourite_compression_points": 5.5,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.21,
+      "break_open_risk": 0,
+      "draw_lift_points": 12.8,
+      "favourite_compression_points": 7.5,
+      "low_block_draw_risk_points": 4.2,
+      "goal_suppression_points": 0.21,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
+    },
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Qatar",
+        "stats": {
+          "foulscommitted": 12,
+          "yellowcards": 2,
+          "redcards": 0,
+          "offsides": 0,
+          "woncorners": 3,
+          "saves": 5,
+          "possessionpct": 32,
+          "totalshots": 6,
+          "shotsontarget": 3,
+          "shotpct": 0.5,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 200,
+          "totalpasses": 278,
+          "passpct": 0.7,
+          "accuratecrosses": 1,
+          "totalcrosses": 9,
+          "crosspct": 0.1,
+          "totallongballs": 64,
+          "accuratelongballs": 19,
+          "longballpct": 0.3,
+          "blockedshots": 0,
+          "effectivetackles": 9,
+          "totaltackles": 14,
+          "tacklepct": 0.6,
+          "interceptions": 11,
+          "effectiveclearance": 31,
+          "totalclearance": 31
+        }
+      },
+      "away": {
+        "team": "Switzerland",
+        "stats": {
+          "foulscommitted": 11,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 10,
+          "saves": 3,
+          "possessionpct": 68,
+          "totalshots": 26,
+          "shotsontarget": 7,
+          "shotpct": 0.3,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 1,
+          "accuratepasses": 527,
+          "totalpasses": 576,
+          "passpct": 0.9,
+          "accuratecrosses": 6,
+          "totalcrosses": 35,
+          "crosspct": 0.2,
+          "totallongballs": 35,
+          "accuratelongballs": 27,
+          "longballpct": 0.8,
+          "blockedshots": 9,
+          "effectivetackles": 6,
+          "totaltackles": 8,
+          "tacklepct": 0.8,
+          "interceptions": 7,
+          "effectiveclearance": 13,
+          "totalclearance": 13
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Qatar 1-1 Switzerland",
+      "source": "FIFA",
+      "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M08-QAT-V-SUI.pdf",
+      "predicted_result": "Switzerland win",
+      "predicted_probability": 64,
+      "actual_result": "Draw",
+      "expected_total_goals": 2.03,
+      "actual_total_goals": 2,
+      "stats_used": true,
+      "shot_count": "6-26",
+      "shots_on_target": "3-7",
+      "flags": [
+        "draw-risk-underestimated"
+      ],
+      "summary": "Learning flags: draw-risk-underestimated."
     }
   },
   {
@@ -1449,15 +1646,16 @@ window.embeddedDataset = [
         "market_matrix": "Moneyline",
         "target_selection": "Brazil to Win",
         "true_price": 1.42,
-        "current_odds": 31,
+        "current_odds": 2.25,
         "au_bookie": "PointsBet",
         "previous_odds": 2.25,
         "odds_updated_at": "2026-06-14T00:12:23.162Z",
         "odds_checked_at": "2026-06-14T00:19:38.358Z",
-        "odds_refresh_status": "checked_current",
-        "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
+        "odds_refresh_status": "frozen_post_kickoff",
+        "odds_refresh_note": "Post-kickoff or stale outlier rejected; restored last sane pre-match price.",
         "best_price_tied_books": null,
-        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
+        "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
+        "rejected_post_start_odds": 31
       },
       {
         "market_matrix": "Full Match Model",
@@ -1525,48 +1723,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 46.7,
-      "over_fair_price": 2.14,
-      "under_probability": 53.3,
-      "under_fair_price": 1.88,
-      "total_goals_mean": 2.54,
+      "over_probability": 47.1,
+      "over_fair_price": 2.12,
+      "under_probability": 52.9,
+      "under_fair_price": 1.89,
+      "total_goals_mean": 2.56,
       "tempo_adjustment": 0.02,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.02,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Brazil 1-0 Morocco",
-        "probability": 13.7,
-        "fair_price": 7.29
+        "probability": 13.6,
+        "fair_price": 7.36
       },
       {
         "score": "Brazil 2-0 Morocco",
-        "probability": 12,
-        "fair_price": 8.36
+        "probability": 11.9,
+        "fair_price": 8.41
       },
       {
         "score": "Brazil 1-1 Morocco",
-        "probability": 11,
-        "fair_price": 9.12
+        "probability": 10.9,
+        "fair_price": 9.14
       },
       {
         "score": "Brazil 2-1 Morocco",
         "probability": 9.6,
-        "fair_price": 10.47
+        "fair_price": 10.44
       },
       {
         "score": "Brazil 0-0 Morocco",
-        "probability": 7.9,
-        "fair_price": 12.7
+        "probability": 7.8,
+        "fair_price": 12.89
       }
     ],
     "model_market_view": [
@@ -1581,43 +1781,43 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Morocco or Draw",
-        "probability": 42.2,
-        "fair_price": 2.37
+        "probability": 42.4,
+        "fair_price": 2.36
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Brazil or Morocco",
-        "probability": 75.1,
+        "probability": 74.9,
         "fair_price": 1.33
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Brazil Draw No Bet",
-        "probability": 76.9,
+        "probability": 76.8,
         "fair_price": 1.3
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Morocco Draw No Bet",
-        "probability": 23.1,
-        "fair_price": 4.33
+        "probability": 23.2,
+        "fair_price": 4.32
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 45.4,
-        "fair_price": 2.2
+        "probability": 45.7,
+        "fair_price": 2.19
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 54.6,
-        "fair_price": 1.83
+        "probability": 54.3,
+        "fair_price": 1.84
       },
       {
         "category": "Main Match",
@@ -1637,217 +1837,217 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 92.1,
-        "fair_price": 1.09
+        "probability": 92.2,
+        "fair_price": 1.08
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7.9,
-        "fair_price": 12.7
+        "probability": 7.8,
+        "fair_price": 12.89
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 72.1,
-        "fair_price": 1.39
+        "probability": 72.4,
+        "fair_price": 1.38
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 27.9,
-        "fair_price": 3.59
+        "probability": 27.6,
+        "fair_price": 3.63
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 46.7,
-        "fair_price": 2.14
+        "probability": 47.1,
+        "fair_price": 2.12
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 53.3,
-        "fair_price": 1.88
+        "probability": 52.9,
+        "fair_price": 1.89
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 25.1,
-        "fair_price": 3.98
+        "probability": 25.5,
+        "fair_price": 3.93
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 74.9,
+        "probability": 74.5,
         "fair_price": 1.34
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 11.4,
-        "fair_price": 8.74
+        "probability": 11.7,
+        "fair_price": 8.58
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 88.6,
+        "probability": 88.3,
         "fair_price": 1.13
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Brazil Over 0.5 Goals",
-        "probability": 82.5,
+        "probability": 82.7,
         "fair_price": 1.21
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Brazil Under 0.5 Goals",
-        "probability": 17.5,
-        "fair_price": 5.72
+        "probability": 17.3,
+        "fair_price": 5.76
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Brazil Over 1.5 Goals",
-        "probability": 52,
-        "fair_price": 1.92
+        "probability": 52.3,
+        "fair_price": 1.91
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Brazil Under 1.5 Goals",
-        "probability": 48,
-        "fair_price": 2.08
+        "probability": 47.7,
+        "fair_price": 2.09
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Brazil Over 2.5 Goals",
-        "probability": 25.4,
-        "fair_price": 3.93
+        "probability": 25.6,
+        "fair_price": 3.9
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Brazil Under 2.5 Goals",
-        "probability": 74.6,
+        "probability": 74.4,
         "fair_price": 1.34
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Morocco Over 0.5 Goals",
-        "probability": 55,
-        "fair_price": 1.82
+        "probability": 55.3,
+        "fair_price": 1.81
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Morocco Under 0.5 Goals",
-        "probability": 45,
-        "fair_price": 2.22
+        "probability": 44.7,
+        "fair_price": 2.24
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Morocco Over 1.5 Goals",
-        "probability": 19.1,
-        "fair_price": 5.24
+        "probability": 19.3,
+        "fair_price": 5.18
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Morocco Under 1.5 Goals",
-        "probability": 80.9,
+        "probability": 80.7,
         "fair_price": 1.24
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Morocco Over 2.5 Goals",
-        "probability": 4.7,
-        "fair_price": 21.18
+        "probability": 4.8,
+        "fair_price": 20.76
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Morocco Under 2.5 Goals",
-        "probability": 95.3,
+        "probability": 95.2,
         "fair_price": 1.05
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Brazil 1H Win",
-        "probability": 42.8,
-        "fair_price": 2.34
+        "probability": 42.9,
+        "fair_price": 2.33
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 41.5,
-        "fair_price": 2.41
+        "probability": 41.4,
+        "fair_price": 2.42
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Morocco 1H Win",
-        "probability": 15.7,
-        "fair_price": 6.38
+        "probability": 15.8,
+        "fair_price": 6.34
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 68.1,
-        "fair_price": 1.47
+        "probability": 68.4,
+        "fair_price": 1.46
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 31.9,
-        "fair_price": 3.14
+        "probability": 31.6,
+        "fair_price": 3.16
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 31.7,
-        "fair_price": 3.15
+        "probability": 31.9,
+        "fair_price": 3.13
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 68.3,
-        "fair_price": 1.46
+        "probability": 68.1,
+        "fair_price": 1.47
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 16.4,
-        "fair_price": 6.09
+        "probability": 16.6,
+        "fair_price": 6.03
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 83.6,
+        "probability": 83.4,
         "fair_price": 1.2
       }
     ],
@@ -1864,7 +2064,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR.pdf",
     "final_score": "Brazil 1-1 Morocco",
@@ -1872,14 +2072,109 @@ window.embeddedDataset = [
       "base_home_probability": 57.8,
       "base_draw_probability": 24.9,
       "base_away_probability": 17.4,
-      "calibrated_home_probability": 57.8,
-      "calibrated_draw_probability": 24.9,
+      "calibrated_home_probability": 57.6,
+      "calibrated_draw_probability": 25.1,
       "calibrated_away_probability": 17.4,
-      "total_goals_mean": 2.54,
+      "total_goals_mean": 2.56,
       "tempo_adjustment": 0.02,
-      "draw_lift_points": 0,
+      "goal_suppression": 0,
+      "break_open_risk": 0.02,
+      "draw_lift_points": 0.2,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0.2,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.02,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
+    },
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Brazil",
+        "stats": {
+          "foulscommitted": 16,
+          "yellowcards": 2,
+          "redcards": 0,
+          "offsides": 0,
+          "woncorners": 6,
+          "saves": 2,
+          "possessionpct": 51.4,
+          "totalshots": 12,
+          "shotsontarget": 5,
+          "shotpct": 0.4,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 449,
+          "totalpasses": 514,
+          "passpct": 0.9,
+          "accuratecrosses": 4,
+          "totalcrosses": 16,
+          "crosspct": 0.3,
+          "totallongballs": 36,
+          "accuratelongballs": 18,
+          "longballpct": 0.5,
+          "blockedshots": 3,
+          "effectivetackles": 13,
+          "totaltackles": 23,
+          "tacklepct": 0.6,
+          "interceptions": 5,
+          "effectiveclearance": 23,
+          "totalclearance": 23
+        }
+      },
+      "away": {
+        "team": "Morocco",
+        "stats": {
+          "foulscommitted": 14,
+          "yellowcards": 0,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 2,
+          "saves": 4,
+          "possessionpct": 48.6,
+          "totalshots": 14,
+          "shotsontarget": 3,
+          "shotpct": 0.2,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 419,
+          "totalpasses": 486,
+          "passpct": 0.9,
+          "accuratecrosses": 2,
+          "totalcrosses": 15,
+          "crosspct": 0.1,
+          "totallongballs": 52,
+          "accuratelongballs": 17,
+          "longballpct": 0.3,
+          "blockedshots": 6,
+          "effectivetackles": 18,
+          "totaltackles": 26,
+          "tacklepct": 0.7,
+          "interceptions": 5,
+          "effectiveclearance": 17,
+          "totalclearance": 17
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Brazil 1-1 Morocco",
+      "source": "FIFA",
+      "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR.pdf",
+      "predicted_result": "Brazil win",
+      "predicted_probability": 57.6,
+      "actual_result": "Draw",
+      "expected_total_goals": 2.56,
+      "actual_total_goals": 2,
+      "stats_used": true,
+      "shot_count": "12-14",
+      "shots_on_target": "5-3",
+      "flags": [
+        "draw-risk-underestimated",
+        "territory-did-not-become-shot-volume"
+      ],
+      "summary": "Learning flags: draw-risk-underestimated, territory-did-not-become-shot-volume."
     }
   },
   {
@@ -1923,15 +2218,16 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 4.33,
-        "current_odds": 21,
+        "current_odds": 5.25,
         "au_bookie": "PointsBet / TAB",
         "odds_checked_at": "2026-06-14T03:13:17.256Z",
         "odds_updated_at": "2026-06-14T03:05:07.369Z",
-        "odds_refresh_status": "bookmaker_missing",
-        "odds_refresh_note": "PointsBet / TAB was not present in the matched Odds API event.",
+        "odds_refresh_status": "frozen_post_kickoff",
+        "odds_refresh_note": "Post-kickoff or stale outlier rejected; restored last sane pre-match price.",
         "best_price_tied_books": "PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "previous_odds": 5.25
+        "previous_odds": 5.25,
+        "rejected_post_start_odds": 21
       },
       {
         "market_matrix": "Full Match Model",
@@ -1986,48 +2282,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 50.2,
-      "over_fair_price": 1.99,
-      "under_probability": 49.8,
-      "under_fair_price": 2.01,
-      "total_goals_mean": 2.68,
+      "over_probability": 51.3,
+      "over_fair_price": 1.95,
+      "under_probability": 48.7,
+      "under_fair_price": 2.05,
+      "total_goals_mean": 2.73,
       "tempo_adjustment": 0.11,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Haiti 0-1 Scotland",
-        "probability": 12.8,
-        "fair_price": 7.81
+        "probability": 12.4,
+        "fair_price": 8.03
       },
       {
         "score": "Haiti 0-2 Scotland",
-        "probability": 12,
-        "fair_price": 8.34
+        "probability": 11.8,
+        "fair_price": 8.44
       },
       {
         "score": "Haiti 1-1 Scotland",
-        "probability": 10.4,
-        "fair_price": 9.63
+        "probability": 10.3,
+        "fair_price": 9.75
       },
       {
         "score": "Haiti 1-2 Scotland",
-        "probability": 9.7,
-        "fair_price": 10.3
+        "probability": 9.8,
+        "fair_price": 10.25
       },
       {
         "score": "Haiti 0-3 Scotland",
         "probability": 7.5,
-        "fair_price": 13.38
+        "fair_price": 13.31
       }
     ],
     "model_market_view": [
@@ -2070,15 +2368,15 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 47,
-        "fair_price": 2.13
+        "probability": 47.8,
+        "fair_price": 2.09
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 53,
-        "fair_price": 1.89
+        "probability": 52.2,
+        "fair_price": 1.91
       },
       {
         "category": "Main Match",
@@ -2098,218 +2396,218 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93.2,
+        "probability": 93.5,
         "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 6.8,
-        "fair_price": 14.61
+        "probability": 6.5,
+        "fair_price": 15.29
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 74.8,
-        "fair_price": 1.34
+        "probability": 75.6,
+        "fair_price": 1.32
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25.2,
-        "fair_price": 3.97
+        "probability": 24.4,
+        "fair_price": 4.1
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 50.2,
-        "fair_price": 1.99
+        "probability": 51.3,
+        "fair_price": 1.95
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 49.8,
-        "fair_price": 2.01
+        "probability": 48.7,
+        "fair_price": 2.05
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 28.2,
-        "fair_price": 3.55
+        "probability": 29.2,
+        "fair_price": 3.43
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 71.8,
-        "fair_price": 1.39
+        "probability": 70.8,
+        "fair_price": 1.41
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13.4,
-        "fair_price": 7.44
+        "probability": 14.1,
+        "fair_price": 7.09
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 86.6,
+        "probability": 85.9,
         "fair_price": 1.16
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Haiti Over 0.5 Goals",
-        "probability": 55.5,
-        "fair_price": 1.8
+        "probability": 56.1,
+        "fair_price": 1.78
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Haiti Under 0.5 Goals",
-        "probability": 44.5,
-        "fair_price": 2.25
+        "probability": 43.9,
+        "fair_price": 2.28
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Haiti Over 1.5 Goals",
-        "probability": 19.5,
-        "fair_price": 5.13
+        "probability": 20,
+        "fair_price": 5
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Haiti Under 1.5 Goals",
-        "probability": 80.5,
-        "fair_price": 1.24
+        "probability": 80,
+        "fair_price": 1.25
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Haiti Over 2.5 Goals",
-        "probability": 4.9,
-        "fair_price": 20.44
+        "probability": 5.1,
+        "fair_price": 19.63
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Haiti Under 2.5 Goals",
-        "probability": 95.1,
+        "probability": 94.9,
         "fair_price": 1.05
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Scotland Over 0.5 Goals",
-        "probability": 84.6,
+        "probability": 85.1,
         "fair_price": 1.18
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Scotland Under 0.5 Goals",
-        "probability": 15.4,
-        "fair_price": 6.5
+        "probability": 14.9,
+        "fair_price": 6.71
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Scotland Over 1.5 Goals",
-        "probability": 55.8,
-        "fair_price": 1.79
+        "probability": 56.7,
+        "fair_price": 1.76
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Scotland Under 1.5 Goals",
-        "probability": 44.2,
-        "fair_price": 2.26
+        "probability": 43.3,
+        "fair_price": 2.31
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Scotland Over 2.5 Goals",
-        "probability": 28.9,
-        "fair_price": 3.47
+        "probability": 29.7,
+        "fair_price": 3.37
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Scotland Under 2.5 Goals",
-        "probability": 71.1,
-        "fair_price": 1.41
+        "probability": 70.3,
+        "fair_price": 1.42
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Haiti 1H Win",
         "probability": 15.2,
-        "fair_price": 6.6
+        "fair_price": 6.57
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 39.8,
-        "fair_price": 2.51
+        "probability": 39.4,
+        "fair_price": 2.54
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Scotland 1H Win",
-        "probability": 45,
-        "fair_price": 2.22
+        "probability": 45.4,
+        "fair_price": 2.2
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 70.1,
-        "fair_price": 1.43
+        "probability": 70.7,
+        "fair_price": 1.41
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 29.9,
-        "fair_price": 3.34
+        "probability": 29.3,
+        "fair_price": 3.41
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 34,
-        "fair_price": 2.94
+        "probability": 34.7,
+        "fair_price": 2.88
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66,
-        "fair_price": 1.51
+        "probability": 65.3,
+        "fair_price": 1.53
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 17.4,
-        "fair_price": 5.75
+        "probability": 17.8,
+        "fair_price": 5.61
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 82.6,
-        "fair_price": 1.21
+        "probability": 82.2,
+        "fair_price": 1.22
       }
     ],
     "market_scan": {
@@ -2325,7 +2623,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M05-HAI-V-SCO.pdf",
     "final_score": "Haiti 0-1 Scotland",
@@ -2336,11 +2634,105 @@ window.embeddedDataset = [
       "calibrated_home_probability": 16.9,
       "calibrated_draw_probability": 23.1,
       "calibrated_away_probability": 60,
-      "total_goals_mean": 2.68,
+      "total_goals_mean": 2.73,
       "tempo_adjustment": 0.11,
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
+    },
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Haiti",
+        "stats": {
+          "foulscommitted": 23,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 3,
+          "woncorners": 4,
+          "saves": 1,
+          "possessionpct": 53.7,
+          "totalshots": 15,
+          "shotsontarget": 2,
+          "shotpct": 0.1,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 367,
+          "totalpasses": 431,
+          "passpct": 0.9,
+          "accuratecrosses": 5,
+          "totalcrosses": 23,
+          "crosspct": 0.2,
+          "totallongballs": 59,
+          "accuratelongballs": 26,
+          "longballpct": 0.4,
+          "blockedshots": 4,
+          "effectivetackles": 7,
+          "totaltackles": 12,
+          "tacklepct": 0.6,
+          "interceptions": 6,
+          "effectiveclearance": 20,
+          "totalclearance": 20
+        }
+      },
+      "away": {
+        "team": "Scotland",
+        "stats": {
+          "foulscommitted": 21,
+          "yellowcards": 3,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 3,
+          "saves": 2,
+          "possessionpct": 46.3,
+          "totalshots": 9,
+          "shotsontarget": 2,
+          "shotpct": 0.2,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 307,
+          "totalpasses": 374,
+          "passpct": 0.8,
+          "accuratecrosses": 5,
+          "totalcrosses": 14,
+          "crosspct": 0.4,
+          "totallongballs": 58,
+          "accuratelongballs": 30,
+          "longballpct": 0.5,
+          "blockedshots": 2,
+          "effectivetackles": 5,
+          "totaltackles": 12,
+          "tacklepct": 0.4,
+          "interceptions": 6,
+          "effectiveclearance": 17,
+          "totalclearance": 17
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Haiti 0-1 Scotland",
+      "source": "FIFA",
+      "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M05-HAI-V-SCO.pdf",
+      "predicted_result": "Scotland win",
+      "predicted_probability": 60,
+      "actual_result": "Scotland win",
+      "expected_total_goals": 2.73,
+      "actual_total_goals": 1,
+      "stats_used": true,
+      "shot_count": "15-9",
+      "shots_on_target": "2-2",
+      "flags": [
+        "goal-suppression-underweighted"
+      ],
+      "summary": "Learning flags: goal-suppression-underweighted."
     }
   },
   {
@@ -2428,48 +2820,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 45.1,
-      "over_fair_price": 2.22,
-      "under_probability": 54.9,
-      "under_fair_price": 1.82,
-      "total_goals_mean": 2.48,
+      "over_probability": 45.8,
+      "over_fair_price": 2.18,
+      "under_probability": 54.2,
+      "under_fair_price": 1.84,
+      "total_goals_mean": 2.51,
       "tempo_adjustment": 0,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.03,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Australia 0-1 Turkiye",
-        "probability": 13.9,
-        "fair_price": 7.17
+        "probability": 13.7,
+        "fair_price": 7.28
       },
       {
         "score": "Australia 0-2 Turkiye",
         "probability": 11.6,
-        "fair_price": 8.61
+        "fair_price": 8.65
       },
       {
         "score": "Australia 1-1 Turkiye",
-        "probability": 11.4,
-        "fair_price": 8.81
+        "probability": 11.3,
+        "fair_price": 8.85
       },
       {
         "score": "Australia 1-2 Turkiye",
         "probability": 9.5,
-        "fair_price": 10.57
+        "fair_price": 10.51
       },
       {
         "score": "Australia 0-0 Turkiye",
-        "probability": 8.4,
-        "fair_price": 11.95
+        "probability": 8.2,
+        "fair_price": 12.26
       }
     ],
     "model_market_view": [
@@ -2512,15 +2906,15 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 45.2,
-        "fair_price": 2.21
+        "probability": 45.7,
+        "fair_price": 2.19
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 54.8,
-        "fair_price": 1.82
+        "probability": 54.3,
+        "fair_price": 1.84
       },
       {
         "category": "Main Match",
@@ -2540,154 +2934,154 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 91.6,
+        "probability": 91.8,
         "fair_price": 1.09
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 8.4,
-        "fair_price": 11.95
+        "probability": 8.2,
+        "fair_price": 12.26
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 70.9,
-        "fair_price": 1.41
+        "probability": 71.4,
+        "fair_price": 1.4
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 29.1,
-        "fair_price": 3.43
+        "probability": 28.6,
+        "fair_price": 3.5
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 45.1,
-        "fair_price": 2.22
+        "probability": 45.8,
+        "fair_price": 2.18
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 54.9,
-        "fair_price": 1.82
+        "probability": 54.2,
+        "fair_price": 1.84
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 23.8,
-        "fair_price": 4.19
+        "probability": 24.4,
+        "fair_price": 4.1
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 76.2,
-        "fair_price": 1.31
+        "probability": 75.6,
+        "fair_price": 1.32
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 10.6,
-        "fair_price": 9.41
+        "probability": 11,
+        "fair_price": 9.12
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 89.4,
+        "probability": 89,
         "fair_price": 1.12
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Australia Over 0.5 Goals",
-        "probability": 55.7,
-        "fair_price": 1.79
+        "probability": 56.1,
+        "fair_price": 1.78
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Australia Under 0.5 Goals",
-        "probability": 44.3,
-        "fair_price": 2.26
+        "probability": 43.9,
+        "fair_price": 2.28
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Australia Over 1.5 Goals",
-        "probability": 19.6,
-        "fair_price": 5.09
+        "probability": 19.9,
+        "fair_price": 5.01
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Australia Under 1.5 Goals",
-        "probability": 80.4,
-        "fair_price": 1.24
+        "probability": 80.1,
+        "fair_price": 1.25
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Australia Over 2.5 Goals",
-        "probability": 5,
-        "fair_price": 20.18
+        "probability": 5.1,
+        "fair_price": 19.7
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Australia Under 2.5 Goals",
-        "probability": 95,
+        "probability": 94.9,
         "fair_price": 1.05
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Turkiye Over 0.5 Goals",
-        "probability": 81.1,
+        "probability": 81.4,
         "fair_price": 1.23
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Turkiye Under 0.5 Goals",
-        "probability": 18.9,
-        "fair_price": 5.29
+        "probability": 18.6,
+        "fair_price": 5.38
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Turkiye Over 1.5 Goals",
-        "probability": 49.6,
-        "fair_price": 2.02
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Turkiye Under 1.5 Goals",
-        "probability": 50.4,
+        "probability": 50.2,
         "fair_price": 1.99
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
+        "selection": "Turkiye Under 1.5 Goals",
+        "probability": 49.8,
+        "fair_price": 2.01
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
         "selection": "Turkiye Over 2.5 Goals",
-        "probability": 23.4,
-        "fair_price": 4.27
+        "probability": 23.8,
+        "fair_price": 4.2
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Turkiye Under 2.5 Goals",
-        "probability": 76.6,
+        "probability": 76.2,
         "fair_price": 1.31
       },
       {
@@ -2695,63 +3089,63 @@ window.embeddedDataset = [
         "market": "First Half Result",
         "selection": "Australia 1H Win",
         "probability": 16.5,
-        "fair_price": 6.08
+        "fair_price": 6.06
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 42.4,
-        "fair_price": 2.36
+        "probability": 42.1,
+        "fair_price": 2.37
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Turkiye 1H Win",
-        "probability": 41.2,
-        "fair_price": 2.43
+        "probability": 41.4,
+        "fair_price": 2.42
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 67.3,
-        "fair_price": 1.49
+        "probability": 67.6,
+        "fair_price": 1.48
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 32.7,
-        "fair_price": 3.05
+        "probability": 32.4,
+        "fair_price": 3.09
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 30.7,
-        "fair_price": 3.26
+        "probability": 31.1,
+        "fair_price": 3.21
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 69.3,
-        "fair_price": 1.44
+        "probability": 68.9,
+        "fair_price": 1.45
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 16.2,
-        "fair_price": 6.18
+        "probability": 16.4,
+        "fair_price": 6.08
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 83.8,
-        "fair_price": 1.19
+        "probability": 83.6,
+        "fair_price": 1.2
       }
     ],
     "market_scan": {
@@ -2845,7 +3239,7 @@ window.embeddedDataset = [
     "lineup_check_source": "Confirmed match centre",
     "lineup_check_status": "confirmed",
     "external_lineup_match_id": 4667772,
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 18.3,
@@ -2854,11 +3248,103 @@ window.embeddedDataset = [
       "calibrated_home_probability": 18.3,
       "calibrated_draw_probability": 26.2,
       "calibrated_away_probability": 55.6,
-      "total_goals_mean": 2.48,
+      "total_goals_mean": 2.51,
       "tempo_adjustment": 0,
+      "goal_suppression": 0,
+      "break_open_risk": 0.03,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.03,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
+    },
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Australia",
+        "stats": {
+          "foulscommitted": 12,
+          "yellowcards": 0,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 5,
+          "saves": 8,
+          "possessionpct": 28.4,
+          "totalshots": 9,
+          "shotsontarget": 4,
+          "shotpct": 0.4,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 201,
+          "totalpasses": 271,
+          "passpct": 0.7,
+          "accuratecrosses": 4,
+          "totalcrosses": 14,
+          "crosspct": 0.3,
+          "totallongballs": 58,
+          "accuratelongballs": 16,
+          "longballpct": 0.3,
+          "blockedshots": 1,
+          "effectivetackles": 5,
+          "totaltackles": 15,
+          "tacklepct": 0.3,
+          "interceptions": 7,
+          "effectiveclearance": 55,
+          "totalclearance": 55
+        }
+      },
+      "away": {
+        "team": "Türkiye",
+        "stats": {
+          "foulscommitted": 4,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 3,
+          "woncorners": 8,
+          "saves": 2,
+          "possessionpct": 71.6,
+          "totalshots": 30,
+          "shotsontarget": 8,
+          "shotpct": 0.3,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 635,
+          "totalpasses": 704,
+          "passpct": 0.9,
+          "accuratecrosses": 2,
+          "totalcrosses": 26,
+          "crosspct": 0.1,
+          "totallongballs": 28,
+          "accuratelongballs": 19,
+          "longballpct": 0.7,
+          "blockedshots": 12,
+          "effectivetackles": 8,
+          "totaltackles": 12,
+          "tacklepct": 0.7,
+          "interceptions": 4,
+          "effectiveclearance": 29,
+          "totalclearance": 29
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Australia 2-0 Türkiye",
+      "source": "ESPN",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/760421/turkiye-australia",
+      "predicted_result": "Turkiye win",
+      "predicted_probability": 55.6,
+      "actual_result": "Australia win",
+      "expected_total_goals": 2.51,
+      "actual_total_goals": 2,
+      "stats_used": true,
+      "shot_count": "9-30",
+      "shots_on_target": "4-8",
+      "flags": [],
+      "summary": "Result was broadly inside the expected model shape."
     }
   },
   {
@@ -2910,33 +3396,35 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 56,
-      "over_fair_price": 1.79,
-      "under_probability": 44,
-      "under_fair_price": 2.27,
-      "total_goals_mean": 2.92,
+      "over_probability": 55.6,
+      "over_fair_price": 1.8,
+      "under_probability": 44.4,
+      "under_fair_price": 2.25,
+      "total_goals_mean": 2.91,
       "tempo_adjustment": 0.11,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Germany 2-0 Curaçao",
-        "probability": 13.6,
-        "fair_price": 7.34
+        "probability": 13.7,
+        "fair_price": 7.31
       },
       {
         "score": "Germany 1-0 Curaçao",
-        "probability": 12.1,
-        "fair_price": 8.27
+        "probability": 12.2,
+        "fair_price": 8.19
       },
       {
         "score": "Germany 3-0 Curaçao",
@@ -2946,12 +3434,12 @@ window.embeddedDataset = [
       {
         "score": "Germany 2-1 Curaçao",
         "probability": 9.2,
-        "fair_price": 10.92
+        "fair_price": 10.93
       },
       {
         "score": "Germany 1-1 Curaçao",
-        "probability": 8.1,
-        "fair_price": 12.29
+        "probability": 8.2,
+        "fair_price": 12.24
       }
     ],
     "model_market_view": [
@@ -2959,50 +3447,50 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Germany or Draw",
-        "probability": 95.6,
+        "probability": 95.1,
         "fair_price": 1.05
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Curaçao or Draw",
-        "probability": 18.5,
-        "fair_price": 5.4
+        "probability": 20.1,
+        "fair_price": 4.98
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Germany or Curaçao",
-        "probability": 85.9,
-        "fair_price": 1.16
+        "probability": 84.8,
+        "fair_price": 1.18
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Germany Draw No Bet",
-        "probability": 94.9,
-        "fair_price": 1.05
+        "probability": 94.2,
+        "fair_price": 1.06
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Curaçao Draw No Bet",
-        "probability": 5.1,
-        "fair_price": 19.66
+        "probability": 5.8,
+        "fair_price": 17.31
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 43.8,
-        "fair_price": 2.28
+        "probability": 43.6,
+        "fair_price": 2.29
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 56.2,
-        "fair_price": 1.78
+        "probability": 56.4,
+        "fair_price": 1.77
       },
       {
         "category": "Main Match",
@@ -3022,169 +3510,169 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 94.6,
+        "probability": 94.5,
         "fair_price": 1.06
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 5.4,
-        "fair_price": 18.62
+        "probability": 5.5,
+        "fair_price": 18.33
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 78.9,
+        "probability": 78.7,
         "fair_price": 1.27
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 21.1,
-        "fair_price": 4.74
+        "probability": 21.3,
+        "fair_price": 4.69
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 56,
-        "fair_price": 1.79
+        "probability": 55.6,
+        "fair_price": 1.8
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 44,
-        "fair_price": 2.27
+        "probability": 44.4,
+        "fair_price": 2.25
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 33.6,
-        "fair_price": 2.98
+        "probability": 33.2,
+        "fair_price": 3.01
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 66.4,
-        "fair_price": 1.51
+        "probability": 66.8,
+        "fair_price": 1.5
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 17.2,
-        "fair_price": 5.81
+        "probability": 17,
+        "fair_price": 5.89
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 82.8,
-        "fair_price": 1.21
+        "probability": 83,
+        "fair_price": 1.2
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Germany Over 0.5 Goals",
-        "probability": 89.5,
+        "probability": 89.4,
         "fair_price": 1.12
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Germany Under 0.5 Goals",
-        "probability": 10.5,
-        "fair_price": 9.5
+        "probability": 10.6,
+        "fair_price": 9.39
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Germany Over 1.5 Goals",
-        "probability": 65.8,
-        "fair_price": 1.52
+        "probability": 65.5,
+        "fair_price": 1.53
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Germany Under 1.5 Goals",
-        "probability": 34.2,
-        "fair_price": 2.92
+        "probability": 34.5,
+        "fair_price": 2.9
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Germany Over 2.5 Goals",
-        "probability": 39.1,
-        "fair_price": 2.56
+        "probability": 38.8,
+        "fair_price": 2.58
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Germany Under 2.5 Goals",
-        "probability": 60.9,
-        "fair_price": 1.64
+        "probability": 61.2,
+        "fair_price": 1.63
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Curaçao Over 0.5 Goals",
-        "probability": 49,
-        "fair_price": 2.04
+        "probability": 48.8,
+        "fair_price": 2.05
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Curaçao Under 0.5 Goals",
-        "probability": 51,
-        "fair_price": 1.96
+        "probability": 51.2,
+        "fair_price": 1.95
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Curaçao Over 1.5 Goals",
-        "probability": 14.6,
-        "fair_price": 6.83
+        "probability": 14.5,
+        "fair_price": 6.89
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Curaçao Under 1.5 Goals",
-        "probability": 85.4,
+        "probability": 85.5,
         "fair_price": 1.17
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Curaçao Over 2.5 Goals",
-        "probability": 3.1,
-        "fair_price": 32.38
+        "probability": 3,
+        "fair_price": 32.81
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Curaçao Under 2.5 Goals",
-        "probability": 96.9,
+        "probability": 97,
         "fair_price": 1.03
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Germany 1H Win",
-        "probability": 53.4,
-        "fair_price": 1.87
+        "probability": 53.2,
+        "fair_price": 1.88
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 35.7,
-        "fair_price": 2.8
+        "probability": 35.8,
+        "fair_price": 2.79
       },
       {
         "category": "First Half",
@@ -3197,42 +3685,42 @@ window.embeddedDataset = [
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 73.2,
+        "probability": 73,
         "fair_price": 1.37
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 26.8,
-        "fair_price": 3.73
+        "probability": 27,
+        "fair_price": 3.7
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 37.9,
-        "fair_price": 2.64
+        "probability": 37.6,
+        "fair_price": 2.66
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 62.1,
-        "fair_price": 1.61
+        "probability": 62.4,
+        "fair_price": 1.6
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 16.6,
-        "fair_price": 6.01
+        "probability": 16.5,
+        "fair_price": 6.06
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 83.4,
+        "probability": 83.5,
         "fair_price": 1.2
       }
     ],
@@ -3249,7 +3737,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -3334,14 +3822,106 @@ window.embeddedDataset = [
       "base_home_probability": 90.2,
       "base_draw_probability": 6.9,
       "base_away_probability": 2.9,
-      "calibrated_home_probability": 81.5,
-      "calibrated_draw_probability": 14.1,
-      "calibrated_away_probability": 4.4,
-      "total_goals_mean": 2.92,
+      "calibrated_home_probability": 79.9,
+      "calibrated_draw_probability": 15.2,
+      "calibrated_away_probability": 4.9,
+      "total_goals_mean": 2.91,
       "tempo_adjustment": 0.11,
-      "draw_lift_points": 7.5,
-      "favourite_compression_points": 5.5,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0,
+      "draw_lift_points": 8.6,
+      "favourite_compression_points": 7.5,
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
+    },
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Germany",
+        "stats": {
+          "foulscommitted": 18,
+          "yellowcards": 0,
+          "redcards": 0,
+          "offsides": 0,
+          "woncorners": 8,
+          "saves": 1,
+          "possessionpct": 64.6,
+          "totalshots": 26,
+          "shotsontarget": 12,
+          "shotpct": 0.5,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 1,
+          "accuratepasses": 554,
+          "totalpasses": 637,
+          "passpct": 0.9,
+          "accuratecrosses": 5,
+          "totalcrosses": 12,
+          "crosspct": 0.4,
+          "totallongballs": 25,
+          "accuratelongballs": 12,
+          "longballpct": 0.5,
+          "blockedshots": 8,
+          "effectivetackles": 13,
+          "totaltackles": 19,
+          "tacklepct": 0.7,
+          "interceptions": 12,
+          "effectiveclearance": 8,
+          "totalclearance": 8
+        }
+      },
+      "away": {
+        "team": "Curaçao",
+        "stats": {
+          "foulscommitted": 11,
+          "yellowcards": 0,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 1,
+          "saves": 4,
+          "possessionpct": 35.4,
+          "totalshots": 8,
+          "shotsontarget": 2,
+          "shotpct": 0.3,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 282,
+          "totalpasses": 343,
+          "passpct": 0.8,
+          "accuratecrosses": 2,
+          "totalcrosses": 7,
+          "crosspct": 0.3,
+          "totallongballs": 44,
+          "accuratelongballs": 17,
+          "longballpct": 0.4,
+          "blockedshots": 0,
+          "effectivetackles": 8,
+          "totaltackles": 16,
+          "tacklepct": 0.5,
+          "interceptions": 16,
+          "effectiveclearance": 25,
+          "totalclearance": 25
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Germany 7-1 Curaçao",
+      "source": "ESPN",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany",
+      "predicted_result": "Germany win",
+      "predicted_probability": 79.9,
+      "actual_result": "Germany win",
+      "expected_total_goals": 2.91,
+      "actual_total_goals": 8,
+      "stats_used": true,
+      "shot_count": "26-8",
+      "shots_on_target": "12-2",
+      "flags": [],
+      "summary": "Result was broadly inside the expected model shape."
     }
   },
   {
@@ -3394,12 +3974,12 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -3409,7 +3989,9 @@ window.embeddedDataset = [
       "under_fair_price": 1.76,
       "total_goals_mean": 2.41,
       "tempo_adjustment": 0,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
@@ -3733,7 +4315,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "found",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -3823,12 +4405,107 @@ window.embeddedDataset = [
       "calibrated_away_probability": 25.6,
       "total_goals_mean": 2.41,
       "tempo_adjustment": 0,
+      "goal_suppression": 0,
+      "break_open_risk": 0,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M11-NED-V-JPN.pdf",
-    "final_score": "Netherlands 2-2 Japan"
+    "final_score": "Netherlands 2-2 Japan",
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Netherlands",
+        "stats": {
+          "foulscommitted": 7,
+          "yellowcards": 3,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 5,
+          "saves": 1,
+          "possessionpct": 59.8,
+          "totalshots": 10,
+          "shotsontarget": 6,
+          "shotpct": 0.6,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 463,
+          "totalpasses": 524,
+          "passpct": 0.9,
+          "accuratecrosses": 8,
+          "totalcrosses": 21,
+          "crosspct": 0.4,
+          "totallongballs": 35,
+          "accuratelongballs": 16,
+          "longballpct": 0.5,
+          "blockedshots": 1,
+          "effectivetackles": 5,
+          "totaltackles": 11,
+          "tacklepct": 0.5,
+          "interceptions": 7,
+          "effectiveclearance": 23,
+          "totalclearance": 23
+        }
+      },
+      "away": {
+        "team": "Japan",
+        "stats": {
+          "foulscommitted": 7,
+          "yellowcards": 0,
+          "redcards": 0,
+          "offsides": 0,
+          "woncorners": 4,
+          "saves": 4,
+          "possessionpct": 40.2,
+          "totalshots": 10,
+          "shotsontarget": 3,
+          "shotpct": 0.3,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 286,
+          "totalpasses": 341,
+          "passpct": 0.8,
+          "accuratecrosses": 6,
+          "totalcrosses": 23,
+          "crosspct": 0.3,
+          "totallongballs": 36,
+          "accuratelongballs": 13,
+          "longballpct": 0.4,
+          "blockedshots": 1,
+          "effectivetackles": 10,
+          "totaltackles": 11,
+          "tacklepct": 0.9,
+          "interceptions": 4,
+          "effectiveclearance": 32,
+          "totalclearance": 32
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Netherlands 2-2 Japan",
+      "source": "FIFA",
+      "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M11-NED-V-JPN.pdf",
+      "predicted_result": "Netherlands win",
+      "predicted_probability": 47.4,
+      "actual_result": "Draw",
+      "expected_total_goals": 2.41,
+      "actual_total_goals": 4,
+      "stats_used": true,
+      "shot_count": "10-10",
+      "shots_on_target": "6-3",
+      "flags": [
+        "draw-risk-underestimated",
+        "territory-did-not-become-shot-volume"
+      ],
+      "summary": "Learning flags: draw-risk-underestimated, territory-did-not-become-shot-volume."
+    }
   },
   {
     "match_name": "Ivory Coast vs Ecuador",
@@ -4020,48 +4697,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 39.1,
-      "over_fair_price": 2.56,
-      "under_probability": 60.9,
-      "under_fair_price": 1.64,
-      "total_goals_mean": 2.25,
+      "over_probability": 36.8,
+      "over_fair_price": 2.71,
+      "under_probability": 63.2,
+      "under_fair_price": 1.58,
+      "total_goals_mean": 2.17,
       "tempo_adjustment": 0.02,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.07,
+      "break_open_risk": 0.02,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
-        "score": "Ivory Coast 1-1 Ecuador",
-        "probability": 13.2,
-        "fair_price": 7.58
-      },
-      {
         "score": "Ivory Coast 0-1 Ecuador",
-        "probability": 13.1,
-        "fair_price": 7.63
+        "probability": 13.6,
+        "fair_price": 7.35
       },
       {
-        "score": "Ivory Coast 1-0 Ecuador",
-        "probability": 10.6,
-        "fair_price": 9.43
+        "score": "Ivory Coast 1-1 Ecuador",
+        "probability": 13.3,
+        "fair_price": 7.51
       },
       {
         "score": "Ivory Coast 0-0 Ecuador",
-        "probability": 10.5,
-        "fair_price": 9.49
+        "probability": 11.5,
+        "fair_price": 8.73
+      },
+      {
+        "score": "Ivory Coast 1-0 Ecuador",
+        "probability": 11.2,
+        "fair_price": 8.92
       },
       {
         "score": "Ivory Coast 0-2 Ecuador",
-        "probability": 8.2,
-        "fair_price": 12.26
+        "probability": 8.1,
+        "fair_price": 12.38
       }
     ],
     "model_market_view": [
@@ -4069,281 +4748,281 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Ivory Coast or Draw",
-        "probability": 60.9,
-        "fair_price": 1.64
+        "probability": 62.1,
+        "fair_price": 1.61
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Ecuador or Draw",
-        "probability": 72.4,
+        "probability": 72.5,
         "fair_price": 1.38
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Ivory Coast or Ecuador",
-        "probability": 66.6,
-        "fair_price": 1.5
+        "probability": 65.4,
+        "fair_price": 1.53
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Ivory Coast Draw No Bet",
-        "probability": 41.4,
-        "fair_price": 2.42
+        "probability": 42,
+        "fair_price": 2.38
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Ecuador Draw No Bet",
-        "probability": 58.6,
-        "fair_price": 1.71
+        "probability": 58,
+        "fair_price": 1.72
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 45.1,
-        "fair_price": 2.21
+        "probability": 43.4,
+        "fair_price": 2.3
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 54.9,
-        "fair_price": 1.82
+        "probability": 56.6,
+        "fair_price": 1.77
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.4,
-        "fair_price": 2.02
+        "probability": 49.3,
+        "fair_price": 2.03
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.6,
-        "fair_price": 1.98
+        "probability": 50.7,
+        "fair_price": 1.97
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 89.5,
-        "fair_price": 1.12
+        "probability": 88.5,
+        "fair_price": 1.13
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 10.5,
-        "fair_price": 9.49
+        "probability": 11.5,
+        "fair_price": 8.73
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 65.7,
-        "fair_price": 1.52
+        "probability": 63.7,
+        "fair_price": 1.57
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 34.3,
-        "fair_price": 2.92
+        "probability": 36.3,
+        "fair_price": 2.76
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 39.1,
-        "fair_price": 2.56
+        "probability": 36.8,
+        "fair_price": 2.71
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 60.9,
-        "fair_price": 1.64
+        "probability": 63.2,
+        "fair_price": 1.58
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 19.1,
-        "fair_price": 5.25
+        "probability": 17.4,
+        "fair_price": 5.74
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 80.9,
-        "fair_price": 1.24
+        "probability": 82.6,
+        "fair_price": 1.21
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 7.8,
-        "fair_price": 12.82
+        "probability": 6.9,
+        "fair_price": 14.5
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 92.2,
-        "fair_price": 1.08
+        "probability": 93.1,
+        "fair_price": 1.07
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ivory Coast Over 0.5 Goals",
-        "probability": 63.4,
-        "fair_price": 1.58
+        "probability": 62.4,
+        "fair_price": 1.6
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ivory Coast Under 0.5 Goals",
-        "probability": 36.6,
-        "fair_price": 2.73
+        "probability": 37.6,
+        "fair_price": 2.66
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ivory Coast Over 1.5 Goals",
-        "probability": 26.6,
-        "fair_price": 3.75
+        "probability": 25.7,
+        "fair_price": 3.9
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ivory Coast Under 1.5 Goals",
-        "probability": 73.4,
-        "fair_price": 1.36
+        "probability": 74.3,
+        "fair_price": 1.35
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ivory Coast Over 2.5 Goals",
-        "probability": 8.1,
-        "fair_price": 12.29
+        "probability": 7.7,
+        "fair_price": 13.07
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ivory Coast Under 2.5 Goals",
-        "probability": 91.9,
-        "fair_price": 1.09
+        "probability": 92.3,
+        "fair_price": 1.08
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ecuador Over 0.5 Goals",
-        "probability": 71.2,
-        "fair_price": 1.4
+        "probability": 69.5,
+        "fair_price": 1.44
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ecuador Under 0.5 Goals",
-        "probability": 28.8,
-        "fair_price": 3.47
+        "probability": 30.5,
+        "fair_price": 3.28
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ecuador Over 1.5 Goals",
-        "probability": 35.3,
-        "fair_price": 2.83
+        "probability": 33.3,
+        "fair_price": 3
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ecuador Under 1.5 Goals",
-        "probability": 64.7,
-        "fair_price": 1.55
+        "probability": 66.7,
+        "fair_price": 1.5
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ecuador Over 2.5 Goals",
-        "probability": 13,
-        "fair_price": 7.68
+        "probability": 11.8,
+        "fair_price": 8.48
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ecuador Under 2.5 Goals",
-        "probability": 87,
-        "fair_price": 1.15
+        "probability": 88.2,
+        "fair_price": 1.13
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Ivory Coast 1H Win",
-        "probability": 23.3,
-        "fair_price": 4.29
+        "probability": 23.2,
+        "fair_price": 4.3
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 46.1,
-        "fair_price": 2.17
+        "probability": 47.1,
+        "fair_price": 2.12
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Ecuador 1H Win",
-        "probability": 30.5,
-        "fair_price": 3.28
+        "probability": 29.6,
+        "fair_price": 3.38
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 63.7,
-        "fair_price": 1.57
+        "probability": 62.3,
+        "fair_price": 1.61
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 36.3,
-        "fair_price": 2.75
+        "probability": 37.7,
+        "fair_price": 2.65
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 26.9,
-        "fair_price": 3.72
+        "probability": 25.5,
+        "fair_price": 3.92
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 73.1,
-        "fair_price": 1.37
+        "probability": 74.5,
+        "fair_price": 1.34
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 15.6,
-        "fair_price": 6.41
+        "probability": 14.8,
+        "fair_price": 6.78
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 84.4,
-        "fair_price": 1.18
+        "probability": 85.2,
+        "fair_price": 1.17
       }
     ],
     "market_scan": {
@@ -4375,16 +5054,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 65.7,
-          "model_price": 1.52,
+          "model_probability": 63.7,
+          "model_price": 1.57,
           "current_odds": 1.62,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 57.59,
-          "ev": 6.58,
-          "qi": 73,
-          "price_qi": 79,
-          "edge_points": 4.06,
+          "ev": 3.18,
+          "qi": 63,
+          "price_qi": 68,
+          "edge_points": 1.97,
           "risk_rating": "Low"
         },
         {
@@ -4393,34 +5072,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 39.1,
-          "model_price": 2.56,
+          "model_probability": 36.8,
+          "model_price": 2.71,
           "current_odds": 2.9,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 32.24,
-          "ev": 13.28,
-          "qi": 61,
-          "price_qi": 84,
-          "edge_points": 4.58,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 45.1,
-          "model_price": 2.21,
-          "current_odds": 2.25,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 41.56,
-          "ev": 1.81,
-          "qi": 45,
-          "price_qi": 60,
-          "edge_points": 0.8,
+          "ev": 7.01,
+          "qi": 52,
+          "price_qi": 77,
+          "edge_points": 2.42,
           "risk_rating": "Medium"
         },
         {
@@ -4429,53 +5090,17 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 89.5,
-          "model_price": 1.12,
+          "model_probability": 88.5,
+          "model_price": 1.13,
           "current_odds": 1.13,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 82.96,
-          "ev": 0.89,
-          "qi": 57,
-          "price_qi": 56,
-          "edge_points": 0.79,
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49,
+          "edge_points": 0,
           "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 45.1,
-          "model_price": 2.21,
-          "current_odds": 2.1,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 44.3,
-          "ev": -4.98,
-          "qi": 35,
-          "price_qi": 26,
-          "edge_points": -2.37,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 19.1,
-          "model_price": 5.25,
-          "current_odds": 6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 15.61,
-          "ev": 14.29,
-          "qi": 41,
-          "price_qi": 81,
-          "edge_points": 2.38,
-          "risk_rating": "High"
         },
         {
           "selection": "Ecuador to Win",
@@ -4499,16 +5124,16 @@ window.embeddedDataset = [
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 58.6,
-          "model_price": 1.71,
+          "model_probability": 58,
+          "model_price": 1.72,
           "current_odds": 1.68,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 55.56,
-          "ev": -1.75,
-          "qi": 46,
-          "price_qi": 39,
-          "edge_points": -1.04,
+          "ev": -2.33,
+          "qi": 45,
+          "price_qi": 36,
+          "edge_points": -1.38,
           "risk_rating": "Low"
         },
         {
@@ -4528,12 +5153,30 @@ window.embeddedDataset = [
           "price_qi": 58
         },
         {
+          "selection": "Ivory Coast or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 62.1,
+          "model_price": 1.61,
+          "current_odds": 1.52,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 30.64,
+          "ev": -5.59,
+          "qi": 41,
+          "price_qi": 22,
+          "edge_points": -3.68,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Ecuador or Draw",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 72.4,
+          "model_probability": 72.5,
           "model_price": 1.38,
           "current_odds": 1.29,
           "au_bookie": "SportsBet",
@@ -4546,57 +5189,39 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Ivory Coast or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 60.9,
-          "model_price": 1.64,
-          "current_odds": 1.52,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 30.64,
-          "ev": -7.32,
-          "qi": 39,
-          "price_qi": 17,
-          "edge_points": -4.81,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 7.8,
-          "model_price": 12.82,
-          "current_odds": 11,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 8.49,
-          "ev": -14.2,
-          "qi": 10,
-          "price_qi": 20,
-          "edge_points": -1.29,
-          "risk_rating": "Very high"
-        },
-        {
           "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 92.2,
-          "model_price": 1.08,
+          "model_probability": 93.1,
+          "model_price": 1.07,
           "current_odds": 1.02,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 91.51,
-          "ev": -5.56,
-          "qi": 37,
-          "price_qi": 7,
-          "edge_points": -5.45,
+          "ev": -4.67,
+          "qi": 39,
+          "price_qi": 10,
+          "edge_points": -4.58,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 56.6,
+          "model_price": 1.77,
+          "current_odds": 1.67,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 55.7,
+          "ev": -5.65,
+          "qi": 39,
+          "price_qi": 22,
+          "edge_points": -3.38,
           "risk_rating": "Low"
         },
         {
@@ -4605,17 +5230,89 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 80.9,
-          "model_price": 1.24,
+          "model_probability": 82.6,
+          "model_price": 1.21,
           "current_odds": 1.11,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 84.39,
-          "ev": -10.48,
-          "qi": 36,
-          "price_qi": 4,
-          "edge_points": -9.44,
+          "ev": -8.26,
+          "qi": 37,
+          "price_qi": 7,
+          "edge_points": -7.45,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 63.2,
+          "model_price": 1.58,
+          "current_odds": 1.38,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 67.76,
+          "ev": -12.66,
+          "qi": 37,
+          "price_qi": 8,
+          "edge_points": -9.17,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 56.6,
+          "model_price": 1.77,
+          "current_odds": 1.6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 58.44,
+          "ev": -9.6,
+          "qi": 36,
+          "price_qi": 14,
+          "edge_points": -6,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 43.4,
+          "model_price": 2.3,
+          "current_odds": 2.25,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 41.56,
+          "ev": -2.17,
+          "qi": 35,
+          "price_qi": 37,
+          "edge_points": -0.97,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 17.4,
+          "model_price": 5.74,
+          "current_odds": 6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 15.61,
+          "ev": 4.53,
+          "qi": 33,
+          "price_qi": 69,
+          "edge_points": 0.75,
+          "risk_rating": "High"
         },
         {
           "selection": "Ecuador to Win",
@@ -4634,21 +5331,21 @@ window.embeddedDataset = [
           "price_qi": 37
         },
         {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
           "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 60.9,
-          "model_price": 1.64,
-          "current_odds": 1.38,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 67.76,
-          "ev": -15.85,
-          "qi": 35,
-          "price_qi": 5,
-          "edge_points": -11.49,
+          "oddsapi_market": "btts",
+          "model_probability": 43.4,
+          "model_price": 2.3,
+          "current_odds": 2.1,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 44.3,
+          "ev": -8.7,
+          "qi": 32,
+          "price_qi": 18,
+          "edge_points": -4.14,
           "risk_rating": "Low"
         },
         {
@@ -4684,57 +5381,21 @@ window.embeddedDataset = [
           "price_qi": 28
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 54.9,
-          "model_price": 1.82,
-          "current_odds": 1.67,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 55.7,
-          "ev": -8.24,
-          "qi": 36,
-          "price_qi": 17,
-          "edge_points": -4.94,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 54.9,
-          "model_price": 1.82,
-          "current_odds": 1.6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 58.44,
-          "ev": -12.09,
-          "qi": 34,
-          "price_qi": 11,
-          "edge_points": -7.55,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Ivory Coast Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 41.4,
-          "model_price": 2.42,
+          "model_probability": 42,
+          "model_price": 2.38,
           "current_odds": 2.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 44.44,
-          "ev": -13.22,
-          "qi": 29,
-          "price_qi": 13,
-          "edge_points": -6.3,
+          "ev": -11.76,
+          "qi": 30,
+          "price_qi": 14,
+          "edge_points": -5.6,
           "risk_rating": "Low"
         },
         {
@@ -4866,6 +5527,24 @@ window.embeddedDataset = [
           "price_qi": 15
         },
         {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 36.3,
+          "model_price": 2.76,
+          "current_odds": 2.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 42.41,
+          "ev": -20.29,
+          "qi": 22,
+          "price_qi": 9,
+          "edge_points": -9.22,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Ivory Coast to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -4898,44 +5577,44 @@ window.embeddedDataset = [
           "price_qi": 15
         },
         {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 34.3,
-          "model_price": 2.92,
-          "current_odds": 2.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 42.41,
-          "ev": -24.66,
-          "qi": 20,
-          "price_qi": 6,
-          "edge_points": -11.21,
-          "risk_rating": "Medium"
-        },
-        {
           "selection": "Under 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 10.5,
-          "model_price": 9.49,
+          "model_probability": 11.5,
+          "model_price": 8.73,
           "current_odds": 5.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 17.04,
-          "ev": -42.04,
+          "ev": -37,
           "qi": 10,
-          "price_qi": 8,
-          "edge_points": -7.64,
+          "price_qi": 9,
+          "edge_points": -6.73,
           "risk_rating": "High"
+        },
+        {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 6.9,
+          "model_price": 14.5,
+          "current_odds": 11,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 8.49,
+          "ev": -24.14,
+          "qi": 9,
+          "price_qi": 16,
+          "edge_points": -2.19,
+          "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -5020,14 +5699,106 @@ window.embeddedDataset = [
       "base_home_probability": 27.6,
       "base_draw_probability": 33.4,
       "base_away_probability": 39.1,
-      "calibrated_home_probability": 27.6,
-      "calibrated_draw_probability": 33.4,
-      "calibrated_away_probability": 39.1,
-      "total_goals_mean": 2.25,
+      "calibrated_home_probability": 27.5,
+      "calibrated_draw_probability": 34.6,
+      "calibrated_away_probability": 37.9,
+      "total_goals_mean": 2.17,
       "tempo_adjustment": 0.02,
-      "draw_lift_points": 0,
+      "goal_suppression": 0.07,
+      "break_open_risk": 0.02,
+      "draw_lift_points": 1.4,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 1.4,
+      "goal_suppression_points": 0.07,
+      "break_open_risk_points": 0.02,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
+    },
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Ivory Coast",
+        "stats": {
+          "foulscommitted": 10,
+          "yellowcards": 3,
+          "redcards": 0,
+          "offsides": 0,
+          "woncorners": 3,
+          "saves": 1,
+          "possessionpct": 48.4,
+          "totalshots": 15,
+          "shotsontarget": 4,
+          "shotpct": 0.3,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 397,
+          "totalpasses": 470,
+          "passpct": 0.8,
+          "accuratecrosses": 2,
+          "totalcrosses": 8,
+          "crosspct": 0.3,
+          "totallongballs": 40,
+          "accuratelongballs": 18,
+          "longballpct": 0.5,
+          "blockedshots": 3,
+          "effectivetackles": 9,
+          "totaltackles": 14,
+          "tacklepct": 0.6,
+          "interceptions": 11,
+          "effectiveclearance": 29,
+          "totalclearance": 29
+        }
+      },
+      "away": {
+        "team": "Ecuador",
+        "stats": {
+          "foulscommitted": 13,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 0,
+          "woncorners": 6,
+          "saves": 3,
+          "possessionpct": 51.6,
+          "totalshots": 12,
+          "shotsontarget": 1,
+          "shotpct": 0.1,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 419,
+          "totalpasses": 492,
+          "passpct": 0.9,
+          "accuratecrosses": 4,
+          "totalcrosses": 14,
+          "crosspct": 0.3,
+          "totallongballs": 36,
+          "accuratelongballs": 11,
+          "longballpct": 0.3,
+          "blockedshots": 3,
+          "effectivetackles": 15,
+          "totaltackles": 21,
+          "tacklepct": 0.7,
+          "interceptions": 13,
+          "effectiveclearance": 18,
+          "totalclearance": 18
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Ivory Coast 1-0 Ecuador",
+      "source": "ESPN",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/760423/ecuador-ivory-coast",
+      "predicted_result": "Ecuador win",
+      "predicted_probability": 37.9,
+      "actual_result": "Ivory Coast win",
+      "expected_total_goals": 2.17,
+      "actual_total_goals": 1,
+      "stats_used": true,
+      "shot_count": "15-12",
+      "shots_on_target": "4-1",
+      "flags": [],
+      "summary": "Result was broadly inside the expected model shape."
     }
   },
   {
@@ -5085,12 +5856,12 @@ window.embeddedDataset = [
         "previous_odds": 3.55
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -5100,7 +5871,9 @@ window.embeddedDataset = [
       "under_fair_price": 1.76,
       "total_goals_mean": 2.41,
       "tempo_adjustment": 0,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
@@ -6072,7 +6845,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "found",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -6162,12 +6935,106 @@ window.embeddedDataset = [
       "calibrated_away_probability": 22.4,
       "total_goals_mean": 2.41,
       "tempo_adjustment": 0,
+      "goal_suppression": 0,
+      "break_open_risk": 0,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M12-SWE-V-TUN.pdf",
-    "final_score": "Sweden 5-1 Tunisia"
+    "final_score": "Sweden 5-1 Tunisia",
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Sweden",
+        "stats": {
+          "foulscommitted": 10,
+          "yellowcards": 0,
+          "redcards": 0,
+          "offsides": 3,
+          "woncorners": 4,
+          "saves": 1,
+          "possessionpct": 48.7,
+          "totalshots": 13,
+          "shotsontarget": 7,
+          "shotpct": 0.5,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 278,
+          "totalpasses": 356,
+          "passpct": 0.8,
+          "accuratecrosses": 3,
+          "totalcrosses": 12,
+          "crosspct": 0.3,
+          "totallongballs": 58,
+          "accuratelongballs": 22,
+          "longballpct": 0.4,
+          "blockedshots": 3,
+          "effectivetackles": 9,
+          "totaltackles": 14,
+          "tacklepct": 0.6,
+          "interceptions": 6,
+          "effectiveclearance": 23,
+          "totalclearance": 23
+        }
+      },
+      "away": {
+        "team": "Tunisia",
+        "stats": {
+          "foulscommitted": 8,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 6,
+          "woncorners": 2,
+          "saves": 1,
+          "possessionpct": 51.3,
+          "totalshots": 6,
+          "shotsontarget": 2,
+          "shotpct": 0.3,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 292,
+          "totalpasses": 371,
+          "passpct": 0.8,
+          "accuratecrosses": 3,
+          "totalcrosses": 13,
+          "crosspct": 0.2,
+          "totallongballs": 53,
+          "accuratelongballs": 24,
+          "longballpct": 0.5,
+          "blockedshots": 1,
+          "effectivetackles": 12,
+          "totaltackles": 21,
+          "tacklepct": 0.6,
+          "interceptions": 6,
+          "effectiveclearance": 13,
+          "totalclearance": 13
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Sweden 5-1 Tunisia",
+      "source": "FIFA",
+      "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M12-SWE-V-TUN.pdf",
+      "predicted_result": "Sweden win",
+      "predicted_probability": 49.8,
+      "actual_result": "Sweden win",
+      "expected_total_goals": 2.41,
+      "actual_total_goals": 6,
+      "stats_used": true,
+      "shot_count": "13-6",
+      "shots_on_target": "7-2",
+      "flags": [
+        "break-open-risk-underweighted"
+      ],
+      "summary": "Learning flags: break-open-risk-underweighted."
+    }
   },
   {
     "match_name": "Spain vs Cape Verde",
@@ -6223,48 +7090,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 50.4,
-      "over_fair_price": 1.98,
-      "under_probability": 49.6,
-      "under_fair_price": 2.02,
-      "total_goals_mean": 2.69,
+      "over_probability": 49,
+      "over_fair_price": 2.04,
+      "under_probability": 51,
+      "under_fair_price": 1.96,
+      "total_goals_mean": 2.63,
       "tempo_adjustment": -0.09,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.04,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Spain 2-0 Cape Verde",
+        "probability": 14.8,
+        "fair_price": 6.77
+      },
+      {
+        "score": "Spain 1-0 Cape Verde",
         "probability": 14.6,
         "fair_price": 6.87
       },
       {
-        "score": "Spain 1-0 Cape Verde",
-        "probability": 14,
-        "fair_price": 7.12
-      },
-      {
         "score": "Spain 3-0 Cape Verde",
-        "probability": 10.1,
-        "fair_price": 9.95
+        "probability": 10,
+        "fair_price": 10.02
       },
       {
         "score": "Spain 2-1 Cape Verde",
-        "probability": 9,
-        "fair_price": 11.1
+        "probability": 8.9,
+        "fair_price": 11.18
       },
       {
         "score": "Spain 1-1 Cape Verde",
-        "probability": 8.7,
-        "fair_price": 11.5
+        "probability": 8.8,
+        "fair_price": 11.34
       }
     ],
     "model_market_view": [
@@ -6272,280 +7141,280 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Spain or Draw",
-        "probability": 94.5,
+        "probability": 94,
         "fair_price": 1.06
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Cape Verde or Draw",
-        "probability": 21.9,
-        "fair_price": 4.57
+        "probability": 24.1,
+        "fair_price": 4.14
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Spain or Cape Verde",
-        "probability": 83.6,
-        "fair_price": 1.2
+        "probability": 81.8,
+        "fair_price": 1.22
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Spain Draw No Bet",
-        "probability": 93.5,
-        "fair_price": 1.07
+        "probability": 92.7,
+        "fair_price": 1.08
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Cape Verde Draw No Bet",
-        "probability": 6.5,
-        "fair_price": 15.31
+        "probability": 7.3,
+        "fair_price": 13.69
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 40.3,
-        "fair_price": 2.48
+        "probability": 39.5,
+        "fair_price": 2.53
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 59.7,
-        "fair_price": 1.68
+        "probability": 60.5,
+        "fair_price": 1.65
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.8,
+        "probability": 49.7,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.2,
+        "probability": 50.3,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93.2,
-        "fair_price": 1.07
+        "probability": 92.8,
+        "fair_price": 1.08
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 6.8,
-        "fair_price": 14.75
+        "probability": 7.2,
+        "fair_price": 13.94
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 75,
-        "fair_price": 1.33
+        "probability": 73.9,
+        "fair_price": 1.35
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25,
-        "fair_price": 4
+        "probability": 26.1,
+        "fair_price": 3.84
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 50.4,
-        "fair_price": 1.98
+        "probability": 49,
+        "fair_price": 2.04
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 49.6,
-        "fair_price": 2.02
+        "probability": 51,
+        "fair_price": 1.96
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 28.4,
-        "fair_price": 3.52
+        "probability": 27.2,
+        "fair_price": 3.68
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 71.6,
-        "fair_price": 1.4
+        "probability": 72.8,
+        "fair_price": 1.37
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13.6,
-        "fair_price": 7.36
+        "probability": 12.8,
+        "fair_price": 7.84
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 86.4,
-        "fair_price": 1.16
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Spain Over 0.5 Goals",
-        "probability": 87.4,
-        "fair_price": 1.14
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Spain Under 0.5 Goals",
-        "probability": 12.6,
-        "fair_price": 7.94
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Spain Over 1.5 Goals",
-        "probability": 61.3,
-        "fair_price": 1.63
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Spain Under 1.5 Goals",
-        "probability": 38.7,
-        "fair_price": 2.59
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Spain Over 2.5 Goals",
-        "probability": 34.3,
-        "fair_price": 2.92
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Spain Under 2.5 Goals",
-        "probability": 65.7,
-        "fair_price": 1.52
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Cape Verde Over 0.5 Goals",
-        "probability": 46.2,
-        "fair_price": 2.17
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Cape Verde Under 0.5 Goals",
-        "probability": 53.8,
-        "fair_price": 1.86
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Cape Verde Over 1.5 Goals",
-        "probability": 12.8,
-        "fair_price": 7.8
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Cape Verde Under 1.5 Goals",
         "probability": 87.2,
         "fair_price": 1.15
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
+        "selection": "Spain Over 0.5 Goals",
+        "probability": 86.9,
+        "fair_price": 1.15
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Spain Under 0.5 Goals",
+        "probability": 13.1,
+        "fair_price": 7.6
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Spain Over 1.5 Goals",
+        "probability": 60.2,
+        "fair_price": 1.66
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Spain Under 1.5 Goals",
+        "probability": 39.8,
+        "fair_price": 2.51
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Spain Over 2.5 Goals",
+        "probability": 33.1,
+        "fair_price": 3.02
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Spain Under 2.5 Goals",
+        "probability": 66.9,
+        "fair_price": 1.5
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Cape Verde Over 0.5 Goals",
+        "probability": 45.4,
+        "fair_price": 2.2
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Cape Verde Under 0.5 Goals",
+        "probability": 54.6,
+        "fair_price": 1.83
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Cape Verde Over 1.5 Goals",
+        "probability": 12.4,
+        "fair_price": 8.07
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Cape Verde Under 1.5 Goals",
+        "probability": 87.6,
+        "fair_price": 1.14
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
         "selection": "Cape Verde Over 2.5 Goals",
-        "probability": 2.5,
-        "fair_price": 39.94
+        "probability": 2.4,
+        "fair_price": 42.17
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Cape Verde Under 2.5 Goals",
-        "probability": 97.5,
-        "fair_price": 1.03
+        "probability": 97.6,
+        "fair_price": 1.02
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Spain 1H Win",
-        "probability": 51.2,
-        "fair_price": 1.95
+        "probability": 50.6,
+        "fair_price": 1.98
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 38,
-        "fair_price": 2.63
+        "probability": 38.6,
+        "fair_price": 2.59
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Cape Verde 1H Win",
         "probability": 10.8,
-        "fair_price": 9.26
+        "fair_price": 9.29
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 70.2,
-        "fair_price": 1.42
+        "probability": 69.4,
+        "fair_price": 1.44
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 29.8,
-        "fair_price": 3.36
+        "probability": 30.6,
+        "fair_price": 3.27
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 34.1,
-        "fair_price": 2.93
+        "probability": 33.2,
+        "fair_price": 3.01
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 65.9,
-        "fair_price": 1.52
+        "probability": 66.8,
+        "fair_price": 1.5
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 14.7,
-        "fair_price": 6.78
+        "probability": 14.3,
+        "fair_price": 7
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 85.3,
+        "probability": 85.7,
         "fair_price": 1.17
       }
     ],
@@ -6577,16 +7446,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 71.6,
-          "model_price": 1.4,
+          "model_probability": 72.8,
+          "model_price": 1.37,
           "current_odds": 1.95,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 47.3,
-          "ev": 39.29,
-          "qi": 99,
-          "price_qi": 98,
-          "edge_points": 20.15,
+          "ev": 42.34,
+          "qi": 100,
+          "price_qi": 99,
+          "edge_points": 21.71,
           "risk_rating": "Low"
         },
         {
@@ -6595,16 +7464,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 86.4,
-          "model_price": 1.16,
+          "model_probability": 87.2,
+          "model_price": 1.15,
           "current_odds": 1.4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 65.85,
-          "ev": 20.69,
+          "ev": 21.74,
           "qi": 99,
           "price_qi": 97,
-          "edge_points": 14.78,
+          "edge_points": 15.53,
           "risk_rating": "Low"
         },
         {
@@ -6613,16 +7482,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 49.6,
-          "model_price": 2.02,
+          "model_probability": 51,
+          "model_price": 1.96,
           "current_odds": 3.2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 28.89,
-          "ev": 58.42,
-          "qi": 89,
-          "price_qi": 98,
-          "edge_points": 18.25,
+          "ev": 63.27,
+          "qi": 90,
+          "price_qi": 99,
+          "edge_points": 19.77,
           "risk_rating": "Medium"
         },
         {
@@ -6631,16 +7500,16 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 21.9,
-          "model_price": 4.57,
+          "model_probability": 24.1,
+          "model_price": 4.14,
           "current_odds": 9,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 10.18,
-          "ev": 96.94,
-          "qi": 65,
-          "price_qi": 98,
-          "edge_points": 10.77,
+          "ev": 117.39,
+          "qi": 69,
+          "price_qi": 99,
+          "edge_points": 13.04,
           "risk_rating": "Very high"
         },
         {
@@ -6649,16 +7518,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 40.3,
-          "model_price": 2.48,
+          "model_probability": 39.5,
+          "model_price": 2.53,
           "current_odds": 2.88,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 32.08,
-          "ev": 16.13,
-          "qi": 64,
-          "price_qi": 86,
-          "edge_points": 5.6,
+          "ev": 13.83,
+          "qi": 61,
+          "price_qi": 84,
+          "edge_points": 4.8,
           "risk_rating": "Medium"
         },
         {
@@ -6667,16 +7536,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 40.3,
-          "model_price": 2.48,
+          "model_probability": 39.5,
+          "model_price": 2.53,
           "current_odds": 2.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 33.65,
-          "ev": 12.9,
-          "qi": 61,
-          "price_qi": 83,
-          "edge_points": 4.61,
+          "ev": 10.67,
+          "qi": 58,
+          "price_qi": 82,
+          "edge_points": 3.81,
           "risk_rating": "Medium"
         },
         {
@@ -6829,16 +7698,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 59.7,
-          "model_price": 1.68,
+          "model_probability": 60.5,
+          "model_price": 1.65,
           "current_odds": 1.42,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 66.35,
-          "ev": -15.48,
+          "ev": -13.94,
           "qi": 35,
-          "price_qi": 6,
-          "edge_points": -10.9,
+          "price_qi": 7,
+          "edge_points": -9.82,
           "risk_rating": "Low"
         },
         {
@@ -6863,16 +7732,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 59.7,
-          "model_price": 1.68,
+          "model_probability": 60.5,
+          "model_price": 1.65,
           "current_odds": 1.36,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 67.92,
-          "ev": -19.05,
+          "ev": -17.58,
           "qi": 34,
-          "price_qi": 3,
-          "edge_points": -14.01,
+          "price_qi": 4,
+          "edge_points": -12.92,
           "risk_rating": "Low"
         },
         {
@@ -6892,24 +7761,6 @@ window.embeddedDataset = [
           "price_qi": 78
         },
         {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 50.4,
-          "model_price": 1.98,
-          "current_odds": 1.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 71.11,
-          "ev": -34.34,
-          "qi": 29,
-          "price_qi": 0,
-          "edge_points": -26.42,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Cape Verde to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -6924,6 +7775,24 @@ window.embeddedDataset = [
           "ev": 5.22,
           "qi": 28,
           "price_qi": 70
+        },
+        {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 49,
+          "model_price": 2.04,
+          "current_odds": 1.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 71.11,
+          "ev": -36.27,
+          "qi": 28,
+          "price_qi": 0,
+          "edge_points": -27.9,
+          "risk_rating": "Low"
         },
         {
           "selection": "Match to end in a Draw",
@@ -6947,16 +7816,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 28.4,
-          "model_price": 3.52,
+          "model_probability": 27.2,
+          "model_price": 3.68,
           "current_odds": 1.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 52.7,
-          "ev": -50.28,
-          "qi": 19,
+          "ev": -52.45,
+          "qi": 18,
           "price_qi": 0,
-          "edge_points": -28.73,
+          "edge_points": -29.97,
           "risk_rating": "Low"
         },
         {
@@ -6997,16 +7866,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 13.6,
-          "model_price": 7.36,
+          "model_probability": 12.8,
+          "model_price": 7.84,
           "current_odds": 2.7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 34.15,
-          "ev": -63.32,
+          "ev": -65.56,
           "qi": 12,
           "price_qi": 1,
-          "edge_points": -23.45,
+          "edge_points": -24.28,
           "risk_rating": "Medium"
         },
         {
@@ -7015,7 +7884,7 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 94.5,
+          "model_probability": 94,
           "model_price": 1.06,
           "current_odds": 1,
           "au_bookie": "SportsBet",
@@ -7029,22 +7898,27 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 86.7,
       "base_draw_probability": 9.2,
       "base_away_probability": 4,
-      "calibrated_home_probability": 78.1,
-      "calibrated_draw_probability": 16.4,
-      "calibrated_away_probability": 5.5,
-      "total_goals_mean": 2.69,
+      "calibrated_home_probability": 75.9,
+      "calibrated_draw_probability": 18.2,
+      "calibrated_away_probability": 6,
+      "total_goals_mean": 2.63,
       "tempo_adjustment": -0.09,
-      "draw_lift_points": 7.5,
-      "favourite_compression_points": 5.5,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.04,
+      "break_open_risk": 0,
+      "draw_lift_points": 9.4,
+      "favourite_compression_points": 7.5,
+      "low_block_draw_risk_points": 0.8,
+      "goal_suppression_points": 0.04,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-15T23:34:26.172Z",
+    "lineup_last_checked": "2026-06-15T23:47:47.164Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667798,
@@ -7052,7 +7926,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-15T23:34:26.172Z",
+      "checked_at": "2026-06-15T23:47:47.164Z",
       "referee": "Adham Makhadmeh",
       "venue": "Atlanta Stadium",
       "surface": "grass",
@@ -7122,7 +7996,98 @@ window.embeddedDataset = [
       ],
       "model_implication": "Confirmed starting XIs are now loaded for Spain vs Cape Verde. Re-check player props against starters and bench players before treating any prop as a bet."
     },
-    "lineup_check_status": "confirmed"
+    "lineup_check_status": "confirmed",
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Spain",
+        "stats": {
+          "foulscommitted": 10,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 2,
+          "woncorners": 11,
+          "saves": 1,
+          "possessionpct": 74.3,
+          "totalshots": 27,
+          "shotsontarget": 7,
+          "shotpct": 0.3,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 734,
+          "totalpasses": 800,
+          "passpct": 0.9,
+          "accuratecrosses": 6,
+          "totalcrosses": 36,
+          "crosspct": 0.2,
+          "totallongballs": 30,
+          "accuratelongballs": 24,
+          "longballpct": 0.8,
+          "blockedshots": 8,
+          "effectivetackles": 12,
+          "totaltackles": 13,
+          "tacklepct": 0.9,
+          "interceptions": 6,
+          "effectiveclearance": 7,
+          "totalclearance": 7
+        }
+      },
+      "away": {
+        "team": "Cape Verde",
+        "stats": {
+          "foulscommitted": 1,
+          "yellowcards": 1,
+          "redcards": 0,
+          "offsides": 3,
+          "woncorners": 1,
+          "saves": 7,
+          "possessionpct": 25.7,
+          "totalshots": 6,
+          "shotsontarget": 1,
+          "shotpct": 0.2,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 205,
+          "totalpasses": 278,
+          "passpct": 0.7,
+          "accuratecrosses": 1,
+          "totalcrosses": 4,
+          "crosspct": 0.3,
+          "totallongballs": 56,
+          "accuratelongballs": 19,
+          "longballpct": 0.3,
+          "blockedshots": 2,
+          "effectivetackles": 11,
+          "totaltackles": 18,
+          "tacklepct": 0.6,
+          "interceptions": 15,
+          "effectiveclearance": 46,
+          "totalclearance": 46
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Spain 0-0 Cape Verde",
+      "source": "ESPN",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain",
+      "predicted_result": "Spain win",
+      "predicted_probability": 75.9,
+      "actual_result": "Draw",
+      "expected_total_goals": 2.63,
+      "actual_total_goals": 0,
+      "stats_used": true,
+      "shot_count": "27-6",
+      "shots_on_target": "7-1",
+      "flags": [
+        "draw-risk-underestimated",
+        "favourite-confidence-too-high",
+        "goal-suppression-underweighted"
+      ],
+      "summary": "Learning flags: draw-risk-underestimated, favourite-confidence-too-high, goal-suppression-underweighted."
+    }
   },
   {
     "match_name": "Belgium vs Egypt",
@@ -7164,48 +8129,50 @@ window.embeddedDataset = [
         "previous_odds": 4.1
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 49.2,
-      "over_fair_price": 2.03,
-      "under_probability": 50.8,
-      "under_fair_price": 1.97,
-      "total_goals_mean": 2.64,
+      "over_probability": 50.3,
+      "over_fair_price": 1.99,
+      "under_probability": 49.7,
+      "under_fair_price": 2.01,
+      "total_goals_mean": 2.68,
       "tempo_adjustment": 0.11,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Belgium 1-0 Egypt",
-        "probability": 13,
-        "fair_price": 7.7
+        "probability": 12.6,
+        "fair_price": 7.92
       },
       {
         "score": "Belgium 2-0 Egypt",
-        "probability": 11.8,
-        "fair_price": 8.47
+        "probability": 11.7,
+        "fair_price": 8.56
       },
       {
         "score": "Belgium 1-1 Egypt",
-        "probability": 10.7,
-        "fair_price": 9.39
+        "probability": 10.5,
+        "fair_price": 9.49
       },
       {
         "score": "Belgium 2-1 Egypt",
         "probability": 9.7,
-        "fair_price": 10.32
+        "fair_price": 10.26
       },
       {
         "score": "Belgium 3-0 Egypt",
         "probability": 7.2,
-        "fair_price": 13.96
+        "fair_price": 13.88
       }
     ],
     "model_market_view": [
@@ -7248,245 +8215,245 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 46.9,
-        "fair_price": 2.13
+        "probability": 47.7,
+        "fair_price": 2.1
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 53.1,
-        "fair_price": 1.88
+        "probability": 52.3,
+        "fair_price": 1.91
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.7,
+        "probability": 49.8,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.3,
+        "probability": 50.2,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 92.9,
-        "fair_price": 1.08
+        "probability": 93.2,
+        "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7.1,
-        "fair_price": 14.01
+        "probability": 6.8,
+        "fair_price": 14.65
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 74,
-        "fair_price": 1.35
+        "probability": 74.9,
+        "fair_price": 1.34
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 26,
-        "fair_price": 3.85
+        "probability": 25.1,
+        "fair_price": 3.98
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 49.2,
-        "fair_price": 2.03
+        "probability": 50.3,
+        "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 50.8,
-        "fair_price": 1.97
+        "probability": 49.7,
+        "fair_price": 2.01
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 27.3,
-        "fair_price": 3.67
+        "probability": 28.3,
+        "fair_price": 3.54
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 72.7,
-        "fair_price": 1.37
+        "probability": 71.7,
+        "fair_price": 1.39
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 12.8,
-        "fair_price": 7.8
+        "probability": 13.5,
+        "fair_price": 7.42
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 87.2,
-        "fair_price": 1.15
+        "probability": 86.5,
+        "fair_price": 1.16
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Belgium Over 0.5 Goals",
-        "probability": 83.8,
+        "probability": 84.3,
         "fair_price": 1.19
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Belgium Under 0.5 Goals",
-        "probability": 16.2,
-        "fair_price": 6.17
+        "probability": 15.7,
+        "fair_price": 6.36
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Belgium Over 1.5 Goals",
-        "probability": 54.3,
-        "fair_price": 1.84
+        "probability": 55.2,
+        "fair_price": 1.81
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Belgium Under 1.5 Goals",
-        "probability": 45.7,
-        "fair_price": 2.19
+        "probability": 44.8,
+        "fair_price": 2.23
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Belgium Over 2.5 Goals",
-        "probability": 27.5,
-        "fair_price": 3.64
+        "probability": 28.3,
+        "fair_price": 3.54
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Belgium Under 2.5 Goals",
-        "probability": 72.5,
-        "fair_price": 1.38
+        "probability": 71.7,
+        "fair_price": 1.39
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Egypt Over 0.5 Goals",
-        "probability": 56,
-        "fair_price": 1.79
+        "probability": 56.6,
+        "fair_price": 1.77
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Egypt Under 0.5 Goals",
-        "probability": 44,
-        "fair_price": 2.27
+        "probability": 43.4,
+        "fair_price": 2.3
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Egypt Over 1.5 Goals",
-        "probability": 19.9,
-        "fair_price": 5.04
+        "probability": 20.4,
+        "fair_price": 4.91
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Egypt Under 1.5 Goals",
-        "probability": 80.1,
-        "fair_price": 1.25
+        "probability": 79.6,
+        "fair_price": 1.26
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Egypt Over 2.5 Goals",
-        "probability": 5,
-        "fair_price": 19.83
+        "probability": 5.3,
+        "fair_price": 19.04
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Egypt Under 2.5 Goals",
-        "probability": 95,
-        "fair_price": 1.05
+        "probability": 94.7,
+        "fair_price": 1.06
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Belgium 1H Win",
-        "probability": 43.9,
-        "fair_price": 2.28
+        "probability": 44.3,
+        "fair_price": 2.26
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 40.4,
-        "fair_price": 2.47
+        "probability": 40,
+        "fair_price": 2.5
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Egypt 1H Win",
-        "probability": 15.6,
-        "fair_price": 6.39
+        "probability": 15.7,
+        "fair_price": 6.36
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 69.5,
-        "fair_price": 1.44
+        "probability": 70.1,
+        "fair_price": 1.43
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30.5,
-        "fair_price": 3.28
+        "probability": 29.9,
+        "fair_price": 3.35
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 33.3,
-        "fair_price": 3
+        "probability": 34,
+        "fair_price": 2.94
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66.7,
-        "fair_price": 1.5
+        "probability": 66,
+        "fair_price": 1.52
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 17.3,
-        "fair_price": 5.79
+        "probability": 17.7,
+        "fair_price": 5.65
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 82.7,
+        "probability": 82.3,
         "fair_price": 1.21
       }
     ],
@@ -7532,75 +8499,21 @@ window.embeddedDataset = [
           "risk_rating": "Medium"
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 53.1,
-          "model_price": 1.88,
-          "current_odds": 1.87,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 50,
-          "ev": -0.53,
-          "qi": 46,
-          "price_qi": 46,
-          "edge_points": -0.28,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 3.5 Goals",
+          "selection": "Over 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 72.7,
-          "model_price": 1.37,
-          "current_odds": 1.32,
+          "model_probability": 93.2,
+          "model_price": 1.07,
+          "current_odds": 1.04,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 70.8,
-          "ev": -3.65,
-          "qi": 44,
-          "price_qi": 27,
-          "edge_points": -2.76,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 87.2,
-          "model_price": 1.15,
-          "current_odds": 1.11,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 84.39,
-          "ev": -3.48,
+          "devig_book_probability": 89.64,
+          "ev": -2.8,
           "qi": 43,
           "price_qi": 24,
-          "edge_points": -3.13,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 53.1,
-          "model_price": 1.88,
-          "current_odds": 1.83,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 51.07,
-          "ev": -2.66,
-          "qi": 42,
-          "price_qi": 34,
-          "edge_points": -1.45,
+          "edge_points": -2.7,
           "risk_rating": "Low"
         },
         {
@@ -7609,34 +8522,70 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 74,
-          "model_price": 1.35,
+          "model_probability": 74.9,
+          "model_price": 1.34,
           "current_odds": 1.28,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 73.22,
-          "ev": -5.19,
-          "qi": 42,
-          "price_qi": 21,
-          "edge_points": -4.05,
+          "ev": -4.48,
+          "qi": 43,
+          "price_qi": 23,
+          "edge_points": -3.5,
           "risk_rating": "Low"
         },
         {
-          "selection": "Over 0.5 Goals",
+          "selection": "Under 3.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 92.9,
-          "model_price": 1.08,
-          "current_odds": 1.04,
+          "model_probability": 71.7,
+          "model_price": 1.39,
+          "current_odds": 1.32,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 89.64,
-          "ev": -3.7,
-          "qi": 41,
-          "price_qi": 18,
-          "edge_points": -3.56,
+          "devig_book_probability": 70.8,
+          "ev": -5.04,
+          "qi": 43,
+          "price_qi": 22,
+          "edge_points": -3.82,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 52.3,
+          "model_price": 1.91,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 50,
+          "ev": -2.09,
+          "qi": 42,
+          "price_qi": 37,
+          "edge_points": -1.12,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 86.5,
+          "model_price": 1.16,
+          "current_odds": 1.11,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 84.39,
+          "ev": -4.31,
+          "qi": 42,
+          "price_qi": 20,
+          "edge_points": -3.88,
           "risk_rating": "Low"
         },
         {
@@ -7694,6 +8643,24 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 52.3,
+          "model_price": 1.91,
+          "current_odds": 1.83,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 51.07,
+          "ev": -4.19,
+          "qi": 39,
+          "price_qi": 28,
+          "edge_points": -2.29,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Belgium or Egypt",
           "category": "Main Match",
           "market": "Double Chance",
@@ -7709,24 +8676,6 @@ window.embeddedDataset = [
           "qi": 39,
           "price_qi": 11,
           "edge_points": -6.78,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 50.8,
-          "model_price": 1.97,
-          "current_odds": 1.87,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 50,
-          "ev": -5.08,
-          "qi": 37,
-          "price_qi": 25,
-          "edge_points": -2.71,
           "risk_rating": "Low"
         },
         {
@@ -7748,6 +8697,24 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 50.3,
+          "model_price": 1.99,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 50,
+          "ev": -6.03,
+          "qi": 36,
+          "price_qi": 22,
+          "edge_points": -3.22,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Egypt to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -7762,6 +8729,24 @@ window.embeddedDataset = [
           "ev": 6.16,
           "qi": 35,
           "price_qi": 73
+        },
+        {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 49.7,
+          "model_price": 2.01,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 50,
+          "ev": -6.97,
+          "qi": 35,
+          "price_qi": 20,
+          "edge_points": -3.72,
+          "risk_rating": "Low"
         },
         {
           "selection": "Match to end in a Draw",
@@ -7780,39 +8765,21 @@ window.embeddedDataset = [
           "price_qi": 66
         },
         {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 49.2,
-          "model_price": 2.03,
-          "current_odds": 1.87,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 50,
-          "ev": -7.88,
-          "qi": 34,
-          "price_qi": 18,
-          "edge_points": -4.21,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "BTTS Yes",
           "category": "Main Match",
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 46.9,
-          "model_price": 2.13,
+          "model_probability": 47.7,
+          "model_price": 2.1,
           "current_odds": 1.91,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 48.93,
-          "ev": -10.33,
-          "qi": 32,
-          "price_qi": 15,
-          "edge_points": -5.41,
+          "ev": -9.05,
+          "qi": 33,
+          "price_qi": 17,
+          "edge_points": -4.74,
           "risk_rating": "Low"
         },
         {
@@ -7821,16 +8788,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 46.9,
-          "model_price": 2.13,
+          "model_probability": 47.7,
+          "model_price": 2.1,
           "current_odds": 1.87,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 50,
-          "ev": -12.21,
+          "ev": -10.95,
           "qi": 32,
-          "price_qi": 13,
-          "edge_points": -6.53,
+          "price_qi": 14,
+          "edge_points": -5.86,
           "risk_rating": "Low"
         },
         {
@@ -7932,6 +8899,24 @@ window.embeddedDataset = [
           "price_qi": 24
         },
         {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 28.3,
+          "model_price": 3.54,
+          "current_odds": 3.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 29.2,
+          "ev": -9.6,
+          "qi": 22,
+          "price_qi": 19,
+          "edge_points": -3,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Egypt to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -7946,24 +8931,6 @@ window.embeddedDataset = [
           "ev": -1.54,
           "qi": 21,
           "price_qi": 41
-        },
-        {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 26,
-          "model_price": 3.85,
-          "current_odds": 3.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 26.78,
-          "ev": -9.09,
-          "qi": 21,
-          "price_qi": 20,
-          "edge_points": -2.6,
-          "risk_rating": "Medium"
         },
         {
           "selection": "Egypt Draw No Bet",
@@ -7984,21 +8951,21 @@ window.embeddedDataset = [
           "risk_rating": "High"
         },
         {
-          "selection": "Over 3.5 Goals",
+          "selection": "Under 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 27.3,
-          "model_price": 3.67,
-          "current_odds": 3.2,
+          "model_probability": 25.1,
+          "model_price": 3.98,
+          "current_odds": 3.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 29.2,
-          "ev": -12.81,
-          "qi": 20,
-          "price_qi": 16,
-          "edge_points": -4,
+          "devig_book_probability": 26.78,
+          "ev": -12.06,
+          "qi": 19,
+          "price_qi": 17,
+          "edge_points": -3.45,
           "risk_rating": "Medium"
         },
         {
@@ -8039,16 +9006,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 12.8,
-          "model_price": 7.8,
+          "model_probability": 13.5,
+          "model_price": 7.42,
           "current_odds": 6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 15.61,
-          "ev": -23.08,
+          "ev": -19.14,
           "qi": 12,
-          "price_qi": 15,
-          "edge_points": -3.85,
+          "price_qi": 16,
+          "edge_points": -3.19,
           "risk_rating": "High"
         },
         {
@@ -8057,21 +9024,21 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 7.1,
-          "model_price": 14.01,
+          "model_probability": 6.8,
+          "model_price": 14.65,
           "current_odds": 9,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 10.36,
-          "ev": -35.76,
+          "ev": -38.57,
           "qi": 7,
-          "price_qi": 12,
-          "edge_points": -3.97,
+          "price_qi": 11,
+          "edge_points": -4.29,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 58.2,
@@ -8080,13 +9047,18 @@ window.embeddedDataset = [
       "calibrated_home_probability": 58.2,
       "calibrated_draw_probability": 24.6,
       "calibrated_away_probability": 17.1,
-      "total_goals_mean": 2.64,
+      "total_goals_mean": 2.68,
       "tempo_adjustment": 0.11,
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-15T23:34:26.172Z",
+    "lineup_last_checked": "2026-06-15T23:47:47.164Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667790,
@@ -8094,7 +9066,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-15T23:34:26.172Z",
+      "checked_at": "2026-06-15T23:47:47.164Z",
       "referee": "Ramon Abatti",
       "venue": "Seattle Stadium",
       "surface": "grass",
@@ -8163,7 +9135,97 @@ window.embeddedDataset = [
       ],
       "model_implication": "Confirmed starting XIs are now loaded for Belgium vs Egypt. Re-check player props against starters and bench players before treating any prop as a bet."
     },
-    "lineup_check_status": "confirmed"
+    "lineup_check_status": "confirmed",
+    "post_match_stats_last_checked": "2026-06-15T23:47:47.164Z",
+    "post_match_stats": {
+      "source": "ESPN structured match summary",
+      "home": {
+        "team": "Belgium",
+        "stats": {
+          "foulscommitted": 15,
+          "yellowcards": 2,
+          "redcards": 0,
+          "offsides": 0,
+          "woncorners": 2,
+          "saves": 2,
+          "possessionpct": 53.6,
+          "totalshots": 15,
+          "shotsontarget": 3,
+          "shotpct": 0.2,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 389,
+          "totalpasses": 453,
+          "passpct": 0.9,
+          "accuratecrosses": 6,
+          "totalcrosses": 16,
+          "crosspct": 0.4,
+          "totallongballs": 30,
+          "accuratelongballs": 18,
+          "longballpct": 0.6,
+          "blockedshots": 5,
+          "effectivetackles": 11,
+          "totaltackles": 16,
+          "tacklepct": 0.7,
+          "interceptions": 10,
+          "effectiveclearance": 26,
+          "totalclearance": 26
+        }
+      },
+      "away": {
+        "team": "Egypt",
+        "stats": {
+          "foulscommitted": 15,
+          "yellowcards": 2,
+          "redcards": 0,
+          "offsides": 1,
+          "woncorners": 7,
+          "saves": 3,
+          "possessionpct": 46.4,
+          "totalshots": 14,
+          "shotsontarget": 3,
+          "shotpct": 0.2,
+          "penaltykickgoals": 0,
+          "penaltykickshots": 0,
+          "accuratepasses": 323,
+          "totalpasses": 397,
+          "passpct": 0.8,
+          "accuratecrosses": 2,
+          "totalcrosses": 13,
+          "crosspct": 0.2,
+          "totallongballs": 51,
+          "accuratelongballs": 18,
+          "longballpct": 0.4,
+          "blockedshots": 8,
+          "effectivetackles": 17,
+          "totaltackles": 28,
+          "tacklepct": 0.6,
+          "interceptions": 12,
+          "effectiveclearance": 18,
+          "totalclearance": 18
+        }
+      }
+    },
+    "post_match_stats_status": "found",
+    "post_match_learning": {
+      "checked_at": "2026-06-15T23:47:57.609Z",
+      "result": "Belgium 1-1 Egypt",
+      "source": "ESPN",
+      "source_url": "https://www.espn.com/soccer/match/_/gameId/760426/egypt-belgium",
+      "predicted_result": "Belgium win",
+      "predicted_probability": 58.2,
+      "actual_result": "Draw",
+      "expected_total_goals": 2.68,
+      "actual_total_goals": 2,
+      "stats_used": true,
+      "shot_count": "15-14",
+      "shots_on_target": "3-3",
+      "flags": [
+        "draw-risk-underestimated",
+        "chance-quality-overstated"
+      ],
+      "summary": "Learning flags: draw-risk-underestimated, chance-quality-overstated."
+    }
   },
   {
     "match_name": "Saudi Arabia vs Uruguay",
@@ -8220,33 +9282,40 @@ window.embeddedDataset = [
         "previous_odds": 4.5
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 51.7,
-      "over_fair_price": 1.93,
-      "under_probability": 48.3,
-      "under_fair_price": 2.07,
-      "total_goals_mean": 2.74,
+      "over_probability": 50.7,
+      "over_fair_price": 1.97,
+      "under_probability": 49.3,
+      "under_fair_price": 2.03,
+      "total_goals_mean": 2.7,
       "tempo_adjustment": 0.13,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.04,
+      "break_open_risk": 0.02,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
-        "score": "Saudi Arabia 0-2 Uruguay",
-        "probability": 13.2,
-        "fair_price": 7.57
+        "score": "Saudi Arabia 0-1 Uruguay",
+        "probability": 13.3,
+        "fair_price": 7.51
       },
       {
-        "score": "Saudi Arabia 0-1 Uruguay",
-        "probability": 13,
-        "fair_price": 7.68
+        "score": "Saudi Arabia 0-2 Uruguay",
+        "probability": 13.2,
+        "fair_price": 7.58
+      },
+      {
+        "score": "Saudi Arabia 1-1 Uruguay",
+        "probability": 9.6,
+        "fair_price": 10.46
       },
       {
         "score": "Saudi Arabia 1-2 Uruguay",
@@ -8254,14 +9323,9 @@ window.embeddedDataset = [
         "fair_price": 10.55
       },
       {
-        "score": "Saudi Arabia 1-1 Uruguay",
-        "probability": 9.3,
-        "fair_price": 10.7
-      },
-      {
         "score": "Saudi Arabia 0-3 Uruguay",
-        "probability": 8.9,
-        "fair_price": 11.21
+        "probability": 8.7,
+        "fair_price": 11.46
       }
     ],
     "model_market_view": [
@@ -8269,8 +9333,8 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Saudi Arabia or Draw",
-        "probability": 35.6,
-        "fair_price": 2.81
+        "probability": 36.5,
+        "fair_price": 2.74
       },
       {
         "category": "Main Match",
@@ -8283,36 +9347,36 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Saudi Arabia or Uruguay",
-        "probability": 77,
-        "fair_price": 1.3
+        "probability": 76.1,
+        "fair_price": 1.31
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Saudi Arabia Draw No Bet",
-        "probability": 16.3,
-        "fair_price": 6.13
+        "probability": 16.5,
+        "fair_price": 6.04
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Uruguay Draw No Bet",
-        "probability": 83.7,
-        "fair_price": 1.19
+        "probability": 83.5,
+        "fair_price": 1.2
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 44.5,
-        "fair_price": 2.25
+        "probability": 44.2,
+        "fair_price": 2.26
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 55.5,
-        "fair_price": 1.8
+        "probability": 55.8,
+        "fair_price": 1.79
       },
       {
         "category": "Main Match",
@@ -8332,71 +9396,71 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93.6,
+        "probability": 93.3,
         "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 6.4,
-        "fair_price": 15.56
+        "probability": 6.7,
+        "fair_price": 14.89
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 75.9,
-        "fair_price": 1.32
+        "probability": 75.2,
+        "fair_price": 1.33
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 24.1,
-        "fair_price": 4.15
+        "probability": 24.8,
+        "fair_price": 4.02
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 51.7,
-        "fair_price": 1.93
+        "probability": 50.7,
+        "fair_price": 1.97
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 48.3,
-        "fair_price": 2.07
+        "probability": 49.3,
+        "fair_price": 2.03
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 29.6,
-        "fair_price": 3.38
+        "probability": 28.6,
+        "fair_price": 3.5
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 70.4,
-        "fair_price": 1.42
+        "probability": 71.4,
+        "fair_price": 1.4
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 14.4,
-        "fair_price": 6.95
+        "probability": 13.7,
+        "fair_price": 7.29
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 85.6,
-        "fair_price": 1.17
+        "probability": 86.3,
+        "fair_price": 1.16
       },
       {
         "category": "Team Totals",
@@ -8431,7 +9495,7 @@ window.embeddedDataset = [
         "market": "Team Totals",
         "selection": "Saudi Arabia Over 2.5 Goals",
         "probability": 3.6,
-        "fair_price": 27.53
+        "fair_price": 27.49
       },
       {
         "category": "Team Totals",
@@ -8444,106 +9508,106 @@ window.embeddedDataset = [
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uruguay Over 0.5 Goals",
-        "probability": 86.8,
-        "fair_price": 1.15
+        "probability": 86.2,
+        "fair_price": 1.16
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uruguay Under 0.5 Goals",
-        "probability": 13.2,
-        "fair_price": 7.59
+        "probability": 13.8,
+        "fair_price": 7.26
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uruguay Over 1.5 Goals",
-        "probability": 60.1,
-        "fair_price": 1.66
+        "probability": 58.9,
+        "fair_price": 1.7
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uruguay Under 1.5 Goals",
-        "probability": 39.9,
-        "fair_price": 2.51
+        "probability": 41.1,
+        "fair_price": 2.44
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uruguay Over 2.5 Goals",
-        "probability": 33.1,
-        "fair_price": 3.02
+        "probability": 31.9,
+        "fair_price": 3.14
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uruguay Under 2.5 Goals",
-        "probability": 66.9,
-        "fair_price": 1.49
+        "probability": 68.1,
+        "fair_price": 1.47
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Saudi Arabia 1H Win",
-        "probability": 12.7,
-        "fair_price": 7.87
+        "probability": 12.9,
+        "fair_price": 7.73
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 38.3,
-        "fair_price": 2.61
+        "probability": 38.8,
+        "fair_price": 2.57
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Uruguay 1H Win",
-        "probability": 49,
-        "fair_price": 2.04
+        "probability": 48.2,
+        "fair_price": 2.07
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 70.9,
-        "fair_price": 1.41
+        "probability": 70.3,
+        "fair_price": 1.42
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 29.1,
-        "fair_price": 3.44
+        "probability": 29.7,
+        "fair_price": 3.37
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 35,
-        "fair_price": 2.86
+        "probability": 34.3,
+        "fair_price": 2.92
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 65,
-        "fair_price": 1.54
+        "probability": 65.7,
+        "fair_price": 1.52
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 16.5,
-        "fair_price": 6.06
+        "probability": 16.3,
+        "fair_price": 6.14
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 83.5,
-        "fair_price": 1.2
+        "probability": 83.7,
+        "fair_price": 1.19
       }
     ],
     "market_scan": {
@@ -8575,16 +9639,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 51.7,
-          "model_price": 1.93,
+          "model_probability": 50.7,
+          "model_price": 1.97,
           "current_odds": 2.05,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 45.62,
-          "ev": 6.22,
-          "qi": 64,
-          "price_qi": 77,
-          "edge_points": 3.03,
+          "ev": 4.06,
+          "qi": 58,
+          "price_qi": 70,
+          "edge_points": 1.98,
           "risk_rating": "Low"
         },
         {
@@ -8593,16 +9657,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 75.9,
-          "model_price": 1.32,
+          "model_probability": 75.2,
+          "model_price": 1.33,
           "current_odds": 1.34,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 69.82,
-          "ev": 1.52,
-          "qi": 58,
-          "price_qi": 59,
-          "edge_points": 1.13,
+          "ev": 0.75,
+          "qi": 56,
+          "price_qi": 55,
+          "edge_points": 0.56,
           "risk_rating": "Low"
         },
         {
@@ -8611,16 +9675,34 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 44.5,
-          "model_price": 2.25,
+          "model_probability": 44.2,
+          "model_price": 2.26,
           "current_odds": 2.4,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 38.93,
-          "ev": 6.67,
-          "qi": 56,
-          "price_qi": 77,
-          "edge_points": 2.78,
+          "ev": 6.19,
+          "qi": 55,
+          "price_qi": 76,
+          "edge_points": 2.58,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Saudi Arabia or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 36.5,
+          "model_price": 2.74,
+          "current_odds": 2.95,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 16.02,
+          "ev": 7.66,
+          "qi": 52,
+          "price_qi": 78,
+          "edge_points": 2.6,
           "risk_rating": "Medium"
         },
         {
@@ -8629,7 +9711,7 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 93.6,
+          "model_probability": 93.3,
           "model_price": 1.07,
           "current_odds": 1.06,
           "au_bookie": "TAB",
@@ -8640,60 +9722,6 @@ window.embeddedDataset = [
           "price_qi": 41,
           "edge_points": -0.88,
           "risk_rating": "Low"
-        },
-        {
-          "selection": "Saudi Arabia or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 35.6,
-          "model_price": 2.81,
-          "current_odds": 2.95,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 16.02,
-          "ev": 4.98,
-          "qi": 48,
-          "price_qi": 72,
-          "edge_points": 1.69,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 29.6,
-          "model_price": 3.38,
-          "current_odds": 3.6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 25.93,
-          "ev": 6.51,
-          "qi": 46,
-          "price_qi": 75,
-          "edge_points": 1.81,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 44.5,
-          "model_price": 2.25,
-          "current_odds": 2.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 40.72,
-          "ev": 2.22,
-          "qi": 46,
-          "price_qi": 62,
-          "edge_points": 0.97,
-          "risk_rating": "Medium"
         },
         {
           "selection": "Uruguay to Win",
@@ -8712,22 +9740,40 @@ window.embeddedDataset = [
           "price_qi": 30
         },
         {
-          "selection": "Saudi Arabia or Uruguay",
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 44.2,
+          "model_price": 2.26,
+          "current_odds": 2.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 40.72,
+          "ev": 1.77,
+          "qi": 45,
+          "price_qi": 60,
+          "edge_points": 0.77,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Saudi Arabia or Draw",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 77,
-          "model_price": 1.3,
-          "current_odds": 1.22,
+          "model_probability": 36.5,
+          "model_price": 2.74,
+          "current_odds": 2.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 38.82,
-          "ev": -6.15,
-          "qi": 41,
-          "price_qi": 16,
-          "edge_points": -5.04,
-          "risk_rating": "Low"
+          "devig_book_probability": 16.92,
+          "ev": 2.19,
+          "qi": 42,
+          "price_qi": 61,
+          "edge_points": 0.78,
+          "risk_rating": "Medium"
         },
         {
           "selection": "Uruguay to Win",
@@ -8762,6 +9808,24 @@ window.embeddedDataset = [
           "price_qi": 18
         },
         {
+          "selection": "Saudi Arabia or Uruguay",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 76.1,
+          "model_price": 1.31,
+          "current_odds": 1.22,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 38.82,
+          "ev": -6.87,
+          "qi": 40,
+          "price_qi": 14,
+          "edge_points": -5.63,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Uruguay to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -8794,6 +9858,24 @@ window.embeddedDataset = [
           "price_qi": 15
         },
         {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 28.6,
+          "model_price": 3.5,
+          "current_odds": 3.6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 25.93,
+          "ev": 2.86,
+          "qi": 39,
+          "price_qi": 64,
+          "edge_points": 0.79,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Uruguay or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -8817,34 +9899,34 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 77,
-          "model_price": 1.3,
+          "model_probability": 76.1,
+          "model_price": 1.31,
           "current_odds": 1.2,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 39.39,
-          "ev": -7.69,
+          "ev": -8.4,
           "qi": 39,
-          "price_qi": 12,
-          "edge_points": -6.41,
+          "price_qi": 10,
+          "edge_points": -7,
           "risk_rating": "Low"
         },
         {
-          "selection": "Uruguay Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 83.7,
-          "model_price": 1.19,
-          "current_odds": 1.1,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 71.4,
+          "model_price": 1.4,
+          "current_odds": 1.26,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 84.51,
-          "ev": -7.56,
+          "devig_book_probability": 74.07,
+          "ev": -10,
           "qi": 38,
-          "price_qi": 8,
-          "edge_points": -6.88,
+          "price_qi": 9,
+          "edge_points": -7.94,
           "risk_rating": "Low"
         },
         {
@@ -8871,71 +9953,35 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 85.6,
-          "model_price": 1.17,
+          "model_probability": 86.3,
+          "model_price": 1.16,
           "current_odds": 1.07,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 87.51,
-          "ev": -8.55,
+          "ev": -7.76,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -7.99,
+          "price_qi": 6,
+          "edge_points": -7.25,
           "risk_rating": "Low"
         },
         {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
+          "selection": "Uruguay Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
           "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 70.4,
-          "model_price": 1.42,
-          "current_odds": 1.26,
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 83.5,
+          "model_price": 1.2,
+          "current_odds": 1.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 74.07,
-          "ev": -11.27,
+          "devig_book_probability": 84.51,
+          "ev": -8.33,
           "qi": 37,
           "price_qi": 7,
-          "edge_points": -8.94,
+          "edge_points": -7.58,
           "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 14.4,
-          "model_price": 6.95,
-          "current_odds": 7.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 12.49,
-          "ev": 7.91,
-          "qi": 36,
-          "price_qi": 76,
-          "edge_points": 1.06,
-          "risk_rating": "High"
-        },
-        {
-          "selection": "Saudi Arabia or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 35.6,
-          "model_price": 2.81,
-          "current_odds": 2.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 16.92,
-          "ev": -0.36,
-          "qi": 35,
-          "price_qi": 47,
-          "edge_points": -0.13,
-          "risk_rating": "Medium"
         },
         {
           "selection": "BTTS No",
@@ -8943,16 +9989,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 55.5,
-          "model_price": 1.8,
+          "model_probability": 55.8,
+          "model_price": 1.79,
           "current_odds": 1.58,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 59.28,
-          "ev": -12.22,
+          "ev": -11.73,
           "qi": 35,
           "price_qi": 11,
-          "edge_points": -7.74,
+          "edge_points": -7.43,
           "risk_rating": "Low"
         },
         {
@@ -8961,16 +10007,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 55.5,
-          "model_price": 1.8,
+          "model_probability": 55.8,
+          "model_price": 1.79,
           "current_odds": 1.53,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 61.07,
-          "ev": -15,
+          "ev": -14.53,
           "qi": 34,
           "price_qi": 8,
-          "edge_points": -9.8,
+          "edge_points": -9.49,
           "risk_rating": "Low"
         },
         {
@@ -8990,6 +10036,42 @@ window.embeddedDataset = [
           "price_qi": 77
         },
         {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 49.3,
+          "model_price": 2.03,
+          "current_odds": 1.72,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 54.38,
+          "ev": -15.27,
+          "qi": 31,
+          "price_qi": 9,
+          "edge_points": -8.88,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 13.7,
+          "model_price": 7.29,
+          "current_odds": 7.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 12.49,
+          "ev": 2.88,
+          "qi": 30,
+          "price_qi": 64,
+          "edge_points": 0.38,
+          "risk_rating": "High"
+        },
+        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -9004,24 +10086,6 @@ window.embeddedDataset = [
           "ev": 2.22,
           "qi": 30,
           "price_qi": 61
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 48.3,
-          "model_price": 2.07,
-          "current_odds": 1.72,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 54.38,
-          "ev": -16.91,
-          "qi": 30,
-          "price_qi": 8,
-          "edge_points": -9.83,
-          "risk_rating": "Low"
         },
         {
           "selection": "Match to end in a Draw",
@@ -9045,16 +10109,16 @@ window.embeddedDataset = [
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 16.3,
-          "model_price": 6.13,
+          "model_probability": 16.5,
+          "model_price": 6.04,
           "current_odds": 6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 15.49,
-          "ev": -2.12,
-          "qi": 20,
-          "price_qi": 39,
-          "edge_points": -0.35,
+          "ev": -0.66,
+          "qi": 23,
+          "price_qi": 46,
+          "edge_points": -0.11,
           "risk_rating": "High"
         },
         {
@@ -9106,6 +10170,24 @@ window.embeddedDataset = [
           "price_qi": 26
         },
         {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 24.8,
+          "model_price": 4.02,
+          "current_odds": 3.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 30.18,
+          "ev": -22.89,
+          "qi": 17,
+          "price_qi": 11,
+          "edge_points": -7.38,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Saudi Arabia to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -9120,24 +10202,6 @@ window.embeddedDataset = [
           "ev": -5.95,
           "qi": 16,
           "price_qi": 26
-        },
-        {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 24.1,
-          "model_price": 4.15,
-          "current_odds": 3.1,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 30.18,
-          "ev": -25.3,
-          "qi": 16,
-          "price_qi": 9,
-          "edge_points": -8.16,
-          "risk_rating": "Medium"
         },
         {
           "selection": "Saudi Arabia to Win",
@@ -9193,36 +10257,41 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 6.4,
-          "model_price": 15.56,
+          "model_probability": 6.7,
+          "model_price": 14.89,
           "current_odds": 8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 11.7,
-          "ev": -48.59,
+          "ev": -46.27,
           "qi": 6,
           "price_qi": 9,
-          "edge_points": -6.07,
+          "edge_points": -5.78,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 12.1,
       "base_draw_probability": 22.2,
       "base_away_probability": 65.7,
       "calibrated_home_probability": 12.6,
-      "calibrated_draw_probability": 23,
-      "calibrated_away_probability": 64.4,
-      "total_goals_mean": 2.74,
+      "calibrated_draw_probability": 23.9,
+      "calibrated_away_probability": 63.5,
+      "total_goals_mean": 2.7,
       "tempo_adjustment": 0.13,
-      "draw_lift_points": 0.9,
-      "favourite_compression_points": 1.7,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.04,
+      "break_open_risk": 0.02,
+      "draw_lift_points": 1.9,
+      "favourite_compression_points": 1.9,
+      "low_block_draw_risk_points": 0.8,
+      "goal_suppression_points": 0.04,
+      "break_open_risk_points": 0.02,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-15T23:34:26.172Z",
+    "lineup_last_checked": "2026-06-15T23:47:47.164Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667799,
@@ -9230,7 +10299,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-15T23:34:26.172Z",
+      "checked_at": "2026-06-15T23:47:47.164Z",
       "referee": "Maurizio Mariani",
       "venue": "Miami Stadium",
       "surface": "grass",
@@ -9284,14 +10353,14 @@ window.embeddedDataset = [
       "away_substitutes": [
         "Juan Sanabria",
         "Agustín Canobbio",
+        "Nicolás de la Cruz",
+        "Brian Rodríguez",
         "Santiago Mele",
         "Sergio Rochet",
         "Joaquín Piquerez",
         "José Giménez",
         "Santiago Bueno",
         "Emiliano Martínez",
-        "Nicolás de la Cruz",
-        "Brian Rodríguez",
         "Facundo Pellistri",
         "Rodrigo Aguirre",
         "Rodrigo Zalazar"
@@ -9315,8 +10384,8 @@ window.embeddedDataset = [
         "true_price": 1.94,
         "current_odds": 1.84,
         "au_bookie": "Betfair",
-        "devig_book_probability": 54.02,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "devig_book_probability": 53.82,
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:15:47.185Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -9330,8 +10399,8 @@ window.embeddedDataset = [
         "true_price": 4.84,
         "current_odds": 5.2,
         "au_bookie": "Betfair",
-        "devig_book_probability": 19.12,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "devig_book_probability": 19.04,
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:15:47.185Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -9343,24 +10412,24 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 3.59,
-        "current_odds": 3.7,
+        "current_odds": 3.65,
         "au_bookie": "Betfair",
-        "devig_book_probability": 26.86,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
-        "odds_updated_at": "2026-06-15T23:15:47.185Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 27.13,
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
+        "odds_updated_at": "2026-06-15T23:47:47.164Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "previous_odds": 3.65
+        "previous_odds": 3.7
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event ec51b9c44ad5e34552f3ab53f7262813.",
     "model_totals_25": {
       "line": 2.5,
@@ -9370,7 +10439,9 @@ window.embeddedDataset = [
       "under_fair_price": 1.77,
       "total_goals_mean": 2.42,
       "tempo_adjustment": 0,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
@@ -9704,6 +10775,38 @@ window.embeddedDataset = [
       ],
       "matched_rows": 37,
       "rows": [
+        {
+          "selection": "Chris Wood: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 34.1,
+          "model_price": 2.93,
+          "current_odds": 4.5,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 53.58,
+          "qi": 76,
+          "price_qi": 95,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "Mehdi Taremi: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 41.2,
+          "model_price": 2.43,
+          "current_odds": 2.88,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 18.52,
+          "qi": 67,
+          "price_qi": 87,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
         {
           "selection": "Over 1.5 Goals",
           "category": "Goal Totals",
@@ -10141,6 +11244,22 @@ window.embeddedDataset = [
           "risk_rating": "Medium"
         },
         {
+          "selection": "Mehdi Taremi: 2+ Total Shots",
+          "category": "Player Prop",
+          "market": "2+ Total Shots",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 2 Or More Shots",
+          "model_probability": 59.8,
+          "model_price": 1.67,
+          "current_odds": 1.12,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -32.93,
+          "qi": 33,
+          "price_qi": 0,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "New Zealand to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -10342,7 +11461,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 51.5,
@@ -10353,11 +11472,16 @@ window.embeddedDataset = [
       "calibrated_away_probability": 20.6,
       "total_goals_mean": 2.42,
       "tempo_adjustment": 0,
+      "goal_suppression": 0,
+      "break_open_risk": 0,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-15T23:34:26.172Z",
+    "lineup_last_checked": "2026-06-15T23:47:47.164Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667791,
@@ -10365,7 +11489,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-15T23:34:26.172Z",
+      "checked_at": "2026-06-15T23:47:47.164Z",
       "referee": "Cesar Ramos",
       "venue": "Los Angeles Stadium",
       "surface": "grass",
@@ -10421,7 +11545,7 @@ window.embeddedDataset = [
         "current_odds": 1.51,
         "au_bookie": "Betfair",
         "devig_book_probability": 65.6,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T20:03:51.991Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -10436,7 +11560,7 @@ window.embeddedDataset = [
         "current_odds": 8,
         "au_bookie": "Betfair",
         "devig_book_probability": 12.38,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:15:47.185Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -10451,7 +11575,7 @@ window.embeddedDataset = [
         "current_odds": 4.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 22.01,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:33:19.845Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -10460,48 +11584,50 @@ window.embeddedDataset = [
         "previous_odds": 4.6
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 73a4fcd14cc9766b9b9bfd50b8ca153a.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 53.7,
-      "over_fair_price": 1.86,
-      "under_probability": 46.3,
-      "under_fair_price": 2.16,
-      "total_goals_mean": 2.83,
+      "over_probability": 55.7,
+      "over_fair_price": 1.79,
+      "under_probability": 44.3,
+      "under_fair_price": 2.26,
+      "total_goals_mean": 2.91,
       "tempo_adjustment": 0.22,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.09,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "France 2-0 Senegal",
-        "probability": 12.6,
-        "fair_price": 7.93
+        "probability": 12.2,
+        "fair_price": 8.16
       },
       {
         "score": "France 1-0 Senegal",
-        "probability": 12.2,
-        "fair_price": 8.19
+        "probability": 11.5,
+        "fair_price": 8.68
       },
       {
         "score": "France 2-1 Senegal",
-        "probability": 9.6,
-        "fair_price": 10.39
+        "probability": 9.7,
+        "fair_price": 10.35
       },
       {
         "score": "France 1-1 Senegal",
-        "probability": 9.3,
-        "fair_price": 10.73
+        "probability": 9.1,
+        "fair_price": 10.99
       },
       {
         "score": "France 3-0 Senegal",
         "probability": 8.7,
-        "fair_price": 11.53
+        "fair_price": 11.52
       }
     ],
     "model_market_view": [
@@ -10516,274 +11642,274 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Senegal or Draw",
-        "probability": 36.4,
-        "fair_price": 2.74
+        "probability": 36.6,
+        "fair_price": 2.73
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "France or Senegal",
-        "probability": 77.1,
+        "probability": 77,
         "fair_price": 1.3
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "France Draw No Bet",
-        "probability": 82.4,
+        "probability": 82.3,
         "fair_price": 1.21
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Senegal Draw No Bet",
-        "probability": 17.6,
-        "fair_price": 5.69
+        "probability": 17.7,
+        "fair_price": 5.67
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 46.6,
-        "fair_price": 2.15
+        "probability": 48.1,
+        "fair_price": 2.08
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 53.4,
-        "fair_price": 1.87
+        "probability": 51.9,
+        "fair_price": 1.93
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.8,
+        "probability": 49.9,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.2,
+        "probability": 50.1,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 94.1,
+        "probability": 94.6,
         "fair_price": 1.06
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 5.9,
-        "fair_price": 16.91
+        "probability": 5.4,
+        "fair_price": 18.44
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 77.4,
-        "fair_price": 1.29
+        "probability": 78.8,
+        "fair_price": 1.27
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 22.6,
-        "fair_price": 4.42
+        "probability": 21.2,
+        "fair_price": 4.71
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 53.7,
-        "fair_price": 1.86
+        "probability": 55.7,
+        "fair_price": 1.79
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 46.3,
-        "fair_price": 2.16
+        "probability": 44.3,
+        "fair_price": 2.26
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 31.4,
-        "fair_price": 3.18
+        "probability": 33.4,
+        "fair_price": 3
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 68.6,
-        "fair_price": 1.46
+        "probability": 66.6,
+        "fair_price": 1.5
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 15.7,
-        "fair_price": 6.38
+        "probability": 17.1,
+        "fair_price": 5.86
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 84.3,
-        "fair_price": 1.19
+        "probability": 82.9,
+        "fair_price": 1.21
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "France Over 0.5 Goals",
-        "probability": 87.3,
-        "fair_price": 1.15
+        "probability": 88.1,
+        "fair_price": 1.14
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "France Under 0.5 Goals",
-        "probability": 12.7,
-        "fair_price": 7.88
+        "probability": 11.9,
+        "fair_price": 8.38
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "France Over 1.5 Goals",
-        "probability": 61.1,
-        "fair_price": 1.64
+        "probability": 62.7,
+        "fair_price": 1.6
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "France Under 1.5 Goals",
-        "probability": 38.9,
-        "fair_price": 2.57
+        "probability": 37.3,
+        "fair_price": 2.68
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "France Over 2.5 Goals",
-        "probability": 34.1,
-        "fair_price": 2.93
+        "probability": 35.7,
+        "fair_price": 2.8
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "France Under 2.5 Goals",
-        "probability": 65.9,
-        "fair_price": 1.52
+        "probability": 64.3,
+        "fair_price": 1.56
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Senegal Over 0.5 Goals",
-        "probability": 53.4,
-        "fair_price": 1.87
+        "probability": 54.6,
+        "fair_price": 1.83
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Senegal Under 0.5 Goals",
-        "probability": 46.6,
-        "fair_price": 2.15
+        "probability": 45.4,
+        "fair_price": 2.2
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Senegal Over 1.5 Goals",
-        "probability": 17.8,
-        "fair_price": 5.61
+        "probability": 18.7,
+        "fair_price": 5.34
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Senegal Under 1.5 Goals",
-        "probability": 82.2,
-        "fair_price": 1.22
+        "probability": 81.3,
+        "fair_price": 1.23
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Senegal Over 2.5 Goals",
-        "probability": 4.2,
-        "fair_price": 23.64
+        "probability": 4.6,
+        "fair_price": 21.8
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Senegal Under 2.5 Goals",
-        "probability": 95.8,
-        "fair_price": 1.04
+        "probability": 95.4,
+        "fair_price": 1.05
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "France 1H Win",
-        "probability": 49,
-        "fair_price": 2.04
+        "probability": 49.7,
+        "fair_price": 2.01
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 37.7,
-        "fair_price": 2.65
+        "probability": 36.9,
+        "fair_price": 2.71
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Senegal 1H Win",
-        "probability": 13.3,
-        "fair_price": 7.52
+        "probability": 13.4,
+        "fair_price": 7.45
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 72,
-        "fair_price": 1.39
+        "probability": 73.1,
+        "fair_price": 1.37
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 28,
-        "fair_price": 3.57
+        "probability": 26.9,
+        "fair_price": 3.71
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 36.3,
-        "fair_price": 2.75
+        "probability": 37.7,
+        "fair_price": 2.65
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 63.7,
-        "fair_price": 1.57
+        "probability": 62.3,
+        "fair_price": 1.61
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 17.6,
-        "fair_price": 5.68
+        "probability": 18.4,
+        "fair_price": 5.43
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 82.4,
-        "fair_price": 1.21
+        "probability": 81.6,
+        "fair_price": 1.23
       }
     ],
     "market_scan": {
@@ -10815,16 +11941,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 53.7,
-          "model_price": 1.86,
+          "model_probability": 55.7,
+          "model_price": 1.79,
           "current_odds": 1.87,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 50,
-          "ev": 0.54,
-          "qi": 49,
-          "price_qi": 53,
-          "edge_points": 0.29,
+          "ev": 4.47,
+          "qi": 62,
+          "price_qi": 72,
+          "edge_points": 2.39,
           "risk_rating": "Low"
         },
         {
@@ -10833,16 +11959,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 77.4,
-          "model_price": 1.29,
+          "model_probability": 78.8,
+          "model_price": 1.27,
           "current_odds": 1.26,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 74.07,
-          "ev": -2.33,
-          "qi": 47,
-          "price_qi": 34,
-          "edge_points": -1.85,
+          "ev": -0.79,
+          "qi": 50,
+          "price_qi": 44,
+          "edge_points": -0.62,
           "risk_rating": "Low"
         },
         {
@@ -10867,7 +11993,7 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 94.1,
+          "model_probability": 94.6,
           "model_price": 1.06,
           "current_odds": 1.04,
           "au_bookie": "TAB",
@@ -10912,6 +12038,24 @@ window.embeddedDataset = [
           "price_qi": 25
         },
         {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 33.4,
+          "model_price": 3,
+          "current_odds": 3.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 30.18,
+          "ev": 3.33,
+          "qi": 43,
+          "price_qi": 66,
+          "edge_points": 1.08,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "France or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -10935,7 +12079,7 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 77.1,
+          "model_probability": 77,
           "model_price": 1.3,
           "current_odds": 1.22,
           "au_bookie": "TAB",
@@ -10980,30 +12124,12 @@ window.embeddedDataset = [
           "price_qi": 17
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 53.4,
-          "model_price": 1.87,
-          "current_odds": 1.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 52,
-          "ev": -3.74,
-          "qi": 40,
-          "price_qi": 29,
-          "edge_points": -2.08,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "France Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 82.4,
+          "model_probability": 82.3,
           "model_price": 1.21,
           "current_odds": 1.14,
           "au_bookie": "TAB",
@@ -11016,48 +12142,12 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 68.6,
-          "model_price": 1.46,
-          "current_odds": 1.34,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 69.82,
-          "ev": -8.22,
-          "qi": 40,
-          "price_qi": 13,
-          "edge_points": -6.13,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 84.3,
-          "model_price": 1.19,
-          "current_odds": 1.11,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 84.39,
-          "ev": -6.72,
-          "qi": 39,
-          "price_qi": 11,
-          "edge_points": -6.06,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "France or Senegal",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 77.1,
+          "model_probability": 77,
           "model_price": 1.3,
           "current_odds": 1.2,
           "au_bookie": "SportsBet",
@@ -11067,6 +12157,42 @@ window.embeddedDataset = [
           "qi": 39,
           "price_qi": 12,
           "edge_points": -6.41,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Senegal or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 36.6,
+          "model_price": 2.73,
+          "current_odds": 2.75,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 17.13,
+          "ev": 0.73,
+          "qi": 38,
+          "price_qi": 54,
+          "edge_points": 0.27,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 48.1,
+          "model_price": 2.08,
+          "current_odds": 2,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 46.24,
+          "ev": -3.85,
+          "qi": 38,
+          "price_qi": 30,
+          "edge_points": -1.92,
           "risk_rating": "Low"
         },
         {
@@ -11088,22 +12214,40 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Senegal or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 36.4,
-          "model_price": 2.74,
-          "current_odds": 2.75,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 17.13,
-          "ev": 0.36,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 66.6,
+          "model_price": 1.5,
+          "current_odds": 1.34,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 69.82,
+          "ev": -10.67,
+          "qi": 38,
+          "price_qi": 9,
+          "edge_points": -7.96,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 82.9,
+          "model_price": 1.21,
+          "current_odds": 1.11,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 84.39,
+          "ev": -8.26,
           "qi": 37,
-          "price_qi": 52,
-          "edge_points": 0.13,
-          "risk_rating": "Medium"
+          "price_qi": 7,
+          "edge_points": -7.45,
+          "risk_rating": "Low"
         },
         {
           "selection": "BTTS No",
@@ -11111,16 +12255,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 53.4,
-          "model_price": 1.87,
-          "current_odds": 1.72,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 53.76,
-          "ev": -8.02,
+          "model_probability": 51.9,
+          "model_price": 1.93,
+          "current_odds": 1.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 52,
+          "ev": -6.74,
           "qi": 36,
-          "price_qi": 17,
-          "edge_points": -4.66,
+          "price_qi": 20,
+          "edge_points": -3.74,
           "risk_rating": "Low"
         },
         {
@@ -11129,35 +12273,67 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 46.6,
-          "model_price": 2.15,
-          "current_odds": 2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 46.24,
-          "ev": -6.98,
-          "qi": 34,
-          "price_qi": 21,
-          "edge_points": -3.49,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 46.6,
-          "model_price": 2.15,
+          "model_probability": 48.1,
+          "model_price": 2.08,
           "current_odds": 1.95,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 48,
-          "ev": -9.3,
-          "qi": 32,
-          "price_qi": 16,
-          "edge_points": -4.77,
+          "ev": -6.25,
+          "qi": 35,
+          "price_qi": 22,
+          "edge_points": -3.21,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Idrissa Gueye: To Get Carded",
+          "category": "Player Prop",
+          "market": "To Get Carded",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Be Booked",
+          "model_probability": 31.2,
+          "model_price": 3.21,
+          "current_odds": 3.22,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 0.31,
+          "qi": 34,
+          "price_qi": 51,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 51.9,
+          "model_price": 1.93,
+          "current_odds": 1.72,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 53.76,
+          "ev": -10.88,
+          "qi": 34,
+          "price_qi": 13,
+          "edge_points": -6.33,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Kylian Mbappe: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 47.6,
+          "model_price": 2.1,
+          "current_odds": 1.91,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -9.05,
+          "qi": 33,
+          "price_qi": 17,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Senegal to Win",
@@ -11176,40 +12352,56 @@ window.embeddedDataset = [
           "price_qi": 73
         },
         {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 17.1,
+          "model_price": 5.86,
+          "current_odds": 6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 15.61,
+          "ev": 2.39,
+          "qi": 29,
+          "price_qi": 62,
+          "edge_points": 0.4,
+          "risk_rating": "High"
+        },
+        {
+          "selection": "Ousmane Dembele: Goal or Assist",
+          "category": "Player Prop",
+          "market": "Goal or Assist",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Score Or Assist",
+          "model_probability": 43.6,
+          "model_price": 2.29,
+          "current_odds": 1.91,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -16.59,
+          "qi": 29,
+          "price_qi": 10,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "Under 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 46.3,
-          "model_price": 2.16,
+          "model_probability": 44.3,
+          "model_price": 2.26,
           "current_odds": 1.87,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 50,
-          "ev": -13.43,
-          "qi": 31,
-          "price_qi": 12,
-          "edge_points": -7.18,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 31.4,
-          "model_price": 3.18,
-          "current_odds": 3.1,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 30.18,
-          "ev": -2.52,
+          "ev": -17.26,
           "qi": 29,
-          "price_qi": 36,
-          "edge_points": -0.81,
-          "risk_rating": "Medium"
+          "price_qi": 9,
+          "edge_points": -9.23,
+          "risk_rating": "Low"
         },
         {
           "selection": "Senegal or Draw",
@@ -11217,16 +12409,16 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 36.4,
-          "model_price": 2.74,
+          "model_probability": 36.6,
+          "model_price": 2.73,
           "current_odds": 2.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 18.2,
-          "ev": -5.11,
+          "ev": -4.76,
           "qi": 28,
-          "price_qi": 26,
-          "edge_points": -1.97,
+          "price_qi": 27,
+          "edge_points": -1.83,
           "risk_rating": "Medium"
         },
         {
@@ -11276,6 +12468,22 @@ window.embeddedDataset = [
           "ev": -1.57,
           "qi": 22,
           "price_qi": 41
+        },
+        {
+          "selection": "Ismaila Sarr: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 34.7,
+          "model_price": 2.88,
+          "current_odds": 2.4,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -16.67,
+          "qi": 22,
+          "price_qi": 12,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -11331,35 +12539,17 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 22.6,
-          "model_price": 4.42,
+          "model_probability": 21.2,
+          "model_price": 4.71,
           "current_odds": 3.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 25.93,
-          "ev": -18.55,
-          "qi": 17,
-          "price_qi": 13,
-          "edge_points": -5.15,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 15.7,
-          "model_price": 6.38,
-          "current_odds": 6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 15.61,
-          "ev": -5.96,
+          "ev": -23.57,
           "qi": 16,
-          "price_qi": 26,
-          "edge_points": -0.99,
-          "risk_rating": "High"
+          "price_qi": 11,
+          "edge_points": -6.55,
+          "risk_rating": "Medium"
         },
         {
           "selection": "Senegal to Win",
@@ -11383,16 +12573,16 @@ window.embeddedDataset = [
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 17.6,
-          "model_price": 5.69,
+          "model_probability": 17.7,
+          "model_price": 5.67,
           "current_odds": 5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 18.57,
-          "ev": -12.13,
+          "ev": -11.82,
           "qi": 13,
           "price_qi": 19,
-          "edge_points": -2.43,
+          "edge_points": -2.36,
           "risk_rating": "High"
         },
         {
@@ -11433,34 +12623,39 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 5.9,
-          "model_price": 16.91,
+          "model_probability": 5.4,
+          "model_price": 18.44,
           "current_odds": 9,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 10.36,
-          "ev": -46.78,
+          "ev": -51.19,
           "qi": 6,
-          "price_qi": 9,
-          "edge_points": -5.2,
+          "price_qi": 8,
+          "edge_points": -5.69,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 64.4,
       "base_draw_probability": 22.3,
       "base_away_probability": 13.3,
-      "calibrated_home_probability": 63.6,
-      "calibrated_draw_probability": 22.9,
+      "calibrated_home_probability": 63.4,
+      "calibrated_draw_probability": 23,
       "calibrated_away_probability": 13.6,
-      "total_goals_mean": 2.83,
+      "total_goals_mean": 2.91,
       "tempo_adjustment": 0.22,
-      "draw_lift_points": 0.6,
-      "favourite_compression_points": 1.1,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.09,
+      "draw_lift_points": 0.7,
+      "favourite_compression_points": 1.2,
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.09,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -11479,7 +12674,7 @@ window.embeddedDataset = [
         "current_odds": 18.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 5.38,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -11494,7 +12689,7 @@ window.embeddedDataset = [
         "current_odds": 1.21,
         "au_bookie": "Betfair",
         "devig_book_probability": 82.19,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T22:25:53.958Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -11509,7 +12704,7 @@ window.embeddedDataset = [
         "current_odds": 8,
         "au_bookie": "Betfair",
         "devig_book_probability": 12.43,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:15:47.185Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -11518,48 +12713,50 @@ window.embeddedDataset = [
         "previous_odds": 8.2
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 4d4f2b9b78182b557d4fbf8dcf4f4af2.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 48.9,
-      "over_fair_price": 2.05,
-      "under_probability": 51.1,
-      "under_fair_price": 1.96,
-      "total_goals_mean": 2.63,
+      "over_probability": 44.4,
+      "over_fair_price": 2.25,
+      "under_probability": 55.6,
+      "under_fair_price": 1.8,
+      "total_goals_mean": 2.45,
       "tempo_adjustment": -0.07,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.07,
+      "break_open_risk": 0.02,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
-        "score": "Iraq 0-2 Norway",
-        "probability": 14.8,
-        "fair_price": 6.76
+        "score": "Iraq 0-1 Norway",
+        "probability": 15.9,
+        "fair_price": 6.28
       },
       {
-        "score": "Iraq 0-1 Norway",
-        "probability": 14.6,
-        "fair_price": 6.84
+        "score": "Iraq 0-2 Norway",
+        "probability": 14.8,
+        "fair_price": 6.78
+      },
+      {
+        "score": "Iraq 1-1 Norway",
+        "probability": 9.6,
+        "fair_price": 10.45
       },
       {
         "score": "Iraq 0-3 Norway",
-        "probability": 10,
-        "fair_price": 10.03
+        "probability": 9.1,
+        "fair_price": 10.97
       },
       {
         "score": "Iraq 1-2 Norway",
         "probability": 8.9,
-        "fair_price": 11.19
-      },
-      {
-        "score": "Iraq 1-1 Norway",
-        "probability": 8.8,
-        "fair_price": 11.32
+        "fair_price": 11.28
       }
     ],
     "model_market_view": [
@@ -11567,281 +12764,281 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Iraq or Draw",
-        "probability": 30.3,
-        "fair_price": 3.3
+        "probability": 35,
+        "fair_price": 2.86
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Norway or Draw",
-        "probability": 91.6,
-        "fair_price": 1.09
+        "probability": 90.4,
+        "fair_price": 1.11
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Iraq or Norway",
-        "probability": 78.1,
-        "fair_price": 1.28
+        "probability": 74.6,
+        "fair_price": 1.34
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Iraq Draw No Bet",
-        "probability": 10.8,
-        "fair_price": 9.26
+        "probability": 12.8,
+        "fair_price": 7.8
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Norway Draw No Bet",
-        "probability": 89.2,
-        "fair_price": 1.12
+        "probability": 87.2,
+        "fair_price": 1.15
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 39.4,
-        "fair_price": 2.54
+        "probability": 38.1,
+        "fair_price": 2.63
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 60.6,
-        "fair_price": 1.65
+        "probability": 61.9,
+        "fair_price": 1.62
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.7,
+        "probability": 49.6,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.3,
+        "probability": 50.4,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 92.8,
-        "fair_price": 1.08
+        "probability": 91.4,
+        "fair_price": 1.09
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7.2,
-        "fair_price": 13.85
+        "probability": 8.6,
+        "fair_price": 11.63
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 73.8,
-        "fair_price": 1.35
+        "probability": 70.3,
+        "fair_price": 1.42
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 26.2,
-        "fair_price": 3.82
+        "probability": 29.7,
+        "fair_price": 3.37
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 48.9,
-        "fair_price": 2.05
+        "probability": 44.4,
+        "fair_price": 2.25
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 51.1,
-        "fair_price": 1.96
+        "probability": 55.6,
+        "fair_price": 1.8
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 27,
-        "fair_price": 3.7
+        "probability": 23.3,
+        "fair_price": 4.3
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 73,
-        "fair_price": 1.37
+        "probability": 76.7,
+        "fair_price": 1.3
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 12.7,
-        "fair_price": 7.9
+        "probability": 10.3,
+        "fair_price": 9.74
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 87.3,
-        "fair_price": 1.14
+        "probability": 89.7,
+        "fair_price": 1.11
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Iraq Over 0.5 Goals",
-        "probability": 45.4,
-        "fair_price": 2.2
+        "probability": 45.2,
+        "fair_price": 2.21
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Iraq Under 0.5 Goals",
-        "probability": 54.6,
-        "fair_price": 1.83
+        "probability": 54.8,
+        "fair_price": 1.82
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Iraq Over 1.5 Goals",
-        "probability": 12.3,
-        "fair_price": 8.11
+        "probability": 12.2,
+        "fair_price": 8.18
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Iraq Under 1.5 Goals",
-        "probability": 87.7,
+        "probability": 87.8,
         "fair_price": 1.14
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Iraq Over 2.5 Goals",
-        "probability": 2.4,
-        "fair_price": 42.44
+        "probability": 2.3,
+        "fair_price": 43.08
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Iraq Under 2.5 Goals",
-        "probability": 97.6,
+        "probability": 97.7,
         "fair_price": 1.02
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Norway Over 0.5 Goals",
-        "probability": 86.8,
-        "fair_price": 1.15
+        "probability": 84.3,
+        "fair_price": 1.19
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Norway Under 0.5 Goals",
-        "probability": 13.2,
-        "fair_price": 7.57
+        "probability": 15.7,
+        "fair_price": 6.38
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Norway Over 1.5 Goals",
-        "probability": 60,
-        "fair_price": 1.67
+        "probability": 55.3,
+        "fair_price": 1.81
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Norway Under 1.5 Goals",
-        "probability": 40,
-        "fair_price": 2.5
+        "probability": 44.7,
+        "fair_price": 2.24
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Norway Over 2.5 Goals",
-        "probability": 33,
-        "fair_price": 3.03
+        "probability": 28.4,
+        "fair_price": 3.53
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Norway Under 2.5 Goals",
-        "probability": 67,
-        "fair_price": 1.49
+        "probability": 71.6,
+        "fair_price": 1.4
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Iraq 1H Win",
-        "probability": 10.8,
-        "fair_price": 9.29
+        "probability": 11.4,
+        "fair_price": 8.74
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 38.7,
-        "fair_price": 2.58
+        "probability": 41.1,
+        "fair_price": 2.44
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Norway 1H Win",
-        "probability": 50.5,
-        "fair_price": 1.98
+        "probability": 47.5,
+        "fair_price": 2.11
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 69.4,
-        "fair_price": 1.44
+        "probability": 66.9,
+        "fair_price": 1.5
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30.6,
-        "fair_price": 3.26
-      },
-      {
-        "category": "First Half",
-        "market": "First Half Totals",
-        "selection": "1H Over 1.5 Goals",
         "probability": 33.1,
         "fair_price": 3.02
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
+        "selection": "1H Over 1.5 Goals",
+        "probability": 30.2,
+        "fair_price": 3.31
+      },
+      {
+        "category": "First Half",
+        "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66.9,
-        "fair_price": 1.49
+        "probability": 69.8,
+        "fair_price": 1.43
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 14.2,
-        "fair_price": 7.02
+        "probability": 13.4,
+        "fair_price": 7.46
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 85.8,
-        "fair_price": 1.17
+        "probability": 86.6,
+        "fair_price": 1.15
       }
     ],
     "market_scan": {
@@ -11873,16 +13070,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 73,
-          "model_price": 1.37,
+          "model_probability": 76.7,
+          "model_price": 1.3,
           "current_odds": 1.52,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 61.22,
-          "ev": 10.95,
-          "qi": 84,
-          "price_qi": 88,
-          "edge_points": 7.2,
+          "ev": 16.92,
+          "qi": 95,
+          "price_qi": 93,
+          "edge_points": 11.13,
           "risk_rating": "Low"
         },
         {
@@ -11891,16 +13088,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 51.1,
-          "model_price": 1.96,
+          "model_probability": 55.6,
+          "model_price": 1.8,
           "current_odds": 2.35,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 39.74,
-          "ev": 19.9,
-          "qi": 78,
-          "price_qi": 90,
-          "edge_points": 8.47,
+          "ev": 30.56,
+          "qi": 90,
+          "price_qi": 95,
+          "edge_points": 13,
           "risk_rating": "Medium"
         },
         {
@@ -11909,16 +13106,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 87.3,
-          "model_price": 1.14,
+          "model_probability": 89.7,
+          "model_price": 1.11,
           "current_odds": 1.2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 77.78,
-          "ev": 5.26,
-          "qi": 74,
-          "price_qi": 80,
-          "edge_points": 4.39,
+          "ev": 8.11,
+          "qi": 83,
+          "price_qi": 88,
+          "edge_points": 6.76,
           "risk_rating": "Low"
         },
         {
@@ -11927,16 +13124,16 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 30.3,
-          "model_price": 3.3,
+          "model_probability": 35,
+          "model_price": 2.86,
           "current_odds": 5.25,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 9.08,
-          "ev": 59.09,
-          "qi": 73,
-          "price_qi": 95,
-          "edge_points": 11.26,
+          "ev": 83.57,
+          "qi": 78,
+          "price_qi": 98,
+          "edge_points": 15.92,
           "risk_rating": "High"
         },
         {
@@ -11945,16 +13142,16 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 30.3,
-          "model_price": 3.3,
+          "model_probability": 35,
+          "model_price": 2.86,
           "current_odds": 4.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 10.03,
-          "ev": 43.94,
-          "qi": 67,
-          "price_qi": 93,
-          "edge_points": 9.25,
+          "ev": 66.08,
+          "qi": 77,
+          "price_qi": 97,
+          "edge_points": 13.91,
           "risk_rating": "High"
         },
         {
@@ -11963,16 +13160,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 26.2,
-          "model_price": 3.82,
+          "model_probability": 29.7,
+          "model_price": 3.37,
           "current_odds": 4.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 19.46,
-          "ev": 25.65,
-          "qi": 53,
-          "price_qi": 87,
-          "edge_points": 5.34,
+          "ev": 42.43,
+          "qi": 66,
+          "price_qi": 93,
+          "edge_points": 8.84,
           "risk_rating": "High"
         },
         {
@@ -11981,16 +13178,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 60.6,
-          "model_price": 1.65,
+          "model_probability": 61.9,
+          "model_price": 1.62,
           "current_odds": 1.58,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 59.28,
-          "ev": -4.24,
-          "qi": 42,
-          "price_qi": 27,
-          "edge_points": -2.69,
+          "ev": -2.47,
+          "qi": 46,
+          "price_qi": 35,
+          "edge_points": -1.56,
           "risk_rating": "Low"
         },
         {
@@ -12024,6 +13221,42 @@ window.embeddedDataset = [
           "ev": -7.03,
           "qi": 40,
           "price_qi": 13
+        },
+        {
+          "selection": "Iraq Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 12.8,
+          "model_price": 7.8,
+          "current_odds": 10,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 9.42,
+          "ev": 28.21,
+          "qi": 39,
+          "price_qi": 84,
+          "edge_points": 2.82,
+          "risk_rating": "Very high"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 61.9,
+          "model_price": 1.62,
+          "current_odds": 1.5,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 62.5,
+          "ev": -7.41,
+          "qi": 39,
+          "price_qi": 17,
+          "edge_points": -4.94,
+          "risk_rating": "Low"
         },
         {
           "selection": "Norway to Win",
@@ -12106,76 +13339,22 @@ window.embeddedDataset = [
           "price_qi": 9
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
+          "selection": "Under 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 60.6,
-          "model_price": 1.65,
-          "current_odds": 1.5,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 62.5,
-          "ev": -9.09,
-          "qi": 38,
-          "price_qi": 14,
-          "edge_points": -6.06,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Norway or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 91.6,
-          "model_price": 1.09,
-          "current_odds": 1.02,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 8.6,
+          "model_price": 11.63,
+          "current_odds": 15,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 46.69,
-          "ev": -6.42,
+          "devig_book_probability": 6.31,
+          "ev": 28.98,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -6.3,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Norway or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 91.6,
-          "model_price": 1.09,
-          "current_odds": 1.02,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 46.76,
-          "ev": -6.42,
-          "qi": 37,
-          "price_qi": 5,
-          "edge_points": -6.3,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Norway Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 89.2,
-          "model_price": 1.12,
-          "current_odds": 1.04,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 90.58,
-          "ev": -7.14,
-          "qi": 37,
-          "price_qi": 5,
-          "edge_points": -6.87,
-          "risk_rating": "Low"
+          "price_qi": 83,
+          "edge_points": 1.93,
+          "risk_rating": "Very high"
         },
         {
           "selection": "Norway to Win",
@@ -12215,16 +13394,104 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 92.8,
-          "model_price": 1.08,
+          "model_probability": 91.4,
+          "model_price": 1.09,
           "current_odds": 1.01,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 93.69,
-          "ev": -6.48,
+          "ev": -7.34,
           "qi": 36,
-          "price_qi": 4,
-          "edge_points": -6.42,
+          "price_qi": 3,
+          "edge_points": -7.27,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Norway or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 90.4,
+          "model_price": 1.11,
+          "current_odds": 1.02,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 46.69,
+          "ev": -8.11,
+          "qi": 36,
+          "price_qi": 2,
+          "edge_points": -7.95,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Norway or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 90.4,
+          "model_price": 1.11,
+          "current_odds": 1.02,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 46.76,
+          "ev": -8.11,
+          "qi": 36,
+          "price_qi": 2,
+          "edge_points": -7.95,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Norway Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 87.2,
+          "model_price": 1.15,
+          "current_odds": 1.04,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 90.58,
+          "ev": -9.57,
+          "qi": 36,
+          "price_qi": 2,
+          "edge_points": -9.2,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Martin Odegaard: Goal or Assist",
+          "category": "Player Prop",
+          "market": "Goal or Assist",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Score Or Assist",
+          "model_probability": 50.3,
+          "model_price": 1.99,
+          "current_odds": 1.83,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -8.04,
+          "qi": 35,
+          "price_qi": 18,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "Iraq or Norway",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 74.6,
+          "model_price": 1.34,
+          "current_odds": 1.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 43.29,
+          "ev": -17.91,
+          "qi": 35,
+          "price_qi": 0,
+          "edge_points": -16.28,
           "risk_rating": "Low"
         },
         {
@@ -12233,34 +13500,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 73.8,
-          "model_price": 1.35,
+          "model_probability": 70.3,
+          "model_price": 1.42,
           "current_odds": 1.16,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 80.54,
-          "ev": -14.07,
-          "qi": 36,
-          "price_qi": 3,
-          "edge_points": -12.13,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Iraq or Norway",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 78.1,
-          "model_price": 1.28,
-          "current_odds": 1.1,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 43.29,
-          "ev": -14.06,
+          "ev": -18.31,
           "qi": 35,
           "price_qi": 1,
-          "edge_points": -12.78,
+          "edge_points": -15.78,
           "risk_rating": "Low"
         },
         {
@@ -12269,71 +13518,49 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 78.1,
-          "model_price": 1.28,
+          "model_probability": 74.6,
+          "model_price": 1.34,
           "current_odds": 1.08,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 44.16,
-          "ev": -15.63,
+          "ev": -19.4,
           "qi": 35,
-          "price_qi": 1,
-          "edge_points": -14.47,
+          "price_qi": 0,
+          "edge_points": -17.97,
           "risk_rating": "Low"
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 39.4,
-          "model_price": 2.54,
-          "current_odds": 2.5,
-          "au_bookie": "SportsBet",
+          "selection": "Erling Haaland: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 70.1,
+          "model_price": 1.43,
+          "current_odds": 1.04,
+          "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 37.5,
-          "ev": -1.57,
-          "qi": 34,
-          "price_qi": 41,
-          "edge_points": -0.63,
-          "risk_rating": "Medium"
+          "ev": -27.27,
+          "qi": 35,
+          "price_qi": 0,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
-          "selection": "Under 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 7.2,
-          "model_price": 13.85,
-          "current_odds": 15,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 6.31,
-          "ev": 8.3,
-          "qi": 31,
-          "price_qi": 75,
-          "edge_points": 0.55,
-          "risk_rating": "Very high"
-        },
-        {
-          "selection": "Iraq Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 10.8,
-          "model_price": 9.26,
-          "current_odds": 10,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 9.42,
-          "ev": 7.99,
-          "qi": 31,
-          "price_qi": 75,
-          "edge_points": 0.8,
-          "risk_rating": "Very high"
+          "selection": "Erling Haaland: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 55.9,
+          "model_price": 1.79,
+          "current_odds": 1.4,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -21.79,
+          "qi": 32,
+          "price_qi": 3,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Iraq to Win",
@@ -12368,21 +13595,39 @@ window.embeddedDataset = [
           "price_qi": 72
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 38.1,
+          "model_price": 2.63,
+          "current_odds": 2.5,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 37.5,
+          "ev": -4.94,
+          "qi": 28,
+          "price_qi": 26,
+          "edge_points": -1.98,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Over 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 48.9,
-          "model_price": 2.05,
+          "model_probability": 44.4,
+          "model_price": 2.25,
           "current_odds": 1.55,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 60.26,
-          "ev": -24.39,
-          "qi": 29,
-          "price_qi": 3,
-          "edge_points": -15.74,
+          "ev": -31.11,
+          "qi": 27,
+          "price_qi": 2,
+          "edge_points": -20.07,
           "risk_rating": "Low"
         },
         {
@@ -12402,22 +13647,54 @@ window.embeddedDataset = [
           "price_qi": 54
         },
         {
+          "selection": "Zidane Iqbal: To Get Carded",
+          "category": "Player Prop",
+          "market": "To Get Carded",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Be Booked",
+          "model_probability": 25.9,
+          "model_price": 3.86,
+          "current_odds": 3.72,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -3.63,
+          "qi": 25,
+          "price_qi": 32,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "BTTS Yes",
           "category": "Main Match",
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 39.4,
-          "model_price": 2.54,
+          "model_probability": 38.1,
+          "model_price": 2.63,
           "current_odds": 2.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 40.72,
-          "ev": -9.45,
-          "qi": 26,
-          "price_qi": 17,
-          "edge_points": -4.11,
+          "ev": -12.55,
+          "qi": 24,
+          "price_qi": 14,
+          "edge_points": -5.46,
           "risk_rating": "Medium"
+        },
+        {
+          "selection": "Aymen Hussein: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 32.7,
+          "model_price": 3.06,
+          "current_odds": 2,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -34.64,
+          "qi": 22,
+          "price_qi": 3,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -12441,16 +13718,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 27,
-          "model_price": 3.7,
+          "model_probability": 23.3,
+          "model_price": 4.3,
           "current_odds": 2.4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 38.78,
-          "ev": -35.14,
-          "qi": 16,
-          "price_qi": 4,
-          "edge_points": -14.64,
+          "ev": -44.19,
+          "qi": 13,
+          "price_qi": 2,
+          "edge_points": -18.41,
           "risk_rating": "Medium"
         },
         {
@@ -12491,34 +13768,39 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 12.7,
-          "model_price": 7.9,
+          "model_probability": 10.3,
+          "model_price": 9.74,
           "current_odds": 4.2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 22.22,
-          "ev": -46.84,
-          "qi": 9,
-          "price_qi": 5,
-          "edge_points": -11.15,
+          "ev": -56.88,
+          "qi": 8,
+          "price_qi": 3,
+          "edge_points": -13.54,
           "risk_rating": "High"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 7.1,
       "base_draw_probability": 14.8,
       "base_away_probability": 78.1,
-      "calibrated_home_probability": 8.4,
-      "calibrated_draw_probability": 21.9,
-      "calibrated_away_probability": 69.7,
-      "total_goals_mean": 2.63,
+      "calibrated_home_probability": 9.6,
+      "calibrated_draw_probability": 25.4,
+      "calibrated_away_probability": 65,
+      "total_goals_mean": 2.45,
       "tempo_adjustment": -0.07,
-      "draw_lift_points": 7.5,
-      "favourite_compression_points": 5.5,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.07,
+      "break_open_risk": 0.02,
+      "draw_lift_points": 11.4,
+      "favourite_compression_points": 10,
+      "low_block_draw_risk_points": 1.4,
+      "goal_suppression_points": 0.07,
+      "break_open_risk_points": 0.02,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -12537,7 +13819,7 @@ window.embeddedDataset = [
         "current_odds": 4.9,
         "au_bookie": "Betfair",
         "devig_book_probability": 20.34,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T22:25:53.958Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -12552,7 +13834,7 @@ window.embeddedDataset = [
         "current_odds": 1.43,
         "au_bookie": "Betfair",
         "devig_book_probability": 69.69,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:15:47.185Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -12560,48 +13842,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event f31b2ee9e1cc6f7e641467f8237eaa21.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 51.9,
-      "over_fair_price": 1.93,
-      "under_probability": 48.1,
-      "under_fair_price": 2.08,
-      "total_goals_mean": 2.75,
+      "over_probability": 52.8,
+      "over_fair_price": 1.89,
+      "under_probability": 47.2,
+      "under_fair_price": 2.12,
+      "total_goals_mean": 2.79,
       "tempo_adjustment": 0.11,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Argentina 2-0 Algeria",
-        "probability": 13.6,
-        "fair_price": 7.35
+        "probability": 13.4,
+        "fair_price": 7.47
       },
       {
         "score": "Argentina 1-0 Algeria",
-        "probability": 13.2,
-        "fair_price": 7.59
-      },
-      {
-        "score": "Argentina 3-0 Algeria",
-        "probability": 9.4,
-        "fair_price": 10.68
+        "probability": 12.8,
+        "fair_price": 7.79
       },
       {
         "score": "Argentina 2-1 Algeria",
+        "probability": 9.4,
+        "fair_price": 10.64
+      },
+      {
+        "score": "Argentina 3-0 Algeria",
         "probability": 9.3,
-        "fair_price": 10.7
+        "fair_price": 10.73
       },
       {
         "score": "Argentina 1-1 Algeria",
-        "probability": 9.1,
-        "fair_price": 11.05
+        "probability": 9,
+        "fair_price": 11.1
       }
     ],
     "model_market_view": [
@@ -12609,50 +13893,50 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Argentina or Draw",
-        "probability": 88.5,
+        "probability": 88.4,
         "fair_price": 1.13
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Algeria or Draw",
-        "probability": 34.1,
-        "fair_price": 2.93
+        "probability": 34.4,
+        "fair_price": 2.91
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Argentina or Algeria",
-        "probability": 77.4,
-        "fair_price": 1.29
+        "probability": 77.2,
+        "fair_price": 1.3
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Argentina Draw No Bet",
-        "probability": 85.1,
-        "fair_price": 1.17
+        "probability": 85,
+        "fair_price": 1.18
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Algeria Draw No Bet",
-        "probability": 14.9,
-        "fair_price": 6.73
+        "probability": 15,
+        "fair_price": 6.65
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 43.4,
-        "fair_price": 2.3
+        "probability": 44.2,
+        "fair_price": 2.26
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 56.6,
-        "fair_price": 1.77
+        "probability": 55.8,
+        "fair_price": 1.79
       },
       {
         "category": "Main Match",
@@ -12672,218 +13956,218 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93.6,
+        "probability": 93.8,
         "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 6.4,
-        "fair_price": 15.67
+        "probability": 6.2,
+        "fair_price": 16.26
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 76.1,
-        "fair_price": 1.31
+        "probability": 76.7,
+        "fair_price": 1.3
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 23.9,
-        "fair_price": 4.18
+        "probability": 23.3,
+        "fair_price": 4.29
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 51.9,
-        "fair_price": 1.93
+        "probability": 52.8,
+        "fair_price": 1.89
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 48.1,
-        "fair_price": 2.08
+        "probability": 47.2,
+        "fair_price": 2.12
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 29.7,
-        "fair_price": 3.36
+        "probability": 30.6,
+        "fair_price": 3.27
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 70.3,
-        "fair_price": 1.42
+        "probability": 69.4,
+        "fair_price": 1.44
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 14.5,
-        "fair_price": 6.9
+        "probability": 15.1,
+        "fair_price": 6.64
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 85.5,
-        "fair_price": 1.17
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Argentina Over 0.5 Goals",
-        "probability": 87.3,
-        "fair_price": 1.15
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Argentina Under 0.5 Goals",
-        "probability": 12.7,
-        "fair_price": 7.88
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Argentina Over 1.5 Goals",
-        "probability": 61.1,
-        "fair_price": 1.64
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Argentina Under 1.5 Goals",
-        "probability": 38.9,
-        "fair_price": 2.57
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Argentina Over 2.5 Goals",
-        "probability": 34.1,
-        "fair_price": 2.93
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Argentina Under 2.5 Goals",
-        "probability": 65.9,
-        "fair_price": 1.52
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Algeria Over 0.5 Goals",
-        "probability": 49.7,
-        "fair_price": 2.01
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Algeria Under 0.5 Goals",
-        "probability": 50.3,
-        "fair_price": 1.99
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Algeria Over 1.5 Goals",
-        "probability": 15.1,
-        "fair_price": 6.61
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Algeria Under 1.5 Goals",
         "probability": 84.9,
         "fair_price": 1.18
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
+        "selection": "Argentina Over 0.5 Goals",
+        "probability": 87.6,
+        "fair_price": 1.14
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Argentina Under 0.5 Goals",
+        "probability": 12.4,
+        "fair_price": 8.06
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Argentina Over 1.5 Goals",
+        "probability": 61.7,
+        "fair_price": 1.62
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Argentina Under 1.5 Goals",
+        "probability": 38.3,
+        "fair_price": 2.61
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Argentina Over 2.5 Goals",
+        "probability": 34.7,
+        "fair_price": 2.88
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Argentina Under 2.5 Goals",
+        "probability": 65.3,
+        "fair_price": 1.53
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Algeria Over 0.5 Goals",
+        "probability": 50.4,
+        "fair_price": 1.98
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Algeria Under 0.5 Goals",
+        "probability": 49.6,
+        "fair_price": 2.02
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Algeria Over 1.5 Goals",
+        "probability": 15.6,
+        "fair_price": 6.39
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
+        "selection": "Algeria Under 1.5 Goals",
+        "probability": 84.4,
+        "fair_price": 1.19
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
         "selection": "Algeria Over 2.5 Goals",
-        "probability": 3.3,
-        "fair_price": 30.69
+        "probability": 3.4,
+        "fair_price": 29.1
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Algeria Under 2.5 Goals",
-        "probability": 96.7,
-        "fair_price": 1.03
+        "probability": 96.6,
+        "fair_price": 1.04
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Argentina 1H Win",
-        "probability": 50.1,
-        "fair_price": 2
+        "probability": 50.2,
+        "fair_price": 1.99
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 37.9,
-        "fair_price": 2.64
+        "probability": 37.6,
+        "fair_price": 2.66
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Algeria 1H Win",
-        "probability": 12,
-        "fair_price": 8.33
+        "probability": 12.1,
+        "fair_price": 8.23
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 71,
-        "fair_price": 1.41
+        "probability": 71.5,
+        "fair_price": 1.4
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 29,
-        "fair_price": 3.45
+        "probability": 28.5,
+        "fair_price": 3.51
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 35.1,
-        "fair_price": 2.85
+        "probability": 35.7,
+        "fair_price": 2.8
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 64.9,
-        "fair_price": 1.54
+        "probability": 64.3,
+        "fair_price": 1.56
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 16.1,
-        "fair_price": 6.21
+        "probability": 16.5,
+        "fair_price": 6.06
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 83.9,
-        "fair_price": 1.19
+        "probability": 83.5,
+        "fair_price": 1.2
       }
     ],
     "market_scan": {
@@ -12910,40 +14194,40 @@ window.embeddedDataset = [
       "matched_rows": 30,
       "rows": [
         {
-          "selection": "Algeria or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 34.1,
-          "model_price": 2.93,
-          "current_odds": 3.2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 14.68,
-          "ev": 9.22,
-          "qi": 53,
-          "price_qi": 80,
-          "edge_points": 2.88,
-          "risk_rating": "Medium"
-        },
-        {
           "selection": "Over 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 51.9,
-          "model_price": 1.93,
+          "model_probability": 52.8,
+          "model_price": 1.89,
           "current_odds": 1.95,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 48,
-          "ev": 1.04,
-          "qi": 50,
-          "price_qi": 56,
-          "edge_points": 0.53,
+          "ev": 3.17,
+          "qi": 57,
+          "price_qi": 67,
+          "edge_points": 1.63,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Algeria or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 34.4,
+          "model_price": 2.91,
+          "current_odds": 3.2,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 14.68,
+          "ev": 9.97,
+          "qi": 53,
+          "price_qi": 80,
+          "edge_points": 3.11,
+          "risk_rating": "Medium"
         },
         {
           "selection": "Over 1.5 Goals",
@@ -12951,16 +14235,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 76.1,
-          "model_price": 1.31,
+          "model_probability": 76.7,
+          "model_price": 1.3,
           "current_odds": 1.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 71.74,
-          "ev": -0.76,
-          "qi": 50,
-          "price_qi": 44,
-          "edge_points": -0.59,
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49,
+          "edge_points": 0,
           "risk_rating": "Low"
         },
         {
@@ -12985,7 +14269,7 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 93.6,
+          "model_probability": 93.8,
           "model_price": 1.07,
           "current_odds": 1.05,
           "au_bookie": "TAB",
@@ -12996,6 +14280,24 @@ window.embeddedDataset = [
           "price_qi": 32,
           "edge_points": -1.78,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 44.2,
+          "model_price": 2.26,
+          "current_odds": 2.3,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 40.57,
+          "ev": 1.77,
+          "qi": 45,
+          "price_qi": 60,
+          "edge_points": 0.77,
+          "risk_rating": "Medium"
         },
         {
           "selection": "Argentina to Win",
@@ -13030,30 +14332,12 @@ window.embeddedDataset = [
           "price_qi": 24
         },
         {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 85.5,
-          "model_price": 1.17,
-          "current_odds": 1.11,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 84.39,
-          "ev": -5.13,
-          "qi": 41,
-          "price_qi": 16,
-          "edge_points": -4.62,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Argentina or Draw",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 88.5,
+          "model_probability": 88.4,
           "model_price": 1.13,
           "current_odds": 1.07,
           "au_bookie": "TAB",
@@ -13066,21 +14350,21 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Argentina Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
+          "selection": "Under 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 85.1,
-          "model_price": 1.17,
-          "current_odds": 1.1,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 84.9,
+          "model_price": 1.18,
+          "current_odds": 1.11,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 84.51,
-          "ev": -5.98,
+          "devig_book_probability": 84.39,
+          "ev": -5.93,
           "qi": 40,
           "price_qi": 13,
-          "edge_points": -5.44,
+          "edge_points": -5.34,
           "risk_rating": "Low"
         },
         {
@@ -13116,22 +14400,22 @@ window.embeddedDataset = [
           "price_qi": 15
         },
         {
-          "selection": "BTTS Yes",
+          "selection": "Argentina Draw No Bet",
           "category": "Main Match",
-          "market": "Both Teams To Score",
+          "market": "Draw No Bet",
           "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 43.4,
-          "model_price": 2.3,
-          "current_odds": 2.3,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 40.57,
-          "ev": 0,
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 85,
+          "model_price": 1.18,
+          "current_odds": 1.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 84.51,
+          "ev": -6.78,
           "qi": 39,
-          "price_qi": 49,
-          "edge_points": 0,
-          "risk_rating": "Medium"
+          "price_qi": 10,
+          "edge_points": -6.16,
+          "risk_rating": "Low"
         },
         {
           "selection": "Under 3.5 Goals",
@@ -13139,17 +14423,33 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 70.3,
-          "model_price": 1.42,
+          "model_probability": 69.4,
+          "model_price": 1.44,
           "current_odds": 1.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 71.74,
-          "ev": -8.45,
+          "ev": -9.72,
           "qi": 39,
-          "price_qi": 12,
-          "edge_points": -6.5,
+          "price_qi": 10,
+          "edge_points": -7.48,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Riyad Mahrez: 2+ Total Shots",
+          "category": "Player Prop",
+          "market": "2+ Total Shots",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 2 Or More Shots",
+          "model_probability": 43.8,
+          "model_price": 2.28,
+          "current_odds": 2.25,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -1.32,
+          "qi": 37,
+          "price_qi": 42,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "BTTS No",
@@ -13157,17 +14457,35 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 56.6,
-          "model_price": 1.77,
+          "model_probability": 55.8,
+          "model_price": 1.79,
           "current_odds": 1.65,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 56.58,
-          "ev": -6.78,
-          "qi": 38,
-          "price_qi": 19,
-          "edge_points": -4.11,
+          "ev": -7.82,
+          "qi": 37,
+          "price_qi": 17,
+          "edge_points": -4.74,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 30.6,
+          "model_price": 3.27,
+          "current_odds": 3.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 28.26,
+          "ev": 0.92,
+          "qi": 36,
+          "price_qi": 55,
+          "edge_points": 0.28,
+          "risk_rating": "Medium"
         },
         {
           "selection": "Argentina or Draw",
@@ -13175,7 +14493,7 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 88.5,
+          "model_probability": 88.4,
           "model_price": 1.13,
           "current_odds": 1.04,
           "au_bookie": "SportsBet",
@@ -13188,21 +14506,57 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 44.2,
+          "model_price": 2.26,
+          "current_odds": 2.15,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 43.42,
+          "ev": -4.87,
+          "qi": 35,
+          "price_qi": 26,
+          "edge_points": -2.26,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Algeria or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 34.4,
+          "model_price": 2.91,
+          "current_odds": 2.9,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 16.43,
+          "ev": -0.34,
+          "qi": 34,
+          "price_qi": 47,
+          "edge_points": -0.12,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "BTTS No",
           "category": "Main Match",
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 56.6,
-          "model_price": 1.77,
+          "model_probability": 55.8,
+          "model_price": 1.79,
           "current_odds": 1.57,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 59.43,
-          "ev": -11.3,
-          "qi": 35,
-          "price_qi": 12,
-          "edge_points": -7.2,
+          "ev": -12.29,
+          "qi": 34,
+          "price_qi": 10,
+          "edge_points": -7.83,
           "risk_rating": "Low"
         },
         {
@@ -13222,76 +14576,70 @@ window.embeddedDataset = [
           "price_qi": 68
         },
         {
-          "selection": "Algeria or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 34.1,
-          "model_price": 2.93,
-          "current_odds": 2.9,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 16.43,
-          "ev": -1.02,
-          "qi": 33,
-          "price_qi": 44,
-          "edge_points": -0.35,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 43.4,
-          "model_price": 2.3,
-          "current_odds": 2.15,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 43.42,
-          "ev": -6.52,
-          "qi": 33,
-          "price_qi": 22,
-          "edge_points": -3.03,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Under 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 48.1,
-          "model_price": 2.08,
+          "model_probability": 47.2,
+          "model_price": 2.12,
           "current_odds": 1.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 52,
-          "ev": -13.46,
+          "ev": -15.09,
           "qi": 31,
-          "price_qi": 11,
-          "edge_points": -7.48,
+          "price_qi": 10,
+          "edge_points": -8.39,
           "risk_rating": "Low"
         },
         {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 29.7,
-          "model_price": 3.36,
-          "current_odds": 3.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 28.26,
-          "ev": -1.79,
+          "selection": "Lionel Messi: Goal or Assist",
+          "category": "Player Prop",
+          "market": "Goal or Assist",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Score Or Assist",
+          "model_probability": 55.2,
+          "model_price": 1.81,
+          "current_odds": 1.4,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -22.65,
+          "qi": 31,
+          "price_qi": 2,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "Lautaro Martinez: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 53.4,
+          "model_price": 1.87,
+          "current_odds": 1.2,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -35.83,
           "qi": 30,
-          "price_qi": 40,
-          "edge_points": -0.54,
-          "risk_rating": "Medium"
+          "price_qi": 0,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "Julian Alvarez: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 40.8,
+          "model_price": 2.45,
+          "current_odds": 2.1,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -14.29,
+          "qi": 28,
+          "price_qi": 12,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -13347,17 +14695,53 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 23.9,
-          "model_price": 4.18,
+          "model_probability": 23.3,
+          "model_price": 4.29,
           "current_odds": 3.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 28.26,
-          "ev": -21.05,
-          "qi": 17,
-          "price_qi": 11,
-          "edge_points": -6.38,
+          "ev": -23.08,
+          "qi": 16,
+          "price_qi": 10,
+          "edge_points": -6.99,
           "risk_rating": "Medium"
+        },
+        {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 15.1,
+          "model_price": 6.64,
+          "current_odds": 6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 15.61,
+          "ev": -9.64,
+          "qi": 14,
+          "price_qi": 21,
+          "edge_points": -1.61,
+          "risk_rating": "High"
+        },
+        {
+          "selection": "Algeria Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 15,
+          "model_price": 6.65,
+          "current_odds": 6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 15.49,
+          "ev": -9.77,
+          "qi": 14,
+          "price_qi": 21,
+          "edge_points": -1.63,
+          "risk_rating": "High"
         },
         {
           "selection": "Match to end in a Draw",
@@ -13376,75 +14760,44 @@ window.embeddedDataset = [
           "price_qi": 20
         },
         {
-          "selection": "Algeria Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 14.9,
-          "model_price": 6.73,
-          "current_odds": 6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 15.49,
-          "ev": -10.85,
-          "qi": 14,
-          "price_qi": 20,
-          "edge_points": -1.81,
-          "risk_rating": "High"
-        },
-        {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 14.5,
-          "model_price": 6.9,
-          "current_odds": 6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 15.61,
-          "ev": -13.04,
-          "qi": 13,
-          "price_qi": 19,
-          "edge_points": -2.17,
-          "risk_rating": "High"
-        },
-        {
           "selection": "Under 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 6.4,
-          "model_price": 15.67,
+          "model_probability": 6.2,
+          "model_price": 16.26,
           "current_odds": 8.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 10.99,
-          "ev": -45.76,
+          "ev": -47.72,
           "qi": 6,
           "price_qi": 9,
-          "edge_points": -5.38,
+          "edge_points": -5.61,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 68,
       "base_draw_probability": 21.2,
       "base_away_probability": 10.8,
-      "calibrated_home_probability": 65.9,
-      "calibrated_draw_probability": 22.6,
-      "calibrated_away_probability": 11.5,
-      "total_goals_mean": 2.75,
+      "calibrated_home_probability": 65.6,
+      "calibrated_draw_probability": 22.8,
+      "calibrated_away_probability": 11.6,
+      "total_goals_mean": 2.79,
       "tempo_adjustment": 0.11,
-      "draw_lift_points": 1.5,
-      "favourite_compression_points": 2.7,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "draw_lift_points": 1.7,
+      "favourite_compression_points": 3.1,
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -13463,7 +14816,7 @@ window.embeddedDataset = [
         "current_odds": 9.8,
         "au_bookie": "Betfair",
         "devig_book_probability": 10.13,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T22:25:53.958Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -13478,7 +14831,7 @@ window.embeddedDataset = [
         "current_odds": 5.7,
         "au_bookie": "Betfair",
         "devig_book_probability": 17.41,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -13487,33 +14840,35 @@ window.embeddedDataset = [
         "previous_odds": 5.8
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 25161cf6cf0cd9be17ae2e7e224a1f45.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 49.5,
-      "over_fair_price": 2.02,
-      "under_probability": 50.5,
-      "under_fair_price": 1.98,
-      "total_goals_mean": 2.65,
+      "over_probability": 50.3,
+      "over_fair_price": 1.99,
+      "under_probability": 49.7,
+      "under_fair_price": 2.01,
+      "total_goals_mean": 2.69,
       "tempo_adjustment": 0.02,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Austria 1-0 Jordan",
-        "probability": 14,
-        "fair_price": 7.14
+        "probability": 13.7,
+        "fair_price": 7.32
       },
       {
         "score": "Austria 2-0 Jordan",
-        "probability": 13.9,
-        "fair_price": 7.18
+        "probability": 13.7,
+        "fair_price": 7.3
       },
       {
         "score": "Austria 1-1 Jordan",
@@ -13523,12 +14878,12 @@ window.embeddedDataset = [
       {
         "score": "Austria 2-1 Jordan",
         "probability": 9.3,
-        "fair_price": 10.8
+        "fair_price": 10.72
       },
       {
         "score": "Austria 3-0 Jordan",
-        "probability": 9.2,
-        "fair_price": 10.84
+        "probability": 9.1,
+        "fair_price": 10.93
       }
     ],
     "model_market_view": [
@@ -13536,50 +14891,50 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Austria or Draw",
-        "probability": 88.5,
+        "probability": 88.4,
         "fair_price": 1.13
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Jordan or Draw",
-        "probability": 34.3,
-        "fair_price": 2.91
+        "probability": 34.8,
+        "fair_price": 2.87
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Austria or Jordan",
-        "probability": 77.1,
+        "probability": 76.8,
         "fair_price": 1.3
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Austria Draw No Bet",
-        "probability": 85.1,
-        "fair_price": 1.17
+        "probability": 84.9,
+        "fair_price": 1.18
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Jordan Draw No Bet",
-        "probability": 14.9,
-        "fair_price": 6.73
+        "probability": 15.1,
+        "fair_price": 6.61
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 41.9,
-        "fair_price": 2.39
+        "probability": 42.7,
+        "fair_price": 2.34
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 58.1,
-        "fair_price": 1.72
+        "probability": 57.3,
+        "fair_price": 1.75
       },
       {
         "category": "Main Match",
@@ -13599,218 +14954,218 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93,
-        "fair_price": 1.08
+        "probability": 93.2,
+        "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7,
-        "fair_price": 14.19
+        "probability": 6.8,
+        "fair_price": 14.66
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 74.3,
-        "fair_price": 1.35
+        "probability": 74.9,
+        "fair_price": 1.34
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25.7,
-        "fair_price": 3.88
+        "probability": 25.1,
+        "fair_price": 3.98
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 49.5,
-        "fair_price": 2.02
+        "probability": 50.3,
+        "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 50.5,
-        "fair_price": 1.98
+        "probability": 49.7,
+        "fair_price": 2.01
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 27.5,
-        "fair_price": 3.63
+        "probability": 28.3,
+        "fair_price": 3.54
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 72.5,
-        "fair_price": 1.38
+        "probability": 71.7,
+        "fair_price": 1.39
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13,
-        "fair_price": 7.69
+        "probability": 13.5,
+        "fair_price": 7.41
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 87,
-        "fair_price": 1.15
+        "probability": 86.5,
+        "fair_price": 1.16
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Austria Over 0.5 Goals",
-        "probability": 86.3,
+        "probability": 86.5,
         "fair_price": 1.16
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Austria Under 0.5 Goals",
-        "probability": 13.7,
-        "fair_price": 7.3
+        "probability": 13.5,
+        "fair_price": 7.42
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Austria Over 1.5 Goals",
-        "probability": 59.1,
-        "fair_price": 1.69
+        "probability": 59.5,
+        "fair_price": 1.68
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Austria Under 1.5 Goals",
-        "probability": 40.9,
-        "fair_price": 2.44
+        "probability": 40.5,
+        "fair_price": 2.47
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Austria Over 2.5 Goals",
-        "probability": 32,
-        "fair_price": 3.13
+        "probability": 32.4,
+        "fair_price": 3.08
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Austria Under 2.5 Goals",
-        "probability": 68,
-        "fair_price": 1.47
+        "probability": 67.6,
+        "fair_price": 1.48
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Jordan Over 0.5 Goals",
-        "probability": 48.6,
-        "fair_price": 2.06
+        "probability": 49.4,
+        "fair_price": 2.02
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Jordan Under 0.5 Goals",
-        "probability": 51.4,
-        "fair_price": 1.94
+        "probability": 50.6,
+        "fair_price": 1.98
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Jordan Over 1.5 Goals",
-        "probability": 14.4,
-        "fair_price": 6.96
+        "probability": 14.9,
+        "fair_price": 6.7
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Jordan Under 1.5 Goals",
-        "probability": 85.6,
-        "fair_price": 1.17
+        "probability": 85.1,
+        "fair_price": 1.18
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Jordan Over 2.5 Goals",
-        "probability": 3,
-        "fair_price": 33.32
+        "probability": 3.2,
+        "fair_price": 31.36
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Jordan Under 2.5 Goals",
-        "probability": 97,
+        "probability": 96.8,
         "fair_price": 1.03
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Austria 1H Win",
-        "probability": 49,
+        "probability": 49.1,
         "fair_price": 2.04
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 39,
-        "fair_price": 2.57
+        "probability": 38.7,
+        "fair_price": 2.58
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Jordan 1H Win",
-        "probability": 12,
-        "fair_price": 8.35
+        "probability": 12.2,
+        "fair_price": 8.21
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 69.7,
+        "probability": 70.1,
         "fair_price": 1.43
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30.3,
-        "fair_price": 3.3
+        "probability": 29.9,
+        "fair_price": 3.35
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 33.5,
-        "fair_price": 2.98
+        "probability": 34,
+        "fair_price": 2.94
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66.5,
-        "fair_price": 1.5
+        "probability": 66,
+        "fair_price": 1.52
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 15.3,
-        "fair_price": 6.54
+        "probability": 15.7,
+        "fair_price": 6.38
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 84.7,
-        "fair_price": 1.18
+        "probability": 84.3,
+        "fair_price": 1.19
       }
     ],
     "market_scan": {
@@ -13837,39 +15192,37 @@ window.embeddedDataset = [
       "matched_rows": 32,
       "rows": [
         {
+          "selection": "Xaver Schlager: To Get Carded",
+          "category": "Player Prop",
+          "market": "To Get Carded",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Be Booked",
+          "model_probability": 27.1,
+          "model_price": 3.69,
+          "current_odds": 5.6,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 51.76,
+          "qi": 66,
+          "price_qi": 94,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "Under 3.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 72.5,
-          "model_price": 1.38,
+          "model_probability": 71.7,
+          "model_price": 1.39,
           "current_odds": 1.44,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 65.22,
-          "ev": 4.35,
-          "qi": 68,
-          "price_qi": 74,
-          "edge_points": 3.02,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 50.5,
-          "model_price": 1.98,
-          "current_odds": 2.1,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 44.44,
-          "ev": 6.06,
-          "qi": 62,
-          "price_qi": 76,
-          "edge_points": 2.89,
+          "ev": 3.6,
+          "qi": 66,
+          "price_qi": 70,
+          "edge_points": 2.5,
           "risk_rating": "Low"
         },
         {
@@ -13878,16 +15231,52 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 34.3,
-          "model_price": 2.91,
+          "model_probability": 34.8,
+          "model_price": 2.87,
           "current_odds": 3.45,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 13.68,
-          "ev": 18.56,
-          "qi": 61,
-          "price_qi": 86,
-          "edge_points": 5.38,
+          "ev": 20.21,
+          "qi": 63,
+          "price_qi": 87,
+          "edge_points": 5.86,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 49.7,
+          "model_price": 2.01,
+          "current_odds": 2.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 44.44,
+          "ev": 4.48,
+          "qi": 59,
+          "price_qi": 72,
+          "edge_points": 2.13,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Jordan or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 34.8,
+          "model_price": 2.87,
+          "current_odds": 3.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 14.86,
+          "ev": 11.5,
+          "qi": 56,
+          "price_qi": 82,
+          "edge_points": 3.59,
           "risk_rating": "Medium"
         },
         {
@@ -13896,16 +15285,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 87,
-          "model_price": 1.15,
+          "model_probability": 86.5,
+          "model_price": 1.16,
           "current_odds": 1.16,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 80.54,
-          "ev": 0.87,
-          "qi": 56,
-          "price_qi": 56,
-          "edge_points": 0.75,
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49,
+          "edge_points": 0,
           "risk_rating": "Low"
         },
         {
@@ -13914,35 +15303,17 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 58.1,
-          "model_price": 1.72,
+          "model_probability": 57.3,
+          "model_price": 1.75,
           "current_odds": 1.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 53.33,
-          "ev": 1.74,
-          "qi": 55,
-          "price_qi": 60,
-          "edge_points": 1,
+          "ev": 0,
+          "qi": 49,
+          "price_qi": 49,
+          "edge_points": 0,
           "risk_rating": "Low"
-        },
-        {
-          "selection": "Jordan or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 34.3,
-          "model_price": 2.91,
-          "current_odds": 3.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 14.86,
-          "ev": 9.97,
-          "qi": 53,
-          "price_qi": 80,
-          "edge_points": 3.11,
-          "risk_rating": "Medium"
         },
         {
           "selection": "BTTS No",
@@ -13950,16 +15321,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 58.1,
-          "model_price": 1.72,
+          "model_probability": 57.3,
+          "model_price": 1.75,
           "current_odds": 1.72,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 54.97,
-          "ev": 0,
-          "qi": 49,
-          "price_qi": 49,
-          "edge_points": 0,
+          "ev": -1.71,
+          "qi": 45,
+          "price_qi": 39,
+          "edge_points": -1,
           "risk_rating": "Low"
         },
         {
@@ -13968,34 +15339,34 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 93,
-          "model_price": 1.08,
+          "model_probability": 93.2,
+          "model_price": 1.07,
           "current_odds": 1.03,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 90.66,
-          "ev": -4.63,
-          "qi": 39,
-          "price_qi": 12,
-          "edge_points": -4.49,
+          "ev": -3.74,
+          "qi": 41,
+          "price_qi": 16,
+          "edge_points": -3.63,
           "risk_rating": "Low"
         },
         {
-          "selection": "Austria Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
+          "selection": "Over 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 85.1,
-          "model_price": 1.17,
-          "current_odds": 1.09,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 74.9,
+          "model_price": 1.34,
+          "current_odds": 1.22,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 85.64,
-          "ev": -6.84,
+          "devig_book_probability": 76.63,
+          "ev": -8.96,
           "qi": 39,
           "price_qi": 10,
-          "edge_points": -6.27,
+          "edge_points": -7.34,
           "risk_rating": "Low"
         },
         {
@@ -14004,7 +15375,7 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 88.5,
+          "model_probability": 88.4,
           "model_price": 1.13,
           "current_odds": 1.06,
           "au_bookie": "TAB",
@@ -14017,12 +15388,30 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "Austria Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 84.9,
+          "model_price": 1.18,
+          "current_odds": 1.09,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 85.64,
+          "ev": -7.63,
+          "qi": 38,
+          "price_qi": 8,
+          "edge_points": -7,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Austria or Jordan",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 77.1,
+          "model_probability": 76.8,
           "model_price": 1.3,
           "current_odds": 1.18,
           "au_bookie": "TAB",
@@ -14035,30 +15424,12 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 74.3,
-          "model_price": 1.35,
-          "current_odds": 1.22,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 76.63,
-          "ev": -9.63,
-          "qi": 38,
-          "price_qi": 9,
-          "edge_points": -7.89,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Austria or Draw",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 88.5,
+          "model_probability": 88.4,
           "model_price": 1.13,
           "current_odds": 1.05,
           "au_bookie": "SportsBet",
@@ -14076,7 +15447,7 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 77.1,
+          "model_probability": 76.8,
           "model_price": 1.3,
           "current_odds": 1.14,
           "au_bookie": "SportsBet",
@@ -14105,22 +15476,22 @@ window.embeddedDataset = [
           "price_qi": 71
         },
         {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
           "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 25.7,
-          "model_price": 3.88,
-          "current_odds": 4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 23.37,
-          "ev": 3.09,
-          "qi": 34,
-          "price_qi": 65,
-          "edge_points": 0.77,
-          "risk_rating": "High"
+          "oddsapi_market": "btts",
+          "model_probability": 42.7,
+          "model_price": 2.34,
+          "current_odds": 2.1,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 45.03,
+          "ev": -10.26,
+          "qi": 31,
+          "price_qi": 16,
+          "edge_points": -4.88,
+          "risk_rating": "Low"
         },
         {
           "selection": "Over 2.5 Goals",
@@ -14128,35 +15499,33 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 49.5,
-          "model_price": 2.02,
+          "model_probability": 50.3,
+          "model_price": 1.99,
           "current_odds": 1.68,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 55.56,
-          "ev": -16.83,
+          "ev": -15.58,
           "qi": 31,
           "price_qi": 8,
-          "edge_points": -10.02,
+          "edge_points": -9.27,
           "risk_rating": "Low"
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 41.9,
-          "model_price": 2.39,
-          "current_odds": 2.1,
-          "au_bookie": "SportsBet",
+          "selection": "Marcel Sabitzer: 2+ Total Shots",
+          "category": "Player Prop",
+          "market": "2+ Total Shots",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 2 Or More Shots",
+          "model_probability": 52.6,
+          "model_price": 1.9,
+          "current_odds": 1.11,
+          "au_bookie": "Sportsbet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 45.03,
-          "ev": -12.13,
+          "ev": -41.58,
           "qi": 30,
-          "price_qi": 14,
-          "edge_points": -5.78,
-          "risk_rating": "Low"
+          "price_qi": 0,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "BTTS Yes",
@@ -14164,17 +15533,35 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 41.9,
-          "model_price": 2.39,
+          "model_probability": 42.7,
+          "model_price": 2.34,
           "current_odds": 2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 46.67,
-          "ev": -16.32,
-          "qi": 28,
-          "price_qi": 10,
-          "edge_points": -8.16,
+          "ev": -14.53,
+          "qi": 29,
+          "price_qi": 12,
+          "edge_points": -7.26,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 25.1,
+          "model_price": 3.98,
+          "current_odds": 4,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 23.37,
+          "ev": 0.5,
+          "qi": 28,
+          "price_qi": 52,
+          "edge_points": 0.13,
+          "risk_rating": "High"
         },
         {
           "selection": "Jordan to Win",
@@ -14191,6 +15578,40 @@ window.embeddedDataset = [
           "ev": 2.51,
           "qi": 25,
           "price_qi": 62
+        },
+        {
+          "selection": "Marko Arnautovic: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 37.4,
+          "model_price": 2.67,
+          "current_odds": 2,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -25.09,
+          "qi": 25,
+          "price_qi": 6,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "Jordan Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 15.1,
+          "model_price": 6.61,
+          "current_odds": 6.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 14.36,
+          "ev": -1.66,
+          "qi": 21,
+          "price_qi": 41,
+          "edge_points": -0.26,
+          "risk_rating": "High"
         },
         {
           "selection": "Match to end in a Draw",
@@ -14225,39 +15646,21 @@ window.embeddedDataset = [
           "price_qi": 34
         },
         {
-          "selection": "Jordan Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 14.9,
-          "model_price": 6.73,
-          "current_odds": 6.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 14.36,
-          "ev": -3.42,
-          "qi": 18,
-          "price_qi": 33,
-          "edge_points": -0.53,
-          "risk_rating": "High"
-        },
-        {
           "selection": "Over 3.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 27.5,
-          "model_price": 3.63,
+          "model_probability": 28.3,
+          "model_price": 3.54,
           "current_odds": 2.7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 34.78,
-          "ev": -25.62,
-          "qi": 17,
-          "price_qi": 8,
-          "edge_points": -9.49,
+          "ev": -23.73,
+          "qi": 18,
+          "price_qi": 9,
+          "edge_points": -8.79,
           "risk_rating": "Medium"
         },
         {
@@ -14330,16 +15733,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 13,
-          "model_price": 7.69,
+          "model_probability": 13.5,
+          "model_price": 7.41,
           "current_odds": 4.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 19.46,
-          "ev": -37.58,
+          "ev": -35.22,
           "qi": 10,
-          "price_qi": 8,
-          "edge_points": -7.83,
+          "price_qi": 9,
+          "edge_points": -7.34,
           "risk_rating": "High"
         },
         {
@@ -14380,34 +15783,39 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 7,
-          "model_price": 14.19,
+          "model_probability": 6.8,
+          "model_price": 14.66,
           "current_odds": 10,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 9.34,
-          "ev": -29.53,
+          "ev": -31.79,
           "qi": 8,
-          "price_qi": 15,
-          "edge_points": -2.95,
+          "price_qi": 14,
+          "edge_points": -3.18,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 71.1,
       "base_draw_probability": 18.5,
       "base_away_probability": 10.5,
-      "calibrated_home_probability": 65.7,
-      "calibrated_draw_probability": 22.9,
-      "calibrated_away_probability": 11.5,
-      "total_goals_mean": 2.65,
+      "calibrated_home_probability": 65.2,
+      "calibrated_draw_probability": 23.2,
+      "calibrated_away_probability": 11.6,
+      "total_goals_mean": 2.69,
       "tempo_adjustment": 0.02,
-      "draw_lift_points": 4.7,
-      "favourite_compression_points": 4.1,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "draw_lift_points": 5.1,
+      "favourite_compression_points": 4.7,
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -14425,8 +15833,8 @@ window.embeddedDataset = [
         "true_price": 11.26,
         "current_odds": 13,
         "au_bookie": "Betfair",
-        "devig_book_probability": 7.64,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "devig_book_probability": 7.68,
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:15:47.185Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -14438,16 +15846,16 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Portugal to Win",
         "true_price": 1.37,
-        "current_odds": 1.31,
+        "current_odds": 1.32,
         "au_bookie": "Betfair",
-        "devig_book_probability": 75.81,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
-        "odds_updated_at": "2026-06-15T11:28:50.141Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 75.67,
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
+        "odds_updated_at": "2026-06-15T23:47:47.164Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "previous_odds": 1.32
+        "previous_odds": 1.31
       },
       {
         "market_matrix": "Full Match Model",
@@ -14455,8 +15863,8 @@ window.embeddedDataset = [
         "true_price": 5.56,
         "current_odds": 6,
         "au_bookie": "Betfair",
-        "devig_book_probability": 16.55,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "devig_book_probability": 16.65,
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -14464,48 +15872,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 6cc871c121a1869b4612d3fb22fa9d55.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 52,
-      "over_fair_price": 1.92,
-      "under_probability": 48,
-      "under_fair_price": 2.08,
-      "total_goals_mean": 2.76,
+      "over_probability": 52.7,
+      "over_fair_price": 1.9,
+      "under_probability": 47.3,
+      "under_fair_price": 2.12,
+      "total_goals_mean": 2.79,
       "tempo_adjustment": 0.11,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Portugal 2-0 DR Congo",
-        "probability": 14,
-        "fair_price": 7.15
+        "probability": 13.7,
+        "fair_price": 7.28
       },
       {
         "score": "Portugal 1-0 DR Congo",
-        "probability": 13.3,
-        "fair_price": 7.51
+        "probability": 13,
+        "fair_price": 7.69
       },
       {
         "score": "Portugal 3-0 DR Congo",
-        "probability": 9.8,
-        "fair_price": 10.22
+        "probability": 9.7,
+        "fair_price": 10.35
       },
       {
         "score": "Portugal 2-1 DR Congo",
-        "probability": 9.2,
-        "fair_price": 10.87
+        "probability": 9.3,
+        "fair_price": 10.78
       },
       {
         "score": "Portugal 1-1 DR Congo",
         "probability": 8.8,
-        "fair_price": 11.4
+        "fair_price": 11.38
       }
     ],
     "model_market_view": [
@@ -14513,50 +15923,50 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Portugal or Draw",
-        "probability": 89.9,
-        "fair_price": 1.11
+        "probability": 89.7,
+        "fair_price": 1.12
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "DR Congo or Draw",
-        "probability": 33.1,
-        "fair_price": 3.02
+        "probability": 33.7,
+        "fair_price": 2.97
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Portugal or DR Congo",
-        "probability": 77.1,
+        "probability": 76.7,
         "fair_price": 1.3
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Portugal Draw No Bet",
-        "probability": 86.8,
-        "fair_price": 1.15
+        "probability": 86.5,
+        "fair_price": 1.16
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "DR Congo Draw No Bet",
-        "probability": 13.2,
-        "fair_price": 7.6
+        "probability": 13.5,
+        "fair_price": 7.41
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 42.3,
-        "fair_price": 2.36
+        "probability": 43.2,
+        "fair_price": 2.32
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 57.7,
-        "fair_price": 1.73
+        "probability": 56.8,
+        "fair_price": 1.76
       },
       {
         "category": "Main Match",
@@ -14576,217 +15986,217 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93.7,
+        "probability": 93.8,
         "fair_price": 1.07
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 6.3,
-        "fair_price": 15.76
+        "probability": 6.2,
+        "fair_price": 16.24
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 76.2,
-        "fair_price": 1.31
+        "probability": 76.7,
+        "fair_price": 1.3
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 23.8,
-        "fair_price": 4.19
+        "probability": 23.3,
+        "fair_price": 4.29
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 52,
-        "fair_price": 1.92
+        "probability": 52.7,
+        "fair_price": 1.9
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 48,
-        "fair_price": 2.08
+        "probability": 47.3,
+        "fair_price": 2.12
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 29.9,
-        "fair_price": 3.35
+        "probability": 30.5,
+        "fair_price": 3.28
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 70.1,
-        "fair_price": 1.43
+        "probability": 69.5,
+        "fair_price": 1.44
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 14.6,
-        "fair_price": 6.86
+        "probability": 15,
+        "fair_price": 6.65
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 85.4,
-        "fair_price": 1.17
+        "probability": 85,
+        "fair_price": 1.18
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Portugal Over 0.5 Goals",
-        "probability": 87.7,
+        "probability": 87.9,
         "fair_price": 1.14
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Portugal Under 0.5 Goals",
-        "probability": 12.3,
-        "fair_price": 8.16
+        "probability": 12.1,
+        "fair_price": 8.26
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Portugal Over 1.5 Goals",
-        "probability": 62,
-        "fair_price": 1.61
+        "probability": 62.3,
+        "fair_price": 1.6
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Portugal Under 1.5 Goals",
-        "probability": 38,
-        "fair_price": 2.63
+        "probability": 37.7,
+        "fair_price": 2.65
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Portugal Over 2.5 Goals",
-        "probability": 35,
-        "fair_price": 2.86
+        "probability": 35.3,
+        "fair_price": 2.83
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Portugal Under 2.5 Goals",
-        "probability": 65,
-        "fair_price": 1.54
+        "probability": 64.7,
+        "fair_price": 1.55
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "DR Congo Over 0.5 Goals",
-        "probability": 48.2,
-        "fair_price": 2.07
+        "probability": 49.1,
+        "fair_price": 2.04
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "DR Congo Under 0.5 Goals",
-        "probability": 51.8,
-        "fair_price": 1.93
+        "probability": 50.9,
+        "fair_price": 1.97
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "DR Congo Over 1.5 Goals",
-        "probability": 14.1,
-        "fair_price": 7.07
+        "probability": 14.7,
+        "fair_price": 6.78
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "DR Congo Under 1.5 Goals",
-        "probability": 85.9,
-        "fair_price": 1.16
+        "probability": 85.3,
+        "fair_price": 1.17
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "DR Congo Over 2.5 Goals",
-        "probability": 2.9,
-        "fair_price": 34.17
+        "probability": 3.1,
+        "fair_price": 32
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "DR Congo Under 2.5 Goals",
-        "probability": 97.1,
+        "probability": 96.9,
         "fair_price": 1.03
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Portugal 1H Win",
-        "probability": 51.1,
+        "probability": 51,
         "fair_price": 1.96
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 37.6,
-        "fair_price": 2.66
+        "probability": 37.4,
+        "fair_price": 2.67
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "DR Congo 1H Win",
-        "probability": 11.4,
-        "fair_price": 8.8
+        "probability": 11.6,
+        "fair_price": 8.62
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 71.1,
-        "fair_price": 1.41
+        "probability": 71.5,
+        "fair_price": 1.4
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 28.9,
-        "fair_price": 3.46
+        "probability": 28.5,
+        "fair_price": 3.51
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 35.2,
-        "fair_price": 2.84
+        "probability": 35.7,
+        "fair_price": 2.8
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 64.8,
-        "fair_price": 1.54
+        "probability": 64.3,
+        "fair_price": 1.55
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 15.7,
-        "fair_price": 6.38
+        "probability": 16.1,
+        "fair_price": 6.22
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 84.3,
+        "probability": 83.9,
         "fair_price": 1.19
       }
     ],
@@ -14819,16 +16229,16 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 33.1,
-          "model_price": 3.02,
+          "model_probability": 33.7,
+          "model_price": 2.97,
           "current_odds": 4,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 11.87,
-          "ev": 32.45,
-          "qi": 65,
-          "price_qi": 91,
-          "edge_points": 8.11,
+          "ev": 34.68,
+          "qi": 67,
+          "price_qi": 92,
+          "edge_points": 8.67,
           "risk_rating": "High"
         },
         {
@@ -14837,17 +16247,33 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 33.1,
-          "model_price": 3.02,
+          "model_probability": 33.7,
+          "model_price": 2.97,
           "current_odds": 3.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 13.55,
-          "ev": 15.89,
-          "qi": 58,
-          "price_qi": 84,
-          "edge_points": 4.54,
+          "ev": 17.85,
+          "qi": 60,
+          "price_qi": 85,
+          "edge_points": 5.1,
           "risk_rating": "Medium"
+        },
+        {
+          "selection": "Chancel Mbemba: To Get Carded",
+          "category": "Player Prop",
+          "market": "To Get Carded",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Be Booked",
+          "model_probability": 26.8,
+          "model_price": 3.73,
+          "current_odds": 4.6,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 23.32,
+          "qi": 53,
+          "price_qi": 86,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Under 3.5 Goals",
@@ -14855,17 +16281,33 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 70.1,
-          "model_price": 1.43,
+          "model_probability": 69.5,
+          "model_price": 1.44,
           "current_odds": 1.44,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 65.22,
-          "ev": 0.7,
-          "qi": 55,
-          "price_qi": 54,
-          "edge_points": 0.49,
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49,
+          "edge_points": 0,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Bruno Fernandes: Goal or Assist",
+          "category": "Player Prop",
+          "market": "Goal or Assist",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Score Or Assist",
+          "model_probability": 54.5,
+          "model_price": 1.83,
+          "current_odds": 1.83,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 0,
+          "qi": 48,
+          "price_qi": 49,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Under 4.5 Goals",
@@ -14873,34 +16315,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 85.4,
-          "model_price": 1.17,
+          "model_probability": 85,
+          "model_price": 1.18,
           "current_odds": 1.16,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 80.54,
-          "ev": -0.85,
-          "qi": 50,
-          "price_qi": 43,
-          "edge_points": -0.74,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 48,
-          "model_price": 2.08,
-          "current_odds": 2.1,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 44.44,
-          "ev": 0.96,
+          "ev": -1.69,
           "qi": 48,
-          "price_qi": 55,
-          "edge_points": 0.46,
+          "price_qi": 37,
+          "edge_points": -1.46,
           "risk_rating": "Low"
         },
         {
@@ -14918,6 +16342,24 @@ window.embeddedDataset = [
           "ev": -4.38,
           "qi": 43,
           "price_qi": 24
+        },
+        {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 47.3,
+          "model_price": 2.12,
+          "current_odds": 2.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 44.44,
+          "ev": -0.94,
+          "qi": 42,
+          "price_qi": 44,
+          "edge_points": -0.45,
+          "risk_rating": "Low"
         },
         {
           "selection": "Portugal to Win",
@@ -14941,7 +16383,7 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 93.7,
+          "model_probability": 93.8,
           "model_price": 1.07,
           "current_odds": 1.03,
           "au_bookie": "TAB",
@@ -14954,21 +16396,21 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
+          "selection": "Over 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 57.7,
-          "model_price": 1.73,
-          "current_odds": 1.65,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 76.7,
+          "model_price": 1.3,
+          "current_odds": 1.22,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 56.58,
-          "ev": -4.62,
+          "devig_book_probability": 76.63,
+          "ev": -6.15,
           "qi": 41,
-          "price_qi": 26,
-          "edge_points": -2.8,
+          "price_qi": 16,
+          "edge_points": -5.04,
           "risk_rating": "Low"
         },
         {
@@ -14986,24 +16428,6 @@ window.embeddedDataset = [
           "ev": -6.57,
           "qi": 41,
           "price_qi": 16
-        },
-        {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 76.2,
-          "model_price": 1.31,
-          "current_odds": 1.22,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 76.63,
-          "ev": -6.87,
-          "qi": 40,
-          "price_qi": 14,
-          "edge_points": -5.63,
-          "risk_rating": "Low"
         },
         {
           "selection": "Portugal to Win",
@@ -15027,16 +16451,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 57.7,
-          "model_price": 1.73,
-          "current_odds": 1.62,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 58.14,
-          "ev": -6.36,
+          "model_probability": 56.8,
+          "model_price": 1.76,
+          "current_odds": 1.65,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 56.58,
+          "ev": -6.25,
           "qi": 39,
-          "price_qi": 20,
-          "edge_points": -3.92,
+          "price_qi": 21,
+          "edge_points": -3.79,
           "risk_rating": "Low"
         },
         {
@@ -15077,16 +16501,68 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 89.9,
-          "model_price": 1.11,
+          "model_probability": 89.7,
+          "model_price": 1.12,
           "current_odds": 1.04,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 45.59,
-          "ev": -6.31,
+          "ev": -7.14,
           "qi": 37,
-          "price_qi": 7,
-          "edge_points": -6.06,
+          "price_qi": 5,
+          "edge_points": -6.87,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 56.8,
+          "model_price": 1.76,
+          "current_odds": 1.62,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 58.14,
+          "ev": -7.95,
+          "qi": 37,
+          "price_qi": 17,
+          "edge_points": -4.91,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Rafael Leao: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 38.3,
+          "model_price": 2.61,
+          "current_odds": 2.6,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -0.38,
+          "qi": 36,
+          "price_qi": 47,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "Portugal or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 89.7,
+          "model_price": 1.12,
+          "current_odds": 1.03,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 46.1,
+          "ev": -8.04,
+          "qi": 36,
+          "price_qi": 3,
+          "edge_points": -7.8,
           "risk_rating": "Low"
         },
         {
@@ -15095,35 +16571,35 @@ window.embeddedDataset = [
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 86.8,
-          "model_price": 1.15,
+          "model_probability": 86.5,
+          "model_price": 1.16,
           "current_odds": 1.06,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 88.91,
-          "ev": -7.83,
-          "qi": 37,
-          "price_qi": 5,
-          "edge_points": -7.38,
+          "ev": -8.62,
+          "qi": 36,
+          "price_qi": 4,
+          "edge_points": -8.13,
           "risk_rating": "Low"
         },
         {
-          "selection": "Portugal or Draw",
+          "selection": "DR Congo Draw No Bet",
           "category": "Main Match",
-          "market": "Double Chance",
+          "market": "Draw No Bet",
           "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 89.9,
-          "model_price": 1.11,
-          "current_odds": 1.03,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 46.1,
-          "ev": -7.21,
-          "qi": 36,
-          "price_qi": 4,
-          "edge_points": -7,
-          "risk_rating": "Low"
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 13.5,
+          "model_price": 7.41,
+          "current_odds": 8.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 11.09,
+          "ev": 14.71,
+          "qi": 35,
+          "price_qi": 80,
+          "edge_points": 1.73,
+          "risk_rating": "Very high"
         },
         {
           "selection": "DR Congo to Win",
@@ -15142,40 +16618,74 @@ window.embeddedDataset = [
           "price_qi": 79
         },
         {
-          "selection": "DR Congo Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 13.2,
-          "model_price": 7.6,
-          "current_odds": 8.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 11.09,
-          "ev": 11.84,
-          "qi": 34,
-          "price_qi": 79,
-          "edge_points": 1.39,
-          "risk_rating": "Very high"
-        },
-        {
           "selection": "Over 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 52,
-          "model_price": 1.92,
+          "model_probability": 52.7,
+          "model_price": 1.9,
           "current_odds": 1.68,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 55.56,
-          "ev": -12.5,
-          "qi": 33,
-          "price_qi": 11,
-          "edge_points": -7.44,
+          "ev": -11.58,
+          "qi": 34,
+          "price_qi": 12,
+          "edge_points": -6.89,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 43.2,
+          "model_price": 2.32,
+          "current_odds": 2.25,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 41.86,
+          "ev": -3.02,
+          "qi": 33,
+          "price_qi": 33,
+          "edge_points": -1.34,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 43.2,
+          "model_price": 2.32,
+          "current_odds": 2.15,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 43.42,
+          "ev": -7.33,
+          "qi": 32,
+          "price_qi": 20,
+          "edge_points": -3.41,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Bruno Fernandes: 2+ Total Shots",
+          "category": "Player Prop",
+          "market": "2+ Total Shots",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 2 Or More Shots",
+          "model_probability": 57.7,
+          "model_price": 1.73,
+          "current_odds": 1.1,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -36.42,
+          "qi": 32,
+          "price_qi": 0,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -15192,42 +16702,6 @@ window.embeddedDataset = [
           "ev": 3.42,
           "qi": 31,
           "price_qi": 66
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 42.3,
-          "model_price": 2.36,
-          "current_odds": 2.25,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 41.86,
-          "ev": -4.66,
-          "qi": 31,
-          "price_qi": 27,
-          "edge_points": -2.07,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 42.3,
-          "model_price": 2.36,
-          "current_odds": 2.15,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 43.42,
-          "ev": -8.9,
-          "qi": 31,
-          "price_qi": 18,
-          "edge_points": -4.14,
-          "risk_rating": "Low"
         },
         {
           "selection": "Match to end in a Draw",
@@ -15262,40 +16736,56 @@ window.embeddedDataset = [
           "price_qi": 44
         },
         {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 23.8,
-          "model_price": 4.19,
-          "current_odds": 4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 23.37,
-          "ev": -4.53,
-          "qi": 19,
-          "price_qi": 29,
-          "edge_points": -1.13,
-          "risk_rating": "High"
-        },
-        {
           "selection": "Over 3.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 29.9,
-          "model_price": 3.35,
+          "model_probability": 30.5,
+          "model_price": 3.28,
           "current_odds": 2.7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 34.78,
-          "ev": -19.4,
-          "qi": 19,
-          "price_qi": 11,
-          "edge_points": -7.19,
+          "ev": -17.68,
+          "qi": 20,
+          "price_qi": 12,
+          "edge_points": -6.55,
           "risk_rating": "Medium"
+        },
+        {
+          "selection": "Cedric Bakambu: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 30.6,
+          "model_price": 3.27,
+          "current_odds": 2,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -38.84,
+          "qi": 20,
+          "price_qi": 2,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 23.3,
+          "model_price": 4.29,
+          "current_odds": 4,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 23.37,
+          "ev": -6.76,
+          "qi": 17,
+          "price_qi": 24,
+          "edge_points": -1.69,
+          "risk_rating": "High"
         },
         {
           "selection": "DR Congo to Win",
@@ -15346,6 +16836,24 @@ window.embeddedDataset = [
           "price_qi": 20
         },
         {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 15,
+          "model_price": 6.65,
+          "current_odds": 4.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 19.46,
+          "ev": -27.82,
+          "qi": 11,
+          "price_qi": 11,
+          "edge_points": -5.8,
+          "risk_rating": "High"
+        },
+        {
           "selection": "DR Congo to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -15378,57 +16886,44 @@ window.embeddedDataset = [
           "price_qi": 19
         },
         {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 14.6,
-          "model_price": 6.86,
-          "current_odds": 4.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 19.46,
-          "ev": -30.03,
-          "qi": 10,
-          "price_qi": 10,
-          "edge_points": -6.26,
-          "risk_rating": "High"
-        },
-        {
           "selection": "Under 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 6.3,
-          "model_price": 15.76,
+          "model_probability": 6.2,
+          "model_price": 16.24,
           "current_odds": 10,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 9.34,
-          "ev": -36.55,
-          "qi": 8,
-          "price_qi": 13,
-          "edge_points": -3.65,
+          "ev": -38.42,
+          "qi": 7,
+          "price_qi": 12,
+          "edge_points": -3.84,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 73.1,
       "base_draw_probability": 18,
       "base_away_probability": 8.9,
-      "calibrated_home_probability": 66.9,
-      "calibrated_draw_probability": 22.9,
-      "calibrated_away_probability": 10.1,
-      "total_goals_mean": 2.76,
+      "calibrated_home_probability": 66.3,
+      "calibrated_draw_probability": 23.3,
+      "calibrated_away_probability": 10.3,
+      "total_goals_mean": 2.79,
       "tempo_adjustment": 0.11,
-      "draw_lift_points": 5.2,
-      "favourite_compression_points": 5,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "draw_lift_points": 5.7,
+      "favourite_compression_points": 5.8,
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -15447,7 +16942,7 @@ window.embeddedDataset = [
         "current_odds": 5.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 18.12,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T22:25:53.958Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -15462,7 +16957,7 @@ window.embeddedDataset = [
         "current_odds": 1.77,
         "au_bookie": "Betfair",
         "devig_book_probability": 56.32,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T22:25:53.958Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -15477,7 +16972,7 @@ window.embeddedDataset = [
         "current_odds": 3.9,
         "au_bookie": "Betfair",
         "devig_book_probability": 25.56,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T20:03:51.991Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -15486,12 +16981,12 @@ window.embeddedDataset = [
         "previous_odds": 3.85
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 689096c8cd7e2753b9fec95321943c5d.",
     "model_totals_25": {
       "line": 2.5,
@@ -15501,7 +16996,9 @@ window.embeddedDataset = [
       "under_fair_price": 1.82,
       "total_goals_mean": 2.48,
       "tempo_adjustment": 0,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
@@ -15836,6 +17333,22 @@ window.embeddedDataset = [
       "matched_rows": 35,
       "rows": [
         {
+          "selection": "Luka Modric: Goal or Assist",
+          "category": "Player Prop",
+          "market": "Goal or Assist",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Score Or Assist",
+          "model_probability": 28.6,
+          "model_price": 3.5,
+          "current_odds": 4.5,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 28.57,
+          "qi": 57,
+          "price_qi": 88,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "Over 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -15852,6 +17365,22 @@ window.embeddedDataset = [
           "price_qi": 36,
           "edge_points": -1.54,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Mateo Kovacic: To Get Carded",
+          "category": "Player Prop",
+          "market": "To Get Carded",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Be Booked",
+          "model_probability": 27.8,
+          "model_price": 3.6,
+          "current_odds": 3.84,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 6.67,
+          "qi": 45,
+          "price_qi": 75,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Over 0.5 Goals",
@@ -15924,6 +17453,22 @@ window.embeddedDataset = [
           "price_qi": 19,
           "edge_points": -4.31,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Harry Kane: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 44.6,
+          "model_price": 2.24,
+          "current_odds": 2.25,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 0.45,
+          "qi": 41,
+          "price_qi": 52,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "England to Win",
@@ -16062,6 +17607,22 @@ window.embeddedDataset = [
           "ev": 2.09,
           "qi": 37,
           "price_qi": 61
+        },
+        {
+          "selection": "Jude Bellingham: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 49.5,
+          "model_price": 2.02,
+          "current_odds": 1.91,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -5.45,
+          "qi": 37,
+          "price_qi": 24,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "BTTS No",
@@ -16437,7 +17998,7 @@ window.embeddedDataset = [
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 54.6,
@@ -16448,9 +18009,14 @@ window.embeddedDataset = [
       "calibrated_away_probability": 19.3,
       "total_goals_mean": 2.48,
       "tempo_adjustment": 0,
+      "goal_suppression": 0,
+      "break_open_risk": 0,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -16469,7 +18035,7 @@ window.embeddedDataset = [
         "current_odds": 2.28,
         "au_bookie": "Betfair",
         "devig_book_probability": 43.59,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -16484,7 +18050,7 @@ window.embeddedDataset = [
         "current_odds": 3.6,
         "au_bookie": "Betfair",
         "devig_book_probability": 27.61,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:33:19.845Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -16499,7 +18065,7 @@ window.embeddedDataset = [
         "current_odds": 3.45,
         "au_bookie": "Betfair",
         "devig_book_probability": 28.81,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -16507,48 +18073,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 87afdb85c977b451e1c00f5e3e632601.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 45,
-      "over_fair_price": 2.22,
-      "under_probability": 55,
-      "under_fair_price": 1.82,
-      "total_goals_mean": 2.47,
+      "over_probability": 46.1,
+      "over_fair_price": 2.17,
+      "under_probability": 53.9,
+      "under_fair_price": 1.86,
+      "total_goals_mean": 2.52,
       "tempo_adjustment": 0.11,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Ghana 1-1 Panama",
-        "probability": 12.5,
-        "fair_price": 7.98
+        "probability": 12.4,
+        "fair_price": 8.05
       },
       {
         "score": "Ghana 1-0 Panama",
-        "probability": 12.2,
-        "fair_price": 8.22
+        "probability": 11.8,
+        "fair_price": 8.45
       },
       {
         "score": "Ghana 2-1 Panama",
-        "probability": 9,
-        "fair_price": 11.05
+        "probability": 9.1,
+        "fair_price": 10.95
       },
       {
         "score": "Ghana 2-0 Panama",
-        "probability": 8.8,
-        "fair_price": 11.39
+        "probability": 8.7,
+        "fair_price": 11.49
       },
       {
         "score": "Ghana 0-1 Panama",
-        "probability": 8.7,
-        "fair_price": 11.52
+        "probability": 8.4,
+        "fair_price": 11.84
       }
     ],
     "model_market_view": [
@@ -16591,245 +18159,245 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 49.1,
-        "fair_price": 2.04
+        "probability": 50,
+        "fair_price": 2
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 50.9,
-        "fair_price": 1.97
+        "probability": 50,
+        "fair_price": 2
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.6,
+        "probability": 49.7,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.4,
+        "probability": 50.3,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 91.6,
+        "probability": 91.9,
         "fair_price": 1.09
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 8.4,
-        "fair_price": 11.87
+        "probability": 8.1,
+        "fair_price": 12.42
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 70.7,
-        "fair_price": 1.41
+        "probability": 71.7,
+        "fair_price": 1.4
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 29.3,
-        "fair_price": 3.42
+        "probability": 28.3,
+        "fair_price": 3.53
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 45,
-        "fair_price": 2.22
+        "probability": 46.1,
+        "fair_price": 2.17
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 55,
-        "fair_price": 1.82
+        "probability": 53.9,
+        "fair_price": 1.86
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 23.7,
-        "fair_price": 4.22
+        "probability": 24.7,
+        "fair_price": 4.06
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 76.3,
-        "fair_price": 1.31
+        "probability": 75.3,
+        "fair_price": 1.33
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 10.5,
-        "fair_price": 9.49
+        "probability": 11.1,
+        "fair_price": 8.98
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 89.5,
-        "fair_price": 1.12
+        "probability": 88.9,
+        "fair_price": 1.13
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ghana Over 0.5 Goals",
-        "probability": 76.4,
-        "fair_price": 1.31
+        "probability": 77,
+        "fair_price": 1.3
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ghana Under 0.5 Goals",
-        "probability": 23.6,
-        "fair_price": 4.24
+        "probability": 23,
+        "fair_price": 4.35
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ghana Over 1.5 Goals",
-        "probability": 42.3,
-        "fair_price": 2.36
+        "probability": 43.2,
+        "fair_price": 2.31
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ghana Under 1.5 Goals",
-        "probability": 57.7,
-        "fair_price": 1.73
+        "probability": 56.8,
+        "fair_price": 1.76
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ghana Over 2.5 Goals",
-        "probability": 17.7,
-        "fair_price": 5.64
+        "probability": 18.4,
+        "fair_price": 5.44
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Ghana Under 2.5 Goals",
-        "probability": 82.3,
-        "fair_price": 1.22
+        "probability": 81.6,
+        "fair_price": 1.23
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Panama Over 0.5 Goals",
-        "probability": 64.3,
-        "fair_price": 1.55
+        "probability": 65,
+        "fair_price": 1.54
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Panama Under 0.5 Goals",
-        "probability": 35.7,
-        "fair_price": 2.8
+        "probability": 35,
+        "fair_price": 2.86
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Panama Over 1.5 Goals",
-        "probability": 27.5,
-        "fair_price": 3.63
+        "probability": 28.2,
+        "fair_price": 3.54
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Panama Under 1.5 Goals",
-        "probability": 72.5,
-        "fair_price": 1.38
+        "probability": 71.8,
+        "fair_price": 1.39
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Panama Over 2.5 Goals",
-        "probability": 8.6,
-        "fair_price": 11.63
+        "probability": 9,
+        "fair_price": 11.17
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Panama Under 2.5 Goals",
-        "probability": 91.4,
-        "fair_price": 1.09
+        "probability": 91,
+        "fair_price": 1.1
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Ghana 1H Win",
-        "probability": 34.3,
-        "fair_price": 2.92
+        "probability": 34.6,
+        "fair_price": 2.89
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 43.5,
-        "fair_price": 2.3
+        "probability": 43.1,
+        "fair_price": 2.32
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Panama 1H Win",
-        "probability": 22.2,
-        "fair_price": 4.5
+        "probability": 22.4,
+        "fair_price": 4.47
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 67.2,
-        "fair_price": 1.49
+        "probability": 67.8,
+        "fair_price": 1.47
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 32.8,
-        "fair_price": 3.04
+        "probability": 32.2,
+        "fair_price": 3.11
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 30.6,
-        "fair_price": 3.27
+        "probability": 31.3,
+        "fair_price": 3.19
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 69.4,
-        "fair_price": 1.44
+        "probability": 68.7,
+        "fair_price": 1.46
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 17.7,
-        "fair_price": 5.64
+        "probability": 18.2,
+        "fair_price": 5.49
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 82.3,
+        "probability": 81.8,
         "fair_price": 1.22
       }
     ],
@@ -16857,21 +18425,37 @@ window.embeddedDataset = [
       "matched_rows": 37,
       "rows": [
         {
+          "selection": "Inaki Williams: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 35.7,
+          "model_price": 2.8,
+          "current_odds": 3.3,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 17.86,
+          "qi": 62,
+          "price_qi": 86,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "Over 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 70.7,
-          "model_price": 1.41,
+          "model_probability": 71.7,
+          "model_price": 1.4,
           "current_odds": 1.4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 66.67,
-          "ev": -0.71,
-          "qi": 51,
-          "price_qi": 45,
-          "edge_points": -0.51,
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49,
+          "edge_points": 0,
           "risk_rating": "Low"
         },
         {
@@ -16898,7 +18482,7 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 91.6,
+          "model_probability": 91.9,
           "model_price": 1.09,
           "current_odds": 1.07,
           "au_bookie": "TAB",
@@ -16945,6 +18529,24 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 46.1,
+          "model_price": 2.17,
+          "current_odds": 2.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 42.41,
+          "ev": 1.38,
+          "qi": 45,
+          "price_qi": 58,
+          "edge_points": 0.63,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Ghana or Panama",
           "category": "Main Match",
           "market": "Double Chance",
@@ -16981,6 +18583,24 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 50,
+          "model_price": 2,
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 48,
+          "ev": -2.5,
+          "qi": 41,
+          "price_qi": 35,
+          "edge_points": -1.28,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Ghana or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -16999,21 +18619,39 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 50,
+          "model_price": 2,
+          "current_odds": 1.91,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 48.93,
+          "ev": -4.5,
+          "qi": 38,
+          "price_qi": 27,
+          "edge_points": -2.36,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 89.5,
-          "model_price": 1.12,
+          "model_probability": 88.9,
+          "model_price": 1.13,
           "current_odds": 1.06,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 88.3,
-          "ev": -5.36,
-          "qi": 39,
-          "price_qi": 12,
-          "edge_points": -5.05,
+          "ev": -6.19,
+          "qi": 38,
+          "price_qi": 9,
+          "edge_points": -5.84,
           "risk_rating": "Low"
         },
         {
@@ -17022,35 +18660,17 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 76.3,
-          "model_price": 1.31,
+          "model_probability": 75.3,
+          "model_price": 1.33,
           "current_odds": 1.2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 77.78,
-          "ev": -8.4,
-          "qi": 39,
-          "price_qi": 10,
-          "edge_points": -7,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 45,
-          "model_price": 2.22,
-          "current_odds": 2.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 42.41,
-          "ev": -0.9,
+          "ev": -9.77,
           "qi": 38,
-          "price_qi": 44,
-          "edge_points": -0.41,
-          "risk_rating": "Medium"
+          "price_qi": 8,
+          "edge_points": -8.15,
+          "risk_rating": "Low"
         },
         {
           "selection": "Ghana to Win",
@@ -17117,24 +18737,6 @@ window.embeddedDataset = [
           "price_qi": 31
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 49.1,
-          "model_price": 2.04,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48,
-          "ev": -4.41,
-          "qi": 37,
-          "price_qi": 27,
-          "edge_points": -2.26,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Panama or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -17150,42 +18752,6 @@ window.embeddedDataset = [
           "qi": 37,
           "price_qi": 19,
           "edge_points": -4.28,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 49.1,
-          "model_price": 2.04,
-          "current_odds": 1.91,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 48.93,
-          "ev": -6.37,
-          "qi": 36,
-          "price_qi": 22,
-          "edge_points": -3.34,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 50.9,
-          "model_price": 1.97,
-          "current_odds": 1.83,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 51.07,
-          "ev": -7.11,
-          "qi": 36,
-          "price_qi": 20,
-          "edge_points": -3.88,
           "risk_rating": "Low"
         },
         {
@@ -17207,21 +18773,57 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 24.7,
+          "model_price": 4.06,
+          "current_odds": 4.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 22.22,
+          "ev": 3.45,
+          "qi": 34,
+          "price_qi": 66,
+          "edge_points": 0.82,
+          "risk_rating": "High"
+        },
+        {
           "selection": "BTTS No",
           "category": "Main Match",
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 50.9,
-          "model_price": 1.97,
+          "model_probability": 50,
+          "model_price": 2,
+          "current_odds": 1.83,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 51.07,
+          "ev": -8.5,
+          "qi": 34,
+          "price_qi": 17,
+          "edge_points": -4.64,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 50,
+          "model_price": 2,
           "current_odds": 1.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 52,
-          "ev": -8.63,
-          "qi": 35,
-          "price_qi": 17,
-          "edge_points": -4.79,
+          "ev": -10,
+          "qi": 34,
+          "price_qi": 15,
+          "edge_points": -5.56,
           "risk_rating": "Low"
         },
         {
@@ -17230,16 +18832,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 55,
-          "model_price": 1.82,
+          "model_probability": 53.9,
+          "model_price": 1.86,
           "current_odds": 1.62,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 57.59,
-          "ev": -10.99,
-          "qi": 35,
-          "price_qi": 12,
-          "edge_points": -6.78,
+          "ev": -12.9,
+          "qi": 34,
+          "price_qi": 10,
+          "edge_points": -7.96,
           "risk_rating": "Low"
         },
         {
@@ -17273,24 +18875,6 @@ window.embeddedDataset = [
           "ev": -2.86,
           "qi": 27,
           "price_qi": 35
-        },
-        {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 23.7,
-          "model_price": 4.22,
-          "current_odds": 4.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 22.22,
-          "ev": -0.47,
-          "qi": 25,
-          "price_qi": 47,
-          "edge_points": -0.11,
-          "risk_rating": "High"
         },
         {
           "selection": "Panama to Win",
@@ -17444,17 +19028,33 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 29.3,
-          "model_price": 3.42,
+          "model_probability": 28.3,
+          "model_price": 3.53,
           "current_odds": 2.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 33.33,
-          "ev": -18.13,
-          "qi": 20,
-          "price_qi": 12,
-          "edge_points": -6.47,
+          "ev": -20.68,
+          "qi": 19,
+          "price_qi": 11,
+          "edge_points": -7.39,
           "risk_rating": "Medium"
+        },
+        {
+          "selection": "Jose Fajardo: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 28.2,
+          "model_price": 3.55,
+          "current_odds": 1.53,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -56.9,
+          "qi": 19,
+          "price_qi": 0,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Under 0.5 Goals",
@@ -17462,16 +19062,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 8.4,
-          "model_price": 11.87,
+          "model_probability": 8.1,
+          "model_price": 12.42,
           "current_odds": 7.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 12.49,
-          "ev": -36.82,
+          "ev": -39.61,
           "qi": 11,
-          "price_qi": 12,
-          "edge_points": -4.91,
+          "price_qi": 11,
+          "edge_points": -5.28,
           "risk_rating": "High"
         },
         {
@@ -17480,21 +19080,21 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 10.5,
-          "model_price": 9.49,
+          "model_probability": 11.1,
+          "model_price": 8.98,
           "current_odds": 8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 11.7,
-          "ev": -15.7,
-          "qi": 9,
-          "price_qi": 18,
-          "edge_points": -1.96,
+          "ev": -10.91,
+          "qi": 10,
+          "price_qi": 21,
+          "edge_points": -1.36,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 44.8,
@@ -17503,11 +19103,16 @@ window.embeddedDataset = [
       "calibrated_home_probability": 44.8,
       "calibrated_draw_probability": 28.5,
       "calibrated_away_probability": 26.6,
-      "total_goals_mean": 2.47,
+      "total_goals_mean": 2.52,
       "tempo_adjustment": 0.11,
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -17526,7 +19131,7 @@ window.embeddedDataset = [
         "current_odds": 10.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 9.48,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -17540,7 +19145,7 @@ window.embeddedDataset = [
         "current_odds": 5,
         "au_bookie": "Betfair",
         "devig_book_probability": 19.91,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -17555,7 +19160,7 @@ window.embeddedDataset = [
         "current_odds": 1.41,
         "au_bookie": "Betfair",
         "devig_book_probability": 70.61,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:33:19.845Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -17563,48 +19168,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 22083e7a8e5362c711bc05c1e1319a1f.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 50,
-      "over_fair_price": 2,
-      "under_probability": 50,
-      "under_fair_price": 2,
-      "total_goals_mean": 2.68,
+      "over_probability": 47.5,
+      "over_fair_price": 2.1,
+      "under_probability": 52.5,
+      "under_fair_price": 1.91,
+      "total_goals_mean": 2.58,
       "tempo_adjustment": 0.02,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.07,
+      "break_open_risk": 0.02,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
+        "score": "Uzbekistan 0-1 Colombia",
+        "probability": 14.6,
+        "fair_price": 6.84
+      },
+      {
         "score": "Uzbekistan 0-2 Colombia",
         "probability": 14,
-        "fair_price": 7.15
-      },
-      {
-        "score": "Uzbekistan 0-1 Colombia",
-        "probability": 13.9,
-        "fair_price": 7.21
-      },
-      {
-        "score": "Uzbekistan 0-3 Colombia",
-        "probability": 9.4,
-        "fair_price": 10.64
+        "fair_price": 7.13
       },
       {
         "score": "Uzbekistan 1-1 Colombia",
-        "probability": 9.2,
-        "fair_price": 10.91
+        "probability": 9.6,
+        "fair_price": 10.44
       },
       {
         "score": "Uzbekistan 1-2 Colombia",
         "probability": 9.2,
-        "fair_price": 10.83
+        "fair_price": 10.87
+      },
+      {
+        "score": "Uzbekistan 0-3 Colombia",
+        "probability": 9,
+        "fair_price": 11.14
       }
     ],
     "model_market_view": [
@@ -17612,169 +19219,169 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Uzbekistan or Draw",
-        "probability": 33.6,
-        "fair_price": 2.98
+        "probability": 35.2,
+        "fair_price": 2.84
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Colombia or Draw",
-        "probability": 88.6,
+        "probability": 88.5,
         "fair_price": 1.13
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Uzbekistan or Colombia",
-        "probability": 77.8,
-        "fair_price": 1.29
+        "probability": 76.3,
+        "fair_price": 1.31
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Uzbekistan Draw No Bet",
-        "probability": 14.6,
-        "fair_price": 6.84
+        "probability": 15,
+        "fair_price": 6.66
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Colombia Draw No Bet",
-        "probability": 85.4,
-        "fair_price": 1.17
+        "probability": 85,
+        "fair_price": 1.18
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 41.9,
-        "fair_price": 2.39
+        "probability": 41,
+        "fair_price": 2.44
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 58.1,
-        "fair_price": 1.72
+        "probability": 59,
+        "fair_price": 1.7
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.8,
+        "probability": 49.7,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.2,
+        "probability": 50.3,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93.1,
-        "fair_price": 1.07
+        "probability": 92.4,
+        "fair_price": 1.08
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 6.9,
-        "fair_price": 14.53
+        "probability": 7.6,
+        "fair_price": 13.13
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 74.7,
-        "fair_price": 1.34
+        "probability": 72.8,
+        "fair_price": 1.37
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25.3,
-        "fair_price": 3.95
+        "probability": 27.2,
+        "fair_price": 3.67
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 50,
-        "fair_price": 2
+        "probability": 47.5,
+        "fair_price": 2.1
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 50,
-        "fair_price": 2
+        "probability": 52.5,
+        "fair_price": 1.91
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 28.1,
-        "fair_price": 3.56
+        "probability": 25.9,
+        "fair_price": 3.87
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 71.9,
-        "fair_price": 1.39
+        "probability": 74.1,
+        "fair_price": 1.35
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13.4,
-        "fair_price": 7.49
+        "probability": 11.9,
+        "fair_price": 8.4
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 86.6,
-        "fair_price": 1.15
+        "probability": 88.1,
+        "fair_price": 1.14
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uzbekistan Over 0.5 Goals",
-        "probability": 48.3,
-        "fair_price": 2.07
+        "probability": 48.1,
+        "fair_price": 2.08
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uzbekistan Under 0.5 Goals",
-        "probability": 51.7,
-        "fair_price": 1.94
+        "probability": 51.9,
+        "fair_price": 1.93
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uzbekistan Over 1.5 Goals",
-        "probability": 14.2,
-        "fair_price": 7.04
+        "probability": 14.1,
+        "fair_price": 7.12
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uzbekistan Under 1.5 Goals",
-        "probability": 85.8,
-        "fair_price": 1.17
+        "probability": 85.9,
+        "fair_price": 1.16
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Uzbekistan Over 2.5 Goals",
         "probability": 2.9,
-        "fair_price": 33.91
+        "fair_price": 34.52
       },
       {
         "category": "Team Totals",
@@ -17787,106 +19394,106 @@ window.embeddedDataset = [
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Colombia Over 0.5 Goals",
-        "probability": 86.7,
-        "fair_price": 1.15
+        "probability": 85.3,
+        "fair_price": 1.17
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Colombia Under 0.5 Goals",
-        "probability": 13.3,
-        "fair_price": 7.51
+        "probability": 14.7,
+        "fair_price": 6.82
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Colombia Over 1.5 Goals",
-        "probability": 59.8,
-        "fair_price": 1.67
+        "probability": 57.2,
+        "fair_price": 1.75
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Colombia Under 1.5 Goals",
-        "probability": 40.2,
-        "fair_price": 2.49
+        "probability": 42.8,
+        "fair_price": 2.34
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Colombia Over 2.5 Goals",
-        "probability": 32.8,
-        "fair_price": 3.05
+        "probability": 30.2,
+        "fair_price": 3.32
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Colombia Under 2.5 Goals",
-        "probability": 67.2,
-        "fair_price": 1.49
+        "probability": 69.8,
+        "fair_price": 1.43
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Uzbekistan 1H Win",
-        "probability": 11.8,
-        "fair_price": 8.5
+        "probability": 12.1,
+        "fair_price": 8.24
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 38.6,
-        "fair_price": 2.59
+        "probability": 39.9,
+        "fair_price": 2.51
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Colombia 1H Win",
-        "probability": 49.6,
-        "fair_price": 2.02
+        "probability": 48,
+        "fair_price": 2.09
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 70,
-        "fair_price": 1.43
+        "probability": 68.6,
+        "fair_price": 1.46
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30,
-        "fair_price": 3.33
+        "probability": 31.4,
+        "fair_price": 3.19
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 33.9,
-        "fair_price": 2.95
+        "probability": 32.2,
+        "fair_price": 3.1
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66.1,
-        "fair_price": 1.51
+        "probability": 67.8,
+        "fair_price": 1.48
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 15.3,
-        "fair_price": 6.52
+        "probability": 14.8,
+        "fair_price": 6.77
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 84.7,
-        "fair_price": 1.18
+        "probability": 85.2,
+        "fair_price": 1.17
       }
     ],
     "market_scan": {
@@ -17918,16 +19525,34 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 33.6,
-          "model_price": 2.98,
+          "model_probability": 35.2,
+          "model_price": 2.84,
           "current_odds": 3.2,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 14.74,
-          "ev": 7.38,
-          "qi": 50,
-          "price_qi": 77,
-          "edge_points": 2.31,
+          "ev": 12.68,
+          "qi": 57,
+          "price_qi": 83,
+          "edge_points": 3.96,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Uzbekistan or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 35.2,
+          "model_price": 2.84,
+          "current_odds": 3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 15.9,
+          "ev": 5.63,
+          "qi": 49,
+          "price_qi": 74,
+          "edge_points": 1.88,
           "risk_rating": "Medium"
         },
         {
@@ -17947,39 +19572,21 @@ window.embeddedDataset = [
           "price_qi": 33
         },
         {
-          "selection": "Over 0.5 Goals",
+          "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 93.1,
-          "model_price": 1.07,
-          "current_odds": 1.05,
+          "model_probability": 88.1,
+          "model_price": 1.14,
+          "current_odds": 1.11,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 89.01,
-          "ev": -1.87,
+          "devig_book_probability": 84.39,
+          "ev": -2.63,
           "qi": 46,
-          "price_qi": 32,
-          "edge_points": -1.78,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 74.7,
-          "model_price": 1.34,
-          "current_odds": 1.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 71.74,
-          "ev": -2.99,
-          "qi": 46,
-          "price_qi": 31,
-          "edge_points": -2.3,
+          "price_qi": 30,
+          "edge_points": -2.37,
           "risk_rating": "Low"
         },
         {
@@ -18015,21 +19622,39 @@ window.embeddedDataset = [
           "price_qi": 29
         },
         {
-          "selection": "Under 4.5 Goals",
+          "selection": "Over 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 86.6,
-          "model_price": 1.15,
-          "current_odds": 1.11,
+          "model_probability": 92.4,
+          "model_price": 1.08,
+          "current_odds": 1.05,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 84.39,
-          "ev": -3.48,
-          "qi": 43,
-          "price_qi": 24,
-          "edge_points": -3.13,
+          "devig_book_probability": 89.01,
+          "ev": -2.78,
+          "qi": 44,
+          "price_qi": 25,
+          "edge_points": -2.65,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 74.1,
+          "model_price": 1.35,
+          "current_odds": 1.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 71.74,
+          "ev": -3.7,
+          "qi": 44,
+          "price_qi": 27,
+          "edge_points": -2.85,
           "risk_rating": "Low"
         },
         {
@@ -18049,39 +19674,21 @@ window.embeddedDataset = [
           "price_qi": 23
         },
         {
-          "selection": "Over 2.5 Goals",
+          "selection": "Over 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 50,
-          "model_price": 2,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48,
-          "ev": -2.5,
-          "qi": 41,
-          "price_qi": 35,
-          "edge_points": -1.28,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 71.9,
-          "model_price": 1.39,
+          "model_probability": 72.8,
+          "model_price": 1.37,
           "current_odds": 1.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 71.74,
-          "ev": -6.47,
-          "qi": 41,
-          "price_qi": 17,
-          "edge_points": -4.98,
+          "ev": -5.11,
+          "qi": 42,
+          "price_qi": 21,
+          "edge_points": -3.93,
           "risk_rating": "Low"
         },
         {
@@ -18090,16 +19697,34 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 58.1,
-          "model_price": 1.72,
+          "model_probability": 59,
+          "model_price": 1.7,
           "current_odds": 1.62,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 58.14,
-          "ev": -5.81,
+          "ev": -4.71,
+          "qi": 41,
+          "price_qi": 25,
+          "edge_points": -2.9,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 59,
+          "model_price": 1.7,
+          "current_odds": 1.6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 58.44,
+          "ev": -5.88,
           "qi": 40,
-          "price_qi": 22,
-          "edge_points": -3.59,
+          "price_qi": 21,
+          "edge_points": -3.68,
           "risk_rating": "Low"
         },
         {
@@ -18119,48 +19744,12 @@ window.embeddedDataset = [
           "price_qi": 13
         },
         {
-          "selection": "Colombia Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 85.4,
-          "model_price": 1.17,
-          "current_odds": 1.09,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 85.64,
-          "ev": -6.84,
-          "qi": 39,
-          "price_qi": 10,
-          "edge_points": -6.27,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 58.1,
-          "model_price": 1.72,
-          "current_odds": 1.6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 58.44,
-          "ev": -6.98,
-          "qi": 39,
-          "price_qi": 19,
-          "edge_points": -4.36,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Colombia or Draw",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 88.6,
+          "model_probability": 88.5,
           "model_price": 1.13,
           "current_odds": 1.06,
           "au_bookie": "TAB",
@@ -18173,12 +19762,48 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "Colombia Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 85,
+          "model_price": 1.18,
+          "current_odds": 1.09,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 85.64,
+          "ev": -7.63,
+          "qi": 38,
+          "price_qi": 8,
+          "edge_points": -7,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 52.5,
+          "model_price": 1.91,
+          "current_odds": 1.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 52,
+          "ev": -5.76,
+          "qi": 37,
+          "price_qi": 23,
+          "edge_points": -3.2,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Colombia or Draw",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 88.6,
+          "model_probability": 88.5,
           "model_price": 1.13,
           "current_odds": 1.05,
           "au_bookie": "SportsBet",
@@ -18191,39 +19816,21 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Uzbekistan or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 33.6,
-          "model_price": 2.98,
-          "current_odds": 3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 15.9,
-          "ev": 0.67,
-          "qi": 36,
-          "price_qi": 53,
-          "edge_points": 0.22,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Under 2.5 Goals",
+          "selection": "Over 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 50,
-          "model_price": 2,
-          "current_odds": 1.8,
+          "model_probability": 47.5,
+          "model_price": 2.1,
+          "current_odds": 1.95,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 52,
-          "ev": -10,
+          "devig_book_probability": 48,
+          "ev": -7.14,
           "qi": 34,
-          "price_qi": 15,
-          "edge_points": -5.56,
+          "price_qi": 20,
+          "edge_points": -3.66,
           "risk_rating": "Low"
         },
         {
@@ -18259,21 +19866,53 @@ window.embeddedDataset = [
           "price_qi": 66
         },
         {
+          "selection": "Luis Diaz: 1+ Shots on Target",
+          "category": "Player Prop",
+          "market": "1+ Shots on Target",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Player To Have 1 Or More Shots On Target",
+          "model_probability": 55.5,
+          "model_price": 1.8,
+          "current_odds": 1.12,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -37.78,
+          "qi": 31,
+          "price_qi": 0,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "James Rodriguez: Goal or Assist",
+          "category": "Player Prop",
+          "market": "Goal or Assist",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "To Score Or Assist",
+          "model_probability": 45.3,
+          "model_price": 2.21,
+          "current_odds": 1.83,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -17.19,
+          "qi": 29,
+          "price_qi": 9,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "BTTS Yes",
           "category": "Main Match",
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 41.9,
-          "model_price": 2.39,
+          "model_probability": 41,
+          "model_price": 2.44,
           "current_odds": 2.25,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 41.86,
-          "ev": -5.86,
-          "qi": 29,
-          "price_qi": 24,
-          "edge_points": -2.6,
+          "ev": -7.79,
+          "qi": 28,
+          "price_qi": 20,
+          "edge_points": -3.46,
           "risk_rating": "Medium"
         },
         {
@@ -18282,34 +19921,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 41.9,
-          "model_price": 2.39,
+          "model_probability": 41,
+          "model_price": 2.44,
           "current_odds": 2.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 41.56,
-          "ev": -5.86,
-          "qi": 29,
-          "price_qi": 24,
-          "edge_points": -2.6,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 28.1,
-          "model_price": 3.56,
-          "current_odds": 3.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 28.26,
-          "ev": -7.3,
-          "qi": 23,
-          "price_qi": 22,
-          "edge_points": -2.21,
+          "ev": -7.79,
+          "qi": 28,
+          "price_qi": 20,
+          "edge_points": -3.46,
           "risk_rating": "Medium"
         },
         {
@@ -18334,16 +19955,52 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 25.3,
-          "model_price": 3.95,
+          "model_probability": 27.2,
+          "model_price": 3.67,
           "current_odds": 3.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 28.26,
-          "ev": -16.46,
+          "ev": -10.08,
+          "qi": 21,
+          "price_qi": 19,
+          "edge_points": -3.06,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Uzbekistan Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 15,
+          "model_price": 6.66,
+          "current_odds": 6.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 14.36,
+          "ev": -2.4,
+          "qi": 20,
+          "price_qi": 37,
+          "edge_points": -0.37,
+          "risk_rating": "High"
+        },
+        {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 25.9,
+          "model_price": 3.87,
+          "current_odds": 3.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 28.26,
+          "ev": -14.73,
           "qi": 19,
-          "price_qi": 14,
-          "edge_points": -4.99,
+          "price_qi": 15,
+          "edge_points": -4.46,
           "risk_rating": "Medium"
         },
         {
@@ -18361,24 +20018,6 @@ window.embeddedDataset = [
           "ev": -4.96,
           "qi": 17,
           "price_qi": 28
-        },
-        {
-          "selection": "Uzbekistan Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 14.6,
-          "model_price": 6.84,
-          "current_odds": 6.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 14.36,
-          "ev": -4.97,
-          "qi": 17,
-          "price_qi": 28,
-          "edge_points": -0.76,
-          "risk_rating": "High"
         },
         {
           "selection": "Match to end in a Draw",
@@ -18466,16 +20105,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 13.4,
-          "model_price": 7.49,
+          "model_probability": 11.9,
+          "model_price": 8.4,
           "current_odds": 6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 15.61,
-          "ev": -19.89,
-          "qi": 12,
-          "price_qi": 16,
-          "edge_points": -3.32,
+          "ev": -28.57,
+          "qi": 11,
+          "price_qi": 13,
+          "edge_points": -4.76,
           "risk_rating": "High"
         },
         {
@@ -18500,34 +20139,39 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 6.9,
-          "model_price": 14.53,
+          "model_probability": 7.6,
+          "model_price": 13.13,
           "current_odds": 8.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 10.99,
-          "ev": -41.5,
+          "ev": -35.26,
           "qi": 7,
-          "price_qi": 10,
-          "edge_points": -4.88,
+          "price_qi": 12,
+          "edge_points": -4.15,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 10.6,
       "base_draw_probability": 20.6,
       "base_away_probability": 68.8,
-      "calibrated_home_probability": 11.4,
-      "calibrated_draw_probability": 22.2,
-      "calibrated_away_probability": 66.4,
-      "total_goals_mean": 2.68,
+      "calibrated_home_probability": 11.5,
+      "calibrated_draw_probability": 23.7,
+      "calibrated_away_probability": 64.8,
+      "total_goals_mean": 2.58,
       "tempo_adjustment": 0.02,
-      "draw_lift_points": 1.7,
-      "favourite_compression_points": 3.1,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.07,
+      "break_open_risk": 0.02,
+      "draw_lift_points": 3.3,
+      "favourite_compression_points": 3.5,
+      "low_block_draw_risk_points": 1.4,
+      "goal_suppression_points": 0.07,
+      "break_open_risk_points": 0.02,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -18546,7 +20190,7 @@ window.embeddedDataset = [
         "current_odds": 1.82,
         "au_bookie": "Betfair",
         "devig_book_probability": 54.62,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T11:28:50.141Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -18561,7 +20205,7 @@ window.embeddedDataset = [
         "current_odds": 5,
         "au_bookie": "Betfair",
         "devig_book_probability": 19.88,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -18576,7 +20220,7 @@ window.embeddedDataset = [
         "current_odds": 3.9,
         "au_bookie": "Betfair",
         "devig_book_probability": 25.49,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -18584,48 +20228,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 48.4,
-      "over_fair_price": 2.07,
-      "under_probability": 51.6,
-      "under_fair_price": 1.94,
-      "total_goals_mean": 2.61,
+      "over_probability": 49.5,
+      "over_fair_price": 2.02,
+      "under_probability": 50.5,
+      "under_fair_price": 1.98,
+      "total_goals_mean": 2.65,
       "tempo_adjustment": 0.11,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Czech Republic 1-0 South Africa",
-        "probability": 12.9,
-        "fair_price": 7.74
+        "probability": 12.6,
+        "fair_price": 7.96
       },
       {
         "score": "Czech Republic 2-0 South Africa",
-        "probability": 11.3,
-        "fair_price": 8.84
+        "probability": 11.2,
+        "fair_price": 8.94
       },
       {
         "score": "Czech Republic 1-1 South Africa",
-        "probability": 11,
-        "fair_price": 9.05
+        "probability": 10.9,
+        "fair_price": 9.15
       },
       {
         "score": "Czech Republic 2-1 South Africa",
         "probability": 9.7,
-        "fair_price": 10.33
+        "fair_price": 10.27
       },
       {
         "score": "Czech Republic 0-0 South Africa",
-        "probability": 7.4,
-        "fair_price": 13.57
+        "probability": 7,
+        "fair_price": 14.19
       }
     ],
     "model_market_view": [
@@ -18668,246 +20314,246 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 47.5,
-        "fair_price": 2.1
+        "probability": 48.3,
+        "fair_price": 2.07
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 52.5,
-        "fair_price": 1.91
+        "probability": 51.7,
+        "fair_price": 1.94
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.7,
+        "probability": 49.8,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.3,
+        "probability": 50.2,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 92.6,
+        "probability": 93,
         "fair_price": 1.08
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7.4,
-        "fair_price": 13.57
+        "probability": 7,
+        "fair_price": 14.19
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 73.4,
-        "fair_price": 1.36
+        "probability": 74.3,
+        "fair_price": 1.35
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 26.6,
-        "fair_price": 3.76
+        "probability": 25.7,
+        "fair_price": 3.89
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 48.4,
-        "fair_price": 2.07
+        "probability": 49.5,
+        "fair_price": 2.02
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 51.6,
-        "fair_price": 1.94
+        "probability": 50.5,
+        "fair_price": 1.98
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 26.6,
-        "fair_price": 3.76
+        "probability": 27.6,
+        "fair_price": 3.63
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 73.4,
-        "fair_price": 1.36
+        "probability": 72.4,
+        "fair_price": 1.38
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 12.4,
-        "fair_price": 8.09
+        "probability": 13,
+        "fair_price": 7.68
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 87.6,
-        "fair_price": 1.14
+        "probability": 87,
+        "fair_price": 1.15
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Czech Republic Over 0.5 Goals",
-        "probability": 82.7,
-        "fair_price": 1.21
+        "probability": 83.2,
+        "fair_price": 1.2
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Czech Republic Under 0.5 Goals",
-        "probability": 17.3,
-        "fair_price": 5.77
+        "probability": 16.8,
+        "fair_price": 5.94
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Czech Republic Over 1.5 Goals",
-        "probability": 52.3,
-        "fair_price": 1.91
+        "probability": 53.2,
+        "fair_price": 1.88
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Czech Republic Under 1.5 Goals",
-        "probability": 47.7,
-        "fair_price": 2.1
+        "probability": 46.8,
+        "fair_price": 2.14
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Czech Republic Over 2.5 Goals",
-        "probability": 25.7,
-        "fair_price": 3.9
+        "probability": 26.5,
+        "fair_price": 3.78
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Czech Republic Under 2.5 Goals",
-        "probability": 74.3,
-        "fair_price": 1.35
+        "probability": 73.5,
+        "fair_price": 1.36
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Africa Over 0.5 Goals",
-        "probability": 57.5,
-        "fair_price": 1.74
+        "probability": 58.1,
+        "fair_price": 1.72
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Africa Under 0.5 Goals",
-        "probability": 42.5,
-        "fair_price": 2.35
+        "probability": 41.9,
+        "fair_price": 2.39
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Africa Over 1.5 Goals",
-        "probability": 21.1,
-        "fair_price": 4.73
+        "probability": 21.7,
+        "fair_price": 4.61
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Africa Under 1.5 Goals",
-        "probability": 78.9,
-        "fair_price": 1.27
+        "probability": 78.3,
+        "fair_price": 1.28
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Africa Over 2.5 Goals",
-        "probability": 5.6,
-        "fair_price": 17.93
+        "probability": 5.8,
+        "fair_price": 17.22
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Africa Under 2.5 Goals",
-        "probability": 94.4,
+        "probability": 94.2,
         "fair_price": 1.06
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Czech Republic 1H Win",
-        "probability": 42.3,
-        "fair_price": 2.37
+        "probability": 42.6,
+        "fair_price": 2.35
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 41.1,
-        "fair_price": 2.44
+        "probability": 40.6,
+        "fair_price": 2.46
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "South Africa 1H Win",
-        "probability": 16.7,
-        "fair_price": 5.99
+        "probability": 16.8,
+        "fair_price": 5.96
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 69.1,
-        "fair_price": 1.45
+        "probability": 69.7,
+        "fair_price": 1.43
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30.9,
-        "fair_price": 3.23
+        "probability": 30.3,
+        "fair_price": 3.3
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 32.8,
-        "fair_price": 3.05
+        "probability": 33.5,
+        "fair_price": 2.98
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 67.2,
-        "fair_price": 1.49
+        "probability": 66.5,
+        "fair_price": 1.5
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 17.4,
-        "fair_price": 5.74
+        "probability": 17.9,
+        "fair_price": 5.59
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 82.6,
-        "fair_price": 1.21
+        "probability": 82.1,
+        "fair_price": 1.22
       }
     ],
     "market_scan": {
@@ -18955,16 +20601,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 73.4,
-          "model_price": 1.36,
+          "model_probability": 74.3,
+          "model_price": 1.35,
           "current_odds": 1.34,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 69.82,
-          "ev": -1.47,
-          "qi": 49,
-          "price_qi": 40,
-          "edge_points": -1.1,
+          "ev": -0.74,
+          "qi": 50,
+          "price_qi": 44,
+          "edge_points": -0.55,
           "risk_rating": "Low"
         },
         {
@@ -19036,6 +20682,24 @@ window.embeddedDataset = [
           "price_qi": 43
         },
         {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 49.5,
+          "model_price": 2.02,
+          "current_odds": 2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 46.67,
+          "ev": -0.99,
+          "qi": 44,
+          "price_qi": 44,
+          "edge_points": -0.5,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Czech Republic to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -19073,7 +20737,7 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 92.6,
+          "model_probability": 93,
           "model_price": 1.08,
           "current_odds": 1.05,
           "au_bookie": "TAB",
@@ -19122,42 +20786,6 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 87.6,
-          "model_price": 1.14,
-          "current_odds": 1.08,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 86.63,
-          "ev": -5.26,
-          "qi": 40,
-          "price_qi": 14,
-          "edge_points": -4.87,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 73.4,
-          "model_price": 1.36,
-          "current_odds": 1.26,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 74.07,
-          "ev": -7.35,
-          "qi": 40,
-          "price_qi": 14,
-          "edge_points": -5.84,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Czech Republic or South Africa",
           "category": "Main Match",
           "market": "Double Chance",
@@ -19176,21 +20804,75 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Over 2.5 Goals",
+          "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 48.4,
-          "model_price": 2.07,
-          "current_odds": 2,
+          "model_probability": 87,
+          "model_price": 1.15,
+          "current_odds": 1.08,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 46.67,
+          "devig_book_probability": 86.63,
+          "ev": -6.09,
+          "qi": 39,
+          "price_qi": 11,
+          "edge_points": -5.64,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 72.4,
+          "model_price": 1.38,
+          "current_odds": 1.26,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 74.07,
+          "ev": -8.7,
+          "qi": 39,
+          "price_qi": 11,
+          "edge_points": -6.9,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 48.3,
+          "model_price": 2.07,
+          "current_odds": 2,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 46.24,
           "ev": -3.38,
           "qi": 38,
           "price_qi": 31,
           "edge_points": -1.69,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 48.3,
+          "model_price": 2.07,
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 48,
+          "ev": -5.8,
+          "qi": 36,
+          "price_qi": 23,
+          "edge_points": -2.97,
           "risk_rating": "Low"
         },
         {
@@ -19199,52 +20881,34 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 52.5,
-          "model_price": 1.91,
+          "model_probability": 51.7,
+          "model_price": 1.94,
           "current_odds": 1.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 52,
-          "ev": -5.76,
-          "qi": 37,
-          "price_qi": 23,
-          "edge_points": -3.2,
+          "ev": -7.22,
+          "qi": 36,
+          "price_qi": 19,
+          "edge_points": -4.01,
           "risk_rating": "Low"
         },
         {
-          "selection": "BTTS Yes",
+          "selection": "BTTS No",
           "category": "Main Match",
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 47.5,
-          "model_price": 2.1,
-          "current_odds": 2,
+          "model_probability": 51.7,
+          "model_price": 1.94,
+          "current_odds": 1.72,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 46.24,
-          "ev": -4.76,
-          "qi": 36,
-          "price_qi": 26,
-          "edge_points": -2.38,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 47.5,
-          "model_price": 2.1,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48,
-          "ev": -7.14,
+          "devig_book_probability": 53.76,
+          "ev": -11.34,
           "qi": 34,
-          "price_qi": 20,
-          "edge_points": -3.66,
+          "price_qi": 13,
+          "edge_points": -6.59,
           "risk_rating": "Low"
         },
         {
@@ -19253,34 +20917,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 51.6,
-          "model_price": 1.94,
+          "model_probability": 50.5,
+          "model_price": 1.98,
           "current_odds": 1.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 53.33,
-          "ev": -9.79,
-          "qi": 34,
-          "price_qi": 15,
-          "edge_points": -5.6,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 52.5,
-          "model_price": 1.91,
-          "current_odds": 1.72,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 53.76,
-          "ev": -9.95,
-          "qi": 34,
-          "price_qi": 14,
-          "edge_points": -5.78,
+          "ev": -11.62,
+          "qi": 33,
+          "price_qi": 12,
+          "edge_points": -6.64,
           "risk_rating": "Low"
         },
         {
@@ -19320,6 +20966,24 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
+          "selection": "Over 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 27.6,
+          "model_price": 3.63,
+          "current_odds": 3.6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 25.93,
+          "ev": -0.83,
+          "qi": 30,
+          "price_qi": 45,
+          "edge_points": -0.23,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -19336,22 +21000,20 @@ window.embeddedDataset = [
           "price_qi": 45
         },
         {
-          "selection": "Over 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 26.6,
-          "model_price": 3.76,
-          "current_odds": 3.6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 25.93,
-          "ev": -4.26,
-          "qi": 24,
-          "price_qi": 29,
-          "edge_points": -1.18,
-          "risk_rating": "Medium"
+          "selection": "Patrik Schick: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 40.5,
+          "model_price": 2.47,
+          "current_odds": 2.3,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -6.88,
+          "qi": 28,
+          "price_qi": 21,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -19418,24 +21080,6 @@ window.embeddedDataset = [
           "price_qi": 18
         },
         {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 26.6,
-          "model_price": 3.76,
-          "current_odds": 3.1,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 30.18,
-          "ev": -17.55,
-          "qi": 19,
-          "price_qi": 13,
-          "edge_points": -5.66,
-          "risk_rating": "Medium"
-        },
-        {
           "selection": "South Africa Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
@@ -19451,6 +21095,24 @@ window.embeddedDataset = [
           "qi": 18,
           "price_qi": 13,
           "edge_points": -5.37,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 25.7,
+          "model_price": 3.89,
+          "current_odds": 3.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 30.18,
+          "ev": -20.31,
+          "qi": 18,
+          "price_qi": 12,
+          "edge_points": -6.55,
           "risk_rating": "Medium"
         },
         {
@@ -19470,6 +21132,24 @@ window.embeddedDataset = [
           "price_qi": 24
         },
         {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 13,
+          "model_price": 7.68,
+          "current_odds": 7,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 13.37,
+          "ev": -8.85,
+          "qi": 14,
+          "price_qi": 22,
+          "edge_points": -1.26,
+          "risk_rating": "High"
+        },
+        {
           "selection": "South Africa to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -19484,24 +21164,6 @@ window.embeddedDataset = [
           "ev": -11.87,
           "qi": 13,
           "price_qi": 19
-        },
-        {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 12.4,
-          "model_price": 8.09,
-          "current_odds": 7,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 13.37,
-          "ev": -13.47,
-          "qi": 13,
-          "price_qi": 19,
-          "edge_points": -1.92,
-          "risk_rating": "High"
         },
         {
           "selection": "South Africa to Win",
@@ -19557,21 +21219,21 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 7.4,
-          "model_price": 13.57,
+          "model_probability": 7,
+          "model_price": 14.19,
           "current_odds": 8.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 10.99,
-          "ev": -37.36,
+          "ev": -40.1,
           "qi": 7,
           "price_qi": 11,
-          "edge_points": -4.4,
+          "edge_points": -4.72,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 55.9,
@@ -19580,11 +21242,16 @@ window.embeddedDataset = [
       "calibrated_home_probability": 55.9,
       "calibrated_draw_probability": 25.5,
       "calibrated_away_probability": 18.6,
-      "total_goals_mean": 2.61,
+      "total_goals_mean": 2.65,
       "tempo_adjustment": 0.11,
+      "goal_suppression": 0,
+      "break_open_risk": 0.04,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -19603,7 +21270,7 @@ window.embeddedDataset = [
         "current_odds": 6.8,
         "au_bookie": "Betfair",
         "devig_book_probability": 14.5,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -19618,7 +21285,7 @@ window.embeddedDataset = [
         "current_odds": 1.59,
         "au_bookie": "Betfair",
         "devig_book_probability": 62.02,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:33:19.845Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -19633,7 +21300,7 @@ window.embeddedDataset = [
         "current_odds": 4.2,
         "au_bookie": "Betfair",
         "devig_book_probability": 23.48,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T22:25:53.958Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -19642,48 +21309,50 @@ window.embeddedDataset = [
         "previous_odds": 4.3
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 42,
-      "over_fair_price": 2.38,
-      "under_probability": 58,
-      "under_fair_price": 1.72,
-      "total_goals_mean": 2.36,
+      "over_probability": 39.2,
+      "over_fair_price": 2.55,
+      "under_probability": 60.8,
+      "under_fair_price": 1.64,
+      "total_goals_mean": 2.26,
       "tempo_adjustment": -0.18,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.07,
+      "break_open_risk": 0,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Switzerland 1-0 Bosnia & Herzegovina",
-        "probability": 15.5,
-        "fair_price": 6.44
+        "probability": 16.4,
+        "fair_price": 6.11
       },
       {
         "score": "Switzerland 2-0 Bosnia & Herzegovina",
         "probability": 12.8,
-        "fair_price": 7.83
+        "fair_price": 7.84
       },
       {
         "score": "Switzerland 1-1 Bosnia & Herzegovina",
-        "probability": 11.1,
-        "fair_price": 9
+        "probability": 11.4,
+        "fair_price": 8.79
       },
       {
         "score": "Switzerland 0-0 Bosnia & Herzegovina",
-        "probability": 9.4,
-        "fair_price": 10.58
+        "probability": 10.5,
+        "fair_price": 9.54
       },
       {
         "score": "Switzerland 2-1 Bosnia & Herzegovina",
-        "probability": 9.1,
-        "fair_price": 10.95
+        "probability": 8.9,
+        "fair_price": 11.27
       }
     ],
     "model_market_view": [
@@ -19692,280 +21361,280 @@ window.embeddedDataset = [
         "market": "Double Chance",
         "selection": "Switzerland or Draw",
         "probability": 83.7,
-        "fair_price": 1.2
+        "fair_price": 1.19
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Bosnia & Herzegovina or Draw",
-        "probability": 40.8,
-        "fair_price": 2.45
+        "probability": 42,
+        "fair_price": 2.38
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Switzerland or Bosnia & Herzegovina",
-        "probability": 75.5,
-        "fair_price": 1.32
+        "probability": 74.2,
+        "fair_price": 1.35
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Switzerland Draw No Bet",
-        "probability": 78.4,
+        "probability": 78.1,
         "fair_price": 1.28
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Bosnia & Herzegovina Draw No Bet",
-        "probability": 21.6,
-        "fair_price": 4.62
+        "probability": 21.9,
+        "fair_price": 4.56
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 41.2,
-        "fair_price": 2.43
+        "probability": 39.6,
+        "fair_price": 2.53
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 58.8,
-        "fair_price": 1.7
+        "probability": 60.4,
+        "fair_price": 1.65
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.6,
+        "probability": 49.5,
         "fair_price": 2.02
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.4,
+        "probability": 50.5,
         "fair_price": 1.98
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 90.6,
-        "fair_price": 1.1
+        "probability": 89.5,
+        "fair_price": 1.12
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 9.4,
-        "fair_price": 10.58
+        "probability": 10.5,
+        "fair_price": 9.54
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 68.3,
-        "fair_price": 1.46
+        "probability": 65.9,
+        "fair_price": 1.52
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 31.7,
-        "fair_price": 3.15
+        "probability": 34.1,
+        "fair_price": 2.93
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 42,
-        "fair_price": 2.38
+        "probability": 39.2,
+        "fair_price": 2.55
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 58,
-        "fair_price": 1.72
+        "probability": 60.8,
+        "fair_price": 1.64
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 21.3,
-        "fair_price": 4.7
+        "probability": 19.2,
+        "fair_price": 5.22
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 78.7,
-        "fair_price": 1.27
+        "probability": 80.8,
+        "fair_price": 1.24
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 9.1,
-        "fair_price": 11.01
+        "probability": 7.9,
+        "fair_price": 12.73
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 90.9,
-        "fair_price": 1.1
+        "probability": 92.1,
+        "fair_price": 1.09
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Over 0.5 Goals",
-        "probability": 80.7,
-        "fair_price": 1.24
+        "probability": 79,
+        "fair_price": 1.27
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Under 0.5 Goals",
-        "probability": 19.3,
-        "fair_price": 5.18
+        "probability": 21,
+        "fair_price": 4.76
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Over 1.5 Goals",
-        "probability": 48.9,
-        "fair_price": 2.04
+        "probability": 46.2,
+        "fair_price": 2.16
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Under 1.5 Goals",
-        "probability": 51.1,
-        "fair_price": 1.96
+        "probability": 53.8,
+        "fair_price": 1.86
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Over 2.5 Goals",
-        "probability": 22.8,
-        "fair_price": 4.38
+        "probability": 20.6,
+        "fair_price": 4.85
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Switzerland Under 2.5 Goals",
-        "probability": 77.2,
-        "fair_price": 1.3
+        "probability": 79.4,
+        "fair_price": 1.26
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Over 0.5 Goals",
-        "probability": 51.1,
-        "fair_price": 1.96
+        "probability": 50.1,
+        "fair_price": 2
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Under 0.5 Goals",
-        "probability": 48.9,
-        "fair_price": 2.04
+        "probability": 49.9,
+        "fair_price": 2
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Over 1.5 Goals",
-        "probability": 16.1,
-        "fair_price": 6.21
+        "probability": 15.4,
+        "fair_price": 6.49
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Under 1.5 Goals",
-        "probability": 83.9,
-        "fair_price": 1.19
+        "probability": 84.6,
+        "fair_price": 1.18
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Over 2.5 Goals",
-        "probability": 3.6,
-        "fair_price": 27.82
+        "probability": 3.4,
+        "fair_price": 29.8
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Bosnia & Herzegovina Under 2.5 Goals",
-        "probability": 96.4,
-        "fair_price": 1.04
+        "probability": 96.6,
+        "fair_price": 1.03
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Switzerland 1H Win",
-        "probability": 42,
-        "fair_price": 2.38
+        "probability": 40.6,
+        "fair_price": 2.46
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 43.3,
-        "fair_price": 2.31
+        "probability": 44.7,
+        "fair_price": 2.24
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Bosnia & Herzegovina 1H Win",
-        "probability": 14.7,
-        "fair_price": 6.82
+        "probability": 14.8,
+        "fair_price": 6.78
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 65.4,
-        "fair_price": 1.53
+        "probability": 63.8,
+        "fair_price": 1.57
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 34.6,
-        "fair_price": 2.89
+        "probability": 36.2,
+        "fair_price": 2.76
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 28.7,
-        "fair_price": 3.49
+        "probability": 27,
+        "fair_price": 3.71
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 71.3,
-        "fair_price": 1.4
+        "probability": 73,
+        "fair_price": 1.37
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 14.4,
-        "fair_price": 6.95
+        "probability": 13.5,
+        "fair_price": 7.38
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 85.6,
-        "fair_price": 1.17
+        "probability": 86.5,
+        "fair_price": 1.16
       }
     ],
     "market_scan": {
@@ -19992,21 +21661,37 @@ window.embeddedDataset = [
       "matched_rows": 27,
       "rows": [
         {
+          "selection": "Edin Dzeko: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 31.9,
+          "model_price": 3.13,
+          "current_odds": 4.33,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 38.34,
+          "qi": 66,
+          "price_qi": 92,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
           "selection": "BTTS No",
           "category": "Main Match",
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 58.8,
-          "model_price": 1.7,
+          "model_probability": 60.4,
+          "model_price": 1.65,
           "current_odds": 1.72,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 54.97,
-          "ev": 1.18,
-          "qi": 54,
-          "price_qi": 57,
-          "edge_points": 0.68,
+          "ev": 4.24,
+          "qi": 64,
+          "price_qi": 72,
+          "edge_points": 2.47,
           "risk_rating": "Low"
         },
         {
@@ -20015,71 +21700,17 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 40.8,
-          "model_price": 2.45,
+          "model_probability": 42,
+          "model_price": 2.38,
           "current_odds": 2.52,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 18.68,
-          "ev": 2.86,
-          "qi": 46,
-          "price_qi": 65,
-          "edge_points": 1.13,
+          "ev": 5.88,
+          "qi": 53,
+          "price_qi": 75,
+          "edge_points": 2.33,
           "risk_rating": "Medium"
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 78.7,
-          "model_price": 1.27,
-          "current_odds": 1.22,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 76.63,
-          "ev": -3.94,
-          "qi": 44,
-          "price_qi": 25,
-          "edge_points": -3.23,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 90.6,
-          "model_price": 1.1,
-          "current_odds": 1.06,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 88.3,
-          "ev": -3.64,
-          "qi": 42,
-          "price_qi": 21,
-          "edge_points": -3.43,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 90.9,
-          "model_price": 1.1,
-          "current_odds": 1.06,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 88.3,
-          "ev": -3.64,
-          "qi": 42,
-          "price_qi": 21,
-          "edge_points": -3.43,
-          "risk_rating": "Low"
         },
         {
           "selection": "Under 2.5 Goals",
@@ -20087,34 +21718,34 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 58,
-          "model_price": 1.72,
+          "model_probability": 60.8,
+          "model_price": 1.64,
           "current_odds": 1.65,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 56.58,
-          "ev": -4.07,
-          "qi": 42,
-          "price_qi": 28,
-          "edge_points": -2.47,
+          "ev": 0.61,
+          "qi": 53,
+          "price_qi": 53,
+          "edge_points": 0.37,
           "risk_rating": "Low"
         },
         {
-          "selection": "Over 1.5 Goals",
+          "selection": "Under 3.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 68.3,
-          "model_price": 1.46,
-          "current_odds": 1.38,
+          "model_probability": 80.8,
+          "model_price": 1.24,
+          "current_odds": 1.22,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 67.76,
-          "ev": -5.48,
-          "qi": 42,
-          "price_qi": 21,
-          "edge_points": -3.97,
+          "devig_book_probability": 76.63,
+          "ev": -1.61,
+          "qi": 48,
+          "price_qi": 38,
+          "edge_points": -1.32,
           "risk_rating": "Low"
         },
         {
@@ -20123,16 +21754,34 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 58.8,
-          "model_price": 1.7,
+          "model_probability": 60.4,
+          "model_price": 1.65,
           "current_odds": 1.62,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 57.59,
-          "ev": -4.71,
-          "qi": 41,
-          "price_qi": 25,
-          "edge_points": -2.9,
+          "ev": -1.82,
+          "qi": 46,
+          "price_qi": 38,
+          "edge_points": -1.12,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 92.1,
+          "model_price": 1.09,
+          "current_odds": 1.06,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 88.3,
+          "ev": -2.75,
+          "qi": 44,
+          "price_qi": 26,
+          "edge_points": -2.6,
           "risk_rating": "Low"
         },
         {
@@ -20152,6 +21801,42 @@ window.embeddedDataset = [
           "price_qi": 21
         },
         {
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 89.5,
+          "model_price": 1.12,
+          "current_odds": 1.06,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 88.3,
+          "ev": -5.36,
+          "qi": 39,
+          "price_qi": 12,
+          "edge_points": -5.05,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Switzerland or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 83.7,
+          "model_price": 1.19,
+          "current_odds": 1.11,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 42.41,
+          "ev": -6.72,
+          "qi": 39,
+          "price_qi": 11,
+          "edge_points": -6.06,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Switzerland to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -20168,21 +21853,21 @@ window.embeddedDataset = [
           "price_qi": 18
         },
         {
-          "selection": "Switzerland or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
+          "selection": "Over 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 83.7,
-          "model_price": 1.2,
-          "current_odds": 1.11,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 42.41,
-          "ev": -7.5,
-          "qi": 38,
-          "price_qi": 9,
-          "edge_points": -6.76,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 65.9,
+          "model_price": 1.52,
+          "current_odds": 1.38,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 67.76,
+          "ev": -9.21,
+          "qi": 39,
+          "price_qi": 12,
+          "edge_points": -6.67,
           "risk_rating": "Low"
         },
         {
@@ -20223,7 +21908,7 @@ window.embeddedDataset = [
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 78.4,
+          "model_probability": 78.1,
           "model_price": 1.28,
           "current_odds": 1.16,
           "au_bookie": "TAB",
@@ -20252,6 +21937,24 @@ window.embeddedDataset = [
           "price_qi": 14
         },
         {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 34.1,
+          "model_price": 2.93,
+          "current_odds": 2.9,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 32.24,
+          "ev": -1.02,
+          "qi": 33,
+          "price_qi": 44,
+          "edge_points": -0.35,
+          "risk_rating": "Medium"
+        },
+        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -20273,16 +21976,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 42,
-          "model_price": 2.38,
+          "model_probability": 39.2,
+          "model_price": 2.55,
           "current_odds": 2.15,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 43.42,
-          "ev": -9.66,
-          "qi": 31,
-          "price_qi": 17,
-          "edge_points": -4.49,
+          "ev": -15.69,
+          "qi": 27,
+          "price_qi": 11,
+          "edge_points": -7.3,
           "risk_rating": "Low"
         },
         {
@@ -20291,16 +21994,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 41.2,
-          "model_price": 2.43,
+          "model_probability": 39.6,
+          "model_price": 2.53,
           "current_odds": 2.1,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 45.03,
-          "ev": -13.58,
-          "qi": 29,
-          "price_qi": 12,
-          "edge_points": -6.47,
+          "ev": -17,
+          "qi": 27,
+          "price_qi": 10,
+          "edge_points": -8.09,
           "risk_rating": "Low"
         },
         {
@@ -20309,35 +22012,33 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 41.2,
-          "model_price": 2.43,
+          "model_probability": 39.6,
+          "model_price": 2.53,
           "current_odds": 2.2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 42.41,
-          "ev": -9.47,
-          "qi": 27,
-          "price_qi": 17,
-          "edge_points": -4.3,
+          "ev": -13.04,
+          "qi": 24,
+          "price_qi": 13,
+          "edge_points": -5.93,
           "risk_rating": "Medium"
         },
         {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 31.7,
-          "model_price": 3.15,
-          "current_odds": 2.9,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 32.24,
-          "ev": -7.94,
-          "qi": 24,
-          "price_qi": 21,
-          "edge_points": -2.74,
-          "risk_rating": "Medium"
+          "selection": "Breel Embolo: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 36.6,
+          "model_price": 2.73,
+          "current_odds": 2.3,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -15.75,
+          "qi": 23,
+          "price_qi": 12,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Match to end in a Draw",
@@ -20409,16 +22110,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 21.3,
-          "model_price": 4.7,
+          "model_probability": 19.2,
+          "model_price": 5.22,
           "current_odds": 4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 23.37,
-          "ev": -14.89,
-          "qi": 13,
-          "price_qi": 16,
-          "edge_points": -3.72,
+          "ev": -23.37,
+          "qi": 11,
+          "price_qi": 12,
+          "edge_points": -5.84,
           "risk_rating": "High"
         },
         {
@@ -20427,16 +22128,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 9.4,
-          "model_price": 10.58,
+          "model_probability": 10.5,
+          "model_price": 9.54,
           "current_odds": 8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 11.7,
-          "ev": -24.39,
-          "qi": 8,
-          "price_qi": 15,
-          "edge_points": -3.05,
+          "ev": -16.14,
+          "qi": 9,
+          "price_qi": 18,
+          "edge_points": -2.02,
           "risk_rating": "Very high"
         },
         {
@@ -20445,34 +22146,39 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 9.1,
-          "model_price": 11.01,
+          "model_probability": 7.9,
+          "model_price": 12.73,
           "current_odds": 8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 11.7,
-          "ev": -27.34,
-          "qi": 8,
-          "price_qi": 14,
-          "edge_points": -3.42,
+          "ev": -37.16,
+          "qi": 7,
+          "price_qi": 11,
+          "edge_points": -4.64,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 59.2,
       "base_draw_probability": 24.5,
       "base_away_probability": 16.3,
-      "calibrated_home_probability": 59.2,
-      "calibrated_draw_probability": 24.5,
+      "calibrated_home_probability": 58,
+      "calibrated_draw_probability": 25.8,
       "calibrated_away_probability": 16.3,
-      "total_goals_mean": 2.36,
+      "total_goals_mean": 2.26,
       "tempo_adjustment": -0.18,
-      "draw_lift_points": 0,
+      "goal_suppression": 0.07,
+      "break_open_risk": 0,
+      "draw_lift_points": 1.4,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 1.4,
+      "goal_suppression_points": 0.07,
+      "break_open_risk_points": 0,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -20491,7 +22197,7 @@ window.embeddedDataset = [
         "current_odds": 1.31,
         "au_bookie": "Betfair",
         "devig_book_probability": 75.58,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -20506,7 +22212,7 @@ window.embeddedDataset = [
         "current_odds": 6,
         "au_bookie": "Betfair",
         "devig_book_probability": 16.5,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-14T23:15:58.963Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -20514,48 +22220,50 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight"
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 49.8,
-      "over_fair_price": 2.01,
-      "under_probability": 50.2,
-      "under_fair_price": 1.99,
-      "total_goals_mean": 2.66,
+      "over_probability": 44.8,
+      "over_fair_price": 2.23,
+      "under_probability": 55.2,
+      "under_fair_price": 1.81,
+      "total_goals_mean": 2.47,
       "tempo_adjustment": 0.04,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.14,
+      "break_open_risk": 0.04,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
-        "score": "Canada 2-0 Qatar",
-        "probability": 14.3,
-        "fair_price": 6.98
-      },
-      {
         "score": "Canada 1-0 Qatar",
-        "probability": 14.1,
-        "fair_price": 7.08
+        "probability": 15.6,
+        "fair_price": 6.4
       },
       {
-        "score": "Canada 3-0 Qatar",
-        "probability": 9.7,
-        "fair_price": 10.31
-      },
-      {
-        "score": "Canada 2-1 Qatar",
-        "probability": 9.1,
-        "fair_price": 10.98
+        "score": "Canada 2-0 Qatar",
+        "probability": 14.4,
+        "fair_price": 6.94
       },
       {
         "score": "Canada 1-1 Qatar",
+        "probability": 9.8,
+        "fair_price": 10.25
+      },
+      {
+        "score": "Canada 2-1 Qatar",
         "probability": 9,
-        "fair_price": 11.14
+        "fair_price": 11.12
+      },
+      {
+        "score": "Canada 3-0 Qatar",
+        "probability": 8.9,
+        "fair_price": 11.29
       }
     ],
     "model_market_view": [
@@ -20563,281 +22271,281 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Canada or Draw",
-        "probability": 90.3,
+        "probability": 90.2,
         "fair_price": 1.11
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Qatar or Draw",
-        "probability": 33.5,
-        "fair_price": 2.99
+        "probability": 36.5,
+        "fair_price": 2.74
       },
       {
         "category": "Main Match",
         "market": "Double Chance",
         "selection": "Canada or Qatar",
-        "probability": 76.2,
-        "fair_price": 1.31
+        "probability": 73.3,
+        "fair_price": 1.36
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Canada Draw No Bet",
-        "probability": 87.3,
+        "probability": 86.6,
         "fair_price": 1.15
       },
       {
         "category": "Main Match",
         "market": "Draw No Bet",
         "selection": "Qatar Draw No Bet",
-        "probability": 12.7,
-        "fair_price": 7.88
+        "probability": 13.4,
+        "fair_price": 7.49
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 40.8,
-        "fair_price": 2.45
+        "probability": 39.1,
+        "fair_price": 2.56
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 59.2,
-        "fair_price": 1.69
+        "probability": 60.9,
+        "fair_price": 1.64
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Odd Goals",
-        "probability": 49.8,
+        "probability": 49.6,
         "fair_price": 2.01
       },
       {
         "category": "Main Match",
         "market": "Odd / Even Goals",
         "selection": "Even Goals",
-        "probability": 50.2,
+        "probability": 50.4,
         "fair_price": 1.99
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93,
-        "fair_price": 1.07
+        "probability": 91.5,
+        "fair_price": 1.09
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 7,
-        "fair_price": 14.36
+        "probability": 8.5,
+        "fair_price": 11.81
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 74.5,
-        "fair_price": 1.34
+        "probability": 70.6,
+        "fair_price": 1.42
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25.5,
-        "fair_price": 3.92
+        "probability": 29.4,
+        "fair_price": 3.41
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 49.8,
-        "fair_price": 2.01
+        "probability": 44.8,
+        "fair_price": 2.23
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 50.2,
-        "fair_price": 1.99
+        "probability": 55.2,
+        "fair_price": 1.81
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 27.8,
-        "fair_price": 3.6
+        "probability": 23.6,
+        "fair_price": 4.24
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 72.2,
-        "fair_price": 1.39
+        "probability": 76.4,
+        "fair_price": 1.31
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13.2,
-        "fair_price": 7.58
+        "probability": 10.5,
+        "fair_price": 9.55
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 86.8,
-        "fair_price": 1.15
+        "probability": 89.5,
+        "fair_price": 1.12
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Over 0.5 Goals",
-        "probability": 86.9,
-        "fair_price": 1.15
+        "probability": 84.2,
+        "fair_price": 1.19
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Under 0.5 Goals",
-        "probability": 13.1,
-        "fair_price": 7.61
+        "probability": 15.8,
+        "fair_price": 6.33
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Over 1.5 Goals",
-        "probability": 60.2,
-        "fair_price": 1.66
+        "probability": 55,
+        "fair_price": 1.82
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Under 1.5 Goals",
-        "probability": 39.8,
-        "fair_price": 2.51
+        "probability": 45,
+        "fair_price": 2.22
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Over 2.5 Goals",
-        "probability": 33.1,
-        "fair_price": 3.02
+        "probability": 28.1,
+        "fair_price": 3.55
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Canada Under 2.5 Goals",
-        "probability": 66.9,
-        "fair_price": 1.5
+        "probability": 71.9,
+        "fair_price": 1.39
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Over 0.5 Goals",
-        "probability": 47,
-        "fair_price": 2.13
+        "probability": 46.4,
+        "fair_price": 2.15
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Under 0.5 Goals",
-        "probability": 53,
-        "fair_price": 1.89
+        "probability": 53.6,
+        "fair_price": 1.87
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Over 1.5 Goals",
-        "probability": 13.4,
-        "fair_price": 7.48
+        "probability": 13,
+        "fair_price": 7.69
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Under 1.5 Goals",
-        "probability": 86.6,
+        "probability": 87,
         "fair_price": 1.15
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Over 2.5 Goals",
-        "probability": 2.7,
-        "fair_price": 37.39
+        "probability": 2.6,
+        "fair_price": 39.05
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Qatar Under 2.5 Goals",
-        "probability": 97.3,
+        "probability": 97.4,
         "fair_price": 1.03
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Canada 1H Win",
-        "probability": 50.2,
-        "fair_price": 1.99
+        "probability": 47,
+        "fair_price": 2.13
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 38.5,
-        "fair_price": 2.59
+        "probability": 41.1,
+        "fair_price": 2.44
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Qatar 1H Win",
-        "probability": 11.3,
-        "fair_price": 8.87
+        "probability": 11.9,
+        "fair_price": 8.39
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 69.9,
-        "fair_price": 1.43
+        "probability": 67.1,
+        "fair_price": 1.49
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 30.1,
-        "fair_price": 3.32
+        "probability": 32.9,
+        "fair_price": 3.04
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 33.7,
-        "fair_price": 2.97
+        "probability": 30.5,
+        "fair_price": 3.28
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 66.3,
-        "fair_price": 1.51
+        "probability": 69.5,
+        "fair_price": 1.44
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 14.9,
-        "fair_price": 6.72
+        "probability": 13.8,
+        "fair_price": 7.24
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 85.1,
-        "fair_price": 1.17
+        "probability": 86.2,
+        "fair_price": 1.16
       }
     ],
     "market_scan": {
@@ -20869,34 +22577,16 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 33.5,
-          "model_price": 2.99,
+          "model_probability": 36.5,
+          "model_price": 2.74,
           "current_odds": 3.9,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 12.14,
-          "ev": 30.43,
-          "qi": 68,
-          "price_qi": 90,
-          "edge_points": 7.8,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Qatar or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 33.5,
-          "model_price": 2.99,
-          "current_odds": 3.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 13.64,
-          "ev": 17.06,
-          "qi": 59,
-          "price_qi": 85,
-          "edge_points": 4.87,
+          "ev": 42.34,
+          "qi": 79,
+          "price_qi": 94,
+          "edge_points": 10.86,
           "risk_rating": "Medium"
         },
         {
@@ -20905,34 +22595,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 72.2,
-          "model_price": 1.39,
+          "model_probability": 76.4,
+          "model_price": 1.31,
           "current_odds": 1.4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 66.67,
-          "ev": 0.72,
-          "qi": 55,
-          "price_qi": 54,
-          "edge_points": 0.51,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 86.8,
-          "model_price": 1.15,
-          "current_odds": 1.15,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 81.3,
-          "ev": 0,
-          "qi": 52,
-          "price_qi": 49,
-          "edge_points": 0,
+          "ev": 6.87,
+          "qi": 76,
+          "price_qi": 82,
+          "edge_points": 4.91,
           "risk_rating": "Low"
         },
         {
@@ -20941,34 +22613,106 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 50.2,
-          "model_price": 1.99,
+          "model_probability": 55.2,
+          "model_price": 1.81,
           "current_odds": 2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 46.67,
-          "ev": 0.5,
-          "qi": 48,
-          "price_qi": 53,
-          "edge_points": 0.25,
+          "ev": 10.5,
+          "qi": 73,
+          "price_qi": 84,
+          "edge_points": 5.25,
           "risk_rating": "Low"
         },
         {
-          "selection": "Over 0.5 Goals",
+          "selection": "Qatar or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 36.5,
+          "model_price": 2.74,
+          "current_odds": 3.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 13.64,
+          "ev": 27.74,
+          "qi": 70,
+          "price_qi": 90,
+          "edge_points": 7.92,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 93,
-          "model_price": 1.07,
-          "current_odds": 1.04,
+          "model_probability": 89.5,
+          "model_price": 1.12,
+          "current_odds": 1.15,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 89.64,
-          "ev": -2.8,
+          "devig_book_probability": 81.3,
+          "ev": 2.68,
+          "qi": 65,
+          "price_qi": 69,
+          "edge_points": 2.33,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 29.4,
+          "model_price": 3.41,
+          "current_odds": 3.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 24.6,
+          "ev": 11.44,
+          "qi": 51,
+          "price_qi": 81,
+          "edge_points": 3.01,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 60.9,
+          "model_price": 1.64,
+          "current_odds": 1.58,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 59.28,
+          "ev": -3.66,
           "qi": 43,
-          "price_qi": 24,
-          "edge_points": -2.7,
+          "price_qi": 29,
+          "edge_points": -2.32,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 60.9,
+          "model_price": 1.64,
+          "current_odds": 1.57,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 59.43,
+          "ev": -4.27,
+          "qi": 43,
+          "price_qi": 27,
+          "edge_points": -2.72,
           "risk_rating": "Low"
         },
         {
@@ -21036,6 +22780,24 @@ window.embeddedDataset = [
           "price_qi": 16
         },
         {
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 91.5,
+          "model_price": 1.09,
+          "current_odds": 1.04,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 89.64,
+          "ev": -4.59,
+          "qi": 40,
+          "price_qi": 13,
+          "edge_points": -4.41,
+          "risk_rating": "Low"
+        },
+        {
           "selection": "Canada to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -21050,60 +22812,6 @@ window.embeddedDataset = [
           "ev": -7.25,
           "qi": 40,
           "price_qi": 15
-        },
-        {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 74.5,
-          "model_price": 1.34,
-          "current_odds": 1.24,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 75.4,
-          "ev": -7.46,
-          "qi": 40,
-          "price_qi": 13,
-          "edge_points": -6.02,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 59.2,
-          "model_price": 1.69,
-          "current_odds": 1.58,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 59.28,
-          "ev": -6.51,
-          "qi": 39,
-          "price_qi": 20,
-          "edge_points": -4.12,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 59.2,
-          "model_price": 1.69,
-          "current_odds": 1.57,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 59.43,
-          "ev": -7.1,
-          "qi": 39,
-          "price_qi": 18,
-          "edge_points": -4.52,
-          "risk_rating": "Low"
         },
         {
           "selection": "Canada to Win",
@@ -21122,12 +22830,30 @@ window.embeddedDataset = [
           "price_qi": 10
         },
         {
+          "selection": "Qatar Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 13.4,
+          "model_price": 7.49,
+          "current_odds": 9,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 10.45,
+          "ev": 20.16,
+          "qi": 37,
+          "price_qi": 82,
+          "edge_points": 2.24,
+          "risk_rating": "Very high"
+        },
+        {
           "selection": "Canada or Draw",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 90.3,
+          "model_probability": 90.2,
           "model_price": 1.11,
           "current_odds": 1.04,
           "au_bookie": "TAB",
@@ -21140,21 +22866,21 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Canada or Qatar",
-          "category": "Main Match",
-          "market": "Double Chance",
+          "selection": "Over 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 76.2,
-          "model_price": 1.31,
-          "current_odds": 1.18,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 70.6,
+          "model_price": 1.42,
+          "current_odds": 1.24,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 40.46,
-          "ev": -9.92,
+          "devig_book_probability": 75.4,
+          "ev": -12.68,
           "qi": 37,
-          "price_qi": 7,
-          "edge_points": -8.41,
+          "price_qi": 6,
+          "edge_points": -10.22,
           "risk_rating": "Low"
         },
         {
@@ -21163,7 +22889,7 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 90.3,
+          "model_probability": 90.2,
           "model_price": 1.11,
           "current_odds": 1.03,
           "au_bookie": "SportsBet",
@@ -21181,7 +22907,7 @@ window.embeddedDataset = [
           "market": "Draw No Bet",
           "source": "Model",
           "oddsapi_market": "draw_no_bet",
-          "model_probability": 87.3,
+          "model_probability": 86.6,
           "model_price": 1.15,
           "current_odds": 1.05,
           "au_bookie": "TAB",
@@ -21199,35 +22925,35 @@ window.embeddedDataset = [
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 76.2,
-          "model_price": 1.31,
+          "model_probability": 73.3,
+          "model_price": 1.36,
+          "current_odds": 1.18,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 40.46,
+          "ev": -13.24,
+          "qi": 36,
+          "price_qi": 4,
+          "edge_points": -11.22,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Canada or Qatar",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 73.3,
+          "model_price": 1.36,
           "current_odds": 1.13,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 41.9,
-          "ev": -13.74,
-          "qi": 36,
-          "price_qi": 2,
-          "edge_points": -12.16,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Qatar Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 12.7,
-          "model_price": 7.88,
-          "current_odds": 9,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 10.45,
-          "ev": 14.21,
+          "ev": -16.91,
           "qi": 35,
-          "price_qi": 80,
-          "edge_points": 1.58,
-          "risk_rating": "Very high"
+          "price_qi": 1,
+          "edge_points": -14.97,
+          "risk_rating": "Low"
         },
         {
           "selection": "Match to end in a Draw",
@@ -21262,24 +22988,6 @@ window.embeddedDataset = [
           "price_qi": 70
         },
         {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 49.8,
-          "model_price": 2.01,
-          "current_odds": 1.75,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 53.33,
-          "ev": -12.94,
-          "qi": 32,
-          "price_qi": 11,
-          "edge_points": -7.39,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -21296,57 +23004,73 @@ window.embeddedDataset = [
           "price_qi": 64
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 40.8,
-          "model_price": 2.45,
-          "current_odds": 2.3,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 40.57,
-          "ev": -6.12,
-          "qi": 29,
-          "price_qi": 23,
-          "edge_points": -2.66,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 40.8,
-          "model_price": 2.45,
-          "current_odds": 2.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 40.72,
-          "ev": -6.12,
-          "qi": 29,
-          "price_qi": 23,
-          "edge_points": -2.66,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Under 1.5 Goals",
+          "selection": "Over 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 25.5,
-          "model_price": 3.92,
-          "current_odds": 3.8,
+          "model_probability": 44.8,
+          "model_price": 2.23,
+          "current_odds": 1.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 24.6,
-          "ev": -3.06,
+          "devig_book_probability": 53.33,
+          "ev": -21.52,
+          "qi": 28,
+          "price_qi": 5,
+          "edge_points": -12.3,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Jonathan David: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 39.7,
+          "model_price": 2.52,
+          "current_odds": 2.1,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": -16.67,
+          "qi": 27,
+          "price_qi": 10,
+          "checked_at": "2026-06-15T23:48:05.426Z"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 39.1,
+          "model_price": 2.56,
+          "current_odds": 2.3,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 40.57,
+          "ev": -10.16,
           "qi": 26,
-          "price_qi": 34,
-          "edge_points": -0.81,
+          "price_qi": 17,
+          "edge_points": -4.42,
+          "risk_rating": "Medium"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 39.1,
+          "model_price": 2.56,
+          "current_odds": 2.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 40.72,
+          "ev": -10.16,
+          "qi": 26,
+          "price_qi": 17,
+          "edge_points": -4.42,
           "risk_rating": "Medium"
         },
         {
@@ -21355,16 +23079,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 27.8,
-          "model_price": 3.6,
+          "model_probability": 23.6,
+          "model_price": 4.24,
           "current_odds": 2.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 33.33,
-          "ev": -22.22,
-          "qi": 18,
-          "price_qi": 10,
-          "edge_points": -7.94,
+          "ev": -33.96,
+          "qi": 15,
+          "price_qi": 6,
+          "edge_points": -12.13,
           "risk_rating": "Medium"
         },
         {
@@ -21389,16 +23113,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 13.2,
-          "model_price": 7.58,
+          "model_probability": 10.5,
+          "model_price": 9.55,
           "current_odds": 5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 18.7,
-          "ev": -34.04,
-          "qi": 10,
-          "price_qi": 10,
-          "edge_points": -6.81,
+          "ev": -47.64,
+          "qi": 9,
+          "price_qi": 6,
+          "edge_points": -9.53,
           "risk_rating": "High"
         },
         {
@@ -21407,34 +23131,39 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 7,
-          "model_price": 14.36,
+          "model_probability": 8.5,
+          "model_price": 11.81,
           "current_odds": 9,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 10.36,
-          "ev": -37.33,
-          "qi": 7,
-          "price_qi": 11,
-          "edge_points": -4.15,
+          "ev": -23.79,
+          "qi": 8,
+          "price_qi": 15,
+          "edge_points": -2.64,
           "risk_rating": "Very high"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 72.5,
       "base_draw_probability": 19,
       "base_away_probability": 8.5,
-      "calibrated_home_probability": 66.5,
-      "calibrated_draw_probability": 23.8,
-      "calibrated_away_probability": 9.7,
-      "total_goals_mean": 2.66,
+      "calibrated_home_probability": 63.5,
+      "calibrated_draw_probability": 26.7,
+      "calibrated_away_probability": 9.8,
+      "total_goals_mean": 2.47,
       "tempo_adjustment": 0.04,
-      "draw_lift_points": 5.1,
-      "favourite_compression_points": 4.7,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0.14,
+      "break_open_risk": 0.04,
+      "draw_lift_points": 8.3,
+      "favourite_compression_points": 5.4,
+      "low_block_draw_risk_points": 2.8,
+      "goal_suppression_points": 0.14,
+      "break_open_risk_points": 0.04,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   },
   {
@@ -21453,7 +23182,7 @@ window.embeddedDataset = [
         "current_odds": 2.06,
         "au_bookie": "Betfair",
         "devig_book_probability": 48.1,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T23:15:47.185Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -21468,7 +23197,7 @@ window.embeddedDataset = [
         "current_odds": 4.2,
         "au_bookie": "Betfair",
         "devig_book_probability": 23.59,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T16:28:58.581Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -21483,7 +23212,7 @@ window.embeddedDataset = [
         "current_odds": 3.5,
         "au_bookie": "Betfair",
         "devig_book_probability": 28.31,
-        "odds_checked_at": "2026-06-15T23:34:26.172Z",
+        "odds_checked_at": "2026-06-15T23:47:47.164Z",
         "odds_updated_at": "2026-06-15T20:03:51.991Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -21492,48 +23221,50 @@ window.embeddedDataset = [
         "previous_odds": 3.55
       }
     ],
-    "referee_last_checked": "2026-06-15T23:34:26.172Z",
+    "referee_last_checked": "2026-06-15T23:47:47.164Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-15T23:34:26.172Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-15T23:47:47.164Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d.",
     "model_totals_25": {
       "line": 2.5,
-      "over_probability": 50.4,
-      "over_fair_price": 1.98,
-      "under_probability": 49.6,
-      "under_fair_price": 2.02,
-      "total_goals_mean": 2.69,
+      "over_probability": 53.7,
+      "over_fair_price": 1.86,
+      "under_probability": 46.3,
+      "under_fair_price": 2.16,
+      "total_goals_mean": 2.83,
       "tempo_adjustment": 0.32,
-      "calibration_note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "goal_suppression": 0,
+      "break_open_risk": 0.14,
+      "calibration_note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "exact_score_model": [
       {
         "score": "Mexico 1-1 South Korea",
-        "probability": 11.7,
-        "fair_price": 8.55
+        "probability": 11.3,
+        "fair_price": 8.88
       },
       {
         "score": "Mexico 1-0 South Korea",
-        "probability": 11.1,
-        "fair_price": 8.99
+        "probability": 10.2,
+        "fair_price": 9.8
       },
       {
         "score": "Mexico 2-1 South Korea",
-        "probability": 9.6,
-        "fair_price": 10.43
+        "probability": 9.7,
+        "fair_price": 10.31
       },
       {
         "score": "Mexico 2-0 South Korea",
-        "probability": 9.1,
-        "fair_price": 10.96
+        "probability": 8.8,
+        "fair_price": 11.38
       },
       {
         "score": "Mexico 0-1 South Korea",
-        "probability": 7.1,
-        "fair_price": 14.03
+        "probability": 6.5,
+        "fair_price": 15.29
       }
     ],
     "model_market_view": [
@@ -21576,15 +23307,15 @@ window.embeddedDataset = [
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS Yes",
-        "probability": 52.4,
-        "fair_price": 1.91
+        "probability": 54.9,
+        "fair_price": 1.82
       },
       {
         "category": "Main Match",
         "market": "Both Teams To Score",
         "selection": "BTTS No",
-        "probability": 47.6,
-        "fair_price": 2.1
+        "probability": 45.1,
+        "fair_price": 2.22
       },
       {
         "category": "Main Match",
@@ -21604,218 +23335,218 @@ window.embeddedDataset = [
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 0.5 Goals",
-        "probability": 93.2,
-        "fair_price": 1.07
+        "probability": 94.1,
+        "fair_price": 1.06
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 0.5 Goals",
-        "probability": 6.8,
-        "fair_price": 14.74
+        "probability": 5.9,
+        "fair_price": 16.87
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 1.5 Goals",
-        "probability": 75,
-        "fair_price": 1.33
+        "probability": 77.3,
+        "fair_price": 1.29
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 1.5 Goals",
-        "probability": 25,
-        "fair_price": 3.99
+        "probability": 22.7,
+        "fair_price": 4.41
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 2.5 Goals",
-        "probability": 50.4,
-        "fair_price": 1.98
+        "probability": 53.7,
+        "fair_price": 1.86
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 2.5 Goals",
-        "probability": 49.6,
-        "fair_price": 2.02
+        "probability": 46.3,
+        "fair_price": 2.16
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 3.5 Goals",
-        "probability": 28.4,
-        "fair_price": 3.52
+        "probability": 31.4,
+        "fair_price": 3.19
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 3.5 Goals",
-        "probability": 71.6,
-        "fair_price": 1.4
+        "probability": 68.6,
+        "fair_price": 1.46
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Over 4.5 Goals",
-        "probability": 13.6,
-        "fair_price": 7.37
+        "probability": 15.6,
+        "fair_price": 6.4
       },
       {
         "category": "Goal Totals",
         "market": "Alternate Totals",
         "selection": "Under 4.5 Goals",
-        "probability": 86.4,
-        "fair_price": 1.16
+        "probability": 84.4,
+        "fair_price": 1.19
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Mexico Over 0.5 Goals",
-        "probability": 80.6,
-        "fair_price": 1.24
+        "probability": 82.1,
+        "fair_price": 1.22
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Mexico Under 0.5 Goals",
-        "probability": 19.4,
-        "fair_price": 5.15
+        "probability": 17.9,
+        "fair_price": 5.6
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Mexico Over 1.5 Goals",
-        "probability": 48.8,
-        "fair_price": 2.05
-      },
-      {
-        "category": "Team Totals",
-        "market": "Team Totals",
-        "selection": "Mexico Under 1.5 Goals",
-        "probability": 51.2,
+        "probability": 51.4,
         "fair_price": 1.95
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
+        "selection": "Mexico Under 1.5 Goals",
+        "probability": 48.6,
+        "fair_price": 2.06
+      },
+      {
+        "category": "Team Totals",
+        "market": "Team Totals",
         "selection": "Mexico Over 2.5 Goals",
-        "probability": 22.7,
-        "fair_price": 4.41
+        "probability": 24.9,
+        "fair_price": 4.02
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "Mexico Under 2.5 Goals",
-        "probability": 77.3,
-        "fair_price": 1.29
+        "probability": 75.1,
+        "fair_price": 1.33
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Korea Over 0.5 Goals",
-        "probability": 65,
-        "fair_price": 1.54
+        "probability": 66.8,
+        "fair_price": 1.5
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Korea Under 0.5 Goals",
-        "probability": 35,
-        "fair_price": 2.86
+        "probability": 33.2,
+        "fair_price": 3.01
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Korea Over 1.5 Goals",
-        "probability": 28.3,
-        "fair_price": 3.54
+        "probability": 30.2,
+        "fair_price": 3.31
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Korea Under 1.5 Goals",
-        "probability": 71.7,
-        "fair_price": 1.39
+        "probability": 69.8,
+        "fair_price": 1.43
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Korea Over 2.5 Goals",
-        "probability": 9,
-        "fair_price": 11.13
+        "probability": 10,
+        "fair_price": 9.97
       },
       {
         "category": "Team Totals",
         "market": "Team Totals",
         "selection": "South Korea Under 2.5 Goals",
-        "probability": 91,
-        "fair_price": 1.1
+        "probability": 90,
+        "fair_price": 1.11
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "Mexico 1H Win",
-        "probability": 37.8,
-        "fair_price": 2.65
+        "probability": 38.7,
+        "fair_price": 2.59
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "1H Draw",
-        "probability": 41.1,
-        "fair_price": 2.43
+        "probability": 39.9,
+        "fair_price": 2.51
       },
       {
         "category": "First Half",
         "market": "First Half Result",
         "selection": "South Korea 1H Win",
-        "probability": 21.1,
-        "fair_price": 4.74
+        "probability": 21.4,
+        "fair_price": 4.67
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 0.5 Goals",
-        "probability": 70.2,
-        "fair_price": 1.42
+        "probability": 72,
+        "fair_price": 1.39
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 0.5 Goals",
-        "probability": 29.8,
-        "fair_price": 3.36
+        "probability": 28,
+        "fair_price": 3.57
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Over 1.5 Goals",
-        "probability": 34.1,
-        "fair_price": 2.93
+        "probability": 36.3,
+        "fair_price": 2.75
       },
       {
         "category": "First Half",
         "market": "First Half Totals",
         "selection": "1H Under 1.5 Goals",
-        "probability": 65.9,
-        "fair_price": 1.52
+        "probability": 63.7,
+        "fair_price": 1.57
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS Yes",
-        "probability": 19.7,
-        "fair_price": 5.09
+        "probability": 21.1,
+        "fair_price": 4.74
       },
       {
         "category": "First Half",
         "market": "First Half BTTS",
         "selection": "1H BTTS No",
-        "probability": 80.3,
-        "fair_price": 1.24
+        "probability": 78.9,
+        "fair_price": 1.27
       }
     ],
     "market_scan": {
@@ -21842,57 +23573,39 @@ window.embeddedDataset = [
       "matched_rows": 37,
       "rows": [
         {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 75,
-          "model_price": 1.33,
-          "current_odds": 1.44,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 65.22,
-          "ev": 8.27,
-          "qi": 79,
-          "price_qi": 85,
-          "edge_points": 5.74,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Over 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 50.4,
-          "model_price": 1.98,
+          "model_probability": 53.7,
+          "model_price": 1.86,
           "current_odds": 2.35,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 39.74,
-          "ev": 18.69,
-          "qi": 76,
-          "price_qi": 89,
-          "edge_points": 7.95,
+          "ev": 26.34,
+          "qi": 87,
+          "price_qi": 93,
+          "edge_points": 11.21,
           "risk_rating": "Medium"
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
+          "selection": "Over 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 52.4,
-          "model_price": 1.91,
-          "current_odds": 2.05,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 77.3,
+          "model_price": 1.29,
+          "current_odds": 1.44,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 45.62,
-          "ev": 7.33,
-          "qi": 66,
-          "price_qi": 79,
-          "edge_points": 3.58,
+          "devig_book_probability": 65.22,
+          "ev": 11.63,
+          "qi": 87,
+          "price_qi": 90,
+          "edge_points": 8.07,
           "risk_rating": "Low"
         },
         {
@@ -21901,16 +23614,34 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 52.4,
-          "model_price": 1.91,
+          "model_probability": 54.9,
+          "model_price": 1.82,
+          "current_odds": 2.05,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 45.62,
+          "ev": 12.64,
+          "qi": 76,
+          "price_qi": 86,
+          "edge_points": 6.16,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 54.9,
+          "model_price": 1.82,
           "current_odds": 2,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 46.24,
-          "ev": 4.71,
-          "qi": 61,
-          "price_qi": 73,
-          "edge_points": 2.36,
+          "ev": 9.89,
+          "qi": 72,
+          "price_qi": 83,
+          "edge_points": 4.95,
           "risk_rating": "Low"
         },
         {
@@ -21919,17 +23650,33 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 28.4,
-          "model_price": 3.52,
+          "model_probability": 31.4,
+          "model_price": 3.19,
           "current_odds": 4.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 20.77,
-          "ev": 27.84,
-          "qi": 57,
-          "price_qi": 88,
-          "edge_points": 6.19,
+          "ev": 41.07,
+          "qi": 67,
+          "price_qi": 93,
+          "edge_points": 9.13,
           "risk_rating": "High"
+        },
+        {
+          "selection": "Santiago Gimenez: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "Sportsbet direct site",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 37.8,
+          "model_price": 2.65,
+          "current_odds": 3.1,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 16.98,
+          "qi": 63,
+          "price_qi": 86,
+          "checked_at": "2026-06-15T23:48:05.426Z"
         },
         {
           "selection": "Over 0.5 Goals",
@@ -21937,17 +23684,35 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 93.2,
-          "model_price": 1.07,
+          "model_probability": 94.1,
+          "model_price": 1.06,
           "current_odds": 1.08,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 86.63,
-          "ev": 0.93,
-          "qi": 57,
-          "price_qi": 57,
-          "edge_points": 0.87,
+          "ev": 1.89,
+          "qi": 62,
+          "price_qi": 65,
+          "edge_points": 1.75,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 15.6,
+          "model_price": 6.4,
+          "current_odds": 9,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 10.36,
+          "ev": 40.63,
+          "qi": 45,
+          "price_qi": 89,
+          "edge_points": 4.51,
+          "risk_rating": "Very high"
         },
         {
           "selection": "Mexico or Draw",
@@ -22074,24 +23839,6 @@ window.embeddedDataset = [
           "risk_rating": "Low"
         },
         {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 13.6,
-          "model_price": 7.37,
-          "current_odds": 9,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 10.36,
-          "ev": 22.12,
-          "qi": 38,
-          "price_qi": 83,
-          "edge_points": 2.46,
-          "risk_rating": "Very high"
-        },
-        {
           "selection": "South Korea or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -22158,39 +23905,39 @@ window.embeddedDataset = [
           "price_qi": 25
         },
         {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 71.6,
-          "model_price": 1.4,
-          "current_odds": 1.18,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 79.23,
-          "ev": -15.71,
-          "qi": 36,
-          "price_qi": 2,
-          "edge_points": -13.32,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 86.4,
-          "model_price": 1.16,
+          "model_probability": 84.4,
+          "model_price": 1.19,
           "current_odds": 1.04,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 89.64,
-          "ev": -10.34,
+          "ev": -12.61,
           "qi": 35,
           "price_qi": 1,
-          "edge_points": -9.95,
+          "edge_points": -12.12,
+          "risk_rating": "Low"
+        },
+        {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 68.6,
+          "model_price": 1.46,
+          "current_odds": 1.18,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 79.23,
+          "ev": -19.18,
+          "qi": 35,
+          "price_qi": 1,
+          "edge_points": -16.25,
           "risk_rating": "Low"
         },
         {
@@ -22231,16 +23978,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 47.6,
-          "model_price": 2.1,
+          "model_probability": 45.1,
+          "model_price": 2.22,
           "current_odds": 1.72,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 53.76,
-          "ev": -18.1,
-          "qi": 30,
-          "price_qi": 7,
-          "edge_points": -10.52,
+          "ev": -22.52,
+          "qi": 28,
+          "price_qi": 5,
+          "edge_points": -13.09,
           "risk_rating": "Low"
         },
         {
@@ -22249,16 +23996,16 @@ window.embeddedDataset = [
           "market": "Both Teams To Score",
           "source": "Model",
           "oddsapi_market": "btts",
-          "model_probability": 47.6,
-          "model_price": 2.1,
+          "model_probability": 45.1,
+          "model_price": 2.22,
           "current_odds": 1.72,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 54.38,
-          "ev": -18.1,
-          "qi": 30,
-          "price_qi": 7,
-          "edge_points": -10.52,
+          "ev": -22.52,
+          "qi": 28,
+          "price_qi": 5,
+          "edge_points": -13.09,
           "risk_rating": "Low"
         },
         {
@@ -22267,16 +24014,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 49.6,
-          "model_price": 2.02,
+          "model_probability": 46.3,
+          "model_price": 2.16,
           "current_odds": 1.55,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 60.26,
-          "ev": -23.27,
-          "qi": 30,
-          "price_qi": 4,
-          "edge_points": -15.01,
+          "ev": -28.24,
+          "qi": 27,
+          "price_qi": 2,
+          "edge_points": -18.22,
           "risk_rating": "Low"
         },
         {
@@ -22447,16 +24194,16 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 25,
-          "model_price": 3.99,
+          "model_probability": 22.7,
+          "model_price": 4.41,
           "current_odds": 2.7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 34.78,
-          "ev": -32.33,
-          "qi": 15,
-          "price_qi": 5,
-          "edge_points": -11.97,
+          "ev": -38.78,
+          "qi": 14,
+          "price_qi": 4,
+          "edge_points": -14.36,
           "risk_rating": "Medium"
         },
         {
@@ -22465,21 +24212,21 @@ window.embeddedDataset = [
           "market": "Alternate Totals",
           "source": "Model",
           "oddsapi_market": "alternate_totals",
-          "model_probability": 6.8,
-          "model_price": 14.74,
+          "model_probability": 5.9,
+          "model_price": 16.87,
           "current_odds": 7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
           "devig_book_probability": 13.37,
-          "ev": -52.51,
+          "ev": -58.51,
           "qi": 9,
-          "price_qi": 6,
-          "edge_points": -7.5,
+          "price_qi": 5,
+          "edge_points": -8.36,
           "risk_rating": "High"
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-15T23:34:26.172Z",
+    "fifa_report_last_checked": "2026-06-15T23:47:47.164Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 47.4,
@@ -22488,11 +24235,16 @@ window.embeddedDataset = [
       "calibrated_home_probability": 47.4,
       "calibrated_draw_probability": 29.1,
       "calibrated_away_probability": 23.6,
-      "total_goals_mean": 2.69,
+      "total_goals_mean": 2.83,
       "tempo_adjustment": 0.32,
+      "goal_suppression": 0,
+      "break_open_risk": 0.14,
       "draw_lift_points": 0,
       "favourite_compression_points": 0,
-      "note": "Settled-match learning applied: favourites are compressed slightly, draw paths are lifted, and totals are made more conservative for international-match variance."
+      "low_block_draw_risk_points": 0,
+      "goal_suppression_points": 0,
+      "break_open_risk_points": 0.14,
+      "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     }
   }
 ];

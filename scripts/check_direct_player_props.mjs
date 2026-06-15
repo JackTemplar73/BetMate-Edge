@@ -44,6 +44,25 @@ function splitTeams(matchName) {
   return parts.map(normalise);
 }
 
+function playerLineupStatus(fixture, playerName) {
+  const lineups = fixture.confirmed_lineups;
+  if (!lineups || lineups.status !== 'confirmed' || !playerName) return 'unconfirmed';
+
+  const player = normalise(playerName);
+  const starters = [
+    ...(lineups.home_starting_xi || []),
+    ...(lineups.away_starting_xi || [])
+  ].map(normalise);
+  const substitutes = [
+    ...(lineups.home_substitutes || []),
+    ...(lineups.away_substitutes || [])
+  ].map(normalise);
+
+  if (starters.includes(player)) return 'starter';
+  if (substitutes.includes(player)) return 'bench';
+  return 'not_listed';
+}
+
 function eventMatchesFixture(event, fixture) {
   const fixtureTeams = splitTeams(fixture.match_name);
   if (!fixtureTeams) return false;
@@ -315,6 +334,8 @@ async function main() {
     }
 
     for (const prop of fixtureProps) {
+      const lineupStatus = playerLineupStatus(fixture, prop.player);
+      prop.lineup_role = lineupStatus;
       const oldSportsbetCheck = prop.direct_checks?.sportsbet;
       const oldTabCheck = prop.direct_checks?.tab;
       const oldDirectPrice = (prop.live_prices || []).find((price) => price.source === 'Sportsbet direct site');
@@ -328,7 +349,8 @@ async function main() {
           comparable_for_qi: false,
           event_id: sportsbetEvent?.id || null,
           market: null,
-          nearby_markets: []
+          nearby_markets: [],
+          lineup_role: lineupStatus
         },
         tab: {
           checked_at: oldTabCheck?.checked_at || checkedAt,
@@ -352,6 +374,13 @@ async function main() {
           note: 'Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet.'
         }
       };
+
+      if (lineupStatus === 'bench' || lineupStatus === 'not_listed') {
+        prop.status = 'watch_only';
+        prop.model_note = `${prop.player} is not confirmed in the starting XI. Keep this as watch-only unless team news changes.`;
+        prop.direct_checks.sportsbet.status = 'lineup_watch_only';
+        continue;
+      }
 
       if (eventStatus !== 'checked') continue;
 

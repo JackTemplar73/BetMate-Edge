@@ -304,6 +304,25 @@ function isConfirmedBenchPlayer(fixture, playerName) {
   return subs.includes(player) && !starters.includes(player);
 }
 
+function playerLineupStatus(fixture, playerName) {
+  const lineups = fixture.confirmed_lineups;
+  if (!lineups || lineups.status !== 'confirmed' || !playerName) return 'unconfirmed';
+
+  const player = String(playerName).toLowerCase();
+  const starters = [
+    ...(lineups.home_starting_xi || []),
+    ...(lineups.away_starting_xi || [])
+  ].map((name) => String(name).toLowerCase());
+  const subs = [
+    ...(lineups.home_substitutes || []),
+    ...(lineups.away_substitutes || [])
+  ].map((name) => String(name).toLowerCase());
+
+  if (starters.includes(player)) return 'starter';
+  if (subs.includes(player)) return 'bench';
+  return 'not_listed';
+}
+
 function playerPropMarketKeys(prop) {
   const market = normalise(prop.market);
   if (market.includes('shots on target')) return ['player_shots_on_target_alternate', 'player_shots_on_target'];
@@ -478,7 +497,13 @@ async function main() {
 
       if (PLAYER_PROP_BOOKMAKERS.includes(bookmaker.key)) {
         for (const prop of fixturePlayerProps) {
-          if (isConfirmedBenchPlayer(fixture, prop.player)) continue;
+          const lineupStatus = playerLineupStatus(fixture, prop.player);
+          prop.lineup_role = lineupStatus;
+          if (lineupStatus === 'bench' || lineupStatus === 'not_listed') {
+            prop.status = 'watch_only';
+            prop.model_note = `${prop.player} is not confirmed in the starting XI. Keep this as watch-only unless team news changes.`;
+            continue;
+          }
 
           const found = findPlayerPropOutcome(bookmaker, prop);
           if (!found) continue;
