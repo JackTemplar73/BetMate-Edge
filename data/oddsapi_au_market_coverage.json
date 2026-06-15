@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-15T05:24:58.553Z",
+  "checked_at": "2026-06-15T11:28:48.213Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -11,11 +11,11 @@
   "events_checked": 18,
   "market_counts": {
     "h2h": 80,
+    "btts": 32,
     "double_chance": 30,
     "h2h_3_way": 80,
     "h2h_lay": 16,
     "spreads": 1,
-    "btts": 31,
     "alternate_totals": 16,
     "draw_no_bet": 15,
     "alternate_spreads": 15
@@ -196,7 +196,7 @@
         "h2h_lay",
         "spreads"
       ],
-      "matched_rows": 25
+      "matched_rows": 27
     },
     {
       "match_name": "Belgium vs Egypt",
