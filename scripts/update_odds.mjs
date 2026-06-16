@@ -917,6 +917,44 @@ function extractFotMobExpectedGoals(details) {
   };
 }
 
+function extractFotMobGoalEvents(details) {
+  const events = details?.content?.matchFacts?.events?.events || [];
+  const headerHomeGoals = Object.values(details?.header?.events?.homeTeamGoals || {}).flat();
+  const headerAwayGoals = Object.values(details?.header?.events?.awayTeamGoals || {}).flat();
+  const allEvents = [
+    ...(Array.isArray(events) ? events : []),
+    ...headerHomeGoals.map((event) => ({ ...event, isHome: true })),
+    ...headerAwayGoals.map((event) => ({ ...event, isHome: false }))
+  ];
+
+  const goals = allEvents
+    .filter((event) => normalise(event.type).includes('goal') && !event.ownGoal && !event.isPenaltyShootoutEvent)
+    .map((event) => ({
+      minute: event.time ?? null,
+      scorer: event.player?.name || event.playerName || event.nameStr || event.fullName || null,
+      assist: event.assistInput || null,
+      team: event.isHome ? 'home' : 'away'
+    }))
+    .filter((event) => event.scorer);
+  const uniqueGoals = [];
+  const seen = new Set();
+  for (const goal of goals) {
+    const key = [normalise(goal.scorer), goal.minute, goal.team].join('|');
+    if (seen.has(key)) continue;
+    seen.add(key);
+    uniqueGoals.push(goal);
+  }
+
+  if (!uniqueGoals.length) return null;
+
+  return {
+    source: 'FotMob match centre',
+    scorers: [...new Set(uniqueGoals.map((event) => event.scorer).filter(Boolean))],
+    assisters: [...new Set(uniqueGoals.map((event) => event.assist).filter(Boolean))],
+    goals: uniqueGoals
+  };
+}
+
 async function refreshPostMatchStats(dataset, espnEvents, nowIso, now = getNow()) {
   let updated = 0;
   const fotMobMatchCache = new Map();
@@ -948,6 +986,19 @@ async function refreshPostMatchStats(dataset, espnEvents, nowIso, now = getNow()
       }
       fixture.post_match_stats = stats;
       delete fixture.post_match_xg;
+      let fotMobDetails = null;
+      const getFotMobDetails = async () => {
+        if (fotMobDetails) return fotMobDetails;
+        const date = dateKey(parseAest(fixture.kickoff_time_aest));
+        if (!fotMobMatchCache.has(date)) {
+          fotMobMatchCache.set(date, flattenFotMobMatches(await fetchFotMobMatchesForDate(date)));
+        }
+        const fotMobMatch = findFotMobMatch(fotMobMatchCache.get(date), fixture);
+        if (!fotMobMatch?.id) return null;
+        fotMobDetails = await fetchFotMobMatchDetails(fotMobMatch.id);
+        return fotMobDetails;
+      };
+
       const directXg = directXgPairFromStats(stats);
       if (directXg) {
         fixture.post_match_xg = {
@@ -955,14 +1006,9 @@ async function refreshPostMatchStats(dataset, espnEvents, nowIso, now = getNow()
           checked_at: nowIso
         };
       } else {
-        const date = dateKey(parseAest(fixture.kickoff_time_aest));
-        if (!fotMobMatchCache.has(date)) {
-          fotMobMatchCache.set(date, flattenFotMobMatches(await fetchFotMobMatchesForDate(date)));
-        }
-        const fotMobMatch = findFotMobMatch(fotMobMatchCache.get(date), fixture);
-        if (fotMobMatch?.id) {
-          const fotMobDetails = await fetchFotMobMatchDetails(fotMobMatch.id);
-          const fotMobXg = extractFotMobExpectedGoals(fotMobDetails);
+        const details = await getFotMobDetails();
+        if (details) {
+          const fotMobXg = extractFotMobExpectedGoals(details);
           if (fotMobXg) {
             fixture.post_match_xg = {
               ...fotMobXg,
@@ -979,6 +1025,13 @@ async function refreshPostMatchStats(dataset, espnEvents, nowIso, now = getNow()
             };
           }
         }
+      }
+      const goalEvents = extractFotMobGoalEvents(await getFotMobDetails());
+      if (goalEvents) {
+        fixture.post_match_goal_events = {
+          ...goalEvents,
+          checked_at: nowIso
+        };
       }
       fixture.post_match_stats_status = 'found';
       updated += 1;
@@ -1154,6 +1207,14 @@ function playerTeamFromFixture(playerName, fixture) {
   return null;
 }
 
+function fixtureScorers(fixture) {
+  return (fixture?.post_match_goal_events?.scorers || []).map(normalise);
+}
+
+function fixtureGoalAssisters(fixture) {
+  return (fixture?.post_match_goal_events?.assisters || []).map(normalise);
+}
+
 function settleTotalSelection(selectionText, result) {
   const point = numberFromSelection(selectionText);
   if (!Number.isFinite(point)) return null;
@@ -1265,8 +1326,26 @@ function settleAgainstScore(entry, result, fixture = null) {
     return cards.includes(player) ? 'won' : 'lost';
   }
 
+  if (entry.market_matrix === 'Player Prop' && (
+    selection.includes('anytime goal')
+      || selection.includes('anytime goalscorer')
+      || selection.includes('to score')
+      || selection.includes('goal scorer')
+  ) && !selection.includes('assist')) {
+    const player = normalise(String(entry.target_selection).split(':')[0]);
+    const scorers = fixtureScorers(fixture);
+    if (!player || !scorers.length) return null;
+    return scorers.includes(player) ? 'won' : 'lost';
+  }
+
   if (entry.market_matrix === 'Player Prop' && (selection.includes('goal or assist') || selection.includes('score or assist'))) {
     const playerName = String(entry.target_selection).split(':')[0];
+    const player = normalise(playerName);
+    const scorers = fixtureScorers(fixture);
+    const assisters = fixtureGoalAssisters(fixture);
+    if (player && (scorers.length || assisters.length)) {
+      return scorers.includes(player) || assisters.includes(player) ? 'won' : 'lost';
+    }
     const playerTeam = playerTeamFromFixture(playerName, fixture);
     if (playerTeam === 'home' && result.homeScore === 0) return 'lost';
     if (playerTeam === 'away' && result.awayScore === 0) return 'lost';
@@ -2024,7 +2103,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
 
   const nextHistory = [...byId.values()]
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
-    .filter((entry) => activeBetIds.has(entry.bet_id))
+    .filter((entry) => activeBetIds.has(entry.bet_id) || entry.manual_user_saved)
     .sort((a, b) => {
       const aKickoff = parseAest(a.kickoff_time_aest);
       const bKickoff = parseAest(b.kickoff_time_aest);
