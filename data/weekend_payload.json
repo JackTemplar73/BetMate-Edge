@@ -12838,7 +12838,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "73a4fcd14cc9766b9b9bfd50b8ca153a",
       "offered_market_keys": [
@@ -13871,7 +13871,7 @@
         "SportsBet",
         "Betfair"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "4d4f2b9b78182b557d4fbf8dcf4f4af2",
       "offered_market_keys": [
@@ -14025,7 +14025,7 @@
           "current_odds": 1.23,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 80.88,
+          "devig_book_probability": 80.6,
           "ev": -3.91,
           "qi": 44,
           "price_qi": 25
@@ -14118,13 +14118,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 14.8,
           "model_price": 6.74,
-          "current_odds": 7.6,
+          "current_odds": 7.4,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 13.09,
-          "ev": 12.76,
-          "qi": 39,
-          "price_qi": 79
+          "devig_book_probability": 13.4,
+          "ev": 9.79,
+          "qi": 37,
+          "price_qi": 77
         },
         {
           "selection": "Norway or Draw",
@@ -14249,7 +14249,7 @@
           "current_odds": 16.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 6.03,
+          "devig_book_probability": 6.01,
           "ev": 16.69,
           "qi": 33,
           "price_qi": 79
@@ -14888,7 +14888,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "f31b2ee9e1cc6f7e641467f8237eaa21",
       "offered_market_keys": [
@@ -15794,7 +15794,7 @@
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "25161cf6cf0cd9be17ae2e7e224a1f45",
       "offered_market_keys": [
@@ -16747,7 +16747,7 @@
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -17748,7 +17748,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -18748,7 +18748,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -19779,7 +19779,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -20779,7 +20779,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -21811,7 +21811,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
@@ -22668,7 +22668,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -23621,7 +23621,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:12:01.546Z",
+      "checked_at": "2026-06-16T12:15:17.727Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
