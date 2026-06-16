@@ -1285,6 +1285,21 @@ function settleAgainstScore(entry, result, fixture = null) {
     return result.homeScore === expectedHome && result.awayScore === expectedAway ? 'won' : 'lost';
   }
 
+  if (selection.includes(' or draw')) {
+    const team = normalise(String(entry.target_selection).replace(/\bor draw\b/i, '').trim());
+    if (team === home) return homeWon || draw ? 'won' : 'lost';
+    if (team === away) return awayWon || draw ? 'won' : 'lost';
+  }
+
+  if (selection.includes(' or ') && !selection.includes('draw')) {
+    const teams = selection.split(/\s+or\s+/).map(normalise);
+    const homeSelected = teams.includes(home);
+    const awaySelected = teams.includes(away);
+    if (homeSelected || awaySelected) {
+      return (homeSelected && homeWon) || (awaySelected && awayWon) ? 'won' : 'lost';
+    }
+  }
+
   if (entry.market_matrix === 'Moneyline' || entry.market_matrix === 'Full Match Model') {
     if (selection.includes('draw') || selection.includes('end in a draw')) {
       return draw ? 'won' : 'lost';
