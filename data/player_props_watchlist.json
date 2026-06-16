@@ -1979,27 +1979,53 @@
     "model_probability": 34.1,
     "model_price": 2.93,
     "model_note": "Wood owns New Zealand's main set-piece and crossing goal threat.",
-    "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "live_prices": [
+      {
+        "au_bookie": "Sportsbet",
+        "bookmaker_key": "sportsbet",
+        "source": "User confirmed current Sportsbet price",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 3.75,
+        "ev": 27.99,
+        "qi": 68,
+        "price_qi": 90,
+        "checked_at": "2026-06-16T00:31:46.126Z"
+      },
+      {
+        "au_bookie": "TAB",
+        "bookmaker_key": "tab",
+        "source": "User confirmed current TAB price",
+        "market_name": "Anytime Goalscorer",
+        "current_odds": 3.15,
+        "ev": 7.51,
+        "qi": 50,
+        "price_qi": 77,
+        "checked_at": "2026-06-16T00:31:46.126Z"
+      }
+    ],
+    "last_checked": "2026-06-16T00:31:46.126Z",
     "direct_checks": {
       "sportsbet": {
-        "checked_at": "2026-06-15T23:48:05.426Z",
-        "status": "exact_market_found",
+        "checked_at": "2026-06-16T00:31:46.126Z",
+        "status": "user_confirmed_price",
         "exact_market_found": true,
         "comparable_for_qi": true,
-        "event_id": 9927167,
         "market": "Anytime Goalscorer",
-        "current_odds": 4.5,
-        "qi": 76,
-        "ev": 53.58,
+        "current_odds": 3.75,
+        "qi": 68,
+        "ev": 27.99,
         "nearby_markets": []
       },
       "tab": {
-        "checked_at": "2026-06-13T23:57:18.626Z",
-        "status": "direct_site_endpoint_not_confirmed",
-        "exact_market_found": false,
-        "comparable_for_qi": false,
-        "note": "TAB is still checked through OddsAPI in the scheduled scan; no direct TAB prop endpoint has been confirmed in this workspace yet."
+        "checked_at": "2026-06-16T00:31:46.126Z",
+        "status": "user_confirmed_price",
+        "exact_market_found": true,
+        "comparable_for_qi": true,
+        "market": "Anytime Goalscorer",
+        "current_odds": 3.15,
+        "qi": 50,
+        "ev": 7.51,
+        "nearby_markets": []
       },
       "pointsbet": {
         "checked_at": "2026-06-14T00:04:53.535Z",

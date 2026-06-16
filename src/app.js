@@ -1700,7 +1700,7 @@ function renderBetHistory() {
 }
 
 function getQualifiedHistoryBets() {
-  return state.betHistory.filter((bet) => Number(bet.opening_qi) >= 70 && Number(bet.current_qi) >= 70);
+  return state.betHistory.filter((bet) => Number(bet.opening_qi) >= 70);
 }
 
 function filterHistoryRowsByResult(rows) {

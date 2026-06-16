@@ -11070,6 +11070,22 @@ window.embeddedDataset = [
       "matched_rows": 37,
       "rows": [
         {
+          "selection": "Chris Wood: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "User confirmed current Sportsbet price",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 34.1,
+          "model_price": 2.93,
+          "current_odds": 3.75,
+          "au_bookie": "Sportsbet",
+          "bookmaker_key": "sportsbet",
+          "ev": 27.99,
+          "qi": 68,
+          "price_qi": 90,
+          "checked_at": "2026-06-16T00:31:46.126Z"
+        },
+        {
           "selection": "New Zealand or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -11104,6 +11120,22 @@ window.embeddedDataset = [
           "price_qi": 45,
           "edge_points": -0.47,
           "risk_rating": "Low"
+        },
+        {
+          "selection": "Chris Wood: Anytime Goal",
+          "category": "Player Prop",
+          "market": "Anytime Goal",
+          "source": "User confirmed current TAB price",
+          "oddsapi_market": "Anytime Goalscorer",
+          "model_probability": 34.1,
+          "model_price": 2.93,
+          "current_odds": 3.15,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "ev": 7.51,
+          "qi": 50,
+          "price_qi": 77,
+          "checked_at": "2026-06-16T00:31:46.126Z"
         },
         {
           "selection": "New Zealand or Draw",
