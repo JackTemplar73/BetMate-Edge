@@ -12837,7 +12837,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "73a4fcd14cc9766b9b9bfd50b8ca153a",
       "offered_market_keys": [
@@ -13870,7 +13870,7 @@ window.embeddedDataset = [
         "SportsBet",
         "Betfair"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "4d4f2b9b78182b557d4fbf8dcf4f4af2",
       "offered_market_keys": [
@@ -14886,7 +14886,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "f31b2ee9e1cc6f7e641467f8237eaa21",
       "offered_market_keys": [
@@ -14918,6 +14918,22 @@ window.embeddedDataset = [
           "price_qi": 82
         },
         {
+          "selection": "Argentina to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 68,
+          "model_price": 1.47,
+          "current_odds": 1.47,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 67.88,
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49
+        },
+        {
           "selection": "Algeria or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -14932,22 +14948,6 @@ window.embeddedDataset = [
           "ev": 6.06,
           "qi": 51,
           "price_qi": 75
-        },
-        {
-          "selection": "Argentina to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 68,
-          "model_price": 1.47,
-          "current_odds": 1.46,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 68.02,
-          "ev": -0.68,
-          "qi": 51,
-          "price_qi": 45
         },
         {
           "selection": "Argentina to Win",
@@ -15232,7 +15232,7 @@ window.embeddedDataset = [
           "current_odds": 4.8,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 20.69,
+          "devig_book_probability": 20.79,
           "ev": 1.69,
           "qi": 29,
           "price_qi": 59
@@ -15792,7 +15792,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "25161cf6cf0cd9be17ae2e7e224a1f45",
       "offered_market_keys": [
@@ -16745,7 +16745,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -17746,7 +17746,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -18746,7 +18746,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -19778,7 +19778,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -20778,7 +20778,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -21810,7 +21810,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
@@ -22667,7 +22667,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -23620,7 +23620,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:01:25.436Z",
+      "checked_at": "2026-06-16T12:03:49.303Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
