@@ -12838,7 +12838,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "73a4fcd14cc9766b9b9bfd50b8ca153a",
       "offered_market_keys": [
@@ -13871,7 +13871,7 @@ window.embeddedDataset = [
         "SportsBet",
         "Betfair"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "4d4f2b9b78182b557d4fbf8dcf4f4af2",
       "offered_market_keys": [
@@ -14888,7 +14888,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "f31b2ee9e1cc6f7e641467f8237eaa21",
       "offered_market_keys": [
@@ -15794,7 +15794,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "25161cf6cf0cd9be17ae2e7e224a1f45",
       "offered_market_keys": [
@@ -15833,13 +15833,13 @@ window.embeddedDataset = [
           "oddsapi_market": "double_chance",
           "model_probability": 38.3,
           "model_price": 2.61,
-          "current_odds": 3.15,
+          "current_odds": 3.2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 15.06,
-          "ev": 20.69,
-          "qi": 67,
-          "price_qi": 88
+          "devig_book_probability": 14.86,
+          "ev": 22.61,
+          "qi": 68,
+          "price_qi": 89
         },
         {
           "selection": "Under 3.5 Goals",
@@ -15980,7 +15980,7 @@ window.embeddedDataset = [
           "current_odds": 1.06,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 44.75,
+          "devig_book_probability": 44.85,
           "ev": -7.02,
           "qi": 37,
           "price_qi": 7
@@ -16044,7 +16044,7 @@ window.embeddedDataset = [
           "current_odds": 1.18,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 40.2,
+          "devig_book_probability": 40.29,
           "ev": -12.59,
           "qi": 36,
           "price_qi": 4
@@ -16747,7 +16747,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -16850,13 +16850,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 73,
           "model_price": 1.37,
-          "current_odds": 1.32,
+          "current_odds": 1.31,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 75.46,
-          "ev": -3.65,
-          "qi": 44,
-          "price_qi": 27
+          "devig_book_probability": 75.6,
+          "ev": -4.38,
+          "qi": 43,
+          "price_qi": 24
         },
         {
           "selection": "Portugal to Win",
@@ -17061,7 +17061,7 @@ window.embeddedDataset = [
           "current_odds": 5.9,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 16.88,
+          "devig_book_probability": 16.79,
           "ev": 6.12,
           "qi": 35,
           "price_qi": 73
@@ -17077,7 +17077,7 @@ window.embeddedDataset = [
           "current_odds": 13,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 7.66,
+          "devig_book_probability": 7.62,
           "ev": 15.45,
           "qi": 34,
           "price_qi": 79
@@ -17748,7 +17748,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -18748,7 +18748,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -19779,7 +19779,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -20779,7 +20779,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -21811,7 +21811,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
@@ -22668,7 +22668,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -23621,7 +23621,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:15:17.727Z",
+      "checked_at": "2026-06-16T12:22:57.821Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
