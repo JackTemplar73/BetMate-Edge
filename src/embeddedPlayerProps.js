@@ -1932,7 +1932,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.43,
     "model_note": "Taremi is Iran's clearest goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -1979,31 +1979,8 @@ window.embeddedPlayerProps = [
     "model_probability": 34.1,
     "model_price": 2.93,
     "model_note": "Wood owns New Zealand's main set-piece and crossing goal threat.",
-    "live_prices": [
-      {
-        "au_bookie": "Sportsbet",
-        "bookmaker_key": "sportsbet",
-        "source": "User confirmed current Sportsbet price",
-        "market_name": "Anytime Goalscorer",
-        "current_odds": 3.75,
-        "ev": 27.99,
-        "qi": 68,
-        "price_qi": 90,
-        "checked_at": "2026-06-16T00:31:46.126Z"
-      },
-      {
-        "au_bookie": "TAB",
-        "bookmaker_key": "tab",
-        "source": "User confirmed current TAB price",
-        "market_name": "Anytime Goalscorer",
-        "current_odds": 3.15,
-        "ev": 7.51,
-        "qi": 50,
-        "price_qi": 77,
-        "checked_at": "2026-06-16T00:31:46.126Z"
-      }
-    ],
-    "last_checked": "2026-06-16T00:31:46.126Z",
+    "live_prices": [],
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-16T00:31:46.126Z",
@@ -2054,7 +2031,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.67,
     "model_note": "Taremi projects for the best shot volume in this game.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2102,7 +2079,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.03,
     "model_note": "Sardar Azmoun is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2149,7 +2126,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.94,
     "model_note": "Winston Reid is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2196,7 +2173,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.1,
     "model_note": "Mbappe is France's highest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2244,7 +2221,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.42,
     "model_note": "Mbappe projects as the highest shot-volume player on the slate.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -2321,7 +2298,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.88,
     "model_note": "Sarr is Senegal's main transition shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2369,7 +2346,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.29,
     "model_note": "Dembele rates well for chance creation from wide areas.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2417,7 +2394,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.21,
     "model_note": "Gueye profiles as Senegal's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2465,7 +2442,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.79,
     "model_note": "Haaland is the strongest goal-probability prop in the model.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2513,7 +2490,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.43,
     "model_note": "Haaland projects as Norway's cleanest shot-on-target angle.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2561,7 +2538,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.06,
     "model_note": "Hussein is Iraq's strongest attacking watch profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2609,7 +2586,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.99,
     "model_note": "Odegaard carries Norway's best creative involvement profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2657,7 +2634,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.86,
     "model_note": "Iqbal can be drawn into midfield recovery fouls.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2705,7 +2682,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.45,
     "model_note": "Alvarez projects as Argentina's safest forward goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2753,7 +2730,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.28,
     "model_note": "Mahrez carries Algeria's strongest shot volume.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2801,7 +2778,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.87,
     "model_note": "Lautaro rates strongly for central penalty-box shots.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2849,7 +2826,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.81,
     "model_note": "Messi is treated as watchlist only until selection is confirmed.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2897,7 +2874,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.38,
     "model_note": "Bennacer profiles as Algeria's most likely tactical-foul card.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2943,7 +2920,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.67,
     "model_note": "Arnautovic has Austria's strongest central finishing profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -2991,7 +2968,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.9,
     "model_note": "Sabitzer rates well for shots from midfield and set pieces.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3039,7 +3016,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.16,
     "model_note": "Baumgartner gets strong advanced midfield shot positions.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3085,7 +3062,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.82,
     "model_note": "Al-Taamari is Jordan's main attacking outlet.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3131,7 +3108,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.69,
     "model_note": "Schlager carries pressing and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3179,7 +3156,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.61,
     "model_note": "Leao is Portugal's most explosive goal profile if starting.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3227,7 +3204,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.73,
     "model_note": "Bruno projects well for shots and set-piece attempts.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3275,7 +3252,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.27,
     "model_note": "Bakambu is DR Congo's main goal outlet.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3323,7 +3300,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.83,
     "model_note": "Bruno has Portugal's best chance-creation profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3371,7 +3348,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.73,
     "model_note": "Mbemba faces high defensive workload against Portugal attackers.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3419,7 +3396,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.24,
     "model_note": "Kane is England's highest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3467,7 +3444,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.76,
     "model_note": "Foden rates well for shot volume from inside-right channels.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3513,7 +3490,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.02,
     "model_note": "Bellingham carries strong box-entry and second-phase shot value.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3561,7 +3538,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.5,
     "model_note": "Modric remains Croatia's key chance-creation profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3609,7 +3586,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.6,
     "model_note": "Kovacic can be forced into tactical fouls against England runners.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3657,7 +3634,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.8,
     "model_note": "Williams is Ghana's leading central goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3705,7 +3682,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.97,
     "model_note": "Kudus owns Ghana's strongest direct shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3751,7 +3728,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.55,
     "model_note": "Fajardo is Panama's main forward target.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3799,7 +3776,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.28,
     "model_note": "Kudus is also Ghana's best creative involvement angle.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3845,7 +3822,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.44,
     "model_note": "Carrasquilla carries Panama's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3922,7 +3899,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.57,
     "model_note": "Duran rates as Colombia's most direct goal threat.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3968,7 +3945,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.8,
     "model_note": "Diaz is Colombia's strongest shot-on-target player.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4016,7 +3993,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.25,
     "model_note": "Masharipov is Uzbekistan's main creative shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4062,7 +4039,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.21,
     "model_note": "James has Colombia's highest set-piece and assist profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4110,7 +4087,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.53,
     "model_note": "Barrios carries Colombia's highest ball-winning card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4156,7 +4133,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.47,
     "model_note": "Schick is Czech Republic's highest goal share.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4204,7 +4181,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.18,
     "model_note": "Soucek rates well from set pieces and second balls.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4271,7 +4248,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.33,
     "model_note": "Hlozek projects as a strong secondary Czech shooter.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4338,7 +4315,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.17,
     "model_note": "Tau is South Africa's main transition shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4384,7 +4361,7 @@ window.embeddedPlayerProps = [
     "model_price": 4.22,
     "model_note": "Soucek has aerial-duel and midfield challenge card exposure.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4451,7 +4428,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.73,
     "model_note": "Embolo has Switzerland's best central goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4499,7 +4476,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.13,
     "model_note": "Dzeko is Bosnia's strongest penalty-box goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4547,7 +4524,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.26,
     "model_note": "Xhaka projects well if Switzerland control territory.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4614,7 +4591,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.58,
     "model_note": "Shaqiri remains watchlist only until role is confirmed.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4660,7 +4637,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.42,
     "model_note": "Kolasinac carries high duel and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4727,7 +4704,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.52,
     "model_note": "David is Canada's strongest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4775,7 +4752,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.89,
     "model_note": "David projects as Canada's cleanest shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4842,7 +4819,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.89,
     "model_note": "Afif is Qatar's main attacking prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4909,7 +4886,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.4,
     "model_note": "Davies carries Canada's strongest wide creation angle.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4976,7 +4953,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.72,
     "model_note": "Madibo profiles as Qatar's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5043,7 +5020,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.65,
     "model_note": "Gimenez is Mexico's strongest goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5091,7 +5068,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.07,
     "model_note": "Lozano rates well for Mexico shot volume from wide areas.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5148,7 +5125,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.78,
     "model_note": "Son is South Korea's best shot-on-target prop.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5215,7 +5192,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.53,
     "model_note": "Lee projects as South Korea's best creator.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5282,7 +5259,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.18,
     "model_note": "Alvarez carries Mexico's strongest card profile.",
     "live_prices": [],
-    "last_checked": "2026-06-16T00:17:00.835Z",
+    "last_checked": "2026-06-16T00:32:52.715Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
