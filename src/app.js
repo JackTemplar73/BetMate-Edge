@@ -1995,16 +1995,17 @@ function formatLatestOrClosingPrice(bet) {
   if (hasNumericValue(bet.closing_odds)) {
     return `
       ${formatLinePriceWithQi(bet.closing_odds, bet)}
-      <span class="sub-cell confirmed-text">Closing price${bet.closing_bookie ? ` | ${bet.closing_bookie}` : ''}</span>
+      <span class="sub-cell confirmed-text">Sharp close${bet.closing_bookie ? ` | ${bet.closing_bookie}` : ''}</span>
       ${formatCapturedAt(bet.closing_captured_at)}
       ${formatCurrentSignal(bet)}
     `;
   }
 
   if (hasNumericValue(bet.latest_pre_kickoff_odds)) {
+    const isSoftCloseEstimate = ['soft_close_estimate', 'latest_pre_kickoff_estimate'].includes(String(bet.closing_status || ''));
     return `
       ${formatLinePriceWithQi(bet.latest_pre_kickoff_odds, bet)}
-      <span class="sub-cell warning-text">Latest pre-kickoff${bet.latest_pre_kickoff_bookie ? ` | ${bet.latest_pre_kickoff_bookie}` : ''}</span>
+      <span class="sub-cell warning-text">${isSoftCloseEstimate ? 'Soft-book estimate' : 'Latest pre-game'}${bet.latest_pre_kickoff_bookie ? ` | ${bet.latest_pre_kickoff_bookie}` : ''}</span>
       ${formatCapturedAt(bet.latest_pre_kickoff_at)}
       ${formatCurrentSignal(bet)}
     `;
@@ -2094,9 +2095,9 @@ function formatQiMove(bet) {
   const deltaClass = delta === null ? 'neutral-text' : delta > 0 ? 'positive' : delta < 0 ? 'negative' : 'neutral-text';
   const deltaText = delta === null ? '-' : `${delta > 0 ? '+' : ''}${delta}`;
   const closeLabel = hasNumericValue(bet.closing_odds)
-    ? 'Closing QI'
+    ? 'Sharp close QI'
     : hasNumericValue(bet.latest_pre_kickoff_odds)
-      ? 'Latest pre-kickoff QI'
+      ? 'Latest/estimate QI'
       : 'Latest QI';
 
   return `
@@ -2154,11 +2155,11 @@ function formatHistoryClv(bet) {
     if (!hasReliableClvBaseline(bet)) {
       return `<span class="primary-cell">Line move ${formatClv(bet.clv_percent)}</span><span class="sub-cell warning-text">First tracked price was too close to kickoff for true opening-to-close CLV</span>`;
     }
-    return `<span class="primary-cell">${formatClv(bet.clv_percent)}</span><span class="sub-cell ${detailClass}">Confirmed closing line</span>`;
+    return `<span class="primary-cell">${formatClv(bet.clv_percent)}</span><span class="sub-cell ${detailClass}">Confirmed sharp close</span>`;
   }
 
   if (hasNumericValue(bet.latest_pre_kickoff_clv_percent)) {
-    return `<span class="primary-cell">Latest move ${formatClv(bet.latest_pre_kickoff_clv_percent)}</span><span class="sub-cell warning-text">Latest pre-kickoff line only</span>`;
+    return `<span class="primary-cell">Latest move ${formatClv(bet.latest_pre_kickoff_clv_percent)}</span><span class="sub-cell warning-text">Not official CLV unless Betfair/Pinnacle close is captured</span>`;
   }
 
   if (hasNumericValue(bet.estimated_clv_percent)) {
