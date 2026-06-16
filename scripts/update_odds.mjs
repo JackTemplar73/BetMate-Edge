@@ -5,6 +5,7 @@ const DATA_PATH = new URL('../data/weekend_payload.json', import.meta.url);
 const EMBEDDED_PATH = new URL('../src/embeddedData.js', import.meta.url);
 const HISTORY_PATH = new URL('../data/bet_history.json', import.meta.url);
 const EMBEDDED_HISTORY_PATH = new URL('../src/embeddedBetHistory.js', import.meta.url);
+const LEARNING_COEFFICIENTS_PATH = new URL('../data/learning_coefficients.json', import.meta.url);
 
 const BOOKMAKERS = new Map([
   ['sportsbet', 'Sportsbet'],
@@ -52,6 +53,22 @@ const LATEST_PRE_KICKOFF_WINDOW_MS = 4 * 60 * 60 * 1000;
 const MAX_CLV_PRICE_RATIO = 3;
 const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
 const LINEUP_CHECK_WINDOW_MS = 60 * 60 * 1000;
+
+const DEFAULT_LEARNING_COEFFICIENTS = {
+  version: 1,
+  updated_at: null,
+  sample_size: 0,
+  confidence: 'none',
+  adjustments: {
+    draw_lift: 0,
+    favourite_compression: 0,
+    goal_suppression: 0,
+    break_open_risk: 0,
+    chance_quality_penalty: 0
+  },
+  flags: {},
+  note: 'Automatically updated from settled match results, stats and xG where reliable feeds expose it.'
+};
 
 const ODDS_API_MARKETS = [
   'h2h',
@@ -807,8 +824,94 @@ function extractTeamStatsFromEspnSummary(summary) {
   };
 }
 
+function statValue(teamStats, names) {
+  if (!teamStats) return null;
+  const compactStats = new Map(Object.entries(teamStats).map(([key, value]) => [normaliseStatName(key).replace(/\s+/g, ''), value]));
+  for (const name of names) {
+    const value = teamStats[normaliseStatName(name)];
+    if (Number.isFinite(value)) return value;
+    const compactValue = compactStats.get(normaliseStatName(name).replace(/\s+/g, ''));
+    if (Number.isFinite(compactValue)) return compactValue;
+  }
+  return null;
+}
+
+function directXgFromStats(teamStats) {
+  return statValue(teamStats, [
+    'expected goals',
+    'expected goals for',
+    'expected goal',
+    'xg',
+    'x goals',
+    'npxg',
+    'non penalty expected goals'
+  ]);
+}
+
+function xgProxyFromStats(teamStats) {
+  if (!teamStats) return null;
+  const shots = statValue(teamStats, ['shots', 'total shots']);
+  const shotsOnTarget = statValue(teamStats, ['shots on target', 'shots on goal']);
+  const corners = statValue(teamStats, ['corner kicks', 'corners']);
+  const bigChances = statValue(teamStats, ['big chances', 'big chances created']);
+  if (![shots, shotsOnTarget, corners, bigChances].some(Number.isFinite)) return null;
+
+  const estimate = clamp(
+    (Number.isFinite(shots) ? shots * 0.055 : 0)
+      + (Number.isFinite(shotsOnTarget) ? shotsOnTarget * 0.16 : 0)
+      + (Number.isFinite(bigChances) ? bigChances * 0.32 : 0)
+      + (Number.isFinite(corners) ? corners * 0.025 : 0),
+    0.05,
+    4.6
+  );
+
+  return Number(estimate.toFixed(2));
+}
+
+function directXgPairFromStats(stats) {
+  const home = directXgFromStats(stats?.home?.stats);
+  const away = directXgFromStats(stats?.away?.stats);
+  if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
+  return {
+    home: Number(home.toFixed(2)),
+    away: Number(away.toFixed(2)),
+    source: 'ESPN structured xG'
+  };
+}
+
+function proxyXgPairFromStats(stats) {
+  const home = xgProxyFromStats(stats?.home?.stats);
+  const away = xgProxyFromStats(stats?.away?.stats);
+  if (!Number.isFinite(home) || !Number.isFinite(away)) return null;
+  return {
+    home,
+    away,
+    source: 'ESPN shot-quality proxy'
+  };
+}
+
+function extractFotMobExpectedGoals(details) {
+  const allStats = details?.content?.stats?.Periods?.All?.stats || [];
+  const sections = Array.isArray(allStats) ? allStats : [];
+  const rows = sections.flatMap((section) => Array.isArray(section.stats) ? section.stats : []);
+  const row = rows.find((stat) => (
+    normalise(stat?.key) === 'expected goals'
+      || normalise(stat?.title) === 'expected goals xg'
+  ) && Array.isArray(stat.stats) && stat.stats.length >= 2 && stat.stats.some((value) => value !== null));
+
+  if (!row) return null;
+  const values = row.stats.slice(0, 2).map((value) => numericStatValue(value));
+  if (!values.every(Number.isFinite)) return null;
+  return {
+    home: values[0],
+    away: values[1],
+    source: 'FotMob structured xG'
+  };
+}
+
 async function refreshPostMatchStats(dataset, espnEvents, nowIso, now = getNow()) {
   let updated = 0;
+  const fotMobMatchCache = new Map();
 
   for (const fixture of dataset) {
     const kickoff = parseAest(fixture.kickoff_time_aest);
@@ -836,6 +939,39 @@ async function refreshPostMatchStats(dataset, espnEvents, nowIso, now = getNow()
         continue;
       }
       fixture.post_match_stats = stats;
+      delete fixture.post_match_xg;
+      const directXg = directXgPairFromStats(stats);
+      if (directXg) {
+        fixture.post_match_xg = {
+          ...directXg,
+          checked_at: nowIso
+        };
+      } else {
+        const date = dateKey(parseAest(fixture.kickoff_time_aest));
+        if (!fotMobMatchCache.has(date)) {
+          fotMobMatchCache.set(date, flattenFotMobMatches(await fetchFotMobMatchesForDate(date)));
+        }
+        const fotMobMatch = findFotMobMatch(fotMobMatchCache.get(date), fixture);
+        if (fotMobMatch?.id) {
+          const fotMobDetails = await fetchFotMobMatchDetails(fotMobMatch.id);
+          const fotMobXg = extractFotMobExpectedGoals(fotMobDetails);
+          if (fotMobXg) {
+            fixture.post_match_xg = {
+              ...fotMobXg,
+              checked_at: nowIso
+            };
+          }
+        }
+        if (!fixture.post_match_xg) {
+          const proxyXg = proxyXgPairFromStats(stats);
+          if (proxyXg) {
+            fixture.post_match_xg = {
+              ...proxyXg,
+              checked_at: nowIso
+            };
+          }
+        }
+      }
       fixture.post_match_stats_status = 'found';
       updated += 1;
     } catch (error) {
@@ -1210,18 +1346,6 @@ function actualResultLabel(result) {
     : `${result.awayName} win`;
 }
 
-function statValue(teamStats, names) {
-  if (!teamStats) return null;
-  const compactStats = new Map(Object.entries(teamStats).map(([key, value]) => [normaliseStatName(key).replace(/\s+/g, ''), value]));
-  for (const name of names) {
-    const value = teamStats[normaliseStatName(name)];
-    if (Number.isFinite(value)) return value;
-    const compactValue = compactStats.get(normaliseStatName(name).replace(/\s+/g, ''));
-    if (Number.isFinite(compactValue)) return compactValue;
-  }
-  return null;
-}
-
 function applyPostMatchLearning(dataset, espnEvents, fifaReports, now = getNow()) {
   let learned = 0;
 
@@ -1242,6 +1366,10 @@ function applyPostMatchLearning(dataset, espnEvents, fifaReports, now = getNow()
     const awayShots = statValue(stats?.away?.stats, ['shots', 'total shots']);
     const homeSot = statValue(stats?.home?.stats, ['shots on target', 'shots on goal']);
     const awaySot = statValue(stats?.away?.stats, ['shots on target', 'shots on goal']);
+    const xg = fixture.post_match_xg || null;
+    const homeXg = Number(xg?.home);
+    const awayXg = Number(xg?.away);
+    const totalXg = homeXg + awayXg;
 
     if (predicted && actual === 'Draw' && !String(predicted.label).includes('Draw')) {
       flags.push('draw-risk-underestimated');
@@ -1261,6 +1389,15 @@ function applyPostMatchLearning(dataset, espnEvents, fifaReports, now = getNow()
     if (Number.isFinite(homeSot) && Number.isFinite(awaySot) && predicted?.label?.includes(result.homeName) && homeSot <= awaySot) {
       flags.push('chance-quality-overstated');
     }
+    if (Number.isFinite(homeXg) && Number.isFinite(awayXg) && predicted?.label?.includes(result.homeName) && homeXg <= awayXg) {
+      flags.push('xg-did-not-support-favourite');
+    }
+    if (Number.isFinite(totalXg) && actualTotal <= 1 && totalXg >= 2.4) {
+      flags.push('finishing-variance-low');
+    }
+    if (Number.isFinite(totalXg) && actualTotal >= 5 && totalXg <= 2.3) {
+      flags.push('finishing-variance-high');
+    }
 
     fixture.post_match_learning = {
       checked_at: now.toISOString(),
@@ -1275,6 +1412,14 @@ function applyPostMatchLearning(dataset, espnEvents, fifaReports, now = getNow()
       stats_used: Boolean(stats),
       shot_count: Number.isFinite(homeShots) && Number.isFinite(awayShots) ? `${homeShots}-${awayShots}` : null,
       shots_on_target: Number.isFinite(homeSot) && Number.isFinite(awaySot) ? `${homeSot}-${awaySot}` : null,
+      xg: Number.isFinite(homeXg) && Number.isFinite(awayXg)
+        ? {
+          home: Number(homeXg.toFixed(2)),
+          away: Number(awayXg.toFixed(2)),
+          total: Number(totalXg.toFixed(2)),
+          source: xg.source || 'structured feed'
+        }
+        : null,
       flags,
       summary: flags.length
         ? `Learning flags: ${flags.join(', ')}.`
@@ -1284,6 +1429,90 @@ function applyPostMatchLearning(dataset, espnEvents, fifaReports, now = getNow()
   }
 
   return learned;
+}
+
+function cloneDefaultLearningCoefficients() {
+  return JSON.parse(JSON.stringify(DEFAULT_LEARNING_COEFFICIENTS));
+}
+
+async function readLearningCoefficients() {
+  try {
+    const parsed = JSON.parse(await readFile(LEARNING_COEFFICIENTS_PATH, 'utf8'));
+    return {
+      ...cloneDefaultLearningCoefficients(),
+      ...parsed,
+      adjustments: {
+        ...DEFAULT_LEARNING_COEFFICIENTS.adjustments,
+        ...(parsed.adjustments || {})
+      },
+      flags: parsed.flags || {}
+    };
+  } catch {
+    return cloneDefaultLearningCoefficients();
+  }
+}
+
+function learningConfidence(sampleSize) {
+  if (sampleSize <= 0) return 'none';
+  if (sampleSize < 10) return 'early';
+  if (sampleSize < 30) return 'developing';
+  if (sampleSize < 75) return 'moderate';
+  return 'strong';
+}
+
+function countLearningFlags(dataset) {
+  const flags = {};
+  let sampleSize = 0;
+  let xgSamples = 0;
+
+  for (const fixture of dataset) {
+    const learning = fixture.post_match_learning;
+    if (!learning) continue;
+    sampleSize += 1;
+    if (learning.xg) xgSamples += 1;
+    for (const flag of learning.flags || []) {
+      flags[flag] = (flags[flag] || 0) + 1;
+    }
+  }
+
+  return { flags, sampleSize, xgSamples };
+}
+
+function learnedAdjustment(flagCount, sampleSize, weight, cap) {
+  if (!sampleSize || !flagCount) return 0;
+  const sampleDampener = Math.min(1, sampleSize / 40);
+  const rate = flagCount / sampleSize;
+  return Number(clamp(rate * weight * sampleDampener, 0, cap).toFixed(4));
+}
+
+function buildLearningCoefficients(dataset, previous, now = getNow()) {
+  const { flags, sampleSize, xgSamples } = countLearningFlags(dataset);
+  const drawFlags = (flags['draw-risk-underestimated'] || 0) + (flags['favourite-confidence-too-high'] || 0);
+  const suppressionFlags = (flags['goal-suppression-underweighted'] || 0) + (flags['chance-quality-overstated'] || 0);
+  const breakOpenFlags = flags['break-open-risk-underweighted'] || 0;
+  const chanceQualityFlags = (flags['chance-quality-overstated'] || 0) + (flags['xg-did-not-support-favourite'] || 0);
+  const finishingHighFlags = flags['finishing-variance-high'] || 0;
+  const finishingLowFlags = flags['finishing-variance-low'] || 0;
+
+  return {
+    ...cloneDefaultLearningCoefficients(),
+    updated_at: now.toISOString(),
+    sample_size: sampleSize,
+    xg_sample_size: xgSamples,
+    confidence: learningConfidence(sampleSize),
+    previous_updated_at: previous?.updated_at || null,
+    adjustments: {
+      draw_lift: learnedAdjustment(drawFlags, sampleSize, 0.085, 0.035),
+      favourite_compression: learnedAdjustment(drawFlags + chanceQualityFlags, sampleSize, 0.095, 0.04),
+      goal_suppression: learnedAdjustment(suppressionFlags + finishingLowFlags, sampleSize, 0.42, 0.18),
+      break_open_risk: learnedAdjustment(breakOpenFlags + finishingHighFlags, sampleSize, 0.36, 0.16),
+      chance_quality_penalty: learnedAdjustment(chanceQualityFlags, sampleSize, 0.12, 0.05)
+    },
+    flags,
+    note: sampleSize
+      ? 'Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.'
+      : DEFAULT_LEARNING_COEFFICIENTS.note
+  };
 }
 
 function betId(fixture, marketItem) {
@@ -2152,8 +2381,9 @@ function fixtureLearningProfile(fixture) {
   };
 }
 
-function calibratedResultProbabilitiesForFixture(probabilities, fixture) {
+function calibratedResultProbabilitiesForFixture(probabilities, fixture, learningCoefficients = DEFAULT_LEARNING_COEFFICIENTS) {
   const profile = fixtureLearningProfile(fixture);
+  const adjustments = learningCoefficients.adjustments || DEFAULT_LEARNING_COEFFICIENTS.adjustments;
   const raw = { ...probabilities };
   const favorite = Math.max(raw.home, raw.away);
   const underdog = Math.min(raw.home, raw.away);
@@ -2168,6 +2398,8 @@ function calibratedResultProbabilitiesForFixture(probabilities, fixture) {
   if (favorite > 0.78 && profile.lowBlock > profile.chanceCreation) {
     favouriteCompression += 0.025;
   }
+  drawLift += Number(adjustments.draw_lift || 0);
+  favouriteCompression += Number(adjustments.favourite_compression || 0);
 
   drawLift += favouriteCompression * 0.55;
 
@@ -2199,6 +2431,9 @@ function calibratedResultProbabilitiesForFixture(probabilities, fixture) {
       low_block_draw_risk_points: Number((profile.drawRisk * 100).toFixed(1)),
       goal_suppression_points: Number(profile.goalSuppression.toFixed(2)),
       break_open_risk_points: Number(profile.breakOpenRisk.toFixed(2)),
+      learned_draw_lift_points: Number((Number(adjustments.draw_lift || 0) * 100).toFixed(1)),
+      learned_favourite_compression_points: Number((Number(adjustments.favourite_compression || 0) * 100).toFixed(1)),
+      learning_confidence: learningCoefficients.confidence || 'none',
       note: 'Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk.'
     }
   };
@@ -2242,11 +2477,12 @@ function fixtureTempoAdjustment(fixture) {
   return clamp((highCount * 0.11) - (lowCount * 0.09), -0.28, 0.32);
 }
 
-function deriveFixtureGoalModel(fixture) {
+function deriveFixtureGoalModel(fixture, learningCoefficients = DEFAULT_LEARNING_COEFFICIENTS) {
   const baseProbabilities = h2hModelProbabilities(fixture);
   const teams = splitTeams(fixture.match_name);
   if (!baseProbabilities || !teams) return;
-  const probabilities = calibratedResultProbabilitiesForFixture(baseProbabilities, fixture);
+  const probabilities = calibratedResultProbabilitiesForFixture(baseProbabilities, fixture, learningCoefficients);
+  const learningAdjustments = learningCoefficients.adjustments || DEFAULT_LEARNING_COEFFICIENTS.adjustments;
   const displayTeams = fixture.match_name.split(/\s+vs\s+/i);
   const displayHome = displayTeams[0] || teams.home;
   const displayAway = displayTeams[1] || teams.away;
@@ -2256,8 +2492,18 @@ function deriveFixtureGoalModel(fixture) {
   const drawBrake = Math.max(0, probabilities.draw - 0.22) * 2.35;
   const favouriteEventBoost = Math.max(0, favorite - 0.62) * 0.55;
   const tempoAdjustment = fixtureTempoAdjustment(fixture);
-  const goalSuppression = probabilities.profile?.goalSuppression || 0;
-  const breakOpenRisk = probabilities.profile?.breakOpenRisk || 0;
+  const goalSuppression = clamp(
+    (probabilities.profile?.goalSuppression || 0)
+      + Number(learningAdjustments.goal_suppression || 0)
+      + Number(learningAdjustments.chance_quality_penalty || 0),
+    0,
+    0.42
+  );
+  const breakOpenRisk = clamp(
+    (probabilities.profile?.breakOpenRisk || 0) + Number(learningAdjustments.break_open_risk || 0),
+    0,
+    0.42
+  );
   const totalGoalsMean = clamp(2.46 - drawBrake + (resultGap * 0.32) + favouriteEventBoost + tempoAdjustment - goalSuppression + breakOpenRisk, 1.55, 3.55);
   const homeShare = clamp(0.5 + ((probabilities.home - probabilities.away) * 0.46), 0.23, 0.77);
   const homeLambda = totalGoalsMean * homeShare;
@@ -2302,6 +2548,15 @@ function deriveFixtureGoalModel(fixture) {
     tempo_adjustment: Number(tempoAdjustment.toFixed(2)),
     goal_suppression: Number(goalSuppression.toFixed(2)),
     break_open_risk: Number(breakOpenRisk.toFixed(2)),
+    learning_adjustments: {
+      confidence: learningCoefficients.confidence || 'none',
+      sample_size: learningCoefficients.sample_size || 0,
+      draw_lift: Number(Number(learningAdjustments.draw_lift || 0).toFixed(4)),
+      favourite_compression: Number(Number(learningAdjustments.favourite_compression || 0).toFixed(4)),
+      goal_suppression: Number(Number(learningAdjustments.goal_suppression || 0).toFixed(4)),
+      break_open_risk: Number(Number(learningAdjustments.break_open_risk || 0).toFixed(4)),
+      chance_quality_penalty: Number(Number(learningAdjustments.chance_quality_penalty || 0).toFixed(4))
+    },
     ...probabilities.calibration
   };
   fixture.exact_score_model = scores
@@ -2356,9 +2611,9 @@ function deriveFixtureGoalModel(fixture) {
   fixture.model_market_view = modelMarkets;
 }
 
-function deriveFixtureModels(dataset) {
+function deriveFixtureModels(dataset, learningCoefficients = DEFAULT_LEARNING_COEFFICIENTS) {
   for (const fixture of dataset) {
-    deriveFixtureGoalModel(fixture);
+    deriveFixtureGoalModel(fixture, learningCoefficients);
   }
 }
 
@@ -2527,6 +2782,7 @@ async function main() {
   }
 
   const dataset = JSON.parse(await readFile(DATA_PATH, 'utf8'));
+  let learningCoefficients = await readLearningCoefficients();
   const timing = shouldRefresh(dataset);
 
   if (!timing.refresh) {
@@ -2636,15 +2892,19 @@ async function main() {
 
   const correctedOutlierPrices = sanitizePostKickoffMarketPrices(dataset);
   const prunedMarkets = pruneUnverifiedFutureMarkets(dataset);
-  deriveFixtureModels(dataset);
+  deriveFixtureModels(dataset, learningCoefficients);
   const learnedMatches = applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
+  learningCoefficients = buildLearningCoefficients(dataset, learningCoefficients, getNow());
+  deriveFixtureModels(dataset, learningCoefficients);
+  applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
   reconcileMarketScanModelValues(dataset);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
+  await writeFile(LEARNING_COEFFICIENTS_PATH, `${JSON.stringify(learningCoefficients, null, 2)}\n`);
   const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {

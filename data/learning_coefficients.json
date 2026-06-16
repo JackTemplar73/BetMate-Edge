@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "updated_at": "2026-06-16T00:08:07.172Z",
+  "sample_size": 11,
+  "confidence": "developing",
+  "adjustments": {
+    "draw_lift": 0.0128,
+    "favourite_compression": 0.019,
+    "goal_suppression": 0.042,
+    "break_open_risk": 0.027,
+    "chance_quality_penalty": 0.006
+  },
+  "flags": {
+    "finishing-variance-high": 2,
+    "draw-risk-underestimated": 5,
+    "territory-did-not-become-shot-volume": 2,
+    "xg-did-not-support-favourite": 1,
+    "goal-suppression-underweighted": 2,
+    "finishing-variance-low": 1,
+    "break-open-risk-underweighted": 1,
+    "favourite-confidence-too-high": 1,
+    "chance-quality-overstated": 1
+  },
+  "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
+  "xg_sample_size": 11,
+  "previous_updated_at": "2026-06-16T00:06:10.757Z"
+}
