@@ -2076,21 +2076,23 @@ function estimatedSourceLabel(bet) {
 }
 
 function formatLinePriceWithQi(price, bet) {
+  const lineQi = getLineQiForSavedModel(bet, price);
+
   return `
     <span class="primary-cell line-price-with-qi">
       <span>${formatHistoryPrice(price)}</span>
-      <span class="qi-badge compact ${metricClass(getClosingQi(bet))}">${formatClosingQiLabel(bet)}</span>
+      <span class="qi-badge compact ${metricClass(lineQi)}">${formatClosingQiLabel(bet, lineQi)}</span>
     </span>
   `;
 }
 
-function formatClosingQiLabel(bet) {
+function formatClosingQiLabel(bet, lineQi = getClosingQi(bet)) {
   const label = hasNumericValue(bet.closing_odds)
     ? 'Closing QI'
     : hasNumericValue(bet.latest_pre_kickoff_odds)
       ? 'Latest QI'
       : 'Latest QI';
-  return formatQiBadge(getClosingQi(bet), label);
+  return formatQiBadge(lineQi, label);
 }
 
 function formatLatestPriceLabel(bet) {
@@ -2109,14 +2111,18 @@ function formatCurrentSignal(bet) {
   const modelPrice = Number(bet.current_model_price);
   const ev = Number(bet.current_ev);
   const details = [
-    Number.isFinite(modelPrice) ? `Model ${formatHistoryPrice(modelPrice)}` : null,
-    Number.isFinite(ev) ? `EV ${formatClv(ev)}` : null
+    Number.isFinite(modelPrice) ? `Current model ${formatHistoryPrice(modelPrice)}` : null,
+    Number.isFinite(ev) ? `Current EV ${formatClv(ev)}` : null
   ].filter(Boolean).join(' | ');
 
   return details ? `<span class="sub-cell">${details}</span>` : '';
 }
 
 function getClosingQi(bet) {
+  const comparablePrice = getLatestComparableOdds(bet);
+  const lineQi = getLineQiForSavedModel(bet, comparablePrice);
+  if (Number.isFinite(lineQi)) return lineQi;
+
   const closingQi = numericOrNull(bet.closing_qi);
   if (closingQi !== null) return closingQi;
   const latestQi = numericOrNull(bet.latest_pre_kickoff_qi);
@@ -2124,6 +2130,19 @@ function getClosingQi(bet) {
   const estimatedQi = numericOrNull(bet.estimated_qi);
   if (hasNumericValue(bet.estimated_closing_odds) && estimatedQi !== null) return estimatedQi;
   return Number(bet.current_qi);
+}
+
+function getLineQiForSavedModel(bet, price) {
+  const openingModelPrice = numericOrNull(bet.opening_model_price);
+  const linePrice = numericOrNull(price);
+  if (openingModelPrice === null || linePrice === null) return null;
+
+  const metrics = runVectorCalculations({
+    true_price: openingModelPrice,
+    current_odds: linePrice
+  });
+
+  return Number.isFinite(Number(metrics.qi)) ? Number(metrics.qi) : null;
 }
 
 function formatQiMove(bet) {
