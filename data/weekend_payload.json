@@ -12838,7 +12838,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "73a4fcd14cc9766b9b9bfd50b8ca153a",
       "offered_market_keys": [
@@ -12867,9 +12867,7 @@
           "devig_book_probability": 16.72,
           "ev": 12.8,
           "qi": 61,
-          "price_qi": 83,
-          "edge_points": 4.54,
-          "risk_rating": "Medium"
+          "price_qi": 83
         },
         {
           "selection": "Senegal or Draw",
@@ -12885,9 +12883,7 @@
           "devig_book_probability": 18.2,
           "ev": 4,
           "qi": 48,
-          "price_qi": 69,
-          "edge_points": 1.54,
-          "risk_rating": "Medium"
+          "price_qi": 69
         },
         {
           "selection": "France to Win",
@@ -12904,6 +12900,22 @@
           "ev": -3.87,
           "qi": 45,
           "price_qi": 28
+        },
+        {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 69.4,
+          "model_price": 1.44,
+          "current_odds": 1.38,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 67.76,
+          "ev": -4.17,
+          "qi": 44,
+          "price_qi": 26
         },
         {
           "selection": "France to Win",
@@ -12935,27 +12947,7 @@
           "devig_book_probability": 75.4,
           "ev": -4.62,
           "qi": 43,
-          "price_qi": 22,
-          "edge_points": -3.72,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 69.4,
-          "model_price": 1.44,
-          "current_odds": 1.38,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 67.76,
-          "ev": -4.17,
-          "qi": 44,
-          "price_qi": 26,
-          "edge_points": -3.02,
-          "risk_rating": "Low"
+          "price_qi": 22
         },
         {
           "selection": "BTTS No",
@@ -12971,9 +12963,7 @@
           "devig_book_probability": 50,
           "ev": -2.6,
           "qi": 42,
-          "price_qi": 35,
-          "edge_points": -1.39,
-          "risk_rating": "Low"
+          "price_qi": 35
         },
         {
           "selection": "Under 4.5 Goals",
@@ -12989,9 +12979,7 @@
           "devig_book_probability": 82.96,
           "ev": -4.24,
           "qi": 42,
-          "price_qi": 21,
-          "edge_points": -3.75,
-          "risk_rating": "Low"
+          "price_qi": 21
         },
         {
           "selection": "France to Win",
@@ -13042,24 +13030,6 @@
           "price_qi": 17
         },
         {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 93.9,
-          "model_price": 1.07,
-          "current_odds": 1.02,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 91.51,
-          "ev": -4.67,
-          "qi": 39,
-          "price_qi": 10,
-          "edge_points": -4.58,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "France or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -13073,9 +13043,7 @@
           "devig_book_probability": 43.02,
           "ev": -5.98,
           "qi": 40,
-          "price_qi": 13,
-          "edge_points": -5.44,
-          "risk_rating": "Low"
+          "price_qi": 13
         },
         {
           "selection": "France Draw No Bet",
@@ -13091,9 +13059,23 @@
           "devig_book_probability": 80.37,
           "ev": -6.45,
           "qi": 40,
-          "price_qi": 14,
-          "edge_points": -5.56,
-          "risk_rating": "Low"
+          "price_qi": 14
+        },
+        {
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 93.9,
+          "model_price": 1.07,
+          "current_odds": 1.02,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 91.51,
+          "ev": -4.67,
+          "qi": 39,
+          "price_qi": 10
         },
         {
           "selection": "Match to end in a Draw",
@@ -13125,9 +13107,7 @@
           "devig_book_probability": 51.07,
           "ev": -4.69,
           "qi": 38,
-          "price_qi": 26,
-          "edge_points": -2.56,
-          "risk_rating": "Low"
+          "price_qi": 26
         },
         {
           "selection": "France or Senegal",
@@ -13143,9 +13123,7 @@
           "devig_book_probability": 38.78,
           "ev": -9.63,
           "qi": 38,
-          "price_qi": 9,
-          "edge_points": -7.89,
-          "risk_rating": "Low"
+          "price_qi": 9
         },
         {
           "selection": "France or Draw",
@@ -13161,9 +13139,7 @@
           "devig_book_probability": 43.66,
           "ev": -7.69,
           "qi": 37,
-          "price_qi": 7,
-          "edge_points": -7.12,
-          "risk_rating": "Low"
+          "price_qi": 7
         },
         {
           "selection": "France or Senegal",
@@ -13179,9 +13155,7 @@
           "devig_book_probability": 39.62,
           "ev": -11.85,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -9.96,
-          "risk_rating": "Low"
+          "price_qi": 5
         },
         {
           "selection": "Over 2.5 Goals",
@@ -13197,9 +13171,7 @@
           "devig_book_probability": 53.33,
           "ev": -7.41,
           "qi": 36,
-          "price_qi": 18,
-          "edge_points": -4.23,
-          "risk_rating": "Low"
+          "price_qi": 18
         },
         {
           "selection": "Under 2.5 Goals",
@@ -13215,9 +13187,7 @@
           "devig_book_probability": 46.67,
           "ev": -5.66,
           "qi": 35,
-          "price_qi": 24,
-          "edge_points": -2.83,
-          "risk_rating": "Low"
+          "price_qi": 24
         },
         {
           "selection": "BTTS Yes",
@@ -13233,9 +13203,7 @@
           "devig_book_probability": 48.93,
           "ev": -8.61,
           "qi": 33,
-          "price_qi": 17,
-          "edge_points": -4.51,
-          "risk_rating": "Low"
+          "price_qi": 17
         },
         {
           "selection": "Match to end in a Draw",
@@ -13267,9 +13235,7 @@
           "devig_book_probability": 50,
           "ev": -10.53,
           "qi": 32,
-          "price_qi": 14,
-          "edge_points": -5.63,
-          "risk_rating": "Low"
+          "price_qi": 14
         },
         {
           "selection": "Senegal to Win",
@@ -13333,9 +13299,7 @@
           "devig_book_probability": 32.24,
           "ev": -11.31,
           "qi": 22,
-          "price_qi": 17,
-          "edge_points": -3.9,
-          "risk_rating": "Medium"
+          "price_qi": 17
         },
         {
           "selection": "Under 1.5 Goals",
@@ -13351,9 +13315,7 @@
           "devig_book_probability": 24.6,
           "ev": -11.63,
           "qi": 19,
-          "price_qi": 18,
-          "edge_points": -3.06,
-          "risk_rating": "Medium"
+          "price_qi": 18
         },
         {
           "selection": "Match to end in a Draw",
@@ -13417,9 +13379,7 @@
           "devig_book_probability": 19.63,
           "ev": -9,
           "qi": 14,
-          "price_qi": 21,
-          "edge_points": -1.9,
-          "risk_rating": "High"
+          "price_qi": 21
         },
         {
           "selection": "Senegal to Win",
@@ -13467,9 +13427,7 @@
           "devig_book_probability": 17.04,
           "ev": -17.04,
           "qi": 12,
-          "price_qi": 16,
-          "edge_points": -3.1,
-          "risk_rating": "High"
+          "price_qi": 16
         },
         {
           "selection": "Under 0.5 Goals",
@@ -13485,9 +13443,7 @@
           "devig_book_probability": 8.49,
           "ev": -32.47,
           "qi": 8,
-          "price_qi": 14,
-          "edge_points": -2.95,
-          "risk_rating": "Very high"
+          "price_qi": 14
         }
       ]
     },
@@ -13915,7 +13871,7 @@
         "SportsBet",
         "Betfair"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "4d4f2b9b78182b557d4fbf8dcf4f4af2",
       "offered_market_keys": [
@@ -13944,9 +13900,7 @@
           "devig_book_probability": 62.5,
           "ev": 19.05,
           "qi": 98,
-          "price_qi": 95,
-          "edge_points": 12.7,
-          "risk_rating": "Low"
+          "price_qi": 95
         },
         {
           "selection": "Under 2.5 Goals",
@@ -13962,9 +13916,7 @@
           "devig_book_probability": 41.56,
           "ev": 32.35,
           "qi": 92,
-          "price_qi": 95,
-          "edge_points": 14.38,
-          "risk_rating": "Medium"
+          "price_qi": 95
         },
         {
           "selection": "Under 4.5 Goals",
@@ -13980,9 +13932,7 @@
           "devig_book_probability": 79.23,
           "ev": 8.26,
           "qi": 84,
-          "price_qi": 90,
-          "edge_points": 7,
-          "risk_rating": "Low"
+          "price_qi": 90
         },
         {
           "selection": "Iraq or Draw",
@@ -13998,9 +13948,7 @@
           "devig_book_probability": 9.89,
           "ev": 84.62,
           "qi": 80,
-          "price_qi": 99,
-          "edge_points": 17.63,
-          "risk_rating": "High"
+          "price_qi": 99
         },
         {
           "selection": "Iraq or Draw",
@@ -14016,9 +13964,7 @@
           "devig_book_probability": 11.83,
           "ev": 53.85,
           "qi": 79,
-          "price_qi": 96,
-          "edge_points": 13.46,
-          "risk_rating": "High"
+          "price_qi": 96
         },
         {
           "selection": "Under 1.5 Goals",
@@ -14034,9 +13980,7 @@
           "devig_book_probability": 20.77,
           "ev": 46.58,
           "qi": 71,
-          "price_qi": 94,
-          "edge_points": 10.35,
-          "risk_rating": "High"
+          "price_qi": 94
         },
         {
           "selection": "BTTS No",
@@ -14052,9 +13996,7 @@
           "devig_book_probability": 59.28,
           "ev": -1.25,
           "qi": 49,
-          "price_qi": 42,
-          "edge_points": -0.79,
-          "risk_rating": "Low"
+          "price_qi": 42
         },
         {
           "selection": "BTTS No",
@@ -14070,9 +14012,7 @@
           "devig_book_probability": 60.15,
           "ev": -1.88,
           "qi": 47,
-          "price_qi": 38,
-          "edge_points": -1.19,
-          "risk_rating": "Low"
+          "price_qi": 38
         },
         {
           "selection": "Norway to Win",
@@ -14085,7 +14025,7 @@
           "current_odds": 1.23,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 80.74,
+          "devig_book_probability": 80.88,
           "ev": -3.91,
           "qi": 44,
           "price_qi": 25
@@ -14168,9 +14108,7 @@
           "devig_book_probability": 10.45,
           "ev": 27.66,
           "qi": 40,
-          "price_qi": 85,
-          "edge_points": 3.07,
-          "risk_rating": "Very high"
+          "price_qi": 85
         },
         {
           "selection": "Match to end in a Draw",
@@ -14180,13 +14118,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 14.8,
           "model_price": 6.74,
-          "current_odds": 7.4,
+          "current_odds": 7.6,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 13.42,
-          "ev": 9.79,
-          "qi": 37,
-          "price_qi": 77
+          "devig_book_probability": 13.09,
+          "ev": 12.76,
+          "qi": 39,
+          "price_qi": 79
         },
         {
           "selection": "Norway or Draw",
@@ -14202,9 +14140,7 @@
           "devig_book_probability": 45.93,
           "ev": -7.21,
           "qi": 36,
-          "price_qi": 4,
-          "edge_points": -7,
-          "risk_rating": "Low"
+          "price_qi": 4
         },
         {
           "selection": "Over 0.5 Goals",
@@ -14220,9 +14156,7 @@
           "devig_book_probability": 91.51,
           "ev": -8.11,
           "qi": 36,
-          "price_qi": 2,
-          "edge_points": -7.95,
-          "risk_rating": "Low"
+          "price_qi": 2
         },
         {
           "selection": "Norway or Draw",
@@ -14238,9 +14172,7 @@
           "devig_book_probability": 46.55,
           "ev": -8.11,
           "qi": 36,
-          "price_qi": 2,
-          "edge_points": -7.95,
-          "risk_rating": "Low"
+          "price_qi": 2
         },
         {
           "selection": "Norway Draw No Bet",
@@ -14256,9 +14188,7 @@
           "devig_book_probability": 89.55,
           "ev": -10.26,
           "qi": 36,
-          "price_qi": 2,
-          "edge_points": -9.77,
-          "risk_rating": "Low"
+          "price_qi": 2
         },
         {
           "selection": "Iraq or Norway",
@@ -14274,9 +14204,7 @@
           "devig_book_probability": 42.24,
           "ev": -19.42,
           "qi": 35,
-          "price_qi": 1,
-          "edge_points": -17.34,
-          "risk_rating": "Low"
+          "price_qi": 1
         },
         {
           "selection": "Over 1.5 Goals",
@@ -14292,9 +14220,7 @@
           "devig_book_probability": 79.23,
           "ev": -20.27,
           "qi": 35,
-          "price_qi": 1,
-          "edge_points": -17.18,
-          "risk_rating": "Low"
+          "price_qi": 1
         },
         {
           "selection": "Iraq or Norway",
@@ -14310,9 +14236,7 @@
           "devig_book_probability": 43.56,
           "ev": -21.58,
           "qi": 35,
-          "price_qi": 0,
-          "edge_points": -19.8,
-          "risk_rating": "Low"
+          "price_qi": 0
         },
         {
           "selection": "Iraq to Win",
@@ -14322,12 +14246,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 7.1,
           "model_price": 14.14,
-          "current_odds": 17,
+          "current_odds": 16.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 5.84,
-          "ev": 20.23,
-          "qi": 34,
+          "devig_book_probability": 6.03,
+          "ev": 16.69,
+          "qi": 33,
           "price_qi": 79
         },
         {
@@ -14376,9 +14300,7 @@
           "devig_book_probability": 8.49,
           "ev": 7.63,
           "qi": 31,
-          "price_qi": 75,
-          "edge_points": 0.69,
-          "risk_rating": "Very high"
+          "price_qi": 75
         },
         {
           "selection": "Iraq to Win",
@@ -14410,9 +14332,7 @@
           "devig_book_probability": 39.85,
           "ev": -10.9,
           "qi": 25,
-          "price_qi": 16,
-          "edge_points": -4.6,
-          "risk_rating": "Medium"
+          "price_qi": 16
         },
         {
           "selection": "Over 2.5 Goals",
@@ -14428,9 +14348,7 @@
           "devig_book_probability": 58.44,
           "ev": -34.43,
           "qi": 25,
-          "price_qi": 1,
-          "edge_points": -21.52,
-          "risk_rating": "Low"
+          "price_qi": 1
         },
         {
           "selection": "BTTS Yes",
@@ -14446,9 +14364,7 @@
           "devig_book_probability": 40.72,
           "ev": -13.53,
           "qi": 24,
-          "price_qi": 14,
-          "edge_points": -5.88,
-          "risk_rating": "Medium"
+          "price_qi": 14
         },
         {
           "selection": "Match to end in a Draw",
@@ -14496,9 +14412,7 @@
           "devig_book_probability": 37.5,
           "ev": -48.67,
           "qi": 12,
-          "price_qi": 2,
-          "edge_points": -19.47,
-          "risk_rating": "Medium"
+          "price_qi": 2
         },
         {
           "selection": "Iraq to Win",
@@ -14562,9 +14476,7 @@
           "devig_book_probability": 20.77,
           "ev": -61.04,
           "qi": 8,
-          "price_qi": 3,
-          "edge_points": -13.56,
-          "risk_rating": "High"
+          "price_qi": 3
         }
       ]
     },
@@ -14976,7 +14888,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "f31b2ee9e1cc6f7e641467f8237eaa21",
       "offered_market_keys": [
@@ -15005,9 +14917,7 @@
           "devig_book_probability": 15.98,
           "ev": 11.74,
           "qi": 58,
-          "price_qi": 82,
-          "edge_points": 3.98,
-          "risk_rating": "Medium"
+          "price_qi": 82
         },
         {
           "selection": "Argentina to Win",
@@ -15020,28 +14930,26 @@
           "current_odds": 1.47,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 67.88,
+          "devig_book_probability": 67.58,
           "ev": 0,
           "qi": 52,
           "price_qi": 49
         },
         {
-          "selection": "Algeria or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 37.9,
-          "model_price": 2.64,
-          "current_odds": 2.8,
+          "selection": "Argentina to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 68,
+          "model_price": 1.47,
+          "current_odds": 1.45,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 16.92,
-          "ev": 6.06,
-          "qi": 51,
-          "price_qi": 75,
-          "edge_points": 2.16,
-          "risk_rating": "Medium"
+          "devig_book_probability": 65.17,
+          "ev": -1.36,
+          "qi": 49,
+          "price_qi": 41
         },
         {
           "selection": "Argentina to Win",
@@ -15073,25 +14981,23 @@
           "devig_book_probability": 71.74,
           "ev": -3.7,
           "qi": 44,
-          "price_qi": 27,
-          "edge_points": -2.85,
-          "risk_rating": "Low"
+          "price_qi": 27
         },
         {
-          "selection": "Argentina to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 68,
-          "model_price": 1.47,
-          "current_odds": 1.42,
+          "selection": "Algeria or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 37.9,
+          "model_price": 2.64,
+          "current_odds": 2.7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 66.15,
-          "ev": -3.4,
-          "qi": 46,
-          "price_qi": 30
+          "devig_book_probability": 17.5,
+          "ev": 2.27,
+          "qi": 43,
+          "price_qi": 62
         },
         {
           "selection": "Argentina to Win",
@@ -15139,9 +15045,7 @@
           "devig_book_probability": 71.74,
           "ev": -5.8,
           "qi": 42,
-          "price_qi": 19,
-          "edge_points": -4.46,
-          "risk_rating": "Low"
+          "price_qi": 19
         },
         {
           "selection": "Over 0.5 Goals",
@@ -15157,9 +15061,7 @@
           "devig_book_probability": 89.64,
           "ev": -3.7,
           "qi": 41,
-          "price_qi": 18,
-          "edge_points": -3.56,
-          "risk_rating": "Low"
+          "price_qi": 18
         },
         {
           "selection": "Under 4.5 Goals",
@@ -15175,9 +15077,39 @@
           "devig_book_probability": 85.64,
           "ev": -5.22,
           "qi": 40,
-          "price_qi": 15,
-          "edge_points": -4.79,
-          "risk_rating": "Low"
+          "price_qi": 15
+        },
+        {
+          "selection": "Argentina or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 87.8,
+          "model_price": 1.14,
+          "current_odds": 1.08,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 43.76,
+          "ev": -5.26,
+          "qi": 40,
+          "price_qi": 14
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 56.2,
+          "model_price": 1.78,
+          "current_odds": 1.68,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 55.56,
+          "ev": -5.62,
+          "qi": 39,
+          "price_qi": 22
         },
         {
           "selection": "Argentina or Draw",
@@ -15193,45 +15125,7 @@
           "devig_book_probability": 44.06,
           "ev": -6.14,
           "qi": 39,
-          "price_qi": 10,
-          "edge_points": -5.74,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Argentina or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 87.8,
-          "model_price": 1.14,
-          "current_odds": 1.07,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 44.26,
-          "ev": -6.14,
-          "qi": 39,
-          "price_qi": 10,
-          "edge_points": -5.74,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 56.2,
-          "model_price": 1.78,
-          "current_odds": 1.65,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 56.58,
-          "ev": -7.3,
-          "qi": 37,
-          "price_qi": 18,
-          "edge_points": -4.43,
-          "risk_rating": "Low"
+          "price_qi": 10
         },
         {
           "selection": "Argentina Draw No Bet",
@@ -15241,15 +15135,13 @@
           "oddsapi_market": "draw_no_bet",
           "model_probability": 83.5,
           "model_price": 1.2,
-          "current_odds": 1.1,
+          "current_odds": 1.12,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 84.51,
-          "ev": -8.33,
-          "qi": 37,
-          "price_qi": 7,
-          "edge_points": -7.58,
-          "risk_rating": "Low"
+          "devig_book_probability": 83.08,
+          "ev": -6.67,
+          "qi": 39,
+          "price_qi": 12
         },
         {
           "selection": "Under 2.5 Goals",
@@ -15265,9 +15157,7 @@
           "devig_book_probability": 50,
           "ev": -5.56,
           "qi": 37,
-          "price_qi": 23,
-          "edge_points": -2.97,
-          "risk_rating": "Low"
+          "price_qi": 23
         },
         {
           "selection": "BTTS No",
@@ -15283,9 +15173,7 @@
           "devig_book_probability": 57.59,
           "ev": -8.99,
           "qi": 36,
-          "price_qi": 15,
-          "edge_points": -5.55,
-          "risk_rating": "Low"
+          "price_qi": 15
         },
         {
           "selection": "Over 2.5 Goals",
@@ -15301,27 +15189,7 @@
           "devig_book_probability": 50,
           "ev": -7.43,
           "qi": 35,
-          "price_qi": 19,
-          "edge_points": -3.97,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 43.8,
-          "model_price": 2.28,
-          "current_odds": 2.15,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 43.42,
-          "ev": -5.7,
-          "qi": 34,
-          "price_qi": 24,
-          "edge_points": -2.65,
-          "risk_rating": "Low"
+          "price_qi": 19
         },
         {
           "selection": "BTTS Yes",
@@ -15337,9 +15205,23 @@
           "devig_book_probability": 42.41,
           "ev": -3.51,
           "qi": 33,
-          "price_qi": 31,
-          "edge_points": -1.59,
-          "risk_rating": "Medium"
+          "price_qi": 31
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 43.8,
+          "model_price": 2.28,
+          "current_odds": 2.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 44.44,
+          "ev": -7.89,
+          "qi": 32,
+          "price_qi": 19
         },
         {
           "selection": "Match to end in a Draw",
@@ -15349,13 +15231,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 21.2,
           "model_price": 4.72,
-          "current_odds": 4.8,
+          "current_odds": 4.7,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 20.79,
-          "ev": 1.69,
-          "qi": 29,
-          "price_qi": 59
+          "devig_book_probability": 21.14,
+          "ev": -0.42,
+          "qi": 24,
+          "price_qi": 47
         },
         {
           "selection": "Over 3.5 Goals",
@@ -15371,27 +15253,7 @@
           "devig_book_probability": 28.26,
           "ev": -9.09,
           "qi": 22,
-          "price_qi": 20,
-          "edge_points": -2.75,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Algeria Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 16.5,
-          "model_price": 6.08,
-          "current_odds": 6,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 15.49,
-          "ev": -1.32,
-          "qi": 21,
-          "price_qi": 42,
-          "edge_points": -0.22,
-          "risk_rating": "High"
+          "price_qi": 20
         },
         {
           "selection": "Match to end in a Draw",
@@ -15439,9 +15301,7 @@
           "devig_book_probability": 28.26,
           "ev": -15.17,
           "qi": 19,
-          "price_qi": 15,
-          "edge_points": -4.6,
-          "risk_rating": "Medium"
+          "price_qi": 15
         },
         {
           "selection": "Match to end in a Draw",
@@ -15460,6 +15320,22 @@
           "price_qi": 29
         },
         {
+          "selection": "Algeria Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 16.5,
+          "model_price": 6.08,
+          "current_odds": 5.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 16.92,
+          "ev": -9.54,
+          "qi": 14,
+          "price_qi": 21
+        },
+        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -15470,7 +15346,7 @@
           "current_odds": 4.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 22.1,
+          "devig_book_probability": 22.23,
           "ev": -9.96,
           "qi": 14,
           "price_qi": 20
@@ -15489,9 +15365,7 @@
           "devig_book_probability": 14.36,
           "ev": -15.36,
           "qi": 13,
-          "price_qi": 18,
-          "edge_points": -2.36,
-          "risk_rating": "High"
+          "price_qi": 18
         },
         {
           "selection": "Under 0.5 Goals",
@@ -15507,9 +15381,7 @@
           "devig_book_probability": 10.36,
           "ev": -36.62,
           "qi": 7,
-          "price_qi": 12,
-          "edge_points": -4.07,
-          "risk_rating": "Very high"
+          "price_qi": 12
         }
       ]
     },
@@ -15922,7 +15794,7 @@
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "25161cf6cf0cd9be17ae2e7e224a1f45",
       "offered_market_keys": [
@@ -15951,9 +15823,7 @@
           "devig_book_probability": 14.08,
           "ev": 28.35,
           "qi": 72,
-          "price_qi": 91,
-          "edge_points": 8.46,
-          "risk_rating": "Medium"
+          "price_qi": 91
         },
         {
           "selection": "Jordan or Draw",
@@ -15969,9 +15839,7 @@
           "devig_book_probability": 15.06,
           "ev": 20.69,
           "qi": 67,
-          "price_qi": 88,
-          "edge_points": 6.57,
-          "risk_rating": "Medium"
+          "price_qi": 88
         },
         {
           "selection": "Under 3.5 Goals",
@@ -15987,9 +15855,7 @@
           "devig_book_probability": 68.81,
           "ev": 1.49,
           "qi": 58,
-          "price_qi": 59,
-          "edge_points": 1.1,
-          "risk_rating": "Low"
+          "price_qi": 59
         },
         {
           "selection": "Under 2.5 Goals",
@@ -16005,9 +15871,7 @@
           "devig_book_probability": 48,
           "ev": 3.17,
           "qi": 57,
-          "price_qi": 67,
-          "edge_points": 1.63,
-          "risk_rating": "Low"
+          "price_qi": 67
         },
         {
           "selection": "Under 4.5 Goals",
@@ -16023,9 +15887,7 @@
           "devig_book_probability": 82.96,
           "ev": 0,
           "qi": 52,
-          "price_qi": 49,
-          "edge_points": 0,
-          "risk_rating": "Low"
+          "price_qi": 49
         },
         {
           "selection": "Under 1.5 Goals",
@@ -16041,9 +15903,7 @@
           "devig_book_probability": 24.6,
           "ev": 5.26,
           "qi": 43,
-          "price_qi": 72,
-          "edge_points": 1.39,
-          "risk_rating": "Medium"
+          "price_qi": 72
         },
         {
           "selection": "BTTS No",
@@ -16059,9 +15919,7 @@
           "devig_book_probability": 55.56,
           "ev": -2.89,
           "qi": 43,
-          "price_qi": 33,
-          "edge_points": -1.72,
-          "risk_rating": "Low"
+          "price_qi": 33
         },
         {
           "selection": "BTTS No",
@@ -16077,9 +15935,7 @@
           "devig_book_probability": 55.7,
           "ev": -3.47,
           "qi": 42,
-          "price_qi": 30,
-          "edge_points": -2.08,
-          "risk_rating": "Low"
+          "price_qi": 30
         },
         {
           "selection": "Over 0.5 Goals",
@@ -16095,9 +15951,7 @@
           "devig_book_probability": 90.66,
           "ev": -4.63,
           "qi": 39,
-          "price_qi": 12,
-          "edge_points": -4.49,
-          "risk_rating": "Low"
+          "price_qi": 12
         },
         {
           "selection": "Over 1.5 Goals",
@@ -16113,9 +15967,7 @@
           "devig_book_probability": 75.4,
           "ev": -10.14,
           "qi": 38,
-          "price_qi": 8,
-          "edge_points": -8.18,
-          "risk_rating": "Low"
+          "price_qi": 8
         },
         {
           "selection": "Austria or Draw",
@@ -16131,9 +15983,7 @@
           "devig_book_probability": 44.75,
           "ev": -7.02,
           "qi": 37,
-          "price_qi": 7,
-          "edge_points": -6.62,
-          "risk_rating": "Low"
+          "price_qi": 7
         },
         {
           "selection": "Austria or Draw",
@@ -16149,9 +15999,7 @@
           "devig_book_probability": 44.91,
           "ev": -7.89,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -7.52,
-          "risk_rating": "Low"
+          "price_qi": 5
         },
         {
           "selection": "Austria Draw No Bet",
@@ -16167,9 +16015,7 @@
           "devig_book_probability": 85.64,
           "ev": -9.17,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -8.41,
-          "risk_rating": "Low"
+          "price_qi": 5
         },
         {
           "selection": "Jordan Draw No Bet",
@@ -16185,9 +16031,7 @@
           "devig_book_probability": 14.36,
           "ev": 7.62,
           "qi": 36,
-          "price_qi": 76,
-          "edge_points": 1.17,
-          "risk_rating": "High"
+          "price_qi": 76
         },
         {
           "selection": "Austria or Jordan",
@@ -16203,9 +16047,7 @@
           "devig_book_probability": 40.2,
           "ev": -12.59,
           "qi": 36,
-          "price_qi": 4,
-          "edge_points": -10.67,
-          "risk_rating": "Low"
+          "price_qi": 4
         },
         {
           "selection": "Austria or Jordan",
@@ -16221,27 +16063,7 @@
           "devig_book_probability": 41.01,
           "ev": -14.81,
           "qi": 36,
-          "price_qi": 2,
-          "edge_points": -12.88,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 47,
-          "model_price": 2.13,
-          "current_odds": 1.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 52,
-          "ev": -15.49,
-          "qi": 30,
-          "price_qi": 9,
-          "edge_points": -8.61,
-          "risk_rating": "Low"
+          "price_qi": 2
         },
         {
           "selection": "BTTS Yes",
@@ -16257,9 +16079,7 @@
           "devig_book_probability": 44.44,
           "ev": -11.02,
           "qi": 30,
-          "price_qi": 15,
-          "edge_points": -5.25,
-          "risk_rating": "Low"
+          "price_qi": 15
         },
         {
           "selection": "BTTS Yes",
@@ -16275,9 +16095,23 @@
           "devig_book_probability": 44.3,
           "ev": -11.02,
           "qi": 30,
-          "price_qi": 15,
-          "edge_points": -5.25,
-          "risk_rating": "Low"
+          "price_qi": 15
+        },
+        {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 47,
+          "model_price": 2.13,
+          "current_odds": 1.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 52,
+          "ev": -15.49,
+          "qi": 30,
+          "price_qi": 9
         },
         {
           "selection": "Match to end in a Draw",
@@ -16341,9 +16175,7 @@
           "devig_book_probability": 31.19,
           "ev": -23.86,
           "qi": 17,
-          "price_qi": 9,
-          "edge_points": -7.95,
-          "risk_rating": "Medium"
+          "price_qi": 9
         },
         {
           "selection": "Match to end in a Draw",
@@ -16455,9 +16287,7 @@
           "devig_book_probability": 17.04,
           "ev": -36.19,
           "qi": 10,
-          "price_qi": 9,
-          "edge_points": -6.58,
-          "risk_rating": "High"
+          "price_qi": 9
         },
         {
           "selection": "Jordan to Win",
@@ -16489,9 +16319,7 @@
           "devig_book_probability": 9.34,
           "ev": -22.12,
           "qi": 9,
-          "price_qi": 17,
-          "edge_points": -2.21,
-          "risk_rating": "Very high"
+          "price_qi": 17
         }
       ]
     },
@@ -16919,7 +16747,7 @@
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -16948,9 +16776,7 @@
           "devig_book_probability": 12.14,
           "ev": 44.98,
           "qi": 81,
-          "price_qi": 95,
-          "edge_points": 11.53,
-          "risk_rating": "Medium"
+          "price_qi": 95
         },
         {
           "selection": "DR Congo or Draw",
@@ -16966,9 +16792,7 @@
           "devig_book_probability": 13.22,
           "ev": 33.83,
           "qi": 75,
-          "price_qi": 92,
-          "edge_points": 9.4,
-          "risk_rating": "Medium"
+          "price_qi": 92
         },
         {
           "selection": "Under 3.5 Goals",
@@ -16984,9 +16808,7 @@
           "devig_book_probability": 66.67,
           "ev": 1.45,
           "qi": 58,
-          "price_qi": 59,
-          "edge_points": 1.04,
-          "risk_rating": "Low"
+          "price_qi": 59
         },
         {
           "selection": "Under 2.5 Goals",
@@ -17002,9 +16824,7 @@
           "devig_book_probability": 45.62,
           "ev": 3.54,
           "qi": 57,
-          "price_qi": 68,
-          "edge_points": 1.72,
-          "risk_rating": "Low"
+          "price_qi": 68
         },
         {
           "selection": "Under 4.5 Goals",
@@ -17020,9 +16840,7 @@
           "devig_book_probability": 81.3,
           "ev": 0,
           "qi": 52,
-          "price_qi": 49,
-          "edge_points": 0,
-          "risk_rating": "Low"
+          "price_qi": 49
         },
         {
           "selection": "Portugal to Win",
@@ -17102,9 +16920,7 @@
           "devig_book_probability": 11.09,
           "ev": 26.3,
           "qi": 40,
-          "price_qi": 84,
-          "edge_points": 3.09,
-          "risk_rating": "Very high"
+          "price_qi": 84
         },
         {
           "selection": "Portugal to Win",
@@ -17136,9 +16952,39 @@
           "devig_book_probability": 90.66,
           "ev": -4.63,
           "qi": 39,
-          "price_qi": 12,
-          "edge_points": -4.49,
-          "risk_rating": "Low"
+          "price_qi": 12
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 57,
+          "model_price": 1.75,
+          "current_odds": 1.62,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 57.59,
+          "ev": -7.43,
+          "qi": 38,
+          "price_qi": 18
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 57,
+          "model_price": 1.75,
+          "current_odds": 1.62,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 57.59,
+          "ev": -7.43,
+          "qi": 38,
+          "price_qi": 18
         },
         {
           "selection": "Over 1.5 Goals",
@@ -17154,9 +17000,7 @@
           "devig_book_probability": 76.63,
           "ev": -9.63,
           "qi": 38,
-          "price_qi": 9,
-          "edge_points": -7.89,
-          "risk_rating": "Low"
+          "price_qi": 9
         },
         {
           "selection": "Portugal or Draw",
@@ -17172,45 +17016,7 @@
           "devig_book_probability": 45.76,
           "ev": -7.14,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -6.87,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 57,
-          "model_price": 1.75,
-          "current_odds": 1.62,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 57.59,
-          "ev": -7.43,
-          "qi": 38,
-          "price_qi": 18,
-          "edge_points": -4.59,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 57,
-          "model_price": 1.75,
-          "current_odds": 1.62,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 57.59,
-          "ev": -7.43,
-          "qi": 38,
-          "price_qi": 18,
-          "edge_points": -4.59,
-          "risk_rating": "Low"
+          "price_qi": 5
         },
         {
           "selection": "Portugal or Draw",
@@ -17226,9 +17032,7 @@
           "devig_book_probability": 45.96,
           "ev": -8.04,
           "qi": 36,
-          "price_qi": 3,
-          "edge_points": -7.8,
-          "risk_rating": "Low"
+          "price_qi": 3
         },
         {
           "selection": "Portugal Draw No Bet",
@@ -17244,9 +17048,7 @@
           "devig_book_probability": 88.91,
           "ev": -9.4,
           "qi": 36,
-          "price_qi": 3,
-          "edge_points": -8.87,
-          "risk_rating": "Low"
+          "price_qi": 3
         },
         {
           "selection": "Match to end in a Draw",
@@ -17294,27 +17096,7 @@
           "devig_book_probability": 23.37,
           "ev": 2.83,
           "qi": 33,
-          "price_qi": 64,
-          "edge_points": 0.71,
-          "risk_rating": "High"
-        },
-        {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 49.5,
-          "model_price": 2.02,
-          "current_odds": 1.72,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 54.38,
-          "ev": -14.85,
-          "qi": 31,
-          "price_qi": 9,
-          "edge_points": -8.63,
-          "risk_rating": "Low"
+          "price_qi": 64
         },
         {
           "selection": "Match to end in a Draw",
@@ -17331,6 +17113,22 @@
           "ev": 3.42,
           "qi": 31,
           "price_qi": 66
+        },
+        {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 49.5,
+          "model_price": 2.02,
+          "current_odds": 1.72,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 54.38,
+          "ev": -14.85,
+          "qi": 31,
+          "price_qi": 9
         },
         {
           "selection": "DR Congo to Win",
@@ -17362,9 +17160,7 @@
           "devig_book_probability": 42.41,
           "ev": -5.58,
           "qi": 30,
-          "price_qi": 24,
-          "edge_points": -2.54,
-          "risk_rating": "Medium"
+          "price_qi": 24
         },
         {
           "selection": "BTTS Yes",
@@ -17380,9 +17176,7 @@
           "devig_book_probability": 42.41,
           "ev": -5.58,
           "qi": 30,
-          "price_qi": 24,
-          "edge_points": -2.54,
-          "risk_rating": "Medium"
+          "price_qi": 24
         },
         {
           "selection": "Match to end in a Draw",
@@ -17430,9 +17224,7 @@
           "devig_book_probability": 33.33,
           "ev": -22.87,
           "qi": 18,
-          "price_qi": 10,
-          "edge_points": -8.17,
-          "risk_rating": "Medium"
+          "price_qi": 10
         },
         {
           "selection": "DR Congo to Win",
@@ -17512,9 +17304,7 @@
           "devig_book_probability": 18.7,
           "ev": -34.9,
           "qi": 10,
-          "price_qi": 10,
-          "edge_points": -6.98,
-          "risk_rating": "High"
+          "price_qi": 10
         },
         {
           "selection": "Under 0.5 Goals",
@@ -17530,9 +17320,7 @@
           "devig_book_probability": 9.34,
           "ev": -29.58,
           "qi": 8,
-          "price_qi": 15,
-          "edge_points": -2.96,
-          "risk_rating": "Very high"
+          "price_qi": 15
         }
       ]
     },
@@ -17960,7 +17748,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -17989,9 +17777,7 @@
           "devig_book_probability": 21.79,
           "ev": 4.88,
           "qi": 59,
-          "price_qi": 73,
-          "edge_points": 2.27,
-          "risk_rating": "Low"
+          "price_qi": 73
         },
         {
           "selection": "Croatia or Draw",
@@ -18007,9 +17793,7 @@
           "devig_book_probability": 22.6,
           "ev": 2.44,
           "qi": 53,
-          "price_qi": 63,
-          "edge_points": 1.16,
-          "risk_rating": "Low"
+          "price_qi": 63
         },
         {
           "selection": "Under 3.5 Goals",
@@ -18025,9 +17809,7 @@
           "devig_book_probability": 75.4,
           "ev": -2.36,
           "qi": 47,
-          "price_qi": 34,
-          "edge_points": -1.91,
-          "risk_rating": "Low"
+          "price_qi": 34
         },
         {
           "selection": "Over 0.5 Goals",
@@ -18043,9 +17825,7 @@
           "devig_book_probability": 87.51,
           "ev": -2.73,
           "qi": 44,
-          "price_qi": 27,
-          "edge_points": -2.55,
-          "risk_rating": "Low"
+          "price_qi": 27
         },
         {
           "selection": "Under 4.5 Goals",
@@ -18061,9 +17841,7 @@
           "devig_book_probability": 87.51,
           "ev": -2.73,
           "qi": 44,
-          "price_qi": 27,
-          "edge_points": -2.55,
-          "risk_rating": "Low"
+          "price_qi": 27
         },
         {
           "selection": "England to Win",
@@ -18082,24 +17860,6 @@
           "price_qi": 34
         },
         {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 68.3,
-          "model_price": 1.46,
-          "current_odds": 1.38,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 67.76,
-          "ev": -5.48,
-          "qi": 42,
-          "price_qi": 21,
-          "edge_points": -3.97,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Under 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -18113,9 +17873,23 @@
           "devig_book_probability": 56.58,
           "ev": -4.07,
           "qi": 42,
-          "price_qi": 28,
-          "edge_points": -2.47,
-          "risk_rating": "Low"
+          "price_qi": 28
+        },
+        {
+          "selection": "Over 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 68.3,
+          "model_price": 1.46,
+          "current_odds": 1.38,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 67.76,
+          "ev": -5.48,
+          "qi": 42,
+          "price_qi": 21
         },
         {
           "selection": "Croatia Draw No Bet",
@@ -18131,9 +17905,7 @@
           "devig_book_probability": 25.25,
           "ev": 3.35,
           "qi": 40,
-          "price_qi": 66,
-          "edge_points": 0.91,
-          "risk_rating": "Medium"
+          "price_qi": 66
         },
         {
           "selection": "England to Win",
@@ -18165,9 +17937,7 @@
           "devig_book_probability": 53.76,
           "ev": -4.44,
           "qi": 40,
-          "price_qi": 26,
-          "edge_points": -2.58,
-          "risk_rating": "Low"
+          "price_qi": 26
         },
         {
           "selection": "BTTS No",
@@ -18183,9 +17953,7 @@
           "devig_book_probability": 54.38,
           "ev": -4.44,
           "qi": 40,
-          "price_qi": 26,
-          "edge_points": -2.58,
-          "risk_rating": "Low"
+          "price_qi": 26
         },
         {
           "selection": "England or Draw",
@@ -18201,9 +17969,7 @@
           "devig_book_probability": 40.91,
           "ev": -7.2,
           "qi": 39,
-          "price_qi": 12,
-          "edge_points": -6.21,
-          "risk_rating": "Low"
+          "price_qi": 12
         },
         {
           "selection": "England or Draw",
@@ -18219,9 +17985,7 @@
           "devig_book_probability": 40.74,
           "ev": -8,
           "qi": 39,
-          "price_qi": 10,
-          "edge_points": -6.96,
-          "risk_rating": "Low"
+          "price_qi": 10
         },
         {
           "selection": "England to Win",
@@ -18253,9 +18017,7 @@
           "devig_book_probability": 74.75,
           "ev": -10.07,
           "qi": 38,
-          "price_qi": 9,
-          "edge_points": -8.06,
-          "risk_rating": "Low"
+          "price_qi": 9
         },
         {
           "selection": "Match to end in a Draw",
@@ -18335,9 +18097,7 @@
           "devig_book_probability": 45.62,
           "ev": -8.89,
           "qi": 32,
-          "price_qi": 17,
-          "edge_points": -4.34,
-          "risk_rating": "Low"
+          "price_qi": 17
         },
         {
           "selection": "Over 2.5 Goals",
@@ -18353,9 +18113,7 @@
           "devig_book_probability": 43.42,
           "ev": -9.66,
           "qi": 31,
-          "price_qi": 17,
-          "edge_points": -4.49,
-          "risk_rating": "Low"
+          "price_qi": 17
         },
         {
           "selection": "BTTS Yes",
@@ -18371,9 +18129,7 @@
           "devig_book_probability": 46.24,
           "ev": -11.11,
           "qi": 31,
-          "price_qi": 15,
-          "edge_points": -5.56,
-          "risk_rating": "Low"
+          "price_qi": 15
         },
         {
           "selection": "Match to end in a Draw",
@@ -18437,9 +18193,7 @@
           "devig_book_probability": 32.24,
           "ev": -7.94,
           "qi": 24,
-          "price_qi": 21,
-          "edge_points": -2.74,
-          "risk_rating": "Medium"
+          "price_qi": 21
         },
         {
           "selection": "Match to end in a Draw",
@@ -18519,9 +18273,7 @@
           "devig_book_probability": 24.6,
           "ev": -18.98,
           "qi": 17,
-          "price_qi": 14,
-          "edge_points": -4.99,
-          "risk_rating": "Medium"
+          "price_qi": 14
         },
         {
           "selection": "Croatia to Win",
@@ -18553,9 +18305,7 @@
           "devig_book_probability": 12.49,
           "ev": -29.25,
           "qi": 12,
-          "price_qi": 14,
-          "edge_points": -3.9,
-          "risk_rating": "High"
+          "price_qi": 14
         },
         {
           "selection": "Over 4.5 Goals",
@@ -18571,9 +18321,7 @@
           "devig_book_probability": 12.49,
           "ev": -31.76,
           "qi": 11,
-          "price_qi": 13,
-          "edge_points": -4.23,
-          "risk_rating": "High"
+          "price_qi": 13
         }
       ]
     },
@@ -19000,7 +18748,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -19045,9 +18793,7 @@
           "devig_book_probability": 66.67,
           "ev": -2.78,
           "qi": 46,
-          "price_qi": 32,
-          "edge_points": -1.98,
-          "risk_rating": "Low"
+          "price_qi": 32
         },
         {
           "selection": "Over 0.5 Goals",
@@ -19063,9 +18809,7 @@
           "devig_book_probability": 87.51,
           "ev": -2.73,
           "qi": 44,
-          "price_qi": 27,
-          "edge_points": -2.55,
-          "risk_rating": "Low"
+          "price_qi": 27
         },
         {
           "selection": "Panama or Draw",
@@ -19081,9 +18825,7 @@
           "devig_book_probability": 28.14,
           "ev": -2.92,
           "qi": 44,
-          "price_qi": 33,
-          "edge_points": -1.76,
-          "risk_rating": "Low"
+          "price_qi": 33
         },
         {
           "selection": "Ghana or Draw",
@@ -19099,9 +18841,7 @@
           "devig_book_probability": 35.71,
           "ev": -3.65,
           "qi": 44,
-          "price_qi": 27,
-          "edge_points": -2.76,
-          "risk_rating": "Low"
+          "price_qi": 27
         },
         {
           "selection": "Ghana to Win",
@@ -19133,9 +18873,7 @@
           "devig_book_probability": 28.57,
           "ev": -3.51,
           "qi": 43,
-          "price_qi": 30,
-          "edge_points": -2.13,
-          "risk_rating": "Low"
+          "price_qi": 30
         },
         {
           "selection": "Ghana or Draw",
@@ -19151,9 +18889,7 @@
           "devig_book_probability": 35.93,
           "ev": -5.11,
           "qi": 42,
-          "price_qi": 21,
-          "edge_points": -3.93,
-          "risk_rating": "Low"
+          "price_qi": 21
         },
         {
           "selection": "Under 3.5 Goals",
@@ -19169,9 +18905,7 @@
           "devig_book_probability": 76.63,
           "ev": -5.43,
           "qi": 42,
-          "price_qi": 19,
-          "edge_points": -4.45,
-          "risk_rating": "Low"
+          "price_qi": 19
         },
         {
           "selection": "Under 4.5 Goals",
@@ -19187,9 +18921,7 @@
           "devig_book_probability": 88.3,
           "ev": -4.5,
           "qi": 41,
-          "price_qi": 16,
-          "edge_points": -4.25,
-          "risk_rating": "Low"
+          "price_qi": 16
         },
         {
           "selection": "Ghana Draw No Bet",
@@ -19205,9 +18937,7 @@
           "devig_book_probability": 60.76,
           "ev": -6.06,
           "qi": 40,
-          "price_qi": 21,
-          "edge_points": -3.91,
-          "risk_rating": "Low"
+          "price_qi": 21
         },
         {
           "selection": "Ghana or Panama",
@@ -19223,9 +18953,23 @@
           "devig_book_probability": 35.71,
           "ev": -9.59,
           "qi": 39,
-          "price_qi": 11,
-          "edge_points": -7.26,
-          "risk_rating": "Low"
+          "price_qi": 11
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 51.8,
+          "model_price": 1.93,
+          "current_odds": 1.83,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 51.07,
+          "ev": -5.18,
+          "qi": 38,
+          "price_qi": 25
         },
         {
           "selection": "Ghana or Panama",
@@ -19241,9 +18985,7 @@
           "devig_book_probability": 35.93,
           "ev": -10.96,
           "qi": 38,
-          "price_qi": 9,
-          "edge_points": -8.43,
-          "risk_rating": "Low"
+          "price_qi": 9
         },
         {
           "selection": "Ghana to Win",
@@ -19294,24 +19036,6 @@
           "price_qi": 31
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 51.8,
-          "model_price": 1.93,
-          "current_odds": 1.83,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 51.07,
-          "ev": -5.18,
-          "qi": 38,
-          "price_qi": 25,
-          "edge_points": -2.83,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Under 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -19325,27 +19049,7 @@
           "devig_book_probability": 57.59,
           "ev": -7.95,
           "qi": 37,
-          "price_qi": 17,
-          "edge_points": -4.91,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 48.2,
-          "model_price": 2.08,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48,
-          "ev": -6.25,
-          "qi": 35,
-          "price_qi": 22,
-          "edge_points": -3.21,
-          "risk_rating": "Low"
+          "price_qi": 17
         },
         {
           "selection": "BTTS No",
@@ -19361,9 +19065,23 @@
           "devig_book_probability": 52,
           "ev": -6.74,
           "qi": 36,
-          "price_qi": 20,
-          "edge_points": -3.74,
-          "risk_rating": "Low"
+          "price_qi": 20
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 48.2,
+          "model_price": 2.08,
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 48,
+          "ev": -6.25,
+          "qi": 35,
+          "price_qi": 22
         },
         {
           "selection": "BTTS Yes",
@@ -19379,27 +19097,7 @@
           "devig_book_probability": 48.93,
           "ev": -8.17,
           "qi": 34,
-          "price_qi": 18,
-          "edge_points": -4.28,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 43.2,
-          "model_price": 2.32,
-          "current_odds": 2.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 42.41,
-          "ev": -5.17,
-          "qi": 30,
-          "price_qi": 25,
-          "edge_points": -2.35,
-          "risk_rating": "Medium"
+          "price_qi": 18
         },
         {
           "selection": "Match to end in a Draw",
@@ -19418,6 +19116,22 @@
           "price_qi": 42
         },
         {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 43.2,
+          "model_price": 2.32,
+          "current_odds": 2.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 42.41,
+          "ev": -5.17,
+          "qi": 30,
+          "price_qi": 25
+        },
+        {
           "selection": "Panama Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
@@ -19431,9 +19145,7 @@
           "devig_book_probability": 39.24,
           "ev": -5.14,
           "qi": 29,
-          "price_qi": 26,
-          "edge_points": -2.14,
-          "risk_rating": "Medium"
+          "price_qi": 26
         },
         {
           "selection": "Match to end in a Draw",
@@ -19561,9 +19273,7 @@
           "devig_book_probability": 33.33,
           "ev": -13.85,
           "qi": 21,
-          "price_qi": 15,
-          "edge_points": -4.95,
-          "risk_rating": "Medium"
+          "price_qi": 15
         },
         {
           "selection": "Panama to Win",
@@ -19611,9 +19321,7 @@
           "devig_book_probability": 23.37,
           "ev": -11.11,
           "qi": 14,
-          "price_qi": 19,
-          "edge_points": -2.78,
-          "risk_rating": "High"
+          "price_qi": 19
         },
         {
           "selection": "Under 0.5 Goals",
@@ -19629,9 +19337,7 @@
           "devig_book_probability": 12.49,
           "ev": -32.31,
           "qi": 11,
-          "price_qi": 13,
-          "edge_points": -4.31,
-          "risk_rating": "High"
+          "price_qi": 13
         },
         {
           "selection": "Over 4.5 Goals",
@@ -19647,9 +19353,7 @@
           "devig_book_probability": 11.7,
           "ev": -22.78,
           "qi": 9,
-          "price_qi": 16,
-          "edge_points": -2.85,
-          "risk_rating": "Very high"
+          "price_qi": 16
         }
       ]
     },
@@ -20075,7 +19779,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -20104,9 +19808,7 @@
           "devig_book_probability": 14.54,
           "ev": 25.97,
           "qi": 71,
-          "price_qi": 90,
-          "edge_points": 7.99,
-          "risk_rating": "Medium"
+          "price_qi": 90
         },
         {
           "selection": "Uzbekistan or Draw",
@@ -20122,9 +19824,7 @@
           "devig_book_probability": 15.8,
           "ev": 16.28,
           "qi": 63,
-          "price_qi": 86,
-          "edge_points": 5.43,
-          "risk_rating": "Medium"
+          "price_qi": 86
         },
         {
           "selection": "Under 3.5 Goals",
@@ -20140,9 +19840,7 @@
           "devig_book_probability": 71.74,
           "ev": 0,
           "qi": 52,
-          "price_qi": 49,
-          "edge_points": 0,
-          "risk_rating": "Low"
+          "price_qi": 49
         },
         {
           "selection": "Under 2.5 Goals",
@@ -20158,9 +19856,7 @@
           "devig_book_probability": 52,
           "ev": 0.56,
           "qi": 50,
-          "price_qi": 53,
-          "edge_points": 0.31,
-          "risk_rating": "Low"
+          "price_qi": 53
         },
         {
           "selection": "BTTS No",
@@ -20176,9 +19872,7 @@
           "devig_book_probability": 55.7,
           "ev": -0.6,
           "qi": 49,
-          "price_qi": 46,
-          "edge_points": -0.36,
-          "risk_rating": "Low"
+          "price_qi": 46
         },
         {
           "selection": "Under 4.5 Goals",
@@ -20194,9 +19888,7 @@
           "devig_book_probability": 85.64,
           "ev": -1.8,
           "qi": 47,
-          "price_qi": 35,
-          "edge_points": -1.65,
-          "risk_rating": "Low"
+          "price_qi": 35
         },
         {
           "selection": "Colombia to Win",
@@ -20247,22 +19939,20 @@
           "price_qi": 23
         },
         {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
           "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 91.3,
-          "model_price": 1.1,
-          "current_odds": 1.05,
+          "oddsapi_market": "btts",
+          "model_probability": 59.5,
+          "model_price": 1.68,
+          "current_odds": 1.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 89.01,
-          "ev": -4.55,
-          "qi": 40,
-          "price_qi": 15,
-          "edge_points": -4.33,
-          "risk_rating": "Low"
+          "devig_book_probability": 58.44,
+          "ev": -4.76,
+          "qi": 41,
+          "price_qi": 25
         },
         {
           "selection": "Colombia to Win",
@@ -20297,22 +19987,20 @@
           "price_qi": 18
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 59.5,
-          "model_price": 1.68,
-          "current_odds": 1.6,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 91.3,
+          "model_price": 1.1,
+          "current_odds": 1.05,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 58.44,
-          "ev": -4.76,
-          "qi": 41,
-          "price_qi": 25,
-          "edge_points": -2.98,
-          "risk_rating": "Low"
+          "devig_book_probability": 89.01,
+          "ev": -4.55,
+          "qi": 40,
+          "price_qi": 15
         },
         {
           "selection": "Over 1.5 Goals",
@@ -20328,9 +20016,7 @@
           "devig_book_probability": 71.74,
           "ev": -9.09,
           "qi": 39,
-          "price_qi": 11,
-          "edge_points": -6.99,
-          "risk_rating": "Low"
+          "price_qi": 11
         },
         {
           "selection": "Colombia or Draw",
@@ -20346,9 +20032,7 @@
           "devig_book_probability": 44.71,
           "ev": -7.02,
           "qi": 37,
-          "price_qi": 7,
-          "edge_points": -6.62,
-          "risk_rating": "Low"
+          "price_qi": 7
         },
         {
           "selection": "Colombia Draw No Bet",
@@ -20364,9 +20048,7 @@
           "devig_book_probability": 85.64,
           "ev": -9.17,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -8.41,
-          "risk_rating": "Low"
+          "price_qi": 5
         },
         {
           "selection": "Uzbekistan Draw No Bet",
@@ -20382,9 +20064,7 @@
           "devig_book_probability": 14.36,
           "ev": 6.91,
           "qi": 36,
-          "price_qi": 75,
-          "edge_points": 1.06,
-          "risk_rating": "High"
+          "price_qi": 75
         },
         {
           "selection": "Colombia or Draw",
@@ -20400,9 +20080,7 @@
           "devig_book_probability": 45.43,
           "ev": -8.77,
           "qi": 36,
-          "price_qi": 3,
-          "edge_points": -8.43,
-          "risk_rating": "Low"
+          "price_qi": 3
         },
         {
           "selection": "Match to end in a Draw",
@@ -20437,24 +20115,6 @@
           "price_qi": 78
         },
         {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 44.2,
-          "model_price": 2.26,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48,
-          "ev": -13.72,
-          "qi": 30,
-          "price_qi": 12,
-          "edge_points": -7.03,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Under 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -20468,9 +20128,23 @@
           "devig_book_probability": 28.26,
           "ev": -1.49,
           "qi": 30,
-          "price_qi": 41,
-          "edge_points": -0.45,
-          "risk_rating": "Medium"
+          "price_qi": 41
+        },
+        {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 44.2,
+          "model_price": 2.26,
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 48,
+          "ev": -13.72,
+          "qi": 30,
+          "price_qi": 12
         },
         {
           "selection": "BTTS Yes",
@@ -20486,9 +20160,7 @@
           "devig_book_probability": 44.3,
           "ev": -14.98,
           "qi": 28,
-          "price_qi": 11,
-          "edge_points": -7.13,
-          "risk_rating": "Low"
+          "price_qi": 11
         },
         {
           "selection": "BTTS Yes",
@@ -20504,9 +20176,7 @@
           "devig_book_probability": 41.56,
           "ev": -8.91,
           "qi": 27,
-          "price_qi": 18,
-          "edge_points": -3.96,
-          "risk_rating": "Medium"
+          "price_qi": 18
         },
         {
           "selection": "Uzbekistan to Win",
@@ -20554,9 +20224,7 @@
           "devig_book_probability": 28.26,
           "ev": -23.96,
           "qi": 16,
-          "price_qi": 10,
-          "edge_points": -7.26,
-          "risk_rating": "Medium"
+          "price_qi": 10
         },
         {
           "selection": "Match to end in a Draw",
@@ -20652,9 +20320,7 @@
           "devig_book_probability": 14.36,
           "ev": -34.01,
           "qi": 11,
-          "price_qi": 11,
-          "edge_points": -5.23,
-          "risk_rating": "High"
+          "price_qi": 11
         },
         {
           "selection": "Uzbekistan to Win",
@@ -20686,9 +20352,7 @@
           "devig_book_probability": 10.99,
           "ev": -26.28,
           "qi": 8,
-          "price_qi": 15,
-          "edge_points": -3.09,
-          "risk_rating": "Very high"
+          "price_qi": 15
         }
       ]
     },
@@ -21115,7 +20779,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -21163,24 +20827,6 @@
           "price_qi": 43
         },
         {
-          "selection": "Over 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 72,
-          "model_price": 1.39,
-          "current_odds": 1.34,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 69.82,
-          "ev": -3.6,
-          "qi": 45,
-          "price_qi": 28,
-          "edge_points": -2.68,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Czech Republic or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -21194,9 +20840,23 @@
           "devig_book_probability": 39.63,
           "ev": -3.23,
           "qi": 45,
-          "price_qi": 28,
-          "edge_points": -2.69,
-          "risk_rating": "Low"
+          "price_qi": 28
+        },
+        {
+          "selection": "Over 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 72,
+          "model_price": 1.39,
+          "current_odds": 1.34,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 69.82,
+          "ev": -3.6,
+          "qi": 45,
+          "price_qi": 28
         },
         {
           "selection": "Czech Republic to Win",
@@ -21260,9 +20920,7 @@
           "devig_book_probability": 88.3,
           "ev": -2.75,
           "qi": 44,
-          "price_qi": 26,
-          "edge_points": -2.6,
-          "risk_rating": "Low"
+          "price_qi": 26
         },
         {
           "selection": "Czech Republic Draw No Bet",
@@ -21278,9 +20936,7 @@
           "devig_book_probability": 71.74,
           "ev": -4.41,
           "qi": 43,
-          "price_qi": 24,
-          "edge_points": -3.39,
-          "risk_rating": "Low"
+          "price_qi": 24
         },
         {
           "selection": "Czech Republic or Draw",
@@ -21296,27 +20952,7 @@
           "devig_book_probability": 39.81,
           "ev": -4.84,
           "qi": 42,
-          "price_qi": 20,
-          "edge_points": -4.1,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 88.6,
-          "model_price": 1.13,
-          "current_odds": 1.08,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 86.63,
-          "ev": -4.42,
-          "qi": 41,
-          "price_qi": 18,
-          "edge_points": -4.1,
-          "risk_rating": "Low"
+          "price_qi": 20
         },
         {
           "selection": "Under 3.5 Goals",
@@ -21332,9 +20968,23 @@
           "devig_book_probability": 74.07,
           "ev": -5.26,
           "qi": 42,
-          "price_qi": 20,
-          "edge_points": -4.18,
-          "risk_rating": "Low"
+          "price_qi": 20
+        },
+        {
+          "selection": "Under 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 88.6,
+          "model_price": 1.13,
+          "current_odds": 1.08,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 86.63,
+          "ev": -4.42,
+          "qi": 41,
+          "price_qi": 18
         },
         {
           "selection": "South Africa or Draw",
@@ -21350,27 +21000,7 @@
           "devig_book_probability": 22.91,
           "ev": -2.38,
           "qi": 40,
-          "price_qi": 36,
-          "edge_points": -1.16,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Czech Republic or South Africa",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 71.6,
-          "model_price": 1.4,
-          "current_odds": 1.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 36.59,
-          "ev": -7.14,
-          "qi": 40,
-          "price_qi": 15,
-          "edge_points": -5.49,
-          "risk_rating": "Low"
+          "price_qi": 36
         },
         {
           "selection": "BTTS No",
@@ -21386,9 +21016,7 @@
           "devig_book_probability": 51.07,
           "ev": -3.68,
           "qi": 40,
-          "price_qi": 30,
-          "edge_points": -2.01,
-          "risk_rating": "Low"
+          "price_qi": 30
         },
         {
           "selection": "Czech Republic or South Africa",
@@ -21398,15 +21026,13 @@
           "oddsapi_market": "double_chance",
           "model_probability": 71.6,
           "model_price": 1.4,
-          "current_odds": 1.26,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 37.28,
-          "ev": -10,
-          "qi": 38,
-          "price_qi": 9,
-          "edge_points": -7.94,
-          "risk_rating": "Low"
+          "current_odds": 1.3,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 36.59,
+          "ev": -7.14,
+          "qi": 40,
+          "price_qi": 15
         },
         {
           "selection": "BTTS No",
@@ -21422,27 +21048,23 @@
           "devig_book_probability": 52,
           "ev": -5.26,
           "qi": 38,
-          "price_qi": 24,
-          "edge_points": -2.92,
-          "risk_rating": "Low"
+          "price_qi": 24
         },
         {
-          "selection": "South Africa or Draw",
+          "selection": "Czech Republic or South Africa",
           "category": "Main Match",
           "market": "Double Chance",
           "source": "Model",
           "oddsapi_market": "double_chance",
-          "model_probability": 47.5,
-          "model_price": 2.1,
-          "current_odds": 2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 23.78,
-          "ev": -4.76,
-          "qi": 36,
-          "price_qi": 26,
-          "edge_points": -2.38,
-          "risk_rating": "Low"
+          "model_probability": 71.6,
+          "model_price": 1.4,
+          "current_odds": 1.26,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 37.28,
+          "ev": -10,
+          "qi": 38,
+          "price_qi": 9
         },
         {
           "selection": "Under 2.5 Goals",
@@ -21458,9 +21080,23 @@
           "devig_book_probability": 53.33,
           "ev": -6.42,
           "qi": 37,
-          "price_qi": 21,
-          "edge_points": -3.67,
-          "risk_rating": "Low"
+          "price_qi": 21
+        },
+        {
+          "selection": "South Africa or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 47.5,
+          "model_price": 2.1,
+          "current_odds": 2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 23.78,
+          "ev": -4.76,
+          "qi": 36,
+          "price_qi": 26
         },
         {
           "selection": "Over 2.5 Goals",
@@ -21476,9 +21112,7 @@
           "devig_book_probability": 46.67,
           "ev": -6.98,
           "qi": 34,
-          "price_qi": 21,
-          "edge_points": -3.49,
-          "risk_rating": "Low"
+          "price_qi": 21
         },
         {
           "selection": "BTTS Yes",
@@ -21494,9 +21128,7 @@
           "devig_book_probability": 48,
           "ev": -7.58,
           "qi": 34,
-          "price_qi": 19,
-          "edge_points": -3.89,
-          "risk_rating": "Low"
+          "price_qi": 19
         },
         {
           "selection": "BTTS Yes",
@@ -21512,9 +21144,7 @@
           "devig_book_probability": 48.93,
           "ev": -9.48,
           "qi": 33,
-          "price_qi": 16,
-          "edge_points": -4.96,
-          "risk_rating": "Low"
+          "price_qi": 16
         },
         {
           "selection": "Match to end in a Draw",
@@ -21594,9 +21224,7 @@
           "devig_book_probability": 25.93,
           "ev": -9.77,
           "qi": 20,
-          "price_qi": 19,
-          "edge_points": -2.72,
-          "risk_rating": "Medium"
+          "price_qi": 19
         },
         {
           "selection": "Match to end in a Draw",
@@ -21628,9 +21256,7 @@
           "devig_book_probability": 28.26,
           "ev": -11.76,
           "qi": 20,
-          "price_qi": 17,
-          "edge_points": -3.57,
-          "risk_rating": "Medium"
+          "price_qi": 17
         },
         {
           "selection": "Under 1.5 Goals",
@@ -21646,9 +21272,7 @@
           "devig_book_probability": 30.18,
           "ev": -13.41,
           "qi": 20,
-          "price_qi": 16,
-          "edge_points": -4.33,
-          "risk_rating": "Medium"
+          "price_qi": 16
         },
         {
           "selection": "South Africa to Win",
@@ -21744,9 +21368,7 @@
           "devig_book_probability": 13.37,
           "ev": -20.27,
           "qi": 12,
-          "price_qi": 16,
-          "edge_points": -2.9,
-          "risk_rating": "High"
+          "price_qi": 16
         },
         {
           "selection": "Under 0.5 Goals",
@@ -21762,9 +21384,7 @@
           "devig_book_probability": 11.7,
           "ev": -36.76,
           "qi": 7,
-          "price_qi": 12,
-          "edge_points": -4.59,
-          "risk_rating": "Very high"
+          "price_qi": 12
         }
       ]
     },
@@ -22191,7 +21811,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
@@ -22220,9 +21840,7 @@
           "devig_book_probability": 54.97,
           "ev": 6.17,
           "qi": 70,
-          "price_qi": 78,
-          "edge_points": 3.59,
-          "risk_rating": "Low"
+          "price_qi": 78
         },
         {
           "selection": "Under 2.5 Goals",
@@ -22238,9 +21856,7 @@
           "devig_book_probability": 56.58,
           "ev": 5.1,
           "qi": 68,
-          "price_qi": 75,
-          "edge_points": 3.09,
-          "risk_rating": "Low"
+          "price_qi": 75
         },
         {
           "selection": "Bosnia & Herzegovina or Draw",
@@ -22256,9 +21872,7 @@
           "devig_book_probability": 18.68,
           "ev": 14.55,
           "qi": 67,
-          "price_qi": 86,
-          "edge_points": 5.77,
-          "risk_rating": "Medium"
+          "price_qi": 86
         },
         {
           "selection": "Under 3.5 Goals",
@@ -22274,9 +21888,7 @@
           "devig_book_probability": 76.63,
           "ev": 1.67,
           "qi": 60,
-          "price_qi": 61,
-          "edge_points": 1.37,
-          "risk_rating": "Low"
+          "price_qi": 61
         },
         {
           "selection": "Under 1.5 Goals",
@@ -22292,9 +21904,7 @@
           "devig_book_probability": 32.24,
           "ev": 7.01,
           "qi": 52,
-          "price_qi": 77,
-          "edge_points": 2.42,
-          "risk_rating": "Medium"
+          "price_qi": 77
         },
         {
           "selection": "BTTS No",
@@ -22310,9 +21920,7 @@
           "devig_book_probability": 57.59,
           "ev": 0,
           "qi": 51,
-          "price_qi": 49,
-          "edge_points": 0,
-          "risk_rating": "Low"
+          "price_qi": 49
         },
         {
           "selection": "Under 4.5 Goals",
@@ -22328,9 +21936,7 @@
           "devig_book_probability": 88.3,
           "ev": -0.93,
           "qi": 49,
-          "price_qi": 41,
-          "edge_points": -0.88,
-          "risk_rating": "Low"
+          "price_qi": 41
         },
         {
           "selection": "Switzerland to Win",
@@ -22378,9 +21984,7 @@
           "devig_book_probability": 88.3,
           "ev": -6.19,
           "qi": 38,
-          "price_qi": 9,
-          "edge_points": -5.84,
-          "risk_rating": "Low"
+          "price_qi": 9
         },
         {
           "selection": "Switzerland or Draw",
@@ -22396,9 +22000,7 @@
           "devig_book_probability": 42.41,
           "ev": -7.5,
           "qi": 38,
-          "price_qi": 9,
-          "edge_points": -6.76,
-          "risk_rating": "Low"
+          "price_qi": 9
         },
         {
           "selection": "Switzerland to Win",
@@ -22478,9 +22080,7 @@
           "devig_book_probability": 80.37,
           "ev": -11.45,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -9.87,
-          "risk_rating": "Low"
+          "price_qi": 5
         },
         {
           "selection": "Over 1.5 Goals",
@@ -22496,9 +22096,7 @@
           "devig_book_probability": 67.76,
           "ev": -13.21,
           "qi": 37,
-          "price_qi": 7,
-          "edge_points": -9.57,
-          "risk_rating": "Low"
+          "price_qi": 7
         },
         {
           "selection": "Match to end in a Draw",
@@ -22530,9 +22128,7 @@
           "devig_book_probability": 45.03,
           "ev": -19.23,
           "qi": 26,
-          "price_qi": 9,
-          "edge_points": -9.16,
-          "risk_rating": "Low"
+          "price_qi": 9
         },
         {
           "selection": "Over 2.5 Goals",
@@ -22548,9 +22144,7 @@
           "devig_book_probability": 43.42,
           "ev": -22.38,
           "qi": 25,
-          "price_qi": 7,
-          "edge_points": -10.41,
-          "risk_rating": "Low"
+          "price_qi": 7
         },
         {
           "selection": "BTTS Yes",
@@ -22566,9 +22160,7 @@
           "devig_book_probability": 42.41,
           "ev": -15.38,
           "qi": 24,
-          "price_qi": 12,
-          "edge_points": -6.99,
-          "risk_rating": "Medium"
+          "price_qi": 12
         },
         {
           "selection": "Match to end in a Draw",
@@ -22632,9 +22224,7 @@
           "devig_book_probability": 11.7,
           "ev": -5.88,
           "qi": 12,
-          "price_qi": 26,
-          "edge_points": -0.74,
-          "risk_rating": "Very high"
+          "price_qi": 26
         },
         {
           "selection": "Over 3.5 Goals",
@@ -22650,9 +22240,7 @@
           "devig_book_probability": 23.37,
           "ev": -32.43,
           "qi": 10,
-          "price_qi": 8,
-          "edge_points": -8.11,
-          "risk_rating": "High"
+          "price_qi": 8
         },
         {
           "selection": "Over 4.5 Goals",
@@ -22668,9 +22256,7 @@
           "devig_book_probability": 11.7,
           "ev": -47.05,
           "qi": 6,
-          "price_qi": 9,
-          "edge_points": -5.88,
-          "risk_rating": "Very high"
+          "price_qi": 9
         }
       ]
     },
@@ -23082,7 +22668,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -23111,27 +22697,7 @@
           "devig_book_probability": 12.14,
           "ev": 56,
           "qi": 84,
-          "price_qi": 97,
-          "edge_points": 14.36,
-          "risk_rating": "Medium"
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 79,
-          "model_price": 1.27,
-          "current_odds": 1.4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 66.67,
-          "ev": 10.24,
-          "qi": 84,
-          "price_qi": 88,
-          "edge_points": 7.31,
-          "risk_rating": "Low"
+          "price_qi": 97
         },
         {
           "selection": "Under 2.5 Goals",
@@ -23147,9 +22713,23 @@
           "devig_book_probability": 46.67,
           "ev": 16.96,
           "qi": 84,
-          "price_qi": 89,
-          "edge_points": 8.48,
-          "risk_rating": "Low"
+          "price_qi": 89
+        },
+        {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 79,
+          "model_price": 1.27,
+          "current_odds": 1.4,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 66.67,
+          "ev": 10.24,
+          "qi": 84,
+          "price_qi": 88
         },
         {
           "selection": "Qatar or Draw",
@@ -23165,9 +22745,7 @@
           "devig_book_probability": 13.64,
           "ev": 40,
           "qi": 82,
-          "price_qi": 94,
-          "edge_points": 11.43,
-          "risk_rating": "Medium"
+          "price_qi": 94
         },
         {
           "selection": "Under 4.5 Goals",
@@ -23183,9 +22761,7 @@
           "devig_book_probability": 81.3,
           "ev": 4.55,
           "qi": 73,
-          "price_qi": 79,
-          "edge_points": 3.95,
-          "risk_rating": "Low"
+          "price_qi": 79
         },
         {
           "selection": "Under 1.5 Goals",
@@ -23201,9 +22777,7 @@
           "devig_book_probability": 24.6,
           "ev": 21.79,
           "qi": 61,
-          "price_qi": 87,
-          "edge_points": 5.74,
-          "risk_rating": "Medium"
+          "price_qi": 87
         },
         {
           "selection": "BTTS No",
@@ -23219,9 +22793,7 @@
           "devig_book_probability": 59.28,
           "ev": -3.07,
           "qi": 45,
-          "price_qi": 32,
-          "edge_points": -1.94,
-          "risk_rating": "Low"
+          "price_qi": 32
         },
         {
           "selection": "BTTS No",
@@ -23237,9 +22809,7 @@
           "devig_book_probability": 59.43,
           "ev": -3.68,
           "qi": 44,
-          "price_qi": 29,
-          "edge_points": -2.34,
-          "risk_rating": "Low"
+          "price_qi": 29
         },
         {
           "selection": "Canada to Win",
@@ -23271,9 +22841,7 @@
           "devig_book_probability": 10.45,
           "ev": 32.94,
           "qi": 42,
-          "price_qi": 86,
-          "edge_points": 3.66,
-          "risk_rating": "Very high"
+          "price_qi": 86
         },
         {
           "selection": "Canada to Win",
@@ -23340,24 +22908,6 @@
           "price_qi": 15
         },
         {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 90.4,
-          "model_price": 1.11,
-          "current_odds": 1.04,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 89.64,
-          "ev": -6.31,
-          "qi": 37,
-          "price_qi": 7,
-          "edge_points": -6.06,
-          "risk_rating": "Low"
-        },
-        {
           "selection": "Canada to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -23374,6 +22924,22 @@
           "price_qi": 10
         },
         {
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 90.4,
+          "model_price": 1.11,
+          "current_odds": 1.04,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 89.64,
+          "ev": -6.31,
+          "qi": 37,
+          "price_qi": 7
+        },
+        {
           "selection": "Canada or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -23387,9 +22953,7 @@
           "devig_book_probability": 45.9,
           "ev": -7.14,
           "qi": 37,
-          "price_qi": 5,
-          "edge_points": -6.87,
-          "risk_rating": "Low"
+          "price_qi": 5
         },
         {
           "selection": "Canada or Draw",
@@ -23405,9 +22969,7 @@
           "devig_book_probability": 45.96,
           "ev": -8.04,
           "qi": 36,
-          "price_qi": 3,
-          "edge_points": -7.8,
-          "risk_rating": "Low"
+          "price_qi": 3
         },
         {
           "selection": "Canada Draw No Bet",
@@ -23423,9 +22985,7 @@
           "devig_book_probability": 89.55,
           "ev": -10.26,
           "qi": 36,
-          "price_qi": 2,
-          "edge_points": -9.77,
-          "risk_rating": "Low"
+          "price_qi": 2
         },
         {
           "selection": "Over 1.5 Goals",
@@ -23441,9 +23001,7 @@
           "devig_book_probability": 75.4,
           "ev": -15.65,
           "qi": 36,
-          "price_qi": 3,
-          "edge_points": -12.62,
-          "risk_rating": "Low"
+          "price_qi": 3
         },
         {
           "selection": "Canada or Qatar",
@@ -23459,9 +23017,7 @@
           "devig_book_probability": 40.46,
           "ev": -16.9,
           "qi": 36,
-          "price_qi": 2,
-          "edge_points": -14.32,
-          "risk_rating": "Low"
+          "price_qi": 2
         },
         {
           "selection": "Canada or Qatar",
@@ -23477,9 +23033,7 @@
           "devig_book_probability": 41.9,
           "ev": -20.42,
           "qi": 35,
-          "price_qi": 0,
-          "edge_points": -18.07,
-          "risk_rating": "Low"
+          "price_qi": 0
         },
         {
           "selection": "Match to end in a Draw",
@@ -23543,9 +23097,7 @@
           "devig_book_probability": 53.33,
           "ev": -27.08,
           "qi": 26,
-          "price_qi": 3,
-          "edge_points": -15.48,
-          "risk_rating": "Low"
+          "price_qi": 3
         },
         {
           "selection": "BTTS Yes",
@@ -23561,9 +23113,7 @@
           "devig_book_probability": 40.57,
           "ev": -11.2,
           "qi": 25,
-          "price_qi": 16,
-          "edge_points": -4.87,
-          "risk_rating": "Medium"
+          "price_qi": 16
         },
         {
           "selection": "BTTS Yes",
@@ -23579,9 +23129,7 @@
           "devig_book_probability": 40.72,
           "ev": -11.2,
           "qi": 25,
-          "price_qi": 16,
-          "edge_points": -4.87,
-          "risk_rating": "Medium"
+          "price_qi": 16
         },
         {
           "selection": "Match to end in a Draw",
@@ -23613,9 +23161,7 @@
           "devig_book_probability": 33.33,
           "ev": -41.05,
           "qi": 13,
-          "price_qi": 4,
-          "edge_points": -14.66,
-          "risk_rating": "Medium"
+          "price_qi": 4
         },
         {
           "selection": "Under 0.5 Goals",
@@ -23631,9 +23177,7 @@
           "devig_book_probability": 10.36,
           "ev": -13.96,
           "qi": 10,
-          "price_qi": 19,
-          "edge_points": -1.55,
-          "risk_rating": "Very high"
+          "price_qi": 19
         },
         {
           "selection": "Over 4.5 Goals",
@@ -23649,9 +23193,7 @@
           "devig_book_probability": 18.7,
           "ev": -55.32,
           "qi": 9,
-          "price_qi": 5,
-          "edge_points": -11.06,
-          "risk_rating": "High"
+          "price_qi": 5
         }
       ]
     },
@@ -24079,7 +23621,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-16T12:03:49.303Z",
+      "checked_at": "2026-06-16T12:12:01.546Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
@@ -24108,9 +23650,7 @@
           "devig_book_probability": 65.22,
           "ev": 8.27,
           "qi": 79,
-          "price_qi": 85,
-          "edge_points": 5.74,
-          "risk_rating": "Low"
+          "price_qi": 85
         },
         {
           "selection": "Over 2.5 Goals",
@@ -24126,9 +23666,7 @@
           "devig_book_probability": 39.74,
           "ev": 19.9,
           "qi": 78,
-          "price_qi": 90,
-          "edge_points": 8.47,
-          "risk_rating": "Medium"
+          "price_qi": 90
         },
         {
           "selection": "BTTS Yes",
@@ -24144,9 +23682,7 @@
           "devig_book_probability": 45.62,
           "ev": 9.63,
           "qi": 71,
-          "price_qi": 83,
-          "edge_points": 4.7,
-          "risk_rating": "Low"
+          "price_qi": 83
         },
         {
           "selection": "BTTS Yes",
@@ -24162,9 +23698,7 @@
           "devig_book_probability": 46.24,
           "ev": 6.95,
           "qi": 66,
-          "price_qi": 78,
-          "edge_points": 3.48,
-          "risk_rating": "Low"
+          "price_qi": 78
         },
         {
           "selection": "Over 3.5 Goals",
@@ -24180,9 +23714,7 @@
           "devig_book_probability": 20.77,
           "ev": 29.68,
           "qi": 58,
-          "price_qi": 89,
-          "edge_points": 6.6,
-          "risk_rating": "High"
+          "price_qi": 89
         },
         {
           "selection": "Over 0.5 Goals",
@@ -24198,9 +23730,7 @@
           "devig_book_probability": 86.63,
           "ev": 0.93,
           "qi": 57,
-          "price_qi": 57,
-          "edge_points": 0.87,
-          "risk_rating": "Low"
+          "price_qi": 57
         },
         {
           "selection": "South Korea or Draw",
@@ -24216,9 +23746,7 @@
           "devig_book_probability": 25.88,
           "ev": 1.12,
           "qi": 52,
-          "price_qi": 56,
-          "edge_points": 0.62,
-          "risk_rating": "Low"
+          "price_qi": 56
         },
         {
           "selection": "South Korea or Draw",
@@ -24234,9 +23762,7 @@
           "devig_book_probability": 26.29,
           "ev": 0.56,
           "qi": 50,
-          "price_qi": 53,
-          "edge_points": 0.31,
-          "risk_rating": "Low"
+          "price_qi": 53
         },
         {
           "selection": "Mexico to Win",
@@ -24268,27 +23794,7 @@
           "devig_book_probability": 37.86,
           "ev": -5.3,
           "qi": 42,
-          "price_qi": 20,
-          "edge_points": -4.24,
-          "risk_rating": "Low"
-        },
-        {
-          "selection": "Over 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 13.9,
-          "model_price": 7.21,
-          "current_odds": 9,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 10.36,
-          "ev": 24.83,
-          "qi": 39,
-          "price_qi": 84,
-          "edge_points": 2.76,
-          "risk_rating": "Very high"
+          "price_qi": 20
         },
         {
           "selection": "Mexico or Draw",
@@ -24304,9 +23810,23 @@
           "devig_book_probability": 38.08,
           "ev": -6.82,
           "qi": 40,
-          "price_qi": 15,
-          "edge_points": -5.54,
-          "risk_rating": "Low"
+          "price_qi": 15
+        },
+        {
+          "selection": "Over 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 13.9,
+          "model_price": 7.21,
+          "current_odds": 9,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 10.36,
+          "ev": 24.83,
+          "qi": 39,
+          "price_qi": 84
         },
         {
           "selection": "Mexico Draw No Bet",
@@ -24322,9 +23842,7 @@
           "devig_book_probability": 66.67,
           "ev": -9.68,
           "qi": 39,
-          "price_qi": 12,
-          "edge_points": -6.91,
-          "risk_rating": "Low"
+          "price_qi": 12
         },
         {
           "selection": "Mexico or South Korea",
@@ -24340,9 +23858,7 @@
           "devig_book_probability": 35.85,
           "ev": -10.2,
           "qi": 39,
-          "price_qi": 10,
-          "edge_points": -7.73,
-          "risk_rating": "Low"
+          "price_qi": 10
         },
         {
           "selection": "Mexico or South Korea",
@@ -24358,9 +23874,7 @@
           "devig_book_probability": 36.03,
           "ev": -11.56,
           "qi": 38,
-          "price_qi": 8,
-          "edge_points": -8.9,
-          "risk_rating": "Low"
+          "price_qi": 8
         },
         {
           "selection": "Match to end in a Draw",
@@ -24424,9 +23938,7 @@
           "devig_book_probability": 79.23,
           "ev": -16.31,
           "qi": 36,
-          "price_qi": 2,
-          "edge_points": -13.82,
-          "risk_rating": "Low"
+          "price_qi": 2
         },
         {
           "selection": "Under 4.5 Goals",
@@ -24442,9 +23954,7 @@
           "devig_book_probability": 89.64,
           "ev": -10.34,
           "qi": 35,
-          "price_qi": 1,
-          "edge_points": -9.95,
-          "risk_rating": "Low"
+          "price_qi": 1
         },
         {
           "selection": "Mexico to Win",
@@ -24492,9 +24002,7 @@
           "devig_book_probability": 33.33,
           "ev": -1.06,
           "qi": 33,
-          "price_qi": 43,
-          "edge_points": -0.38,
-          "risk_rating": "Medium"
+          "price_qi": 43
         },
         {
           "selection": "Match to end in a Draw",
@@ -24526,9 +24034,7 @@
           "devig_book_probability": 53.76,
           "ev": -20,
           "qi": 29,
-          "price_qi": 6,
-          "edge_points": -11.63,
-          "risk_rating": "Low"
+          "price_qi": 6
         },
         {
           "selection": "BTTS No",
@@ -24544,9 +24050,7 @@
           "devig_book_probability": 54.38,
           "ev": -20,
           "qi": 29,
-          "price_qi": 6,
-          "edge_points": -11.63,
-          "risk_rating": "Low"
+          "price_qi": 6
         },
         {
           "selection": "Under 2.5 Goals",
@@ -24562,9 +24066,7 @@
           "devig_book_probability": 60.26,
           "ev": -24.02,
           "qi": 29,
-          "price_qi": 3,
-          "edge_points": -15.5,
-          "risk_rating": "Low"
+          "price_qi": 3
         },
         {
           "selection": "Match to end in a Draw",
@@ -24708,9 +24210,7 @@
           "devig_book_probability": 34.78,
           "ev": -33.33,
           "qi": 15,
-          "price_qi": 5,
-          "edge_points": -12.35,
-          "risk_rating": "Medium"
+          "price_qi": 5
         },
         {
           "selection": "Under 0.5 Goals",
@@ -24726,9 +24226,7 @@
           "devig_book_probability": 13.37,
           "ev": -53.49,
           "qi": 9,
-          "price_qi": 6,
-          "edge_points": -7.64,
-          "risk_rating": "High"
+          "price_qi": 6
         }
       ]
     },
