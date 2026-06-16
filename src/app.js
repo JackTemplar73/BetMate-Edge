@@ -1817,7 +1817,7 @@ function calculateProfitUnits(bet) {
   if (['push', 'void'].includes(status)) return 0;
   if (!['won', 'win'].includes(status)) return 0;
 
-  const settledOdds = Number(bet.closing_odds || bet.current_odds || bet.opening_odds);
+  const settledOdds = Number(bet.opening_odds);
   return Number.isFinite(settledOdds) && settledOdds > 1 ? settledOdds - 1 : 0;
 }
 
@@ -1862,7 +1862,9 @@ function renderResults() {
   const tableBody = document.querySelector('[data-results-table]');
   if (!tableBody) return;
 
-  const rows = filterResultsRowsByResult(getQualifiedHistoryBets().sort(sortHistoryRows));
+  const allRows = getQualifiedHistoryBets().sort(sortHistoryRows);
+  const rows = filterResultsRowsByResult(allRows);
+  renderResultsSummary(allRows);
   renderResultsResultFilterControls();
   if (rows.length === 0) {
     tableBody.innerHTML = '<tr><td colspan="10">No QI 70+ bets match this results filter.</td></tr>';
@@ -1883,6 +1885,42 @@ function renderResults() {
       <td>${formatSettledAt(bet)}</td>
     </tr>
   `).join('');
+}
+
+function renderResultsSummary(rows) {
+  const container = document.querySelector('[data-results-summary]');
+  if (!container) return;
+
+  const settled = rows.filter(isSettledResult);
+  const won = settled.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase())).length;
+  const lost = settled.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase())).length;
+  const profitUnits = settled.reduce((total, bet) => total + calculateProfitUnits(bet), 0);
+  const stakedUnits = settled.length;
+  const roi = stakedUnits > 0 ? (profitUnits / stakedUnits) * 100 : null;
+  const valueClass = profitUnits > 0 ? 'positive' : profitUnits < 0 ? 'negative' : 'neutral-text';
+
+  container.innerHTML = `
+    <article>
+      <span>Wins</span>
+      <strong>${won}</strong>
+      <small>Settled winners</small>
+    </article>
+    <article>
+      <span>Losses</span>
+      <strong>${lost}</strong>
+      <small>Settled losers</small>
+    </article>
+    <article>
+      <span>Profit</span>
+      <strong class="${valueClass}">${formatProfitUnits(profitUnits)}</strong>
+      <small>1 unit per saved bet</small>
+    </article>
+    <article>
+      <span>ROI</span>
+      <strong class="${valueClass}">${roi === null ? '-' : `${roi > 0 ? '+' : ''}${roi.toFixed(1)}%`}</strong>
+      <small>${stakedUnits} settled units staked</small>
+    </article>
+  `;
 }
 
 function formatBetSavedCell(bet) {
