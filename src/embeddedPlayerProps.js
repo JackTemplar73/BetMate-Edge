@@ -3936,7 +3936,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.57,
     "model_note": "Jhon Duran is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3983,7 +3983,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.8,
     "model_note": "Luis Diaz is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4032,7 +4032,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.25,
     "model_note": "Jaloliddin Masharipov is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4079,7 +4079,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.21,
     "model_note": "James Rodriguez is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4128,7 +4128,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.53,
     "model_note": "Wilmar Barrios is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4175,7 +4175,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.47,
     "model_note": "Schick is Czech Republic's highest goal share.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4223,7 +4223,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.18,
     "model_note": "Soucek rates well from set pieces and second balls.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4290,7 +4290,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.33,
     "model_note": "Hlozek projects as a strong secondary Czech shooter.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4357,7 +4357,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.17,
     "model_note": "Tau is South Africa's main transition shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4403,7 +4403,7 @@ window.embeddedPlayerProps = [
     "model_price": 4.22,
     "model_note": "Soucek has aerial-duel and midfield challenge card exposure.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4470,7 +4470,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.73,
     "model_note": "Embolo has Switzerland's best central goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4518,7 +4518,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.13,
     "model_note": "Dzeko is Bosnia's strongest penalty-box goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4566,7 +4566,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.26,
     "model_note": "Xhaka projects well if Switzerland control territory.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4633,7 +4633,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.58,
     "model_note": "Shaqiri remains watchlist only until role is confirmed.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4679,7 +4679,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.42,
     "model_note": "Kolasinac carries high duel and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4746,7 +4746,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.52,
     "model_note": "David is Canada's strongest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4794,7 +4794,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.89,
     "model_note": "David projects as Canada's cleanest shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4861,7 +4861,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.89,
     "model_note": "Afif is Qatar's main attacking prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4928,7 +4928,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.4,
     "model_note": "Davies carries Canada's strongest wide creation angle.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4995,7 +4995,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.72,
     "model_note": "Madibo profiles as Qatar's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5062,7 +5062,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.65,
     "model_note": "Gimenez is Mexico's strongest goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5110,7 +5110,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.07,
     "model_note": "Lozano rates well for Mexico shot volume from wide areas.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5167,7 +5167,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.78,
     "model_note": "Son is South Korea's best shot-on-target prop.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5234,7 +5234,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.53,
     "model_note": "Lee projects as South Korea's best creator.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5301,7 +5301,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.18,
     "model_note": "Alvarez carries Mexico's strongest card profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T21:47:28.114Z",
+    "last_checked": "2026-06-17T23:10:36.030Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
