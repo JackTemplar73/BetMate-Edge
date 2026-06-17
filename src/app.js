@@ -8,7 +8,7 @@ const state = {
   scanSortMode: 'qi',
   playerPropSortMode: 'qi',
   historyResultFilter: 'all',
-  resultsResultFilter: 'all',
+  resultsResultFilter: 'won_lost',
   modelMinProbability: 0,
   modelMaxFairPrice: Infinity,
   lastRefresh: null,
@@ -1726,19 +1726,17 @@ function renderHistoryResultFilterControls() {
 }
 
 function filterResultsRowsByResult(rows) {
+  const settledRows = rows.filter(isSettledResult);
+
   if (state.resultsResultFilter === 'won') {
-    return rows.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase()));
+    return settledRows.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase()));
   }
 
   if (state.resultsResultFilter === 'lost') {
-    return rows.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase()));
+    return settledRows.filter((bet) => ['lost', 'loss'].includes(String(bet.result_status || '').toLowerCase()));
   }
 
-  if (state.resultsResultFilter === 'pending') {
-    return rows.filter((bet) => !isSettledResult(bet));
-  }
-
-  return rows;
+  return settledRows;
 }
 
 function renderResultsResultFilterControls() {
@@ -1864,10 +1862,10 @@ function renderResults() {
 
   const allRows = getQualifiedHistoryBets().sort(sortHistoryRows);
   const rows = filterResultsRowsByResult(allRows);
-  renderResultsSummary(allRows);
+  renderResultsSummary(rows);
   renderResultsResultFilterControls();
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="10">No QI 70+ bets match this results filter.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="10">No completed QI 70+ bets match this results filter.</td></tr>';
     return;
   }
 
