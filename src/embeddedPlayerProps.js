@@ -3427,7 +3427,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.24,
     "model_note": "Kane is England's highest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3463,7 +3463,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "England vs Croatia",
@@ -3473,9 +3473,9 @@ window.embeddedPlayerProps = [
     "category": "Shots",
     "model_probability": 56.9,
     "model_price": 1.76,
-    "model_note": "Foden rates well for shot volume from inside-right channels.",
+    "model_note": "Phil Foden is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3509,7 +3509,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "England vs Croatia",
@@ -3521,7 +3522,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.02,
     "model_note": "Bellingham carries strong box-entry and second-phase shot value.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3557,7 +3558,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "England vs Croatia",
@@ -3569,7 +3570,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.5,
     "model_note": "Modric remains Croatia's key chance-creation profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3605,7 +3606,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "England vs Croatia",
@@ -3617,7 +3618,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.6,
     "model_note": "Kovacic can be forced into tactical fouls against England runners.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3653,7 +3654,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -3663,9 +3664,9 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 35.7,
     "model_price": 2.8,
-    "model_note": "Williams is Ghana's leading central goal profile.",
+    "model_note": "Inaki Williams is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3701,7 +3702,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -3711,9 +3713,9 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 50.8,
     "model_price": 1.97,
-    "model_note": "Kudus owns Ghana's strongest direct shot profile.",
+    "model_note": "Mohammed Kudus is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3747,7 +3749,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -3757,9 +3760,9 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 28.2,
     "model_price": 3.55,
-    "model_note": "Fajardo is Panama's main forward target.",
+    "model_note": "Jose Fajardo is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3795,7 +3798,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -3805,9 +3809,9 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 43.9,
     "model_price": 2.28,
-    "model_note": "Kudus is also Ghana's best creative involvement angle.",
+    "model_note": "Mohammed Kudus is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3841,7 +3845,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Ghana vs Panama",
@@ -3851,9 +3856,9 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 29.1,
     "model_price": 3.44,
-    "model_note": "Carrasquilla carries Panama's highest midfield card risk.",
+    "model_note": "Adalberto Carrasquilla is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3918,7 +3923,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -3928,9 +3934,9 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 38.9,
     "model_price": 2.57,
-    "model_note": "Duran rates as Colombia's most direct goal threat.",
+    "model_note": "Jhon Duran is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -3964,7 +3970,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -3974,9 +3981,9 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 55.5,
     "model_price": 1.8,
-    "model_note": "Diaz is Colombia's strongest shot-on-target player.",
+    "model_note": "Luis Diaz is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4012,7 +4019,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -4022,9 +4030,9 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 30.8,
     "model_price": 3.25,
-    "model_note": "Masharipov is Uzbekistan's main creative shot profile.",
+    "model_note": "Jaloliddin Masharipov is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4058,7 +4066,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -4068,9 +4077,9 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 45.3,
     "model_price": 2.21,
-    "model_note": "James has Colombia's highest set-piece and assist profile.",
+    "model_note": "James Rodriguez is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4106,7 +4115,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Uzbekistan vs Colombia",
@@ -4116,9 +4126,9 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 28.3,
     "model_price": 3.53,
-    "model_note": "Barrios carries Colombia's highest ball-winning card risk.",
+    "model_note": "Wilmar Barrios is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4152,7 +4162,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Czech Republic vs South Africa",
@@ -4164,7 +4175,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.47,
     "model_note": "Schick is Czech Republic's highest goal share.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4212,7 +4223,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.18,
     "model_note": "Soucek rates well from set pieces and second balls.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4279,7 +4290,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.33,
     "model_note": "Hlozek projects as a strong secondary Czech shooter.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4346,7 +4357,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.17,
     "model_note": "Tau is South Africa's main transition shot profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4392,7 +4403,7 @@ window.embeddedPlayerProps = [
     "model_price": 4.22,
     "model_note": "Soucek has aerial-duel and midfield challenge card exposure.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4459,7 +4470,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.73,
     "model_note": "Embolo has Switzerland's best central goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4507,7 +4518,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.13,
     "model_note": "Dzeko is Bosnia's strongest penalty-box goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4555,7 +4566,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.26,
     "model_note": "Xhaka projects well if Switzerland control territory.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4622,7 +4633,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.58,
     "model_note": "Shaqiri remains watchlist only until role is confirmed.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4668,7 +4679,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.42,
     "model_note": "Kolasinac carries high duel and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4735,7 +4746,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.52,
     "model_note": "David is Canada's strongest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4783,7 +4794,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.89,
     "model_note": "David projects as Canada's cleanest shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4850,7 +4861,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.89,
     "model_note": "Afif is Qatar's main attacking prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4917,7 +4928,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.4,
     "model_note": "Davies carries Canada's strongest wide creation angle.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4984,7 +4995,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.72,
     "model_note": "Madibo profiles as Qatar's highest midfield card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5051,7 +5062,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.65,
     "model_note": "Gimenez is Mexico's strongest goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5099,7 +5110,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.07,
     "model_note": "Lozano rates well for Mexico shot volume from wide areas.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5156,7 +5167,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.78,
     "model_note": "Son is South Korea's best shot-on-target prop.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5223,7 +5234,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.53,
     "model_note": "Lee projects as South Korea's best creator.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5290,7 +5301,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.18,
     "model_note": "Alvarez carries Mexico's strongest card profile.",
     "live_prices": [],
-    "last_checked": "2026-06-17T14:36:24.063Z",
+    "last_checked": "2026-06-17T17:36:05.552Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
