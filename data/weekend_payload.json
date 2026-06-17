@@ -17823,7 +17823,7 @@
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -18826,7 +18826,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -19829,7 +19829,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -20863,7 +20863,7 @@
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -20886,13 +20886,13 @@
           "oddsapi_market": "double_chance",
           "model_probability": 38.9,
           "model_price": 2.57,
-          "current_odds": 3.25,
+          "current_odds": 3.35,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 14.49,
-          "ev": 26.46,
-          "qi": 72,
-          "price_qi": 90
+          "devig_book_probability": 14.07,
+          "ev": 30.35,
+          "qi": 75,
+          "price_qi": 92
         },
         {
           "selection": "Uzbekistan or Draw",
@@ -20905,7 +20905,7 @@
           "current_odds": 3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 15.73,
+          "devig_book_probability": 15.8,
           "ev": 16.73,
           "qi": 64,
           "price_qi": 86
@@ -20969,26 +20969,26 @@
           "current_odds": 1.4,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 71.34,
+          "devig_book_probability": 70.75,
           "ev": -3.45,
           "qi": 45,
           "price_qi": 29
         },
         {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 91.5,
-          "model_price": 1.09,
-          "current_odds": 1.05,
+          "selection": "Colombia to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 69,
+          "model_price": 1.45,
+          "current_odds": 1.38,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 89.01,
-          "ev": -3.67,
-          "qi": 42,
-          "price_qi": 19
+          "devig_book_probability": 68.49,
+          "ev": -4.83,
+          "qi": 43,
+          "price_qi": 23
         },
         {
           "selection": "Uzbekistan Draw No Bet",
@@ -21055,22 +21055,6 @@
           "price_qi": 18
         },
         {
-          "selection": "Colombia to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 69,
-          "model_price": 1.45,
-          "current_odds": 1.35,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 69.69,
-          "ev": -6.9,
-          "qi": 41,
-          "price_qi": 17
-        },
-        {
           "selection": "Under 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -21085,6 +21069,22 @@
           "ev": 2.94,
           "qi": 40,
           "price_qi": 65
+        },
+        {
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 91.5,
+          "model_price": 1.09,
+          "current_odds": 1.04,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 89.64,
+          "ev": -4.59,
+          "qi": 40,
+          "price_qi": 13
         },
         {
           "selection": "BTTS No",
@@ -21142,13 +21142,13 @@
           "oddsapi_market": "double_chance",
           "model_probability": 87.9,
           "model_price": 1.14,
-          "current_odds": 1.05,
+          "current_odds": 1.06,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 44.94,
-          "ev": -7.89,
+          "devig_book_probability": 44.71,
+          "ev": -7.02,
           "qi": 37,
-          "price_qi": 5
+          "price_qi": 7
         },
         {
           "selection": "Colombia or Draw",
@@ -21161,7 +21161,7 @@
           "current_odds": 1.04,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 45.27,
+          "devig_book_probability": 45.31,
           "ev": -8.77,
           "qi": 36,
           "price_qi": 3
@@ -21190,13 +21190,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 10.6,
           "model_price": 9.44,
-          "current_odds": 11,
+          "current_odds": 10.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 9.08,
-          "ev": 16.53,
-          "qi": 35,
-          "price_qi": 80
+          "devig_book_probability": 9.43,
+          "ev": 11.23,
+          "qi": 33,
+          "price_qi": 78
         },
         {
           "selection": "Match to end in a Draw",
@@ -21206,13 +21206,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 20.7,
           "model_price": 4.84,
-          "current_odds": 5.1,
+          "current_odds": 5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 19.58,
-          "ev": 5.37,
-          "qi": 35,
-          "price_qi": 72
+          "devig_book_probability": 19.81,
+          "ev": 3.31,
+          "qi": 32,
+          "price_qi": 66
         },
         {
           "selection": "Uzbekistan to Win",
@@ -21226,22 +21226,6 @@
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 9.56,
-          "ev": 5.93,
-          "qi": 30,
-          "price_qi": 72
-        },
-        {
-          "selection": "Uzbekistan to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 10.6,
-          "model_price": 9.44,
-          "current_odds": 10,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 9.41,
           "ev": 5.93,
           "qi": 30,
           "price_qi": 72
@@ -21369,10 +21353,26 @@
           "current_odds": 4.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 20.91,
+          "devig_book_probability": 21,
           "ev": -7.02,
           "qi": 15,
           "price_qi": 24
+        },
+        {
+          "selection": "Uzbekistan to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 10.6,
+          "model_price": 9.44,
+          "current_odds": 9,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 10.5,
+          "ev": -4.66,
+          "qi": 13,
+          "price_qi": 29
         },
         {
           "selection": "Uzbekistan to Win",
@@ -21430,13 +21430,13 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 8.5,
           "model_price": 11.8,
-          "current_odds": 8.5,
+          "current_odds": 9,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 10.99,
-          "ev": -27.97,
-          "qi": 8,
-          "price_qi": 14
+          "devig_book_probability": 10.36,
+          "ev": -23.73,
+          "qi": 9,
+          "price_qi": 16
         }
       ]
     },
@@ -21865,7 +21865,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -22900,7 +22900,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
@@ -23035,13 +23035,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 59.2,
           "model_price": 1.69,
-          "current_odds": 1.58,
+          "current_odds": 1.59,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 62.51,
-          "ev": -6.51,
-          "qi": 39,
-          "price_qi": 20
+          "devig_book_probability": 62.36,
+          "ev": -5.92,
+          "qi": 40,
+          "price_qi": 21
         },
         {
           "selection": "Switzerland to Win",
@@ -23086,7 +23086,7 @@
           "current_odds": 4.3,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 22.97,
+          "devig_book_probability": 23.06,
           "ev": 5.13,
           "qi": 37,
           "price_qi": 72
@@ -23759,7 +23759,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -23782,13 +23782,13 @@
           "oddsapi_market": "double_chance",
           "model_probability": 40.1,
           "model_price": 2.49,
-          "current_odds": 3.9,
+          "current_odds": 3.8,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 12.14,
-          "ev": 56.63,
+          "devig_book_probability": 12.42,
+          "ev": 52.61,
           "qi": 84,
-          "price_qi": 97
+          "price_qi": 96
         },
         {
           "selection": "Qatar or Draw",
@@ -23943,6 +23943,22 @@
           "model_probability": 72.5,
           "model_price": 1.38,
           "current_odds": 1.28,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 74.12,
+          "ev": -7.25,
+          "qi": 40,
+          "price_qi": 15
+        },
+        {
+          "selection": "Canada to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 72.5,
+          "model_price": 1.38,
+          "current_odds": 1.28,
           "au_bookie": "Neds",
           "bookmaker_key": "neds",
           "devig_book_probability": 73.16,
@@ -23981,22 +23997,6 @@
           "ev": -7.97,
           "qi": 40,
           "price_qi": 13
-        },
-        {
-          "selection": "Canada to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 72.5,
-          "model_price": 1.38,
-          "current_odds": 1.25,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 74.58,
-          "ev": -9.42,
-          "qi": 39,
-          "price_qi": 10
         },
         {
           "selection": "Match to end in a Draw",
@@ -24089,7 +24089,7 @@
           "current_odds": 1.03,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 45.96,
+          "devig_book_probability": 45.82,
           "ev": -8.04,
           "qi": 36,
           "price_qi": 3
@@ -24153,7 +24153,7 @@
           "current_odds": 1.13,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 41.9,
+          "devig_book_probability": 41.76,
           "ev": -20.42,
           "qi": 35,
           "price_qi": 0
@@ -24169,7 +24169,7 @@
           "current_odds": 5.5,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 16.95,
+          "devig_book_probability": 17.25,
           "ev": 4.76,
           "qi": 33,
           "price_qi": 70
@@ -24714,7 +24714,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:39:34.330Z",
+      "checked_at": "2026-06-17T11:50:00.806Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
