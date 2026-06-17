@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-06-17T11:24:15.370Z",
+  "updated_at": "2026-06-17T11:34:25.527Z",
   "sample_size": 17,
   "confidence": "developing",
   "adjustments": {
@@ -23,5 +23,5 @@
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
   "xg_sample_size": 17,
-  "previous_updated_at": "2026-06-17T11:22:35.098Z"
+  "previous_updated_at": "2026-06-17T11:32:40.405Z"
 }

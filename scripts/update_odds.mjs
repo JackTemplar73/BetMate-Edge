@@ -1325,6 +1325,12 @@ function settleAgainstScore(entry, result, fixture = null) {
     return 'push';
   }
 
+  if (selection.includes('btts') || selection.includes('both teams to score')) {
+    const bothScored = result.homeScore > 0 && result.awayScore > 0;
+    if (selection.includes('yes')) return bothScored ? 'won' : 'lost';
+    if (selection.includes('no')) return bothScored ? 'lost' : 'won';
+  }
+
   if (entry.market_matrix === 'Totals' || entry.market_matrix === 'Goal Totals') {
     return settleTotalSelection(entry.target_selection, result);
   }
@@ -1777,9 +1783,52 @@ function trackedMarketsForFixture(fixture) {
   const fixtureMarkets = fixture.markets || [];
   const scanMarkets = (fixture.market_scan?.rows || [])
     .filter((row) => Number(row.qi) >= MIN_TRACKED_QI)
+    .filter((row) => !isStructurallyFragileTrackedMarket(row, fixture))
     .map((row) => scanRowToMarketItem(row, fixture));
 
-  return [...fixtureMarkets, ...scanMarkets];
+  return [
+    ...fixtureMarkets.filter((marketItem) => !isStructurallyFragileTrackedMarket(marketItem, fixture)),
+    ...scanMarkets
+  ];
+}
+
+function isStructurallyFragileTrackedMarket(item, fixture) {
+  const selection = normalise(item.selection || item.target_selection);
+  const market = normalise(item.market || item.market_matrix || item.category || item.oddsapi_market);
+  const odds = Number(item.current_odds);
+  const qi = Number(item.qi);
+  const totalMean = Number(fixture.model_totals_25?.total_goals_mean);
+  const breakOpenRisk = Number(fixture.model_totals_25?.break_open_risk);
+  const calibration = fixture.model_calibration || {};
+  const homeProb = Number(calibration.calibrated_home_probability);
+  const awayProb = Number(calibration.calibrated_away_probability);
+  const favoriteProb = Math.max(homeProb, awayProb);
+
+  if (selection.includes('under') && market.includes('total')) {
+    const isBreakOpenShape = Number.isFinite(breakOpenRisk) && breakOpenRisk >= 0.12;
+    const hasModerateGoalMean = Number.isFinite(totalMean) && totalMean >= 2.42;
+    const strongFavorite = Number.isFinite(favoriteProb) && favoriteProb >= 58;
+    if (strongFavorite && (isBreakOpenShape || hasModerateGoalMean)) return true;
+  }
+
+  if (selection.includes('or draw') && market.includes('double chance')) {
+    const selectedTeam = selection.replace(/\s+or draw.*/, '').trim();
+    const teams = splitTeams(fixture.match_name);
+    const displayTeams = fixture.match_name.split(/\s+vs\s+/i);
+    const homeName = normalise(displayTeams[0] || teams?.home || '');
+    const awayName = normalise(displayTeams[1] || teams?.away || '');
+    const selectedProb = selectedTeam === homeName
+      ? homeProb
+      : selectedTeam === awayName
+        ? awayProb
+        : null;
+    const isOutsiderCover = Number.isFinite(selectedProb) && selectedProb < 25;
+    const isHighRiskPrice = Number.isFinite(odds) && odds >= 3.25;
+    const isMarginalScore = Number.isFinite(qi) && qi < 90;
+    if (isOutsiderCover && isHighRiskPrice && isMarginalScore) return true;
+  }
+
+  return false;
 }
 
 async function readHistory() {
@@ -1912,6 +1961,10 @@ function sanitizeHistoryCurrentPrice(entry) {
   entry.current_ev = entry.opening_ev;
   entry.current_qi = entry.opening_qi;
   entry.current_price_note = 'Post-start or stale outlier rejected; restored opening price for clean history display.';
+}
+
+function isSettledHistoryEntry(entry) {
+  return ['won', 'win', 'lost', 'loss', 'push', 'void'].includes(String(entry.result_status || '').toLowerCase());
 }
 
 async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaReports = []) {
@@ -2118,7 +2171,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
 
   const nextHistory = [...byId.values()]
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
-    .filter((entry) => activeBetIds.has(entry.bet_id) || entry.manual_user_saved)
+    .filter((entry) => activeBetIds.has(entry.bet_id) || entry.manual_user_saved || isSettledHistoryEntry(entry))
     .sort((a, b) => {
       const aKickoff = parseAest(a.kickoff_time_aest);
       const bKickoff = parseAest(b.kickoff_time_aest);
@@ -2660,18 +2713,26 @@ function deriveFixtureGoalModel(fixture, learningCoefficients = DEFAULT_LEARNING
 
   const resultGap = Math.abs(probabilities.home - probabilities.away);
   const favorite = Math.max(probabilities.home, probabilities.away);
+  const baseFavorite = Math.max(baseProbabilities.home, baseProbabilities.away);
   const drawBrake = Math.max(0, probabilities.draw - 0.22) * 2.35;
   const favouriteEventBoost = Math.max(0, favorite - 0.62) * 0.55;
   const tempoAdjustment = fixtureTempoAdjustment(fixture);
+  const mismatchBreakOpenRisk = clamp(
+    (Math.max(0, baseFavorite - 0.68) * 0.6) + (Math.max(0, favorite - 0.58) * 0.35),
+    0,
+    0.16
+  );
+  const suppressionRelease = clamp(mismatchBreakOpenRisk * 0.45, 0, 0.07);
   const goalSuppression = clamp(
     (probabilities.profile?.goalSuppression || 0)
       + Number(learningAdjustments.goal_suppression || 0)
-      + Number(learningAdjustments.chance_quality_penalty || 0),
+      + Number(learningAdjustments.chance_quality_penalty || 0)
+      - suppressionRelease,
     0,
     0.42
   );
   const breakOpenRisk = clamp(
-    (probabilities.profile?.breakOpenRisk || 0) + Number(learningAdjustments.break_open_risk || 0),
+    (probabilities.profile?.breakOpenRisk || 0) + Number(learningAdjustments.break_open_risk || 0) + mismatchBreakOpenRisk,
     0,
     0.42
   );
@@ -2706,6 +2767,7 @@ function deriveFixtureGoalModel(fixture, learningCoefficients = DEFAULT_LEARNING
     tempo_adjustment: Number(tempoAdjustment.toFixed(2)),
     goal_suppression: Number(goalSuppression.toFixed(2)),
     break_open_risk: Number(breakOpenRisk.toFixed(2)),
+    mismatch_break_open_risk: Number(mismatchBreakOpenRisk.toFixed(2)),
     calibration_note: probabilities.calibration.note
   };
   fixture.model_calibration = {
@@ -2719,6 +2781,7 @@ function deriveFixtureGoalModel(fixture, learningCoefficients = DEFAULT_LEARNING
     tempo_adjustment: Number(tempoAdjustment.toFixed(2)),
     goal_suppression: Number(goalSuppression.toFixed(2)),
     break_open_risk: Number(breakOpenRisk.toFixed(2)),
+    mismatch_break_open_risk: Number(mismatchBreakOpenRisk.toFixed(2)),
     learning_adjustments: {
       confidence: learningCoefficients.confidence || 'none',
       sample_size: learningCoefficients.sample_size || 0,
