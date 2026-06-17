@@ -17823,7 +17823,7 @@ window.embeddedDataset = [
         "Betfair",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "6cc871c121a1869b4612d3fb22fa9d55",
       "offered_market_keys": [
@@ -17951,6 +17951,22 @@ window.embeddedDataset = [
           "price_qi": 27
         },
         {
+          "selection": "DR Congo Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 15,
+          "model_price": 6.68,
+          "current_odds": 9,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 10.45,
+          "ev": 34.73,
+          "qi": 43,
+          "price_qi": 87
+        },
+        {
           "selection": "Over 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -17977,26 +17993,10 @@ window.embeddedDataset = [
           "current_odds": 1.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 71.85,
+          "devig_book_probability": 72.36,
           "ev": -5.11,
           "qi": 42,
           "price_qi": 21
-        },
-        {
-          "selection": "DR Congo Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 15,
-          "model_price": 6.68,
-          "current_odds": 8.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 11.09,
-          "ev": 27.25,
-          "qi": 41,
-          "price_qi": 85
         },
         {
           "selection": "Over 1.5 Goals",
@@ -18118,13 +18118,13 @@ window.embeddedDataset = [
           "oddsapi_market": "draw_no_bet",
           "model_probability": 85,
           "model_price": 1.18,
-          "current_odds": 1.06,
+          "current_odds": 1.05,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 88.91,
-          "ev": -10.17,
-          "qi": 36,
-          "price_qi": 2
+          "devig_book_probability": 89.55,
+          "ev": -11.02,
+          "qi": 35,
+          "price_qi": 1
         },
         {
           "selection": "BTTS No",
@@ -18230,6 +18230,22 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 8.9,
           "model_price": 11.26,
+          "current_odds": 12,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 7.84,
+          "ev": 6.57,
+          "qi": 30,
+          "price_qi": 73
+        },
+        {
+          "selection": "DR Congo to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 8.9,
+          "model_price": 11.26,
           "current_odds": 11.5,
           "au_bookie": "PointsBet (AU)",
           "bookmaker_key": "pointsbetau",
@@ -18319,22 +18335,6 @@ window.embeddedDataset = [
           "price_qi": 35
         },
         {
-          "selection": "DR Congo to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 8.9,
-          "model_price": 11.26,
-          "current_odds": 11,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 8.49,
-          "ev": -2.31,
-          "qi": 16,
-          "price_qi": 38
-        },
-        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -18345,7 +18345,7 @@ window.embeddedDataset = [
           "current_odds": 4.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 19.66,
+          "devig_book_probability": 19.8,
           "ev": -14.57,
           "qi": 13,
           "price_qi": 17
@@ -18826,7 +18826,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "689096c8cd7e2753b9fec95321943c5d",
       "offered_market_keys": [
@@ -19829,7 +19829,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "87afdb85c977b451e1c00f5e3e632601",
       "offered_market_keys": [
@@ -19859,6 +19859,22 @@ window.embeddedDataset = [
           "ev": 8.52,
           "qi": 59,
           "price_qi": 80
+        },
+        {
+          "selection": "Ghana to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 44.8,
+          "model_price": 2.23,
+          "current_odds": 2.4,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 39.24,
+          "ev": 7.62,
+          "qi": 58,
+          "price_qi": 79
         },
         {
           "selection": "Over 1.5 Goals",
@@ -19925,6 +19941,22 @@ window.embeddedDataset = [
           "price_qi": 66
         },
         {
+          "selection": "Ghana or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 72.8,
+          "model_price": 1.37,
+          "current_odds": 1.35,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 35.03,
+          "ev": -1.46,
+          "qi": 49,
+          "price_qi": 40
+        },
+        {
           "selection": "Over 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -19941,20 +19973,20 @@ window.embeddedDataset = [
           "price_qi": 34
         },
         {
-          "selection": "Panama or Draw",
+          "selection": "Ghana Draw No Bet",
           "category": "Main Match",
-          "market": "Double Chance",
+          "market": "Draw No Bet",
           "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 58.7,
-          "model_price": 1.7,
-          "current_odds": 1.65,
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 60.3,
+          "model_price": 1.66,
+          "current_odds": 1.62,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 28.64,
-          "ev": -2.94,
-          "qi": 44,
-          "price_qi": 33
+          "devig_book_probability": 57.59,
+          "ev": -2.41,
+          "qi": 45,
+          "price_qi": 35
         },
         {
           "selection": "Ghana or Draw",
@@ -19973,22 +20005,6 @@ window.embeddedDataset = [
           "price_qi": 24
         },
         {
-          "selection": "Ghana or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 72.8,
-          "model_price": 1.37,
-          "current_odds": 1.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 36.35,
-          "ev": -5.11,
-          "qi": 42,
-          "price_qi": 21
-        },
-        {
           "selection": "Panama or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -20003,22 +20019,6 @@ window.embeddedDataset = [
           "ev": -5.88,
           "qi": 40,
           "price_qi": 21
-        },
-        {
-          "selection": "Ghana Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 60.3,
-          "model_price": 1.66,
-          "current_odds": 1.55,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 60.76,
-          "ev": -6.63,
-          "qi": 40,
-          "price_qi": 19
         },
         {
           "selection": "Under 3.5 Goals",
@@ -20047,7 +20047,7 @@ window.embeddedDataset = [
           "current_odds": 1.35,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 35.01,
+          "devig_book_probability": 35.03,
           "ev": -7.53,
           "qi": 40,
           "price_qi": 15
@@ -20067,6 +20067,22 @@ window.embeddedDataset = [
           "ev": -5.41,
           "qi": 39,
           "price_qi": 11
+        },
+        {
+          "selection": "Panama or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 58.7,
+          "model_price": 1.7,
+          "current_odds": 1.58,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 29.93,
+          "ev": -7.06,
+          "qi": 39,
+          "price_qi": 18
         },
         {
           "selection": "Ghana or Panama",
@@ -20115,22 +20131,6 @@ window.embeddedDataset = [
           "ev": -0.86,
           "qi": 37,
           "price_qi": 44
-        },
-        {
-          "selection": "Ghana to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 44.8,
-          "model_price": 2.23,
-          "current_odds": 2.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 42.43,
-          "ev": -1.35,
-          "qi": 37,
-          "price_qi": 42
         },
         {
           "selection": "BTTS Yes",
@@ -20197,22 +20197,6 @@ window.embeddedDataset = [
           "price_qi": 19
         },
         {
-          "selection": "Panama Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 39.7,
-          "model_price": 2.52,
-          "current_odds": 2.4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 39.24,
-          "ev": -4.76,
-          "qi": 29,
-          "price_qi": 27
-        },
-        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -20227,6 +20211,22 @@ window.embeddedDataset = [
           "ev": -4.29,
           "qi": 25,
           "price_qi": 29
+        },
+        {
+          "selection": "Panama Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 39.7,
+          "model_price": 2.52,
+          "current_odds": 2.2,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 42.41,
+          "ev": -12.7,
+          "qi": 25,
+          "price_qi": 14
         },
         {
           "selection": "Match to end in a Draw",
@@ -20277,22 +20277,6 @@ window.embeddedDataset = [
           "price_qi": 20
         },
         {
-          "selection": "Panama to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 26.7,
-          "model_price": 3.75,
-          "current_odds": 3.4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 27.46,
-          "ev": -9.33,
-          "qi": 21,
-          "price_qi": 20
-        },
-        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -20303,7 +20287,7 @@ window.embeddedDataset = [
           "current_odds": 3.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 30.11,
+          "devig_book_probability": 30.38,
           "ev": -11.43,
           "qi": 21,
           "price_qi": 17
@@ -20387,6 +20371,22 @@ window.embeddedDataset = [
           "ev": -14.67,
           "qi": 19,
           "price_qi": 15
+        },
+        {
+          "selection": "Panama to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 26.7,
+          "model_price": 3.75,
+          "current_odds": 3.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 30.38,
+          "ev": -17.33,
+          "qi": 19,
+          "price_qi": 13
         },
         {
           "selection": "Over 3.5 Goals",
@@ -20863,7 +20863,7 @@ window.embeddedDataset = [
         "TAB",
         "Neds"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "22083e7a8e5362c711bc05c1e1319a1f",
       "offered_market_keys": [
@@ -20902,13 +20902,29 @@ window.embeddedDataset = [
           "oddsapi_market": "double_chance",
           "model_probability": 38.9,
           "model_price": 2.57,
-          "current_odds": 3.1,
+          "current_odds": 3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 15.3,
-          "ev": 20.62,
-          "qi": 67,
-          "price_qi": 88
+          "devig_book_probability": 15.73,
+          "ev": 16.73,
+          "qi": 64,
+          "price_qi": 86
+        },
+        {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 55.2,
+          "model_price": 1.81,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 50,
+          "ev": 3.31,
+          "qi": 59,
+          "price_qi": 68
         },
         {
           "selection": "Under 3.5 Goals",
@@ -20918,13 +20934,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 76.4,
           "model_price": 1.31,
-          "current_odds": 1.3,
+          "current_odds": 1.32,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 71.74,
-          "ev": -0.76,
-          "qi": 50,
-          "price_qi": 44
+          "devig_book_probability": 70.8,
+          "ev": 0.76,
+          "qi": 56,
+          "price_qi": 55
         },
         {
           "selection": "Under 4.5 Goals",
@@ -20943,22 +20959,6 @@ window.embeddedDataset = [
           "price_qi": 42
         },
         {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 55.2,
-          "model_price": 1.81,
-          "current_odds": 1.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 52,
-          "ev": -0.55,
-          "qi": 47,
-          "price_qi": 46
-        },
-        {
           "selection": "Colombia to Win",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -20969,7 +20969,7 @@ window.embeddedDataset = [
           "current_odds": 1.4,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 71.06,
+          "devig_book_probability": 71.34,
           "ev": -3.45,
           "qi": 45,
           "price_qi": 29
@@ -21071,6 +21071,22 @@ window.embeddedDataset = [
           "price_qi": 17
         },
         {
+          "selection": "Under 1.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 29.4,
+          "model_price": 3.4,
+          "current_odds": 3.5,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 26.78,
+          "ev": 2.94,
+          "qi": 40,
+          "price_qi": 65
+        },
+        {
           "selection": "BTTS No",
           "category": "Main Match",
           "market": "Both Teams To Score",
@@ -21078,13 +21094,13 @@ window.embeddedDataset = [
           "oddsapi_market": "btts",
           "model_probability": 59,
           "model_price": 1.7,
-          "current_odds": 1.58,
+          "current_odds": 1.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 59.28,
-          "ev": -7.06,
-          "qi": 39,
-          "price_qi": 18
+          "devig_book_probability": 58.44,
+          "ev": -5.88,
+          "qi": 40,
+          "price_qi": 21
         },
         {
           "selection": "Over 1.5 Goals",
@@ -21094,13 +21110,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 70.6,
           "model_price": 1.42,
-          "current_odds": 1.3,
+          "current_odds": 1.28,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 71.74,
-          "ev": -8.45,
+          "devig_book_probability": 73.22,
+          "ev": -9.86,
           "qi": 39,
-          "price_qi": 12
+          "price_qi": 10
         },
         {
           "selection": "BTTS No",
@@ -21129,7 +21145,7 @@ window.embeddedDataset = [
           "current_odds": 1.05,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 45.17,
+          "devig_book_probability": 44.94,
           "ev": -7.89,
           "qi": 37,
           "price_qi": 5
@@ -21177,7 +21193,7 @@ window.embeddedDataset = [
           "current_odds": 11,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 9.04,
+          "devig_book_probability": 9.08,
           "ev": 16.53,
           "qi": 35,
           "price_qi": 80
@@ -21190,29 +21206,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 20.7,
           "model_price": 4.84,
-          "current_odds": 5,
+          "current_odds": 5.1,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 19.9,
-          "ev": 3.31,
-          "qi": 32,
-          "price_qi": 66
-        },
-        {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 44.8,
-          "model_price": 2.23,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48,
-          "ev": -12.56,
-          "qi": 31,
-          "price_qi": 13
+          "devig_book_probability": 19.58,
+          "ev": 5.37,
+          "qi": 35,
+          "price_qi": 72
         },
         {
           "selection": "Uzbekistan to Win",
@@ -21263,6 +21263,22 @@ window.embeddedDataset = [
           "price_qi": 24
         },
         {
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 44.8,
+          "model_price": 2.23,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 50,
+          "ev": -16.14,
+          "qi": 29,
+          "price_qi": 9
+        },
+        {
           "selection": "BTTS Yes",
           "category": "Main Match",
           "market": "Both Teams To Score",
@@ -21270,29 +21286,13 @@ window.embeddedDataset = [
           "oddsapi_market": "btts",
           "model_probability": 41,
           "model_price": 2.44,
-          "current_odds": 2.3,
+          "current_odds": 2.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 40.72,
-          "ev": -5.74,
-          "qi": 29,
-          "price_qi": 24
-        },
-        {
-          "selection": "Under 1.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 29.4,
-          "model_price": 3.4,
-          "current_odds": 3.3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 28.26,
-          "ev": -2.94,
-          "qi": 27,
-          "price_qi": 34
+          "devig_book_probability": 41.56,
+          "ev": -7.79,
+          "qi": 28,
+          "price_qi": 20
         },
         {
           "selection": "Match to end in a Draw",
@@ -21334,13 +21334,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 23.6,
           "model_price": 4.24,
-          "current_odds": 3.3,
+          "current_odds": 3.2,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 28.26,
-          "ev": -22.17,
-          "qi": 17,
-          "price_qi": 11
+          "devig_book_probability": 29.2,
+          "ev": -24.53,
+          "qi": 16,
+          "price_qi": 10
         },
         {
           "selection": "Match to end in a Draw",
@@ -21865,7 +21865,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "66ebb9e3f949caded535d97ce686ca09",
       "offered_market_keys": [
@@ -22900,7 +22900,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "289bc2e9f5adad8ae4d9a75a7c5461ad",
       "offered_market_keys": [
@@ -23759,7 +23759,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -24714,7 +24714,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-17T11:35:29.669Z",
+      "checked_at": "2026-06-17T11:39:34.330Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
