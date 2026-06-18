@@ -54,6 +54,7 @@ const ESPN_LEAGUES = [
   'fifa.friendly'
 ];
 const FIFA_REPORT_HUB_URL = 'https://www.fifatrainingcentre.com/en/fifa-world-cup-2026/match-report-hub.php';
+const FOOTYSTATS_HOME_URL = 'https://footystats.org/';
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
 const CLOSING_WINDOW_MS = 5 * 60 * 1000;
@@ -565,6 +566,209 @@ function applyFotMobLineups(fixture, details, nowIso) {
 function lineupHasSubstitutes(fixture) {
   const lineups = fixture.confirmed_lineups;
   return Boolean((lineups?.home_substitutes || []).length || (lineups?.away_substitutes || []).length);
+}
+
+function decodeHtmlEntities(value) {
+  return String(value || '')
+    .replace(/&amp;/g, '&')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&#39;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&ndash;|&mdash;/g, '-')
+    .replace(/&[a-z0-9#]+;/gi, ' ');
+}
+
+function htmlToCompactText(html) {
+  return decodeHtmlEntities(String(html || '')
+    .replace(/<script[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim());
+}
+
+function normaliseFootyStatsText(value) {
+  return normalise(value)
+    .replace(/\band\b/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+async function fetchFootyStatsSnapshot(nowIso) {
+  try {
+    const response = await fetch(FOOTYSTATS_HOME_URL, {
+      headers: {
+        accept: 'text/html,application/xhtml+xml',
+        'user-agent': 'Mozilla/5.0'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`FootyStats request failed: ${response.status}`);
+    }
+
+    const html = await response.text();
+    return {
+      checked_at: nowIso,
+      source_url: FOOTYSTATS_HOME_URL,
+      text: htmlToCompactText(html)
+    };
+  } catch (error) {
+    return {
+      checked_at: nowIso,
+      source_url: FOOTYSTATS_HOME_URL,
+      error: error.message,
+      text: ''
+    };
+  }
+}
+
+function findFootyStatsFixtureSnippet(snapshot, fixture) {
+  if (!snapshot?.text) return null;
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  const normalised = normaliseFootyStatsText(snapshot.text);
+  const home = normaliseFootyStatsText(teams.home);
+  const away = normaliseFootyStatsText(teams.away);
+  const homeIndex = normalised.indexOf(home);
+  const awayIndex = normalised.indexOf(away);
+  if (homeIndex < 0 || awayIndex < 0 || Math.abs(homeIndex - awayIndex) > 280) return null;
+
+  const start = Math.max(0, Math.min(homeIndex, awayIndex) - 90);
+  const end = Math.min(normalised.length, Math.max(homeIndex, awayIndex) + 260);
+  return normalised.slice(start, end);
+}
+
+function parseFootyStatsPublicRow(snippet, fixture) {
+  if (!snippet) return null;
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  const home = normaliseFootyStatsText(teams.home);
+  const away = normaliseFootyStatsText(teams.away);
+  const escapedHome = home.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const escapedAway = away.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const formPattern = new RegExp(`${escapedHome}\\s+(\\d+(?:\\.\\d+)?)\\s+stats\\s+(\\d+(?:\\.\\d+)?)\\s+${escapedAway}`);
+  const oddsPattern = new RegExp(`(\\d+(?:\\.\\d+)?)\\s+${escapedHome}\\s+win\\s+(\\d+(?:\\.\\d+)?)\\s+draw\\s+(\\d+(?:\\.\\d+)?)\\s+${escapedAway}\\s+win`);
+  const form = snippet.match(formPattern);
+  const odds = snippet.match(oddsPattern);
+
+  return {
+    matched_text: snippet.slice(0, 360),
+    home_form_index: form ? Number(form[1]) : null,
+    away_form_index: form ? Number(form[2]) : null,
+    home_win_odds: odds ? Number(odds[1]) : null,
+    draw_odds: odds ? Number(odds[2]) : null,
+    away_win_odds: odds ? Number(odds[3]) : null
+  };
+}
+
+function modelRowProbability(fixture, selection) {
+  const row = (fixture.model_market_view || []).find((item) => normalise(item.selection) === normalise(selection));
+  const probability = Number(row?.probability);
+  return Number.isFinite(probability) ? probability : null;
+}
+
+function footyStatsBand(value, highLabel, lowLabel) {
+  const numeric = Number(value);
+  if (!Number.isFinite(numeric)) return 'not enough data';
+  if (numeric >= 58) return highLabel;
+  if (numeric <= 42) return lowLabel;
+  return 'balanced';
+}
+
+function buildFootyStatsAnalysis(fixture, snapshot, nowIso) {
+  const snippet = findFootyStatsFixtureSnippet(snapshot, fixture);
+  const publicRow = parseFootyStatsPublicRow(snippet, fixture);
+  const teams = splitTeams(fixture.match_name);
+  const totals = fixture.model_totals_25 || {};
+  const calibration = fixture.model_calibration || {};
+  const bttsYes = modelRowProbability(fixture, 'BTTS Yes');
+  const bttsNo = modelRowProbability(fixture, 'BTTS No');
+  const over25 = Number(totals.over_probability);
+  const under25 = Number(totals.under_probability);
+  const draw = Number(calibration.calibrated_draw_probability);
+  const breakOpen = Number(calibration.break_open_risk ?? totals.break_open_risk);
+  const suppression = Number(calibration.goal_suppression ?? totals.goal_suppression);
+  const mean = Number(totals.total_goals_mean);
+  const homeForm = Number(publicRow?.home_form_index);
+  const awayForm = Number(publicRow?.away_form_index);
+  const formLean = Number.isFinite(homeForm) && Number.isFinite(awayForm)
+    ? homeForm > awayForm
+      ? `${teams?.home || 'Home'} form edge`
+      : awayForm > homeForm
+        ? `${teams?.away || 'Away'} form edge`
+        : 'Form line is even'
+    : 'Public form row not matched';
+  const overUnderLean = Number.isFinite(over25) && Number.isFinite(under25)
+    ? over25 >= under25
+      ? `Over 2.5 lean ${over25.toFixed(1)}%`
+      : `Under 2.5 lean ${under25.toFixed(1)}%`
+    : 'Over/Under profile not available';
+  const bttsLean = Number.isFinite(bttsYes)
+    ? `BTTS ${bttsYes >= (bttsNo || 0) ? 'Yes' : 'No'} lean ${Math.max(bttsYes, bttsNo || 0).toFixed(1)}%`
+    : 'BTTS profile not available';
+  const xgLean = Number.isFinite(mean)
+    ? mean >= 2.65
+      ? `Higher goal expectation around ${mean.toFixed(2)}`
+      : mean <= 2.2
+        ? `Lower goal expectation around ${mean.toFixed(2)}`
+        : `Moderate goal expectation around ${mean.toFixed(2)}`
+    : 'Goal expectation not available';
+  const defensiveShape = Number.isFinite(suppression) && Number.isFinite(breakOpen)
+    ? breakOpen > suppression
+      ? 'Break-open risk outweighs defensive suppression'
+      : suppression > breakOpen
+        ? 'Defensive suppression is stronger than break-open risk'
+        : 'Defensive suppression and break-open risk are balanced'
+    : 'Defensive profile not available';
+  const drawShape = Number.isFinite(draw)
+    ? draw >= 29
+      ? `Draw profile is high at ${draw.toFixed(1)}%`
+      : draw <= 22
+        ? `Draw profile is modest at ${draw.toFixed(1)}%`
+        : `Draw profile is normal at ${draw.toFixed(1)}%`
+    : 'Draw profile not available';
+
+  return {
+    checked_at: nowIso,
+    source_url: FOOTYSTATS_HOME_URL,
+    status: publicRow ? 'matched_public_fixture_row' : snapshot?.error ? 'source_unavailable' : 'public_fixture_row_not_matched',
+    source_note: snapshot?.error || 'FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.',
+    public_row: publicRow,
+    form_lean: formLean,
+    over_under_profile: overUnderLean,
+    btts_profile: bttsLean,
+    xg_goal_profile: xgLean,
+    defensive_profile: defensiveShape,
+    draw_profile: drawShape,
+    risk_band: footyStatsBand(Math.max(over25 || 0, bttsYes || 0), 'more open attacking profile', 'tighter lower-event profile'),
+    summary: [
+      formLean,
+      overUnderLean,
+      bttsLean,
+      xgLean,
+      defensiveShape,
+      drawShape
+    ].join('. ')
+  };
+}
+
+async function applyFootyStatsAnalysis(dataset, nowIso) {
+  const snapshot = await fetchFootyStatsSnapshot(nowIso);
+  let matched = 0;
+
+  for (const fixture of dataset) {
+    fixture.footystats_analysis = buildFootyStatsAnalysis(fixture, snapshot, nowIso);
+    if (fixture.footystats_analysis.status === 'matched_public_fixture_row') matched += 1;
+  }
+
+  return {
+    checked: dataset.length,
+    matched,
+    error: snapshot.error || null
+  };
 }
 
 async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date().toISOString(), espnEvents = []) {
@@ -3132,13 +3336,14 @@ async function main() {
   deriveFixtureModels(dataset, learningCoefficients);
   applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
   reconcileMarketScanModelValues(dataset);
+  const footyStatsAnalysis = await applyFootyStatsAnalysis(dataset, nowIso);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
   await writeFile(LEARNING_COEFFICIENTS_PATH, `${JSON.stringify(learningCoefficients, null, 2)}\n`);
   const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. FootyStats checked ${footyStatsAnalysis.checked} fixtures (${footyStatsAnalysis.matched} public rows matched${footyStatsAnalysis.error ? `, ${footyStatsAnalysis.error}` : ''}). Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {

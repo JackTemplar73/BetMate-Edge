@@ -1483,6 +1483,113 @@ function renderPlainEnglishSummary(fixture) {
   `;
 }
 
+function renderFootyStatsAnalysis(fixture) {
+  const analysis = fixture.footystats_analysis;
+  if (!analysis) return '';
+
+  const publicRow = analysis.public_row || {};
+  const publicBits = [
+    Number.isFinite(Number(publicRow.home_form_index)) && Number.isFinite(Number(publicRow.away_form_index))
+      ? `Public form row: ${publicRow.home_form_index} vs ${publicRow.away_form_index}`
+      : null,
+    Number.isFinite(Number(publicRow.home_win_odds)) && Number.isFinite(Number(publicRow.draw_odds)) && Number.isFinite(Number(publicRow.away_win_odds))
+      ? `Public 1X2 row: ${formatHistoryPrice(publicRow.home_win_odds)} / ${formatHistoryPrice(publicRow.draw_odds)} / ${formatHistoryPrice(publicRow.away_win_odds)}`
+      : null
+  ].filter(Boolean);
+  const rows = [
+    ['Form', analysis.form_lean],
+    ['Goals', analysis.over_under_profile],
+    ['BTTS', analysis.btts_profile],
+    ['xG / Goal Expectation', analysis.xg_goal_profile],
+    ['Defence', analysis.defensive_profile],
+    ['Draw', analysis.draw_profile],
+    ['Profile', analysis.risk_band],
+    ...publicBits.map((bit) => ['FootyStats Row', bit])
+  ];
+
+  return `
+    <div class="footystats-card">
+      <div>
+        <span>FootyStats Analysis</span>
+        <strong>${analysis.summary}</strong>
+      </div>
+      <dl>
+        ${rows.map(([label, value]) => `
+          <div>
+            <dt>${label}</dt>
+            <dd>${value || '-'}</dd>
+          </div>
+        `).join('')}
+      </dl>
+    </div>
+  `;
+}
+
+function valueOrDash(value, formatter = (item) => item) {
+  return value === null || value === undefined || value === '' ? '-' : formatter(value);
+}
+
+function findModelViewRow(fixture, selection) {
+  return (fixture.model_market_view || []).find((row) => normaliseForMatch(row.selection) === normaliseForMatch(selection));
+}
+
+function renderModelDataBlock(fixture) {
+  const probabilities = getMatchResultProbabilities(fixture);
+  const totals = fixture.model_totals_25 || {};
+  const calibration = fixture.model_calibration || {};
+  const lineups = fixture.confirmed_lineups || {};
+  const footy = fixture.footystats_analysis || {};
+  const topExact = (fixture.exact_score_model || [])[0];
+  const bttsYes = findModelViewRow(fixture, 'BTTS Yes');
+  const bttsNo = findModelViewRow(fixture, 'BTTS No');
+  const learning = fixture.post_match_learning || {};
+  const xg = fixture.post_match_xg || {};
+  const dataRows = [
+    ['Home win', `${probabilities.homeTeam || 'Home'} ${formatPercent(probabilities.homeProbability)}`],
+    ['Draw', formatPercent(probabilities.drawProbability)],
+    ['Away win', `${probabilities.awayTeam || 'Away'} ${formatPercent(probabilities.awayProbability)}`],
+    ['Expected goals', valueOrDash(totals.total_goals_mean, (value) => Number(value).toFixed(2))],
+    ['Under 2.5', `${formatPercent(totals.under_probability)} | Fair ${formatModelOnlyPrice(totals.under_fair_price)}`],
+    ['Over 2.5', `${formatPercent(totals.over_probability)} | Fair ${formatModelOnlyPrice(totals.over_fair_price)}`],
+    ['BTTS Yes', bttsYes ? `${formatPercent(bttsYes.probability)} | Fair ${formatModelOnlyPrice(bttsYes.fair_price)}` : '-'],
+    ['BTTS No', bttsNo ? `${formatPercent(bttsNo.probability)} | Fair ${formatModelOnlyPrice(bttsNo.fair_price)}` : '-'],
+    ['Most likely score', topExact ? `${topExact.score} | ${topExact.probability}% | Fair ${formatModelOnlyPrice(topExact.fair_price)}` : '-'],
+    ['Break-open risk', valueOrDash(calibration.break_open_risk ?? totals.break_open_risk, (value) => `${Number(value).toFixed(1)}%`)],
+    ['Goal suppression', valueOrDash(calibration.goal_suppression ?? totals.goal_suppression, (value) => `${Number(value).toFixed(1)}%`)],
+    ['Referee', `${fixture.referee_name || 'Not confirmed'}${fixture.referee_status === 'verified' ? ' | verified' : ''}`],
+    ['Pitch', fixture.pitch_constraints || fixture.pitch_type || '-'],
+    ['Lineups', lineups.status === 'confirmed'
+      ? `${lineups.home_formation || '-'} vs ${lineups.away_formation || '-'} | starters and bench loaded where supplied`
+      : 'Not fully confirmed yet'],
+    ['FootyStats check', footy.status === 'matched_public_fixture_row'
+      ? 'Public fixture row matched'
+      : footy.status === 'source_unavailable'
+        ? 'Source unavailable on last check'
+        : 'Public fixture row not matched; model categories still shown'],
+    ['Post-game xG', Number.isFinite(Number(xg.home)) && Number.isFinite(Number(xg.away))
+      ? `${xg.home} - ${xg.away}`
+      : 'Only shown after the match when a structured source supplies it'],
+    ['Learning flag', learning.summary || 'No completed-match learning flag yet']
+  ];
+
+  return `
+    <div class="model-data-card">
+      <div class="model-data-heading">
+        <span>Model Data</span>
+        <strong>Inputs used for this match read</strong>
+      </div>
+      <dl>
+        ${dataRows.map(([label, value]) => `
+          <div>
+            <dt>${label}</dt>
+            <dd>${value || '-'}</dd>
+          </div>
+        `).join('')}
+      </dl>
+    </div>
+  `;
+}
+
 function renderModelSummaryTab(fixture) {
   const coefficients = getModelCoefficientCards(fixture);
   const topRows = getTopModelRows(fixture);
@@ -1493,6 +1600,8 @@ function renderModelSummaryTab(fixture) {
         <h3>Summary</h3>
       </div>
       ${renderPlainEnglishSummary(fixture)}
+      ${renderModelDataBlock(fixture)}
+      ${renderFootyStatsAnalysis(fixture)}
       <div class="coefficient-grid">
         ${coefficients.map((item) => `
           <article>
