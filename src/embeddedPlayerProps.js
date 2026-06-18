@@ -4748,7 +4748,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.52,
     "model_note": "David is Canada's strongest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4796,7 +4796,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.89,
     "model_note": "David projects as Canada's cleanest shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4863,7 +4863,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.89,
     "model_note": "Afif is Qatar's main attacking prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4930,7 +4930,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.4,
     "model_note": "Alphonso Davies is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4998,7 +4998,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.72,
     "model_note": "Assim Madibo is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5066,7 +5066,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.65,
     "model_note": "Santiago Gimenez is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5115,7 +5115,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.07,
     "model_note": "Hirving Lozano is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5173,7 +5173,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.78,
     "model_note": "Son Heung-min is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5241,7 +5241,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.53,
     "model_note": "Lee Kang-in is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5309,7 +5309,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.18,
     "model_note": "Edson Alvarez is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T17:29:01.896Z",
+    "last_checked": "2026-06-18T19:40:34.837Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",

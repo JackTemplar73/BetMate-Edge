@@ -177,12 +177,12 @@
         "data_quality_adjustment": -4
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -520,7 +520,7 @@
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 52.1,
@@ -554,7 +554,7 @@
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -569,7 +569,7 @@
       "summary": "Public form row not matched. Under 2.5 lean 51.2%. BTTS Yes lean 50.6%. Moderate goal expectation around 2.63. Break-open risk outweighs defensive suppression. Draw profile is high at 30.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 16,
       "band": "Thin",
       "price_age_minutes": null,
@@ -939,11 +939,11 @@
         "data_quality_adjustment": -5
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries",
@@ -1282,7 +1282,7 @@
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 45.4,
@@ -1315,7 +1315,7 @@
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -1387,7 +1387,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "United States 4-1 Paraguay",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states",
@@ -1450,10 +1450,10 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -1468,7 +1468,7 @@
       "summary": "Public form row not matched. Under 2.5 lean 50.8%. BTTS Yes lean 52.7%. Moderate goal expectation around 2.64. Break-open risk outweighs defensive suppression. Draw profile is high at 33.7%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 33,
       "band": "Thin",
       "price_age_minutes": null,
@@ -1543,7 +1543,7 @@
       "home": 1.42,
       "away": 0.54,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -1678,11 +1678,11 @@
         "data_quality_adjustment": -17
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -2020,7 +2020,7 @@
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M08-QAT-V-SUI.pdf",
     "final_score": "Qatar 1-1 Switzerland",
@@ -2055,7 +2055,7 @@
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -2127,7 +2127,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Qatar 1-1 Switzerland",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M08-QAT-V-SUI.pdf",
@@ -2164,10 +2164,10 @@
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -2182,10 +2182,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 67.7%. BTTS No lean 68.3%. Lower goal expectation around 2.00. Defensive suppression is stronger than break-open risk. Draw profile is high at 30.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 33,
       "band": "Thin",
-      "price_age_minutes": 6993,
+      "price_age_minutes": 7124,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -2201,7 +2201,7 @@
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6993 min old"
+          "detail": "7124 min old"
         },
         {
           "label": "Market depth",
@@ -2258,7 +2258,7 @@
       "home": 0.6,
       "away": 3.2,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -2393,11 +2393,11 @@
         "data_quality_adjustment": -18
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -2735,7 +2735,7 @@
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR%20POST-V2.pdf",
     "final_score": "Brazil 1-1 Morocco",
@@ -2770,7 +2770,7 @@
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -2842,7 +2842,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Brazil 1-1 Morocco",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR%20POST-V2.pdf",
@@ -2891,10 +2891,10 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -2909,10 +2909,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 56.1%. BTTS No lean 55.2%. Moderate goal expectation around 2.43. Defensive suppression is stronger than break-open risk. Draw profile is normal at 28.2%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 33,
       "band": "Thin",
-      "price_age_minutes": 6789,
+      "price_age_minutes": 6921,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -2928,7 +2928,7 @@
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6789 min old"
+          "detail": "6921 min old"
         },
         {
           "label": "Market depth",
@@ -2985,7 +2985,7 @@
       "home": 1.26,
       "away": 1.37,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -3142,11 +3142,11 @@
         "data_quality_adjustment": -18
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -3484,7 +3484,7 @@
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M05-HAI-V-SCO.pdf",
     "final_score": "Haiti 0-1 Scotland",
@@ -3519,7 +3519,7 @@
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -3591,7 +3591,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Haiti 0-1 Scotland",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M05-HAI-V-SCO.pdf",
@@ -3628,10 +3628,10 @@
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -3646,10 +3646,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 51.7%. BTTS No lean 52.9%. Moderate goal expectation around 2.60. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.2%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 33,
       "band": "Thin",
-      "price_age_minutes": 6616,
+      "price_age_minutes": 6747,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -3665,7 +3665,7 @@
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6616 min old"
+          "detail": "6747 min old"
         },
         {
           "label": "Market depth",
@@ -3722,7 +3722,7 @@
       "home": 1.05,
       "away": 1.05,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -3852,11 +3852,11 @@
         "data_quality_adjustment": -7
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -4272,7 +4272,7 @@
     "lineup_check_source": "Confirmed match centre",
     "lineup_check_status": "confirmed",
     "external_lineup_match_id": 4667772,
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 18.3,
@@ -4305,7 +4305,7 @@
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -4377,7 +4377,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Australia 2-0 Türkiye",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760421/turkiye-australia",
@@ -4421,10 +4421,10 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -4439,10 +4439,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 57.4%. BTTS No lean 55.5%. Moderate goal expectation around 2.38. Defensive suppression is stronger than break-open risk. Draw profile is high at 29.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 59,
       "band": "Thin",
-      "price_age_minutes": 6558,
+      "price_age_minutes": 6689,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -4456,7 +4456,7 @@
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6558 min old"
+          "detail": "6689 min old"
         },
         {
           "label": "Market depth",
@@ -4513,7 +4513,7 @@
       "home": 1.18,
       "away": 1.36,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -4586,11 +4586,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -4928,7 +4928,7 @@
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -5040,7 +5040,7 @@
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -5112,7 +5112,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Germany 7-1 Curaçao",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany",
@@ -5200,10 +5200,10 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -5218,10 +5218,10 @@
       "summary": "Public form row not matched. Over 2.5 lean 59.2%. BTTS No lean 54.2%. Higher goal expectation around 3.07. Break-open risk outweighs defensive suppression. Draw profile is modest at 18.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 76,
       "band": "Developing",
-      "price_age_minutes": 6146,
+      "price_age_minutes": 6277,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -5234,7 +5234,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "6146 min old"
+          "detail": "6277 min old"
         },
         {
           "label": "Market depth",
@@ -5291,7 +5291,7 @@
       "home": 4.22,
       "away": 0.41,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -5365,11 +5365,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -5707,7 +5707,7 @@
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -5821,7 +5821,7 @@
     },
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M11-NED-V-JPN.pdf",
     "final_score": "Netherlands 2-2 Japan",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -5893,7 +5893,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Netherlands 2-2 Japan",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M11-NED-V-JPN.pdf",
@@ -5956,10 +5956,10 @@
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -5974,10 +5974,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 59.9%. BTTS No lean 54.6%. Moderate goal expectation around 2.29. Defensive suppression is stronger than break-open risk. Draw profile is high at 30.1%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 76,
       "band": "Developing",
-      "price_age_minutes": 6146,
+      "price_age_minutes": 6277,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -5990,7 +5990,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "6146 min old"
+          "detail": "6277 min old"
         },
         {
           "label": "Market depth",
@@ -6047,7 +6047,7 @@
       "home": 0.78,
       "away": 0.59,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -6331,11 +6331,11 @@
         "data_quality_adjustment": -1
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -7381,7 +7381,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -7493,7 +7493,7 @@
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -7565,7 +7565,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Ivory Coast 1-0 Ecuador",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760423/ecuador-ivory-coast",
@@ -7604,10 +7604,10 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -7622,10 +7622,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 66.3%. BTTS No lean 59.0%. Lower goal expectation around 2.05. Defensive suppression is stronger than break-open risk. Draw profile is high at 37.6%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 65,
       "band": "Developing",
-      "price_age_minutes": 5411,
+      "price_age_minutes": 5543,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -7639,7 +7639,7 @@
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "5411 min old"
+          "detail": "5543 min old"
         },
         {
           "label": "Market depth",
@@ -7696,7 +7696,7 @@
       "home": 1.52,
       "away": 1.01,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -7775,11 +7775,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -8913,7 +8913,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -9027,7 +9027,7 @@
     },
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M12-SWE-V-TUN.pdf",
     "final_score": "Sweden 5-1 Tunisia",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -9099,7 +9099,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Sweden 5-1 Tunisia",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M12-SWE-V-TUN.pdf",
@@ -9176,10 +9176,10 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -9194,10 +9194,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 59.9%. BTTS No lean 55.4%. Moderate goal expectation around 2.29. Defensive suppression is stronger than break-open risk. Draw profile is high at 31.0%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 5310,
+      "price_age_minutes": 5441,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -9210,7 +9210,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "5310 min old"
+          "detail": "5441 min old"
         },
         {
           "label": "Market depth",
@@ -9267,7 +9267,7 @@
       "home": 1.33,
       "away": 0.28,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -9345,11 +9345,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -10262,7 +10262,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 86.7,
@@ -10374,7 +10374,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Spain vs Cape Verde. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -10446,7 +10446,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Spain 0-0 Cape Verde",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain",
@@ -10472,7 +10472,7 @@
       "summary": "Learning flags: draw-risk-underestimated, favourite-confidence-too-high, goal-suppression-underweighted."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -10487,10 +10487,10 @@
       "summary": "Public form row not matched. Over 2.5 lean 52.9%. BTTS No lean 58.1%. Higher goal expectation around 2.79. Break-open risk outweighs defensive suppression. Draw profile is modest at 21.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 4680,
+      "price_age_minutes": 4812,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -10503,7 +10503,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "4680 min old"
+          "detail": "4812 min old"
         },
         {
           "label": "Market depth",
@@ -10560,7 +10560,7 @@
       "home": 2.1,
       "away": 0.2,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -10617,11 +10617,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -11655,7 +11655,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 58.2,
@@ -11766,7 +11766,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Belgium vs Egypt. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -11838,7 +11838,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Belgium 1-1 Egypt",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M16-BEL-V-EGY.pdf",
@@ -11880,10 +11880,10 @@
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -11898,10 +11898,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 52.8%. BTTS No lean 53.1%. Moderate goal expectation around 2.56. Break-open risk outweighs defensive suppression. Draw profile is normal at 27.8%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 4380,
+      "price_age_minutes": 4512,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -11914,7 +11914,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "4380 min old"
+          "detail": "4512 min old"
         },
         {
           "label": "Market depth",
@@ -11971,7 +11971,7 @@
       "home": 1.35,
       "away": 1.08,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -12050,11 +12050,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -13188,7 +13188,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 12.1,
@@ -13298,7 +13298,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Saudi Arabia vs Uruguay. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -13370,7 +13370,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Saudi Arabia 1-1 Uruguay",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M13-KSA-V-URU.pdf",
@@ -13416,10 +13416,10 @@
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -13434,10 +13434,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 52.4%. BTTS No lean 56.0%. Moderate goal expectation around 2.58. Defensive suppression is stronger than break-open risk. Draw profile is normal at 27.0%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 4165,
+      "price_age_minutes": 4297,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -13450,7 +13450,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "4165 min old"
+          "detail": "4297 min old"
         },
         {
           "label": "Market depth",
@@ -13507,7 +13507,7 @@
       "home": 0.66,
       "away": 1.72,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -13586,11 +13586,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -14764,7 +14764,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 51.5,
@@ -14875,7 +14875,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Iran vs New Zealand. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -14947,7 +14947,7 @@
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Iran 2-2 New Zealand",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M15-IRN-V-NZL.pdf",
@@ -15010,10 +15010,10 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -15028,10 +15028,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 59.6%. BTTS No lean 55.8%. Moderate goal expectation around 2.30. Defensive suppression is stronger than break-open risk. Draw profile is high at 30.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 3896,
+      "price_age_minutes": 4028,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -15044,7 +15044,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "3896 min old"
+          "detail": "4028 min old"
         },
         {
           "label": "Market depth",
@@ -15101,7 +15101,7 @@
       "home": 1.5,
       "away": 1.24,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -15180,11 +15180,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -16318,7 +16318,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 64.4,
@@ -16430,7 +16430,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for France vs Senegal. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -16538,11 +16538,11 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "France 3-1 Senegal",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M17-FRA-V-SEN.pdf",
@@ -16566,7 +16566,7 @@
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M17-FRA-V-SEN.pdf",
     "final_score": "France 3-1 Senegal",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -16581,10 +16581,10 @@
       "summary": "Public form row not matched. Over 2.5 lean 52.9%. BTTS No lean 52.0%. Higher goal expectation around 2.79. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.1%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 3000,
+      "price_age_minutes": 3131,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -16597,7 +16597,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "3000 min old"
+          "detail": "3131 min old"
         },
         {
           "label": "Market depth",
@@ -16654,7 +16654,7 @@
       "home": 1.79,
       "away": 0.53,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -16731,11 +16731,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -17869,7 +17869,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 7.1,
@@ -17981,7 +17981,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Iraq vs Norway. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -18089,11 +18089,11 @@
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Iraq 1-4 Norway",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M18-IRQ-V-NOR.pdf",
@@ -18119,7 +18119,7 @@
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M18-IRQ-V-NOR.pdf",
     "final_score": "Iraq 1-4 Norway",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -18134,10 +18134,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 56.4%. BTTS No lean 60.6%. Moderate goal expectation around 2.42. Break-open risk outweighs defensive suppression. Draw profile is normal at 28.5%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 2623,
+      "price_age_minutes": 2755,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -18150,7 +18150,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "2623 min old"
+          "detail": "2755 min old"
         },
         {
           "label": "Market depth",
@@ -18207,7 +18207,7 @@
       "home": 0.8,
       "away": 2.52,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -18263,11 +18263,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -19257,7 +19257,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 68,
@@ -19369,7 +19369,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Argentina vs Algeria. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -19468,11 +19468,11 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Argentina 3-0 Algeria",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M19-ARG-V-ALG.pdf",
@@ -19496,7 +19496,7 @@
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M19-ARG-V-ALG.pdf",
     "final_score": "Argentina 3-0 Algeria",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -19511,10 +19511,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 50.2%. BTTS No lean 55.8%. Higher goal expectation around 2.66. Break-open risk outweighs defensive suppression. Draw profile is normal at 25.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 2536,
+      "price_age_minutes": 2667,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -19527,7 +19527,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "2536 min old"
+          "detail": "2667 min old"
         },
         {
           "label": "Market depth",
@@ -19584,7 +19584,7 @@
       "home": 1.26,
       "away": 0.32,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -19641,11 +19641,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -20679,7 +20679,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 71.1,
@@ -20793,7 +20793,7 @@
     "lineup_check_status": "confirmed",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M20-AUT-V-JOR.pdf",
     "final_score": "Austria 3-1 Jordan",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -20894,11 +20894,11 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Austria 3-1 Jordan",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M20-AUT-V-JOR.pdf",
@@ -20923,7 +20923,7 @@
       "summary": "Learning flags: territory-did-not-become-shot-volume, chance-quality-overstated."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -20938,10 +20938,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 52.1%. BTTS No lean 56.9%. Moderate goal expectation around 2.59. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 2387,
+      "price_age_minutes": 2518,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -20954,7 +20954,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "2387 min old"
+          "detail": "2518 min old"
         },
         {
           "label": "Market depth",
@@ -21011,7 +21011,7 @@
       "home": 1.69,
       "away": 0.46,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -21090,11 +21090,11 @@
         "data_quality_adjustment": -2
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -22184,7 +22184,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 73.1,
@@ -22297,7 +22297,7 @@
     },
     "lineup_check_status": "confirmed",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -22312,10 +22312,10 @@
       "summary": "Public form row not matched. Over 2.5 lean 50.9%. BTTS No lean 55.9%. Higher goal expectation around 2.71. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.4%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 65,
       "band": "Developing",
-      "price_age_minutes": 1613,
+      "price_age_minutes": 1744,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -22330,7 +22330,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "1613 min old"
+          "detail": "1744 min old"
         },
         {
           "label": "Market depth",
@@ -22460,11 +22460,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -23554,7 +23554,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 54.6,
@@ -23665,7 +23665,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for England vs Croatia. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -23789,11 +23789,11 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "England 4-2 Croatia",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M22-ENG-V-CRO.pdf",
@@ -23819,7 +23819,7 @@
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M22-ENG-V-CRO.pdf",
     "final_score": "England 4-2 Croatia",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -23834,10 +23834,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 58.2%. BTTS No lean 55.6%. Moderate goal expectation around 2.35. Defensive suppression is stronger than break-open risk. Draw profile is high at 29.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 1301,
+      "price_age_minutes": 1432,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -23850,7 +23850,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "1301 min old"
+          "detail": "1432 min old"
         },
         {
           "label": "Market depth",
@@ -23907,7 +23907,7 @@
       "home": 3.2,
       "away": 0.7,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -23986,11 +23986,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -25124,7 +25124,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 44.8,
@@ -25235,7 +25235,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Ghana vs Panama. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -25247,14 +25247,14 @@
           "offsides": 4,
           "woncorners": 2,
           "saves": 4,
-          "possessionpct": 37.9,
-          "totalshots": 8,
+          "possessionpct": 38,
+          "totalshots": 7,
           "shotsontarget": 2,
           "shotpct": 0.3,
           "penaltykickgoals": 0,
           "penaltykickshots": 0,
           "accuratepasses": 292,
-          "totalpasses": 351,
+          "totalpasses": 352,
           "passpct": 0.8,
           "accuratecrosses": 4,
           "totalcrosses": 16,
@@ -25262,7 +25262,7 @@
           "totallongballs": 52,
           "accuratelongballs": 30,
           "longballpct": 0.6,
-          "blockedshots": 2,
+          "blockedshots": 1,
           "effectivetackles": 9,
           "totaltackles": 16,
           "tacklepct": 0.6,
@@ -25280,7 +25280,7 @@
           "offsides": 1,
           "woncorners": 2,
           "saves": 2,
-          "possessionpct": 62.1,
+          "possessionpct": 62,
           "totalshots": 11,
           "shotsontarget": 4,
           "shotpct": 0.4,
@@ -25296,7 +25296,7 @@
           "accuratelongballs": 34,
           "longballpct": 0.5,
           "blockedshots": 2,
-          "effectivetackles": 12,
+          "effectivetackles": 11,
           "totaltackles": 29,
           "tacklepct": 0.4,
           "interceptions": 5,
@@ -25321,26 +25321,26 @@
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Ghana 1-0 Panama",
       "source": "FIFA",
-      "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M21-GHA-V-PAN.pdf",
+      "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M21-GHA-V-PAN-V2.pdf",
       "predicted_result": "Ghana win",
       "predicted_probability": 41.1,
       "actual_result": "Ghana win",
       "expected_total_goals": 2.4,
       "actual_total_goals": 1,
       "stats_used": true,
-      "shot_count": "8-11",
+      "shot_count": "7-11",
       "shots_on_target": "2-4",
       "xg": {
-        "home": 1.31,
+        "home": 1.25,
         "away": 0.73,
-        "total": 2.04,
+        "total": 1.98,
         "source": "FotMob structured xG"
       },
       "flags": [
@@ -25349,10 +25349,10 @@
       ],
       "summary": "Learning flags: territory-did-not-become-shot-volume, chance-quality-overstated."
     },
-    "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M21-GHA-V-PAN.pdf",
+    "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M21-GHA-V-PAN-V2.pdf",
     "final_score": "Ghana 1-0 Panama",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -25367,10 +25367,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 57.0%. BTTS No lean 51.9%. Moderate goal expectation around 2.40. Break-open risk outweighs defensive suppression. Draw profile is high at 31.6%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 1182,
+      "price_age_minutes": 1313,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -25383,7 +25383,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "1182 min old"
+          "detail": "1313 min old"
         },
         {
           "label": "Market depth",
@@ -25431,16 +25431,16 @@
           "label": "xG / chance quality",
           "points": 8,
           "max": 8,
-          "detail": "1.31-0.73"
+          "detail": "1.25-0.73"
         }
       ],
       "note": "Strong data coverage: price, team, context and verification layers are mostly in place."
     },
     "post_match_xg": {
-      "home": 1.31,
+      "home": 1.25,
       "away": 0.73,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -25518,11 +25518,11 @@
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -26612,7 +26612,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 10.6,
@@ -26724,7 +26724,7 @@
       "model_implication": "Confirmed starting XIs are now loaded for Uzbekistan vs Colombia. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T17:29:02.554Z",
+    "post_match_stats_last_checked": "2026-06-18T19:40:35.298Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -26833,11 +26833,11 @@
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T17:29:14.356Z",
+      "checked_at": "2026-06-18T19:40:46.809Z",
       "result": "Uzbekistan 1-3 Colombia",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M24-UZB-V-COL.pdf",
@@ -26861,7 +26861,7 @@
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M24-UZB-V-COL.pdf",
     "final_score": "Uzbekistan 1-3 Colombia",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -26876,10 +26876,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 55.4%. BTTS No lean 59.0%. Moderate goal expectation around 2.46. Defensive suppression is stronger than break-open risk. Draw profile is normal at 26.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 947,
+      "price_age_minutes": 1079,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -26892,7 +26892,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "947 min old"
+          "detail": "1079 min old"
         },
         {
           "label": "Market depth",
@@ -26949,7 +26949,7 @@
       "home": 1.16,
       "away": 1.61,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T17:29:02.554Z"
+      "checked_at": "2026-06-18T19:40:35.298Z"
     }
   },
   {
@@ -27027,11 +27027,11 @@
         "data_quality_adjustment": -6
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
@@ -28165,7 +28165,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 55.9,
@@ -28199,7 +28199,7 @@
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -28214,10 +28214,10 @@
       "summary": "Public form row not matched. Under 2.5 lean 53.6%. BTTS No lean 52.7%. Moderate goal expectation around 2.53. Break-open risk outweighs defensive suppression. Draw profile is normal at 28.6%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 39,
       "band": "Thin",
-      "price_age_minutes": 199,
+      "price_age_minutes": 330,
       "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
@@ -28234,7 +28234,7 @@
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "199 min old"
+          "detail": "330 min old"
         },
         {
           "label": "Market depth",
@@ -28287,7 +28287,7 @@
       ],
       "note": "Thin data coverage: treat the read cautiously until more live inputs are confirmed."
     },
-    "lineup_last_checked": "2026-06-18T17:29:02.554Z",
+    "lineup_last_checked": "2026-06-18T19:40:35.298Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "lineup_check_status": "match_not_found"
@@ -28315,7 +28315,7 @@
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 6.8,
-        "model_data_quality_rating": 71,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": 14.38,
         "qi": 38,
@@ -28336,7 +28336,7 @@
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Betfair / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 71,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -6.51,
         "qi": 37,
@@ -28358,7 +28358,7 @@
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 71,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": 5.13,
         "qi": 35,
@@ -28367,13 +28367,13 @@
         "data_quality_adjustment": -2
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
-    "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad.",
+    "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
       "over_probability": 35.9,
@@ -28736,7 +28736,7 @@
           "price_qi": 92,
           "edge_points": 10.63,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 93,
           "data_quality_adjustment": -6
@@ -28758,7 +28758,7 @@
           "price_qi": 89,
           "edge_points": 8.25,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 85,
           "data_quality_adjustment": -5
@@ -28780,7 +28780,7 @@
           "price_qi": 89,
           "edge_points": 7.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 85,
           "data_quality_adjustment": -5
@@ -28802,7 +28802,7 @@
           "price_qi": 87,
           "edge_points": 7.08,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 82,
           "data_quality_adjustment": -5
@@ -28824,7 +28824,7 @@
           "price_qi": 91,
           "edge_points": 8.6,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 72,
           "data_quality_adjustment": -4
@@ -28846,7 +28846,7 @@
           "price_qi": 76,
           "edge_points": 3.37,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 70,
           "data_quality_adjustment": -4
@@ -28868,7 +28868,7 @@
           "price_qi": 87,
           "edge_points": 6.19,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 69,
           "data_quality_adjustment": -4
@@ -28888,7 +28888,7 @@
           "ev": -5.33,
           "qi": 38,
           "price_qi": 23,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 40,
           "data_quality_adjustment": -2
@@ -28908,7 +28908,7 @@
           "ev": -6.51,
           "qi": 37,
           "price_qi": 20,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 39,
           "data_quality_adjustment": -2
@@ -28930,7 +28930,7 @@
           "price_qi": 10,
           "edge_points": -7,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 39,
           "data_quality_adjustment": -2
@@ -28952,7 +28952,7 @@
           "price_qi": 9,
           "edge_points": -6.76,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 38,
           "data_quality_adjustment": -2
@@ -28972,7 +28972,7 @@
           "ev": -8.28,
           "qi": 36,
           "price_qi": 16,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 38,
           "data_quality_adjustment": -2
@@ -28992,7 +28992,7 @@
           "ev": 5.13,
           "qi": 35,
           "price_qi": 72,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 37,
           "data_quality_adjustment": -2
@@ -29012,7 +29012,7 @@
           "ev": -9.47,
           "qi": 35,
           "price_qi": 14,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 37,
           "data_quality_adjustment": -2
@@ -29032,7 +29032,7 @@
           "ev": -9.47,
           "qi": 35,
           "price_qi": 14,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 37,
           "data_quality_adjustment": -2
@@ -29054,7 +29054,7 @@
           "price_qi": 4,
           "edge_points": -7.66,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 36,
           "data_quality_adjustment": -2
@@ -29076,7 +29076,7 @@
           "price_qi": 2,
           "edge_points": -15.23,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 35,
           "data_quality_adjustment": -2
@@ -29096,7 +29096,7 @@
           "ev": 2.69,
           "qi": 30,
           "price_qi": 63,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 32,
           "data_quality_adjustment": -2
@@ -29118,7 +29118,7 @@
           "price_qi": 74,
           "edge_points": 0.74,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 31,
           "data_quality_adjustment": -2
@@ -29138,7 +29138,7 @@
           "ev": 0.24,
           "qi": 25,
           "price_qi": 51,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 27,
           "data_quality_adjustment": -2
@@ -29158,7 +29158,7 @@
           "ev": 0.24,
           "qi": 25,
           "price_qi": 51,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 27,
           "data_quality_adjustment": -2
@@ -29180,7 +29180,7 @@
           "price_qi": 5,
           "edge_points": -14.04,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 25,
           "data_quality_adjustment": -1
@@ -29202,7 +29202,7 @@
           "price_qi": 4,
           "edge_points": -15.16,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 25,
           "data_quality_adjustment": -1
@@ -29224,7 +29224,7 @@
           "price_qi": 3,
           "edge_points": -17.5,
           "risk_rating": "Low",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 23,
           "data_quality_adjustment": -1
@@ -29244,7 +29244,7 @@
           "ev": -2.2,
           "qi": 21,
           "price_qi": 38,
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 22,
           "data_quality_adjustment": -1
@@ -29266,7 +29266,7 @@
           "price_qi": 3,
           "edge_points": -14.5,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 12,
           "data_quality_adjustment": -1
@@ -29288,14 +29288,14 @@
           "price_qi": 5,
           "edge_points": -10.12,
           "risk_rating": "High",
-          "model_data_quality_rating": 71,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 9,
           "data_quality_adjustment": -1
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 59.2,
@@ -29329,7 +29329,7 @@
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -29344,23 +29344,25 @@
       "summary": "Public form row not matched. Under 2.5 lean 64.1%. BTTS No lean 61.6%. Lower goal expectation around 2.13. Defensive suppression is stronger than break-open risk. Draw profile is normal at 28.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
-      "rating": 71,
+      "checked_at": "2026-06-18T19:40:35.298Z",
+      "rating": 65,
       "band": "Developing",
-      "price_age_minutes": 0,
-      "closing_line_status": "Waiting for final close window",
+      "price_age_minutes": 132,
+      "closing_line_status": "Sharp close not captured",
       "target_close_minutes_before_kickoff": 5,
       "sharp_close_capture_window_minutes": 7,
       "repair_actions": [
         "Retry Betfair/Pinnacle market matching for sharp close coverage.",
-        "Retry FootyStats fixture row matching."
+        "Retry FootyStats fixture row matching.",
+        "Retry post-match stats/result feed.",
+        "Retry xG/chance-quality extraction from structured post-match sources."
       ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "0 min old"
+          "detail": "132 min old"
         },
         {
           "label": "Market depth",
@@ -29376,9 +29378,9 @@
         },
         {
           "label": "Lineups",
-          "points": 10,
+          "points": 14,
           "max": 14,
-          "detail": "starters loaded"
+          "detail": "starters and bench loaded"
         },
         {
           "label": "Referee",
@@ -29400,20 +29402,20 @@
         },
         {
           "label": "FIFA/ESPN result data",
-          "points": 6,
+          "points": 0,
           "max": 10,
-          "detail": "pre-game fixture"
+          "detail": "result data pending"
         },
         {
           "label": "xG / chance quality",
-          "points": 4,
+          "points": 0,
           "max": 8,
           "detail": "not available yet"
         }
       ],
       "note": "Developing data coverage: usable read, but one or more live inputs still need confirmation."
     },
-    "lineup_last_checked": "2026-06-18T17:29:02.554Z",
+    "lineup_last_checked": "2026-06-18T19:40:35.298Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667759,
@@ -29421,26 +29423,26 @@
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "referee": "João Pedro Silva Pinheiro",
       "venue": "Los Angeles Stadium",
       "surface": "grass",
       "home_team": "Switzerland",
       "away_team": "Bosnia and Herzegovina",
-      "home_formation": "4-3-3",
+      "home_formation": "4-1-4-1",
       "away_formation": "4-4-2",
       "home_starting_xi": [
         "Gregor Kobel",
-        "Denis Zakaria",
+        "Silvan Widmer",
         "Nico Elvedi",
         "Manuel Akanji",
         "Ricardo Rodríguez",
-        "Michel Aebischer",
         "Granit Xhaka",
+        "Michel Aebischer",
         "Remo Freuler",
+        "Fabian Rieder",
         "Dan Ndoye",
-        "Breel Embolo",
-        "Rubén Vargas"
+        "Breel Embolo"
       ],
       "away_starting_xi": [
         "Nikola Vasilj",
@@ -29448,15 +29450,46 @@
         "Nikola Katic",
         "Tarik Muharemovic",
         "Sead Kolasinac",
-        "Esmir Bajraktarevic",
-        "Ivan Basic",
-        "Benjamin Tahirovic",
         "Amar Memic",
+        "Benjamin Tahirovic",
+        "Ivan Sunjic",
+        "Kerim Alajbegovic",
         "Ermedin Demirovic",
-        "Jovo Lukic"
+        "Edin Dzeko"
       ],
-      "home_substitutes": [],
-      "away_substitutes": [],
+      "home_substitutes": [
+        "Marvin Keller",
+        "Yvon Mvogo",
+        "Aurèle Amenda",
+        "Eray Cömert",
+        "Luca Jaquez",
+        "Ardon Jashari",
+        "Denis Zakaria",
+        "Djibril Sow",
+        "Johan Manzambi",
+        "Cedric Itten",
+        "Christian Fassnacht",
+        "Noah Okafor",
+        "Rubén Vargas",
+        "Zeki Amdouni"
+      ],
+      "away_substitutes": [
+        "Martin Zlomislic",
+        "Mladen Jurkas",
+        "Arjan Malic",
+        "Dennis Hadzikadunic",
+        "Nihad Mujakic",
+        "Stjepan Radeljic",
+        "Amir Hadziahmetovic",
+        "Armin Gigovic",
+        "Dzenis Burnic",
+        "Ermin Mahmic",
+        "Ivan Basic",
+        "Esmir Bajraktarevic",
+        "Haris Tabakovic",
+        "Jovo Lukic",
+        "Samed Bazdar"
+      ],
       "model_implication": "Confirmed starting XIs are now loaded for Switzerland vs Bosnia & Herzegovina. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed"
@@ -29477,9 +29510,9 @@
         "current_odds": 5.8,
         "au_bookie": "Betfair",
         "devig_book_probability": 17.14,
-        "odds_checked_at": "2026-06-18T17:29:02.554Z",
+        "odds_checked_at": "2026-06-18T19:40:35.298Z",
         "odds_updated_at": "2026-06-18T17:29:02.554Z",
-        "odds_refresh_status": "updated",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -29499,9 +29532,9 @@
         "current_odds": 1.34,
         "au_bookie": "Betfair",
         "devig_book_probability": 74.21,
-        "odds_checked_at": "2026-06-18T17:29:02.554Z",
+        "odds_checked_at": "2026-06-18T19:40:35.298Z",
         "odds_updated_at": "2026-06-18T17:29:02.554Z",
-        "odds_refresh_status": "updated",
+        "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
@@ -29515,11 +29548,11 @@
         "previous_odds": 1.32
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc.",
     "model_totals_25": {
@@ -29852,7 +29885,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-18T17:29:01.896Z",
+      "checked_at": "2026-06-18T19:40:34.837Z",
       "status": "checked",
       "oddsapi_event_id": "fa9502285b257b03e62968d50d9229fc",
       "offered_market_keys": [
@@ -29868,6 +29901,50 @@
       "matched_rows": 32,
       "rows": [
         {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 78.1,
+          "model_price": 1.28,
+          "current_odds": 1.44,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 65.22,
+          "ev": 12.5,
+          "qi": 84,
+          "price_qi": 91,
+          "edge_points": 8.68,
+          "risk_rating": "Low",
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 89,
+          "data_quality_adjustment": -5
+        },
+        {
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 57.3,
+          "model_price": 1.75,
+          "current_odds": 2.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 44.44,
+          "ev": 20,
+          "qi": 82,
+          "price_qi": 91,
+          "edge_points": 9.52,
+          "risk_rating": "Low",
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 87,
+          "data_quality_adjustment": -5
+        },
+        {
           "selection": "Qatar or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -29878,7 +29955,7 @@
           "current_odds": 3.7,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 12.76,
+          "devig_book_probability": 12.77,
           "ev": 49.19,
           "qi": 79,
           "price_qi": 96,
@@ -29900,7 +29977,7 @@
           "current_odds": 3.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 13.64,
+          "devig_book_probability": 13.7,
           "ev": 41.13,
           "qi": 78,
           "price_qi": 94,
@@ -29912,50 +29989,6 @@
           "data_quality_adjustment": -5
         },
         {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 78.1,
-          "model_price": 1.28,
-          "current_odds": 1.4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 66.67,
-          "ev": 9.38,
-          "qi": 77,
-          "price_qi": 87,
-          "edge_points": 6.7,
-          "risk_rating": "Low",
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 82,
-          "data_quality_adjustment": -5
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 57.3,
-          "model_price": 1.75,
-          "current_odds": 2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 46.67,
-          "ev": 14.29,
-          "qi": 75,
-          "price_qi": 87,
-          "edge_points": 7.14,
-          "risk_rating": "Low",
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 80,
-          "data_quality_adjustment": -5
-        },
-        {
           "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -29963,18 +29996,18 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 90.6,
           "model_price": 1.1,
-          "current_odds": 1.15,
+          "current_odds": 1.16,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 81.3,
-          "ev": 4.55,
-          "qi": 69,
-          "price_qi": 79,
-          "edge_points": 3.95,
+          "devig_book_probability": 80.54,
+          "ev": 5.45,
+          "qi": 71,
+          "price_qi": 82,
+          "edge_points": 4.7,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 73,
+          "base_qi": 75,
           "data_quality_adjustment": -4
         },
         {
@@ -29985,18 +30018,40 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 31.1,
           "model_price": 3.21,
-          "current_odds": 3.8,
+          "current_odds": 4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 24.6,
-          "ev": 18.38,
+          "devig_book_probability": 23.37,
+          "ev": 24.61,
           "qi": 55,
-          "price_qi": 85,
-          "edge_points": 4.84,
-          "risk_rating": "Medium",
+          "price_qi": 88,
+          "edge_points": 6.15,
+          "risk_rating": "High",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
           "base_qi": 58,
+          "data_quality_adjustment": -3
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 60.5,
+          "model_price": 1.65,
+          "current_odds": 1.68,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 55.56,
+          "ev": 1.82,
+          "qi": 54,
+          "price_qi": 60,
+          "edge_points": 1.08,
+          "risk_rating": "Low",
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 57,
           "data_quality_adjustment": -3
         },
         {
@@ -30011,28 +30066,6 @@
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 58.14,
-          "ev": -1.82,
-          "qi": 43,
-          "price_qi": 38,
-          "edge_points": -1.12,
-          "risk_rating": "Low",
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 46,
-          "data_quality_adjustment": -3
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 60.5,
-          "model_price": 1.65,
-          "current_odds": 1.62,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 57.59,
           "ev": -1.82,
           "qi": 43,
           "price_qi": 38,
@@ -30164,28 +30197,6 @@
           "data_quality_adjustment": -2
         },
         {
-          "selection": "Over 0.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 90.8,
-          "model_price": 1.1,
-          "current_odds": 1.04,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 89.64,
-          "ev": -5.45,
-          "qi": 37,
-          "price_qi": 10,
-          "edge_points": -5.24,
-          "risk_rating": "Low",
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 39,
-          "data_quality_adjustment": -2
-        },
-        {
           "selection": "Qatar Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
@@ -30215,14 +30226,36 @@
           "oddsapi_market": "double_chance",
           "model_probability": 89.5,
           "model_price": 1.12,
-          "current_odds": 1.04,
+          "current_odds": 1.05,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 45.9,
-          "ev": -7.14,
+          "devig_book_probability": 45.67,
+          "ev": -6.25,
+          "qi": 36,
+          "price_qi": 8,
+          "edge_points": -5.95,
+          "risk_rating": "Low",
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 38,
+          "data_quality_adjustment": -2
+        },
+        {
+          "selection": "Over 0.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 90.8,
+          "model_price": 1.1,
+          "current_odds": 1.03,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 90.66,
+          "ev": -6.36,
           "qi": 35,
-          "price_qi": 5,
-          "edge_points": -6.87,
+          "price_qi": 6,
+          "edge_points": -6.18,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -30237,18 +30270,18 @@
           "oddsapi_market": "double_chance",
           "model_probability": 89.5,
           "model_price": 1.12,
-          "current_odds": 1.03,
+          "current_odds": 1.04,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 45.83,
-          "ev": -8.04,
-          "qi": 34,
-          "price_qi": 3,
-          "edge_points": -7.8,
+          "devig_book_probability": 45.42,
+          "ev": -7.14,
+          "qi": 35,
+          "price_qi": 5,
+          "edge_points": -6.87,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 36,
+          "base_qi": 37,
           "data_quality_adjustment": -2
         },
         {
@@ -30281,14 +30314,14 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 68.9,
           "model_price": 1.45,
-          "current_odds": 1.24,
+          "current_odds": 1.22,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 75.4,
-          "ev": -14.48,
+          "devig_book_probability": 76.63,
+          "ev": -15.86,
           "qi": 34,
-          "price_qi": 4,
-          "edge_points": -11.68,
+          "price_qi": 3,
+          "edge_points": -13,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -30306,7 +30339,7 @@
           "current_odds": 1.18,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 40.46,
+          "devig_book_probability": 40.63,
           "ev": -16.9,
           "qi": 34,
           "price_qi": 2,
@@ -30325,14 +30358,14 @@
           "oddsapi_market": "double_chance",
           "model_probability": 70.2,
           "model_price": 1.42,
-          "current_odds": 1.14,
+          "current_odds": 1.13,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 41.41,
-          "ev": -19.72,
+          "devig_book_probability": 41.81,
+          "ev": -20.42,
           "qi": 33,
-          "price_qi": 1,
-          "edge_points": -17.3,
+          "price_qi": 0,
+          "edge_points": -18.07,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -30400,21 +30433,21 @@
           "data_quality_adjustment": -2
         },
         {
-          "selection": "Over 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
           "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 42.7,
-          "model_price": 2.34,
-          "current_odds": 1.75,
+          "oddsapi_market": "btts",
+          "model_probability": 39.5,
+          "model_price": 2.53,
+          "current_odds": 2.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 53.33,
-          "ev": -25.21,
+          "devig_book_probability": 44.44,
+          "ev": -17,
           "qi": 25,
-          "price_qi": 4,
-          "edge_points": -14.41,
+          "price_qi": 10,
+          "edge_points": -8.09,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -30444,26 +30477,26 @@
           "data_quality_adjustment": -2
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
+          "selection": "Over 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 39.5,
-          "model_price": 2.53,
-          "current_odds": 2.2,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 42.7,
+          "model_price": 2.34,
+          "current_odds": 1.68,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 42.41,
-          "ev": -13.04,
-          "qi": 23,
-          "price_qi": 13,
-          "edge_points": -5.93,
-          "risk_rating": "Medium",
+          "devig_book_probability": 55.56,
+          "ev": -28.21,
+          "qi": 24,
+          "price_qi": 3,
+          "edge_points": -16.79,
+          "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 24,
-          "data_quality_adjustment": -1
+          "base_qi": 26,
+          "data_quality_adjustment": -2
         },
         {
           "selection": "Match to end in a Draw",
@@ -30493,14 +30526,14 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 21.9,
           "model_price": 4.57,
-          "current_odds": 2.8,
+          "current_odds": 2.7,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 33.33,
-          "ev": -38.73,
+          "devig_book_probability": 34.78,
+          "ev": -40.92,
           "qi": 12,
-          "price_qi": 4,
-          "edge_points": -13.83,
+          "price_qi": 3,
+          "edge_points": -15.16,
           "risk_rating": "Medium",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -30515,18 +30548,18 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 9.2,
           "model_price": 10.89,
-          "current_odds": 9,
+          "current_odds": 10,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 10.36,
-          "ev": -17.36,
-          "qi": 8,
-          "price_qi": 18,
-          "edge_points": -1.93,
+          "devig_book_probability": 9.34,
+          "ev": -8.17,
+          "qi": 10,
+          "price_qi": 23,
+          "edge_points": -0.82,
           "risk_rating": "Very high",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 9,
+          "base_qi": 11,
           "data_quality_adjustment": -1
         },
         {
@@ -30537,23 +30570,23 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 9.4,
           "model_price": 10.6,
-          "current_odds": 5,
+          "current_odds": 4.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 18.7,
-          "ev": -52.83,
+          "devig_book_probability": 19.46,
+          "ev": -54.72,
           "qi": 8,
-          "price_qi": 5,
-          "edge_points": -10.57,
+          "price_qi": 4,
+          "edge_points": -11.4,
           "risk_rating": "High",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 9,
-          "data_quality_adjustment": -1
+          "base_qi": 8,
+          "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 72.5,
@@ -30587,7 +30620,7 @@
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -30602,7 +30635,7 @@
       "summary": "Public form row not matched. Under 2.5 lean 57.3%. BTTS No lean 60.5%. Moderate goal expectation around 2.39. Defensive suppression is stronger than break-open risk. Draw profile is high at 29.8%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 71,
       "band": "Developing",
       "price_age_minutes": 0,
@@ -30671,7 +30704,7 @@
       ],
       "note": "Developing data coverage: usable read, but one or more live inputs still need confirmation."
     },
-    "lineup_last_checked": "2026-06-18T17:29:02.554Z",
+    "lineup_last_checked": "2026-06-18T19:40:35.298Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667760,
@@ -30679,7 +30712,7 @@
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "referee": "Cristián Marcelo Garay Reyes",
       "venue": "BC Place Vancouver",
       "surface": "grass",
@@ -30732,44 +30765,45 @@
         "market_matrix": "Full Match Model",
         "target_selection": "South Korea to Win",
         "true_price": 4.24,
-        "current_odds": 4.2,
+        "current_odds": 4.1,
         "au_bookie": "Betfair",
-        "devig_book_probability": 23.72,
-        "odds_checked_at": "2026-06-18T17:29:02.554Z",
-        "odds_updated_at": "2026-06-17T21:47:28.638Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 24.26,
+        "odds_checked_at": "2026-06-18T19:40:35.298Z",
+        "odds_updated_at": "2026-06-18T19:40:35.298Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "model_data_quality_rating": 71,
         "model_data_quality_band": "Developing",
-        "ev": -0.94,
-        "qi": 23,
-        "base_qi": 24,
-        "price_qi": 44,
-        "data_quality_adjustment": -1
+        "ev": -3.3,
+        "qi": 19,
+        "base_qi": 20,
+        "price_qi": 33,
+        "data_quality_adjustment": -1,
+        "previous_odds": 4.2
       },
       {
         "market_matrix": "Full Match Model",
         "target_selection": "Mexico to Win",
         "true_price": 2.11,
-        "current_odds": 2.14,
+        "current_odds": 2.16,
         "au_bookie": "Betfair",
-        "devig_book_probability": 46.55,
-        "odds_checked_at": "2026-06-18T17:29:02.554Z",
-        "odds_updated_at": "2026-06-18T14:10:20.202Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 46.05,
+        "odds_checked_at": "2026-06-18T19:40:35.298Z",
+        "odds_updated_at": "2026-06-18T19:40:35.298Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "model_data_quality_rating": 71,
         "model_data_quality_band": "Developing",
-        "ev": 1.42,
-        "qi": 46,
-        "base_qi": 49,
-        "price_qi": 58,
+        "ev": 2.37,
+        "qi": 49,
+        "base_qi": 52,
+        "price_qi": 63,
         "data_quality_adjustment": -3,
-        "previous_odds": 2.12
+        "previous_odds": 2.14
       },
       {
         "market_matrix": "Full Match Model",
@@ -30777,8 +30811,8 @@
         "true_price": 3.44,
         "current_odds": 3.35,
         "au_bookie": "Betfair",
-        "devig_book_probability": 29.74,
-        "odds_checked_at": "2026-06-18T17:29:02.554Z",
+        "devig_book_probability": 29.69,
+        "odds_checked_at": "2026-06-18T19:40:35.298Z",
         "odds_updated_at": "2026-06-18T12:56:48.138Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
@@ -30793,11 +30827,11 @@
         "data_quality_adjustment": -2
       }
     ],
-    "referee_last_checked": "2026-06-18T17:29:02.554Z",
+    "referee_last_checked": "2026-06-18T19:40:35.298Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T17:29:02.554Z",
+    "odds_last_checked": "2026-06-18T19:40:35.298Z",
     "odds_refresh_cadence": "four-to-one-hours-5-minute",
     "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d.",
     "model_totals_25": {
@@ -31130,7 +31164,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-18T17:29:01.896Z",
+      "checked_at": "2026-06-18T19:40:34.837Z",
       "status": "checked",
       "oddsapi_event_id": "0f2aeae6ac8e77223848d23a4ca86b0d",
       "offered_market_keys": [
@@ -31197,18 +31231,18 @@
           "oddsapi_market": "btts",
           "model_probability": 53.4,
           "model_price": 1.87,
-          "current_odds": 2,
+          "current_odds": 1.95,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 46.67,
-          "ev": 6.95,
-          "qi": 62,
-          "price_qi": 78,
-          "edge_points": 3.48,
+          "devig_book_probability": 48,
+          "ev": 4.28,
+          "qi": 56,
+          "price_qi": 71,
+          "edge_points": 2.19,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 66,
+          "base_qi": 60,
           "data_quality_adjustment": -4
         },
         {
@@ -31234,25 +31268,23 @@
           "data_quality_adjustment": -3
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 53.4,
-          "model_price": 1.87,
-          "current_odds": 1.91,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 48.93,
-          "ev": 2.14,
-          "qi": 51,
-          "price_qi": 62,
-          "edge_points": 1.12,
-          "risk_rating": "Low",
+          "selection": "Mexico to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 47.4,
+          "model_price": 2.11,
+          "current_odds": 2.16,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 46.05,
+          "ev": 2.37,
+          "qi": 49,
+          "price_qi": 63,
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 54,
+          "base_qi": 52,
           "data_quality_adjustment": -3
         },
         {
@@ -31278,26 +31310,6 @@
           "data_quality_adjustment": -3
         },
         {
-          "selection": "Mexico to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 47.4,
-          "model_price": 2.11,
-          "current_odds": 2.14,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 46.55,
-          "ev": 1.42,
-          "qi": 46,
-          "price_qi": 58,
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 49,
-          "data_quality_adjustment": -3
-        },
-        {
           "selection": "South Korea or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -31308,7 +31320,7 @@
           "current_odds": 1.75,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 26.68,
+          "devig_book_probability": 26.67,
           "ev": -1.13,
           "qi": 43,
           "price_qi": 43,
@@ -31330,7 +31342,7 @@
           "current_odds": 1.75,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 26.84,
+          "devig_book_probability": 27.05,
           "ev": -1.13,
           "qi": 43,
           "price_qi": 43,
@@ -31339,6 +31351,48 @@
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
           "base_qi": 46,
+          "data_quality_adjustment": -3
+        },
+        {
+          "selection": "Mexico to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 47.4,
+          "model_price": 2.11,
+          "current_odds": 2.1,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 45.56,
+          "ev": -0.47,
+          "qi": 41,
+          "price_qi": 47,
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 44,
+          "data_quality_adjustment": -3
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 53.4,
+          "model_price": 1.87,
+          "current_odds": 1.83,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 51.07,
+          "ev": -2.14,
+          "qi": 40,
+          "price_qi": 37,
+          "edge_points": -1.17,
+          "risk_rating": "Low",
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 43,
           "data_quality_adjustment": -3
         },
         {
@@ -31352,7 +31406,7 @@
           "current_odds": 1.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 37.58,
+          "devig_book_probability": 37.88,
           "ev": -5.3,
           "qi": 39,
           "price_qi": 20,
@@ -31371,14 +31425,36 @@
           "oddsapi_market": "double_chance",
           "model_probability": 75.8,
           "model_price": 1.32,
-          "current_odds": 1.23,
+          "current_odds": 1.22,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 37.96,
-          "ev": -6.82,
+          "devig_book_probability": 38.25,
+          "ev": -7.58,
           "qi": 38,
-          "price_qi": 15,
-          "edge_points": -5.54,
+          "price_qi": 13,
+          "edge_points": -6.21,
+          "risk_rating": "Low",
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 40,
+          "data_quality_adjustment": -2
+        },
+        {
+          "selection": "Mexico or South Korea",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 67.9,
+          "model_price": 1.47,
+          "current_odds": 1.35,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 35.07,
+          "ev": -8.16,
+          "qi": 38,
+          "price_qi": 14,
+          "edge_points": -6.05,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -31416,49 +31492,9 @@
           "model_probability": 47.4,
           "model_price": 2.11,
           "current_odds": 2.05,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 46.66,
-          "ev": -2.84,
-          "qi": 37,
-          "price_qi": 34,
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 39,
-          "data_quality_adjustment": -2
-        },
-        {
-          "selection": "Mexico to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 47.4,
-          "model_price": 2.11,
-          "current_odds": 2.05,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "devig_book_probability": 45.93,
-          "ev": -2.84,
-          "qi": 37,
-          "price_qi": 34,
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 39,
-          "data_quality_adjustment": -2
-        },
-        {
-          "selection": "Mexico to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 47.4,
-          "model_price": 2.11,
-          "current_odds": 2.05,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 45.87,
+          "devig_book_probability": 45.44,
           "ev": -2.84,
           "qi": 37,
           "price_qi": 34,
@@ -31475,36 +31511,14 @@
           "oddsapi_market": "double_chance",
           "model_probability": 67.9,
           "model_price": 1.47,
-          "current_odds": 1.32,
+          "current_odds": 1.33,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 35.37,
-          "ev": -10.2,
+          "devig_book_probability": 35.09,
+          "ev": -9.52,
           "qi": 37,
-          "price_qi": 10,
-          "edge_points": -7.73,
-          "risk_rating": "Low",
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 39,
-          "data_quality_adjustment": -2
-        },
-        {
-          "selection": "Mexico or South Korea",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 67.9,
-          "model_price": 1.47,
-          "current_odds": 1.32,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 35.58,
-          "ev": -10.2,
-          "qi": 37,
-          "price_qi": 10,
-          "edge_points": -7.73,
+          "price_qi": 11,
+          "edge_points": -7.16,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -31545,6 +31559,26 @@
           "au_bookie": "PointsBet (AU)",
           "bookmaker_key": "pointsbetau",
           "devig_book_probability": 47.06,
+          "ev": -5.21,
+          "qi": 34,
+          "price_qi": 25,
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 36,
+          "data_quality_adjustment": -2
+        },
+        {
+          "selection": "Mexico to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 47.4,
+          "model_price": 2.11,
+          "current_odds": 2,
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
+          "devig_book_probability": 46.9,
           "ev": -5.21,
           "qi": 34,
           "price_qi": 25,
@@ -31605,14 +31639,36 @@
           "oddsapi_market": "btts",
           "model_probability": 46.6,
           "model_price": 2.15,
-          "current_odds": 1.83,
+          "current_odds": 1.91,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 51.07,
-          "ev": -14.88,
+          "devig_book_probability": 48.93,
+          "ev": -11.16,
+          "qi": 30,
+          "price_qi": 14,
+          "edge_points": -5.84,
+          "risk_rating": "Low",
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 32,
+          "data_quality_adjustment": -2
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 46.6,
+          "model_price": 2.15,
+          "current_odds": 1.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 52,
+          "ev": -16.28,
           "qi": 28,
-          "price_qi": 10,
-          "edge_points": -8.13,
+          "price_qi": 9,
+          "edge_points": -9.04,
           "risk_rating": "Low",
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
@@ -31664,28 +31720,6 @@
           "data_quality_adjustment": -2
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 46.6,
-          "model_price": 2.15,
-          "current_odds": 1.75,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 53.33,
-          "ev": -18.6,
-          "qi": 27,
-          "price_qi": 7,
-          "edge_points": -10.63,
-          "risk_rating": "Low",
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 29,
-          "data_quality_adjustment": -2
-        },
-        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -31696,7 +31730,7 @@
           "current_odds": 3.35,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 29.74,
+          "devig_book_probability": 29.69,
           "ev": -2.62,
           "qi": 26,
           "price_qi": 36,
@@ -31706,26 +31740,6 @@
           "data_quality_adjustment": -2
         },
         {
-          "selection": "South Korea to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 23.6,
-          "model_price": 4.24,
-          "current_odds": 4.2,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 23.72,
-          "ev": -0.94,
-          "qi": 23,
-          "price_qi": 44,
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 24,
-          "data_quality_adjustment": -1
-        },
-        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -31733,36 +31747,36 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 29.1,
           "model_price": 3.44,
-          "current_odds": 3.25,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 29.43,
-          "ev": -5.52,
-          "qi": 23,
-          "price_qi": 26,
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 24,
-          "data_quality_adjustment": -1
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 29.1,
-          "model_price": 3.44,
-          "current_odds": 3.25,
+          "current_odds": 3.3,
           "au_bookie": "Neds",
           "bookmaker_key": "neds",
-          "devig_book_probability": 28.97,
-          "ev": -5.52,
-          "qi": 23,
-          "price_qi": 26,
+          "devig_book_probability": 28.42,
+          "ev": -4.07,
+          "qi": 24,
+          "price_qi": 30,
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 24,
+          "base_qi": 26,
+          "data_quality_adjustment": -2
+        },
+        {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 29.1,
+          "model_price": 3.44,
+          "current_odds": 3.2,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 29.9,
+          "ev": -6.98,
+          "qi": 22,
+          "price_qi": 23,
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 23,
           "data_quality_adjustment": -1
         },
         {
@@ -31793,16 +31807,56 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 29.1,
           "model_price": 3.44,
-          "current_odds": 3.2,
+          "current_odds": 3.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 29.39,
-          "ev": -6.98,
-          "qi": 22,
-          "price_qi": 23,
+          "devig_book_probability": 30.05,
+          "ev": -9.88,
+          "qi": 21,
+          "price_qi": 19,
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
-          "base_qi": 23,
+          "base_qi": 22,
+          "data_quality_adjustment": -1
+        },
+        {
+          "selection": "South Korea to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 23.6,
+          "model_price": 4.24,
+          "current_odds": 3.9,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 24.53,
+          "ev": -8.02,
+          "qi": 20,
+          "price_qi": 22,
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 21,
+          "data_quality_adjustment": -1
+        },
+        {
+          "selection": "South Korea to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 23.6,
+          "model_price": 4.24,
+          "current_odds": 4.1,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 24.26,
+          "ev": -3.3,
+          "qi": 19,
+          "price_qi": 33,
+          "model_data_quality_rating": 71,
+          "model_data_quality_band": "Developing",
+          "base_qi": 20,
           "data_quality_adjustment": -1
         },
         {
@@ -31814,9 +31868,9 @@
           "model_probability": 23.6,
           "model_price": 4.24,
           "current_odds": 3.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 24.75,
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
+          "devig_book_probability": 24.68,
           "ev": -10.38,
           "qi": 18,
           "price_qi": 19,
@@ -31833,36 +31887,16 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 23.6,
           "model_price": 4.24,
-          "current_odds": 3.75,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "devig_book_probability": 25.11,
-          "ev": -11.56,
+          "current_odds": 3.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 24.51,
+          "ev": -10.38,
           "qi": 18,
-          "price_qi": 18,
+          "price_qi": 19,
           "model_data_quality_rating": 71,
           "model_data_quality_band": "Developing",
           "base_qi": 19,
-          "data_quality_adjustment": -1
-        },
-        {
-          "selection": "South Korea to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 23.6,
-          "model_price": 4.24,
-          "current_odds": 4,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 23.91,
-          "ev": -5.66,
-          "qi": 16,
-          "price_qi": 26,
-          "model_data_quality_rating": 71,
-          "model_data_quality_band": "Developing",
-          "base_qi": 17,
           "data_quality_adjustment": -1
         },
         {
@@ -31931,7 +31965,7 @@
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T17:29:02.554Z",
+    "fifa_report_last_checked": "2026-06-18T19:40:35.298Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 47.4,
@@ -31965,7 +31999,7 @@
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "source_url": "https://footystats.org/",
       "status": "source_unavailable",
       "source_note": "FootyStats request failed: 403",
@@ -31980,7 +32014,7 @@
       "summary": "Public form row not matched. Over 2.5 lean 50.7%. BTTS Yes lean 53.4%. Higher goal expectation around 2.70. Break-open risk outweighs defensive suppression. Draw profile is high at 32.1%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "rating": 71,
       "band": "Developing",
       "price_age_minutes": 0,
@@ -32049,7 +32083,7 @@
       ],
       "note": "Developing data coverage: usable read, but one or more live inputs still need confirmation."
     },
-    "lineup_last_checked": "2026-06-18T17:29:02.554Z",
+    "lineup_last_checked": "2026-06-18T19:40:35.298Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667754,
@@ -32057,7 +32091,7 @@
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-18T17:29:02.554Z",
+      "checked_at": "2026-06-18T19:40:35.298Z",
       "referee": "Gustavo Adrian Tejera Capo",
       "venue": "Guadalajara Stadium",
       "surface": "grass",
