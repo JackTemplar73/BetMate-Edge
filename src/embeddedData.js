@@ -177,13 +177,13 @@ window.embeddedDataset = [
         "data_quality_adjustment": -4
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Post-match report names Facundo Tello as referee; FIFA official roster confirms Tello is a 2026 World Cup referee.",
     "referee_source_url": "https://www.thesun.co.uk/sport/39394650/world-cup-rule-canada-bosnia-throw-in/",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -520,7 +520,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 52.1,
@@ -554,10 +554,10 @@ window.embeddedDataset = [
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 51.2%",
@@ -569,10 +569,21 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 51.2%. BTTS Yes lean 50.6%. Moderate goal expectation around 2.63. Break-open risk outweighs defensive suppression. Draw profile is high at 30.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "rating": 16,
       "band": "Thin",
       "price_age_minutes": null,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Refresh odds and AU book prices.",
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching.",
+        "Retry post-match stats/result feed.",
+        "Retry xG/chance-quality extraction from structured post-match sources."
+      ],
       "components": [
         {
           "label": "Fresh price check",
@@ -589,7 +600,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -650,7 +661,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 44.62,
         "qi": 61,
@@ -667,7 +678,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "unsupported_by_oddsapi",
         "odds_refresh_note": "Odds API standard soccer feed does not cover this market type.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 12.07,
         "qi": 29,
@@ -684,7 +695,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Neds was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 12.36,
         "qi": 57,
@@ -701,7 +712,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Ladbrokes was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 9.55,
         "qi": 53,
@@ -718,7 +729,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Sportsbet was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -6.82,
         "qi": 25,
@@ -735,7 +746,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Sportsbet was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -7.19,
         "qi": 17,
@@ -754,7 +765,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Sportsbet was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -1.48,
         "qi": 17,
@@ -771,7 +782,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "TAB was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -4.55,
         "qi": 27,
@@ -790,7 +801,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Bad outlier removed; using latest recorded TAB price before kickoff.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -4.19,
         "qi": 19,
@@ -809,7 +820,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Bad outlier removed; using latest recorded TAB price before kickoff.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -1.48,
         "qi": 17,
@@ -826,7 +837,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Neds was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -6.82,
         "qi": 25,
@@ -845,7 +856,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Neds was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -4.19,
         "qi": 19,
@@ -864,7 +875,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "Neds was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -3.94,
         "qi": 18,
@@ -881,7 +892,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "BetRight was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -6.82,
         "qi": 25,
@@ -900,7 +911,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "BetRight was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -5.69,
         "qi": 18,
@@ -919,7 +930,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-13T02:30:14.308Z",
         "odds_refresh_status": "bookmaker_missing",
         "odds_refresh_note": "BetRight was not present in the matched Odds API event.",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -10.1,
         "qi": 15,
@@ -928,12 +939,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -5
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Current USA-Paraguay referee report names Danny Makkelie, with Hessel Steegstra and Jan De Vries as assistants.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "referee_source_url": "https://www.sbnation.com/soccer/24481331/usmnt-vs-paraguay-referees-2026-world-cup-danny-makkelie-hessel-steegstra-jan-de-vries",
     "model_totals_25": {
@@ -1271,7 +1282,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 45.4,
@@ -1304,7 +1315,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -1376,7 +1387,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "United States 4-1 Paraguay",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760417/paraguay-united-states",
@@ -1439,13 +1450,13 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 50.8%",
@@ -1457,10 +1468,19 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 50.8%. BTTS Yes lean 52.7%. Moderate goal expectation around 2.64. Break-open risk outweighs defensive suppression. Draw profile is high at 33.7%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 34,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 33,
       "band": "Thin",
       "price_age_minutes": null,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Refresh odds and AU book prices.",
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
@@ -1477,7 +1497,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -1523,7 +1543,7 @@ window.embeddedDataset = [
       "home": 1.42,
       "away": 0.54,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -1547,7 +1567,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Neds / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -6.98,
         "qi": 30,
@@ -1567,7 +1587,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Sportsbet / PointsBet / TAB was not present in the matched Odds API event.",
         "best_price_tied_books": "Sportsbet / PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 2.32,
         "qi": 19,
@@ -1587,7 +1607,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Sportsbet / PointsBet was not present in the matched Odds API event.",
         "best_price_tied_books": "Sportsbet / PointsBet",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 8.19,
         "qi": 27,
@@ -1608,7 +1628,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 91,
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 1612.14,
         "qi": 40,
@@ -1629,7 +1649,7 @@ window.embeddedDataset = [
         "best_price_tied_books": "PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.02,
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -21.71,
         "qi": 26,
@@ -1649,7 +1669,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 224.57,
         "qi": 47,
@@ -1658,12 +1678,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -17
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -2000,7 +2020,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M08-QAT-V-SUI.pdf",
     "final_score": "Qatar 1-1 Switzerland",
@@ -2035,7 +2055,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -2107,7 +2127,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Qatar 1-1 Switzerland",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M08-QAT-V-SUI.pdf",
@@ -2144,13 +2164,13 @@ window.embeddedDataset = [
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 67.7%",
@@ -2162,16 +2182,26 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 67.7%. BTTS No lean 68.3%. Lower goal expectation around 2.00. Defensive suppression is stronger than break-open risk. Draw profile is high at 30.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 34,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 33,
       "band": "Thin",
-      "price_age_minutes": 6762,
+      "price_age_minutes": 6769,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Refresh odds and AU book prices.",
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry referee verification from FIFA/ESPN.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6762 min old"
+          "detail": "6769 min old"
         },
         {
           "label": "Market depth",
@@ -2182,7 +2212,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -2228,7 +2258,7 @@ window.embeddedDataset = [
       "home": 0.6,
       "away": 3.2,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -2254,7 +2284,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "rejected_post_start_odds": 31,
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 58.45,
         "qi": 71,
@@ -2274,7 +2304,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Sportsbet / PointsBet / TAB / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "Sportsbet / PointsBet / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -4.51,
         "qi": 13,
@@ -2294,7 +2324,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Neds / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -7.96,
         "qi": 16,
@@ -2314,7 +2344,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Sportsbet / PointsBet was not present in the matched Odds API event.",
         "best_price_tied_books": "Sportsbet / PointsBet",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -4.51,
         "qi": 13,
@@ -2334,7 +2364,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Sportsbet was not present in the matched Odds API event. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -10.45,
         "qi": 15,
@@ -2354,7 +2384,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 264.58,
         "qi": 50,
@@ -2363,12 +2393,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -18
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -2705,7 +2735,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR%20POST-V2.pdf",
     "final_score": "Brazil 1-1 Morocco",
@@ -2740,7 +2770,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -2812,7 +2842,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Brazil 1-1 Morocco",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M07-BRA-V-MAR%20POST-V2.pdf",
@@ -2861,13 +2891,13 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 56.1%",
@@ -2879,16 +2909,26 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 56.1%. BTTS No lean 55.2%. Moderate goal expectation around 2.43. Defensive suppression is stronger than break-open risk. Draw profile is normal at 28.2%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 34,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 33,
       "band": "Thin",
-      "price_age_minutes": 6558,
+      "price_age_minutes": 6565,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Refresh odds and AU book prices.",
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry referee verification from FIFA/ESPN.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6558 min old"
+          "detail": "6565 min old"
         },
         {
           "label": "Market depth",
@@ -2899,7 +2939,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -2945,7 +2985,7 @@ window.embeddedDataset = [
       "home": 1.26,
       "away": 1.37,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -2970,7 +3010,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -38.79,
         "qi": 24,
@@ -2991,7 +3031,7 @@ window.embeddedDataset = [
         "best_price_tied_books": "BetRight / Sportsbet / PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 6,
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": -6.78,
         "qi": 11,
@@ -3013,7 +3053,7 @@ window.embeddedDataset = [
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 5.25,
         "rejected_post_start_odds": 21,
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 21.25,
         "qi": 36,
@@ -3033,7 +3073,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "PointsBet / TAB was not present in the matched Odds API event.",
         "best_price_tied_books": "PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 340.68,
         "qi": 50,
@@ -3053,7 +3093,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 5849.15,
         "qi": 50,
@@ -3073,7 +3113,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "PointsBet / TAB was not present in the matched Odds API event.",
         "best_price_tied_books": "PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 384.99,
         "qi": 51,
@@ -3093,7 +3133,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "PointsBet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 34,
+        "model_data_quality_rating": 33,
         "model_data_quality_band": "Thin",
         "ev": 384.99,
         "qi": 51,
@@ -3102,12 +3142,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -18
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "provided",
     "referee_source": "Initial model dataset; not independently verified by FIFA or ESPN yet.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -3444,7 +3484,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M05-HAI-V-SCO.pdf",
     "final_score": "Haiti 0-1 Scotland",
@@ -3479,7 +3519,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -3551,7 +3591,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Haiti 0-1 Scotland",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M05-HAI-V-SCO.pdf",
@@ -3588,13 +3628,13 @@ window.embeddedDataset = [
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 51.7%",
@@ -3606,16 +3646,26 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 51.7%. BTTS No lean 52.9%. Moderate goal expectation around 2.60. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.2%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 34,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 33,
       "band": "Thin",
-      "price_age_minutes": 6385,
+      "price_age_minutes": 6392,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Refresh odds and AU book prices.",
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry referee verification from FIFA/ESPN.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6385 min old"
+          "detail": "6392 min old"
         },
         {
           "label": "Market depth",
@@ -3626,7 +3676,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -3672,7 +3722,7 @@ window.embeddedDataset = [
       "home": 1.05,
       "away": 1.05,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -3693,7 +3743,7 @@ window.embeddedDataset = [
         "odds_checked_at": "2026-06-14T04:11:12.747Z",
         "odds_refresh_status": "model_only",
         "odds_refresh_note": "Model-only draw price restored from full match model probability; no live book price confirmed yet.",
-        "model_data_quality_rating": 60,
+        "model_data_quality_rating": 59,
         "model_data_quality_band": "Thin",
         "ev": 0,
         "qi": 0,
@@ -3713,7 +3763,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "PointsBet / Sportsbet / Neds was not present in the matched Odds API event.",
         "best_price_tied_books": "PointsBet / Sportsbet / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 60,
+        "model_data_quality_rating": 59,
         "model_data_quality_band": "Thin",
         "ev": -5.76,
         "qi": 19,
@@ -3733,7 +3783,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Sportsbet / TAB was not present in the matched Odds API event.",
         "best_price_tied_books": "Sportsbet / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 60,
+        "model_data_quality_rating": 59,
         "model_data_quality_band": "Thin",
         "ev": 9.49,
         "qi": 32,
@@ -3753,7 +3803,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 60,
+        "model_data_quality_rating": 59,
         "model_data_quality_band": "Thin",
         "ev": 9.49,
         "qi": 32,
@@ -3773,7 +3823,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 60,
+        "model_data_quality_rating": 59,
         "model_data_quality_band": "Thin",
         "ev": -5.76,
         "qi": 19,
@@ -3793,7 +3843,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 60,
+        "model_data_quality_rating": 59,
         "model_data_quality_band": "Thin",
         "ev": -2.78,
         "qi": 36,
@@ -3802,12 +3852,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -7
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -4222,7 +4272,7 @@ window.embeddedDataset = [
     "lineup_check_source": "Confirmed match centre",
     "lineup_check_status": "confirmed",
     "external_lineup_match_id": 4667772,
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 18.3,
@@ -4255,7 +4305,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -4327,7 +4377,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Australia 2-0 Türkiye",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760421/turkiye-australia",
@@ -4371,13 +4421,13 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 57.4%",
@@ -4389,16 +4439,24 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 57.4%. BTTS No lean 55.5%. Moderate goal expectation around 2.38. Defensive suppression is stronger than break-open risk. Draw profile is high at 29.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 60,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 59,
       "band": "Thin",
-      "price_age_minutes": 6327,
+      "price_age_minutes": 6334,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Refresh odds and AU book prices.",
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "6327 min old"
+          "detail": "6334 min old"
         },
         {
           "label": "Market depth",
@@ -4409,7 +4467,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -4455,7 +4513,7 @@ window.embeddedDataset = [
       "home": 1.18,
       "away": 1.36,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -4479,7 +4537,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 78,
+        "model_data_quality_rating": 76,
         "model_data_quality_band": "Developing",
         "ev": 34.19,
         "qi": 33,
@@ -4499,7 +4557,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Sportsbet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Sportsbet / PointsBet",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 78,
+        "model_data_quality_rating": 76,
         "model_data_quality_band": "Developing",
         "ev": 44.93,
         "qi": 38,
@@ -4519,7 +4577,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "TAB / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 78,
+        "model_data_quality_rating": 76,
         "model_data_quality_band": "Developing",
         "ev": -6.31,
         "qi": 37,
@@ -4528,12 +4586,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -4870,7 +4928,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -4982,7 +5040,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -5054,7 +5112,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Germany 7-1 Curaçao",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760422/curacao-germany",
@@ -5142,13 +5200,13 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Over 2.5 lean 59.2%",
@@ -5160,16 +5218,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Over 2.5 lean 59.2%. BTTS No lean 54.2%. Higher goal expectation around 3.07. Break-open risk outweighs defensive suppression. Draw profile is modest at 18.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 78,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 76,
       "band": "Developing",
-      "price_age_minutes": 5915,
+      "price_age_minutes": 5922,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "5915 min old"
+          "detail": "5922 min old"
         },
         {
           "label": "Market depth",
@@ -5180,7 +5245,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -5226,7 +5291,7 @@ window.embeddedDataset = [
       "home": 4.22,
       "away": 0.41,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -5251,7 +5316,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 3.75,
-        "model_data_quality_rating": 78,
+        "model_data_quality_rating": 76,
         "model_data_quality_band": "Developing",
         "ev": -5.13,
         "qi": 23,
@@ -5271,7 +5336,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked TAB via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 78,
+        "model_data_quality_rating": 76,
         "model_data_quality_band": "Developing",
         "ev": -2.84,
         "qi": 39,
@@ -5291,7 +5356,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked PointsBet via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "PointsBet / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 78,
+        "model_data_quality_rating": 76,
         "model_data_quality_band": "Developing",
         "ev": -5.41,
         "qi": 23,
@@ -5300,12 +5365,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -5642,7 +5707,7 @@ window.embeddedDataset = [
       "status": "no_oddsapi_event",
       "rows": []
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -5756,7 +5821,7 @@ window.embeddedDataset = [
     },
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M11-NED-V-JPN.pdf",
     "final_score": "Netherlands 2-2 Japan",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -5828,7 +5893,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Netherlands 2-2 Japan",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M11-NED-V-JPN.pdf",
@@ -5891,13 +5956,13 @@ window.embeddedDataset = [
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 59.9%",
@@ -5909,16 +5974,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 59.9%. BTTS No lean 54.6%. Moderate goal expectation around 2.29. Defensive suppression is stronger than break-open risk. Draw profile is high at 30.1%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 78,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 76,
       "band": "Developing",
-      "price_age_minutes": 5915,
+      "price_age_minutes": 5922,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "5915 min old"
+          "detail": "5922 min old"
         },
         {
           "label": "Market depth",
@@ -5929,7 +6001,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -5975,7 +6047,7 @@ window.embeddedDataset = [
       "home": 0.78,
       "away": 0.59,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -6000,7 +6072,7 @@ window.embeddedDataset = [
         "best_price_tied_books": "Sportsbet / Neds / TAB",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 3.4,
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -10.47,
         "qi": 20,
@@ -6020,7 +6092,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "PointsBet / Neds / TAB / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "PointsBet / Neds / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -3.33,
         "qi": 26,
@@ -6041,7 +6113,7 @@ window.embeddedDataset = [
         "best_price_tied_books": "Sportsbet / PointsBet",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "devig_book_probability": 27.77,
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -6.34,
         "qi": 22,
@@ -6061,7 +6133,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "PointsBet / Neds / TAB / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "PointsBet / Neds / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -4.3,
         "qi": 28,
@@ -6081,7 +6153,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "PointsBet / Neds / TAB / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "PointsBet / Neds / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -3.33,
         "qi": 26,
@@ -6102,7 +6174,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Neds / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -4.3,
         "qi": 28,
@@ -6123,7 +6195,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Neds / TAB / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "Neds / TAB / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -3.33,
         "qi": 26,
@@ -6144,7 +6216,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Neds / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -4.3,
         "qi": 28,
@@ -6165,7 +6237,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Neds / BetRight was not present in the matched Odds API event.",
         "best_price_tied_books": "Neds / BetRight",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -3.33,
         "qi": 26,
@@ -6186,7 +6258,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Sportsbet / Betfair was not present in the matched Odds API event.",
         "best_price_tied_books": "Sportsbet / Betfair",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -6.34,
         "qi": 22,
@@ -6208,7 +6280,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 2.7,
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": 3.91,
         "qi": 45,
@@ -6229,7 +6301,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -2,
         "qi": 28,
@@ -6250,7 +6322,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -4.96,
         "qi": 23,
@@ -6259,12 +6331,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -1
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -6628,7 +6700,7 @@ window.embeddedDataset = [
           "price_qi": 38,
           "edge_points": -1.12,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 46,
           "data_quality_adjustment": -3
@@ -6650,7 +6722,7 @@ window.embeddedDataset = [
           "price_qi": 37,
           "edge_points": -0.81,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 30,
           "data_quality_adjustment": -2
@@ -6672,7 +6744,7 @@ window.embeddedDataset = [
           "price_qi": 36,
           "edge_points": -1.54,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 48,
           "data_quality_adjustment": -3
@@ -6692,7 +6764,7 @@ window.embeddedDataset = [
           "ev": 5.47,
           "qi": 48,
           "price_qi": 74,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 51,
           "data_quality_adjustment": -3
@@ -6714,7 +6786,7 @@ window.embeddedDataset = [
           "price_qi": 18,
           "edge_points": -4.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 37,
           "data_quality_adjustment": -2
@@ -6734,7 +6806,7 @@ window.embeddedDataset = [
           "ev": 1.56,
           "qi": 39,
           "price_qi": 58,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 42,
           "data_quality_adjustment": -3
@@ -6756,7 +6828,7 @@ window.embeddedDataset = [
           "price_qi": 49,
           "edge_points": 0,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 52,
           "data_quality_adjustment": -3
@@ -6778,7 +6850,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 40,
           "data_quality_adjustment": -2
@@ -6800,7 +6872,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -3.7,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 40,
           "data_quality_adjustment": -2
@@ -6822,7 +6894,7 @@ window.embeddedDataset = [
           "price_qi": 42,
           "edge_points": -0.71,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 47,
           "data_quality_adjustment": -3
@@ -6844,7 +6916,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -5.34,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 40,
           "data_quality_adjustment": -2
@@ -6866,7 +6938,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.24,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 40,
           "data_quality_adjustment": -2
@@ -6888,7 +6960,7 @@ window.embeddedDataset = [
           "price_qi": 23,
           "edge_points": -3.33,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 40,
           "data_quality_adjustment": -2
@@ -6910,7 +6982,7 @@ window.embeddedDataset = [
           "price_qi": 20,
           "edge_points": -3.46,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 28,
           "data_quality_adjustment": -2
@@ -6932,7 +7004,7 @@ window.embeddedDataset = [
           "price_qi": 22,
           "edge_points": -1.47,
           "risk_rating": "High",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 14,
           "data_quality_adjustment": -1
@@ -6952,7 +7024,7 @@ window.embeddedDataset = [
           "ev": -2.34,
           "qi": 31,
           "price_qi": 37,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 33,
           "data_quality_adjustment": -2
@@ -6974,7 +7046,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.64,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 29,
           "data_quality_adjustment": -2
@@ -6994,7 +7066,7 @@ window.embeddedDataset = [
           "ev": -2,
           "qi": 28,
           "price_qi": 38,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 30,
           "data_quality_adjustment": -2
@@ -7014,7 +7086,7 @@ window.embeddedDataset = [
           "ev": -4.3,
           "qi": 28,
           "price_qi": 28,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 30,
           "data_quality_adjustment": -2
@@ -7036,7 +7108,7 @@ window.embeddedDataset = [
           "price_qi": 24,
           "edge_points": -2.57,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 35,
           "data_quality_adjustment": -2
@@ -7056,7 +7128,7 @@ window.embeddedDataset = [
           "ev": -3.33,
           "qi": 26,
           "price_qi": 32,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 28,
           "data_quality_adjustment": -2
@@ -7076,7 +7148,7 @@ window.embeddedDataset = [
           "ev": -6.25,
           "qi": 26,
           "price_qi": 23,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 28,
           "data_quality_adjustment": -2
@@ -7096,7 +7168,7 @@ window.embeddedDataset = [
           "ev": -4.33,
           "qi": 25,
           "price_qi": 29,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 27,
           "data_quality_adjustment": -2
@@ -7116,7 +7188,7 @@ window.embeddedDataset = [
           "ev": -6.67,
           "qi": 24,
           "price_qi": 23,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 25,
           "data_quality_adjustment": -1
@@ -7136,7 +7208,7 @@ window.embeddedDataset = [
           "ev": -6.34,
           "qi": 22,
           "price_qi": 24,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 23,
           "data_quality_adjustment": -1
@@ -7156,7 +7228,7 @@ window.embeddedDataset = [
           "ev": -6.34,
           "qi": 22,
           "price_qi": 24,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 23,
           "data_quality_adjustment": -1
@@ -7176,7 +7248,7 @@ window.embeddedDataset = [
           "ev": -9.09,
           "qi": 21,
           "price_qi": 20,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 22,
           "data_quality_adjustment": -1
@@ -7196,7 +7268,7 @@ window.embeddedDataset = [
           "ev": -13.33,
           "qi": 21,
           "price_qi": 15,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 22,
           "data_quality_adjustment": -1
@@ -7218,7 +7290,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.24,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 24,
           "data_quality_adjustment": -1
@@ -7238,7 +7310,7 @@ window.embeddedDataset = [
           "ev": -11.85,
           "qi": 20,
           "price_qi": 17,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 21,
           "data_quality_adjustment": -1
@@ -7258,7 +7330,7 @@ window.embeddedDataset = [
           "ev": -14.6,
           "qi": 19,
           "price_qi": 15,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 20,
           "data_quality_adjustment": -1
@@ -7280,7 +7352,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -5.31,
           "risk_rating": "High",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 11,
           "data_quality_adjustment": -1
@@ -7302,14 +7374,14 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -3.36,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 8,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -7421,7 +7493,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -7493,7 +7565,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Ivory Coast 1-0 Ecuador",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760423/ecuador-ivory-coast",
@@ -7532,13 +7604,13 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 66.3%",
@@ -7550,16 +7622,24 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 66.3%. BTTS No lean 59.0%. Lower goal expectation around 2.05. Defensive suppression is stronger than break-open risk. Draw profile is high at 37.6%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 66,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 65,
       "band": "Developing",
-      "price_age_minutes": 5180,
+      "price_age_minutes": 5187,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Refresh odds and AU book prices.",
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 0,
           "max": 18,
-          "detail": "5180 min old"
+          "detail": "5187 min old"
         },
         {
           "label": "Market depth",
@@ -7570,7 +7650,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -7616,7 +7696,7 @@ window.embeddedDataset = [
       "home": 1.52,
       "away": 1.01,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -7642,7 +7722,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.97,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -1.49,
         "qi": 43,
@@ -7664,7 +7744,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 4.8,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 5.15,
         "qi": 36,
@@ -7686,7 +7766,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 3.55,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -2.51,
         "qi": 27,
@@ -7695,12 +7775,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -8064,7 +8144,7 @@ window.embeddedDataset = [
           "price_qi": 59,
           "edge_points": 0.91,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 54,
           "data_quality_adjustment": 0
@@ -8086,7 +8166,7 @@ window.embeddedDataset = [
           "price_qi": 22,
           "edge_points": -3.37,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
           "data_quality_adjustment": 0
@@ -8108,7 +8188,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.8,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -8128,7 +8208,7 @@ window.embeddedDataset = [
           "ev": -1.49,
           "qi": 43,
           "price_qi": 41,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
           "data_quality_adjustment": 0
@@ -8150,7 +8230,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.8,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -8172,7 +8252,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.79,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -8194,7 +8274,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -5.04,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -8216,7 +8296,7 @@ window.embeddedDataset = [
           "price_qi": 33,
           "edge_points": -1.97,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -8238,7 +8318,7 @@ window.embeddedDataset = [
           "price_qi": 49,
           "edge_points": 0,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 48,
           "data_quality_adjustment": 0
@@ -8260,7 +8340,7 @@ window.embeddedDataset = [
           "price_qi": 26,
           "edge_points": -2.6,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 44,
           "data_quality_adjustment": 0
@@ -8282,7 +8362,7 @@ window.embeddedDataset = [
           "price_qi": 9,
           "edge_points": -7.96,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -8302,7 +8382,7 @@ window.embeddedDataset = [
           "ev": -2.99,
           "qi": 40,
           "price_qi": 33,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -8324,7 +8404,7 @@ window.embeddedDataset = [
           "price_qi": 42,
           "edge_points": -0.73,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -8346,7 +8426,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -7.11,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -8368,7 +8448,7 @@ window.embeddedDataset = [
           "price_qi": 65,
           "edge_points": 1.42,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 56,
           "data_quality_adjustment": 0
@@ -8388,7 +8468,7 @@ window.embeddedDataset = [
           "ev": -4.98,
           "qi": 37,
           "price_qi": 25,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -8408,7 +8488,7 @@ window.embeddedDataset = [
           "ev": -5.47,
           "qi": 37,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -8428,7 +8508,7 @@ window.embeddedDataset = [
           "ev": -5.47,
           "qi": 37,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -8448,7 +8528,7 @@ window.embeddedDataset = [
           "ev": 5.15,
           "qi": 36,
           "price_qi": 72,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -8470,7 +8550,7 @@ window.embeddedDataset = [
           "price_qi": 49,
           "edge_points": 0,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -8492,7 +8572,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.35,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 29,
           "data_quality_adjustment": 0
@@ -8514,7 +8594,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.64,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -8536,7 +8616,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -7.71,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -8556,7 +8636,7 @@ window.embeddedDataset = [
           "ev": -2.51,
           "qi": 27,
           "price_qi": 36,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 27,
           "data_quality_adjustment": 0
@@ -8576,7 +8656,7 @@ window.embeddedDataset = [
           "ev": -1.57,
           "qi": 22,
           "price_qi": 41,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -8596,7 +8676,7 @@ window.embeddedDataset = [
           "ev": -8.08,
           "qi": 22,
           "price_qi": 21,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -8616,7 +8696,7 @@ window.embeddedDataset = [
           "ev": -8.08,
           "qi": 22,
           "price_qi": 21,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -8636,7 +8716,7 @@ window.embeddedDataset = [
           "ev": -8.08,
           "qi": 22,
           "price_qi": 21,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -8656,7 +8736,7 @@ window.embeddedDataset = [
           "ev": -8.08,
           "qi": 22,
           "price_qi": 21,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -8678,7 +8758,7 @@ window.embeddedDataset = [
           "price_qi": 32,
           "edge_points": -1.15,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 28,
           "data_quality_adjustment": 0
@@ -8700,7 +8780,7 @@ window.embeddedDataset = [
           "price_qi": 32,
           "edge_points": -1.15,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 28,
           "data_quality_adjustment": 0
@@ -8720,7 +8800,7 @@ window.embeddedDataset = [
           "ev": -3.8,
           "qi": 19,
           "price_qi": 31,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 19,
           "data_quality_adjustment": 0
@@ -8740,7 +8820,7 @@ window.embeddedDataset = [
           "ev": -6.04,
           "qi": 17,
           "price_qi": 25,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 17,
           "data_quality_adjustment": 0
@@ -8760,7 +8840,7 @@ window.embeddedDataset = [
           "ev": -10.51,
           "qi": 14,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 14,
           "data_quality_adjustment": 0
@@ -8782,7 +8862,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -5.16,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -8804,7 +8884,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -3.19,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 12,
           "data_quality_adjustment": 0
@@ -8826,14 +8906,14 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -4.26,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 7,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "lineup_last_checked": "2026-06-15T11:28:50.141Z",
     "lineup_check_source": "FotMob match centre",
@@ -8947,7 +9027,7 @@ window.embeddedDataset = [
     },
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M12-SWE-V-TUN.pdf",
     "final_score": "Sweden 5-1 Tunisia",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -9019,7 +9099,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Sweden 5-1 Tunisia",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M12-SWE-V-TUN.pdf",
@@ -9096,13 +9176,13 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 59.9%",
@@ -9114,16 +9194,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 59.9%. BTTS No lean 55.4%. Moderate goal expectation around 2.29. Defensive suppression is stronger than break-open risk. Draw profile is high at 31.0%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 5079,
+      "price_age_minutes": 5086,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "5079 min old"
+          "detail": "5086 min old"
         },
         {
           "label": "Market depth",
@@ -9134,7 +9221,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -9180,7 +9267,7 @@ window.embeddedDataset = [
       "home": 1.33,
       "away": 0.28,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -9206,7 +9293,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 38,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 69.97,
         "qi": 38,
@@ -9228,7 +9315,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 15.5,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 47.87,
         "qi": 41,
@@ -9249,7 +9336,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -5.22,
         "qi": 40,
@@ -9258,12 +9345,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -9626,7 +9713,7 @@ window.embeddedDataset = [
           "price_qi": 97,
           "edge_points": 18.16,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 99,
           "data_quality_adjustment": 0
@@ -9648,7 +9735,7 @@ window.embeddedDataset = [
           "price_qi": 96,
           "edge_points": 13.32,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 99,
           "data_quality_adjustment": 0
@@ -9670,7 +9757,7 @@ window.embeddedDataset = [
           "price_qi": 97,
           "edge_points": 15.92,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 87,
           "data_quality_adjustment": 0
@@ -9692,7 +9779,7 @@ window.embeddedDataset = [
           "price_qi": 100,
           "edge_points": 16.9,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 72,
           "data_quality_adjustment": 0
@@ -9714,7 +9801,7 @@ window.embeddedDataset = [
           "price_qi": 88,
           "edge_points": 7.12,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 70,
           "data_quality_adjustment": 0
@@ -9736,7 +9823,7 @@ window.embeddedDataset = [
           "price_qi": 86,
           "edge_points": 6.13,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 66,
           "data_quality_adjustment": 0
@@ -9756,7 +9843,7 @@ window.embeddedDataset = [
           "ev": 47.87,
           "qi": 41,
           "price_qi": 87,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -9776,7 +9863,7 @@ window.embeddedDataset = [
           "ev": -5.22,
           "qi": 40,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -9796,7 +9883,7 @@ window.embeddedDataset = [
           "ev": -6.09,
           "qi": 39,
           "price_qi": 11,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -9816,7 +9903,7 @@ window.embeddedDataset = [
           "ev": 69.97,
           "qi": 38,
           "price_qi": 87,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -9836,7 +9923,7 @@ window.embeddedDataset = [
           "ev": -6.96,
           "qi": 38,
           "price_qi": 8,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -9856,7 +9943,7 @@ window.embeddedDataset = [
           "ev": -6.96,
           "qi": 38,
           "price_qi": 8,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -9876,7 +9963,7 @@ window.embeddedDataset = [
           "ev": 29.39,
           "qi": 37,
           "price_qi": 83,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -9896,7 +9983,7 @@ window.embeddedDataset = [
           "ev": -7.83,
           "qi": 37,
           "price_qi": 5,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -9916,7 +10003,7 @@ window.embeddedDataset = [
           "ev": 20.15,
           "qi": 35,
           "price_qi": 80,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -9938,7 +10025,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -12.28,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
           "data_quality_adjustment": 0
@@ -9958,7 +10045,7 @@ window.embeddedDataset = [
           "ev": 37.6,
           "qi": 34,
           "price_qi": 82,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
           "data_quality_adjustment": 0
@@ -9980,7 +10067,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -15.39,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 33,
           "data_quality_adjustment": 0
@@ -10000,7 +10087,7 @@ window.embeddedDataset = [
           "ev": 17.36,
           "qi": 32,
           "price_qi": 78,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -10020,7 +10107,7 @@ window.embeddedDataset = [
           "ev": 5.22,
           "qi": 28,
           "price_qi": 70,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 28,
           "data_quality_adjustment": 0
@@ -10042,7 +10129,7 @@ window.embeddedDataset = [
           "price_qi": 0,
           "edge_points": -24.01,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -10062,7 +10149,7 @@ window.embeddedDataset = [
           "ev": 1.66,
           "qi": 24,
           "price_qi": 58,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 24,
           "data_quality_adjustment": 0
@@ -10084,7 +10171,7 @@ window.embeddedDataset = [
           "price_qi": 1,
           "edge_points": -26.47,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 20,
           "data_quality_adjustment": 0
@@ -10104,7 +10191,7 @@ window.embeddedDataset = [
           "ev": -2.96,
           "qi": 15,
           "price_qi": 35,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -10124,7 +10211,7 @@ window.embeddedDataset = [
           "ev": -6.92,
           "qi": 12,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 12,
           "data_quality_adjustment": 0
@@ -10146,7 +10233,7 @@ window.embeddedDataset = [
           "price_qi": 1,
           "edge_points": -21.91,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 12,
           "data_quality_adjustment": 0
@@ -10168,14 +10255,14 @@ window.embeddedDataset = [
           "price_qi": 0,
           "edge_points": null,
           "risk_rating": "No price",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 0,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 86.7,
@@ -10287,7 +10374,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Spain vs Cape Verde. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -10359,7 +10446,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Spain 0-0 Cape Verde",
       "source": "ESPN",
       "source_url": "https://www.espn.com/soccer/match/_/gameId/760428/cape-verde-spain",
@@ -10385,10 +10472,10 @@ window.embeddedDataset = [
       "summary": "Learning flags: draw-risk-underestimated, favourite-confidence-too-high, goal-suppression-underweighted."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Over 2.5 lean 52.9%",
@@ -10400,16 +10487,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Over 2.5 lean 52.9%. BTTS No lean 58.1%. Higher goal expectation around 2.79. Break-open risk outweighs defensive suppression. Draw profile is modest at 21.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 4449,
+      "price_age_minutes": 4456,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "4449 min old"
+          "detail": "4456 min old"
         },
         {
           "label": "Market depth",
@@ -10420,7 +10514,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -10466,7 +10560,7 @@ window.embeddedDataset = [
       "home": 2.1,
       "away": 0.2,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -10492,7 +10586,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 6.4,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 6.16,
         "qi": 35,
@@ -10514,7 +10608,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 4.1,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 3.45,
         "qi": 34,
@@ -10523,12 +10617,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -10892,7 +10986,7 @@ window.embeddedDataset = [
           "price_qi": 85,
           "edge_points": 5.34,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 66,
           "data_quality_adjustment": 0
@@ -10914,7 +11008,7 @@ window.embeddedDataset = [
           "price_qi": 18,
           "edge_points": -3.56,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -10936,7 +11030,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.66,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -10958,7 +11052,7 @@ window.embeddedDataset = [
           "price_qi": 40,
           "edge_points": -1.13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 49,
           "data_quality_adjustment": 0
@@ -10980,7 +11074,7 @@ window.embeddedDataset = [
           "price_qi": 46,
           "edge_points": -0.28,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
           "data_quality_adjustment": 0
@@ -11002,7 +11096,7 @@ window.embeddedDataset = [
           "price_qi": 36,
           "edge_points": -1.59,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 48,
           "data_quality_adjustment": 0
@@ -11024,7 +11118,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -7.54,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -11046,7 +11140,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -5.75,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -11068,7 +11162,7 @@ window.embeddedDataset = [
           "price_qi": 8,
           "edge_points": -8.15,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -11090,7 +11184,7 @@ window.embeddedDataset = [
           "price_qi": 34,
           "edge_points": -1.45,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 42,
           "data_quality_adjustment": 0
@@ -11112,7 +11206,7 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -9.5,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -11134,7 +11228,7 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -8.12,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -11156,7 +11250,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.31,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -11176,7 +11270,7 @@ window.embeddedDataset = [
           "ev": 6.16,
           "qi": 35,
           "price_qi": 73,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -11198,7 +11292,7 @@ window.embeddedDataset = [
           "price_qi": 43,
           "edge_points": -0.57,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 45,
           "data_quality_adjustment": 0
@@ -11218,7 +11312,7 @@ window.embeddedDataset = [
           "ev": 3.45,
           "qi": 34,
           "price_qi": 66,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
           "data_quality_adjustment": 0
@@ -11240,7 +11334,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.41,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -11262,7 +11356,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.53,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -11284,7 +11378,7 @@ window.embeddedDataset = [
           "price_qi": 73,
           "edge_points": 2.18,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 54,
           "data_quality_adjustment": 0
@@ -11304,7 +11398,7 @@ window.embeddedDataset = [
           "ev": 2.74,
           "qi": 30,
           "price_qi": 63,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -11324,7 +11418,7 @@ window.embeddedDataset = [
           "ev": -1.48,
           "qi": 23,
           "price_qi": 41,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 23,
           "data_quality_adjustment": 0
@@ -11344,7 +11438,7 @@ window.embeddedDataset = [
           "ev": -1.48,
           "qi": 23,
           "price_qi": 41,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 23,
           "data_quality_adjustment": 0
@@ -11364,7 +11458,7 @@ window.embeddedDataset = [
           "ev": -1.48,
           "qi": 23,
           "price_qi": 41,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 23,
           "data_quality_adjustment": 0
@@ -11384,7 +11478,7 @@ window.embeddedDataset = [
           "ev": -6.4,
           "qi": 22,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -11406,7 +11500,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -5.67,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 18,
           "data_quality_adjustment": 0
@@ -11426,7 +11520,7 @@ window.embeddedDataset = [
           "ev": -1.54,
           "qi": 21,
           "price_qi": 41,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -11448,7 +11542,7 @@ window.embeddedDataset = [
           "price_qi": 71,
           "edge_points": 1.16,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -11470,7 +11564,7 @@ window.embeddedDataset = [
           "price_qi": 31,
           "edge_points": -1.1,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 25,
           "data_quality_adjustment": 0
@@ -11490,7 +11584,7 @@ window.embeddedDataset = [
           "ev": -5.82,
           "qi": 16,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 16,
           "data_quality_adjustment": 0
@@ -11510,7 +11604,7 @@ window.embeddedDataset = [
           "ev": -5.82,
           "qi": 16,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 16,
           "data_quality_adjustment": 0
@@ -11532,7 +11626,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -4.94,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -11554,14 +11648,14 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -3.4,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 8,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 58.2,
@@ -11672,7 +11766,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Belgium vs Egypt. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -11744,7 +11838,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Belgium 1-1 Egypt",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M16-BEL-V-EGY.pdf",
@@ -11786,13 +11880,13 @@ window.embeddedDataset = [
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 52.8%",
@@ -11804,16 +11898,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 52.8%. BTTS No lean 53.1%. Moderate goal expectation around 2.56. Break-open risk outweighs defensive suppression. Draw profile is normal at 27.8%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 4149,
+      "price_age_minutes": 4156,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "4149 min old"
+          "detail": "4156 min old"
         },
         {
           "label": "Market depth",
@@ -11824,7 +11925,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -11870,7 +11971,7 @@ window.embeddedDataset = [
       "home": 1.35,
       "away": 1.08,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -11896,7 +11997,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 9.2,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 9.22,
         "qi": 33,
@@ -11918,7 +12019,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.48,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -3.29,
         "qi": 46,
@@ -11940,7 +12041,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 4.5,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 2.22,
         "qi": 30,
@@ -11949,12 +12050,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -12318,7 +12419,7 @@ window.embeddedDataset = [
           "price_qi": 36,
           "edge_points": -1.16,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -12340,7 +12441,7 @@ window.embeddedDataset = [
           "price_qi": 35,
           "edge_points": -1.63,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -12362,7 +12463,7 @@ window.embeddedDataset = [
           "price_qi": 75,
           "edge_points": 2.39,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 54,
           "data_quality_adjustment": 0
@@ -12384,7 +12485,7 @@ window.embeddedDataset = [
           "price_qi": 87,
           "edge_points": 6.42,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 67,
           "data_quality_adjustment": 0
@@ -12406,7 +12507,7 @@ window.embeddedDataset = [
           "price_qi": 33,
           "edge_points": -1.75,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -12426,7 +12527,7 @@ window.embeddedDataset = [
           "ev": -3.29,
           "qi": 46,
           "price_qi": 30,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
           "data_quality_adjustment": 0
@@ -12448,7 +12549,7 @@ window.embeddedDataset = [
           "price_qi": 57,
           "edge_points": 0.57,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
           "data_quality_adjustment": 0
@@ -12470,7 +12571,7 @@ window.embeddedDataset = [
           "price_qi": 83,
           "edge_points": 4.61,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 61,
           "data_quality_adjustment": 0
@@ -12490,7 +12591,7 @@ window.embeddedDataset = [
           "ev": -6.58,
           "qi": 41,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -12510,7 +12611,7 @@ window.embeddedDataset = [
           "ev": -6.58,
           "qi": 41,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -12532,7 +12633,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -8.97,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -12552,7 +12653,7 @@ window.embeddedDataset = [
           "ev": -7.89,
           "qi": 40,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -12572,7 +12673,7 @@ window.embeddedDataset = [
           "ev": -7.89,
           "qi": 40,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -12594,7 +12695,7 @@ window.embeddedDataset = [
           "price_qi": 23,
           "edge_points": -1.87,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -12616,7 +12717,7 @@ window.embeddedDataset = [
           "price_qi": 8,
           "edge_points": -6.5,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -12638,7 +12739,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -10.34,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -12660,7 +12761,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -5.29,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -12682,7 +12783,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -7.38,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -12704,7 +12805,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -5.74,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -12726,7 +12827,7 @@ window.embeddedDataset = [
           "price_qi": 4,
           "edge_points": -8.94,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -12748,7 +12849,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -7.11,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -12770,7 +12871,7 @@ window.embeddedDataset = [
           "price_qi": 8,
           "edge_points": -9.18,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
           "data_quality_adjustment": 0
@@ -12790,7 +12891,7 @@ window.embeddedDataset = [
           "ev": 9.22,
           "qi": 33,
           "price_qi": 77,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 33,
           "data_quality_adjustment": 0
@@ -12812,7 +12913,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.78,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
           "data_quality_adjustment": 0
@@ -12834,7 +12935,7 @@ window.embeddedDataset = [
           "price_qi": 21,
           "edge_points": -1.39,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 14,
           "data_quality_adjustment": 0
@@ -12854,7 +12955,7 @@ window.embeddedDataset = [
           "ev": 2.22,
           "qi": 30,
           "price_qi": 61,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -12874,7 +12975,7 @@ window.embeddedDataset = [
           "ev": 0,
           "qi": 25,
           "price_qi": 49,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 25,
           "data_quality_adjustment": 0
@@ -12896,7 +12997,7 @@ window.embeddedDataset = [
           "price_qi": 78,
           "edge_points": 1.61,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -12916,7 +13017,7 @@ window.embeddedDataset = [
           "ev": -3.78,
           "qi": 19,
           "price_qi": 31,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 19,
           "data_quality_adjustment": 0
@@ -12936,7 +13037,7 @@ window.embeddedDataset = [
           "ev": -4.44,
           "qi": 18,
           "price_qi": 29,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 18,
           "data_quality_adjustment": 0
@@ -12956,7 +13057,7 @@ window.embeddedDataset = [
           "ev": -5.56,
           "qi": 17,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 17,
           "data_quality_adjustment": 0
@@ -12978,7 +13079,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.08,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 19,
           "data_quality_adjustment": 0
@@ -12998,7 +13099,7 @@ window.embeddedDataset = [
           "ev": -5.95,
           "qi": 16,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 16,
           "data_quality_adjustment": 0
@@ -13018,7 +13119,7 @@ window.embeddedDataset = [
           "ev": -2.91,
           "qi": 15,
           "price_qi": 35,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -13038,7 +13139,7 @@ window.embeddedDataset = [
           "ev": -2.91,
           "qi": 15,
           "price_qi": 35,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -13058,7 +13159,7 @@ window.embeddedDataset = [
           "ev": -8.98,
           "qi": 14,
           "price_qi": 22,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 14,
           "data_quality_adjustment": 0
@@ -13080,14 +13181,14 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -4.91,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 7,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 12.1,
@@ -13197,7 +13298,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Saudi Arabia vs Uruguay. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -13269,7 +13370,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Saudi Arabia 1-1 Uruguay",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M13-KSA-V-URU.pdf",
@@ -13315,13 +13416,13 @@ window.embeddedDataset = [
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 52.4%",
@@ -13333,16 +13434,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 52.4%. BTTS No lean 56.0%. Moderate goal expectation around 2.58. Defensive suppression is stronger than break-open risk. Draw profile is normal at 27.0%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 3934,
+      "price_age_minutes": 3941,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "3934 min old"
+          "detail": "3941 min old"
         },
         {
           "label": "Market depth",
@@ -13353,7 +13461,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -13399,7 +13507,7 @@ window.embeddedDataset = [
       "home": 0.66,
       "away": 1.72,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -13425,7 +13533,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.84,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -3.09,
         "qi": 40,
@@ -13447,7 +13555,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 5.1,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 3.31,
         "qi": 32,
@@ -13469,7 +13577,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 3.65,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 0.28,
         "qi": 33,
@@ -13478,12 +13586,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -13845,7 +13953,7 @@ window.embeddedDataset = [
           "qi": 68,
           "price_qi": 90,
           "checked_at": "2026-06-16T12:00:12.667Z",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 68,
           "data_quality_adjustment": 0
@@ -13867,7 +13975,7 @@ window.embeddedDataset = [
           "price_qi": 73,
           "edge_points": 2.36,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 61,
           "data_quality_adjustment": 0
@@ -13889,7 +13997,7 @@ window.embeddedDataset = [
           "price_qi": 73,
           "edge_points": 2.36,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 61,
           "data_quality_adjustment": 0
@@ -13909,7 +14017,7 @@ window.embeddedDataset = [
           "qi": 50,
           "price_qi": 77,
           "checked_at": "2026-06-16T12:00:12.667Z",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 50,
           "data_quality_adjustment": 0
@@ -13931,7 +14039,7 @@ window.embeddedDataset = [
           "price_qi": 37,
           "edge_points": -1.38,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 48,
           "data_quality_adjustment": 0
@@ -13953,7 +14061,7 @@ window.embeddedDataset = [
           "price_qi": 28,
           "edge_points": -2.5,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 45,
           "data_quality_adjustment": 0
@@ -13975,7 +14083,7 @@ window.embeddedDataset = [
           "price_qi": 72,
           "edge_points": 1.45,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 45,
           "data_quality_adjustment": 0
@@ -13995,7 +14103,7 @@ window.embeddedDataset = [
           "ev": -3.09,
           "qi": 40,
           "price_qi": 32,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -14017,7 +14125,7 @@ window.embeddedDataset = [
           "price_qi": 17,
           "edge_points": -4.75,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -14039,7 +14147,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.01,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -14061,7 +14169,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.79,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -14083,7 +14191,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -4.41,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -14105,7 +14213,7 @@ window.embeddedDataset = [
           "price_qi": 47,
           "edge_points": -0.2,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -14127,7 +14235,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -6.73,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -14149,7 +14257,7 @@ window.embeddedDataset = [
           "price_qi": 8,
           "edge_points": -8.55,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -14171,7 +14279,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -9.16,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -14193,7 +14301,7 @@ window.embeddedDataset = [
           "price_qi": 17,
           "edge_points": -4.99,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -14213,7 +14321,7 @@ window.embeddedDataset = [
           "ev": -5.67,
           "qi": 37,
           "price_qi": 23,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -14235,7 +14343,7 @@ window.embeddedDataset = [
           "price_qi": 26,
           "edge_points": -2.26,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -14255,7 +14363,7 @@ window.embeddedDataset = [
           "ev": -7.22,
           "qi": 36,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -14275,7 +14383,7 @@ window.embeddedDataset = [
           "ev": -7.22,
           "qi": 36,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -14295,7 +14403,7 @@ window.embeddedDataset = [
           "ev": -7.22,
           "qi": 36,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -14317,7 +14425,7 @@ window.embeddedDataset = [
           "price_qi": 17,
           "edge_points": -4.74,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -14339,7 +14447,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.86,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -14359,7 +14467,7 @@ window.embeddedDataset = [
           "ev": 0.28,
           "qi": 33,
           "price_qi": 51,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 33,
           "data_quality_adjustment": 0
@@ -14379,7 +14487,7 @@ window.embeddedDataset = [
           "ev": 3.31,
           "qi": 32,
           "price_qi": 66,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -14401,7 +14509,7 @@ window.embeddedDataset = [
           "price_qi": 25,
           "edge_points": -2.23,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 29,
           "data_quality_adjustment": 0
@@ -14421,7 +14529,7 @@ window.embeddedDataset = [
           "ev": -5.29,
           "qi": 24,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 24,
           "data_quality_adjustment": 0
@@ -14441,7 +14549,7 @@ window.embeddedDataset = [
           "ev": -5.29,
           "qi": 24,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 24,
           "data_quality_adjustment": 0
@@ -14461,7 +14569,7 @@ window.embeddedDataset = [
           "ev": -5.29,
           "qi": 24,
           "price_qi": 26,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 24,
           "data_quality_adjustment": 0
@@ -14481,7 +14589,7 @@ window.embeddedDataset = [
           "ev": -0.83,
           "qi": 23,
           "price_qi": 45,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 23,
           "data_quality_adjustment": 0
@@ -14501,7 +14609,7 @@ window.embeddedDataset = [
           "ev": -8.08,
           "qi": 22,
           "price_qi": 21,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -14523,7 +14631,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.35,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -14543,7 +14651,7 @@ window.embeddedDataset = [
           "ev": -1.86,
           "qi": 21,
           "price_qi": 40,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -14563,7 +14671,7 @@ window.embeddedDataset = [
           "ev": -1.86,
           "qi": 21,
           "price_qi": 40,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -14583,7 +14691,7 @@ window.embeddedDataset = [
           "ev": -1.86,
           "qi": 21,
           "price_qi": 40,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -14605,7 +14713,7 @@ window.embeddedDataset = [
           "price_qi": 20,
           "edge_points": -2.14,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 14,
           "data_quality_adjustment": 0
@@ -14627,7 +14735,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -4.26,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -14649,14 +14757,14 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -2.74,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 8,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 51.5,
@@ -14767,7 +14875,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Iran vs New Zealand. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -14839,7 +14947,7 @@ window.embeddedDataset = [
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Iran 2-2 New Zealand",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M15-IRN-V-NZL.pdf",
@@ -14902,13 +15010,13 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 59.6%",
@@ -14920,16 +15028,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 59.6%. BTTS No lean 55.8%. Moderate goal expectation around 2.30. Defensive suppression is stronger than break-open risk. Draw profile is high at 30.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 3665,
+      "price_age_minutes": 3672,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "3665 min old"
+          "detail": "3672 min old"
         },
         {
           "label": "Market depth",
@@ -14940,7 +15055,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -14986,7 +15101,7 @@ window.embeddedDataset = [
       "home": 1.5,
       "away": 1.24,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -15012,7 +15127,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.49,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -3.23,
         "qi": 46,
@@ -15034,7 +15149,7 @@ window.embeddedDataset = [
         "best_price_tied_books": "Betfair / Pinnacle",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 8,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 1.06,
         "qi": 26,
@@ -15056,7 +15171,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 4.7,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 7.38,
         "qi": 38,
@@ -15065,12 +15180,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -15434,7 +15549,7 @@ window.embeddedDataset = [
           "price_qi": 84,
           "edge_points": 5.02,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 62,
           "data_quality_adjustment": 0
@@ -15456,7 +15571,7 @@ window.embeddedDataset = [
           "price_qi": 81,
           "edge_points": 3.45,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 57,
           "data_quality_adjustment": 0
@@ -15478,7 +15593,7 @@ window.embeddedDataset = [
           "price_qi": 31,
           "edge_points": -2.21,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
           "data_quality_adjustment": 0
@@ -15500,7 +15615,7 @@ window.embeddedDataset = [
           "price_qi": 32,
           "edge_points": -1.98,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
           "data_quality_adjustment": 0
@@ -15520,7 +15635,7 @@ window.embeddedDataset = [
           "ev": -3.23,
           "qi": 46,
           "price_qi": 31,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
           "data_quality_adjustment": 0
@@ -15542,7 +15657,7 @@ window.embeddedDataset = [
           "price_qi": 35,
           "edge_points": -1.39,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 42,
           "data_quality_adjustment": 0
@@ -15564,7 +15679,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -5.04,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -15584,7 +15699,7 @@ window.embeddedDataset = [
           "ev": -6.45,
           "qi": 41,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -15604,7 +15719,7 @@ window.embeddedDataset = [
           "ev": -7.1,
           "qi": 41,
           "price_qi": 17,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -15624,7 +15739,7 @@ window.embeddedDataset = [
           "ev": -7.1,
           "qi": 41,
           "price_qi": 17,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -15644,7 +15759,7 @@ window.embeddedDataset = [
           "ev": -7.1,
           "qi": 41,
           "price_qi": 17,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -15666,7 +15781,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -5.44,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -15688,7 +15803,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -4.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -15708,7 +15823,7 @@ window.embeddedDataset = [
           "ev": 7.38,
           "qi": 38,
           "price_qi": 76,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -15730,7 +15845,7 @@ window.embeddedDataset = [
           "price_qi": 32,
           "edge_points": -1.61,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -15752,7 +15867,7 @@ window.embeddedDataset = [
           "price_qi": 26,
           "edge_points": -2.56,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -15774,7 +15889,7 @@ window.embeddedDataset = [
           "price_qi": 9,
           "edge_points": -7.07,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -15796,7 +15911,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -7.12,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -15818,7 +15933,7 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -9.26,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -15840,7 +15955,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -9.96,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -15862,7 +15977,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -5.23,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -15882,7 +15997,7 @@ window.embeddedDataset = [
           "ev": 2.91,
           "qi": 32,
           "price_qi": 64,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -15904,7 +16019,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.4,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 33,
           "data_quality_adjustment": 0
@@ -15926,7 +16041,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.57,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -15946,7 +16061,7 @@ window.embeddedDataset = [
           "ev": 0.67,
           "qi": 27,
           "price_qi": 53,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 27,
           "data_quality_adjustment": 0
@@ -15966,7 +16081,7 @@ window.embeddedDataset = [
           "ev": 0.67,
           "qi": 27,
           "price_qi": 53,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 27,
           "data_quality_adjustment": 0
@@ -15986,7 +16101,7 @@ window.embeddedDataset = [
           "ev": 0.67,
           "qi": 27,
           "price_qi": 53,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 27,
           "data_quality_adjustment": 0
@@ -16006,7 +16121,7 @@ window.embeddedDataset = [
           "ev": 1.06,
           "qi": 26,
           "price_qi": 55,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 26,
           "data_quality_adjustment": 0
@@ -16028,7 +16143,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.13,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -16050,7 +16165,7 @@ window.embeddedDataset = [
           "price_qi": 34,
           "edge_points": -0.62,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 19,
           "data_quality_adjustment": 0
@@ -16072,7 +16187,7 @@ window.embeddedDataset = [
           "price_qi": 23,
           "edge_points": -1.74,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 16,
           "data_quality_adjustment": 0
@@ -16092,7 +16207,7 @@ window.embeddedDataset = [
           "ev": -6.91,
           "qi": 15,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -16112,7 +16227,7 @@ window.embeddedDataset = [
           "ev": -6.91,
           "qi": 15,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -16132,7 +16247,7 @@ window.embeddedDataset = [
           "ev": -6.91,
           "qi": 15,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -16152,7 +16267,7 @@ window.embeddedDataset = [
           "ev": -12.23,
           "qi": 13,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 13,
           "data_quality_adjustment": 0
@@ -16174,7 +16289,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -4.89,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -16196,14 +16311,14 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -2.96,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 8,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 64.4,
@@ -16315,7 +16430,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for France vs Senegal. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -16423,11 +16538,11 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "France 3-1 Senegal",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M17-FRA-V-SEN.pdf",
@@ -16451,10 +16566,10 @@ window.embeddedDataset = [
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M17-FRA-V-SEN.pdf",
     "final_score": "France 3-1 Senegal",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Over 2.5 lean 52.9%",
@@ -16466,16 +16581,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Over 2.5 lean 52.9%. BTTS No lean 52.0%. Higher goal expectation around 2.79. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.1%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 2769,
+      "price_age_minutes": 2776,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "2769 min old"
+          "detail": "2776 min old"
         },
         {
           "label": "Market depth",
@@ -16486,7 +16608,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -16532,7 +16654,7 @@ window.embeddedDataset = [
       "home": 1.79,
       "away": 0.53,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -16558,7 +16680,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 7.4,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 6.82,
         "qi": 35,
@@ -16579,7 +16701,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Pinnacle via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -1.56,
         "qi": 49,
@@ -16600,7 +16722,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 2.55,
         "qi": 25,
@@ -16609,12 +16731,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -16978,7 +17100,7 @@ window.embeddedDataset = [
           "price_qi": 91,
           "edge_points": 9.03,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 89,
           "data_quality_adjustment": 0
@@ -17000,7 +17122,7 @@ window.embeddedDataset = [
           "price_qi": 93,
           "edge_points": 11.04,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 88,
           "data_quality_adjustment": 0
@@ -17022,7 +17144,7 @@ window.embeddedDataset = [
           "price_qi": 96,
           "edge_points": 13.12,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 83,
           "data_quality_adjustment": 0
@@ -17044,7 +17166,7 @@ window.embeddedDataset = [
           "price_qi": 85,
           "edge_points": 5.34,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 78,
           "data_quality_adjustment": 0
@@ -17066,7 +17188,7 @@ window.embeddedDataset = [
           "price_qi": 98,
           "edge_points": 16.54,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 79,
           "data_quality_adjustment": 0
@@ -17088,7 +17210,7 @@ window.embeddedDataset = [
           "price_qi": 91,
           "edge_points": 8.17,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 64,
           "data_quality_adjustment": 0
@@ -17108,7 +17230,7 @@ window.embeddedDataset = [
           "ev": -2.34,
           "qi": 47,
           "price_qi": 34,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -17130,7 +17252,7 @@ window.embeddedDataset = [
           "price_qi": 17,
           "edge_points": -4.75,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -17150,7 +17272,7 @@ window.embeddedDataset = [
           "ev": -4.69,
           "qi": 43,
           "price_qi": 22,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
           "data_quality_adjustment": 0
@@ -17170,7 +17292,7 @@ window.embeddedDataset = [
           "ev": -4.69,
           "qi": 43,
           "price_qi": 22,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
           "data_quality_adjustment": 0
@@ -17190,7 +17312,7 @@ window.embeddedDataset = [
           "ev": -4.69,
           "qi": 43,
           "price_qi": 22,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
           "data_quality_adjustment": 0
@@ -17210,7 +17332,7 @@ window.embeddedDataset = [
           "ev": -4.69,
           "qi": 43,
           "price_qi": 22,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
           "data_quality_adjustment": 0
@@ -17232,7 +17354,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -5.18,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -17254,7 +17376,7 @@ window.embeddedDataset = [
           "price_qi": 85,
           "edge_points": 3.3,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -17276,7 +17398,7 @@ window.embeddedDataset = [
           "price_qi": 4,
           "edge_points": -7,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -17298,7 +17420,7 @@ window.embeddedDataset = [
           "price_qi": 4,
           "edge_points": -7,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -17320,7 +17442,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -7.13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -17340,7 +17462,7 @@ window.embeddedDataset = [
           "ev": 6.82,
           "qi": 35,
           "price_qi": 74,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -17362,7 +17484,7 @@ window.embeddedDataset = [
           "price_qi": 1,
           "edge_points": -10.68,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -17384,7 +17506,7 @@ window.embeddedDataset = [
           "price_qi": 0,
           "edge_points": -17.86,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -17406,7 +17528,7 @@ window.embeddedDataset = [
           "price_qi": 1,
           "edge_points": -15.3,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -17428,7 +17550,7 @@ window.embeddedDataset = [
           "price_qi": 0,
           "edge_points": -20.31,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -17450,7 +17572,7 @@ window.embeddedDataset = [
           "price_qi": 38,
           "edge_points": -0.21,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 16,
           "data_quality_adjustment": 0
@@ -17470,7 +17592,7 @@ window.embeddedDataset = [
           "ev": 2.55,
           "qi": 25,
           "price_qi": 62,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 25,
           "data_quality_adjustment": 0
@@ -17492,7 +17614,7 @@ window.embeddedDataset = [
           "price_qi": 25,
           "edge_points": -2.3,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 29,
           "data_quality_adjustment": 0
@@ -17514,7 +17636,7 @@ window.embeddedDataset = [
           "price_qi": 25,
           "edge_points": -2.3,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 29,
           "data_quality_adjustment": 0
@@ -17536,7 +17658,7 @@ window.embeddedDataset = [
           "price_qi": 2,
           "edge_points": -18.06,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 26,
           "data_quality_adjustment": 0
@@ -17556,7 +17678,7 @@ window.embeddedDataset = [
           "ev": -3.56,
           "qi": 18,
           "price_qi": 33,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 18,
           "data_quality_adjustment": 0
@@ -17576,7 +17698,7 @@ window.embeddedDataset = [
           "ev": -3.56,
           "qi": 18,
           "price_qi": 33,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 18,
           "data_quality_adjustment": 0
@@ -17596,7 +17718,7 @@ window.embeddedDataset = [
           "ev": -3.56,
           "qi": 18,
           "price_qi": 33,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 18,
           "data_quality_adjustment": 0
@@ -17616,7 +17738,7 @@ window.embeddedDataset = [
           "ev": -7.27,
           "qi": 15,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -17638,7 +17760,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -15.89,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 13,
           "data_quality_adjustment": 0
@@ -17658,7 +17780,7 @@ window.embeddedDataset = [
           "ev": -8.06,
           "qi": 11,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -17678,7 +17800,7 @@ window.embeddedDataset = [
           "ev": -8.06,
           "qi": 11,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -17698,7 +17820,7 @@ window.embeddedDataset = [
           "ev": -8.06,
           "qi": 11,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -17718,7 +17840,7 @@ window.embeddedDataset = [
           "ev": -15.13,
           "qi": 10,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 10,
           "data_quality_adjustment": 0
@@ -17740,14 +17862,14 @@ window.embeddedDataset = [
           "price_qi": 4,
           "edge_points": -12.37,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 8,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 7.1,
@@ -17859,7 +17981,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Iraq vs Norway. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -17967,11 +18089,11 @@ window.embeddedDataset = [
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Iraq 1-4 Norway",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M18-IRQ-V-NOR.pdf",
@@ -17997,10 +18119,10 @@ window.embeddedDataset = [
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M18-IRQ-V-NOR.pdf",
     "final_score": "Iraq 1-4 Norway",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 56.4%",
@@ -18012,16 +18134,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 56.4%. BTTS No lean 60.6%. Moderate goal expectation around 2.42. Break-open risk outweighs defensive suppression. Draw profile is normal at 28.5%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 2392,
+      "price_age_minutes": 2399,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "2392 min old"
+          "detail": "2399 min old"
         },
         {
           "label": "Market depth",
@@ -18032,7 +18161,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -18078,7 +18207,7 @@ window.embeddedDataset = [
       "home": 0.8,
       "away": 2.52,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -18104,13 +18233,13 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.48,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 86,
         "model_data_quality_band": "Strong",
         "ev": 0,
-        "qi": 52,
+        "qi": 54,
         "base_qi": 52,
         "price_qi": 49,
-        "data_quality_adjustment": 0
+        "data_quality_adjustment": 2
       },
       {
         "market_matrix": "Full Match Model",
@@ -18125,21 +18254,21 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 86,
         "model_data_quality_band": "Strong",
         "ev": -0.42,
-        "qi": 24,
+        "qi": 25,
         "base_qi": 24,
         "price_qi": 47,
-        "data_quality_adjustment": 0
+        "data_quality_adjustment": 1
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -18499,14 +18628,14 @@ window.embeddedDataset = [
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 16.27,
           "ev": 11.11,
-          "qi": 58,
+          "qi": 60,
           "price_qi": 82,
           "edge_points": 3.83,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 58,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 2
         },
         {
           "selection": "Argentina to Win",
@@ -18521,12 +18650,12 @@ window.embeddedDataset = [
           "bookmaker_key": "betfair_ex_au",
           "devig_book_probability": 67.58,
           "ev": 0,
-          "qi": 52,
+          "qi": 54,
           "price_qi": 49,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 52,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 2
         },
         {
           "selection": "Algeria or Draw",
@@ -18541,14 +18670,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 16.92,
           "ev": 7.28,
-          "qi": 53,
+          "qi": 55,
           "price_qi": 77,
           "edge_points": 2.6,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 53,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 2
         },
         {
           "selection": "Argentina to Win",
@@ -18563,12 +18692,12 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 64.78,
           "ev": -1.36,
-          "qi": 49,
+          "qi": 50,
           "price_qi": 41,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 49,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Argentina to Win",
@@ -18583,12 +18712,12 @@ window.embeddedDataset = [
           "bookmaker_key": "neds",
           "devig_book_probability": 65.28,
           "ev": -2.04,
-          "qi": 48,
+          "qi": 49,
           "price_qi": 37,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 48,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Over 1.5 Goals",
@@ -18603,14 +18732,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 71.74,
           "ev": -2.99,
-          "qi": 46,
+          "qi": 47,
           "price_qi": 31,
           "edge_points": -2.3,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Over 0.5 Goals",
@@ -18625,14 +18754,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 89.01,
           "ev": -1.87,
-          "qi": 46,
+          "qi": 47,
           "price_qi": 32,
           "edge_points": -1.78,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Under 3.5 Goals",
@@ -18647,14 +18776,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 70.8,
           "ev": -5.04,
-          "qi": 43,
+          "qi": 44,
           "price_qi": 22,
           "edge_points": -3.82,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Argentina to Win",
@@ -18669,12 +18798,12 @@ window.embeddedDataset = [
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 67.29,
           "ev": -4.76,
-          "qi": 43,
+          "qi": 44,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Argentina to Win",
@@ -18689,12 +18818,12 @@ window.embeddedDataset = [
           "bookmaker_key": "pointsbetau",
           "devig_book_probability": 67.29,
           "ev": -4.76,
-          "qi": 43,
+          "qi": 44,
           "price_qi": 24,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 43,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Under 4.5 Goals",
@@ -18709,14 +18838,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 85.64,
           "ev": -5.22,
-          "qi": 40,
+          "qi": 41,
           "price_qi": 15,
           "edge_points": -4.79,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Argentina or Draw",
@@ -18731,14 +18860,14 @@ window.embeddedDataset = [
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 44.09,
           "ev": -6.14,
-          "qi": 39,
+          "qi": 40,
           "price_qi": 10,
           "edge_points": -5.74,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Argentina or Draw",
@@ -18753,14 +18882,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 44.26,
           "ev": -6.14,
-          "qi": 39,
+          "qi": 40,
           "price_qi": 10,
           "edge_points": -5.74,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "BTTS No",
@@ -18775,14 +18904,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 56.58,
           "ev": -7.82,
-          "qi": 37,
+          "qi": 38,
           "price_qi": 17,
           "edge_points": -4.74,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Argentina Draw No Bet",
@@ -18797,14 +18926,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 84.51,
           "ev": -8.33,
-          "qi": 37,
+          "qi": 38,
           "price_qi": 7,
           "edge_points": -7.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Under 2.5 Goals",
@@ -18819,14 +18948,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 50,
           "ev": -6.03,
-          "qi": 36,
+          "qi": 37,
           "price_qi": 22,
           "edge_points": -3.22,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "BTTS No",
@@ -18841,14 +18970,14 @@ window.embeddedDataset = [
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 57.59,
           "ev": -9.5,
-          "qi": 36,
+          "qi": 37,
           "price_qi": 14,
           "edge_points": -5.86,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Over 2.5 Goals",
@@ -18863,14 +18992,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 50,
           "ev": -6.97,
-          "qi": 35,
+          "qi": 36,
           "price_qi": 20,
           "edge_points": -3.72,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "BTTS Yes",
@@ -18885,14 +19014,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 43.42,
           "ev": -4.87,
-          "qi": 35,
+          "qi": 36,
           "price_qi": 26,
           "edge_points": -2.26,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "BTTS Yes",
@@ -18907,14 +19036,14 @@ window.embeddedDataset = [
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 42.41,
           "ev": -2.65,
-          "qi": 34,
+          "qi": 35,
           "price_qi": 35,
           "edge_points": -1.21,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Match to end in a Draw",
@@ -18929,12 +19058,12 @@ window.embeddedDataset = [
           "bookmaker_key": "betfair_ex_au",
           "devig_book_probability": 21.14,
           "ev": -0.42,
-          "qi": 24,
+          "qi": 25,
           "price_qi": 47,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 24,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Algeria Draw No Bet",
@@ -18949,14 +19078,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 15.49,
           "ev": 0,
-          "qi": 24,
+          "qi": 25,
           "price_qi": 49,
           "edge_points": 0,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 24,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Over 3.5 Goals",
@@ -18971,14 +19100,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 29.2,
           "ev": -10.86,
-          "qi": 21,
+          "qi": 22,
           "price_qi": 18,
           "edge_points": -3.39,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Under 1.5 Goals",
@@ -18993,14 +19122,14 @@ window.embeddedDataset = [
           "bookmaker_key": "tab",
           "devig_book_probability": 28.26,
           "ev": -15.82,
-          "qi": 19,
+          "qi": 20,
           "price_qi": 14,
           "edge_points": -4.79,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 19,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Match to end in a Draw",
@@ -19015,12 +19144,12 @@ window.embeddedDataset = [
           "bookmaker_key": "sportsbet",
           "devig_book_probability": 20.93,
           "ev": -4.66,
-          "qi": 17,
+          "qi": 18,
           "price_qi": 29,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 17,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Match to end in a Draw",
@@ -19035,12 +19164,12 @@ window.embeddedDataset = [
           "bookmaker_key": "pointsbetau",
           "devig_book_probability": 20.93,
           "ev": -4.66,
-          "qi": 17,
+          "qi": 18,
           "price_qi": 29,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 17,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Match to end in a Draw",
@@ -19055,12 +19184,12 @@ window.embeddedDataset = [
           "bookmaker_key": "neds",
           "devig_book_probability": 20.89,
           "ev": -4.66,
-          "qi": 17,
+          "qi": 18,
           "price_qi": 29,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 17,
-          "data_quality_adjustment": 0
+          "data_quality_adjustment": 1
         },
         {
           "selection": "Over 4.5 Goals",
@@ -19079,7 +19208,7 @@ window.embeddedDataset = [
           "price_qi": 18,
           "edge_points": -2.19,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 13,
           "data_quality_adjustment": 0
@@ -19099,7 +19228,7 @@ window.embeddedDataset = [
           "ev": -15.25,
           "qi": 13,
           "price_qi": 16,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 13,
           "data_quality_adjustment": 0
@@ -19121,14 +19250,14 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -4.81,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 86,
           "model_data_quality_band": "Strong",
           "base_qi": 7,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 68,
@@ -19240,7 +19369,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Argentina vs Algeria. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -19339,11 +19468,11 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Argentina 3-0 Algeria",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M19-ARG-V-ALG.pdf",
@@ -19367,31 +19496,44 @@ window.embeddedDataset = [
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M19-ARG-V-ALG.pdf",
     "final_score": "Argentina 3-0 Algeria",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
-      "public_row": null,
-      "form_lean": "Public form row not matched",
+      "status": "matched_public_fixture_row",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
+      "public_row": {
+        "matched_text": "nd division super cup playoffs 2 3 playoffs 1 2 albanian cup womens national championship algeria 6 algeria cup ligue 1 ligue 2 super cup coupe de la ligue u21 league andorra 5 primera divisio segona divisio play offs 1st division supercopa andorran cup angola 2 super cup girabola antigua & barbuda 1 abfa premier league argentina 27 primera division copa arg",
+        "home_form_index": null,
+        "away_form_index": null,
+        "home_win_odds": null,
+        "draw_odds": null,
+        "away_win_odds": null
+      },
+      "form_lean": "Form line is even",
       "over_under_profile": "Under 2.5 lean 50.2%",
       "btts_profile": "BTTS No lean 55.8%",
       "xg_goal_profile": "Higher goal expectation around 2.66",
       "defensive_profile": "Break-open risk outweighs defensive suppression",
       "draw_profile": "Draw profile is normal at 25.9%",
       "risk_band": "balanced",
-      "summary": "Public form row not matched. Under 2.5 lean 50.2%. BTTS No lean 55.8%. Higher goal expectation around 2.66. Break-open risk outweighs defensive suppression. Draw profile is normal at 25.9%"
+      "summary": "Form line is even. Under 2.5 lean 50.2%. BTTS No lean 55.8%. Higher goal expectation around 2.66. Break-open risk outweighs defensive suppression. Draw profile is normal at 25.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 86,
       "band": "Strong",
-      "price_age_minutes": 2305,
+      "price_age_minutes": 2312,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "2305 min old"
+          "detail": "2312 min old"
         },
         {
           "label": "Market depth",
@@ -19402,7 +19544,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -19425,9 +19567,9 @@ window.embeddedDataset = [
         },
         {
           "label": "FootyStats",
-          "points": 6,
+          "points": 10,
           "max": 10,
-          "detail": "profile categories loaded"
+          "detail": "public row matched"
         },
         {
           "label": "FIFA/ESPN result data",
@@ -19448,7 +19590,7 @@ window.embeddedDataset = [
       "home": 1.26,
       "away": 0.32,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -19474,7 +19616,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 10,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -3.77,
         "qi": 14,
@@ -19496,7 +19638,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 5.4,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -7.75,
         "qi": 15,
@@ -19505,12 +19647,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -19874,7 +20016,7 @@ window.embeddedDataset = [
           "price_qi": 88,
           "edge_points": 6.86,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 67,
           "data_quality_adjustment": 0
@@ -19896,7 +20038,7 @@ window.embeddedDataset = [
           "price_qi": 83,
           "edge_points": 4.13,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 59,
           "data_quality_adjustment": 0
@@ -19918,7 +20060,7 @@ window.embeddedDataset = [
           "price_qi": 54,
           "edge_points": 0.54,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 55,
           "data_quality_adjustment": 0
@@ -19940,7 +20082,7 @@ window.embeddedDataset = [
           "price_qi": 59,
           "edge_points": 0.8,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 52,
           "data_quality_adjustment": 0
@@ -19962,7 +20104,7 @@ window.embeddedDataset = [
           "price_qi": 30,
           "edge_points": -2.37,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
           "data_quality_adjustment": 0
@@ -19984,7 +20126,7 @@ window.embeddedDataset = [
           "price_qi": 36,
           "edge_points": -1.32,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 44,
           "data_quality_adjustment": 0
@@ -20006,7 +20148,7 @@ window.embeddedDataset = [
           "price_qi": 36,
           "edge_points": -1.32,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 44,
           "data_quality_adjustment": 0
@@ -20028,7 +20170,7 @@ window.embeddedDataset = [
           "price_qi": 18,
           "edge_points": -3.56,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -20050,7 +20192,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -5.13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -20072,7 +20214,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -5.74,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -20094,7 +20236,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -6.62,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -20116,7 +20258,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -7.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -20138,7 +20280,7 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -9.8,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -20160,7 +20302,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -11.94,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -20182,7 +20324,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -7.71,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 31,
           "data_quality_adjustment": 0
@@ -20204,7 +20346,7 @@ window.embeddedDataset = [
           "price_qi": 17,
           "edge_points": -4.52,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 31,
           "data_quality_adjustment": 0
@@ -20226,7 +20368,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.68,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -20248,7 +20390,7 @@ window.embeddedDataset = [
           "price_qi": 26,
           "edge_points": -1.62,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 23,
           "data_quality_adjustment": 0
@@ -20270,7 +20412,7 @@ window.embeddedDataset = [
           "price_qi": 53,
           "edge_points": 0.11,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 26,
           "data_quality_adjustment": 0
@@ -20292,7 +20434,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -7.16,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 17,
           "data_quality_adjustment": 0
@@ -20312,7 +20454,7 @@ window.embeddedDataset = [
           "ev": -7.75,
           "qi": 15,
           "price_qi": 23,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -20332,7 +20474,7 @@ window.embeddedDataset = [
           "ev": -3.77,
           "qi": 14,
           "price_qi": 32,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 14,
           "data_quality_adjustment": 0
@@ -20352,7 +20494,7 @@ window.embeddedDataset = [
           "ev": -12.36,
           "qi": 13,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 13,
           "data_quality_adjustment": 0
@@ -20372,7 +20514,7 @@ window.embeddedDataset = [
           "ev": -12.36,
           "qi": 13,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 13,
           "data_quality_adjustment": 0
@@ -20392,7 +20534,7 @@ window.embeddedDataset = [
           "ev": -12.36,
           "qi": 13,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 13,
           "data_quality_adjustment": 0
@@ -20412,7 +20554,7 @@ window.embeddedDataset = [
           "ev": -21.55,
           "qi": 12,
           "price_qi": 16,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 12,
           "data_quality_adjustment": 0
@@ -20432,7 +20574,7 @@ window.embeddedDataset = [
           "ev": -24.16,
           "qi": 12,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 12,
           "data_quality_adjustment": 0
@@ -20452,7 +20594,7 @@ window.embeddedDataset = [
           "ev": -21.59,
           "qi": 11,
           "price_qi": 13,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -20474,7 +20616,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -4.56,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 11,
           "data_quality_adjustment": 0
@@ -20494,7 +20636,7 @@ window.embeddedDataset = [
           "ev": -11.09,
           "qi": 10,
           "price_qi": 21,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 10,
           "data_quality_adjustment": 0
@@ -20514,7 +20656,7 @@ window.embeddedDataset = [
           "ev": -16.32,
           "qi": 9,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 9,
           "data_quality_adjustment": 0
@@ -20536,14 +20678,14 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -3.6,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 8,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 71.1,
@@ -20657,7 +20799,7 @@ window.embeddedDataset = [
     "lineup_check_status": "confirmed",
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M20-AUT-V-JOR.pdf",
     "final_score": "Austria 3-1 Jordan",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -20758,11 +20900,11 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Austria 3-1 Jordan",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M20-AUT-V-JOR.pdf",
@@ -20787,10 +20929,10 @@ window.embeddedDataset = [
       "summary": "Learning flags: territory-did-not-become-shot-volume, chance-quality-overstated."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 52.1%",
@@ -20802,16 +20944,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 52.1%. BTTS No lean 56.9%. Moderate goal expectation around 2.59. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 2156,
+      "price_age_minutes": 2162,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "2156 min old"
+          "detail": "2162 min old"
         },
         {
           "label": "Market depth",
@@ -20822,7 +20971,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -20868,7 +21017,7 @@ window.embeddedDataset = [
       "home": 1.69,
       "away": 0.46,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -20894,7 +21043,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 13,
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": 28.77,
         "qi": 35,
@@ -20916,7 +21065,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.32,
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": -5.11,
         "qi": 39,
@@ -20938,7 +21087,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 5.8,
-        "model_data_quality_rating": 66,
+        "model_data_quality_rating": 65,
         "model_data_quality_band": "Developing",
         "ev": 7.91,
         "qi": 35,
@@ -20947,12 +21096,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -2
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -21316,7 +21465,7 @@ window.embeddedDataset = [
           "price_qi": 96,
           "edge_points": 12.45,
           "risk_rating": "High",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 78,
           "data_quality_adjustment": -5
@@ -21338,7 +21487,7 @@ window.embeddedDataset = [
           "price_qi": 94,
           "edge_points": 10.43,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 78,
           "data_quality_adjustment": -5
@@ -21360,7 +21509,7 @@ window.embeddedDataset = [
           "price_qi": 45,
           "edge_points": -0.51,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 51,
           "data_quality_adjustment": -3
@@ -21382,7 +21531,7 @@ window.embeddedDataset = [
           "price_qi": 43,
           "edge_points": -0.75,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 50,
           "data_quality_adjustment": -3
@@ -21404,7 +21553,7 @@ window.embeddedDataset = [
           "price_qi": 57,
           "edge_points": 0.57,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 43,
           "data_quality_adjustment": -3
@@ -21426,7 +21575,7 @@ window.embeddedDataset = [
           "price_qi": 57,
           "edge_points": 0.57,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 43,
           "data_quality_adjustment": -3
@@ -21448,7 +21597,7 @@ window.embeddedDataset = [
           "price_qi": 52,
           "edge_points": 0.24,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 47,
           "data_quality_adjustment": -3
@@ -21470,7 +21619,7 @@ window.embeddedDataset = [
           "price_qi": 87,
           "edge_points": 3.97,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 43,
           "data_quality_adjustment": -3
@@ -21490,7 +21639,7 @@ window.embeddedDataset = [
           "ev": -5.11,
           "qi": 39,
           "price_qi": 21,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 42,
           "data_quality_adjustment": -3
@@ -21512,7 +21661,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -3.63,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 41,
           "data_quality_adjustment": -2
@@ -21534,7 +21683,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.46,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 40,
           "data_quality_adjustment": -2
@@ -21554,7 +21703,7 @@ window.embeddedDataset = [
           "ev": -6.57,
           "qi": 39,
           "price_qi": 16,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 41,
           "data_quality_adjustment": -2
@@ -21574,7 +21723,7 @@ window.embeddedDataset = [
           "ev": -6.57,
           "qi": 39,
           "price_qi": 16,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 41,
           "data_quality_adjustment": -2
@@ -21594,7 +21743,7 @@ window.embeddedDataset = [
           "ev": -8.76,
           "qi": 37,
           "price_qi": 11,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 39,
           "data_quality_adjustment": -2
@@ -21614,7 +21763,7 @@ window.embeddedDataset = [
           "ev": -8.76,
           "qi": 37,
           "price_qi": 11,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 39,
           "data_quality_adjustment": -2
@@ -21634,7 +21783,7 @@ window.embeddedDataset = [
           "ev": 28.77,
           "qi": 35,
           "price_qi": 83,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 37,
           "data_quality_adjustment": -2
@@ -21654,7 +21803,7 @@ window.embeddedDataset = [
           "ev": 7.91,
           "qi": 35,
           "price_qi": 76,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 37,
           "data_quality_adjustment": -2
@@ -21676,7 +21825,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -6.87,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 37,
           "data_quality_adjustment": -2
@@ -21698,7 +21847,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -7.8,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 36,
           "data_quality_adjustment": -2
@@ -21720,7 +21869,7 @@ window.embeddedDataset = [
           "price_qi": 1,
           "edge_points": -10.49,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 35,
           "data_quality_adjustment": -2
@@ -21742,7 +21891,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -7.43,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 35,
           "data_quality_adjustment": -2
@@ -21762,7 +21911,7 @@ window.embeddedDataset = [
           "ev": 15.45,
           "qi": 32,
           "price_qi": 79,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 34,
           "data_quality_adjustment": -2
@@ -21782,7 +21931,7 @@ window.embeddedDataset = [
           "ev": 15.45,
           "qi": 32,
           "price_qi": 79,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 34,
           "data_quality_adjustment": -2
@@ -21804,7 +21953,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -7.83,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 34,
           "data_quality_adjustment": -2
@@ -21826,7 +21975,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -7.12,
           "risk_rating": "Low",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 33,
           "data_quality_adjustment": -2
@@ -21846,7 +21995,7 @@ window.embeddedDataset = [
           "ev": 6.57,
           "qi": 28,
           "price_qi": 73,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 30,
           "data_quality_adjustment": -2
@@ -21866,7 +22015,7 @@ window.embeddedDataset = [
           "ev": -1.08,
           "qi": 21,
           "price_qi": 44,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 22,
           "data_quality_adjustment": -1
@@ -21886,7 +22035,7 @@ window.embeddedDataset = [
           "ev": -1.08,
           "qi": 21,
           "price_qi": 44,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 22,
           "data_quality_adjustment": -1
@@ -21908,7 +22057,7 @@ window.embeddedDataset = [
           "price_qi": 25,
           "edge_points": -1.62,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 22,
           "data_quality_adjustment": -1
@@ -21928,7 +22077,7 @@ window.embeddedDataset = [
           "ev": -2.88,
           "qi": 18,
           "price_qi": 35,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 19,
           "data_quality_adjustment": -1
@@ -21950,7 +22099,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.9,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 19,
           "data_quality_adjustment": -1
@@ -21970,7 +22119,7 @@ window.embeddedDataset = [
           "ev": -10.07,
           "qi": 13,
           "price_qi": 20,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 14,
           "data_quality_adjustment": -1
@@ -21990,7 +22139,7 @@ window.embeddedDataset = [
           "ev": -6.75,
           "qi": 11,
           "price_qi": 25,
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 12,
           "data_quality_adjustment": -1
@@ -22012,7 +22161,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -6.13,
           "risk_rating": "High",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 11,
           "data_quality_adjustment": -1
@@ -22034,14 +22183,14 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -3.36,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 66,
+          "model_data_quality_rating": 65,
           "model_data_quality_band": "Developing",
           "base_qi": 8,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 73.1,
@@ -22074,7 +22223,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-18T13:38:07.480Z",
+    "lineup_last_checked": "2026-06-18T13:44:56.052Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667819,
@@ -22082,7 +22231,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "referee": "Abdulrahman Ibrahim Al Jassim",
       "venue": "Houston Stadium",
       "surface": "grass",
@@ -22154,10 +22303,10 @@ window.embeddedDataset = [
     },
     "lineup_check_status": "confirmed",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Over 2.5 lean 50.9%",
@@ -22169,16 +22318,25 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Over 2.5 lean 50.9%. BTTS No lean 55.9%. Higher goal expectation around 2.71. Break-open risk outweighs defensive suppression. Draw profile is normal at 26.4%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 66,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 65,
       "band": "Developing",
-      "price_age_minutes": 1382,
+      "price_age_minutes": 1389,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching.",
+        "Retry post-match stats/result feed.",
+        "Retry xG/chance-quality extraction from structured post-match sources."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "1382 min old"
+          "detail": "1389 min old"
         },
         {
           "label": "Market depth",
@@ -22189,7 +22347,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -22255,7 +22413,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 5.8,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 15.83,
         "qi": 42,
@@ -22277,7 +22435,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.73,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -7.1,
         "qi": 37,
@@ -22299,7 +22457,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 3.9,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 4.71,
         "qi": 37,
@@ -22308,12 +22466,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -22677,7 +22835,7 @@ window.embeddedDataset = [
           "price_qi": 83,
           "edge_points": 4.82,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 65,
           "data_quality_adjustment": 0
@@ -22699,7 +22857,7 @@ window.embeddedDataset = [
           "price_qi": 73,
           "edge_points": 2.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 64,
           "data_quality_adjustment": 0
@@ -22721,7 +22879,7 @@ window.embeddedDataset = [
           "price_qi": 65,
           "edge_points": 1.82,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 62,
           "data_quality_adjustment": 0
@@ -22743,7 +22901,7 @@ window.embeddedDataset = [
           "price_qi": 70,
           "edge_points": 2.08,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 61,
           "data_quality_adjustment": 0
@@ -22765,7 +22923,7 @@ window.embeddedDataset = [
           "price_qi": 76,
           "edge_points": 2.75,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 61,
           "data_quality_adjustment": 0
@@ -22787,7 +22945,7 @@ window.embeddedDataset = [
           "price_qi": 42,
           "edge_points": -0.83,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 50,
           "data_quality_adjustment": 0
@@ -22809,7 +22967,7 @@ window.embeddedDataset = [
           "price_qi": 49,
           "edge_points": 0,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 48,
           "data_quality_adjustment": 0
@@ -22831,7 +22989,7 @@ window.embeddedDataset = [
           "price_qi": 72,
           "edge_points": 1.54,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 46,
           "data_quality_adjustment": 0
@@ -22851,7 +23009,7 @@ window.embeddedDataset = [
           "ev": 15.83,
           "qi": 42,
           "price_qi": 81,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 42,
           "data_quality_adjustment": 0
@@ -22873,7 +23031,7 @@ window.embeddedDataset = [
           "price_qi": 70,
           "edge_points": 1.22,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 42,
           "data_quality_adjustment": 0
@@ -22895,7 +23053,7 @@ window.embeddedDataset = [
           "price_qi": 17,
           "edge_points": -4.75,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -22917,7 +23075,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -6.06,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -22939,7 +23097,7 @@ window.embeddedDataset = [
           "price_qi": 8,
           "edge_points": -7.72,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -22961,7 +23119,7 @@ window.embeddedDataset = [
           "price_qi": 9,
           "edge_points": -8.06,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -22983,7 +23141,7 @@ window.embeddedDataset = [
           "price_qi": 8,
           "edge_points": -8.9,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -23003,7 +23161,7 @@ window.embeddedDataset = [
           "ev": 4.71,
           "qi": 37,
           "price_qi": 71,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -23023,7 +23181,7 @@ window.embeddedDataset = [
           "ev": 2.09,
           "qi": 37,
           "price_qi": 61,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -23043,7 +23201,7 @@ window.embeddedDataset = [
           "ev": -7.1,
           "qi": 37,
           "price_qi": 19,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -23063,7 +23221,7 @@ window.embeddedDataset = [
           "ev": -8.74,
           "qi": 36,
           "price_qi": 16,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -23083,7 +23241,7 @@ window.embeddedDataset = [
           "ev": -8.74,
           "qi": 36,
           "price_qi": 16,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -23103,7 +23261,7 @@ window.embeddedDataset = [
           "ev": -9.29,
           "qi": 36,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -23123,7 +23281,7 @@ window.embeddedDataset = [
           "ev": -9.29,
           "qi": 36,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -23143,7 +23301,7 @@ window.embeddedDataset = [
           "ev": 6.18,
           "qi": 35,
           "price_qi": 74,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -23163,7 +23321,7 @@ window.embeddedDataset = [
           "ev": 6.18,
           "qi": 35,
           "price_qi": 74,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -23183,7 +23341,7 @@ window.embeddedDataset = [
           "ev": 0.79,
           "qi": 33,
           "price_qi": 54,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 33,
           "data_quality_adjustment": 0
@@ -23203,7 +23361,7 @@ window.embeddedDataset = [
           "ev": -0.52,
           "qi": 30,
           "price_qi": 47,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -23225,7 +23383,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -7.91,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -23247,7 +23405,7 @@ window.embeddedDataset = [
           "price_qi": 9,
           "edge_points": -9.03,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 29,
           "data_quality_adjustment": 0
@@ -23267,7 +23425,7 @@ window.embeddedDataset = [
           "ev": -1.83,
           "qi": 28,
           "price_qi": 39,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 28,
           "data_quality_adjustment": 0
@@ -23289,7 +23447,7 @@ window.embeddedDataset = [
           "price_qi": 9,
           "edge_points": -9.44,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 28,
           "data_quality_adjustment": 0
@@ -23309,7 +23467,7 @@ window.embeddedDataset = [
           "ev": 1.35,
           "qi": 27,
           "price_qi": 57,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 27,
           "data_quality_adjustment": 0
@@ -23329,7 +23487,7 @@ window.embeddedDataset = [
           "ev": -3.47,
           "qi": 18,
           "price_qi": 33,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 18,
           "data_quality_adjustment": 0
@@ -23351,7 +23509,7 @@ window.embeddedDataset = [
           "price_qi": 8,
           "edge_points": -9.16,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -23373,7 +23531,7 @@ window.embeddedDataset = [
           "price_qi": 19,
           "edge_points": -1.61,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 10,
           "data_quality_adjustment": 0
@@ -23395,14 +23553,14 @@ window.embeddedDataset = [
           "price_qi": 9,
           "edge_points": -6.38,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 10,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 54.6,
@@ -23435,7 +23593,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-18T13:38:07.480Z",
+    "lineup_last_checked": "2026-06-18T13:44:56.052Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667825,
@@ -23443,7 +23601,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "referee": "Clément Turpin",
       "venue": "Dallas Stadium",
       "surface": "grass",
@@ -23513,7 +23671,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for England vs Croatia. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -23637,11 +23795,11 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "England 4-2 Croatia",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M22-ENG-V-CRO.pdf",
@@ -23667,10 +23825,10 @@ window.embeddedDataset = [
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M22-ENG-V-CRO.pdf",
     "final_score": "England 4-2 Croatia",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 58.2%",
@@ -23682,16 +23840,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 58.2%. BTTS No lean 55.6%. Moderate goal expectation around 2.35. Defensive suppression is stronger than break-open risk. Draw profile is high at 29.3%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 1070,
+      "price_age_minutes": 1077,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "1070 min old"
+          "detail": "1077 min old"
         },
         {
           "label": "Market depth",
@@ -23702,7 +23867,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -23748,7 +23913,7 @@ window.embeddedDataset = [
       "home": 3.2,
       "away": 0.7,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -23774,7 +23939,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 2.44,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 12.11,
         "qi": 64,
@@ -23796,7 +23961,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 3.25,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -8.57,
         "qi": 22,
@@ -23818,7 +23983,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 3.45,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -9.33,
         "qi": 21,
@@ -23827,12 +23992,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -24194,7 +24359,7 @@ window.embeddedDataset = [
           "ev": 12.11,
           "qi": 64,
           "price_qi": 84,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 64,
           "data_quality_adjustment": 0
@@ -24214,7 +24379,7 @@ window.embeddedDataset = [
           "ev": 7.62,
           "qi": 58,
           "price_qi": 79,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 58,
           "data_quality_adjustment": 0
@@ -24234,7 +24399,7 @@ window.embeddedDataset = [
           "ev": 5.38,
           "qi": 54,
           "price_qi": 74,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 54,
           "data_quality_adjustment": 0
@@ -24256,7 +24421,7 @@ window.embeddedDataset = [
           "price_qi": 45,
           "edge_points": -0.48,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 51,
           "data_quality_adjustment": 0
@@ -24276,7 +24441,7 @@ window.embeddedDataset = [
           "ev": 3.14,
           "qi": 49,
           "price_qi": 66,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 49,
           "data_quality_adjustment": 0
@@ -24298,7 +24463,7 @@ window.embeddedDataset = [
           "price_qi": 34,
           "edge_points": -1.68,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -24320,7 +24485,7 @@ window.embeddedDataset = [
           "price_qi": 33,
           "edge_points": -1.78,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 44,
           "data_quality_adjustment": 0
@@ -24342,7 +24507,7 @@ window.embeddedDataset = [
           "price_qi": 27,
           "edge_points": -2.76,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 44,
           "data_quality_adjustment": 0
@@ -24364,7 +24529,7 @@ window.embeddedDataset = [
           "price_qi": 27,
           "edge_points": -2.76,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 44,
           "data_quality_adjustment": 0
@@ -24386,7 +24551,7 @@ window.embeddedDataset = [
           "price_qi": 54,
           "edge_points": 0.37,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -24408,7 +24573,7 @@ window.embeddedDataset = [
           "price_qi": 24,
           "edge_points": -3.05,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -24430,7 +24595,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -24452,7 +24617,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -24474,7 +24639,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -5.15,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -24496,7 +24661,7 @@ window.embeddedDataset = [
           "price_qi": 30,
           "edge_points": -1.92,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -24518,7 +24683,7 @@ window.embeddedDataset = [
           "price_qi": 25,
           "edge_points": -2.83,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -24540,7 +24705,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -6.62,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 39,
           "data_quality_adjustment": 0
@@ -24560,7 +24725,7 @@ window.embeddedDataset = [
           "ev": -1.35,
           "qi": 37,
           "price_qi": 42,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -24582,7 +24747,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -6.11,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -24604,7 +24769,7 @@ window.embeddedDataset = [
           "price_qi": 11,
           "edge_points": -7.37,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 35,
           "data_quality_adjustment": 0
@@ -24626,7 +24791,7 @@ window.embeddedDataset = [
           "price_qi": 18,
           "edge_points": -4.28,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
           "data_quality_adjustment": 0
@@ -24648,7 +24813,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.33,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 34,
           "data_quality_adjustment": 0
@@ -24670,7 +24835,7 @@ window.embeddedDataset = [
           "price_qi": 46,
           "edge_points": -0.15,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 24,
           "data_quality_adjustment": 0
@@ -24692,7 +24857,7 @@ window.embeddedDataset = [
           "price_qi": 19,
           "edge_points": -3.64,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 27,
           "data_quality_adjustment": 0
@@ -24712,7 +24877,7 @@ window.embeddedDataset = [
           "ev": -8.57,
           "qi": 22,
           "price_qi": 20,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 22,
           "data_quality_adjustment": 0
@@ -24732,7 +24897,7 @@ window.embeddedDataset = [
           "ev": -9.33,
           "qi": 21,
           "price_qi": 20,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -24752,7 +24917,7 @@ window.embeddedDataset = [
           "ev": -11.43,
           "qi": 21,
           "price_qi": 17,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -24772,7 +24937,7 @@ window.embeddedDataset = [
           "ev": -11.43,
           "qi": 21,
           "price_qi": 17,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -24792,7 +24957,7 @@ window.embeddedDataset = [
           "ev": -11.43,
           "qi": 21,
           "price_qi": 17,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -24812,7 +24977,7 @@ window.embeddedDataset = [
           "ev": -11.43,
           "qi": 21,
           "price_qi": 17,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -24832,7 +24997,7 @@ window.embeddedDataset = [
           "ev": -13.33,
           "qi": 20,
           "price_qi": 16,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 20,
           "data_quality_adjustment": 0
@@ -24852,7 +25017,7 @@ window.embeddedDataset = [
           "ev": -13.33,
           "qi": 20,
           "price_qi": 16,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 20,
           "data_quality_adjustment": 0
@@ -24874,7 +25039,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.17,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 20,
           "data_quality_adjustment": 0
@@ -24894,7 +25059,7 @@ window.embeddedDataset = [
           "ev": -14.67,
           "qi": 19,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 19,
           "data_quality_adjustment": 0
@@ -24914,7 +25079,7 @@ window.embeddedDataset = [
           "ev": -14.67,
           "qi": 19,
           "price_qi": 15,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 19,
           "data_quality_adjustment": 0
@@ -24936,7 +25101,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -5.19,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 10,
           "data_quality_adjustment": 0
@@ -24958,14 +25123,14 @@ window.embeddedDataset = [
           "price_qi": 17,
           "edge_points": -2.2,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 9,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 44.8,
@@ -24998,7 +25163,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-18T13:38:07.480Z",
+    "lineup_last_checked": "2026-06-18T13:44:56.052Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667826,
@@ -25006,7 +25171,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "referee": "Glenn Nyberg",
       "venue": "Toronto Stadium",
       "surface": "grass",
@@ -25076,7 +25241,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Ghana vs Panama. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -25162,11 +25327,11 @@ window.embeddedDataset = [
           "team": "home"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Ghana 1-0 Panama",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M21-GHA-V-PAN.pdf",
@@ -25193,10 +25358,10 @@ window.embeddedDataset = [
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M21-GHA-V-PAN.pdf",
     "final_score": "Ghana 1-0 Panama",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 57.0%",
@@ -25208,16 +25373,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 57.0%. BTTS No lean 51.9%. Moderate goal expectation around 2.40. Break-open risk outweighs defensive suppression. Draw profile is high at 31.6%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 951,
+      "price_age_minutes": 957,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "951 min old"
+          "detail": "957 min old"
         },
         {
           "label": "Market depth",
@@ -25228,7 +25400,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -25274,7 +25446,7 @@ window.embeddedDataset = [
       "home": 1.31,
       "away": 0.73,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -25300,7 +25472,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 10,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 27.12,
         "qi": 38,
@@ -25322,7 +25494,7 @@ window.embeddedDataset = [
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 4.9,
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": 11.57,
         "qi": 40,
@@ -25343,7 +25515,7 @@ window.embeddedDataset = [
         "odds_refresh_note": "Checked Pinnacle via Odds API. Best available AU book price selected.",
         "best_price_tied_books": "Pinnacle / Betfair / PointsBet / Neds",
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 84,
+        "model_data_quality_rating": 82,
         "model_data_quality_band": "Strong",
         "ev": -6.21,
         "qi": 41,
@@ -25352,12 +25524,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": 0
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "verified",
     "referee_source": "Confirmed match centre",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Kickoff has passed; prices are frozen for CLV integrity.",
     "model_totals_25": {
       "line": 2.5,
@@ -25721,7 +25893,7 @@ window.embeddedDataset = [
           "price_qi": 94,
           "edge_points": 11.28,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 81,
           "data_quality_adjustment": 0
@@ -25743,7 +25915,7 @@ window.embeddedDataset = [
           "price_qi": 81,
           "edge_points": 4.27,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 70,
           "data_quality_adjustment": 0
@@ -25765,7 +25937,7 @@ window.embeddedDataset = [
           "price_qi": 72,
           "edge_points": 2.81,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 67,
           "data_quality_adjustment": 0
@@ -25787,7 +25959,7 @@ window.embeddedDataset = [
           "price_qi": 86,
           "edge_points": 5.73,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 64,
           "data_quality_adjustment": 0
@@ -25809,7 +25981,7 @@ window.embeddedDataset = [
           "price_qi": 69,
           "edge_points": 2.03,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 62,
           "data_quality_adjustment": 0
@@ -25831,7 +26003,7 @@ window.embeddedDataset = [
           "price_qi": 56,
           "edge_points": 0.79,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 57,
           "data_quality_adjustment": 0
@@ -25853,7 +26025,7 @@ window.embeddedDataset = [
           "price_qi": 81,
           "edge_points": 3.27,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 52,
           "data_quality_adjustment": 0
@@ -25875,7 +26047,7 @@ window.embeddedDataset = [
           "price_qi": 42,
           "edge_points": -0.71,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 47,
           "data_quality_adjustment": 0
@@ -25895,7 +26067,7 @@ window.embeddedDataset = [
           "ev": -6.21,
           "qi": 41,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -25915,7 +26087,7 @@ window.embeddedDataset = [
           "ev": -6.21,
           "qi": 41,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -25935,7 +26107,7 @@ window.embeddedDataset = [
           "ev": -6.21,
           "qi": 41,
           "price_qi": 18,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 41,
           "data_quality_adjustment": 0
@@ -25955,7 +26127,7 @@ window.embeddedDataset = [
           "ev": 11.57,
           "qi": 40,
           "price_qi": 80,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -25977,7 +26149,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -4.41,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -25997,7 +26169,7 @@ window.embeddedDataset = [
           "ev": -8.28,
           "qi": 40,
           "price_qi": 13,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -26017,7 +26189,7 @@ window.embeddedDataset = [
           "ev": -8.28,
           "qi": 40,
           "price_qi": 13,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 40,
           "data_quality_adjustment": 0
@@ -26037,7 +26209,7 @@ window.embeddedDataset = [
           "ev": 27.12,
           "qi": 38,
           "price_qi": 83,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 38,
           "data_quality_adjustment": 0
@@ -26059,7 +26231,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -6.62,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -26081,7 +26253,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -8.41,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -26103,7 +26275,7 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -10.22,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -26125,7 +26297,7 @@ window.embeddedDataset = [
           "price_qi": 76,
           "edge_points": 1.28,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 37,
           "data_quality_adjustment": 0
@@ -26147,7 +26319,7 @@ window.embeddedDataset = [
           "price_qi": 2,
           "edge_points": -9.37,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 36,
           "data_quality_adjustment": 0
@@ -26167,7 +26339,7 @@ window.embeddedDataset = [
           "ev": 11.23,
           "qi": 33,
           "price_qi": 78,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 33,
           "data_quality_adjustment": 0
@@ -26187,7 +26359,7 @@ window.embeddedDataset = [
           "ev": 3.31,
           "qi": 32,
           "price_qi": 66,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -26207,7 +26379,7 @@ window.embeddedDataset = [
           "ev": 3.31,
           "qi": 32,
           "price_qi": 66,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 32,
           "data_quality_adjustment": 0
@@ -26227,7 +26399,7 @@ window.embeddedDataset = [
           "ev": 5.93,
           "qi": 30,
           "price_qi": 72,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 30,
           "data_quality_adjustment": 0
@@ -26249,7 +26421,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.64,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 29,
           "data_quality_adjustment": 0
@@ -26271,7 +26443,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -10.91,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 28,
           "data_quality_adjustment": 0
@@ -26293,7 +26465,7 @@ window.embeddedDataset = [
           "price_qi": 9,
           "edge_points": -9.02,
           "risk_rating": "Low",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 27,
           "data_quality_adjustment": 0
@@ -26313,7 +26485,7 @@ window.embeddedDataset = [
           "ev": -1.86,
           "qi": 21,
           "price_qi": 40,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -26333,7 +26505,7 @@ window.embeddedDataset = [
           "ev": -1.86,
           "qi": 21,
           "price_qi": 40,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 21,
           "data_quality_adjustment": 0
@@ -26355,7 +26527,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -9.97,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 15,
           "data_quality_adjustment": 0
@@ -26375,7 +26547,7 @@ window.embeddedDataset = [
           "ev": -9.96,
           "qi": 10,
           "price_qi": 21,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 10,
           "data_quality_adjustment": 0
@@ -26395,7 +26567,7 @@ window.embeddedDataset = [
           "ev": -12.61,
           "qi": 10,
           "price_qi": 20,
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 10,
           "data_quality_adjustment": 0
@@ -26417,7 +26589,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -7.84,
           "risk_rating": "High",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 9,
           "data_quality_adjustment": 0
@@ -26439,14 +26611,14 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -2.56,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 84,
+          "model_data_quality_rating": 82,
           "model_data_quality_band": "Strong",
           "base_qi": 9,
           "data_quality_adjustment": 0
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "found",
     "model_calibration": {
       "base_home_probability": 10.6,
@@ -26479,7 +26651,7 @@ window.embeddedDataset = [
       "learning_confidence": "developing",
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
-    "lineup_last_checked": "2026-06-18T13:38:07.480Z",
+    "lineup_last_checked": "2026-06-18T13:44:56.052Z",
     "lineup_check_sources": "FotMob match centre first; ESPN summary fallback; FIFA Training Centre report hub checked separately for official post-match reports.",
     "lineup_check_source": "FotMob match centre",
     "external_lineup_match_id": 4667820,
@@ -26487,7 +26659,7 @@ window.embeddedDataset = [
       "status": "confirmed",
       "source": "Confirmed match centre",
       "source_url": null,
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "referee": "Anthony Taylor",
       "venue": "Mexico City Stadium",
       "surface": "grass",
@@ -26558,7 +26730,7 @@ window.embeddedDataset = [
       "model_implication": "Confirmed starting XIs are now loaded for Uzbekistan vs Colombia. Re-check player props against starters and bench players before treating any prop as a bet."
     },
     "lineup_check_status": "confirmed",
-    "post_match_stats_last_checked": "2026-06-18T13:38:07.480Z",
+    "post_match_stats_last_checked": "2026-06-18T13:44:56.052Z",
     "post_match_stats": {
       "source": "ESPN structured match summary",
       "home": {
@@ -26667,11 +26839,11 @@ window.embeddedDataset = [
           "team": "away"
         }
       ],
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     },
     "post_match_stats_status": "found",
     "post_match_learning": {
-      "checked_at": "2026-06-18T13:38:10.824Z",
+      "checked_at": "2026-06-18T13:45:22.440Z",
       "result": "Uzbekistan 1-3 Colombia",
       "source": "FIFA",
       "source_url": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M24-UZB-V-COL.pdf",
@@ -26695,10 +26867,10 @@ window.embeddedDataset = [
     "fifa_report_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M24-UZB-V-COL.pdf",
     "final_score": "Uzbekistan 1-3 Colombia",
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 55.4%",
@@ -26710,16 +26882,23 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 55.4%. BTTS No lean 59.0%. Moderate goal expectation around 2.46. Defensive suppression is stronger than break-open risk. Draw profile is normal at 26.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 84,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 82,
       "band": "Strong",
-      "price_age_minutes": 716,
+      "price_age_minutes": 723,
+      "closing_line_status": "Sharp close not captured",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
           "points": 18,
           "max": 18,
-          "detail": "716 min old"
+          "detail": "723 min old"
         },
         {
           "label": "Market depth",
@@ -26730,7 +26909,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -26776,7 +26955,7 @@ window.embeddedDataset = [
       "home": 1.16,
       "away": 1.61,
       "source": "FotMob structured xG",
-      "checked_at": "2026-06-18T13:38:07.480Z"
+      "checked_at": "2026-06-18T13:44:56.052Z"
     }
   },
   {
@@ -26795,14 +26974,14 @@ window.embeddedDataset = [
         "current_odds": 1.89,
         "au_bookie": "Betfair",
         "devig_book_probability": 52.53,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T13:15:33.933Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 1.88,
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": 5.59,
         "qi": 55,
@@ -26817,14 +26996,14 @@ window.embeddedDataset = [
         "current_odds": 4.9,
         "au_bookie": "Betfair",
         "devig_book_probability": 20.26,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T13:15:33.933Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 5,
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": -9.09,
         "qi": 12,
@@ -26839,13 +27018,13 @@ window.embeddedDataset = [
         "current_odds": 3.65,
         "au_bookie": "Betfair",
         "devig_book_probability": 27.2,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T13:26:26.705Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": -7.12,
         "qi": 18,
@@ -26854,12 +27033,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -4
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 66ebb9e3f949caded535d97ce686ca09.",
     "model_totals_25": {
       "line": 2.5,
@@ -27221,7 +27400,7 @@ window.embeddedDataset = [
           "ev": 5.59,
           "qi": 55,
           "price_qi": 76,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 65,
           "data_quality_adjustment": -10
@@ -27241,7 +27420,7 @@ window.embeddedDataset = [
           "ev": 2.23,
           "qi": 47,
           "price_qi": 62,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 56,
           "data_quality_adjustment": -9
@@ -27261,7 +27440,7 @@ window.embeddedDataset = [
           "ev": 2.23,
           "qi": 47,
           "price_qi": 62,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 56,
           "data_quality_adjustment": -9
@@ -27283,7 +27462,7 @@ window.embeddedDataset = [
           "price_qi": 45,
           "edge_points": -0.52,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 51,
           "data_quality_adjustment": -8
@@ -27303,7 +27482,7 @@ window.embeddedDataset = [
           "ev": 0.56,
           "qi": 42,
           "price_qi": 53,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 50,
           "data_quality_adjustment": -8
@@ -27323,7 +27502,7 @@ window.embeddedDataset = [
           "ev": 0.56,
           "qi": 42,
           "price_qi": 53,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 50,
           "data_quality_adjustment": -8
@@ -27345,7 +27524,7 @@ window.embeddedDataset = [
           "price_qi": 38,
           "edge_points": -1.32,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 48,
           "data_quality_adjustment": -8
@@ -27367,7 +27546,7 @@ window.embeddedDataset = [
           "price_qi": 26,
           "edge_points": -2.6,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 44,
           "data_quality_adjustment": -7
@@ -27389,7 +27568,7 @@ window.embeddedDataset = [
           "price_qi": 27,
           "edge_points": -2.76,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 44,
           "data_quality_adjustment": -7
@@ -27411,7 +27590,7 @@ window.embeddedDataset = [
           "price_qi": 47,
           "edge_points": -0.22,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 43,
           "data_quality_adjustment": -7
@@ -27433,7 +27612,7 @@ window.embeddedDataset = [
           "price_qi": 20,
           "edge_points": -4.1,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 42,
           "data_quality_adjustment": -7
@@ -27455,7 +27634,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -4.96,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 40,
           "data_quality_adjustment": -6
@@ -27477,7 +27656,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.46,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 40,
           "data_quality_adjustment": -6
@@ -27499,7 +27678,7 @@ window.embeddedDataset = [
           "price_qi": 15,
           "edge_points": -5.49,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 40,
           "data_quality_adjustment": -6
@@ -27521,7 +27700,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -7.31,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 39,
           "data_quality_adjustment": -6
@@ -27543,7 +27722,7 @@ window.embeddedDataset = [
           "price_qi": 24,
           "edge_points": -2.92,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 38,
           "data_quality_adjustment": -6
@@ -27565,7 +27744,7 @@ window.embeddedDataset = [
           "price_qi": 24,
           "edge_points": -2.92,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 38,
           "data_quality_adjustment": -6
@@ -27587,7 +27766,7 @@ window.embeddedDataset = [
           "price_qi": 28,
           "edge_points": -2.15,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -27609,7 +27788,7 @@ window.embeddedDataset = [
           "price_qi": 21,
           "edge_points": -3.44,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 35,
           "data_quality_adjustment": -6
@@ -27631,7 +27810,7 @@ window.embeddedDataset = [
           "price_qi": 19,
           "edge_points": -3.89,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 34,
           "data_quality_adjustment": -5
@@ -27653,7 +27832,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -7.13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 34,
           "data_quality_adjustment": -5
@@ -27675,7 +27854,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -4.96,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 33,
           "data_quality_adjustment": -5
@@ -27697,7 +27876,7 @@ window.embeddedDataset = [
           "price_qi": 26,
           "edge_points": -1.44,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 23,
           "data_quality_adjustment": -4
@@ -27717,7 +27896,7 @@ window.embeddedDataset = [
           "ev": -7.12,
           "qi": 18,
           "price_qi": 23,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 22,
           "data_quality_adjustment": -4
@@ -27737,7 +27916,7 @@ window.embeddedDataset = [
           "ev": -10.94,
           "qi": 17,
           "price_qi": 18,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 20,
           "data_quality_adjustment": -3
@@ -27757,7 +27936,7 @@ window.embeddedDataset = [
           "ev": -10.94,
           "qi": 17,
           "price_qi": 18,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 20,
           "data_quality_adjustment": -3
@@ -27777,7 +27956,7 @@ window.embeddedDataset = [
           "ev": -10.94,
           "qi": 17,
           "price_qi": 18,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 20,
           "data_quality_adjustment": -3
@@ -27797,7 +27976,7 @@ window.embeddedDataset = [
           "ev": -10.94,
           "qi": 17,
           "price_qi": 18,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 20,
           "data_quality_adjustment": -3
@@ -27819,7 +27998,7 @@ window.embeddedDataset = [
           "price_qi": 16,
           "edge_points": -4.3,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 20,
           "data_quality_adjustment": -3
@@ -27841,7 +28020,7 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -6.39,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 19,
           "data_quality_adjustment": -3
@@ -27861,7 +28040,7 @@ window.embeddedDataset = [
           "ev": -9.09,
           "qi": 12,
           "price_qi": 21,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 14,
           "data_quality_adjustment": -2
@@ -27881,7 +28060,7 @@ window.embeddedDataset = [
           "ev": -14.66,
           "qi": 11,
           "price_qi": 17,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 13,
           "data_quality_adjustment": -2
@@ -27903,7 +28082,7 @@ window.embeddedDataset = [
           "price_qi": 19,
           "edge_points": -2.05,
           "risk_rating": "High",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 13,
           "data_quality_adjustment": -2
@@ -27923,7 +28102,7 @@ window.embeddedDataset = [
           "ev": -16.51,
           "qi": 10,
           "price_qi": 16,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 12,
           "data_quality_adjustment": -2
@@ -27943,7 +28122,7 @@ window.embeddedDataset = [
           "ev": -16.51,
           "qi": 10,
           "price_qi": 16,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 12,
           "data_quality_adjustment": -2
@@ -27963,7 +28142,7 @@ window.embeddedDataset = [
           "ev": -21.15,
           "qi": 9,
           "price_qi": 13,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 11,
           "data_quality_adjustment": -2
@@ -27985,14 +28164,14 @@ window.embeddedDataset = [
           "price_qi": 12,
           "edge_points": -4.54,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 7,
           "data_quality_adjustment": -1
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 55.9,
@@ -28026,10 +28205,10 @@ window.embeddedDataset = [
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 53.6%",
@@ -28041,10 +28220,19 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 53.6%. BTTS No lean 52.7%. Moderate goal expectation around 2.53. Break-open risk outweighs defensive suppression. Draw profile is normal at 28.6%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 50,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 49,
       "band": "Thin",
       "price_age_minutes": 0,
+      "closing_line_status": "Waiting for final close window",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry referee verification from FIFA/ESPN.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
@@ -28061,7 +28249,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -28119,15 +28307,15 @@ window.embeddedDataset = [
         "true_price": 6.12,
         "current_odds": 6.8,
         "au_bookie": "Betfair",
-        "devig_book_probability": 14.56,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "devig_book_probability": 14.64,
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T06:29:17.690Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 6.6,
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": 11.11,
         "qi": 32,
@@ -28141,14 +28329,14 @@ window.embeddedDataset = [
         "true_price": 1.69,
         "current_odds": 1.6,
         "au_bookie": "Betfair",
-        "devig_book_probability": 61.87,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "devig_book_probability": 62.21,
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T13:15:33.933Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": -5.33,
         "qi": 34,
@@ -28160,30 +28348,30 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Match to end in a Draw",
         "true_price": 4.09,
-        "current_odds": 4.2,
-        "au_bookie": "Betfair / Pinnacle",
-        "devig_book_probability": 23.57,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
-        "odds_updated_at": "2026-06-18T13:38:07.480Z",
+        "current_odds": 4.3,
+        "au_bookie": "Betfair",
+        "devig_book_probability": 23.15,
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
+        "odds_updated_at": "2026-06-18T13:44:56.052Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
-        "best_price_tied_books": "Betfair / Pinnacle",
+        "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
-        "ev": 2.69,
-        "qi": 27,
-        "base_qi": 32,
-        "price_qi": 63,
-        "data_quality_adjustment": -5
+        "ev": 5.13,
+        "qi": 31,
+        "base_qi": 37,
+        "price_qi": 72,
+        "data_quality_adjustment": -6
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 289bc2e9f5adad8ae4d9a75a7c5461ad.",
     "model_totals_25": {
       "line": 2.5,
@@ -28547,7 +28735,7 @@ window.embeddedDataset = [
           "price_qi": 92,
           "edge_points": 10.63,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 93,
           "data_quality_adjustment": -15
@@ -28569,7 +28757,7 @@ window.embeddedDataset = [
           "price_qi": 89,
           "edge_points": 7.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 85,
           "data_quality_adjustment": -14
@@ -28591,7 +28779,7 @@ window.embeddedDataset = [
           "price_qi": 87,
           "edge_points": 7.08,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 82,
           "data_quality_adjustment": -13
@@ -28613,7 +28801,7 @@ window.embeddedDataset = [
           "price_qi": 86,
           "edge_points": 6.17,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 79,
           "data_quality_adjustment": -13
@@ -28635,7 +28823,7 @@ window.embeddedDataset = [
           "price_qi": 76,
           "edge_points": 3.37,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 70,
           "data_quality_adjustment": -11
@@ -28657,7 +28845,7 @@ window.embeddedDataset = [
           "price_qi": 87,
           "edge_points": 6.19,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 69,
           "data_quality_adjustment": -11
@@ -28679,7 +28867,7 @@ window.embeddedDataset = [
           "price_qi": 89,
           "edge_points": 6.87,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 67,
           "data_quality_adjustment": -11
@@ -28699,7 +28887,7 @@ window.embeddedDataset = [
           "ev": -5.33,
           "qi": 34,
           "price_qi": 23,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 40,
           "data_quality_adjustment": -6
@@ -28719,7 +28907,7 @@ window.embeddedDataset = [
           "ev": -6.51,
           "qi": 33,
           "price_qi": 20,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 39,
           "data_quality_adjustment": -6
@@ -28739,7 +28927,7 @@ window.embeddedDataset = [
           "ev": -8.28,
           "qi": 32,
           "price_qi": 16,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 38,
           "data_quality_adjustment": -6
@@ -28759,7 +28947,7 @@ window.embeddedDataset = [
           "ev": -8.28,
           "qi": 32,
           "price_qi": 16,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 38,
           "data_quality_adjustment": -6
@@ -28781,7 +28969,7 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -6.74,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -28803,7 +28991,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -7.58,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -28823,7 +29011,7 @@ window.embeddedDataset = [
           "ev": -9.47,
           "qi": 31,
           "price_qi": 14,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -28845,7 +29033,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -8.41,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -28867,7 +29055,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -14.03,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 35,
           "data_quality_adjustment": -6
@@ -28887,7 +29075,7 @@ window.embeddedDataset = [
           "ev": 2.69,
           "qi": 27,
           "price_qi": 63,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 32,
           "data_quality_adjustment": -5
@@ -28907,7 +29095,7 @@ window.embeddedDataset = [
           "ev": 0.24,
           "qi": 23,
           "price_qi": 51,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 27,
           "data_quality_adjustment": -4
@@ -28929,7 +29117,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -12.97,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 25,
           "data_quality_adjustment": -4
@@ -28951,7 +29139,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -14.04,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 25,
           "data_quality_adjustment": -4
@@ -28971,7 +29159,7 @@ window.embeddedDataset = [
           "ev": -4.65,
           "qi": 19,
           "price_qi": 28,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 23,
           "data_quality_adjustment": -4
@@ -28993,7 +29181,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -17.5,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 23,
           "data_quality_adjustment": -4
@@ -29015,7 +29203,7 @@ window.embeddedDataset = [
           "price_qi": 53,
           "edge_points": 0.08,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 22,
           "data_quality_adjustment": -4
@@ -29035,7 +29223,7 @@ window.embeddedDataset = [
           "ev": -2.2,
           "qi": 18,
           "price_qi": 38,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 22,
           "data_quality_adjustment": -4
@@ -29055,7 +29243,7 @@ window.embeddedDataset = [
           "ev": -2.2,
           "qi": 18,
           "price_qi": 38,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 22,
           "data_quality_adjustment": -4
@@ -29077,7 +29265,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -14.5,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 12,
           "data_quality_adjustment": -2
@@ -29099,14 +29287,14 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -10.12,
           "risk_rating": "High",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 9,
           "data_quality_adjustment": -1
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 59.2,
@@ -29140,10 +29328,10 @@ window.embeddedDataset = [
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 64.1%",
@@ -29155,10 +29343,19 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 64.1%. BTTS No lean 61.6%. Lower goal expectation around 2.13. Defensive suppression is stronger than break-open risk. Draw profile is normal at 28.9%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 50,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 49,
       "band": "Thin",
       "price_age_minutes": 0,
+      "closing_line_status": "Waiting for final close window",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry referee verification from FIFA/ESPN.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
@@ -29175,7 +29372,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -29234,14 +29431,14 @@ window.embeddedDataset = [
         "current_odds": 6,
         "au_bookie": "Betfair",
         "devig_book_probability": 16.54,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T10:55:55.083Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
         "previous_odds": 6.2,
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": 14.29,
         "qi": 34,
@@ -29256,13 +29453,13 @@ window.embeddedDataset = [
         "current_odds": 1.32,
         "au_bookie": "Betfair",
         "devig_book_probability": 75.19,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T13:13:09.251Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": -4.35,
         "qi": 36,
@@ -29271,12 +29468,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -7
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event fa9502285b257b03e62968d50d9229fc.",
     "model_totals_25": {
       "line": 2.5,
@@ -29640,7 +29837,7 @@ window.embeddedDataset = [
           "price_qi": 97,
           "edge_points": 14.68,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 84,
           "data_quality_adjustment": -13
@@ -29662,7 +29859,7 @@ window.embeddedDataset = [
           "price_qi": 89,
           "edge_points": 8.36,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 84,
           "data_quality_adjustment": -13
@@ -29684,7 +29881,7 @@ window.embeddedDataset = [
           "price_qi": 94,
           "edge_points": 11.75,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 83,
           "data_quality_adjustment": -13
@@ -29706,7 +29903,7 @@ window.embeddedDataset = [
           "price_qi": 87,
           "edge_points": 6.7,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 82,
           "data_quality_adjustment": -13
@@ -29728,7 +29925,7 @@ window.embeddedDataset = [
           "price_qi": 79,
           "edge_points": 3.95,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 73,
           "data_quality_adjustment": -12
@@ -29750,7 +29947,7 @@ window.embeddedDataset = [
           "price_qi": 88,
           "edge_points": 6.15,
           "risk_rating": "High",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 58,
           "data_quality_adjustment": -9
@@ -29772,7 +29969,7 @@ window.embeddedDataset = [
           "price_qi": 38,
           "edge_points": -1.12,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 46,
           "data_quality_adjustment": -7
@@ -29792,7 +29989,7 @@ window.embeddedDataset = [
           "ev": -4.35,
           "qi": 36,
           "price_qi": 24,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 43,
           "data_quality_adjustment": -7
@@ -29812,7 +30009,7 @@ window.embeddedDataset = [
           "ev": -5.8,
           "qi": 35,
           "price_qi": 19,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 42,
           "data_quality_adjustment": -7
@@ -29832,7 +30029,7 @@ window.embeddedDataset = [
           "ev": -5.8,
           "qi": 35,
           "price_qi": 19,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 42,
           "data_quality_adjustment": -7
@@ -29852,7 +30049,7 @@ window.embeddedDataset = [
           "ev": 14.29,
           "qi": 34,
           "price_qi": 81,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 41,
           "data_quality_adjustment": -7
@@ -29874,7 +30071,7 @@ window.embeddedDataset = [
           "price_qi": 24,
           "edge_points": -3.09,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 41,
           "data_quality_adjustment": -7
@@ -29894,7 +30091,7 @@ window.embeddedDataset = [
           "ev": -6.52,
           "qi": 34,
           "price_qi": 16,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 41,
           "data_quality_adjustment": -7
@@ -29914,7 +30111,7 @@ window.embeddedDataset = [
           "ev": -7.25,
           "qi": 34,
           "price_qi": 15,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 40,
           "data_quality_adjustment": -6
@@ -29936,7 +30133,7 @@ window.embeddedDataset = [
           "price_qi": 82,
           "edge_points": 2.49,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 38,
           "data_quality_adjustment": -6
@@ -29958,7 +30155,7 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -6.18,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -29980,7 +30177,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -6.87,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -30002,7 +30199,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -7.8,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 36,
           "data_quality_adjustment": -6
@@ -30024,7 +30221,7 @@ window.embeddedDataset = [
           "price_qi": 2,
           "edge_points": -9.59,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 36,
           "data_quality_adjustment": -6
@@ -30046,7 +30243,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 36,
           "data_quality_adjustment": -6
@@ -30068,7 +30265,7 @@ window.embeddedDataset = [
           "price_qi": 1,
           "edge_points": -15.78,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 35,
           "data_quality_adjustment": -6
@@ -30090,7 +30287,7 @@ window.embeddedDataset = [
           "price_qi": 0,
           "edge_points": -18.07,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 35,
           "data_quality_adjustment": -6
@@ -30110,7 +30307,7 @@ window.embeddedDataset = [
           "ev": 4.76,
           "qi": 28,
           "price_qi": 70,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 33,
           "data_quality_adjustment": -5
@@ -30130,7 +30327,7 @@ window.embeddedDataset = [
           "ev": 4.76,
           "qi": 28,
           "price_qi": 70,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 33,
           "data_quality_adjustment": -5
@@ -30150,7 +30347,7 @@ window.embeddedDataset = [
           "ev": 4.76,
           "qi": 28,
           "price_qi": 70,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 33,
           "data_quality_adjustment": -5
@@ -30172,7 +30369,7 @@ window.embeddedDataset = [
           "price_qi": 23,
           "edge_points": -2.67,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 28,
           "data_quality_adjustment": -4
@@ -30194,7 +30391,7 @@ window.embeddedDataset = [
           "price_qi": 3,
           "edge_points": -15.4,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 26,
           "data_quality_adjustment": -4
@@ -30216,7 +30413,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -5.93,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 24,
           "data_quality_adjustment": -4
@@ -30236,7 +30433,7 @@ window.embeddedDataset = [
           "ev": -4.76,
           "qi": 14,
           "price_qi": 29,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 17,
           "data_quality_adjustment": -3
@@ -30258,7 +30455,7 @@ window.embeddedDataset = [
           "price_qi": 4,
           "edge_points": -13.83,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 13,
           "data_quality_adjustment": -2
@@ -30280,7 +30477,7 @@ window.embeddedDataset = [
           "price_qi": 23,
           "edge_points": -0.82,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 11,
           "data_quality_adjustment": -2
@@ -30302,14 +30499,14 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -10.57,
           "risk_rating": "High",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 9,
           "data_quality_adjustment": -1
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 72.5,
@@ -30343,10 +30540,10 @@ window.embeddedDataset = [
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Under 2.5 lean 57.3%",
@@ -30358,10 +30555,19 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Under 2.5 lean 57.3%. BTTS No lean 60.5%. Moderate goal expectation around 2.39. Defensive suppression is stronger than break-open risk. Draw profile is high at 29.8%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 50,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 49,
       "band": "Thin",
       "price_age_minutes": 0,
+      "closing_line_status": "Waiting for final close window",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry referee verification from FIFA/ESPN.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
@@ -30378,7 +30584,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {
@@ -30436,14 +30642,14 @@ window.embeddedDataset = [
         "true_price": 4.24,
         "current_odds": 4.2,
         "au_bookie": "Betfair",
-        "devig_book_probability": 23.72,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "devig_book_probability": 23.61,
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-17T21:47:28.638Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": -0.94,
         "qi": 20,
@@ -30455,22 +30661,23 @@ window.embeddedDataset = [
         "market_matrix": "Full Match Model",
         "target_selection": "Mexico to Win",
         "true_price": 2.11,
-        "current_odds": 2.14,
+        "current_odds": 2.12,
         "au_bookie": "Betfair",
-        "devig_book_probability": 46.55,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
-        "odds_updated_at": "2026-06-18T12:56:48.138Z",
-        "odds_refresh_status": "checked_current",
+        "devig_book_probability": 46.78,
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
+        "odds_updated_at": "2026-06-18T13:44:56.052Z",
+        "odds_refresh_status": "updated",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
-        "ev": 1.42,
-        "qi": 41,
-        "base_qi": 49,
-        "price_qi": 58,
-        "data_quality_adjustment": -8
+        "ev": 0.47,
+        "qi": 39,
+        "base_qi": 46,
+        "price_qi": 52,
+        "data_quality_adjustment": -7,
+        "previous_odds": 2.14
       },
       {
         "market_matrix": "Full Match Model",
@@ -30478,14 +30685,14 @@ window.embeddedDataset = [
         "true_price": 3.44,
         "current_odds": 3.35,
         "au_bookie": "Betfair",
-        "devig_book_probability": 29.74,
-        "odds_checked_at": "2026-06-18T13:38:07.480Z",
+        "devig_book_probability": 29.61,
+        "odds_checked_at": "2026-06-18T13:44:56.052Z",
         "odds_updated_at": "2026-06-18T12:56:48.138Z",
         "odds_refresh_status": "checked_current",
         "odds_refresh_note": "Checked Betfair via Odds API. Best available AU book price selected.",
         "best_price_tied_books": null,
         "best_price_checked_books": "Sportsbet, Neds, TAB, PointsBet, BetRight",
-        "model_data_quality_rating": 50,
+        "model_data_quality_rating": 49,
         "model_data_quality_band": "Thin",
         "ev": -2.62,
         "qi": 24,
@@ -30494,12 +30701,12 @@ window.embeddedDataset = [
         "data_quality_adjustment": -4
       }
     ],
-    "referee_last_checked": "2026-06-18T13:38:07.480Z",
+    "referee_last_checked": "2026-06-18T13:44:56.052Z",
     "referee_check_sources": "FIFA first when available; ESPN structured event feed fallback.",
     "referee_status": "not_verified",
     "referee_source": "No FIFA or ESPN referee assignment found during latest refresh.",
-    "odds_last_checked": "2026-06-18T13:38:07.480Z",
-    "odds_refresh_cadence": "four-to-one-hours-5-minute",
+    "odds_last_checked": "2026-06-18T13:44:56.052Z",
+    "odds_refresh_cadence": "manual",
     "odds_refresh_note": "Matched Odds API event 0f2aeae6ac8e77223848d23a4ca86b0d.",
     "model_totals_25": {
       "line": 2.5,
@@ -30863,7 +31070,7 @@ window.embeddedDataset = [
           "price_qi": 77,
           "edge_points": 3.76,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 71,
           "data_quality_adjustment": -11
@@ -30885,7 +31092,7 @@ window.embeddedDataset = [
           "price_qi": 84,
           "edge_points": 5.31,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 68,
           "data_quality_adjustment": -11
@@ -30907,7 +31114,7 @@ window.embeddedDataset = [
           "price_qi": 78,
           "edge_points": 3.48,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 66,
           "data_quality_adjustment": -11
@@ -30929,7 +31136,7 @@ window.embeddedDataset = [
           "price_qi": 57,
           "edge_points": 0.87,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 57,
           "data_quality_adjustment": -9
@@ -30951,7 +31158,7 @@ window.embeddedDataset = [
           "price_qi": 62,
           "edge_points": 1.12,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 54,
           "data_quality_adjustment": -9
@@ -30973,7 +31180,7 @@ window.embeddedDataset = [
           "price_qi": 83,
           "edge_points": 3.65,
           "risk_rating": "High",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 49,
           "data_quality_adjustment": -8
@@ -30993,7 +31200,7 @@ window.embeddedDataset = [
           "ev": 1.42,
           "qi": 41,
           "price_qi": 58,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 49,
           "data_quality_adjustment": -8
@@ -31015,7 +31222,7 @@ window.embeddedDataset = [
           "price_qi": 49,
           "edge_points": 0,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 48,
           "data_quality_adjustment": -8
@@ -31037,7 +31244,7 @@ window.embeddedDataset = [
           "price_qi": 43,
           "edge_points": -0.65,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 46,
           "data_quality_adjustment": -7
@@ -31059,7 +31266,7 @@ window.embeddedDataset = [
           "price_qi": 20,
           "edge_points": -4.24,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 42,
           "data_quality_adjustment": -7
@@ -31081,7 +31288,7 @@ window.embeddedDataset = [
           "price_qi": 13,
           "edge_points": -6.21,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 40,
           "data_quality_adjustment": -6
@@ -31103,7 +31310,7 @@ window.embeddedDataset = [
           "price_qi": 14,
           "edge_points": -5.91,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 40,
           "data_quality_adjustment": -6
@@ -31123,7 +31330,7 @@ window.embeddedDataset = [
           "ev": -2.84,
           "qi": 33,
           "price_qi": 34,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 39,
           "data_quality_adjustment": -6
@@ -31143,7 +31350,7 @@ window.embeddedDataset = [
           "ev": -2.84,
           "qi": 33,
           "price_qi": 34,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 39,
           "data_quality_adjustment": -6
@@ -31163,7 +31370,7 @@ window.embeddedDataset = [
           "ev": -2.84,
           "qi": 33,
           "price_qi": 34,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 39,
           "data_quality_adjustment": -6
@@ -31185,7 +31392,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -7.73,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 39,
           "data_quality_adjustment": -6
@@ -31207,7 +31414,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -7.73,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 39,
           "data_quality_adjustment": -6
@@ -31229,7 +31436,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -10.54,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 37,
           "data_quality_adjustment": -6
@@ -31249,7 +31456,7 @@ window.embeddedDataset = [
           "ev": -5.21,
           "qi": 30,
           "price_qi": 25,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 36,
           "data_quality_adjustment": -6
@@ -31271,7 +31478,7 @@ window.embeddedDataset = [
           "price_qi": 4,
           "edge_points": -8.13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 36,
           "data_quality_adjustment": -6
@@ -31293,7 +31500,7 @@ window.embeddedDataset = [
           "price_qi": 78,
           "edge_points": 1.27,
           "risk_rating": "Very high",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 33,
           "data_quality_adjustment": -5
@@ -31315,7 +31522,7 @@ window.embeddedDataset = [
           "price_qi": 10,
           "edge_points": -8.13,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 30,
           "data_quality_adjustment": -5
@@ -31337,7 +31544,7 @@ window.embeddedDataset = [
           "price_qi": 5,
           "edge_points": -12.47,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 30,
           "data_quality_adjustment": -5
@@ -31359,7 +31566,7 @@ window.embeddedDataset = [
           "price_qi": 31,
           "edge_points": -1.32,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 29,
           "data_quality_adjustment": -5
@@ -31381,7 +31588,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -10.63,
           "risk_rating": "Low",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 29,
           "data_quality_adjustment": -5
@@ -31401,7 +31608,7 @@ window.embeddedDataset = [
           "ev": -2.62,
           "qi": 24,
           "price_qi": 36,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 28,
           "data_quality_adjustment": -4
@@ -31421,7 +31628,7 @@ window.embeddedDataset = [
           "ev": -0.94,
           "qi": 20,
           "price_qi": 44,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 24,
           "data_quality_adjustment": -4
@@ -31441,7 +31648,7 @@ window.embeddedDataset = [
           "ev": -5.52,
           "qi": 20,
           "price_qi": 26,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 24,
           "data_quality_adjustment": -4
@@ -31461,7 +31668,7 @@ window.embeddedDataset = [
           "ev": -6.98,
           "qi": 19,
           "price_qi": 23,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 23,
           "data_quality_adjustment": -4
@@ -31481,7 +31688,7 @@ window.embeddedDataset = [
           "ev": -6.98,
           "qi": 19,
           "price_qi": 23,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 23,
           "data_quality_adjustment": -4
@@ -31501,7 +31708,7 @@ window.embeddedDataset = [
           "ev": -6.98,
           "qi": 19,
           "price_qi": 23,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 23,
           "data_quality_adjustment": -4
@@ -31521,7 +31728,7 @@ window.embeddedDataset = [
           "ev": -10.38,
           "qi": 16,
           "price_qi": 19,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 19,
           "data_quality_adjustment": -3
@@ -31541,7 +31748,7 @@ window.embeddedDataset = [
           "ev": -10.38,
           "qi": 16,
           "price_qi": 19,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 19,
           "data_quality_adjustment": -3
@@ -31561,7 +31768,7 @@ window.embeddedDataset = [
           "ev": -5.66,
           "qi": 14,
           "price_qi": 26,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 17,
           "data_quality_adjustment": -3
@@ -31581,7 +31788,7 @@ window.embeddedDataset = [
           "ev": -5.66,
           "qi": 14,
           "price_qi": 26,
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 17,
           "data_quality_adjustment": -3
@@ -31603,7 +31810,7 @@ window.embeddedDataset = [
           "price_qi": 7,
           "edge_points": -10.9,
           "risk_rating": "Medium",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 16,
           "data_quality_adjustment": -3
@@ -31625,14 +31832,14 @@ window.embeddedDataset = [
           "price_qi": 6,
           "edge_points": -7.59,
           "risk_rating": "High",
-          "model_data_quality_rating": 50,
+          "model_data_quality_rating": 49,
           "model_data_quality_band": "Thin",
           "base_qi": 9,
           "data_quality_adjustment": -1
         }
       ]
     },
-    "fifa_report_last_checked": "2026-06-18T13:38:07.480Z",
+    "fifa_report_last_checked": "2026-06-18T13:44:56.052Z",
     "fifa_report_status": "not_found_yet",
     "model_calibration": {
       "base_home_probability": 47.4,
@@ -31666,10 +31873,10 @@ window.embeddedDataset = [
       "note": "Settled-match learning applied: favourites are compressed, draw paths are lifted when deep-defence risk is present, and totals balance goal suppression against break-open risk."
     },
     "footystats_analysis": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
+      "checked_at": "2026-06-18T13:44:56.052Z",
       "source_url": "https://footystats.org/",
-      "status": "source_unavailable",
-      "source_note": "FootyStats request failed: 403",
+      "status": "public_fixture_row_not_matched",
+      "source_note": "FootyStats-style analysis uses form, BTTS, Over/Under, xG/goal expectation, clean-sheet and H2H-style categories.",
       "public_row": null,
       "form_lean": "Public form row not matched",
       "over_under_profile": "Over 2.5 lean 50.7%",
@@ -31681,10 +31888,19 @@ window.embeddedDataset = [
       "summary": "Public form row not matched. Over 2.5 lean 50.7%. BTTS Yes lean 53.4%. Higher goal expectation around 2.70. Break-open risk outweighs defensive suppression. Draw profile is high at 32.1%"
     },
     "model_data_quality": {
-      "checked_at": "2026-06-18T13:38:07.480Z",
-      "rating": 50,
+      "checked_at": "2026-06-18T13:44:56.052Z",
+      "rating": 49,
       "band": "Thin",
       "price_age_minutes": 0,
+      "closing_line_status": "Waiting for final close window",
+      "target_close_minutes_before_kickoff": 5,
+      "sharp_close_capture_window_minutes": 7,
+      "repair_actions": [
+        "Retry Betfair/Pinnacle market matching for sharp close coverage.",
+        "Retry referee verification from FIFA/ESPN.",
+        "Retry venue and pitch/surface confirmation.",
+        "Retry FootyStats fixture row matching."
+      ],
       "components": [
         {
           "label": "Fresh price check",
@@ -31701,7 +31917,7 @@ window.embeddedDataset = [
         {
           "label": "Sharp close source",
           "points": 0,
-          "max": 12,
+          "max": 14,
           "detail": "no sharp close source in current scan"
         },
         {

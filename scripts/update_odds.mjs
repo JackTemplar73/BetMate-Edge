@@ -57,7 +57,9 @@ const FIFA_REPORT_HUB_URL = 'https://www.fifatrainingcentre.com/en/fifa-world-cu
 const FOOTYSTATS_HOME_URL = 'https://footystats.org/';
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
-const CLOSING_WINDOW_MS = 5 * 60 * 1000;
+const TARGET_CLOSING_MINUTES = 5;
+const FINAL_CLOSE_PREP_WINDOW_MS = 10 * 60 * 1000;
+const CLOSING_WINDOW_MS = 7 * 60 * 1000;
 const LATEST_PRE_KICKOFF_WINDOW_MS = 4 * 60 * 60 * 1000;
 const MAX_CLV_PRICE_RATIO = 3;
 const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
@@ -380,6 +382,15 @@ function shouldRefresh(dataset, now = getNow()) {
       kickoff: parseAest(fixture.kickoff_time_aest)
     }))
     .filter((fixture) => fixture.kickoff > now);
+
+  const insideFinalClosePrep = upcoming.some((fixture) => {
+    const untilKickoff = fixture.kickoff - now;
+    return untilKickoff >= 0 && untilKickoff <= FINAL_CLOSE_PREP_WINDOW_MS;
+  });
+
+  if (insideFinalClosePrep) {
+    return { refresh: true, cadence: 'final-10-minute-sharp-close-capture' };
+  }
 
   const insideOneHour = upcoming.some((fixture) => {
     const untilKickoff = fixture.kickoff - now;
@@ -832,10 +843,41 @@ function fixtureDataQualityAudit(fixture, nowIso) {
   const hasPostMatchStats = Boolean(fixture.post_match_stats);
   const hasXg = Number.isFinite(Number(fixture.post_match_xg?.home)) && Number.isFinite(Number(fixture.post_match_xg?.away));
   const isComplete = kickoff <= now;
+  const untilKickoffMs = kickoff.getTime() - now.getTime();
+  const insideFinalClosePrep = untilKickoffMs >= 0 && untilKickoffMs <= FINAL_CLOSE_PREP_WINDOW_MS;
+  const checkedSharpRows = scanRows.filter((row) => SHARP_CLOSING_BOOKS.has(normalise(row.bookmaker_key || row.bookie || row.au_bookie)));
+  const sharpCheckedTimes = checkedSharpRows
+    .map((row) => Date.parse(row.checked_at || fixture.market_scan?.checked_at || fixture.odds_last_checked || ''))
+    .filter(Number.isFinite);
+  const latestSharpCheckedAt = sharpCheckedTimes.length ? Math.max(...sharpCheckedTimes) : null;
+  const sharpMinutesBeforeKickoff = Number.isFinite(latestSharpCheckedAt)
+    ? Math.round((kickoff.getTime() - latestSharpCheckedAt) / 60000)
+    : null;
+  const hasT5SharpCapture = Number.isFinite(sharpMinutesBeforeKickoff)
+    && sharpMinutesBeforeKickoff >= 0
+    && sharpMinutesBeforeKickoff <= Math.ceil(CLOSING_WINDOW_MS / 60000);
+  const closingLineStatus = hasT5SharpCapture
+    ? 'Sharp close captured'
+    : insideFinalClosePrep
+      ? 'Final close capture due now'
+      : kickoff > now
+        ? 'Waiting for final close window'
+        : 'Sharp close not captured';
+  const repairActions = [];
+  if (!pricesFresh) repairActions.push('Refresh odds and AU book prices.');
+  if (!hasSharpReference) repairActions.push('Retry Betfair/Pinnacle market matching for sharp close coverage.');
+  if (insideFinalClosePrep && !hasT5SharpCapture) repairActions.push(`Capture Betfair/Pinnacle around T-${TARGET_CLOSING_MINUTES}; fall back to best available soft-book estimate only if sharp source is missing.`);
+  if (!hasLineups && untilKickoffMs <= LINEUP_CHECK_WINDOW_MS && untilKickoffMs >= 0) repairActions.push('Retry confirmed starting XI and bench from match-centre sources.');
+  if (!hasSubs && hasLineups && untilKickoffMs <= LINEUP_CHECK_WINDOW_MS && untilKickoffMs >= 0) repairActions.push('Retry substitute bench feed.');
+  if (!hasVerifiedReferee) repairActions.push('Retry referee verification from FIFA/ESPN.');
+  if (!hasPitch) repairActions.push('Retry venue and pitch/surface confirmation.');
+  if (!hasFootyStatsPublic) repairActions.push('Retry FootyStats fixture row matching.');
+  if (isComplete && !hasPostMatchStats) repairActions.push('Retry post-match stats/result feed.');
+  if (isComplete && !hasXg) repairActions.push('Retry xG/chance-quality extraction from structured post-match sources.');
   const components = [
     { label: 'Fresh price check', points: pricesFresh ? 18 : 0, max: 18, detail: Number.isFinite(minutesSincePriceCheck) ? `${minutesSincePriceCheck} min old` : 'not checked' },
     { label: 'Market depth', points: hasAuBookDepth ? 14 : checkedMarkets.length ? 8 : 0, max: 14, detail: `${scanRows.length} scanned rows` },
-    { label: 'Sharp close source', points: hasSharpReference ? 12 : 0, max: 12, detail: hasSharpReference ? 'Betfair/Pinnacle present where available' : 'no sharp close source in current scan' },
+    { label: 'Sharp close source', points: hasT5SharpCapture ? 14 : hasSharpReference ? 10 : 0, max: 14, detail: hasT5SharpCapture ? `captured ${sharpMinutesBeforeKickoff} min before kickoff` : hasSharpReference ? 'Betfair/Pinnacle present where available' : 'no sharp close source in current scan' },
     { label: 'Lineups', points: hasLineups ? (hasSubs ? 14 : 10) : 0, max: 14, detail: hasLineups ? (hasSubs ? 'starters and bench loaded' : 'starters loaded') : 'not confirmed yet' },
     { label: 'Referee', points: hasVerifiedReferee ? 8 : 0, max: 8, detail: hasVerifiedReferee ? 'verified' : 'not verified' },
     { label: 'Pitch', points: hasPitch ? 6 : 2, max: 6, detail: hasPitch ? 'venue/pitch note loaded' : 'generic pitch weighting' },
@@ -852,6 +894,10 @@ function fixtureDataQualityAudit(fixture, nowIso) {
     rating,
     band: rating >= 80 ? 'Strong' : rating >= 62 ? 'Developing' : 'Thin',
     price_age_minutes: Number.isFinite(minutesSincePriceCheck) ? minutesSincePriceCheck : null,
+    closing_line_status: closingLineStatus,
+    target_close_minutes_before_kickoff: TARGET_CLOSING_MINUTES,
+    sharp_close_capture_window_minutes: Math.ceil(CLOSING_WINDOW_MS / 60000),
+    repair_actions: repairActions,
     components,
     note: rating >= 80
       ? 'Strong data coverage: price, team, context and verification layers are mostly in place.'

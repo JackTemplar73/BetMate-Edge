@@ -1571,6 +1571,7 @@ function renderModelDataBlock(fixture) {
       : 'Not fully confirmed yet'],
     ['Data quality', Number.isFinite(Number(quality.rating)) ? `${quality.band || 'Rated'} | ${quality.rating}/100` : 'Not scored yet'],
     ['Price age', Number.isFinite(Number(quality.price_age_minutes)) ? `${quality.price_age_minutes} min since last check` : 'Not checked yet'],
+    ['Closing line', quality.closing_line_status || 'Waiting for final close window'],
     ['FootyStats check', footy.status === 'matched_public_fixture_row'
       ? 'Public fixture row matched'
       : footy.status === 'source_unavailable'
@@ -1608,6 +1609,14 @@ function renderModelDataBlock(fixture) {
               </li>
             `).join('')}
           </ul>
+          ${Array.isArray(quality.repair_actions) && quality.repair_actions.length ? `
+            <div class="model-repair-actions">
+              <span>Repair checklist</span>
+              <ol>
+                ${quality.repair_actions.slice(0, 6).map((action) => `<li>${action}</li>`).join('')}
+              </ol>
+            </div>
+          ` : ''}
         </div>
       ` : ''}
     </div>

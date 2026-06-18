@@ -18,11 +18,11 @@
     "closing_captured_at": null,
     "clv_percent": null,
     "latest_pre_kickoff_odds": 1.89,
-    "latest_pre_kickoff_at": "2026-06-18T13:38:07.480Z",
+    "latest_pre_kickoff_at": "2026-06-18T13:44:56.052Z",
     "latest_pre_kickoff_bookie": "Betfair",
     "latest_pre_kickoff_clv_percent": 2.65,
     "latest_pre_kickoff_qi": 55,
-    "latest_pre_kickoff_source": "Betfair pre-game check 142 min before game time",
+    "latest_pre_kickoff_source": "Betfair pre-game check 135 min before game time",
     "estimated_closing_odds": null,
     "estimated_clv_percent": null,
     "estimated_closing_source": "Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.",
@@ -34,13 +34,13 @@
     "current_model_price": 1.79,
     "current_ev": 5.59,
     "current_qi": 55,
-    "last_seen_at": "2026-06-18T13:38:11.056Z",
+    "last_seen_at": "2026-06-18T13:45:22.604Z",
     "closing_qi": null,
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured around 5 minutes before game time",
     "closing_status": "missing_sharp_close",
     "closing_reference_type": "missing_sharp_market",
-    "model_data_quality_rating": 50,
+    "model_data_quality_rating": 49,
     "model_data_quality_band": "Thin"
   },
   {
@@ -78,13 +78,13 @@
     "current_model_price": 1.56,
     "current_ev": 19.87,
     "current_qi": 78,
-    "last_seen_at": "2026-06-18T13:38:11.056Z",
+    "last_seen_at": "2026-06-18T13:45:22.604Z",
     "closing_qi": null,
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured around 5 minutes before game time",
     "closing_status": "missing_sharp_close",
     "closing_reference_type": "missing_sharp_market",
-    "model_data_quality_rating": 50,
+    "model_data_quality_rating": 49,
     "model_data_quality_band": "Thin"
   },
   {
@@ -122,13 +122,13 @@
     "current_model_price": 1.2,
     "current_ev": 10,
     "current_qi": 71,
-    "last_seen_at": "2026-06-18T13:38:11.056Z",
+    "last_seen_at": "2026-06-18T13:45:22.604Z",
     "closing_qi": null,
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured around 5 minutes before game time",
     "closing_status": "missing_sharp_close",
     "closing_reference_type": "missing_sharp_market",
-    "model_data_quality_rating": 50,
+    "model_data_quality_rating": 49,
     "model_data_quality_band": "Thin"
   },
   {
@@ -173,7 +173,7 @@
     "opening_source": "Sportsbet price when the agent first saved the qualified selection.",
     "clv_benchmark_rule": "Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.",
     "closing_reference_type": "missing_sharp_market",
-    "model_data_quality_rating": 34,
+    "model_data_quality_rating": 33,
     "model_data_quality_band": "Thin"
   },
   {
@@ -218,7 +218,7 @@
     "opening_source": "Neds price when the agent first saved the qualified selection.",
     "clv_benchmark_rule": "Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.",
     "closing_reference_type": "missing_sharp_market",
-    "model_data_quality_rating": 34,
+    "model_data_quality_rating": 33,
     "model_data_quality_band": "Thin"
   },
   {
@@ -263,7 +263,7 @@
     "opening_source": "Ladbrokes price when the agent first saved the qualified selection.",
     "clv_benchmark_rule": "Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.",
     "closing_reference_type": "missing_sharp_market",
-    "model_data_quality_rating": 34,
+    "model_data_quality_rating": 33,
     "model_data_quality_band": "Thin"
   },
   {
@@ -310,7 +310,7 @@
     "opening_source": "PointsBet price when the agent first saved the qualified selection.",
     "clv_benchmark_rule": "Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.",
     "closing_reference_type": "missing_sharp_market",
-    "model_data_quality_rating": 34,
+    "model_data_quality_rating": 33,
     "model_data_quality_band": "Thin"
   },
   {
@@ -529,7 +529,7 @@
     "closing_status": "missing_sharp_close",
     "closing_reference_type": "missing_sharp_market",
     "settled_at": "2026-06-17T11:32:40.417Z",
-    "model_data_quality_rating": 84,
+    "model_data_quality_rating": 82,
     "model_data_quality_band": "Strong"
   },
   {
