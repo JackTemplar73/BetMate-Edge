@@ -1180,7 +1180,14 @@ function renderMatchTabs() {
   container.innerHTML = fixtures.map((fixture) => {
     const bestOption = fixture.markets
       .filter(hasModelPrice)
-      .map((market) => ({ ...market, metrics: runVectorCalculations(market) }))
+      .map((market) => {
+        const enrichedMarket = {
+          ...market,
+          model_data_quality_rating: market.model_data_quality_rating ?? fixture.model_data_quality?.rating,
+          model_data_quality_band: market.model_data_quality_band ?? fixture.model_data_quality?.band
+        };
+        return { ...enrichedMarket, metrics: runVectorCalculations(enrichedMarket) };
+      })
       .sort((a, b) => b.metrics.qi - a.metrics.qi)[0];
     const isActive = fixture.match_name === state.selectedMatchName;
 
@@ -1734,10 +1741,17 @@ function renderFixturePanels() {
     return;
   }
 
-  const markets = fixture.markets.map((market) => ({
+  const markets = fixture.markets.map((market) => {
+    const enrichedMarket = {
       ...market,
-      metrics: runVectorCalculations(market)
-    })).sort((a, b) => b.metrics.qi - a.metrics.qi);
+      model_data_quality_rating: market.model_data_quality_rating ?? fixture.model_data_quality?.rating,
+      model_data_quality_band: market.model_data_quality_band ?? fixture.model_data_quality?.band
+    };
+    return {
+      ...enrichedMarket,
+      metrics: runVectorCalculations(enrichedMarket)
+    };
+  }).sort((a, b) => b.metrics.qi - a.metrics.qi);
   const freshness = priceFreshness(fixture);
   const fixtureModelHtml = renderFixtureModelBlock(fixture);
   const lineupsHtml = renderConfirmedLineupsBlock(fixture);
@@ -2263,7 +2277,8 @@ function getLineQiForSavedModel(bet, price) {
 
   const metrics = runVectorCalculations({
     true_price: openingModelPrice,
-    current_odds: linePrice
+    current_odds: linePrice,
+    model_data_quality_rating: bet.model_data_quality_rating
   });
 
   return Number.isFinite(Number(metrics.qi)) ? Number(metrics.qi) : null;

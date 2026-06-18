@@ -3,7 +3,7 @@ function runVectorCalculations(marketItem) {
   const currentOdds = Number.parseFloat(marketItem.current_odds);
 
   if (!Number.isFinite(truePrice) || !Number.isFinite(currentOdds) || truePrice <= 1 || currentOdds <= 1) {
-    return { ev: 0, qi: 0, bet_size: 0, expected_growth: 0 };
+    return { ev: 0, qi: 0, base_qi: 0, price_qi: 0, data_quality_adjustment: 0, bet_size: 0, expected_growth: 0 };
   }
 
   const ev = ((currentOdds / truePrice) - 1) * 100;
@@ -30,7 +30,7 @@ function runVectorCalculations(marketItem) {
     High: 45,
     'Very high': 20
   }[quality.risk] || 35;
-  const qi = Math.round(clamp(
+  const baseQi = Math.round(clamp(
     (rawPriceQi * 0.35) +
     (edgeScore * 0.3) +
     (probabilityScore * 0.2) +
@@ -38,11 +38,14 @@ function runVectorCalculations(marketItem) {
     0,
     100
   ));
+  const adjustedQi = applyDataQualityToQi(baseQi, marketItem);
 
   return {
     ev: Number.parseFloat(ev.toFixed(2)),
-    qi: Number.parseInt(qi, 10),
+    qi: Number.parseInt(adjustedQi.qi, 10),
+    base_qi: baseQi,
     price_qi: rawPriceQi,
+    data_quality_adjustment: adjustedQi.adjustment,
     bet_size: betSize,
     expected_growth: Number.parseFloat(expectedGrowth.toFixed(4))
   };
@@ -50,6 +53,30 @@ function runVectorCalculations(marketItem) {
 
 function clamp(value, min, max) {
   return Math.max(min, Math.min(max, value));
+}
+
+function dataQualityMultiplier(ratingValue) {
+  const rating = Number(ratingValue);
+  if (!Number.isFinite(rating)) return 1;
+  if (rating >= 85) return 1.03;
+  if (rating >= 75) return 1;
+  if (rating >= 62) return 0.94;
+  if (rating >= 45) return 0.84;
+  return 0.74;
+}
+
+function applyDataQualityToQi(baseQi, marketItem) {
+  const rating = Number(marketItem.model_data_quality_rating ?? marketItem.data_quality_rating);
+  if (!Number.isFinite(rating)) {
+    return { qi: Math.round(clamp(baseQi, 0, 100)), adjustment: 0 };
+  }
+
+  const multiplier = dataQualityMultiplier(rating);
+  const adjusted = Math.round(clamp(baseQi * multiplier, 0, 100));
+  return {
+    qi: adjusted,
+    adjustment: adjusted - baseQi
+  };
 }
 
 function buildBetQualityFromPrices(truePriceValue, currentOddsValue) {
@@ -110,6 +137,8 @@ function flattenMarkets(dataset) {
       })
       .map((market, marketIndex) => ({
         ...market,
+        model_data_quality_rating: market.model_data_quality_rating ?? fixture.model_data_quality?.rating,
+        model_data_quality_band: market.model_data_quality_band ?? fixture.model_data_quality?.band,
         fixture_index: fixtureIndex,
         market_index: marketIndex,
         match_name: fixture.match_name,

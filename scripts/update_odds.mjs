@@ -274,7 +274,7 @@ function runVectorCalculations(marketItem) {
   const currentOdds = Number.parseFloat(marketItem.current_odds);
 
   if (!Number.isFinite(truePrice) || !Number.isFinite(currentOdds) || truePrice <= 1 || currentOdds <= 1) {
-    return { ev: 0, qi: 0, price_qi: 0 };
+    return { ev: 0, qi: 0, base_qi: 0, price_qi: 0, data_quality_adjustment: 0 };
   }
 
   const ev = ((currentOdds / truePrice) - 1) * 100;
@@ -293,7 +293,7 @@ function runVectorCalculations(marketItem) {
     High: 45,
     'Very high': 20
   }[quality.risk] || 35;
-  const qi = Math.round(clamp(
+  const baseQi = Math.round(clamp(
     (rawPriceQi * 0.35) +
     (edgeScore * 0.3) +
     (probabilityScore * 0.2) +
@@ -301,11 +301,38 @@ function runVectorCalculations(marketItem) {
     0,
     100
   ));
+  const adjustedQi = applyDataQualityToQi(baseQi, marketItem);
 
   return {
     ev: Number.parseFloat(ev.toFixed(2)),
-    qi,
-    price_qi: rawPriceQi
+    qi: adjustedQi.qi,
+    base_qi: baseQi,
+    price_qi: rawPriceQi,
+    data_quality_adjustment: adjustedQi.adjustment
+  };
+}
+
+function dataQualityMultiplier(ratingValue) {
+  const rating = Number(ratingValue);
+  if (!Number.isFinite(rating)) return 1;
+  if (rating >= 85) return 1.03;
+  if (rating >= 75) return 1;
+  if (rating >= 62) return 0.94;
+  if (rating >= 45) return 0.84;
+  return 0.74;
+}
+
+function applyDataQualityToQi(baseQi, marketItem) {
+  const rating = Number(marketItem.model_data_quality_rating ?? marketItem.data_quality_rating);
+  if (!Number.isFinite(rating)) {
+    return { qi: Math.round(clamp(baseQi, 0, 100)), adjustment: 0 };
+  }
+
+  const multiplier = dataQualityMultiplier(rating);
+  const adjusted = Math.round(clamp(baseQi * multiplier, 0, 100));
+  return {
+    qi: adjusted,
+    adjustment: adjusted - baseQi
   };
 }
 
@@ -837,6 +864,44 @@ function fixtureDataQualityAudit(fixture, nowIso) {
 function applyDataQualityAudits(dataset, nowIso) {
   for (const fixture of dataset) {
     fixture.model_data_quality = fixtureDataQualityAudit(fixture, nowIso);
+  }
+}
+
+function applyDataQualityAdjustedScoring(dataset) {
+  for (const fixture of dataset) {
+    const rating = fixture.model_data_quality?.rating;
+    const band = fixture.model_data_quality?.band;
+
+    for (const marketItem of fixture.markets || []) {
+      marketItem.model_data_quality_rating = rating ?? null;
+      marketItem.model_data_quality_band = band || null;
+
+      const metrics = runVectorCalculations(marketItem);
+      marketItem.ev = metrics.ev;
+      marketItem.qi = metrics.qi;
+      marketItem.base_qi = metrics.base_qi;
+      marketItem.price_qi = metrics.price_qi;
+      marketItem.data_quality_adjustment = metrics.data_quality_adjustment;
+    }
+
+    for (const row of fixture.market_scan?.rows || []) {
+      row.model_data_quality_rating = rating ?? null;
+      row.model_data_quality_band = band || null;
+      const modelPrice = Number(row.model_price);
+      const currentOdds = Number(row.current_odds);
+      if (!Number.isFinite(modelPrice) || !Number.isFinite(currentOdds)) continue;
+
+      const metrics = runVectorCalculations({
+        true_price: modelPrice,
+        current_odds: currentOdds,
+        model_data_quality_rating: rating
+      });
+      row.ev = metrics.ev;
+      row.qi = metrics.qi;
+      row.base_qi = metrics.base_qi;
+      row.price_qi = metrics.price_qi;
+      row.data_quality_adjustment = metrics.data_quality_adjustment;
+    }
   }
 }
 
@@ -1917,6 +1982,8 @@ function scanRowToMarketItem(row, fixture) {
     au_bookie: row.au_bookie || row.bookmaker || row.bookmaker_key || 'AU bookie',
     bookmaker_key: row.bookmaker_key,
     oddsapi_market: row.oddsapi_market,
+    model_data_quality_rating: row.model_data_quality_rating ?? fixture.model_data_quality?.rating ?? null,
+    model_data_quality_band: row.model_data_quality_band ?? fixture.model_data_quality?.band ?? null,
     devig_book_probability: row.devig_book_probability,
     odds_checked_at: row.checked_at || fixture.market_scan?.checked_at || fixture.odds_last_checked,
     odds_refresh_status: Number.isFinite(Number(row.current_odds)) ? 'checked_current' : 'selection_missing',
@@ -2283,6 +2350,8 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         save_rule: 'Saved immediately when the selection first cleared QI 70+ before kickoff.',
         opening_source: `${marketItem.au_bookie || 'Book'} price when the agent first saved the qualified selection.`,
         clv_benchmark_rule: 'Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.',
+        model_data_quality_rating: marketItem.model_data_quality_rating ?? fixture.model_data_quality?.rating ?? null,
+        model_data_quality_band: marketItem.model_data_quality_band ?? fixture.model_data_quality?.band ?? null,
         opening_odds: currentOdds,
         opening_model_price: modelPrice,
         opening_ev: metrics.ev,
@@ -2310,6 +2379,8 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       entry.save_rule = entry.save_rule || 'Saved immediately when the selection first cleared QI 70+ before kickoff.';
       entry.opening_source = entry.opening_source || `${entry.au_bookie || marketItem.au_bookie || 'Book'} price when the agent first saved the qualified selection.`;
       entry.clv_benchmark_rule = entry.clv_benchmark_rule || 'Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.';
+      entry.model_data_quality_rating = marketItem.model_data_quality_rating ?? fixture.model_data_quality?.rating ?? entry.model_data_quality_rating ?? null;
+      entry.model_data_quality_band = marketItem.model_data_quality_band ?? fixture.model_data_quality?.band ?? entry.model_data_quality_band ?? null;
       if (entry.closing_status === 'missing_fresh_close') {
         entry.closing_status = 'missing_sharp_close';
         entry.closing_reference_type = 'missing_sharp_market';
@@ -3407,6 +3478,7 @@ async function main() {
   reconcileMarketScanModelValues(dataset);
   const footyStatsAnalysis = await applyFootyStatsAnalysis(dataset, nowIso);
   applyDataQualityAudits(dataset, nowIso);
+  applyDataQualityAdjustedScoring(dataset);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
