@@ -1303,6 +1303,15 @@ td {
   font-size: 15px;
 }
 
+.model-data-heading em {
+  display: block;
+  margin-top: 6px;
+  color: var(--gold);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 800;
+}
+
 .model-data-card dl {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));

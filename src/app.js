@@ -1552,6 +1552,8 @@ function renderModelDataBlock(fixture) {
   const bttsNo = findModelViewRow(fixture, 'BTTS No');
   const learning = fixture.post_match_learning || {};
   const xg = fixture.post_match_xg || {};
+  const qualityBand = String(quality.band || '').toLowerCase();
+  const showQualityNote = qualityBand === 'thin' || qualityBand === 'developing';
   const dataRows = [
     ['Home win', `${probabilities.homeTeam || 'Home'} ${formatPercent(probabilities.homeProbability)}`],
     ['Draw', formatPercent(probabilities.drawProbability)],
@@ -1569,7 +1571,6 @@ function renderModelDataBlock(fixture) {
     ['Lineups', lineups.status === 'confirmed'
       ? `${lineups.home_formation || '-'} vs ${lineups.away_formation || '-'} | starters and bench loaded where supplied`
       : 'Not fully confirmed yet'],
-    ['Data quality', Number.isFinite(Number(quality.rating)) ? `${quality.band || 'Rated'} | ${quality.rating}/100` : 'Not scored yet'],
     ['Price age', Number.isFinite(Number(quality.price_age_minutes)) ? `${quality.price_age_minutes} min since last check` : 'Not checked yet'],
     ['Closing line', quality.closing_line_status || 'Waiting for final close window'],
     ['FootyStats check', footy.status === 'matched_public_fixture_row'
@@ -1588,6 +1589,7 @@ function renderModelDataBlock(fixture) {
       <div class="model-data-heading">
         <span>Model Data</span>
         <strong>Inputs used for this match read</strong>
+        ${showQualityNote ? `<em>Data still developing. QI already includes this penalty.</em>` : ''}
       </div>
       <dl>
         ${dataRows.map(([label, value]) => `
@@ -1597,9 +1599,9 @@ function renderModelDataBlock(fixture) {
           </div>
         `).join('')}
       </dl>
-      ${Array.isArray(quality.components) && quality.components.length ? `
+      ${showQualityNote && Array.isArray(quality.components) && quality.components.length ? `
         <div class="model-quality-breakdown">
-          <strong>${quality.note || 'Data quality inputs checked.'}</strong>
+          <strong>${Number.isFinite(Number(quality.rating)) ? `${quality.band} data coverage (${quality.rating}/100). ` : ''}${quality.note || 'Data quality inputs checked.'}</strong>
           <ul>
             ${quality.components.map((item) => `
               <li>
