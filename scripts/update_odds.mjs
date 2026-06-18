@@ -771,6 +771,75 @@ async function applyFootyStatsAnalysis(dataset, nowIso) {
   };
 }
 
+function fixtureDataQualityAudit(fixture, nowIso) {
+  const kickoff = parseAest(fixture.kickoff_time_aest);
+  const now = new Date(nowIso);
+  const markets = fixture.markets || [];
+  const scanRows = fixture.market_scan?.rows || [];
+  const checkedMarkets = markets.filter((market) => [
+    'checked_current',
+    'updated',
+    'added_from_oddsapi',
+    'confirmed_rendered_site'
+  ].includes(market.odds_refresh_status));
+  const checkedAtValues = checkedMarkets
+    .map((market) => Date.parse(market.odds_checked_at || market.odds_updated_at || ''))
+    .filter(Number.isFinite);
+  const latestCheckedAt = checkedAtValues.length ? Math.max(...checkedAtValues) : null;
+  const minutesSincePriceCheck = latestCheckedAt ? Math.round((now.getTime() - latestCheckedAt) / 60000) : null;
+  const pricesFresh = Number.isFinite(minutesSincePriceCheck)
+    ? minutesSincePriceCheck <= 30 || (kickoff <= now && latestCheckedAt <= kickoff.getTime())
+    : false;
+  const hasSharpReference = scanRows.some((row) => SHARP_CLOSING_BOOKS.has(normalise(row.bookmaker_key || row.bookie || row.au_bookie)));
+  const hasAuBookDepth = new Set(scanRows
+    .map((row) => normalise(row.bookie || row.au_bookie || row.bookmaker))
+    .filter(Boolean)).size >= 3;
+  const footyStatus = fixture.footystats_analysis?.status;
+  const hasFootyStatsPublic = footyStatus === 'matched_public_fixture_row';
+  const hasFootyStatsProfile = Boolean(fixture.footystats_analysis);
+  const hasLineups = fixture.confirmed_lineups?.status === 'confirmed';
+  const hasSubs = lineupHasSubstitutes(fixture);
+  const hasVerifiedReferee = fixture.referee_status === 'verified';
+  const hasPitch = Boolean(fixture.pitch_constraints && !/No reliable pitch advantage/i.test(fixture.pitch_constraints));
+  const hasFifaReport = fixture.fifa_report_status === 'matched_report';
+  const hasPostMatchStats = Boolean(fixture.post_match_stats);
+  const hasXg = Number.isFinite(Number(fixture.post_match_xg?.home)) && Number.isFinite(Number(fixture.post_match_xg?.away));
+  const isComplete = kickoff <= now;
+  const components = [
+    { label: 'Fresh price check', points: pricesFresh ? 18 : 0, max: 18, detail: Number.isFinite(minutesSincePriceCheck) ? `${minutesSincePriceCheck} min old` : 'not checked' },
+    { label: 'Market depth', points: hasAuBookDepth ? 14 : checkedMarkets.length ? 8 : 0, max: 14, detail: `${scanRows.length} scanned rows` },
+    { label: 'Sharp close source', points: hasSharpReference ? 12 : 0, max: 12, detail: hasSharpReference ? 'Betfair/Pinnacle present where available' : 'no sharp close source in current scan' },
+    { label: 'Lineups', points: hasLineups ? (hasSubs ? 14 : 10) : 0, max: 14, detail: hasLineups ? (hasSubs ? 'starters and bench loaded' : 'starters loaded') : 'not confirmed yet' },
+    { label: 'Referee', points: hasVerifiedReferee ? 8 : 0, max: 8, detail: hasVerifiedReferee ? 'verified' : 'not verified' },
+    { label: 'Pitch', points: hasPitch ? 6 : 2, max: 6, detail: hasPitch ? 'venue/pitch note loaded' : 'generic pitch weighting' },
+    { label: 'FootyStats', points: hasFootyStatsPublic ? 10 : hasFootyStatsProfile ? 6 : 0, max: 10, detail: hasFootyStatsPublic ? 'public row matched' : hasFootyStatsProfile ? 'profile categories loaded' : 'not loaded' },
+    { label: 'FIFA/ESPN result data', points: isComplete ? (hasPostMatchStats || hasFifaReport ? 10 : 0) : 6, max: 10, detail: isComplete ? (hasPostMatchStats || hasFifaReport ? 'post-match checks loaded' : 'result data pending') : 'pre-game fixture' },
+    { label: 'xG / chance quality', points: isComplete ? (hasXg ? 8 : 0) : 4, max: 8, detail: hasXg ? `${fixture.post_match_xg.home}-${fixture.post_match_xg.away}` : 'not available yet' }
+  ];
+  const score = components.reduce((total, item) => total + item.points, 0);
+  const maxScore = components.reduce((total, item) => total + item.max, 0);
+  const rating = Math.round((score / maxScore) * 100);
+
+  return {
+    checked_at: nowIso,
+    rating,
+    band: rating >= 80 ? 'Strong' : rating >= 62 ? 'Developing' : 'Thin',
+    price_age_minutes: Number.isFinite(minutesSincePriceCheck) ? minutesSincePriceCheck : null,
+    components,
+    note: rating >= 80
+      ? 'Strong data coverage: price, team, context and verification layers are mostly in place.'
+      : rating >= 62
+        ? 'Developing data coverage: usable read, but one or more live inputs still need confirmation.'
+        : 'Thin data coverage: treat the read cautiously until more live inputs are confirmed.'
+  };
+}
+
+function applyDataQualityAudits(dataset, nowIso) {
+  for (const fixture of dataset) {
+    fixture.model_data_quality = fixtureDataQualityAudit(fixture, nowIso);
+  }
+}
+
 async function refreshLastHourLineups(dataset, now = getNow(), nowIso = new Date().toISOString(), espnEvents = []) {
   const today = dateKey(now);
   const fixtures = dataset.filter((fixture) => {
@@ -3337,6 +3406,7 @@ async function main() {
   applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
   reconcileMarketScanModelValues(dataset);
   const footyStatsAnalysis = await applyFootyStatsAnalysis(dataset, nowIso);
+  applyDataQualityAudits(dataset, nowIso);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);

@@ -1539,6 +1539,7 @@ function renderModelDataBlock(fixture) {
   const calibration = fixture.model_calibration || {};
   const lineups = fixture.confirmed_lineups || {};
   const footy = fixture.footystats_analysis || {};
+  const quality = fixture.model_data_quality || {};
   const topExact = (fixture.exact_score_model || [])[0];
   const bttsYes = findModelViewRow(fixture, 'BTTS Yes');
   const bttsNo = findModelViewRow(fixture, 'BTTS No');
@@ -1561,6 +1562,8 @@ function renderModelDataBlock(fixture) {
     ['Lineups', lineups.status === 'confirmed'
       ? `${lineups.home_formation || '-'} vs ${lineups.away_formation || '-'} | starters and bench loaded where supplied`
       : 'Not fully confirmed yet'],
+    ['Data quality', Number.isFinite(Number(quality.rating)) ? `${quality.band || 'Rated'} | ${quality.rating}/100` : 'Not scored yet'],
+    ['Price age', Number.isFinite(Number(quality.price_age_minutes)) ? `${quality.price_age_minutes} min since last check` : 'Not checked yet'],
     ['FootyStats check', footy.status === 'matched_public_fixture_row'
       ? 'Public fixture row matched'
       : footy.status === 'source_unavailable'
@@ -1586,6 +1589,20 @@ function renderModelDataBlock(fixture) {
           </div>
         `).join('')}
       </dl>
+      ${Array.isArray(quality.components) && quality.components.length ? `
+        <div class="model-quality-breakdown">
+          <strong>${quality.note || 'Data quality inputs checked.'}</strong>
+          <ul>
+            ${quality.components.map((item) => `
+              <li>
+                <span>${item.label}</span>
+                <b>${item.points}/${item.max}</b>
+                <em>${item.detail || '-'}</em>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+      ` : ''}
     </div>
   `;
 }
