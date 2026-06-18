@@ -4470,7 +4470,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.73,
     "model_note": "Embolo has Switzerland's best central goal profile.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4506,7 +4506,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -4516,9 +4516,9 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 31.9,
     "model_price": 3.13,
-    "model_note": "Dzeko is Bosnia's strongest penalty-box goal profile.",
+    "model_note": "Edin Dzeko is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4554,7 +4554,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -4566,7 +4567,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.26,
     "model_note": "Xhaka projects well if Switzerland control territory.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4621,7 +4622,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -4631,9 +4632,9 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 38.8,
     "model_price": 2.58,
-    "model_note": "Shaqiri remains watchlist only until role is confirmed.",
+    "model_note": "Xherdan Shaqiri is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4667,7 +4668,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Switzerland vs Bosnia & Herzegovina",
@@ -4679,7 +4681,7 @@ window.embeddedPlayerProps = [
     "model_price": 3.42,
     "model_note": "Kolasinac carries high duel and recovery-foul card risk.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4734,7 +4736,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -4746,7 +4748,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.52,
     "model_note": "David is Canada's strongest goal-probability player.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4782,7 +4784,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -4794,7 +4796,7 @@ window.embeddedPlayerProps = [
     "model_price": 1.89,
     "model_note": "David projects as Canada's cleanest shot-on-target profile.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4849,7 +4851,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -4861,7 +4863,7 @@ window.embeddedPlayerProps = [
     "model_price": 2.89,
     "model_note": "Afif is Qatar's main attacking prop profile.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -4916,7 +4918,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "starter"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -4926,9 +4928,9 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 41.7,
     "model_price": 2.4,
-    "model_note": "Davies carries Canada's strongest wide creation angle.",
+    "model_note": "Alphonso Davies is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -4983,7 +4985,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Canada vs Qatar",
@@ -4993,9 +4996,9 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 26.9,
     "model_price": 3.72,
-    "model_note": "Madibo profiles as Qatar's highest midfield card risk.",
+    "model_note": "Assim Madibo is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5050,7 +5053,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5060,9 +5064,9 @@ window.embeddedPlayerProps = [
     "category": "Goals",
     "model_probability": 37.8,
     "model_price": 2.65,
-    "model_note": "Gimenez is Mexico's strongest goal profile.",
+    "model_note": "Santiago Gimenez is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5098,7 +5102,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5108,9 +5113,9 @@ window.embeddedPlayerProps = [
     "category": "Shots",
     "model_probability": 48.2,
     "model_price": 2.07,
-    "model_note": "Lozano rates well for Mexico shot volume from wide areas.",
+    "model_note": "Hirving Lozano is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5155,7 +5160,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5165,9 +5171,9 @@ window.embeddedPlayerProps = [
     "category": "Shots on Target",
     "model_probability": 56.1,
     "model_price": 1.78,
-    "model_note": "Son is South Korea's best shot-on-target prop.",
+    "model_note": "Son Heung-min is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5222,7 +5228,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5232,9 +5239,9 @@ window.embeddedPlayerProps = [
     "category": "Assists",
     "model_probability": 39.6,
     "model_price": 2.53,
-    "model_note": "Lee projects as South Korea's best creator.",
+    "model_note": "Lee Kang-in is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-13T23:57:18.626Z",
@@ -5289,7 +5296,8 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   },
   {
     "match_name": "Mexico vs South Korea",
@@ -5299,9 +5307,9 @@ window.embeddedPlayerProps = [
     "category": "Cards",
     "model_probability": 31.4,
     "model_price": 3.18,
-    "model_note": "Alvarez carries Mexico's strongest card profile.",
+    "model_note": "Edson Alvarez is not confirmed in the starting XI. Keep this as watch-only unless team news changes.",
     "live_prices": [],
-    "last_checked": "2026-06-18T14:10:19.232Z",
+    "last_checked": "2026-06-18T17:29:01.896Z",
     "direct_checks": {
       "sportsbet": {
         "checked_at": "2026-06-15T23:48:05.426Z",
@@ -5356,6 +5364,7 @@ window.embeddedPlayerProps = [
         "note": "Neds is still checked through OddsAPI in the scheduled scan; no direct Neds prop endpoint has been confirmed in this workspace yet."
       }
     },
-    "lineup_role": "unconfirmed"
+    "lineup_role": "not_listed",
+    "status": "watch_only"
   }
 ];
