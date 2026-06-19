@@ -37321,7 +37321,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "4cd769aa7bae0ad9762bd69b80ef2903",
       "offered_market_keys": [
@@ -38548,7 +38548,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "f955d4b3395ce6e3b5ac1031ca52ca4e",
       "offered_market_keys": [
@@ -39774,7 +39774,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "ef0f74a991d3e35798ae5af77667bce1",
       "offered_market_keys": [
@@ -40923,7 +40923,7 @@ window.embeddedDataset = [
         "Neds",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "065b3573e875f8d23803357f73e5b99e",
       "offered_market_keys": [
@@ -41026,11 +41026,11 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 38.6,
           "model_price": 2.59,
-          "current_odds": 4.4,
+          "current_odds": 4.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 22.6,
-          "ev": 69.88,
+          "devig_book_probability": 22.07,
+          "ev": 73.75,
           "qi": 79,
           "price_qi": 98
         },
@@ -41186,13 +41186,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 23.1,
           "model_price": 4.33,
-          "current_odds": 5.8,
+          "current_odds": 5.6,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 17.14,
-          "ev": 33.95,
-          "qi": 54,
-          "price_qi": 89
+          "devig_book_probability": 17.74,
+          "ev": 29.33,
+          "qi": 52,
+          "price_qi": 88
         },
         {
           "selection": "Australia to Win",
@@ -42031,7 +42031,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "4f0c518545b0096c68326daf25bffc1e",
       "offered_market_keys": [
@@ -42057,7 +42057,7 @@ window.embeddedDataset = [
           "current_odds": 2.1,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 22.28,
+          "devig_book_probability": 22.36,
           "ev": 37.25,
           "qi": 99,
           "price_qi": 97
@@ -42111,6 +42111,22 @@ window.embeddedDataset = [
           "price_qi": 93
         },
         {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 57.6,
+          "model_price": 1.74,
+          "current_odds": 2.1,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 45.03,
+          "ev": 20.69,
+          "qi": 88,
+          "price_qi": 92
+        },
+        {
           "selection": "Sweden Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
@@ -42134,13 +42150,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 38.8,
           "model_price": 2.58,
-          "current_odds": 3.8,
+          "current_odds": 3.9,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 25.18,
-          "ev": 47.29,
+          "devig_book_probability": 24.53,
+          "ev": 51.16,
           "qi": 83,
-          "price_qi": 95
+          "price_qi": 96
         },
         {
           "selection": "Match to end in a Draw",
@@ -42173,22 +42189,6 @@ window.embeddedDataset = [
           "ev": 43.41,
           "qi": 82,
           "price_qi": 95
-        },
-        {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 57.6,
-          "model_price": 1.74,
-          "current_odds": 2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 46.24,
-          "ev": 14.94,
-          "qi": 81,
-          "price_qi": 88
         },
         {
           "selection": "BTTS No",
@@ -42294,13 +42294,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 26.8,
           "model_price": 3.73,
-          "current_odds": 4.75,
+          "current_odds": 4.6,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 20.14,
-          "ev": 27.35,
-          "qi": 55,
-          "price_qi": 88
+          "devig_book_probability": 20.8,
+          "ev": 23.32,
+          "qi": 53,
+          "price_qi": 86
         },
         {
           "selection": "Sweden to Win",
@@ -42390,11 +42390,11 @@ window.embeddedDataset = [
           "oddsapi_market": "double_chance",
           "model_probability": 73.2,
           "model_price": 1.37,
-          "current_odds": 1.17,
+          "current_odds": 1.18,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 39.99,
-          "ev": -14.6,
+          "devig_book_probability": 39.78,
+          "ev": -13.87,
           "qi": 36,
           "price_qi": 3
         },
@@ -42441,7 +42441,7 @@ window.embeddedDataset = [
           "current_odds": 1.24,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 37.73,
+          "devig_book_probability": 37.86,
           "ev": -23.93,
           "qi": 34,
           "price_qi": 1
@@ -42505,7 +42505,7 @@ window.embeddedDataset = [
           "current_odds": 1.72,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 53.76,
+          "devig_book_probability": 54.97,
           "ev": -27.12,
           "qi": 26,
           "price_qi": 3
@@ -42553,7 +42553,7 @@ window.embeddedDataset = [
           "current_odds": 1.75,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 54.68,
+          "devig_book_probability": 54.67,
           "ev": -39.66,
           "qi": 22,
           "price_qi": 1
@@ -43288,7 +43288,7 @@ window.embeddedDataset = [
         "TAB",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "f1ab0f69832972a329243522ceaa7804",
       "offered_market_keys": [
@@ -44461,7 +44461,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "681895f294b670b4c7b14495dfb583bc",
       "offered_market_keys": [
@@ -45520,7 +45520,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "dfc5202cf1b8ae002cf952cd04f235b9",
       "offered_market_keys": [
@@ -46741,7 +46741,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "c1ec9a65f4b4cf74477b368a7d6282de",
       "offered_market_keys": [
@@ -47962,7 +47962,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "8ba93d190f1f934e33862a97a6353a6e",
       "offered_market_keys": [
@@ -49181,7 +49181,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "2f49dd8deae3079dc4eb2d634d18a99c",
       "offered_market_keys": [
@@ -50380,7 +50380,7 @@ window.embeddedDataset = [
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -50992,7 +50992,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "c9ef5822ee64fd5275f7c73251bb56c7",
       "offered_market_keys": [
@@ -52179,7 +52179,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:05:04.540Z",
+      "checked_at": "2026-06-19T06:12:40.795Z",
       "status": "checked",
       "oddsapi_event_id": "512ac18beb5aa936a59f7ea3e497ada2",
       "offered_market_keys": [
