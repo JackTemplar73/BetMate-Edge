@@ -304,8 +304,7 @@ h3 {
   margin: 18px 0 22px;
 }
 
-.strategy-grid article,
-.strategy-card {
+.strategy-grid article {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.58);
@@ -337,18 +336,9 @@ h3 {
 
 .strategy-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 16px;
-}
-
-.strategy-card {
-  padding: 18px;
-}
-
-.strategy-card h3 {
-  margin: 10px 0;
-  font-size: 19px;
-  line-height: 1.28;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin-top: 16px;
 }
 
 .strategy-action {
@@ -374,7 +364,7 @@ h3 {
 }
 
 .strategy-basis {
-  margin: 0 0 12px;
+  margin: 0 0 14px;
   padding: 10px 12px;
   border-left: 4px solid var(--accent);
   background: rgba(255, 255, 255, 0.48);
@@ -390,7 +380,7 @@ h3 {
 }
 
 .strategy-card dl {
-  margin-top: 4px;
+  margin-top: auto;
 }
 
 .table-section {
