@@ -37320,7 +37320,7 @@
         "Neds",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "065b3573e875f8d23803357f73e5b99e",
       "offered_market_keys": [
@@ -37362,7 +37362,7 @@
           "current_odds": 2.38,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 19.86,
+          "devig_book_probability": 19.8,
           "ev": 59.73,
           "qi": 96,
           "price_qi": 99
@@ -37426,7 +37426,7 @@
           "current_odds": 4.7,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 21.19,
+          "devig_book_probability": 21.12,
           "ev": 80.77,
           "qi": 80,
           "price_qi": 99
@@ -37474,7 +37474,7 @@
           "current_odds": 4.1,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 23.3,
+          "devig_book_probability": 23.11,
           "ev": 57.69,
           "qi": 79,
           "price_qi": 97
@@ -37544,22 +37544,6 @@
           "price_qi": 84
         },
         {
-          "selection": "Australia to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 28.9,
-          "model_price": 3.46,
-          "current_odds": 5.5,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 17.37,
-          "ev": 58.96,
-          "qi": 71,
-          "price_qi": 95
-        },
-        {
           "selection": "Under 4.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -37583,12 +37567,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 28.9,
           "model_price": 3.46,
-          "current_odds": 5.3,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 18.8,
-          "ev": 53.18,
-          "qi": 69,
+          "current_odds": 5.25,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 18.05,
+          "ev": 51.73,
+          "qi": 68,
           "price_qi": 94
         },
         {
@@ -37620,6 +37604,22 @@
           "bookmaker_key": "pointsbetau",
           "devig_book_probability": 18.11,
           "ev": 51.73,
+          "qi": 68,
+          "price_qi": 94
+        },
+        {
+          "selection": "Australia to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 28.9,
+          "model_price": 3.46,
+          "current_odds": 5.2,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 19.09,
+          "ev": 50.29,
           "qi": 68,
           "price_qi": 94
         },
@@ -38435,7 +38435,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "4cd769aa7bae0ad9762bd69b80ef2903",
       "offered_market_keys": [
@@ -38509,7 +38509,7 @@
           "current_odds": 3.75,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 26.42,
+          "devig_book_probability": 26.51,
           "ev": 44.23,
           "qi": 82,
           "price_qi": 95
@@ -38589,7 +38589,7 @@
           "current_odds": 6.2,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 15.98,
+          "devig_book_probability": 16.03,
           "ev": 92.55,
           "qi": 76,
           "price_qi": 98
@@ -38890,13 +38890,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 30.5,
           "model_price": 3.28,
-          "current_odds": 1.72,
+          "current_odds": 1.73,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 57.6,
-          "ev": -47.56,
+          "devig_book_probability": 57.46,
+          "ev": -47.26,
           "qi": 20,
-          "price_qi": 0
+          "price_qi": 1
         },
         {
           "selection": "Morocco to Win",
@@ -39661,7 +39661,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "ef0f74a991d3e35798ae5af77667bce1",
       "offered_market_keys": [
@@ -39766,7 +39766,7 @@
           "current_odds": 12,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 8.29,
+          "devig_book_probability": 8.28,
           "ev": 361.54,
           "qi": 76,
           "price_qi": 100
@@ -39843,11 +39843,11 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 17.1,
           "model_price": 5.85,
-          "current_odds": 27,
+          "current_odds": 26,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 3.68,
-          "ev": 361.54,
+          "devig_book_probability": 3.82,
+          "ev": 344.44,
           "qi": 68,
           "price_qi": 100
         },
@@ -40022,7 +40022,7 @@
           "current_odds": 1.13,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 88.03,
+          "devig_book_probability": 87.9,
           "ev": -49.78,
           "qi": 26,
           "price_qi": 0
@@ -40825,7 +40825,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "f955d4b3395ce6e3b5ac1031ca52ca4e",
       "offered_market_keys": [
@@ -40944,12 +40944,12 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 38.5,
           "model_price": 2.6,
-          "current_odds": 3.55,
+          "current_odds": 3.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 28.07,
-          "ev": 36.54,
-          "qi": 78,
+          "devig_book_probability": 28.36,
+          "ev": 34.62,
+          "qi": 77,
           "price_qi": 93
         },
         {
@@ -41091,7 +41091,7 @@
           "current_odds": 4,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 24.92,
+          "devig_book_probability": 24.82,
           "ev": 23.46,
           "qi": 57,
           "price_qi": 87
@@ -41283,7 +41283,7 @@
           "current_odds": 2.12,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 47.01,
+          "devig_book_probability": 46.82,
           "ev": -35.17,
           "qi": 21,
           "price_qi": 3
@@ -42082,7 +42082,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "4f0c518545b0096c68326daf25bffc1e",
       "offered_market_keys": [
@@ -43376,7 +43376,7 @@
         "TAB",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "f1ab0f69832972a329243522ceaa7804",
       "offered_market_keys": [
@@ -44547,7 +44547,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "681895f294b670b4c7b14495dfb583bc",
       "offered_market_keys": [
@@ -45681,7 +45681,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "dfc5202cf1b8ae002cf952cd04f235b9",
       "offered_market_keys": [
@@ -47013,7 +47013,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "c1ec9a65f4b4cf74477b368a7d6282de",
       "offered_market_keys": [
@@ -48272,7 +48272,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "8ba93d190f1f934e33862a97a6353a6e",
       "offered_market_keys": [
@@ -49491,7 +49491,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "2f49dd8deae3079dc4eb2d634d18a99c",
       "offered_market_keys": [
@@ -49597,7 +49597,7 @@
           "current_odds": 7,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 14.15,
+          "devig_book_probability": 14.12,
           "ev": 169.23,
           "qi": 80,
           "price_qi": 100
@@ -49706,11 +49706,11 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 19.2,
           "model_price": 5.21,
-          "current_odds": 16.5,
+          "current_odds": 16,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 6,
-          "ev": 216.7,
+          "devig_book_probability": 6.18,
+          "ev": 207.1,
           "qi": 68,
           "price_qi": 100
         },
@@ -49981,7 +49981,7 @@
           "current_odds": 1.24,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 79.85,
+          "devig_book_probability": 79.7,
           "ev": -47.46,
           "qi": 25,
           "price_qi": 0
@@ -50757,7 +50757,7 @@
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "no_oddsapi_event",
       "rows": []
     },
@@ -51445,7 +51445,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "c9ef5822ee64fd5275f7c73251bb56c7",
       "offered_market_keys": [
@@ -52705,7 +52705,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T14:04:05.713Z",
+      "checked_at": "2026-06-19T14:08:45.450Z",
       "status": "checked",
       "oddsapi_event_id": "512ac18beb5aa936a59f7ea3e497ada2",
       "offered_market_keys": [
