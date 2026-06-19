@@ -304,33 +304,54 @@ h3 {
   margin: 18px 0 22px;
 }
 
-.strategy-grid article {
+.strategy-principle {
+  display: grid;
+  grid-template-columns: 38px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  min-height: 142px;
+  padding: 16px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.58);
+  background: rgba(255, 255, 255, 0.68);
 }
 
-.strategy-grid article {
-  min-height: 118px;
-  padding: 16px;
+.strategy-step {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--text);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 950;
+  line-height: 1;
 }
 
-.strategy-grid span,
 .strategy-grid small {
   color: var(--muted);
 }
 
-.strategy-grid span {
+.strategy-label {
   display: block;
   font-size: 11px;
   font-weight: 900;
   text-transform: uppercase;
+  color: var(--muted);
 }
 
 .strategy-grid strong {
   display: block;
-  margin: 8px 0;
-  font-size: 18px;
+  margin: 6px 0 8px;
+  font-size: clamp(17px, 1.25vw, 20px);
+  line-height: 1.14;
+}
+
+.strategy-grid small {
+  display: block;
+  font-size: 13px;
+  line-height: 1.42;
 }
 
 .strategy-card-grid {

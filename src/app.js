@@ -813,25 +813,37 @@ function renderWaltersStrategy() {
   if (!strategyContainer || !boardContainer) return;
 
   strategyContainer.innerHTML = `
-    <article>
-      <span>1. Build Number First</span>
-      <strong>Trust QI, not hype</strong>
-      <small>QI combines model edge, value, win chance, odds risk and data quality into one score.</small>
+    <article class="strategy-principle">
+      <span class="strategy-step">1</span>
+      <div>
+        <span class="strategy-label">Build Number First</span>
+        <strong>Trust QI, not hype</strong>
+        <small>QI rolls model edge, price value, win chance, odds risk and data quality into one score.</small>
+      </div>
     </article>
-    <article>
-      <span>2. Bet Early</span>
-      <strong>Take soft openers</strong>
-      <small>If QI is strong and price is still there, bet before the market corrects.</small>
+    <article class="strategy-principle">
+      <span class="strategy-step">2</span>
+      <div>
+        <span class="strategy-label">Bet Early</span>
+        <strong>Take soft openers</strong>
+        <small>If QI is strong and the price is still available, get in before the market corrects.</small>
+      </div>
     </article>
-    <article>
-      <span>3. Control Risk</span>
-      <strong>Big odds mean smaller stakes</strong>
-      <small>Longshots can show huge EV, but they do not get full stake unless QI and data quality are excellent.</small>
+    <article class="strategy-principle">
+      <span class="strategy-step">3</span>
+      <div>
+        <span class="strategy-label">Control Risk</span>
+        <strong>Big odds mean smaller stakes</strong>
+        <small>Longshots can show huge EV, but they only get proper stake when QI and data quality are both strong.</small>
+      </div>
     </article>
-    <article>
-      <span>4. Grade The Close</span>
-      <strong>T-6 to T-3 only</strong>
-      <small>Official CLV needs Betfair or Pinnacle inside T-6, T-5, T-4 or T-3. Anything earlier is an estimate.</small>
+    <article class="strategy-principle">
+      <span class="strategy-step">4</span>
+      <div>
+        <span class="strategy-label">Grade The Close</span>
+        <strong>T-6 to T-3 only</strong>
+        <small>Official CLV needs Betfair or Pinnacle inside T-6, T-5, T-4 or T-3. Anything earlier is only an estimate.</small>
+      </div>
     </article>
   `;
 
