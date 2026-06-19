@@ -753,23 +753,6 @@ function inferRiskFromOdds(odds) {
   return 'Low';
 }
 
-function strategyInclusionBasis(market) {
-  const qi = Number(market.metrics?.qi);
-  const odds = Number(market.current_odds);
-  const ev = Number(market.metrics?.ev);
-  const edge = getEdgeValue(market);
-  const reasons = [];
-
-  if (Number.isFinite(qi)) reasons.push(`QI ${qi}`);
-  if (Number.isFinite(ev) && ev > 0) reasons.push(`${formatEv(market)} EV`);
-  if (Number.isFinite(edge) && edge > 0) reasons.push(`${formatEdge(market)} edge`);
-  if (Number.isFinite(odds) && odds >= 3.5) reasons.push('high-price risk controlled');
-
-  return reasons.length
-    ? reasons.join(' | ')
-    : 'Included for review because it has a current model price and market price.';
-}
-
 function waltersAction(market) {
   const qi = Number(market.metrics?.qi);
   const odds = Number(market.current_odds);
@@ -881,7 +864,6 @@ function renderWaltersStrategy() {
               <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
               <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
               <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
-              <div class="strategy-basis-row"><dt>Basis</dt><dd>${strategyInclusionBasis(market)}</dd></div>
             </dl>
           </article>
         `;

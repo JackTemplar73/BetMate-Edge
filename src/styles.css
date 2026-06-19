@@ -373,16 +373,6 @@ h3 {
   margin-top: 18px;
 }
 
-.strategy-basis-row {
-  grid-column: 1 / -1;
-}
-
-.strategy-basis-row dd {
-  color: var(--text);
-  font-size: 13px;
-  line-height: 1.35;
-}
-
 .strategy-board .inline-section-heading h3,
 .strategy-board .inline-section-heading p {
   color: var(--text);
@@ -460,15 +450,6 @@ h3 {
   color: var(--text);
   font-size: 18px;
   line-height: 1.25;
-}
-
-.strategy-board-card .strategy-basis-row {
-  min-height: 0;
-}
-
-.strategy-board-card .strategy-basis-row dd {
-  font-size: 16px;
-  line-height: 1.4;
 }
 
 .table-section {
