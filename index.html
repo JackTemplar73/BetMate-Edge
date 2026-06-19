@@ -25,6 +25,7 @@
       <button class="view-tab" data-view-tab="highValue" type="button">High Value Bets</button>
       <button class="view-tab" data-view-tab="props" type="button">Player Props</button>
       <button class="view-tab" data-view-tab="scan" type="button">Market Summary</button>
+      <button class="view-tab" data-view-tab="strategy" type="button">Walters Strategy</button>
       <button class="view-tab" data-view-tab="history" data-owner-only type="button">Bet History <span data-history-count>0</span></button>
       <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
     </nav>
@@ -103,6 +104,17 @@
         </div>
       </div>
       <div data-sportsbook-scan></div>
+    </section>
+
+    <section class="table-section walters-section hidden" data-view-section="strategy">
+      <div class="section-heading">
+        <div>
+          <h2>Walters Betting Strategy</h2>
+          <p>Bet early when the model has a clear edge. Use the close as the report card.</p>
+        </div>
+      </div>
+      <div class="strategy-grid" data-walters-strategy></div>
+      <div class="strategy-board" data-walters-board></div>
     </section>
 
     <section class="table-section games-section" data-view-section="matches">

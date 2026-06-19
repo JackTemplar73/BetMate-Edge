@@ -661,6 +661,122 @@ function renderHighValueBets() {
   `).join('');
 }
 
+function getWaltersStrategyRows() {
+  return getCandidateRowsForFixtures(getUpcomingFixtures())
+    .filter((market) => Number(market.metrics?.qi) >= 60)
+    .sort(compareBetQuality)
+    .slice(0, 18);
+}
+
+function waltersAction(market) {
+  const qi = Number(market.metrics?.qi);
+  const odds = Number(market.current_odds);
+  const ev = Number(market.metrics?.ev);
+  const risk = String(market.quality?.risk || '').toLowerCase();
+  const highPrice = Number.isFinite(odds) && odds >= 3.5;
+
+  if (qi >= 82 && !highPrice && risk !== 'high') {
+    return {
+      label: 'Bet now',
+      className: 'positive',
+      stake: 'Normal stake',
+      note: 'Strong enough to take early if the listed price is still available.'
+    };
+  }
+
+  if (qi >= 70) {
+    return {
+      label: highPrice ? 'Small only' : 'Bet small',
+      className: 'watch',
+      stake: highPrice ? 'Quarter stake' : 'Half stake',
+      note: highPrice
+        ? 'Price is big enough to carry extra risk. Keep the stake small even when EV looks attractive.'
+        : 'Good edge, but not strong enough for a full stake.'
+    };
+  }
+
+  return {
+    label: 'Watch',
+    className: 'neutral-text',
+    stake: 'No auto bet',
+    note: Number.isFinite(ev) && ev > 20
+      ? 'EV is interesting, but QI is not high enough. Wait for better confirmation.'
+      : 'Not enough quality yet.'
+  };
+}
+
+function renderWaltersStrategy() {
+  const strategyContainer = document.querySelector('[data-walters-strategy]');
+  const boardContainer = document.querySelector('[data-walters-board]');
+  if (!strategyContainer || !boardContainer) return;
+
+  strategyContainer.innerHTML = `
+    <article>
+      <span>1. Build Number First</span>
+      <strong>Trust QI, not hype</strong>
+      <small>QI combines model edge, value, win chance, odds risk and data quality into one score.</small>
+    </article>
+    <article>
+      <span>2. Bet Early</span>
+      <strong>Take soft openers</strong>
+      <small>If QI is strong and price is still there, bet before the market corrects.</small>
+    </article>
+    <article>
+      <span>3. Control Risk</span>
+      <strong>Big odds mean smaller stakes</strong>
+      <small>Longshots can show huge EV, but they do not get full stake unless QI and data quality are excellent.</small>
+    </article>
+    <article>
+      <span>4. Grade The Close</span>
+      <strong>T-6 to T-3 only</strong>
+      <small>Official CLV needs Betfair or Pinnacle inside T-6, T-5, T-4 or T-3. Anything earlier is an estimate.</small>
+    </article>
+  `;
+
+  const rows = getWaltersStrategyRows();
+  if (!rows.length) {
+    boardContainer.innerHTML = '<p class="empty-note">No current selections clear the strategy board yet.</p>';
+    return;
+  }
+
+  boardContainer.innerHTML = `
+    <div class="inline-section-heading">
+      <div>
+        <h3>Current Board</h3>
+        <p>Ordered by QI first, then value and edge.</p>
+      </div>
+    </div>
+    <div class="strategy-card-grid">
+      ${rows.map((market) => {
+        const action = waltersAction(market);
+        return `
+          <article class="strategy-card">
+            <div class="card-topline">
+              <span class="qi-badge card-grade ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics?.qi}</span>
+              <span class="sub-cell date-one-line">${formatKickoff(market.kickoff_time_aest)}</span>
+            </div>
+            <p class="match-name">${market.match_name}</p>
+            <h3>${market.target_selection}</h3>
+            <div class="strategy-action ${action.className}">
+              <strong>${action.label}</strong>
+              <span>${action.stake}</span>
+            </div>
+            <dl>
+              <div class="book-stat-row"><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
+              <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
+              <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
+              <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
+              <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
+              <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
+            </dl>
+            <p class="strategy-note">${action.note}</p>
+          </article>
+        `;
+      }).join('')}
+    </div>
+  `;
+}
+
 function getHighValueCandidateRows() {
   return getCandidateRowsForFixtures(getUpcomingFixtures());
 }
@@ -2765,6 +2881,7 @@ function render() {
   renderSourceTable();
   renderSummary();
   renderHighValueBets();
+  renderWaltersStrategy();
   renderMatchModelHighlights();
   renderSportsbookScan();
   renderPlayerPropWatchlist();

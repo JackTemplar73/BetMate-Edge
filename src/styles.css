@@ -297,6 +297,81 @@ h3 {
   font-size: 13px;
 }
 
+.strategy-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 22px;
+}
+
+.strategy-grid article,
+.strategy-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.strategy-grid article {
+  min-height: 118px;
+  padding: 16px;
+}
+
+.strategy-grid span,
+.strategy-grid small,
+.strategy-note {
+  color: var(--muted);
+}
+
+.strategy-grid span {
+  display: block;
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.strategy-grid strong {
+  display: block;
+  margin: 8px 0;
+  font-size: 18px;
+}
+
+.strategy-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 14px;
+}
+
+.strategy-card {
+  padding: 16px;
+}
+
+.strategy-card h3 {
+  margin: 12px 0;
+  font-size: 18px;
+  line-height: 1.28;
+}
+
+.strategy-action {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 0;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  font-weight: 900;
+}
+
+.strategy-action span {
+  color: var(--text);
+  font-size: 13px;
+}
+
+.strategy-note {
+  margin: 12px 0 0;
+  line-height: 1.45;
+}
+
 .table-section {
   padding: 18px;
   margin-bottom: 22px;
@@ -1751,6 +1826,10 @@ dd {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .strategy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .wide {
     grid-column: span 2;
   }
@@ -1796,6 +1875,10 @@ dd {
   }
 
   .history-result-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-grid {
     grid-template-columns: 1fr;
   }
 
