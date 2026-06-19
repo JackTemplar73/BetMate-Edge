@@ -411,6 +411,16 @@ h3 {
   color: var(--muted);
 }
 
+.walters-section,
+.walters-section * {
+  color: #000 !important;
+}
+
+.walters-section .strategy-step {
+  border-color: #000;
+  background: #fff;
+}
+
 .sort-controls,
 .segmented,
 .view-tabs {
