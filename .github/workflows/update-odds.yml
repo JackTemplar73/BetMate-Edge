@@ -6,9 +6,9 @@ on:
     branches:
       - main
   schedule:
-    # Wake every 5 minutes; scripts/update_odds.mjs decides whether this run
-    # should refresh now based on kickoff proximity.
-    - cron: '*/5 * * * *'
+    # Wake as often as GitHub allows; scripts/update_odds.mjs only marks CLV
+    # official when Betfair/Pinnacle is captured inside T-6, T-5, T-4 or T-3.
+    - cron: '* * * * *'
 
 permissions:
   contents: write

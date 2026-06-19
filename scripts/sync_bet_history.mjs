@@ -5,7 +5,8 @@ const DATA_PATH = new URL('../data/weekend_payload.json', import.meta.url);
 const HISTORY_PATH = new URL('../data/bet_history.json', import.meta.url);
 const EMBEDDED_HISTORY_PATH = new URL('../src/embeddedBetHistory.js', import.meta.url);
 const MIN_TRACKED_QI = 70;
-const CLOSING_WINDOW_MS = 30 * 60 * 1000;
+const FINAL_CLOSE_MIN_WINDOW_MS = 3 * 60 * 1000;
+const FINAL_CLOSE_MAX_WINDOW_MS = 6 * 60 * 1000;
 
 const TEAM_ALIASES = new Map([
   ['usa', 'united states'],
@@ -92,7 +93,7 @@ function hasFreshClosingPrice(marketItem, kickoff) {
   }
 
   const delta = kickoff.getTime() - checkedAt;
-  if (delta < 0 || delta > CLOSING_WINDOW_MS) {
+  if (delta < FINAL_CLOSE_MIN_WINDOW_MS || delta > FINAL_CLOSE_MAX_WINDOW_MS) {
     return null;
   }
 
@@ -201,7 +202,7 @@ async function main() {
         entry.estimated_closing_source = null;
       } else if (now >= kickoff && entry.closing_odds === null) {
         entry.closing_status = 'missing_fresh_close';
-        entry.closing_source = 'No confirmed live check in the final 30 minutes before kickoff';
+        entry.closing_source = 'No confirmed live check in the official T-6 to T-3 window before kickoff';
         entry.clv_percent = null;
         entry.estimated_closing_odds = currentOdds;
         entry.estimated_clv_percent = clvPercent(entry.opening_odds, currentOdds);

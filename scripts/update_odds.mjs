@@ -59,8 +59,10 @@ const FOOTYSTATS_HOME_URL = 'https://footystats.org/';
 const MIN_TRACKED_QI = 70;
 const BASELINE_STALE_MS = 30 * 60 * 1000;
 const TARGET_CLOSING_MINUTES = 5;
-const FINAL_CLOSE_PREP_WINDOW_MS = 10 * 60 * 1000;
-const CLOSING_WINDOW_MS = 7 * 60 * 1000;
+const FINAL_CLOSE_CAPTURE_MINUTES = [6, 5, 4, 3];
+const FINAL_CLOSE_MIN_WINDOW_MS = 3 * 60 * 1000;
+const FINAL_CLOSE_MAX_WINDOW_MS = 6 * 60 * 1000;
+const FINAL_CLOSE_PREP_WINDOW_MS = 8 * 60 * 1000;
 const LATEST_PRE_KICKOFF_WINDOW_MS = 4 * 60 * 60 * 1000;
 const MAX_CLV_PRICE_RATIO = 3;
 const RESULT_SETTLEMENT_BUFFER_MS = 3 * 60 * 60 * 1000;
@@ -527,7 +529,7 @@ function buildWaltersDiscipline(history = []) {
     close_reference_rate_percent: Number((referenceRate * 100).toFixed(1)),
     market_profiles,
     market_adjustments,
-    note: 'Walters discipline: profit matters, but process is judged by early price capture and beating a sharp T-5 close. Markets without close validation do not get result-only upgrades.'
+    note: 'Walters discipline: profit matters, but process is judged by early price capture and beating a sharp T-6 to T-3 close. Markets without close validation do not get result-only upgrades.'
   };
 }
 
@@ -570,13 +572,13 @@ function shouldRefresh(dataset, now = getNow()) {
     }))
     .filter((fixture) => fixture.kickoff > now);
 
-  const insideFinalClosePrep = upcoming.some((fixture) => {
+  const insideFinalCloseCapture = upcoming.some((fixture) => {
     const untilKickoff = fixture.kickoff - now;
-    return untilKickoff >= 0 && untilKickoff <= FINAL_CLOSE_PREP_WINDOW_MS;
+    return untilKickoff >= FINAL_CLOSE_MIN_WINDOW_MS && untilKickoff <= FINAL_CLOSE_MAX_WINDOW_MS;
   });
 
-  if (insideFinalClosePrep) {
-    return { refresh: true, cadence: 'final-10-minute-sharp-close-capture' };
+  if (insideFinalCloseCapture) {
+    return { refresh: true, cadence: 'final-t6-t3-sharp-close-capture' };
   }
 
   const insideOneHour = upcoming.some((fixture) => {
@@ -1318,7 +1320,7 @@ function fixtureDataQualityAudit(fixture, nowIso) {
   const hasXg = Number.isFinite(Number(fixture.post_match_xg?.home)) && Number.isFinite(Number(fixture.post_match_xg?.away));
   const isComplete = kickoff <= now;
   const untilKickoffMs = kickoff.getTime() - now.getTime();
-  const insideFinalClosePrep = untilKickoffMs >= 0 && untilKickoffMs <= FINAL_CLOSE_PREP_WINDOW_MS;
+  const insideFinalCloseCapture = untilKickoffMs >= FINAL_CLOSE_MIN_WINDOW_MS && untilKickoffMs <= FINAL_CLOSE_MAX_WINDOW_MS;
   const checkedSharpRows = scanRows.filter((row) => SHARP_CLOSING_BOOKS.has(normalise(row.bookmaker_key || row.bookie || row.au_bookie)));
   const sharpCheckedTimes = checkedSharpRows
     .map((row) => Date.parse(row.checked_at || fixture.market_scan?.checked_at || fixture.odds_last_checked || ''))
@@ -1328,11 +1330,11 @@ function fixtureDataQualityAudit(fixture, nowIso) {
     ? Math.round((kickoff.getTime() - latestSharpCheckedAt) / 60000)
     : null;
   const hasT5SharpCapture = Number.isFinite(sharpMinutesBeforeKickoff)
-    && sharpMinutesBeforeKickoff >= 0
-    && sharpMinutesBeforeKickoff <= Math.ceil(CLOSING_WINDOW_MS / 60000);
+    && sharpMinutesBeforeKickoff >= Math.ceil(FINAL_CLOSE_MIN_WINDOW_MS / 60000)
+    && sharpMinutesBeforeKickoff <= Math.ceil(FINAL_CLOSE_MAX_WINDOW_MS / 60000);
   const closingLineStatus = hasT5SharpCapture
     ? 'Sharp close captured'
-    : insideFinalClosePrep
+    : insideFinalCloseCapture
       ? 'Final close capture due now'
       : kickoff > now
         ? 'Waiting for final close window'
@@ -1340,7 +1342,7 @@ function fixtureDataQualityAudit(fixture, nowIso) {
   const repairActions = [];
   if (!pricesFresh) repairActions.push('Refresh odds and AU book prices.');
   if (!hasSharpReference) repairActions.push('Retry Betfair/Pinnacle market matching for sharp close coverage.');
-  if (insideFinalClosePrep && !hasT5SharpCapture) repairActions.push(`Capture Betfair/Pinnacle around T-${TARGET_CLOSING_MINUTES}; fall back to best available soft-book estimate only if sharp source is missing.`);
+  if (insideFinalCloseCapture && !hasT5SharpCapture) repairActions.push(`Capture Betfair/Pinnacle at T-6, T-5, T-4 and T-3; fall back to latest sharp estimate only if the official window is missed.`);
   if (!hasLineups && untilKickoffMs <= LINEUP_CHECK_WINDOW_MS && untilKickoffMs >= 0) repairActions.push('Retry confirmed starting XI and bench from match-centre sources.');
   if (!hasProjectedLineups && !hasLineups && kickoff > now) repairActions.push('Load projected XI, bench, rest and travel context from the World Cup fixture feed.');
   if (!hasSubs && hasLineups && untilKickoffMs <= LINEUP_CHECK_WINDOW_MS && untilKickoffMs >= 0) repairActions.push('Retry substitute bench feed.');
@@ -1371,7 +1373,7 @@ function fixtureDataQualityAudit(fixture, nowIso) {
     price_age_minutes: Number.isFinite(minutesSincePriceCheck) ? minutesSincePriceCheck : null,
     closing_line_status: closingLineStatus,
     target_close_minutes_before_kickoff: TARGET_CLOSING_MINUTES,
-    sharp_close_capture_window_minutes: Math.ceil(CLOSING_WINDOW_MS / 60000),
+    sharp_close_capture_window_minutes: FINAL_CLOSE_CAPTURE_MINUTES,
     repair_actions: repairActions,
     components,
     note: rating >= 80
@@ -2558,12 +2560,12 @@ function wasPriceChecked(marketItem) {
   return ['checked_current', 'updated', 'added_from_oddsapi', 'confirmed_rendered_site'].includes(marketItem.odds_refresh_status);
 }
 
-function preKickoffSnapshot(marketItem, kickoff, maxWindowMs) {
+function preKickoffSnapshot(marketItem, kickoff, maxWindowMs, minWindowMs = 0) {
   const checkedAt = checkedAtTime(marketItem);
   if (!Number.isFinite(checkedAt) || !wasPriceChecked(marketItem)) return null;
 
   const delta = kickoff.getTime() - checkedAt;
-  if (delta < 0 || delta > maxWindowMs) return null;
+  if (delta < minWindowMs || delta > maxWindowMs) return null;
 
   return {
     checkedAt: new Date(checkedAt),
@@ -2614,10 +2616,11 @@ function referenceMarketCandidates(fixture, marketItem) {
 
 function preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, maxWindowMs, openingOdds, options = {}) {
   const targetMinute = Number.isFinite(options.targetMinute) ? options.targetMinute : null;
+  const minWindowMs = Number.isFinite(options.minWindowMs) ? options.minWindowMs : 0;
   return referenceMarketCandidates(fixture, marketItem)
     .map((candidate) => ({
       ...candidate,
-      snapshot: preKickoffSnapshot(candidate.marketItem, kickoff, maxWindowMs),
+      snapshot: preKickoffSnapshot(candidate.marketItem, kickoff, maxWindowMs, minWindowMs),
       odds: Number.parseFloat(candidate.marketItem.current_odds)
     }))
     .filter((candidate) => !options.sharpOnly || candidate.isSharp)
@@ -2634,16 +2637,18 @@ function preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, maxWin
 }
 
 function preferredClosingMarket(fixture, marketItem, kickoff, openingOdds) {
-  return preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, CLOSING_WINDOW_MS, openingOdds, {
+  return preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, FINAL_CLOSE_MAX_WINDOW_MS, openingOdds, {
     sharpOnly: true,
-    targetMinute: 5
+    targetMinute: TARGET_CLOSING_MINUTES,
+    minWindowMs: FINAL_CLOSE_MIN_WINDOW_MS
   });
 }
 
 function preferredSoftClosingMarket(fixture, marketItem, kickoff, openingOdds) {
-  return preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, CLOSING_WINDOW_MS, openingOdds, {
+  return preferredPreKickoffReferenceMarket(fixture, marketItem, kickoff, FINAL_CLOSE_MAX_WINDOW_MS, openingOdds, {
     sharpOnly: false,
-    targetMinute: 5
+    targetMinute: TARGET_CLOSING_MINUTES,
+    minWindowMs: FINAL_CLOSE_MIN_WINDOW_MS
   });
 }
 
@@ -2734,7 +2739,7 @@ function hasFreshClosingPrice(marketItem, kickoff) {
   }
 
   const delta = kickoff.getTime() - checkedAt;
-  if (delta < 0 || delta > CLOSING_WINDOW_MS) {
+  if (delta < FINAL_CLOSE_MIN_WINDOW_MS || delta > FINAL_CLOSE_MAX_WINDOW_MS) {
     return null;
   }
 
@@ -2749,7 +2754,7 @@ function capturedInsideClosingWindow(entry, kickoff) {
   if (!Number.isFinite(capturedAt)) return false;
 
   const delta = kickoff.getTime() - capturedAt;
-  return delta >= 0 && delta <= CLOSING_WINDOW_MS;
+  return delta >= FINAL_CLOSE_MIN_WINDOW_MS && delta <= FINAL_CLOSE_MAX_WINDOW_MS;
 }
 
 function downgradeLegacyClosingOutsideWindow(entry, kickoff) {
@@ -2757,12 +2762,12 @@ function downgradeLegacyClosingOutsideWindow(entry, kickoff) {
 
   entry.estimated_closing_odds = entry.closing_odds;
   entry.estimated_clv_percent = entry.clv_percent;
-  entry.estimated_closing_source = 'Estimated from nearest saved price; previous closing capture was outside the final 5-minute window.';
+  entry.estimated_closing_source = 'Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.';
   entry.closing_odds = null;
   entry.closing_qi = null;
   entry.closing_bookie = null;
   entry.closing_captured_at = null;
-  entry.closing_source = 'No Betfair/Pinnacle close captured around 5 minutes before game time';
+  entry.closing_source = 'No Betfair/Pinnacle close captured in the official T-6 to T-3 window';
   entry.closing_status = 'missing_sharp_close';
   entry.closing_reference_type = 'missing_sharp_market';
   entry.clv_percent = null;
@@ -2886,7 +2891,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         first_seen_at: nowIso,
         save_rule: 'Saved immediately when the selection first cleared QI 70+ before kickoff.',
         opening_source: `${marketItem.au_bookie || 'Book'} price when the agent first saved the qualified selection.`,
-        clv_benchmark_rule: 'Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.',
+        clv_benchmark_rule: 'Official CLV uses Betfair or Pinnacle in the T-6 to T-3 window before game time; anything earlier is a latest sharp estimate only.',
         model_data_quality_rating: marketItem.model_data_quality_rating ?? fixture.model_data_quality?.rating ?? null,
         model_data_quality_band: marketItem.model_data_quality_band ?? fixture.model_data_quality?.band ?? null,
         opening_odds: currentOdds,
@@ -2920,7 +2925,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       entry.settlement_source = entry.settlement_source || null;
       entry.save_rule = entry.save_rule || 'Saved immediately when the selection first cleared QI 70+ before kickoff.';
       entry.opening_source = entry.opening_source || `${entry.au_bookie || marketItem.au_bookie || 'Book'} price when the agent first saved the qualified selection.`;
-      entry.clv_benchmark_rule = entry.clv_benchmark_rule || 'Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.';
+      entry.clv_benchmark_rule = entry.clv_benchmark_rule || 'Official CLV uses Betfair or Pinnacle in the T-6 to T-3 window before game time; anything earlier is a latest sharp estimate only.';
       entry.walters_process_note = metrics.walters_process_note || entry.walters_process_note || null;
       entry.current_walters_qi_adjustment = metrics.walters_qi_adjustment;
       entry.high_price_qi_note = metrics.high_price_qi_note || entry.high_price_qi_note || null;
@@ -2931,7 +2936,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       if (entry.closing_status === 'missing_fresh_close') {
         entry.closing_status = 'missing_sharp_close';
         entry.closing_reference_type = 'missing_sharp_market';
-        entry.closing_source = 'No Betfair/Pinnacle close captured around 5 minutes before game time';
+        entry.closing_source = 'No Betfair/Pinnacle close captured in the official T-6 to T-3 window';
       }
       entry.latest_pre_kickoff_odds = entry.latest_pre_kickoff_odds ?? null;
       entry.latest_pre_kickoff_at = entry.latest_pre_kickoff_at ?? null;
@@ -3018,13 +3023,13 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
           entry.latest_pre_kickoff_source = `${softClosingMarket.reference} soft-book check ${softClosingMarket.snapshot.minutesBeforeKickoff} min before game time`;
           if (now >= kickoff && entry.closing_odds === null) {
             entry.closing_status = 'soft_close_estimate';
-            entry.closing_source = 'No Betfair/Pinnacle close captured around 5 minutes before game time';
+            entry.closing_source = 'No Betfair/Pinnacle close captured in the official T-6 to T-3 window';
             entry.closing_reference_type = 'soft_book_estimate';
             entry.clv_percent = null;
             entry.estimated_closing_odds = softClosingOdds;
             entry.estimated_clv_percent = clvPercent(entry.opening_odds, softClosingOdds);
             entry.estimated_qi = softClosingMetrics.qi;
-            entry.estimated_closing_source = `${softClosingMarket.reference} final-5-minute soft-book estimate; official CLV waits for Betfair/Pinnacle.`;
+            entry.estimated_closing_source = `${softClosingMarket.reference} latest estimate; not official CLV without Betfair/Pinnacle inside T-6 to T-3.`;
           }
         } else if (now >= kickoff && entry.closing_odds === null) {
           const latestReferenceOdds = Number.parseFloat(entry.latest_pre_kickoff_odds);
@@ -3037,14 +3042,14 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
               : null;
           if (!Number.isFinite(estimatedOdds)) {
             entry.closing_status = 'missing_sharp_close';
-            entry.closing_source = 'No Betfair/Pinnacle close captured around 5 minutes before game time';
+            entry.closing_source = 'No Betfair/Pinnacle close captured in the official T-6 to T-3 window';
             entry.closing_reference_type = 'missing_sharp_market';
             entry.clv_percent = null;
             byId.set(id, entry);
             continue;
           }
           entry.closing_status = 'latest_pre_kickoff_estimate';
-          entry.closing_source = 'No Betfair/Pinnacle close captured around 5 minutes before game time';
+          entry.closing_source = 'No Betfair/Pinnacle close captured in the official T-6 to T-3 window';
           entry.closing_reference_type = 'latest_estimate';
           entry.clv_percent = null;
           entry.estimated_closing_odds = estimatedOdds;
@@ -3061,7 +3066,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
           entry.current_ev = estimatedMetrics.ev;
           entry.current_qi = estimatedMetrics.qi;
           entry.estimated_closing_source = entry.estimated_closing_source
-            || `Latest saved ${latestReferenceBook} price before game time; not official CLV.`;
+            || `Latest saved ${latestReferenceBook} price before game time; latest sharp estimate only, not official CLV.`;
         }
       }
 

@@ -2416,7 +2416,7 @@ function formatHistoryClv(bet) {
   }
 
   if (hasNumericValue(bet.latest_pre_kickoff_clv_percent)) {
-    return `<span class="primary-cell">Latest move ${formatClv(bet.latest_pre_kickoff_clv_percent)}</span><span class="sub-cell warning-text">Not official CLV unless Betfair/Pinnacle close is captured</span>`;
+    return `<span class="primary-cell">Latest move ${formatClv(bet.latest_pre_kickoff_clv_percent)}</span><span class="sub-cell warning-text">Not official CLV unless Betfair/Pinnacle is captured at T-6 to T-3</span>`;
   }
 
   if (hasNumericValue(bet.estimated_clv_percent)) {
@@ -2525,14 +2525,14 @@ function clvClass(bet) {
 
 function formatClosingDetail(bet) {
   if (bet.closing_status === 'latest_pre_kickoff') {
-    return '<span class="sub-cell warning-text">Latest pre-kickoff line captured, but no final 5-minute close.</span>';
+    return '<span class="sub-cell warning-text">Latest pre-kickoff line captured, but no official T-6 to T-3 sharp close.</span>';
   }
 
   if (bet.closing_status === 'missing_fresh_close') {
-    return '<span class="sub-cell warning-text">No confirmed live price was captured in the final 5 minutes before kickoff.</span>';
+    return '<span class="sub-cell warning-text">No confirmed live price was captured in the official T-6 to T-3 window before kickoff.</span>';
   }
 
-  if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture a live price in the final 5 minutes before kickoff</span>';
+  if (!bet.closing_captured_at) return '<span class="sub-cell">Will capture a sharp live price at T-6, T-5, T-4 and T-3 before kickoff</span>';
 
   return `<span class="sub-cell confirmed-text">${formatter.format(new Date(bet.closing_captured_at))} | ${bet.closing_bookie || 'Confirmed'} live price before kickoff</span>`;
 }
