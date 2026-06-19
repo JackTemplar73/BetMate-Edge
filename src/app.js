@@ -705,9 +705,26 @@ function getWaltersStrategyRows() {
     });
 
   return [...fixtureRows, ...getCandidateRowsForFixtures(getUpcomingFixtures()), ...historyRows]
+    .map((market) => {
+      const truePrice = Number(market.true_price);
+      const currentOdds = Number(market.current_odds);
+      const qi = Number(market.metrics?.qi ?? market.qi ?? market.current_qi ?? market.opening_qi);
+      const ev = Number(market.metrics?.ev ?? market.ev ?? market.current_ev ?? market.opening_ev);
+      return {
+        ...market,
+        true_price: truePrice,
+        current_odds: currentOdds,
+        metrics: {
+          ...market.metrics,
+          qi,
+          ev
+        },
+        quality: market.quality || { risk: inferRiskFromOdds(currentOdds) }
+      };
+    })
     .filter(hasModelPrice)
     .filter(hasMarketOdds)
-    .filter((market) => Number(market.metrics?.qi) >= 60)
+    .filter((market) => Number.isFinite(Number(market.metrics?.qi)) && Number(market.metrics.qi) >= 60)
     .filter(dedupeStrategyMarket())
     .sort(compareBetQuality)
     .slice(0, 18);
