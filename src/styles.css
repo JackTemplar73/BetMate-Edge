@@ -306,7 +306,11 @@ h3 {
 
 .walters-section > .section-heading h2,
 .walters-section > .section-heading p {
-  color: #000;
+  color: var(--text);
+}
+
+.walters-section > .section-heading p {
+  color: var(--muted);
 }
 
 .strategy-principle {
