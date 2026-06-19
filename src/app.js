@@ -818,7 +818,7 @@ function renderWaltersStrategy() {
       <div>
         <span class="strategy-label">Build Number First</span>
         <strong>Trust QI, not hype</strong>
-        <small>QI rolls model edge, price value, win chance, odds risk and data quality into one score.</small>
+        <small>QI is the main guide. It blends edge, price value, win chance, odds risk and data quality.</small>
       </div>
     </article>
     <article class="strategy-principle">
@@ -826,7 +826,7 @@ function renderWaltersStrategy() {
       <div>
         <span class="strategy-label">Bet Early</span>
         <strong>Take soft openers</strong>
-        <small>If QI is strong and the price is still available, get in before the market corrects.</small>
+        <small>When QI is strong and the price is still there, bet before the market catches up.</small>
       </div>
     </article>
     <article class="strategy-principle">
@@ -834,7 +834,7 @@ function renderWaltersStrategy() {
       <div>
         <span class="strategy-label">Control Risk</span>
         <strong>Big odds mean smaller stakes</strong>
-        <small>Longshots can show huge EV, but they only get proper stake when QI and data quality are both strong.</small>
+        <small>Big-price bets can look great on EV. They still need smaller stakes unless QI is excellent.</small>
       </div>
     </article>
     <article class="strategy-principle">
@@ -842,7 +842,7 @@ function renderWaltersStrategy() {
       <div>
         <span class="strategy-label">Grade The Close</span>
         <strong>T-6 to T-3 only</strong>
-        <small>Official CLV needs Betfair or Pinnacle inside T-6, T-5, T-4 or T-3. Anything earlier is only an estimate.</small>
+        <small>Official CLV needs Betfair or Pinnacle inside the final 6 to 3 minutes. Earlier prices are estimates.</small>
       </div>
     </article>
   `;
