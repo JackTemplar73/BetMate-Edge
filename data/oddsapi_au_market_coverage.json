@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-19T11:23:12.683Z",
+  "checked_at": "2026-06-19T13:45:46.386Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -11,9 +11,9 @@
   "events_checked": 31,
   "market_counts": {
     "h2h": 65,
-    "h2h_3_way": 65,
     "btts": 26,
     "double_chance": 22,
+    "h2h_3_way": 65,
     "h2h_lay": 13,
     "draw_no_bet": 11,
     "alternate_spreads": 12,
@@ -529,28 +529,6 @@
       "matched_rows": 37
     },
     {
-      "match_name": "Scotland vs Morocco",
-      "status": "checked",
-      "bookmakers": [
-        "PointsBet (AU)",
-        "SportsBet",
-        "Betfair",
-        "Neds",
-        "TAB"
-      ],
-      "offered_market_keys": [
-        "alternate_spreads",
-        "alternate_totals",
-        "btts",
-        "double_chance",
-        "draw_no_bet",
-        "h2h",
-        "h2h_3_way",
-        "h2h_lay"
-      ],
-      "matched_rows": 35
-    },
-    {
       "match_name": "United States vs Australia",
       "status": "checked",
       "bookmakers": [
@@ -573,12 +551,12 @@
       "matched_rows": 28
     },
     {
-      "match_name": "Turkey vs Paraguay",
+      "match_name": "Scotland vs Morocco",
       "status": "checked",
       "bookmakers": [
+        "PointsBet (AU)",
         "SportsBet",
         "Betfair",
-        "PointsBet (AU)",
         "Neds",
         "TAB"
       ],
@@ -614,6 +592,28 @@
         "h2h_lay"
       ],
       "matched_rows": 32
+    },
+    {
+      "match_name": "Turkey vs Paraguay",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Betfair",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 35
     },
     {
       "match_name": "Netherlands vs Sweden",
