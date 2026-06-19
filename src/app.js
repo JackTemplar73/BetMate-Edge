@@ -9,6 +9,8 @@ const state = {
   playerPropSortMode: 'qi',
   historyResultFilter: 'all',
   resultsResultFilter: 'won_lost',
+  resultsQiFilter: 70,
+  resultsPriceFilter: 'all',
   modelMinProbability: 0,
   modelMaxFairPrice: Infinity,
   lastRefresh: null,
@@ -1918,9 +1920,34 @@ function filterResultsRowsByResult(rows) {
   return settledRows;
 }
 
-function renderResultsResultFilterControls() {
+function filterResultsRowsByQiAndPrice(rows) {
+  return rows.filter((bet) => {
+    const qi = getClosingQi(bet);
+    const price = Number.parseFloat(bet.opening_odds);
+    const minQi = Number(state.resultsQiFilter);
+    const passesQi = !Number.isFinite(minQi) || Number(qi) >= minQi;
+    let passesPrice = true;
+
+    if (state.resultsPriceFilter === '5plus') {
+      passesPrice = Number.isFinite(price) && price >= 5;
+    } else if (state.resultsPriceFilter !== 'all') {
+      const maxPrice = Number(state.resultsPriceFilter);
+      passesPrice = Number.isFinite(price) && price <= maxPrice;
+    }
+
+    return passesQi && passesPrice;
+  });
+}
+
+function renderResultsFilterControls() {
   document.querySelectorAll('[data-results-result-filter]').forEach((button) => {
     button.classList.toggle('active', button.dataset.resultsResultFilter === state.resultsResultFilter);
+  });
+  document.querySelectorAll('[data-results-qi-filter]').forEach((button) => {
+    button.classList.toggle('active', Number(button.dataset.resultsQiFilter) === Number(state.resultsQiFilter));
+  });
+  document.querySelectorAll('[data-results-price-filter]').forEach((button) => {
+    button.classList.toggle('active', button.dataset.resultsPriceFilter === state.resultsPriceFilter);
   });
 }
 
@@ -2040,9 +2067,9 @@ function renderResults() {
   if (!tableBody) return;
 
   const allRows = getQualifiedHistoryBets().sort(sortHistoryRows);
-  const rows = filterResultsRowsByResult(allRows);
+  const rows = filterResultsRowsByQiAndPrice(filterResultsRowsByResult(allRows));
   renderResultsSummary(rows);
-  renderResultsResultFilterControls();
+  renderResultsFilterControls();
   if (rows.length === 0) {
     tableBody.innerHTML = '<tr><td colspan="11">No completed QI 70+ bets match this results filter.</td></tr>';
     return;
@@ -2655,10 +2682,22 @@ function bindHistoryResultFilters() {
   });
 }
 
-function bindResultsResultFilters() {
+function bindResultsFilters() {
   document.querySelectorAll('[data-results-result-filter]').forEach((button) => {
     button.addEventListener('click', () => {
       state.resultsResultFilter = button.dataset.resultsResultFilter;
+      renderResults();
+    });
+  });
+  document.querySelectorAll('[data-results-qi-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.resultsQiFilter = Number(button.dataset.resultsQiFilter);
+      renderResults();
+    });
+  });
+  document.querySelectorAll('[data-results-price-filter]').forEach((button) => {
+    button.addEventListener('click', () => {
+      state.resultsPriceFilter = button.dataset.resultsPriceFilter;
       renderResults();
     });
   });
@@ -2749,7 +2788,7 @@ Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
     bindSectionSortControls();
     bindModelFilters();
     bindHistoryResultFilters();
-    bindResultsResultFilters();
+    bindResultsFilters();
     bindRefreshOdds();
     bindViewTabs();
     bindMatchDetailTabs();
