@@ -2044,7 +2044,7 @@ function renderResults() {
   renderResultsSummary(rows);
   renderResultsResultFilterControls();
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="10">No completed QI 70+ bets match this results filter.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="11">No completed QI 70+ bets match this results filter.</td></tr>';
     return;
   }
 
@@ -2053,6 +2053,7 @@ function renderResults() {
       <td>${bet.match_name}</td>
       <td><span class="primary-cell">${bet.target_selection}</span>${renderMarketSubCell(bet.market_matrix)}</td>
       <td><span class="pill">${bet.au_bookie}</span></td>
+      <td>${formatMarketPriceCell(bet)}</td>
       <td>${formatBetSavedCell(bet)}</td>
       <td>${formatOpeningLineOnly(bet)}</td>
       <td>${formatLatestOrClosingPrice(bet)}</td>
@@ -2062,6 +2063,13 @@ function renderResults() {
       <td>${formatSettledAt(bet)}</td>
     </tr>
   `).join('');
+}
+
+function formatMarketPriceCell(bet) {
+  return `
+    <span class="primary-cell">${formatHistoryPrice(bet.opening_odds)}</span>
+    <span class="sub-cell">${bet.au_bookie || 'Book price'}</span>
+  `;
 }
 
 function renderResultsSummary(rows) {
