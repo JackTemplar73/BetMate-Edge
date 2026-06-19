@@ -2217,10 +2217,10 @@ function formatLatestOrClosingPrice(bet) {
   }
 
   if (hasNumericValue(bet.latest_pre_kickoff_odds)) {
-    const isSoftCloseEstimate = ['soft_close_estimate', 'latest_pre_kickoff_estimate'].includes(String(bet.closing_status || ''));
+    const estimateLabel = latestEstimateLabel(bet);
     return `
       ${formatLinePriceWithQi(bet.latest_pre_kickoff_odds, bet)}
-      <span class="sub-cell warning-text">${isSoftCloseEstimate ? 'Soft-book estimate' : 'Latest pre-game'}${bet.latest_pre_kickoff_bookie ? ` | ${bet.latest_pre_kickoff_bookie}` : ''}</span>
+      <span class="sub-cell warning-text">${estimateLabel}${bet.latest_pre_kickoff_bookie ? ` | ${bet.latest_pre_kickoff_bookie}` : ''}</span>
       ${formatCapturedAt(bet.latest_pre_kickoff_at)}
       ${formatCurrentSignal(bet)}
     `;
@@ -2250,6 +2250,20 @@ function estimatedSourceLabel(bet) {
   if (source.includes('Neds')) return ' | Neds';
   if (source.includes('PointsBet')) return ' | PointsBet';
   return '';
+}
+
+function isSharpReferenceName(value) {
+  const source = String(value || '').toLowerCase();
+  return source.includes('betfair') || source.includes('pinnacle');
+}
+
+function latestEstimateLabel(bet) {
+  const status = String(bet.closing_status || '');
+  const isEstimate = ['soft_close_estimate', 'latest_pre_kickoff_estimate'].includes(status);
+  if (!isEstimate) return 'Latest pre-game';
+  return isSharpReferenceName(bet.latest_pre_kickoff_bookie)
+    ? 'Latest sharp estimate'
+    : 'Soft-book estimate';
 }
 
 function formatLinePriceWithQi(price, bet) {
