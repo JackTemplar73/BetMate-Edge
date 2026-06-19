@@ -852,19 +852,16 @@ function renderWaltersStrategy() {
       ${rows.map((market) => {
         const action = waltersAction(market);
         return `
-          <article class="high-value-card strategy-card">
+          <article class="high-value-card">
             <div class="card-topline">
               <span class="qi-badge card-grade ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics?.qi}</span>
               <span class="sub-cell date-one-line">${formatKickoff(market.kickoff_time_aest)}</span>
             </div>
-            <div class="strategy-action ${action.className}">
-              <strong>${action.label}</strong>
-              <span>${action.stake}</span>
-            </div>
             <p class="match-name">${market.match_name}</p>
             <h3>${market.target_selection}</h3>
-            <p class="strategy-basis">${strategyInclusionBasis(market)}</p>
             <dl>
+              <div><dt>Call</dt><dd class="${action.className}">${action.label}</dd></div>
+              <div><dt>Stake</dt><dd>${action.stake}</dd></div>
               <div class="book-stat-row"><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
               <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
               <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
@@ -872,8 +869,8 @@ function renderWaltersStrategy() {
               <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
               <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
               <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>
+              <div class="strategy-basis-row"><dt>Basis</dt><dd>${strategyInclusionBasis(market)}</dd></div>
             </dl>
-            <p class="strategy-note">${action.note}</p>
           </article>
         `;
       }).join('')}

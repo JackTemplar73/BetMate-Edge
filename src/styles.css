@@ -316,8 +316,7 @@ h3 {
 }
 
 .strategy-grid span,
-.strategy-grid small,
-.strategy-note {
+.strategy-grid small {
   color: var(--muted);
 }
 
@@ -341,46 +340,14 @@ h3 {
   margin-top: 16px;
 }
 
-.strategy-action {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  align-items: center;
-  margin: 12px 0;
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.62);
-  font-weight: 900;
+.strategy-basis-row {
+  grid-column: 1 / -1;
 }
 
-.strategy-action strong {
-  font-size: 18px;
-}
-
-.strategy-action span {
+.strategy-basis-row dd {
   color: var(--text);
   font-size: 13px;
-}
-
-.strategy-basis {
-  margin: 0 0 14px;
-  padding: 10px 12px;
-  border-left: 4px solid var(--accent);
-  background: rgba(255, 255, 255, 0.48);
-  color: var(--text);
-  font-size: 13px;
-  font-weight: 800;
-  line-height: 1.38;
-}
-
-.strategy-note {
-  margin: 12px 0 0;
-  line-height: 1.45;
-}
-
-.strategy-card dl {
-  margin-top: auto;
+  line-height: 1.35;
 }
 
 .table-section {
