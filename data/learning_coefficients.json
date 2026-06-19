@@ -1,27 +1,26 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T01:35:47.652Z",
+  "updated_at": "2026-06-19T01:41:20.712Z",
   "sample_size": 23,
   "confidence": "developing",
   "adjustments": {
-    "draw_lift": 0.0212,
-    "favourite_compression": 0.04,
-    "goal_suppression": 0.084,
-    "break_open_risk": 0.063,
-    "chance_quality_penalty": 0.021
+    "draw_lift": 0.0191,
+    "favourite_compression": 0.0356,
+    "goal_suppression": 0.063,
+    "break_open_risk": 0.072,
+    "chance_quality_penalty": 0.018
   },
   "flags": {
-    "break-open-risk-underweighted": 5,
+    "break-open-risk-underweighted": 6,
     "finishing-variance-high": 2,
     "draw-risk-underestimated": 9,
-    "territory-did-not-become-shot-volume": 5,
+    "territory-did-not-become-shot-volume": 4,
     "xg-did-not-support-favourite": 2,
-    "goal-suppression-underweighted": 2,
+    "goal-suppression-underweighted": 1,
     "finishing-variance-low": 1,
-    "favourite-confidence-too-high": 1,
-    "chance-quality-overstated": 5
+    "chance-quality-overstated": 4
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
   "xg_sample_size": 23,
-  "previous_updated_at": "2026-06-19T01:33:46.012Z"
+  "previous_updated_at": "2026-06-19T01:35:47.652Z"
 }
