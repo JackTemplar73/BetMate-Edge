@@ -662,23 +662,7 @@ function renderHighValueBets() {
 }
 
 function getWaltersStrategyRows() {
-  const fixtureRows = getUpcomingFixtures().flatMap((fixture) => {
-    return (fixture.markets || []).map((market) => {
-      const enrichedMarket = {
-        ...market,
-        match_name: fixture.match_name,
-        kickoff_time_aest: fixture.kickoff_time_aest,
-        true_price: Number(market.true_price),
-        current_odds: Number(market.current_odds),
-        model_data_quality_rating: market.model_data_quality_rating ?? fixture.model_data_quality?.rating,
-        model_data_quality_band: market.model_data_quality_band ?? fixture.model_data_quality?.band
-      };
-      return {
-        ...enrichedMarket,
-        metrics: runVectorCalculations(enrichedMarket)
-      };
-    });
-  });
+  const candidateRows = getCandidateRowsForFixtures(getUpcomingFixtures());
   const historyRows = getQualifiedHistoryBets()
     .filter((bet) => parseKickoff(bet.kickoff_time_aest) > new Date())
     .map((bet) => {
@@ -704,7 +688,7 @@ function getWaltersStrategyRows() {
       };
     });
 
-  return [...fixtureRows, ...getCandidateRowsForFixtures(getUpcomingFixtures()), ...historyRows]
+  return [...candidateRows, ...historyRows]
     .map((market) => {
       const truePrice = Number(market.true_price);
       const currentOdds = Number(market.current_odds);
@@ -725,8 +709,8 @@ function getWaltersStrategyRows() {
     .filter(hasModelPrice)
     .filter(hasMarketOdds)
     .filter((market) => Number.isFinite(Number(market.metrics?.qi)) && Number(market.metrics.qi) >= 60)
-    .filter(dedupeStrategyMarket())
     .sort(compareBetQuality)
+    .filter(dedupeStrategyMarket())
     .slice(0, 18);
 }
 
