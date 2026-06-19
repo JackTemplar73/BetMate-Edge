@@ -36813,7 +36813,7 @@ window.embeddedDataset = [
         "Christian Pulisic"
       ],
       "away_starting_xi": [
-        "Mathew Ryan",
+        "Patrick Beach",
         "Aziz Behich",
         "Harry Souttar",
         "Cameron Burgess",
@@ -36843,6 +36843,7 @@ window.embeddedDataset = [
         "Alejandro Zendejas"
       ],
       "away_substitutes": [
+        "Mathew Ryan",
         "Alessandro Circati",
         "Jacob Italiano",
         "Jordan Bos",
@@ -36852,7 +36853,6 @@ window.embeddedDataset = [
         "Cammy Devlin",
         "Kai Trewin",
         "Nestory Irankunda",
-        "Patrick Beach",
         "Cristian Volpato",
         "Nishan Velupillay",
         "Paul Okon-Engstler",
