@@ -304,6 +304,12 @@ h3 {
   margin: 20px 0 24px;
 }
 
+.walters-section,
+.walters-section h2,
+.walters-section p {
+  color: #000;
+}
+
 .strategy-principle {
   display: grid;
   grid-template-columns: 44px minmax(0, 1fr);
