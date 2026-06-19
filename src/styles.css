@@ -304,9 +304,8 @@ h3 {
   margin: 20px 0 24px;
 }
 
-.walters-section,
-.walters-section h2,
-.walters-section p {
+.walters-section > .section-heading h2,
+.walters-section > .section-heading p {
   color: #000;
 }
 
@@ -382,15 +381,19 @@ h3 {
 
 .strategy-board .inline-section-heading h3,
 .strategy-board .inline-section-heading p {
-  color: #000 !important;
+  color: var(--text);
+}
+
+.strategy-board .inline-section-heading p {
+  color: var(--muted);
 }
 
 .strategy-board-card {
   min-height: 0;
   padding: 22px;
-  border-color: #d8d3c2;
-  background: #fff;
-  color: #000;
+  border-color: var(--border);
+  background: var(--panel-2);
+  color: var(--text);
 }
 
 .strategy-board-card .card-topline {
@@ -398,17 +401,14 @@ h3 {
   min-height: 0;
   margin-bottom: 14px;
   padding-bottom: 12px;
-  border-bottom: 1px solid #d8d3c2;
+  border-bottom: 1px solid var(--border);
 }
 
-.strategy-board-card .qi-badge,
 .strategy-board-card .sub-cell {
-  color: #000 !important;
+  color: var(--muted);
 }
 
 .strategy-board-card .qi-badge {
-  border-color: #000;
-  background: #fff;
   font-size: 14px;
 }
 
@@ -419,14 +419,14 @@ h3 {
 
 .strategy-board-card .match-name {
   margin: 0 0 10px;
-  color: #000 !important;
+  color: var(--text);
   font-size: 18px;
   line-height: 1.25;
 }
 
 .strategy-board-card h3 {
   margin-bottom: 16px;
-  color: #000 !important;
+  color: var(--text);
   font-size: clamp(22px, 1.8vw, 28px);
   line-height: 1.16;
 }
@@ -439,7 +439,7 @@ h3 {
 .strategy-board-card dl > div {
   min-height: 64px;
   padding: 12px 0;
-  border-top: 1px solid #e1dccd;
+  border-top: 1px solid rgba(68, 64, 51, 0.72);
 }
 
 .strategy-board-card dl > div:nth-child(-n + 3) {
@@ -447,13 +447,13 @@ h3 {
 }
 
 .strategy-board-card dt {
-  color: #000 !important;
+  color: var(--muted);
   font-size: 12px;
   font-weight: 950;
 }
 
 .strategy-board-card dd {
-  color: #000 !important;
+  color: var(--text);
   font-size: 18px;
   line-height: 1.25;
 }
@@ -496,16 +496,6 @@ h3 {
 .fixture-meta,
 .sub-cell {
   color: var(--muted);
-}
-
-.walters-section,
-.walters-section * {
-  color: #000 !important;
-}
-
-.walters-section .strategy-step {
-  border-color: #000;
-  background: #fff;
 }
 
 .sort-controls,
@@ -1996,7 +1986,7 @@ dd {
   }
 
   .strategy-board-card dl > div:nth-child(-n + 3) {
-    border-top: 1px solid #e1dccd;
+    border-top: 1px solid rgba(68, 64, 51, 0.72);
   }
 
   .strategy-board-card dl > div:nth-child(-n + 2) {
