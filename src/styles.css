@@ -314,6 +314,7 @@ h3 {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: #fff;
+  color: #000;
 }
 
 .strategy-step {
@@ -322,15 +323,16 @@ h3 {
   height: 40px;
   place-items: center;
   border-radius: 50%;
-  background: var(--text);
-  color: #fff;
+  border: 2px solid #000;
+  background: #fff;
+  color: #000;
   font-size: 17px;
   font-weight: 950;
   line-height: 1;
 }
 
 .strategy-grid small {
-  color: var(--text);
+  color: #000;
 }
 
 .strategy-label {
@@ -338,13 +340,13 @@ h3 {
   font-size: 13px;
   font-weight: 900;
   text-transform: uppercase;
-  color: var(--text);
+  color: #000;
 }
 
 .strategy-grid strong {
   display: block;
   margin: 9px 0 10px;
-  color: var(--text);
+  color: #000;
   font-size: clamp(22px, 1.65vw, 27px);
   line-height: 1.14;
 }
