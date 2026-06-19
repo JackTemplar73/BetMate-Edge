@@ -198,7 +198,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "2ca88d1ed4e94d54",
     "match_name": "United States vs Australia",
-    "kickoff_time_aest": "2026-06-20T10:00:00",
+    "kickoff_time_aest": "2026-06-20T05:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Australia or Draw",
     "au_bookie": "SportsBet",
@@ -247,7 +247,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "5069266d97319182",
     "match_name": "United States vs Australia",
-    "kickoff_time_aest": "2026-06-20T10:00:00",
+    "kickoff_time_aest": "2026-06-20T05:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Australia or Draw",
     "au_bookie": "TAB",
@@ -296,7 +296,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "a578b6bdd03cfcae",
     "match_name": "United States vs Australia",
-    "kickoff_time_aest": "2026-06-20T10:00:00",
+    "kickoff_time_aest": "2026-06-20T05:00:00",
     "market_matrix": "Full Match Model",
     "target_selection": "Match to end in a Draw",
     "au_bookie": "SportsBet",
