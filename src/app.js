@@ -662,10 +662,78 @@ function renderHighValueBets() {
 }
 
 function getWaltersStrategyRows() {
-  return getCandidateRowsForFixtures(getUpcomingFixtures())
+  const fixtureRows = getUpcomingFixtures().flatMap((fixture) => {
+    return (fixture.markets || []).map((market) => {
+      const enrichedMarket = {
+        ...market,
+        match_name: fixture.match_name,
+        kickoff_time_aest: fixture.kickoff_time_aest,
+        true_price: Number(market.true_price),
+        current_odds: Number(market.current_odds),
+        model_data_quality_rating: market.model_data_quality_rating ?? fixture.model_data_quality?.rating,
+        model_data_quality_band: market.model_data_quality_band ?? fixture.model_data_quality?.band
+      };
+      return {
+        ...enrichedMarket,
+        metrics: runVectorCalculations(enrichedMarket)
+      };
+    });
+  });
+  const historyRows = getQualifiedHistoryBets()
+    .filter((bet) => parseKickoff(bet.kickoff_time_aest) > new Date())
+    .map((bet) => {
+      const enrichedMarket = {
+        match_name: bet.match_name,
+        kickoff_time_aest: bet.kickoff_time_aest,
+        target_selection: bet.target_selection,
+        market_matrix: bet.market_matrix,
+        au_bookie: bet.au_bookie,
+        true_price: Number(bet.current_model_price || bet.opening_model_price),
+        current_odds: Number(bet.current_odds || bet.opening_odds),
+        model_data_quality_rating: bet.model_data_quality_rating,
+        model_data_quality_band: bet.model_data_quality_band
+      };
+      return {
+        ...enrichedMarket,
+        metrics: {
+          ...runVectorCalculations(enrichedMarket),
+          qi: Number(bet.current_qi || bet.opening_qi),
+          ev: Number(bet.current_ev || bet.opening_ev)
+        },
+        quality: { risk: inferRiskFromOdds(enrichedMarket.current_odds) }
+      };
+    });
+
+  return [...fixtureRows, ...getCandidateRowsForFixtures(getUpcomingFixtures()), ...historyRows]
+    .filter(hasModelPrice)
+    .filter(hasMarketOdds)
     .filter((market) => Number(market.metrics?.qi) >= 60)
+    .filter(dedupeStrategyMarket())
     .sort(compareBetQuality)
     .slice(0, 18);
+}
+
+function dedupeStrategyMarket() {
+  const seen = new Set();
+  return (market) => {
+    const key = [
+      market.match_name,
+      market.target_selection,
+      market.au_bookie,
+      Number(market.current_odds || 0).toFixed(4)
+    ].join('|');
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  };
+}
+
+function inferRiskFromOdds(odds) {
+  const price = Number(odds);
+  if (!Number.isFinite(price)) return 'Watch';
+  if (price >= 3.5) return 'High';
+  if (price >= 2.2) return 'Medium';
+  return 'Low';
 }
 
 function waltersAction(market) {
