@@ -6,6 +6,7 @@ const EMBEDDED_PATH = new URL('../src/embeddedData.js', import.meta.url);
 const HISTORY_PATH = new URL('../data/bet_history.json', import.meta.url);
 const EMBEDDED_HISTORY_PATH = new URL('../src/embeddedBetHistory.js', import.meta.url);
 const LEARNING_COEFFICIENTS_PATH = new URL('../data/learning_coefficients.json', import.meta.url);
+const WORLD_CUP_CONTEXT_PATH = new URL('../data/worldcup_context.json', import.meta.url);
 
 const BOOKMAKERS = new Map([
   ['sportsbet', 'Sportsbet'],
@@ -239,6 +240,9 @@ const TEAM_ALIASES = new Map([
   ['us', 'united states'],
   ['turkiye', 'turkey'],
   ['türkiye', 'turkey'],
+  ['czechia', 'czech republic'],
+  ['dr congo', 'congo dr'],
+  ['democratic republic of congo', 'congo dr'],
   ['bosnia & herzegovina', 'bosnia and herzegovina']
 ]);
 
@@ -428,6 +432,289 @@ function splitTeams(matchName) {
     home: normalise(parts[0]),
     away: normalise(parts[1])
   };
+}
+
+async function readWorldCupContext() {
+  try {
+    return JSON.parse(await readFile(WORLD_CUP_CONTEXT_PATH, 'utf8'));
+  } catch (error) {
+    if (error.code !== 'ENOENT') {
+      console.warn(`World Cup context could not be read: ${error.message}`);
+    }
+    return { fixtures: [] };
+  }
+}
+
+function findWorldCupContext(context, fixture) {
+  const teams = splitTeams(fixture.match_name);
+  if (!teams) return null;
+
+  const kickoff = parseAest(fixture.kickoff_time_aest).getTime();
+  const maxDriftMs = 42 * 60 * 60 * 1000;
+
+  return (context.fixtures || []).find((row) => {
+    const rowTeams = splitTeams(row.match_name || row.source_match_name || '');
+    if (!rowTeams) return false;
+    const hasTeams = rowTeams.home === teams.home && rowTeams.away === teams.away;
+    const rowKickoff = Date.parse(row.kickoff_aest || row.kickoff_utc || '');
+    const timeMatches = !Number.isFinite(rowKickoff) || Math.abs(rowKickoff - kickoff) <= maxDriftMs;
+    return hasTeams && timeMatches;
+  }) || null;
+}
+
+function toAestLocalIso(dateValue) {
+  const date = new Date(dateValue);
+  const parts = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'Australia/Melbourne',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false
+  }).formatToParts(date);
+  const get = (type) => parts.find((part) => part.type === type)?.value || '00';
+  return `${get('year')}-${get('month')}-${get('day')}T${get('hour')}:${get('minute')}:${get('second')}`;
+}
+
+function h2hMarketFromEvent(event) {
+  for (const bookmaker of event.bookmakers || []) {
+    const market = (bookmaker.markets || []).find((item) => item.key === 'h2h' || item.key === 'h2h_3_way');
+    if (market?.outcomes?.length >= 3) return market;
+  }
+  return null;
+}
+
+function eventConsensusProbabilities(event) {
+  const totals = new Map();
+  let books = 0;
+
+  for (const bookmaker of event.bookmakers || []) {
+    const market = (bookmaker.markets || []).find((item) => item.key === 'h2h' || item.key === 'h2h_3_way');
+    if (!market?.outcomes?.length) continue;
+    const impliedTotal = market.outcomes.reduce((sum, outcome) => sum + (1 / Number(outcome.price || 0)), 0);
+    if (!Number.isFinite(impliedTotal) || impliedTotal <= 0) continue;
+    books += 1;
+
+    for (const outcome of market.outcomes) {
+      const probability = (1 / Number(outcome.price)) / impliedTotal;
+      if (!Number.isFinite(probability)) continue;
+      const key = normalise(outcome.name);
+      totals.set(key, (totals.get(key) || 0) + probability);
+    }
+  }
+
+  if (!books) return null;
+  return new Map([...totals.entries()].map(([key, total]) => [key, total / books]));
+}
+
+function bestOutcomePrice(event, targetName) {
+  const target = normalise(targetName);
+  let best = null;
+
+  for (const bookmaker of event.bookmakers || []) {
+    const market = (bookmaker.markets || []).find((item) => item.key === 'h2h' || item.key === 'h2h_3_way');
+    if (!market?.outcomes?.length) continue;
+    const outcome = market.outcomes.find((item) => normalise(item.name) === target);
+    if (!outcome || !Number.isFinite(Number(outcome.price))) continue;
+    if (!best || Number(outcome.price) > Number(best.price)) {
+      best = {
+        price: Number(Number(outcome.price).toFixed(2)),
+        bookie: BOOKMAKERS.get(bookmaker.key) || bookmaker.title || bookmaker.key,
+        devig: devigBookProbability(market, outcome)
+      };
+    }
+  }
+
+  return best;
+}
+
+function seedUpcomingWorldCupFixtures(dataset, context, events, nowIso) {
+  const now = getNow();
+  const horizon = now.getTime() + (7 * 24 * 60 * 60 * 1000);
+  const existing = new Set(dataset.map((fixture) => {
+    const teams = splitTeams(fixture.match_name);
+    return teams ? `${teams.home}|${teams.away}` : normalise(fixture.match_name);
+  }));
+  let added = 0;
+
+  for (const row of context.fixtures || []) {
+    const rowTeams = splitTeams(row.match_name || '');
+    if (!rowTeams) continue;
+    const key = `${rowTeams.home}|${rowTeams.away}`;
+    if (existing.has(key)) continue;
+
+    const kickoff = new Date(row.kickoff_aest || row.kickoff_utc || '');
+    if (!Number.isFinite(kickoff.getTime()) || kickoff <= now || kickoff.getTime() > horizon) continue;
+
+    const pseudoFixture = {
+      match_name: row.match_name,
+      kickoff_time_aest: toAestLocalIso(kickoff)
+    };
+    const event = findEvent(events, pseudoFixture);
+    if (!event) continue;
+
+    const h2h = h2hMarketFromEvent(event);
+    const consensus = eventConsensusProbabilities(event);
+    if (!h2h || !consensus) continue;
+
+    const outcomes = [
+      { outcomeName: event.home_team, selection: `${event.home_team} to Win` },
+      { outcomeName: 'Draw', selection: 'Match to end in a Draw' },
+      { outcomeName: event.away_team, selection: `${event.away_team} to Win` }
+    ];
+    const markets = outcomes.map((item) => {
+      const probability = consensus.get(normalise(item.outcomeName));
+      const best = bestOutcomePrice(event, item.outcomeName);
+      if (!Number.isFinite(probability) || !best) return null;
+      return {
+        market_matrix: 'Full Match Model',
+        target_selection: item.selection,
+        true_price: fairPriceFromProbability(probability),
+        current_odds: best.price,
+        au_bookie: best.bookie,
+        devig_book_probability: best.devig,
+        odds_checked_at: nowIso,
+        odds_updated_at: nowIso,
+        odds_refresh_status: 'added_from_worldcup_context',
+        odds_refresh_note: 'Added from World Cup context fixture and current Odds API h2h price.'
+      };
+    }).filter(Boolean);
+
+    if (markets.length < 3) continue;
+
+    dataset.push({
+      match_name: row.match_name,
+      kickoff_time_aest: toAestLocalIso(kickoff),
+      pitch_type: row.pitch_profile || 'engineered tournament grass',
+      pitch_constraints: row.pitch_profile || 'Tournament venue context loaded.',
+      referee_name: 'Not confirmed',
+      referee_status: 'not_verified',
+      referee_tendencies: 'No referee-specific adjustment applied yet.',
+      tactical_summary: `${row.match_name}: model read seeded from current market shape, projected teams, venue, weather, rest and travel context. This will tighten once official teams and referee are confirmed.`,
+      markets,
+      odds_last_checked: nowIso,
+      odds_refresh_cadence: 'worldcup-context-seed',
+      odds_refresh_note: `Seeded from World Cup context and matched Odds API event ${event.id || event.commence_time}.`
+    });
+    existing.add(key);
+    added += 1;
+  }
+
+  dataset.sort((a, b) => parseAest(a.kickoff_time_aest) - parseAest(b.kickoff_time_aest));
+  return added;
+}
+
+function formatWeatherContext(weather = {}) {
+  const parts = [];
+  if (Number.isFinite(Number(weather.feels_like_c))) parts.push(`feels like ${weather.feels_like_c}C`);
+  else if (Number.isFinite(Number(weather.temperature_c))) parts.push(`${weather.temperature_c}C`);
+  if (Number.isFinite(Number(weather.humidity_pct))) parts.push(`${weather.humidity_pct}% humidity`);
+  if (Number.isFinite(Number(weather.precip_chance_pct))) parts.push(`${weather.precip_chance_pct}% rain chance`);
+  if (Number.isFinite(Number(weather.wind_kmh))) parts.push(`wind ${weather.wind_kmh} km/h`);
+  if (weather.forecast) parts.push(String(weather.forecast).toLowerCase());
+  return parts.join(', ');
+}
+
+function formatRestTravelContext(restTravel = {}) {
+  const home = restTravel.home || {};
+  const away = restTravel.away || {};
+  const parts = [];
+  if (Number.isFinite(Number(home.rest_days)) || Number.isFinite(Number(home.travel_km))) {
+    parts.push(`${restTravel.home_team || 'Home'}: ${Number.isFinite(Number(home.rest_days)) ? `${home.rest_days} days rest` : 'rest unknown'}${Number.isFinite(Number(home.travel_km)) ? `, ${home.travel_km} km travel` : ''}`);
+  }
+  if (Number.isFinite(Number(away.rest_days)) || Number.isFinite(Number(away.travel_km))) {
+    parts.push(`${restTravel.away_team || 'Away'}: ${Number.isFinite(Number(away.rest_days)) ? `${away.rest_days} days rest` : 'rest unknown'}${Number.isFinite(Number(away.travel_km)) ? `, ${away.travel_km} km travel` : ''}`);
+  }
+  return parts.join(' | ');
+}
+
+function contextPlayerNames(players = []) {
+  return players
+    .map((player) => typeof player === 'string' ? player : player?.name)
+    .filter(Boolean);
+}
+
+function applyWorldCupContext(dataset, context, nowIso) {
+  let matched = 0;
+
+  for (const fixture of dataset) {
+    const row = findWorldCupContext(context, fixture);
+    if (!row) continue;
+
+    matched += 1;
+    const weatherText = formatWeatherContext(row.weather);
+    const restText = formatRestTravelContext(row.rest_travel);
+    const venueBits = [
+      row.venue,
+      row.city,
+      row.pitch_profile,
+      Number.isFinite(Number(row.altitude_m)) ? `${row.altitude_m} m altitude` : ''
+    ].filter(Boolean);
+
+    fixture.worldcup_context = {
+      source: context.source || 'World Cup 2026 context feed',
+      source_updated_at: context.updated_at || null,
+      applied_at: nowIso,
+      match_number: row.match_number || null,
+      group: row.group || null,
+      venue: row.venue || null,
+      city: row.city || null,
+      weather: row.weather || null,
+      rest_travel: row.rest_travel || null
+    };
+    fixture.venue_context = {
+      venue: row.venue || '',
+      city: row.city || '',
+      pitch_profile: row.pitch_profile || '',
+      altitude_m: row.altitude_m ?? null
+    };
+    fixture.weather_context = row.weather || null;
+    fixture.rest_travel_context = row.rest_travel || null;
+
+    if (row.pitch_profile || row.venue) {
+      fixture.pitch_type = row.pitch_profile || fixture.pitch_type;
+      fixture.pitch_constraints = [
+        venueBits.length ? `${venueBits.join(', ')}.` : '',
+        weatherText ? `Weather read: ${weatherText}.` : '',
+        restText ? `Rest and travel: ${restText}.` : ''
+      ].filter(Boolean).join(' ');
+    }
+
+    const home = row.teams?.home || {};
+    const away = row.teams?.away || {};
+    const homeStarters = contextPlayerNames(home.starting_xi);
+    const awayStarters = contextPlayerNames(away.starting_xi);
+
+    if (homeStarters.length && awayStarters.length && fixture.confirmed_lineups?.status !== 'confirmed') {
+      fixture.confirmed_lineups = {
+        status: row.lineup_status || 'projected',
+        source: row.lineup_source || context.lineup_source || 'World Cup context feed',
+        source_url: row.source_url || null,
+        checked_at: nowIso,
+        home_team: home.name || splitTeams(row.match_name)?.home || '',
+        away_team: away.name || splitTeams(row.match_name)?.away || '',
+        home_formation: home.formation || '',
+        away_formation: away.formation || '',
+        home_starting_xi: homeStarters,
+        away_starting_xi: awayStarters,
+        home_substitutes: contextPlayerNames(home.substitutes),
+        away_substitutes: contextPlayerNames(away.substitutes),
+        model_implication: row.lineup_implication || 'Projected team sheets are included. Treat them as useful early context, then re-check once official teams are named.'
+      };
+    }
+
+    const noteBits = [
+      weatherText ? `Weather: ${weatherText}.` : '',
+      restText ? `Rest/travel: ${restText}.` : ''
+    ].filter(Boolean);
+    if (noteBits.length) {
+      fixture.lineup_model_note = `${fixture.lineup_model_note || ''} ${noteBits.join(' ')}`.trim();
+    }
+  }
+
+  return matched;
 }
 
 function findEvent(events, fixture) {
@@ -836,9 +1123,13 @@ function fixtureDataQualityAudit(fixture, nowIso) {
   const hasFootyStatsPublic = footyStatus === 'matched_public_fixture_row';
   const hasFootyStatsProfile = Boolean(fixture.footystats_analysis);
   const hasLineups = fixture.confirmed_lineups?.status === 'confirmed';
+  const hasProjectedLineups = fixture.confirmed_lineups?.status === 'projected';
   const hasSubs = lineupHasSubstitutes(fixture);
   const hasVerifiedReferee = fixture.referee_status === 'verified';
   const hasPitch = Boolean(fixture.pitch_constraints && !/No reliable pitch advantage/i.test(fixture.pitch_constraints));
+  const hasWeatherContext = Boolean(fixture.weather_context);
+  const hasRestTravelContext = Boolean(fixture.rest_travel_context);
+  const hasVenueContext = Boolean(fixture.venue_context?.venue || fixture.worldcup_context?.venue);
   const hasFifaReport = fixture.fifa_report_status === 'matched_report';
   const hasPostMatchStats = Boolean(fixture.post_match_stats);
   const hasXg = Number.isFinite(Number(fixture.post_match_xg?.home)) && Number.isFinite(Number(fixture.post_match_xg?.away));
@@ -868,6 +1159,7 @@ function fixtureDataQualityAudit(fixture, nowIso) {
   if (!hasSharpReference) repairActions.push('Retry Betfair/Pinnacle market matching for sharp close coverage.');
   if (insideFinalClosePrep && !hasT5SharpCapture) repairActions.push(`Capture Betfair/Pinnacle around T-${TARGET_CLOSING_MINUTES}; fall back to best available soft-book estimate only if sharp source is missing.`);
   if (!hasLineups && untilKickoffMs <= LINEUP_CHECK_WINDOW_MS && untilKickoffMs >= 0) repairActions.push('Retry confirmed starting XI and bench from match-centre sources.');
+  if (!hasProjectedLineups && !hasLineups && kickoff > now) repairActions.push('Load projected XI, bench, rest and travel context from the World Cup fixture feed.');
   if (!hasSubs && hasLineups && untilKickoffMs <= LINEUP_CHECK_WINDOW_MS && untilKickoffMs >= 0) repairActions.push('Retry substitute bench feed.');
   if (!hasVerifiedReferee) repairActions.push('Retry referee verification from FIFA/ESPN.');
   if (!hasPitch) repairActions.push('Retry venue and pitch/surface confirmation.');
@@ -878,9 +1170,9 @@ function fixtureDataQualityAudit(fixture, nowIso) {
     { label: 'Fresh price check', points: pricesFresh ? 18 : 0, max: 18, detail: Number.isFinite(minutesSincePriceCheck) ? `${minutesSincePriceCheck} min old` : 'not checked' },
     { label: 'Market depth', points: hasAuBookDepth ? 14 : checkedMarkets.length ? 8 : 0, max: 14, detail: `${scanRows.length} scanned rows` },
     { label: 'Sharp close source', points: hasT5SharpCapture ? 14 : hasSharpReference ? 10 : 0, max: 14, detail: hasT5SharpCapture ? `captured ${sharpMinutesBeforeKickoff} min before kickoff` : hasSharpReference ? 'Betfair/Pinnacle present where available' : 'no sharp close source in current scan' },
-    { label: 'Lineups', points: hasLineups ? (hasSubs ? 14 : 10) : 0, max: 14, detail: hasLineups ? (hasSubs ? 'starters and bench loaded' : 'starters loaded') : 'not confirmed yet' },
+    { label: 'Lineups', points: hasLineups ? (hasSubs ? 14 : 10) : hasProjectedLineups ? (hasSubs ? 8 : 6) : 0, max: 14, detail: hasLineups ? (hasSubs ? 'confirmed starters and bench loaded' : 'confirmed starters loaded') : hasProjectedLineups ? (hasSubs ? 'projected starters and bench loaded' : 'projected starters loaded') : 'not confirmed yet' },
     { label: 'Referee', points: hasVerifiedReferee ? 8 : 0, max: 8, detail: hasVerifiedReferee ? 'verified' : 'not verified' },
-    { label: 'Pitch', points: hasPitch ? 6 : 2, max: 6, detail: hasPitch ? 'venue/pitch note loaded' : 'generic pitch weighting' },
+    { label: 'Venue/weather', points: hasVenueContext && hasWeatherContext && hasRestTravelContext ? 8 : hasPitch ? 5 : 2, max: 8, detail: hasVenueContext && hasWeatherContext && hasRestTravelContext ? 'venue, weather, rest and travel loaded' : hasPitch ? 'venue/pitch note loaded' : 'generic pitch weighting' },
     { label: 'FootyStats', points: hasFootyStatsPublic ? 10 : hasFootyStatsProfile ? 6 : 0, max: 10, detail: hasFootyStatsPublic ? 'public row matched' : hasFootyStatsProfile ? 'profile categories loaded' : 'not loaded' },
     { label: 'FIFA/ESPN result data', points: isComplete ? (hasPostMatchStats || hasFifaReport ? 10 : 0) : 6, max: 10, detail: isComplete ? (hasPostMatchStats || hasFifaReport ? 'post-match checks loaded' : 'result data pending') : 'pre-game fixture' },
     { label: 'xG / chance quality', points: isComplete ? (hasXg ? 8 : 0) : 4, max: 8, detail: hasXg ? `${fixture.post_match_xg.home}-${fixture.post_match_xg.away}` : 'not available yet' }
@@ -3241,6 +3533,71 @@ function deriveFixtureModels(dataset, learningCoefficients = DEFAULT_LEARNING_CO
   }
 }
 
+function updateFullMatchMarketsFromModel(dataset) {
+  let updated = 0;
+
+  for (const fixture of dataset) {
+    const teams = splitTeams(fixture.match_name);
+    if (!teams) continue;
+    const rows = new Map((fixture.model_market_view || []).map((row) => [
+      normalise(row.selection),
+      row
+    ]));
+
+    for (const marketItem of fixture.markets || []) {
+      if (marketItem.market_matrix !== 'Full Match Model') continue;
+
+      const selection = normalise(marketItem.target_selection);
+      let modelRow = null;
+      if (selection.includes('draw')) {
+        const probabilities = getCalibratedFixtureProbabilitiesForMarket(fixture);
+        if (probabilities?.draw) {
+          modelRow = {
+            fair_price: fairPriceFromProbability(probabilities.draw),
+            probability: Number((probabilities.draw * 100).toFixed(1))
+          };
+        }
+      } else {
+        const targetTeam = selection.replace('to win', '').trim();
+        const isHome = comparableName(targetTeam) === comparableName(teams.home) || targetTeam.includes(teams.home) || teams.home.includes(targetTeam);
+        const isAway = comparableName(targetTeam) === comparableName(teams.away) || targetTeam.includes(teams.away) || teams.away.includes(targetTeam);
+        const probabilities = getCalibratedFixtureProbabilitiesForMarket(fixture);
+        if (probabilities && (isHome || isAway)) {
+          const probability = isHome ? probabilities.home : probabilities.away;
+          modelRow = {
+            fair_price: fairPriceFromProbability(probability),
+            probability: Number((probability * 100).toFixed(1))
+          };
+        }
+      }
+
+      modelRow ||= rows.get(selection);
+      if (!modelRow || !Number.isFinite(Number(modelRow.fair_price))) continue;
+      const nextPrice = Number(modelRow.fair_price);
+      if (nextPrice !== Number(marketItem.true_price)) {
+        marketItem.true_price = nextPrice;
+        marketItem.model_probability = modelRow.probability ?? null;
+        updated += 1;
+      }
+    }
+  }
+
+  return updated;
+}
+
+function getCalibratedFixtureProbabilitiesForMarket(fixture) {
+  const calibration = fixture.model_calibration || {};
+  const home = Number(calibration.calibrated_home_probability);
+  const draw = Number(calibration.calibrated_draw_probability);
+  const away = Number(calibration.calibrated_away_probability);
+  if (![home, draw, away].every(Number.isFinite)) return null;
+  return {
+    home: home / 100,
+    draw: draw / 100,
+    away: away / 100
+  };
+}
+
 function reconcileMarketScanModelValues(dataset) {
   for (const fixture of dataset) {
     const modelRows = new Map((fixture.model_market_view || []).map((row) => [
@@ -3406,6 +3763,7 @@ async function main() {
   }
 
   const dataset = JSON.parse(await readFile(DATA_PATH, 'utf8'));
+  const worldCupContext = await readWorldCupContext();
   let learningCoefficients = await readLearningCoefficients();
   const timing = shouldRefresh(dataset);
 
@@ -3432,8 +3790,10 @@ async function main() {
 
   let updates = 0;
   const nowIso = new Date().toISOString();
+  const seededWorldCupFixtures = seedUpcomingWorldCupFixtures(dataset, worldCupContext, allEvents, nowIso);
   const espnEvents = await fetchEspnEventsForDataset(dataset);
   const fifaReports = await fetchFifaReportsForDataset(dataset, nowIso);
+  const worldCupContextMatches = applyWorldCupContext(dataset, worldCupContext, nowIso);
   const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
   const lineupUpdates = await refreshLastHourLineups(dataset, getNow(), nowIso, espnEvents);
   const postMatchStatsUpdates = await refreshPostMatchStats(dataset, espnEvents, nowIso);
@@ -3521,6 +3881,7 @@ async function main() {
   learningCoefficients = buildLearningCoefficients(dataset, learningCoefficients, getNow());
   deriveFixtureModels(dataset, learningCoefficients);
   applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
+  const fullMatchModelPriceUpdates = updateFullMatchMarketsFromModel(dataset);
   reconcileMarketScanModelValues(dataset);
   const footyStatsAnalysis = await applyFootyStatsAnalysis(dataset, nowIso);
   applyDataQualityAudits(dataset, nowIso);
@@ -3531,7 +3892,7 @@ async function main() {
   await writeFile(LEARNING_COEFFICIENTS_PATH, `${JSON.stringify(learningCoefficients, null, 2)}\n`);
   const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. FootyStats checked ${footyStatsAnalysis.checked} fixtures (${footyStatsAnalysis.matched} public rows matched${footyStatsAnalysis.error ? `, ${footyStatsAnalysis.error}` : ''}). Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Seeded ${seededWorldCupFixtures} upcoming World Cup fixtures. Applied World Cup context to ${worldCupContextMatches} fixtures. Repriced ${fullMatchModelPriceUpdates} full-match model rows. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. FootyStats checked ${footyStatsAnalysis.checked} fixtures (${footyStatsAnalysis.matched} public rows matched${footyStatsAnalysis.error ? `, ${footyStatsAnalysis.error}` : ''}). Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {

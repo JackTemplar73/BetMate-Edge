@@ -794,7 +794,7 @@ function getSportsbookScanRowsForFixtures(fixtures) {
 }
 
 function isConfirmedBenchPlayerPropRow(fixture, row) {
-  if (!fixture.confirmed_lineups || String(row.category || '').toLowerCase() !== 'player prop') return false;
+  if (fixture.confirmed_lineups?.status !== 'confirmed' || String(row.category || '').toLowerCase() !== 'player prop') return false;
   const player = String(row.selection || '').split(':')[0].trim().toLowerCase();
   if (!player) return false;
 
@@ -1210,7 +1210,8 @@ function renderMatchTabs() {
 
 function renderConfirmedLineupsBlock(fixture) {
   const lineups = fixture.confirmed_lineups;
-  if (!lineups || lineups.status !== 'confirmed') return '';
+  if (!lineups || !['confirmed', 'projected'].includes(lineups.status)) return '';
+  const isProjected = lineups.status === 'projected';
 
   const renderList = (players = [], teamName = '', formation = '', isSub = false) => {
     const positions = buildFormationPositions(formation, players.length, isSub);
@@ -1237,13 +1238,13 @@ function renderConfirmedLineupsBlock(fixture) {
   return `
     <section class="lineups-block">
       <div class="inline-section-heading">
-        <h3>Confirmed Lineups</h3>
-        <p>Lineups confirmed${lineups.checked_at ? ` | Checked ${new Date(lineups.checked_at).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}` : ''}</p>
+        <h3>${isProjected ? 'Projected Lineups' : 'Confirmed Lineups'}</h3>
+        <p>${isProjected ? 'Projected teams' : 'Lineups confirmed'}${lineups.checked_at ? ` | Checked ${new Date(lineups.checked_at).toLocaleString('en-AU', { dateStyle: 'medium', timeStyle: 'short' })}` : ''}</p>
       </div>
       <div class="lineup-rating-note">
         The number beside each player is a match-impact rating out of 100. It is not a general player ability score. It shows how much that player is expected to matter in this specific game, using the team setup, starting role, likely game flow, pitch and referee effect.
       </div>
-      <div class="lineup-note">${lineups.model_implication || 'Lineups are confirmed and included in the model view.'}</div>
+      <div class="lineup-note">${lineups.model_implication || (isProjected ? 'Projected teams are included as early context. Official teams still need to be checked before kickoff.' : 'Lineups are confirmed and included in the model view.')}</div>
       <div class="lineup-grid">
         ${renderTeamLineup(lineups.home_team, lineups.home_formation, lineups.home_starting_xi, lineups.home_substitutes)}
         ${renderTeamLineup(lineups.away_team, lineups.away_formation, lineups.away_starting_xi, lineups.away_substitutes)}
@@ -1552,8 +1553,30 @@ function renderModelDataBlock(fixture) {
   const bttsNo = findModelViewRow(fixture, 'BTTS No');
   const learning = fixture.post_match_learning || {};
   const xg = fixture.post_match_xg || {};
+  const weather = fixture.weather_context || {};
+  const restTravel = fixture.rest_travel_context || {};
+  const venue = fixture.venue_context || {};
   const qualityBand = String(quality.band || '').toLowerCase();
   const showQualityNote = qualityBand === 'thin' || qualityBand === 'developing';
+  const weatherText = [
+    Number.isFinite(Number(weather.feels_like_c)) ? `feels like ${weather.feels_like_c}C` : Number.isFinite(Number(weather.temperature_c)) ? `${weather.temperature_c}C` : '',
+    Number.isFinite(Number(weather.humidity_pct)) ? `${weather.humidity_pct}% humidity` : '',
+    Number.isFinite(Number(weather.precip_chance_pct)) ? `${weather.precip_chance_pct}% rain chance` : '',
+    Number.isFinite(Number(weather.wind_kmh)) ? `wind ${weather.wind_kmh} km/h` : '',
+    weather.forecast || ''
+  ].filter(Boolean).join(', ');
+  const restTravelText = (() => {
+    const home = restTravel.home || {};
+    const away = restTravel.away || {};
+    const parts = [];
+    if (Number.isFinite(Number(home.rest_days)) || Number.isFinite(Number(home.travel_km))) {
+      parts.push(`Home ${Number.isFinite(Number(home.rest_days)) ? `${home.rest_days} days rest` : 'rest unknown'}${Number.isFinite(Number(home.travel_km)) ? `, ${home.travel_km} km` : ''}`);
+    }
+    if (Number.isFinite(Number(away.rest_days)) || Number.isFinite(Number(away.travel_km))) {
+      parts.push(`Away ${Number.isFinite(Number(away.rest_days)) ? `${away.rest_days} days rest` : 'rest unknown'}${Number.isFinite(Number(away.travel_km)) ? `, ${away.travel_km} km` : ''}`);
+    }
+    return parts.join(' | ');
+  })();
   const dataRows = [
     ['Home win', `${probabilities.homeTeam || 'Home'} ${formatPercent(probabilities.homeProbability)}`],
     ['Draw', formatPercent(probabilities.drawProbability)],
@@ -1567,9 +1590,14 @@ function renderModelDataBlock(fixture) {
     ['Break-open risk', valueOrDash(calibration.break_open_risk ?? totals.break_open_risk, (value) => `${Number(value).toFixed(1)}%`)],
     ['Goal suppression', valueOrDash(calibration.goal_suppression ?? totals.goal_suppression, (value) => `${Number(value).toFixed(1)}%`)],
     ['Referee', `${fixture.referee_name || 'Not confirmed'}${fixture.referee_status === 'verified' ? ' | verified' : ''}`],
+    ['Venue', [venue.venue, venue.city, venue.altitude_m ? `${venue.altitude_m} m altitude` : ''].filter(Boolean).join(', ') || '-'],
+    ['Weather', weatherText || '-'],
+    ['Rest/travel', restTravelText || '-'],
     ['Pitch', fixture.pitch_constraints || fixture.pitch_type || '-'],
     ['Lineups', lineups.status === 'confirmed'
       ? `${lineups.home_formation || '-'} vs ${lineups.away_formation || '-'} | starters and bench loaded where supplied`
+      : lineups.status === 'projected'
+        ? `${lineups.home_formation || '-'} vs ${lineups.away_formation || '-'} | projected teams loaded`
       : 'Not fully confirmed yet'],
     ['Price age', Number.isFinite(Number(quality.price_age_minutes)) ? `${quality.price_age_minutes} min since last check` : 'Not checked yet'],
     ['Closing line', quality.closing_line_status || 'Waiting for final close window'],
