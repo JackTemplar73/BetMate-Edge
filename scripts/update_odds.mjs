@@ -902,6 +902,111 @@ function applyWorldCupContext(dataset, context, nowIso) {
   return matched;
 }
 
+function confirmedSelectedTeamRows(dataset) {
+  return dataset.flatMap((fixture) => {
+    const lineups = fixture.confirmed_lineups;
+    if (lineups?.status !== 'confirmed') return [];
+
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    const rows = [];
+    if ((lineups.home_starting_xi || []).length) {
+      rows.push({
+        team: lineups.home_team || splitTeams(fixture.match_name)?.home || '',
+        formation: lineups.home_formation || '',
+        starting_xi: [...lineups.home_starting_xi],
+        substitutes: [...(lineups.home_substitutes || [])],
+        source_match: fixture.match_name,
+        source_kickoff_aest: fixture.kickoff_time_aest,
+        kickoff
+      });
+    }
+    if ((lineups.away_starting_xi || []).length) {
+      rows.push({
+        team: lineups.away_team || splitTeams(fixture.match_name)?.away || '',
+        formation: lineups.away_formation || '',
+        starting_xi: [...lineups.away_starting_xi],
+        substitutes: [...(lineups.away_substitutes || [])],
+        source_match: fixture.match_name,
+        source_kickoff_aest: fixture.kickoff_time_aest,
+        kickoff
+      });
+    }
+    return rows;
+  });
+}
+
+function findLastSelectedTeam(selectedRows, teamName, beforeKickoff) {
+  const team = normalise(teamName);
+  return selectedRows
+    .filter((row) => normalise(row.team) === team && row.kickoff < beforeKickoff)
+    .sort((a, b) => b.kickoff - a.kickoff)[0] || null;
+}
+
+function applyLastSelectedTeamsToProjectedLineups(dataset, nowIso) {
+  const selectedRows = confirmedSelectedTeamRows(dataset);
+  let updatedSides = 0;
+
+  for (const fixture of dataset) {
+    if (fixture.confirmed_lineups?.status === 'confirmed') continue;
+
+    const teams = splitTeams(fixture.match_name);
+    if (!teams) continue;
+
+    const kickoff = parseAest(fixture.kickoff_time_aest);
+    const lineups = fixture.confirmed_lineups || {
+      status: 'projected',
+      source_url: null,
+      home_team: teams.home,
+      away_team: teams.away,
+      home_starting_xi: [],
+      away_starting_xi: [],
+      home_substitutes: [],
+      away_substitutes: []
+    };
+    const homeTeam = lineups.home_team || teams.home;
+    const awayTeam = lineups.away_team || teams.away;
+    const homeSelected = findLastSelectedTeam(selectedRows, homeTeam, kickoff);
+    const awaySelected = findLastSelectedTeam(selectedRows, awayTeam, kickoff);
+    const carriedFrom = [];
+
+    if (homeSelected) {
+      lineups.home_formation = homeSelected.formation || lineups.home_formation || '';
+      lineups.home_starting_xi = [...homeSelected.starting_xi];
+      lineups.home_substitutes = [...homeSelected.substitutes];
+      carriedFrom.push(`${homeTeam} from ${homeSelected.source_match}`);
+      updatedSides += 1;
+    }
+
+    if (awaySelected) {
+      lineups.away_formation = awaySelected.formation || lineups.away_formation || '';
+      lineups.away_starting_xi = [...awaySelected.starting_xi];
+      lineups.away_substitutes = [...awaySelected.substitutes];
+      carriedFrom.push(`${awayTeam} from ${awaySelected.source_match}`);
+      updatedSides += 1;
+    }
+
+    if (!carriedFrom.length) continue;
+
+    fixture.confirmed_lineups = {
+      ...lineups,
+      status: 'projected',
+      source: 'Last confirmed selected teams',
+      checked_at: nowIso,
+      home_team: homeTeam,
+      away_team: awayTeam,
+      last_selected_team_sources: carriedFrom,
+      model_implication: 'Projected XI uses each side\'s last confirmed selected team where available; re-check once official teams are named.'
+    };
+
+    const note = 'Projection rule: last confirmed selected team carried forward where available.';
+    if (!String(fixture.lineup_model_note || '').includes(note)) {
+      fixture.lineup_model_note = `${fixture.lineup_model_note || ''} ${note}`.trim();
+    }
+  }
+
+  return updatedSides;
+}
+
 function findEvent(events, fixture) {
   const teams = splitTeams(fixture.match_name);
   if (!teams) return null;
@@ -4017,6 +4122,7 @@ async function main() {
   const espnEvents = await fetchEspnEventsForDataset(dataset);
   const fifaReports = await fetchFifaReportsForDataset(dataset, nowIso);
   const worldCupContextMatches = applyWorldCupContext(dataset, worldCupContext, nowIso);
+  const lastSelectedLineupUpdates = applyLastSelectedTeamsToProjectedLineups(dataset, nowIso);
   const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
   const lineupUpdates = await refreshLastHourLineups(dataset, getNow(), nowIso, espnEvents);
   const postMatchStatsUpdates = await refreshPostMatchStats(dataset, espnEvents, nowIso);
@@ -4116,7 +4222,7 @@ async function main() {
   await writeFile(LEARNING_COEFFICIENTS_PATH, `${JSON.stringify(learningCoefficients, null, 2)}\n`);
   const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports, learningCoefficients);
 
-  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Seeded ${seededWorldCupFixtures} upcoming World Cup fixtures. Applied World Cup context to ${worldCupContextMatches} fixtures. Repriced ${fullMatchModelPriceUpdates} full-match model rows. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. FootyStats checked ${footyStatsAnalysis.checked} fixtures (${footyStatsAnalysis.matched} public rows matched${footyStatsAnalysis.error ? `, ${footyStatsAnalysis.error}` : ''}). Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+  console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Seeded ${seededWorldCupFixtures} upcoming World Cup fixtures. Applied World Cup context to ${worldCupContextMatches} fixtures. Carried forward ${lastSelectedLineupUpdates} last-selected lineup sides. Repriced ${fullMatchModelPriceUpdates} full-match model rows. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. FootyStats checked ${footyStatsAnalysis.checked} fixtures (${footyStatsAnalysis.matched} public rows matched${footyStatsAnalysis.error ? `, ${footyStatsAnalysis.error}` : ''}). Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }
 
 main().catch((error) => {
