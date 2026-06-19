@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-19T09:36:39.322Z",
+  "checked_at": "2026-06-19T10:05:38.787Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -591,7 +591,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 30
+      "matched_rows": 32
     },
     {
       "match_name": "United States vs Australia",
