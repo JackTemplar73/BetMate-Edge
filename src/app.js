@@ -864,7 +864,7 @@ function renderWaltersStrategy() {
       ${rows.map((market) => {
         const action = waltersAction(market);
         return `
-          <article class="high-value-card">
+          <article class="high-value-card strategy-board-card">
             <div class="card-topline">
               <span class="qi-badge card-grade ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics?.qi}</span>
               <span class="sub-cell date-one-line">${formatKickoff(market.kickoff_time_aest)}</span>

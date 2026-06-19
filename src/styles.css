@@ -365,9 +365,9 @@ h3 {
 
 .strategy-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 10px;
-  margin-top: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 16px;
+  margin-top: 18px;
 }
 
 .strategy-basis-row {
@@ -378,6 +378,93 @@ h3 {
   color: var(--text);
   font-size: 13px;
   line-height: 1.35;
+}
+
+.strategy-board .inline-section-heading h3,
+.strategy-board .inline-section-heading p {
+  color: #000 !important;
+}
+
+.strategy-board-card {
+  min-height: 0;
+  padding: 22px;
+  border-color: #d8d3c2;
+  background: #fff;
+  color: #000;
+}
+
+.strategy-board-card .card-topline {
+  align-items: center;
+  min-height: 0;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d8d3c2;
+}
+
+.strategy-board-card .qi-badge,
+.strategy-board-card .sub-cell {
+  color: #000 !important;
+}
+
+.strategy-board-card .qi-badge {
+  border-color: #000;
+  background: #fff;
+  font-size: 14px;
+}
+
+.strategy-board-card .date-one-line {
+  font-size: 15px;
+  font-weight: 850;
+}
+
+.strategy-board-card .match-name {
+  margin: 0 0 10px;
+  color: #000 !important;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.strategy-board-card h3 {
+  margin-bottom: 16px;
+  color: #000 !important;
+  font-size: clamp(22px, 1.8vw, 28px);
+  line-height: 1.16;
+}
+
+.strategy-board-card dl {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 18px;
+}
+
+.strategy-board-card dl > div {
+  min-height: 64px;
+  padding: 12px 0;
+  border-top: 1px solid #e1dccd;
+}
+
+.strategy-board-card dl > div:nth-child(-n + 3) {
+  border-top: 0;
+}
+
+.strategy-board-card dt {
+  color: #000 !important;
+  font-size: 12px;
+  font-weight: 950;
+}
+
+.strategy-board-card dd {
+  color: #000 !important;
+  font-size: 18px;
+  line-height: 1.25;
+}
+
+.strategy-board-card .strategy-basis-row {
+  min-height: 0;
+}
+
+.strategy-board-card .strategy-basis-row dd {
+  font-size: 16px;
+  line-height: 1.4;
 }
 
 .table-section {
@@ -1898,6 +1985,22 @@ dd {
 
   .strategy-grid {
     grid-template-columns: 1fr;
+  }
+
+  .strategy-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .strategy-board-card dl {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .strategy-board-card dl > div:nth-child(-n + 3) {
+    border-top: 1px solid #e1dccd;
+  }
+
+  .strategy-board-card dl > div:nth-child(-n + 2) {
+    border-top: 0;
   }
 
   .wide {
