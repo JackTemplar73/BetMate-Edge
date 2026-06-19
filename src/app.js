@@ -753,6 +753,23 @@ function inferRiskFromOdds(odds) {
   return 'Low';
 }
 
+function strategyInclusionBasis(market) {
+  const qi = Number(market.metrics?.qi);
+  const odds = Number(market.current_odds);
+  const ev = Number(market.metrics?.ev);
+  const edge = getEdgeValue(market);
+  const reasons = [];
+
+  if (Number.isFinite(qi)) reasons.push(`QI ${qi}`);
+  if (Number.isFinite(ev) && ev > 0) reasons.push(`${formatEv(market)} EV`);
+  if (Number.isFinite(edge) && edge > 0) reasons.push(`${formatEdge(market)} edge`);
+  if (Number.isFinite(odds) && odds >= 3.5) reasons.push('high-price risk controlled');
+
+  return reasons.length
+    ? reasons.join(' | ')
+    : 'Included for review because it has a current model price and market price.';
+}
+
 function waltersAction(market) {
   const qi = Number(market.metrics?.qi);
   const odds = Number(market.current_odds);
@@ -828,7 +845,7 @@ function renderWaltersStrategy() {
     <div class="inline-section-heading">
       <div>
         <h3>Current Board</h3>
-        <p>Ordered by QI first, then value and edge.</p>
+        <p>Included when QI is 60+ with a current market price and model price. QI 82+ can be a bet-now candidate, QI 70-81 is smaller stake, and QI 60-69 is watch only.</p>
       </div>
     </div>
     <div class="strategy-card-grid">
@@ -840,16 +857,18 @@ function renderWaltersStrategy() {
               <span class="qi-badge card-grade ${metricClass(Number(market.metrics?.qi))}">QI ${market.metrics?.qi}</span>
               <span class="sub-cell date-one-line">${formatKickoff(market.kickoff_time_aest)}</span>
             </div>
-            <p class="match-name">${market.match_name}</p>
-            <h3>${market.target_selection}</h3>
             <div class="strategy-action ${action.className}">
               <strong>${action.label}</strong>
               <span>${action.stake}</span>
             </div>
+            <p class="match-name">${market.match_name}</p>
+            <h3>${market.target_selection}</h3>
+            <p class="strategy-basis">${strategyInclusionBasis(market)}</p>
             <dl>
               <div class="book-stat-row"><dt>Book</dt><dd>${formatBookCell(market)}</dd></div>
               <div><dt>Odds</dt><dd>${formatOdds(market)}</dd></div>
               <div><dt>Model Price</dt><dd>${formatModelPrice(market)}</dd></div>
+              <div><dt>Model Prob</dt><dd>${formatModelProb(market)}</dd></div>
               <div><dt>EV</dt><dd class="${evClass(market)}">${formatEv(market)}</dd></div>
               <div><dt>Edge</dt><dd class="${edgeClass(market)}">${formatEdge(market)}</dd></div>
               <div><dt>Risk</dt><dd>${formatRisk(market)}</dd></div>

@@ -337,17 +337,17 @@ h3 {
 
 .strategy-card-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
-  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 16px;
 }
 
 .strategy-card {
-  padding: 16px;
+  padding: 18px;
 }
 
 .strategy-card h3 {
-  margin: 12px 0;
-  font-size: 18px;
+  margin: 10px 0;
+  font-size: 19px;
   line-height: 1.28;
 }
 
@@ -356,10 +356,16 @@ h3 {
   justify-content: space-between;
   gap: 10px;
   align-items: center;
-  padding: 10px 0;
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
+  margin: 12px 0;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.62);
   font-weight: 900;
+}
+
+.strategy-action strong {
+  font-size: 18px;
 }
 
 .strategy-action span {
@@ -367,9 +373,24 @@ h3 {
   font-size: 13px;
 }
 
+.strategy-basis {
+  margin: 0 0 12px;
+  padding: 10px 12px;
+  border-left: 4px solid var(--accent);
+  background: rgba(255, 255, 255, 0.48);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.38;
+}
+
 .strategy-note {
   margin: 12px 0 0;
   line-height: 1.45;
+}
+
+.strategy-card dl {
+  margin-top: 4px;
 }
 
 .table-section {
