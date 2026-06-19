@@ -371,6 +371,146 @@ function buildBetQualityFromPrices(truePriceValue, currentOddsValue) {
   };
 }
 
+function profitUnitsFromHistoryEntry(entry) {
+  const status = String(entry.result_status || '').toLowerCase();
+  const odds = Number(entry.opening_odds);
+  if (status === 'won' || status === 'win') return Number.isFinite(odds) ? odds - 1 : 0;
+  if (status === 'lost' || status === 'loss') return -1;
+  return 0;
+}
+
+function marketDisciplineKey(value) {
+  const key = normalise(value);
+  if (key.includes('goal total') || key === 'totals') return 'Goal Totals';
+  if (key.includes('main match')) return 'Main Match';
+  if (key.includes('full match')) return 'Full Match Model';
+  if (key.includes('player prop')) return 'Player Prop';
+  if (key.includes('spread') || key.includes('handicap')) return 'Spread';
+  if (key.includes('moneyline') || key.includes('match result')) return 'Moneyline';
+  return value || 'Other';
+}
+
+function buildWaltersDiscipline(history = []) {
+  const settled = history.filter((entry) => ['won', 'win', 'lost', 'loss'].includes(String(entry.result_status || '').toLowerCase()));
+  const byMarket = new Map();
+  let confirmedSharpCloses = 0;
+  let closeReferences = 0;
+
+  for (const entry of settled) {
+    const market = marketDisciplineKey(entry.market_matrix || entry.market || entry.category);
+    if (!byMarket.has(market)) {
+      byMarket.set(market, {
+        bets: 0,
+        wins: 0,
+        losses: 0,
+        profit_units: 0,
+        confirmed_sharp_closes: 0,
+        positive_clv: 0,
+        negative_clv: 0
+      });
+    }
+
+    const profile = byMarket.get(market);
+    profile.bets += 1;
+    profile.profit_units += profitUnitsFromHistoryEntry(entry);
+    if (['won', 'win'].includes(String(entry.result_status || '').toLowerCase())) profile.wins += 1;
+    if (['lost', 'loss'].includes(String(entry.result_status || '').toLowerCase())) profile.losses += 1;
+
+    if (entry.closing_reference_type === 'sharp_market' && Number.isFinite(Number(entry.clv_percent))) {
+      confirmedSharpCloses += 1;
+      closeReferences += 1;
+      profile.confirmed_sharp_closes += 1;
+      if (Number(entry.clv_percent) > 0) profile.positive_clv += 1;
+      if (Number(entry.clv_percent) < 0) profile.negative_clv += 1;
+    } else if (Number.isFinite(Number(entry.estimated_clv_percent)) || Number.isFinite(Number(entry.latest_pre_kickoff_clv_percent))) {
+      closeReferences += 1;
+    }
+  }
+
+  const market_adjustments = {};
+  const market_profiles = {};
+
+  for (const [market, profile] of byMarket.entries()) {
+    const roi = profile.bets ? profile.profit_units / profile.bets : 0;
+    const win_rate = profile.bets ? profile.wins / profile.bets : 0;
+    const sharp_close_rate = profile.bets ? profile.confirmed_sharp_closes / profile.bets : 0;
+    let adjustment = 0;
+    const reasons = [];
+
+    if (profile.bets >= 8 && roi < -0.15) {
+      adjustment -= 14;
+      reasons.push('negative ROI over a meaningful sample');
+    } else if (profile.bets >= 5 && roi < -0.05) {
+      adjustment -= 8;
+      reasons.push('early negative ROI');
+    }
+
+    if (profile.bets >= 8 && win_rate < 0.3) {
+      adjustment -= 5;
+      reasons.push('low hit rate for this market type');
+    }
+
+    if (profile.bets >= 5 && sharp_close_rate === 0) {
+      adjustment -= 4;
+      reasons.push('no confirmed sharp close validation yet');
+    }
+
+    if (market === 'Goal Totals' && profile.bets >= 8 && profile.profit_units < 0) {
+      adjustment = Math.min(adjustment, -16);
+      reasons.push('goal totals are watch-only until close validation improves');
+    }
+
+    market_adjustments[market] = {
+      qi_adjustment: Math.round(clamp(adjustment, -22, 0)),
+      reasons
+    };
+    market_profiles[market] = {
+      ...profile,
+      profit_units: Number(profile.profit_units.toFixed(2)),
+      roi_percent: profile.bets ? Number(((profile.profit_units / profile.bets) * 100).toFixed(1)) : 0,
+      win_rate_percent: profile.bets ? Number((win_rate * 100).toFixed(1)) : 0,
+      sharp_close_rate_percent: profile.bets ? Number((sharp_close_rate * 100).toFixed(1)) : 0
+    };
+  }
+
+  const sharpCloseRate = settled.length ? confirmedSharpCloses / settled.length : 0;
+  const referenceRate = settled.length ? closeReferences / settled.length : 0;
+
+  return {
+    settled_bets: settled.length,
+    profit_units: Number(settled.reduce((total, entry) => total + profitUnitsFromHistoryEntry(entry), 0).toFixed(2)),
+    roi_percent: settled.length ? Number(((settled.reduce((total, entry) => total + profitUnitsFromHistoryEntry(entry), 0) / settled.length) * 100).toFixed(1)) : 0,
+    sharp_close_rate_percent: Number((sharpCloseRate * 100).toFixed(1)),
+    close_reference_rate_percent: Number((referenceRate * 100).toFixed(1)),
+    market_profiles,
+    market_adjustments,
+    note: 'Walters discipline: profit matters, but process is judged by early price capture and beating a sharp T-5 close. Markets without close validation do not get result-only upgrades.'
+  };
+}
+
+function applyWaltersDisciplineToMetrics(metrics, marketItem, learningCoefficients = DEFAULT_LEARNING_COEFFICIENTS) {
+  const discipline = learningCoefficients.walters_discipline || {};
+  const market = marketDisciplineKey(marketItem.market_matrix || marketItem.market || marketItem.category);
+  const adjustment = discipline.market_adjustments?.[market];
+  const qiAdjustment = Number(adjustment?.qi_adjustment);
+  if (!Number.isFinite(qiAdjustment) || qiAdjustment === 0) {
+    return {
+      ...metrics,
+      walters_qi_adjustment: 0,
+      walters_process_note: 'No market-level Walters adjustment applied.'
+    };
+  }
+
+  return {
+    ...metrics,
+    qi: Math.round(clamp(metrics.qi + qiAdjustment, 0, 100)),
+    walters_qi_adjustment: qiAdjustment,
+    walters_process_note: adjustment.reasons?.length
+      ? `Walters adjustment: ${adjustment.reasons.join('; ')}.`
+      : 'Walters adjustment applied from results and close-validation review.'
+  };
+}
+
 function shouldRefresh(dataset, now = getNow()) {
   if (process.env.FORCE_REFRESH === 'true' || process.env.GITHUB_EVENT_NAME === 'workflow_dispatch') {
     return { refresh: true, cadence: 'manual' };
@@ -1205,7 +1345,7 @@ function applyDataQualityAudits(dataset, nowIso) {
   }
 }
 
-function applyDataQualityAdjustedScoring(dataset) {
+function applyDataQualityAdjustedScoring(dataset, learningCoefficients = DEFAULT_LEARNING_COEFFICIENTS) {
   for (const fixture of dataset) {
     const rating = fixture.model_data_quality?.rating;
     const band = fixture.model_data_quality?.band;
@@ -1214,12 +1354,14 @@ function applyDataQualityAdjustedScoring(dataset) {
       marketItem.model_data_quality_rating = rating ?? null;
       marketItem.model_data_quality_band = band || null;
 
-      const metrics = runVectorCalculations(marketItem);
+      const metrics = applyWaltersDisciplineToMetrics(runVectorCalculations(marketItem), marketItem, learningCoefficients);
       marketItem.ev = metrics.ev;
       marketItem.qi = metrics.qi;
       marketItem.base_qi = metrics.base_qi;
       marketItem.price_qi = metrics.price_qi;
       marketItem.data_quality_adjustment = metrics.data_quality_adjustment;
+      marketItem.walters_qi_adjustment = metrics.walters_qi_adjustment;
+      marketItem.walters_process_note = metrics.walters_process_note;
     }
 
     for (const row of fixture.market_scan?.rows || []) {
@@ -1229,16 +1371,23 @@ function applyDataQualityAdjustedScoring(dataset) {
       const currentOdds = Number(row.current_odds);
       if (!Number.isFinite(modelPrice) || !Number.isFinite(currentOdds)) continue;
 
-      const metrics = runVectorCalculations({
+      const metrics = applyWaltersDisciplineToMetrics(runVectorCalculations({
+        market_matrix: row.category || row.market || row.market_matrix,
         true_price: modelPrice,
         current_odds: currentOdds,
         model_data_quality_rating: rating
-      });
+      }), {
+        market_matrix: row.category || row.market || row.market_matrix,
+        true_price: modelPrice,
+        current_odds: currentOdds
+      }, learningCoefficients);
       row.ev = metrics.ev;
       row.qi = metrics.qi;
       row.base_qi = metrics.base_qi;
       row.price_qi = metrics.price_qi;
       row.data_quality_adjustment = metrics.data_quality_adjustment;
+      row.walters_qi_adjustment = metrics.walters_qi_adjustment;
+      row.walters_process_note = metrics.walters_process_note;
     }
   }
 }
@@ -2269,7 +2418,7 @@ function learnedAdjustment(flagCount, sampleSize, weight, cap) {
   return Number(clamp(rate * weight * sampleDampener, 0, cap).toFixed(4));
 }
 
-function buildLearningCoefficients(dataset, previous, now = getNow()) {
+function buildLearningCoefficients(dataset, previous, now = getNow(), history = []) {
   const { flags, sampleSize, xgSamples } = countLearningFlags(dataset);
   const drawFlags = (flags['draw-risk-underestimated'] || 0) + (flags['favourite-confidence-too-high'] || 0);
   const suppressionFlags = (flags['goal-suppression-underweighted'] || 0) + (flags['chance-quality-overstated'] || 0);
@@ -2292,6 +2441,7 @@ function buildLearningCoefficients(dataset, previous, now = getNow()) {
       break_open_risk: learnedAdjustment(breakOpenFlags + finishingHighFlags, sampleSize, 0.36, 0.16),
       chance_quality_penalty: learnedAdjustment(chanceQualityFlags, sampleSize, 0.12, 0.05)
     },
+    walters_discipline: buildWaltersDiscipline(history),
     flags,
     note: sampleSize
       ? 'Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.'
@@ -2645,7 +2795,7 @@ function isSettledHistoryEntry(entry) {
   return ['won', 'win', 'lost', 'loss', 'push', 'void'].includes(String(entry.result_status || '').toLowerCase());
 }
 
-async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaReports = []) {
+async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaReports = [], learningCoefficients = DEFAULT_LEARNING_COEFFICIENTS) {
   const history = await readHistory();
   const byId = new Map(history
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
@@ -2664,7 +2814,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       }
 
       activeBetIds.add(id);
-      const metrics = runVectorCalculations(marketItem);
+      const metrics = applyWaltersDisciplineToMetrics(runVectorCalculations(marketItem), marketItem, learningCoefficients);
       const currentOdds = Number.parseFloat(marketItem.current_odds);
       const modelPrice = Number.parseFloat(marketItem.true_price);
 
@@ -2694,6 +2844,8 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         opening_model_price: modelPrice,
         opening_ev: metrics.ev,
         opening_qi: metrics.qi,
+        opening_walters_qi_adjustment: metrics.walters_qi_adjustment,
+        walters_process_note: metrics.walters_process_note,
         closing_odds: null,
         closing_captured_at: null,
         clv_percent: null,
@@ -2717,6 +2869,8 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       entry.save_rule = entry.save_rule || 'Saved immediately when the selection first cleared QI 70+ before kickoff.';
       entry.opening_source = entry.opening_source || `${entry.au_bookie || marketItem.au_bookie || 'Book'} price when the agent first saved the qualified selection.`;
       entry.clv_benchmark_rule = entry.clv_benchmark_rule || 'Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.';
+      entry.walters_process_note = metrics.walters_process_note || entry.walters_process_note || null;
+      entry.current_walters_qi_adjustment = metrics.walters_qi_adjustment;
       entry.model_data_quality_rating = marketItem.model_data_quality_rating ?? fixture.model_data_quality?.rating ?? entry.model_data_quality_rating ?? null;
       entry.model_data_quality_band = marketItem.model_data_quality_band ?? fixture.model_data_quality?.band ?? entry.model_data_quality_band ?? null;
       if (entry.closing_status === 'missing_fresh_close') {
@@ -2751,10 +2905,13 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       const latestReference = preferredLatestReferenceMarket(fixture, marketItem, kickoff, entry.opening_odds);
       if (latestReference) {
         const latestOdds = Number.parseFloat(latestReference.marketItem.current_odds);
-        const latestMetrics = runVectorCalculations({
+        const latestMetrics = applyWaltersDisciplineToMetrics(runVectorCalculations({
           ...marketItem,
           current_odds: latestOdds
-        });
+        }), {
+          ...marketItem,
+          current_odds: latestOdds
+        }, learningCoefficients);
         const latestCheckedAt = latestReference.snapshot.checkedAt.toISOString();
         if (!entry.latest_pre_kickoff_at || Date.parse(latestCheckedAt) >= Date.parse(entry.latest_pre_kickoff_at)) {
           entry.latest_pre_kickoff_odds = latestOdds;
@@ -2769,7 +2926,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       const closingMarket = preferredClosingMarket(fixture, marketItem, kickoff, entry.opening_odds);
       if (closingMarket) {
         const closingOdds = Number.parseFloat(closingMarket.marketItem.current_odds);
-        const closingMetrics = runVectorCalculations(closingMarket.marketItem);
+        const closingMetrics = applyWaltersDisciplineToMetrics(runVectorCalculations(closingMarket.marketItem), closingMarket.marketItem, learningCoefficients);
         entry.closing_odds = closingOdds;
         entry.closing_bookie = closingMarket.reference;
         entry.closing_qi = closingMetrics.qi;
@@ -2791,10 +2948,13 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         const softClosingMarket = preferredSoftClosingMarket(fixture, marketItem, kickoff, entry.opening_odds);
         if (softClosingMarket) {
           const softClosingOdds = Number.parseFloat(softClosingMarket.marketItem.current_odds);
-          const softClosingMetrics = runVectorCalculations({
+          const softClosingMetrics = applyWaltersDisciplineToMetrics(runVectorCalculations({
             ...marketItem,
             current_odds: softClosingOdds
-          });
+          }), {
+            ...marketItem,
+            current_odds: softClosingOdds
+          }, learningCoefficients);
           entry.latest_pre_kickoff_odds = softClosingOdds;
           entry.latest_pre_kickoff_at = softClosingMarket.snapshot.checkedAt.toISOString();
           entry.latest_pre_kickoff_bookie = softClosingMarket.reference;
@@ -2834,10 +2994,13 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
           entry.clv_percent = null;
           entry.estimated_closing_odds = estimatedOdds;
           entry.estimated_clv_percent = clvPercent(entry.opening_odds, estimatedOdds);
-          const estimatedMetrics = runVectorCalculations({
+          const estimatedMetrics = applyWaltersDisciplineToMetrics(runVectorCalculations({
             ...marketItem,
             current_odds: estimatedOdds
-          });
+          }), {
+            ...marketItem,
+            current_odds: estimatedOdds
+          }, learningCoefficients);
           entry.estimated_qi = estimatedMetrics.qi;
           entry.current_odds = estimatedOdds;
           entry.current_ev = estimatedMetrics.ev;
@@ -3878,19 +4041,20 @@ async function main() {
   const prunedMarkets = pruneUnverifiedFutureMarkets(dataset);
   deriveFixtureModels(dataset, learningCoefficients);
   const learnedMatches = applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
-  learningCoefficients = buildLearningCoefficients(dataset, learningCoefficients, getNow());
+  const historyForLearning = await readHistory();
+  learningCoefficients = buildLearningCoefficients(dataset, learningCoefficients, getNow(), historyForLearning);
   deriveFixtureModels(dataset, learningCoefficients);
   applyPostMatchLearning(dataset, espnEvents, fifaReports, getNow());
   const fullMatchModelPriceUpdates = updateFullMatchMarketsFromModel(dataset);
   reconcileMarketScanModelValues(dataset);
   const footyStatsAnalysis = await applyFootyStatsAnalysis(dataset, nowIso);
   applyDataQualityAudits(dataset, nowIso);
-  applyDataQualityAdjustedScoring(dataset);
+  applyDataQualityAdjustedScoring(dataset, learningCoefficients);
 
   await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
   await writeFile(LEARNING_COEFFICIENTS_PATH, `${JSON.stringify(learningCoefficients, null, 2)}\n`);
-  const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports);
+  const { historyCount, settledResults } = await syncBetHistory(dataset, getNow(), espnEvents, fifaReports, learningCoefficients);
 
   console.log(`Odds refresh complete (${timing.cadence}). Updated ${updates} market prices. Seeded ${seededWorldCupFixtures} upcoming World Cup fixtures. Applied World Cup context to ${worldCupContextMatches} fixtures. Repriced ${fullMatchModelPriceUpdates} full-match model rows. Corrected ${correctedOutlierPrices} stale/post-start outliers. Removed ${prunedMarkets} unverified future markets. Checked ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Confirmed ${lineupUpdates} last-hour lineups. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. FootyStats checked ${footyStatsAnalysis.checked} fixtures (${footyStatsAnalysis.matched} public rows matched${footyStatsAnalysis.error ? `, ${footyStatsAnalysis.error}` : ''}). Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
 }

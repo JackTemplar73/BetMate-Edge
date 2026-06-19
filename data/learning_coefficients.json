@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T01:41:20.712Z",
+  "updated_at": "2026-06-19T01:56:43.222Z",
   "sample_size": 23,
   "confidence": "developing",
   "adjustments": {
-    "draw_lift": 0.0191,
-    "favourite_compression": 0.0356,
+    "draw_lift": 0.017,
+    "favourite_compression": 0.0333,
     "goal_suppression": 0.063,
     "break_open_risk": 0.072,
     "chance_quality_penalty": 0.018
@@ -13,8 +13,8 @@
   "flags": {
     "break-open-risk-underweighted": 6,
     "finishing-variance-high": 2,
-    "draw-risk-underestimated": 9,
-    "territory-did-not-become-shot-volume": 4,
+    "draw-risk-underestimated": 8,
+    "territory-did-not-become-shot-volume": 3,
     "xg-did-not-support-favourite": 2,
     "goal-suppression-underweighted": 1,
     "finishing-variance-low": 1,
@@ -22,5 +22,122 @@
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
   "xg_sample_size": 23,
-  "previous_updated_at": "2026-06-19T01:35:47.652Z"
+  "previous_updated_at": "2026-06-19T01:55:32.101Z",
+  "walters_discipline": {
+    "settled_bets": 65,
+    "profit_units": 20.16,
+    "roi_percent": 31,
+    "sharp_close_rate_percent": 0,
+    "close_reference_rate_percent": 100,
+    "market_profiles": {
+      "Player Prop": {
+        "bets": 2,
+        "wins": 0,
+        "losses": 2,
+        "profit_units": -2,
+        "confirmed_sharp_closes": 0,
+        "positive_clv": 0,
+        "negative_clv": 0,
+        "roi_percent": -100,
+        "win_rate_percent": 0,
+        "sharp_close_rate_percent": 0
+      },
+      "Moneyline": {
+        "bets": 2,
+        "wins": 1,
+        "losses": 1,
+        "profit_units": 0,
+        "confirmed_sharp_closes": 0,
+        "positive_clv": 0,
+        "negative_clv": 0,
+        "roi_percent": 0,
+        "win_rate_percent": 50,
+        "sharp_close_rate_percent": 0
+      },
+      "Spread": {
+        "bets": 1,
+        "wins": 1,
+        "losses": 0,
+        "profit_units": 0.95,
+        "confirmed_sharp_closes": 0,
+        "positive_clv": 0,
+        "negative_clv": 0,
+        "roi_percent": 95,
+        "win_rate_percent": 100,
+        "sharp_close_rate_percent": 0
+      },
+      "Main Match": {
+        "bets": 28,
+        "wins": 12,
+        "losses": 16,
+        "profit_units": 8.95,
+        "confirmed_sharp_closes": 0,
+        "positive_clv": 0,
+        "negative_clv": 0,
+        "roi_percent": 32,
+        "win_rate_percent": 42.9,
+        "sharp_close_rate_percent": 0
+      },
+      "Full Match Model": {
+        "bets": 15,
+        "wins": 6,
+        "losses": 9,
+        "profit_units": 23.05,
+        "confirmed_sharp_closes": 0,
+        "positive_clv": 0,
+        "negative_clv": 0,
+        "roi_percent": 153.7,
+        "win_rate_percent": 40,
+        "sharp_close_rate_percent": 0
+      },
+      "Goal Totals": {
+        "bets": 17,
+        "wins": 3,
+        "losses": 14,
+        "profit_units": -10.79,
+        "confirmed_sharp_closes": 0,
+        "positive_clv": 0,
+        "negative_clv": 0,
+        "roi_percent": -63.5,
+        "win_rate_percent": 17.6,
+        "sharp_close_rate_percent": 0
+      }
+    },
+    "market_adjustments": {
+      "Player Prop": {
+        "qi_adjustment": 0,
+        "reasons": []
+      },
+      "Moneyline": {
+        "qi_adjustment": 0,
+        "reasons": []
+      },
+      "Spread": {
+        "qi_adjustment": 0,
+        "reasons": []
+      },
+      "Main Match": {
+        "qi_adjustment": -4,
+        "reasons": [
+          "no confirmed sharp close validation yet"
+        ]
+      },
+      "Full Match Model": {
+        "qi_adjustment": -4,
+        "reasons": [
+          "no confirmed sharp close validation yet"
+        ]
+      },
+      "Goal Totals": {
+        "qi_adjustment": -22,
+        "reasons": [
+          "negative ROI over a meaningful sample",
+          "low hit rate for this market type",
+          "no confirmed sharp close validation yet",
+          "goal totals are watch-only until close validation improves"
+        ]
+      }
+    },
+    "note": "Walters discipline: profit matters, but process is judged by early price capture and beating a sharp T-5 close. Markets without close validation do not get result-only upgrades."
+  }
 }
