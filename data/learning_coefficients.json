@@ -1,31 +1,32 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T03:45:57.163Z",
-  "sample_size": 23,
+  "updated_at": "2026-06-19T06:04:22.750Z",
+  "sample_size": 24,
   "confidence": "developing",
   "adjustments": {
-    "draw_lift": 0.0127,
-    "favourite_compression": 0.0261,
+    "draw_lift": 0.0064,
+    "favourite_compression": 0.0142,
     "goal_suppression": 0.042,
     "break_open_risk": 0.072,
-    "chance_quality_penalty": 0.015
+    "chance_quality_penalty": 0.009
   },
   "flags": {
     "break-open-risk-underweighted": 6,
     "finishing-variance-high": 2,
-    "draw-risk-underestimated": 6,
-    "territory-did-not-become-shot-volume": 3,
-    "xg-did-not-support-favourite": 2,
     "finishing-variance-low": 1,
-    "chance-quality-overstated": 3
+    "draw-risk-underestimated": 3,
+    "territory-did-not-become-shot-volume": 2,
+    "chance-quality-overstated": 2,
+    "xg-did-not-support-favourite": 1,
+    "goal-suppression-underweighted": 1
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
-  "xg_sample_size": 23,
-  "previous_updated_at": "2026-06-19T03:44:03.455Z",
+  "xg_sample_size": 24,
+  "previous_updated_at": "2026-06-19T06:02:14.336Z",
   "walters_discipline": {
-    "settled_bets": 66,
-    "profit_units": 20.68,
-    "roi_percent": 31.3,
+    "settled_bets": 68,
+    "profit_units": 18.68,
+    "roi_percent": 27.5,
     "sharp_close_rate_percent": 0,
     "close_reference_rate_percent": 100,
     "market_profiles": {
@@ -66,15 +67,15 @@
         "sharp_close_rate_percent": 0
       },
       "Main Match": {
-        "bets": 29,
+        "bets": 31,
         "wins": 13,
-        "losses": 16,
-        "profit_units": 9.47,
+        "losses": 18,
+        "profit_units": 7.47,
         "confirmed_sharp_closes": 0,
         "positive_clv": 0,
         "negative_clv": 0,
-        "roi_percent": 32.7,
-        "win_rate_percent": 44.8,
+        "roi_percent": 24.1,
+        "win_rate_percent": 41.9,
         "sharp_close_rate_percent": 0
       },
       "Full Match Model": {
@@ -137,6 +138,6 @@
         ]
       }
     },
-    "note": "Walters discipline: profit matters, but process is judged by early price capture and beating a sharp T-5 close. Markets without close validation do not get result-only upgrades."
+    "note": "Walters discipline: profit matters, but process is judged by early price capture and beating a sharp T-6 to T-3 close. Markets without close validation do not get result-only upgrades."
   }
 }
