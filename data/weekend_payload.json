@@ -37321,7 +37321,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "4cd769aa7bae0ad9762bd69b80ef2903",
       "offered_market_keys": [
@@ -38548,7 +38548,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "f955d4b3395ce6e3b5ac1031ca52ca4e",
       "offered_market_keys": [
@@ -39774,7 +39774,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "ef0f74a991d3e35798ae5af77667bce1",
       "offered_market_keys": [
@@ -40923,7 +40923,7 @@
         "Neds",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "065b3573e875f8d23803357f73e5b99e",
       "offered_market_keys": [
@@ -41026,11 +41026,11 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 38.6,
           "model_price": 2.59,
-          "current_odds": 4.6,
+          "current_odds": 4.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 21.7,
-          "ev": 77.61,
+          "devig_book_probability": 22.07,
+          "ev": 73.75,
           "qi": 79,
           "price_qi": 98
         },
@@ -41173,7 +41173,7 @@
           "current_odds": 5.6,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 17.82,
+          "devig_book_probability": 17.74,
           "ev": 29.33,
           "qi": 52,
           "price_qi": 88
@@ -42031,7 +42031,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "4f0c518545b0096c68326daf25bffc1e",
       "offered_market_keys": [
@@ -43288,7 +43288,7 @@
         "TAB",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "f1ab0f69832972a329243522ceaa7804",
       "offered_market_keys": [
@@ -43327,13 +43327,13 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 63.5,
           "model_price": 1.58,
-          "current_odds": 2.2,
+          "current_odds": 2.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 42.41,
-          "ev": 39.24,
-          "qi": 94,
-          "price_qi": 97
+          "devig_book_probability": 41.56,
+          "ev": 42.41,
+          "qi": 95,
+          "price_qi": 98
         },
         {
           "selection": "Ivory Coast or Draw",
@@ -43343,13 +43343,13 @@
           "oddsapi_market": "double_chance",
           "model_probability": 59.6,
           "model_price": 1.68,
-          "current_odds": 2.62,
+          "current_odds": 2.6,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 17.99,
-          "ev": 55.95,
+          "devig_book_probability": 18.16,
+          "ev": 54.76,
           "qi": 93,
-          "price_qi": 99
+          "price_qi": 98
         },
         {
           "selection": "BTTS No",
@@ -43471,13 +43471,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 38.5,
           "model_price": 2.6,
-          "current_odds": 4.25,
+          "current_odds": 4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 22.15,
-          "ev": 63.46,
+          "devig_book_probability": 23.54,
+          "ev": 53.85,
           "qi": 79,
-          "price_qi": 98
+          "price_qi": 96
         },
         {
           "selection": "Under 1.5 Goals",
@@ -43487,13 +43487,13 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 36.5,
           "model_price": 2.74,
-          "current_odds": 4.2,
+          "current_odds": 4.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 22.22,
-          "ev": 53.28,
+          "devig_book_probability": 20.77,
+          "ev": 64.23,
           "qi": 78,
-          "price_qi": 96
+          "price_qi": 97
         },
         {
           "selection": "Ivory Coast Draw No Bet",
@@ -43526,6 +43526,22 @@
           "ev": 30.8,
           "qi": 50,
           "price_qi": 87
+        },
+        {
+          "selection": "Ivory Coast to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 21.1,
+          "model_price": 4.74,
+          "current_odds": 6,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 15.7,
+          "ev": 26.58,
+          "qi": 48,
+          "price_qi": 86
         },
         {
           "selection": "Ivory Coast to Win",
@@ -43576,22 +43592,6 @@
           "price_qi": 82
         },
         {
-          "selection": "Ivory Coast to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 21.1,
-          "model_price": 4.74,
-          "current_odds": 5.5,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 17.12,
-          "ev": 16.03,
-          "qi": 43,
-          "price_qi": 82
-        },
-        {
           "selection": "Under 0.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -43618,7 +43618,7 @@
           "current_odds": 1.12,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 42.08,
+          "devig_book_probability": 42.16,
           "ev": -11.81,
           "qi": 36,
           "price_qi": 3
@@ -43663,13 +43663,13 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 63.5,
           "model_price": 1.58,
-          "current_odds": 1.2,
+          "current_odds": 1.18,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 77.78,
-          "ev": -24.05,
-          "qi": 35,
-          "price_qi": 1
+          "devig_book_probability": 79.23,
+          "ev": -25.32,
+          "qi": 34,
+          "price_qi": 0
         },
         {
           "selection": "Germany or Ivory Coast",
@@ -43679,11 +43679,11 @@
           "oddsapi_market": "double_chance",
           "model_probability": 61.5,
           "model_price": 1.62,
-          "current_odds": 1.18,
+          "current_odds": 1.19,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 39.94,
-          "ev": -27.16,
+          "devig_book_probability": 39.68,
+          "ev": -26.54,
           "qi": 34,
           "price_qi": 0
         },
@@ -43746,7 +43746,7 @@
           "current_odds": 1.55,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 60.73,
+          "devig_book_probability": 60.76,
           "ev": -37.5,
           "qi": 24,
           "price_qi": 1
@@ -43807,11 +43807,11 @@
           "oddsapi_market": "alternate_totals",
           "model_probability": 36.5,
           "model_price": 2.74,
-          "current_odds": 1.62,
+          "current_odds": 1.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 57.59,
-          "ev": -40.88,
+          "devig_book_probability": 58.44,
+          "ev": -41.61,
           "qi": 23,
           "price_qi": 1
         },
@@ -44461,7 +44461,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "681895f294b670b4c7b14495dfb583bc",
       "offered_market_keys": [
@@ -45520,7 +45520,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "dfc5202cf1b8ae002cf952cd04f235b9",
       "offered_market_keys": [
@@ -46741,7 +46741,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "c1ec9a65f4b4cf74477b368a7d6282de",
       "offered_market_keys": [
@@ -46764,11 +46764,11 @@
           "oddsapi_market": "double_chance",
           "model_probability": 61.2,
           "model_price": 1.63,
-          "current_odds": 2.38,
+          "current_odds": 2.42,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 19.71,
-          "ev": 46.01,
+          "devig_book_probability": 19.45,
+          "ev": 48.47,
           "qi": 94,
           "price_qi": 98
         },
@@ -46847,7 +46847,7 @@
           "current_odds": 4,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 23.74,
+          "devig_book_probability": 23.66,
           "ev": 54.44,
           "qi": 79,
           "price_qi": 96
@@ -46959,7 +46959,7 @@
           "current_odds": 5.5,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 17.27,
+          "devig_book_probability": 17.2,
           "ev": 24.43,
           "qi": 49,
           "price_qi": 86
@@ -47119,7 +47119,7 @@
           "current_odds": 1.13,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 41.52,
+          "devig_book_probability": 41.65,
           "ev": -12.4,
           "qi": 36,
           "price_qi": 3
@@ -47212,11 +47212,11 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 38.8,
           "model_price": 2.58,
-          "current_odds": 1.61,
+          "current_odds": 1.6,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 58.99,
-          "ev": -37.6,
+          "devig_book_probability": 59.14,
+          "ev": -37.98,
           "qi": 24,
           "price_qi": 1
         },
@@ -47962,7 +47962,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "8ba93d190f1f934e33862a97a6353a6e",
       "offered_market_keys": [
@@ -49181,7 +49181,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "2f49dd8deae3079dc4eb2d634d18a99c",
       "offered_market_keys": [
@@ -50380,7 +50380,7 @@
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -50992,7 +50992,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "c9ef5822ee64fd5275f7c73251bb56c7",
       "offered_market_keys": [
@@ -51066,7 +51066,7 @@
           "current_odds": 1.58,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 30.16,
+          "devig_book_probability": 29.93,
           "ev": 8.97,
           "qi": 79,
           "price_qi": 84
@@ -51168,6 +51168,22 @@
           "price_qi": 87
         },
         {
+          "selection": "Match to end in a Draw",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 38.8,
+          "model_price": 2.58,
+          "current_odds": 3.1,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 30.29,
+          "ev": 20.16,
+          "qi": 66,
+          "price_qi": 87
+        },
+        {
           "selection": "Under 1.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -51181,22 +51197,6 @@
           "devig_book_probability": 30.18,
           "ev": 18.32,
           "qi": 64,
-          "price_qi": 86
-        },
-        {
-          "selection": "Match to end in a Draw",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 38.8,
-          "model_price": 2.58,
-          "current_odds": 3,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 31.37,
-          "ev": 16.28,
-          "qi": 63,
           "price_qi": 86
         },
         {
@@ -51242,7 +51242,7 @@
           "current_odds": 1.35,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 35.3,
+          "devig_book_probability": 35.03,
           "ev": -6.25,
           "qi": 41,
           "price_qi": 18
@@ -51335,6 +51335,22 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 30.3,
           "model_price": 3.3,
+          "current_odds": 3.25,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 28.89,
+          "ev": -1.52,
+          "qi": 30,
+          "price_qi": 41
+        },
+        {
+          "selection": "Canada to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 30.3,
+          "model_price": 3.3,
           "current_odds": 3.2,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
@@ -51355,22 +51371,6 @@
           "au_bookie": "PointsBet (AU)",
           "bookmaker_key": "pointsbetau",
           "devig_book_probability": 29.71,
-          "ev": -3.03,
-          "qi": 28,
-          "price_qi": 34
-        },
-        {
-          "selection": "Canada to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 30.3,
-          "model_price": 3.3,
-          "current_odds": 3.2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 29.41,
           "ev": -3.03,
           "qi": 28,
           "price_qi": 34
@@ -51511,13 +51511,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 30.9,
           "model_price": 3.24,
-          "current_odds": 2.4,
+          "current_odds": 2.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 39.22,
-          "ev": -25.93,
-          "qi": 19,
-          "price_qi": 7
+          "devig_book_probability": 40.82,
+          "ev": -29.01,
+          "qi": 18,
+          "price_qi": 5
         },
         {
           "selection": "Under 0.5 Goals",
@@ -52179,7 +52179,7 @@
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T06:18:02.482Z",
+      "checked_at": "2026-06-19T06:25:35.403Z",
       "status": "checked",
       "oddsapi_event_id": "512ac18beb5aa936a59f7ea3e497ada2",
       "offered_market_keys": [
