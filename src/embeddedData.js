@@ -37315,7 +37315,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "4cd769aa7bae0ad9762bd69b80ef2903",
       "offered_market_keys": [
@@ -38542,7 +38542,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "f955d4b3395ce6e3b5ac1031ca52ca4e",
       "offered_market_keys": [
@@ -38565,13 +38565,13 @@ window.embeddedDataset = [
           "oddsapi_market": "double_chance",
           "model_probability": 68.8,
           "model_price": 1.45,
-          "current_odds": 1.78,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 26.28,
-          "ev": 22.76,
+          "current_odds": 1.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 26.29,
+          "ev": 24.14,
           "qi": 98,
-          "price_qi": 94
+          "price_qi": 95
         },
         {
           "selection": "Paraguay or Draw",
@@ -38581,45 +38581,13 @@ window.embeddedDataset = [
           "oddsapi_market": "double_chance",
           "model_probability": 68.8,
           "model_price": 1.45,
-          "current_odds": 1.75,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 27.08,
-          "ev": 20.69,
-          "qi": 97,
+          "current_odds": 1.78,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 26.28,
+          "ev": 22.76,
+          "qi": 98,
           "price_qi": 94
-        },
-        {
-          "selection": "Under 2.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 65.2,
-          "model_price": 1.53,
-          "current_odds": 1.75,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 53.33,
-          "ev": 14.38,
-          "qi": 87,
-          "price_qi": 89
-        },
-        {
-          "selection": "Under 3.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 84,
-          "model_price": 1.19,
-          "current_odds": 1.28,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 73.22,
-          "ev": 7.56,
-          "qi": 80,
-          "price_qi": 85
         },
         {
           "selection": "Paraguay Draw No Bet",
@@ -38629,29 +38597,29 @@ window.embeddedDataset = [
           "oddsapi_market": "draw_no_bet",
           "model_probability": 49,
           "model_price": 2.04,
-          "current_odds": 2.5,
+          "current_odds": 2.6,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 37.19,
-          "ev": 22.55,
-          "qi": 79,
-          "price_qi": 91
+          "devig_book_probability": 35.8,
+          "ev": 27.45,
+          "qi": 83,
+          "price_qi": 92
         },
         {
-          "selection": "BTTS No",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
+          "selection": "Under 2.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 57.9,
-          "model_price": 1.73,
-          "current_odds": 1.95,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 65.2,
+          "model_price": 1.53,
+          "current_odds": 1.68,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 48,
-          "ev": 12.72,
+          "devig_book_probability": 55.56,
+          "ev": 9.8,
           "qi": 79,
-          "price_qi": 87
+          "price_qi": 85
         },
         {
           "selection": "Match to end in a Draw",
@@ -38664,7 +38632,7 @@ window.embeddedDataset = [
           "current_odds": 3.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 28.36,
+          "devig_book_probability": 28.24,
           "ev": 35.66,
           "qi": 78,
           "price_qi": 93
@@ -38744,10 +38712,42 @@ window.embeddedDataset = [
           "current_odds": 3.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 28.54,
+          "devig_book_probability": 28.39,
           "ev": 25.97,
           "qi": 71,
           "price_qi": 90
+        },
+        {
+          "selection": "BTTS No",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 57.9,
+          "model_price": 1.73,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 50,
+          "ev": 8.09,
+          "qi": 71,
+          "price_qi": 81
+        },
+        {
+          "selection": "Under 3.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
+          "source": "Model",
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 84,
+          "model_price": 1.19,
+          "current_odds": 1.24,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 75.4,
+          "ev": 4.2,
+          "qi": 70,
+          "price_qi": 75
         },
         {
           "selection": "Under 1.5 Goals",
@@ -38757,29 +38757,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 38.2,
           "model_price": 2.62,
-          "current_odds": 3.2,
+          "current_odds": 3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 29.2,
-          "ev": 22.14,
-          "qi": 67,
-          "price_qi": 88
-        },
-        {
-          "selection": "Under 4.5 Goals",
-          "category": "Goal Totals",
-          "market": "Alternate Totals",
-          "source": "Model",
-          "oddsapi_market": "alternate_totals",
-          "model_probability": 93.9,
-          "model_price": 1.07,
-          "current_odds": 1.09,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 85.64,
-          "ev": 1.87,
-          "qi": 62,
-          "price_qi": 65
+          "devig_book_probability": 31.19,
+          "ev": 14.5,
+          "qi": 61,
+          "price_qi": 85
         },
         {
           "selection": "Paraguay to Win",
@@ -38808,7 +38792,7 @@ window.embeddedDataset = [
           "current_odds": 4,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 24.82,
+          "devig_book_probability": 24.71,
           "ev": 20.48,
           "qi": 54,
           "price_qi": 86
@@ -38837,13 +38821,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 30.1,
           "model_price": 3.32,
-          "current_odds": 3.75,
-          "au_bookie": "Neds",
-          "bookmaker_key": "neds",
-          "devig_book_probability": 25.14,
-          "ev": 12.95,
-          "qi": 53,
-          "price_qi": 82
+          "current_odds": 3.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 24.28,
+          "ev": 14.46,
+          "qi": 54,
+          "price_qi": 83
         },
         {
           "selection": "Paraguay to Win",
@@ -38853,29 +38837,29 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 30.1,
           "model_price": 3.32,
-          "current_odds": 3.7,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 25.07,
-          "ev": 11.45,
-          "qi": 52,
-          "price_qi": 81
+          "current_odds": 3.75,
+          "au_bookie": "Neds",
+          "bookmaker_key": "neds",
+          "devig_book_probability": 25.14,
+          "ev": 12.95,
+          "qi": 53,
+          "price_qi": 82
         },
         {
-          "selection": "Turkey or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
+          "selection": "Under 4.5 Goals",
+          "category": "Goal Totals",
+          "market": "Alternate Totals",
           "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 69.9,
-          "model_price": 1.43,
-          "current_odds": 1.28,
+          "oddsapi_market": "alternate_totals",
+          "model_probability": 93.9,
+          "model_price": 1.07,
+          "current_odds": 1.07,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 37.02,
-          "ev": -10.49,
-          "qi": 38,
-          "price_qi": 9
+          "devig_book_probability": 87.51,
+          "ev": 0,
+          "qi": 52,
+          "price_qi": 49
         },
         {
           "selection": "Over 0.5 Goals",
@@ -38901,6 +38885,22 @@ window.embeddedDataset = [
           "oddsapi_market": "double_chance",
           "model_probability": 69.9,
           "model_price": 1.43,
+          "current_odds": 1.25,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 37.86,
+          "ev": -12.59,
+          "qi": 37,
+          "price_qi": 6
+        },
+        {
+          "selection": "Turkey or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 69.9,
+          "model_price": 1.43,
           "current_odds": 1.24,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
@@ -38917,13 +38917,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 61.8,
           "model_price": 1.62,
-          "current_odds": 1.32,
+          "current_odds": 1.36,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 70.8,
-          "ev": -18.52,
+          "devig_book_probability": 68.81,
+          "ev": -16.05,
           "qi": 35,
-          "price_qi": 3
+          "price_qi": 5
         },
         {
           "selection": "Turkey Draw No Bet",
@@ -38933,13 +38933,29 @@ window.embeddedDataset = [
           "oddsapi_market": "draw_no_bet",
           "model_probability": 51,
           "model_price": 1.96,
-          "current_odds": 1.48,
+          "current_odds": 1.45,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 62.81,
-          "ev": -24.49,
-          "qi": 30,
-          "price_qi": 3
+          "devig_book_probability": 64.2,
+          "ev": -26.02,
+          "qi": 29,
+          "price_qi": 2
+        },
+        {
+          "selection": "BTTS Yes",
+          "category": "Main Match",
+          "market": "Both Teams To Score",
+          "source": "Model",
+          "oddsapi_market": "btts",
+          "model_probability": 42.1,
+          "model_price": 2.38,
+          "current_odds": 1.87,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 50,
+          "ev": -21.43,
+          "qi": 27,
+          "price_qi": 6
         },
         {
           "selection": "BTTS Yes",
@@ -38958,22 +38974,6 @@ window.embeddedDataset = [
           "price_qi": 5
         },
         {
-          "selection": "BTTS Yes",
-          "category": "Main Match",
-          "market": "Both Teams To Score",
-          "source": "Model",
-          "oddsapi_market": "btts",
-          "model_probability": 42.1,
-          "model_price": 2.38,
-          "current_odds": 1.8,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 52,
-          "ev": -24.37,
-          "qi": 27,
-          "price_qi": 5
-        },
-        {
           "selection": "Over 2.5 Goals",
           "category": "Goal Totals",
           "market": "Alternate Totals",
@@ -38981,13 +38981,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 34.8,
           "model_price": 2.87,
-          "current_odds": 2,
+          "current_odds": 2.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 46.67,
-          "ev": -30.31,
+          "devig_book_probability": 44.44,
+          "ev": -26.83,
           "qi": 23,
-          "price_qi": 4
+          "price_qi": 5
         },
         {
           "selection": "Turkey to Win",
@@ -38997,11 +38997,11 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 31.2,
           "model_price": 3.21,
-          "current_odds": 2.12,
+          "current_odds": 2.1,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 46.82,
-          "ev": -33.96,
+          "devig_book_probability": 47.06,
+          "ev": -34.58,
           "qi": 21,
           "price_qi": 3
         },
@@ -39045,11 +39045,11 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 31.2,
           "model_price": 3.21,
-          "current_odds": 2,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 46.38,
-          "ev": -37.69,
+          "current_odds": 1.95,
+          "au_bookie": "PointsBet (AU)",
+          "bookmaker_key": "pointsbetau",
+          "devig_book_probability": 47.92,
+          "ev": -39.25,
           "qi": 21,
           "price_qi": 2
         },
@@ -39062,9 +39062,9 @@ window.embeddedDataset = [
           "model_probability": 31.2,
           "model_price": 3.21,
           "current_odds": 1.95,
-          "au_bookie": "PointsBet (AU)",
-          "bookmaker_key": "pointsbetau",
-          "devig_book_probability": 47.92,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 47.32,
           "ev": -39.25,
           "qi": 21,
           "price_qi": 2
@@ -39093,13 +39093,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 16,
           "model_price": 6.25,
-          "current_odds": 3.5,
+          "current_odds": 3.8,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 26.78,
-          "ev": -44,
+          "devig_book_probability": 24.6,
+          "ev": -39.2,
           "qi": 13,
-          "price_qi": 4
+          "price_qi": 6
         },
         {
           "selection": "Over 4.5 Goals",
@@ -39109,13 +39109,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 6.1,
           "model_price": 16.29,
-          "current_odds": 6.5,
+          "current_odds": 7.5,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 14.36,
-          "ev": -60.1,
+          "devig_book_probability": 12.49,
+          "ev": -53.96,
           "qi": 9,
-          "price_qi": 5
+          "price_qi": 7
         }
       ]
     }
@@ -39769,7 +39769,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "ef0f74a991d3e35798ae5af77667bce1",
       "offered_market_keys": [
@@ -40918,7 +40918,7 @@ window.embeddedDataset = [
         "Neds",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "065b3573e875f8d23803357f73e5b99e",
       "offered_market_keys": [
@@ -40957,11 +40957,11 @@ window.embeddedDataset = [
           "oddsapi_market": "double_chance",
           "model_probability": 62.5,
           "model_price": 1.6,
-          "current_odds": 2.4,
+          "current_odds": 2.3,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 19.86,
-          "ev": 50,
+          "devig_book_probability": 20.54,
+          "ev": 43.75,
           "qi": 94,
           "price_qi": 98
         },
@@ -41014,6 +41014,22 @@ window.embeddedDataset = [
           "price_qi": 96
         },
         {
+          "selection": "Australia Draw No Bet",
+          "category": "Main Match",
+          "market": "Draw No Bet",
+          "source": "Model",
+          "oddsapi_market": "draw_no_bet",
+          "model_probability": 38.9,
+          "model_price": 2.57,
+          "current_odds": 3.8,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 24.75,
+          "ev": 47.86,
+          "qi": 83,
+          "price_qi": 95
+        },
+        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -41021,11 +41037,11 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 38.6,
           "model_price": 2.59,
-          "current_odds": 4.6,
+          "current_odds": 4.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 21.7,
-          "ev": 77.61,
+          "devig_book_probability": 22.07,
+          "ev": 73.75,
           "qi": 79,
           "price_qi": 98
         },
@@ -41044,22 +41060,6 @@ window.embeddedDataset = [
           "ev": 66.02,
           "qi": 79,
           "price_qi": 98
-        },
-        {
-          "selection": "Australia Draw No Bet",
-          "category": "Main Match",
-          "market": "Draw No Bet",
-          "source": "Model",
-          "oddsapi_market": "draw_no_bet",
-          "model_probability": 38.9,
-          "model_price": 2.57,
-          "current_odds": 4,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 23.37,
-          "ev": 55.64,
-          "qi": 79,
-          "price_qi": 97
         },
         {
           "selection": "Match to end in a Draw",
@@ -41168,7 +41168,7 @@ window.embeddedDataset = [
           "current_odds": 5.6,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 17.82,
+          "devig_book_probability": 17.74,
           "ev": 33.97,
           "qi": 55,
           "price_qi": 89
@@ -41245,13 +41245,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 11.8,
           "model_price": 8.45,
-          "current_odds": 10,
+          "current_odds": 11,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 9.34,
-          "ev": 18.34,
-          "qi": 36,
-          "price_qi": 81
+          "devig_book_probability": 8.49,
+          "ev": 30.18,
+          "qi": 39,
+          "price_qi": 84
         },
         {
           "selection": "Over 0.5 Goals",
@@ -41261,13 +41261,13 @@ window.embeddedDataset = [
           "oddsapi_market": "alternate_totals",
           "model_probability": 88.2,
           "model_price": 1.13,
-          "current_odds": 1.03,
+          "current_odds": 1.02,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 90.66,
-          "ev": -8.85,
-          "qi": 36,
-          "price_qi": 2
+          "devig_book_probability": 91.51,
+          "ev": -9.73,
+          "qi": 35,
+          "price_qi": 1
         },
         {
           "selection": "Over 1.5 Goals",
@@ -41293,11 +41293,11 @@ window.embeddedDataset = [
           "oddsapi_market": "draw_no_bet",
           "model_probability": 61.1,
           "model_price": 1.64,
-          "current_odds": 1.22,
+          "current_odds": 1.25,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 76.63,
-          "ev": -25.61,
+          "devig_book_probability": 75.25,
+          "ev": -23.78,
           "qi": 34,
           "price_qi": 1
         },
@@ -42026,7 +42026,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "4f0c518545b0096c68326daf25bffc1e",
       "offered_market_keys": [
@@ -43283,7 +43283,7 @@ window.embeddedDataset = [
         "TAB",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "f1ab0f69832972a329243522ceaa7804",
       "offered_market_keys": [
@@ -44456,7 +44456,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "681895f294b670b4c7b14495dfb583bc",
       "offered_market_keys": [
@@ -45513,7 +45513,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "dfc5202cf1b8ae002cf952cd04f235b9",
       "offered_market_keys": [
@@ -46735,7 +46735,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "c1ec9a65f4b4cf74477b368a7d6282de",
       "offered_market_keys": [
@@ -47956,7 +47956,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "8ba93d190f1f934e33862a97a6353a6e",
       "offered_market_keys": [
@@ -49175,7 +49175,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "2f49dd8deae3079dc4eb2d634d18a99c",
       "offered_market_keys": [
@@ -50368,7 +50368,7 @@ window.embeddedDataset = [
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -50980,7 +50980,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "c9ef5822ee64fd5275f7c73251bb56c7",
       "offered_market_keys": [
@@ -51115,13 +51115,13 @@ window.embeddedDataset = [
           "oddsapi_market": "draw_no_bet",
           "model_probability": 51,
           "model_price": 1.96,
-          "current_odds": 2.2,
+          "current_odds": 2.15,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 42.41,
-          "ev": 12.24,
+          "devig_book_probability": 43.42,
+          "ev": 9.69,
           "qi": 69,
-          "price_qi": 85
+          "price_qi": 82
         },
         {
           "selection": "Match to end in a Draw",
@@ -51182,7 +51182,7 @@ window.embeddedDataset = [
           "current_odds": 3.1,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 30.29,
+          "devig_book_probability": 30.53,
           "ev": 20.16,
           "qi": 66,
           "price_qi": 87
@@ -51250,22 +51250,6 @@ window.embeddedDataset = [
           "ev": -7.53,
           "qi": 40,
           "price_qi": 15
-        },
-        {
-          "selection": "Canada to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 31.3,
-          "model_price": 3.19,
-          "current_odds": 3.25,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 28.89,
-          "ev": 1.88,
-          "qi": 39,
-          "price_qi": 60
         },
         {
           "selection": "Over 0.5 Goals",
@@ -51348,6 +51332,22 @@ window.embeddedDataset = [
           "price_qi": 51
         },
         {
+          "selection": "Canada to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 31.3,
+          "model_price": 3.19,
+          "current_odds": 3.15,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 30.04,
+          "ev": -1.25,
+          "qi": 31,
+          "price_qi": 42
+        },
+        {
           "selection": "Switzerland Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
@@ -51355,13 +51355,13 @@ window.embeddedDataset = [
           "oddsapi_market": "draw_no_bet",
           "model_probability": 49,
           "model_price": 2.04,
-          "current_odds": 1.62,
+          "current_odds": 1.65,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 57.59,
-          "ev": -20.59,
+          "devig_book_probability": 56.58,
+          "ev": -19.12,
           "qi": 30,
-          "price_qi": 5
+          "price_qi": 6
         },
         {
           "selection": "BTTS Yes",
@@ -51499,13 +51499,13 @@ window.embeddedDataset = [
           "oddsapi_market": "h2h_3_way",
           "model_probability": 30,
           "model_price": 3.33,
-          "current_odds": 2.3,
+          "current_odds": 2.4,
           "au_bookie": "TAB",
           "bookmaker_key": "tab",
-          "devig_book_probability": 40.82,
-          "ev": -30.93,
-          "qi": 17,
-          "price_qi": 5
+          "devig_book_probability": 39.43,
+          "ev": -27.93,
+          "qi": 18,
+          "price_qi": 6
         },
         {
           "selection": "Under 0.5 Goals",
@@ -52167,7 +52167,7 @@ window.embeddedDataset = [
         "Neds",
         "TAB"
       ],
-      "checked_at": "2026-06-19T07:03:35.921Z",
+      "checked_at": "2026-06-19T07:11:34.757Z",
       "status": "checked",
       "oddsapi_event_id": "512ac18beb5aa936a59f7ea3e497ada2",
       "offered_market_keys": [
