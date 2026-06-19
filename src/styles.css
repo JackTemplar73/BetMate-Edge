@@ -307,13 +307,13 @@ h3 {
 .strategy-principle {
   display: grid;
   grid-template-columns: 38px minmax(0, 1fr);
-  gap: 12px;
+  gap: 14px;
   align-items: start;
-  min-height: 142px;
-  padding: 16px;
+  min-height: 158px;
+  padding: 18px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.68);
+  background: #fff;
 }
 
 .strategy-step {
@@ -330,28 +330,29 @@ h3 {
 }
 
 .strategy-grid small {
-  color: var(--muted);
+  color: var(--text);
 }
 
 .strategy-label {
   display: block;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 900;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--text);
 }
 
 .strategy-grid strong {
   display: block;
-  margin: 6px 0 8px;
-  font-size: clamp(17px, 1.25vw, 20px);
+  margin: 8px 0 10px;
+  color: var(--text);
+  font-size: clamp(20px, 1.45vw, 24px);
   line-height: 1.14;
 }
 
 .strategy-grid small {
   display: block;
-  font-size: 13px;
-  line-height: 1.42;
+  font-size: 15px;
+  line-height: 1.48;
 }
 
 .strategy-card-grid {
