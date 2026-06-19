@@ -36666,7 +36666,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Scotland vs Morocco",
-    "kickoff_time_aest": "2026-06-20T04:00:00",
+    "kickoff_time_aest": "2026-06-20T08:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Gillette Stadium, Boston, United States, engineered tournament grass. Weather read: feels like 21C, 46% humidity, 0% rain chance, wind 19 km/h, clear sky. Rest and travel: Scotland: 5 days rest, 0 km travel | Morocco: 5 days rest, 274 km travel.",
     "referee_name": "Not confirmed",
@@ -36766,7 +36766,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 30,
       "group": "Group C",
@@ -39656,7 +39656,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Turkey vs Paraguay",
-    "kickoff_time_aest": "2026-06-20T06:00:00",
+    "kickoff_time_aest": "2026-06-20T13:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Levi's Stadium, Santa Clara, United States, engineered tournament grass. Weather read: feels like 17C, 67% humidity, 0% rain chance, wind 17 km/h, clear sky. Rest and travel: Turkey: 5 days rest, 1323 km travel | Paraguay: 6 days rest, 505 km travel.",
     "referee_name": "Not confirmed",
@@ -39756,7 +39756,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 31,
       "group": "Group D",
@@ -41239,7 +41239,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Brazil vs Haiti",
-    "kickoff_time_aest": "2026-06-20T06:30:00",
+    "kickoff_time_aest": "2026-06-20T10:30:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Lincoln Financial Field, Philadelphia, United States, engineered tournament grass. Weather read: feels like 24C, 34% humidity, 0% rain chance, wind 10 km/h, clear sky. Rest and travel: Brazil: 5 days rest, 137 km travel | Haiti: 5 days rest, 408 km travel.",
     "referee_name": "Not confirmed",
@@ -41338,7 +41338,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 29,
       "group": "Group C",
@@ -42736,7 +42736,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Netherlands vs Sweden",
-    "kickoff_time_aest": "2026-06-20T22:00:00",
+    "kickoff_time_aest": "2026-06-21T03:00:00",
     "pitch_type": "retractable roof, engineered tournament grass",
     "pitch_constraints": "NRG Stadium, Houston, United States, retractable roof, engineered tournament grass. Weather read: feels like 36C, 77% humidity, thunderstorm; roof may close. Rest and travel: Netherlands: 5 days rest, 376 km travel | Sweden: 5 days rest, 652 km travel.",
     "referee_name": "Not confirmed",
@@ -42834,7 +42834,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 35,
       "group": "Group F",
@@ -44367,7 +44367,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Germany vs Ivory Coast",
-    "kickoff_time_aest": "2026-06-21T02:00:00",
+    "kickoff_time_aest": "2026-06-21T06:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "BMO Field, Toronto, Canada, engineered tournament grass. Weather read: feels like 22C, 39% humidity, 12% rain chance, wind 18 km/h, mainly clear. Rest and travel: Germany: 5 days rest, 2100 km travel | Ivory Coast: 5 days rest, 544 km travel.",
     "referee_name": "Not confirmed",
@@ -44465,7 +44465,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 33,
       "group": "Group E",
@@ -45921,7 +45921,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Ecuador vs Curacao",
-    "kickoff_time_aest": "2026-06-21T05:00:00",
+    "kickoff_time_aest": "2026-06-21T10:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Arrowhead Stadium, Kansas City, United States, engineered tournament grass. Weather read: feels like 27C, 82% humidity, 17% rain chance, wind 16 km/h, overcast. Rest and travel: Ecuador: 5 days rest, 1657 km travel | Curacao: 5 days rest, 1045 km travel.",
     "referee_name": "Not confirmed",
@@ -46020,7 +46020,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 34,
       "group": "Group E",
@@ -47245,7 +47245,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Tunisia vs Japan",
-    "kickoff_time_aest": "2026-06-21T08:00:00",
+    "kickoff_time_aest": "2026-06-21T14:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Estadio BBVA, Guadalupe, Mexico, engineered tournament grass, 489 m altitude. Weather read: feels like 26C, 81% humidity, 33% rain chance, wind 13 km/h, overcast. Rest and travel: Tunisia: 5 days rest, 0 km travel | Japan: 5 days rest, 844 km travel.",
     "referee_name": "Not confirmed",
@@ -47343,7 +47343,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 36,
       "group": "Group F",
@@ -48788,7 +48788,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "New Zealand vs Egypt",
-    "kickoff_time_aest": "2026-06-22T04:00:00",
+    "kickoff_time_aest": "2026-06-22T11:00:00",
     "pitch_type": "retractable roof, engineered tournament grass",
     "pitch_constraints": "BC Place, Vancouver, Canada, retractable roof, engineered tournament grass. Weather read: feels like 21C, 44% humidity, clear sky; roof may close. Rest and travel: New Zealand: 5 days rest, 1749 km travel | Egypt: 5 days rest, 196 km travel.",
     "referee_name": "Not confirmed",
@@ -48886,7 +48886,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 40,
       "group": "Group G",
@@ -50365,7 +50365,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Portugal vs Uzbekistan",
-    "kickoff_time_aest": "2026-06-23T22:00:00",
+    "kickoff_time_aest": "2026-06-24T03:00:00",
     "pitch_type": "retractable roof, engineered tournament grass",
     "pitch_constraints": "NRG Stadium, Houston, United States, retractable roof, engineered tournament grass. Weather read: feels like 37C, 45% humidity, thunderstorm; roof may close. Rest and travel: Portugal: 5 days rest, 0 km travel | Uzbekistan: 5 days rest, 1215 km travel.",
     "referee_name": "Not confirmed",
@@ -50463,7 +50463,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 47,
       "group": "Group K",
@@ -51996,7 +51996,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "England vs Ghana",
-    "kickoff_time_aest": "2026-06-24T02:00:00",
+    "kickoff_time_aest": "2026-06-24T06:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Gillette Stadium, Boston, United States, engineered tournament grass. Weather read: feels like 28C, 31% humidity, 18% rain chance, wind 8 km/h, partly cloudy. Rest and travel: England: 5 days rest, 2494 km travel | Ghana: 5 days rest, 686 km travel.",
     "referee_name": "Not confirmed",
@@ -52093,7 +52093,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 45,
       "group": "Group L",
@@ -53592,7 +53592,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Colombia vs Congo DR",
-    "kickoff_time_aest": "2026-06-24T06:00:00",
+    "kickoff_time_aest": "2026-06-24T12:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Estadio Akron, Zapopan, Mexico, engineered tournament grass, 1665 m altitude. Weather read: feels like 21C, 91% humidity, 80% rain chance, wind 5 km/h, thunderstorm. Rest and travel: Colombia: 5 days rest, 476 km travel | Congo DR: 5 days rest, 1287 km travel.",
     "referee_name": "Not confirmed",
@@ -53662,7 +53662,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 48,
       "group": "Group K",
@@ -54180,7 +54180,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Switzerland vs Canada",
-    "kickoff_time_aest": "2026-06-24T22:00:00",
+    "kickoff_time_aest": "2026-06-25T05:00:00",
     "pitch_type": "retractable roof, engineered tournament grass",
     "pitch_constraints": "BC Place, Vancouver, Canada, retractable roof, engineered tournament grass. Weather read: feels like 17C, 63% humidity, overcast; roof may close. Rest and travel: Switzerland: 5 days rest, 1749 km travel | Canada: 5 days rest, 0 km travel.",
     "referee_name": "Not confirmed",
@@ -54280,7 +54280,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 51,
       "group": "Group B",
@@ -55721,7 +55721,7 @@ window.embeddedDataset = [
   },
   {
     "match_name": "Bosnia and Herzegovina vs Qatar",
-    "kickoff_time_aest": "2026-06-24T22:00:00",
+    "kickoff_time_aest": "2026-06-25T05:00:00",
     "pitch_type": "engineered tournament grass",
     "pitch_constraints": "Lumen Field, Seattle, United States, engineered tournament grass. Weather read: feels like 18C, 50% humidity, 0% rain chance, wind 15 km/h, overcast. Rest and travel: Bosnia and Herzegovina: 5 days rest, 1553 km travel | Qatar: 5 days rest, 196 km travel.",
     "referee_name": "Not confirmed",
@@ -55817,7 +55817,7 @@ window.embeddedDataset = [
     "fifa_report_status": "not_found_yet",
     "worldcup_context": {
       "source": "World Cup 2026 context feed",
-      "source_updated_at": "2026-06-19T10:50:10+10:00",
+      "source_updated_at": "2026-06-19T20:15:00+10:00",
       "applied_at": "2026-06-19T10:05:39.625Z",
       "match_number": 52,
       "group": "Group B",

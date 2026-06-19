@@ -2,7 +2,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "b7410b4f6a7cfb88",
     "match_name": "Scotland vs Morocco",
-    "kickoff_time_aest": "2026-06-20T04:00:00",
+    "kickoff_time_aest": "2026-06-20T08:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Scotland or Draw",
     "au_bookie": "SportsBet",
@@ -51,7 +51,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "567c6bb45421722f",
     "match_name": "Scotland vs Morocco",
-    "kickoff_time_aest": "2026-06-20T04:00:00",
+    "kickoff_time_aest": "2026-06-20T08:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Scotland or Draw",
     "au_bookie": "TAB",
@@ -360,7 +360,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "c9f880e7430f5255",
     "match_name": "Turkey vs Paraguay",
-    "kickoff_time_aest": "2026-06-20T06:00:00",
+    "kickoff_time_aest": "2026-06-20T13:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Paraguay or Draw",
     "au_bookie": "SportsBet",
@@ -409,7 +409,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "498e3e14e9952078",
     "match_name": "Turkey vs Paraguay",
-    "kickoff_time_aest": "2026-06-20T06:00:00",
+    "kickoff_time_aest": "2026-06-20T13:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Paraguay or Draw",
     "au_bookie": "TAB",
@@ -458,7 +458,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "64ed35b05cca9f74",
     "match_name": "Netherlands vs Sweden",
-    "kickoff_time_aest": "2026-06-20T22:00:00",
+    "kickoff_time_aest": "2026-06-21T03:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Sweden or Draw",
     "au_bookie": "SportsBet",
@@ -507,7 +507,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "351edaf4fc95919b",
     "match_name": "Netherlands vs Sweden",
-    "kickoff_time_aest": "2026-06-20T22:00:00",
+    "kickoff_time_aest": "2026-06-21T03:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Sweden or Draw",
     "au_bookie": "TAB",
@@ -556,7 +556,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "fd1e4edc90b7a3a8",
     "match_name": "Netherlands vs Sweden",
-    "kickoff_time_aest": "2026-06-20T22:00:00",
+    "kickoff_time_aest": "2026-06-21T03:00:00",
     "market_matrix": "Main Match",
     "target_selection": "BTTS No",
     "au_bookie": "SportsBet",
@@ -608,7 +608,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "ac76885f33991e11",
     "match_name": "Netherlands vs Sweden",
-    "kickoff_time_aest": "2026-06-20T22:00:00",
+    "kickoff_time_aest": "2026-06-21T03:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Sweden Draw No Bet",
     "au_bookie": "TAB",
@@ -660,7 +660,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "8cf647c579b6afda",
     "match_name": "Germany vs Ivory Coast",
-    "kickoff_time_aest": "2026-06-21T02:00:00",
+    "kickoff_time_aest": "2026-06-21T06:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Ivory Coast or Draw",
     "au_bookie": "SportsBet",
@@ -709,7 +709,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "626f1f155de03324",
     "match_name": "Germany vs Ivory Coast",
-    "kickoff_time_aest": "2026-06-21T02:00:00",
+    "kickoff_time_aest": "2026-06-21T06:00:00",
     "market_matrix": "Main Match",
     "target_selection": "BTTS No",
     "au_bookie": "SportsBet",
@@ -761,7 +761,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "3d12668090ce795e",
     "match_name": "Germany vs Ivory Coast",
-    "kickoff_time_aest": "2026-06-21T02:00:00",
+    "kickoff_time_aest": "2026-06-21T06:00:00",
     "market_matrix": "Main Match",
     "target_selection": "BTTS No",
     "au_bookie": "TAB",
@@ -813,7 +813,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "3fd7ca9569dc150e",
     "match_name": "Tunisia vs Japan",
-    "kickoff_time_aest": "2026-06-21T08:00:00",
+    "kickoff_time_aest": "2026-06-21T14:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Tunisia or Draw",
     "au_bookie": "SportsBet",
@@ -862,7 +862,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "91d283f6925d47fb",
     "match_name": "Tunisia vs Japan",
-    "kickoff_time_aest": "2026-06-21T08:00:00",
+    "kickoff_time_aest": "2026-06-21T14:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Tunisia or Draw",
     "au_bookie": "TAB",
@@ -914,7 +914,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "e449cef4aee823ad",
     "match_name": "New Zealand vs Egypt",
-    "kickoff_time_aest": "2026-06-22T04:00:00",
+    "kickoff_time_aest": "2026-06-22T11:00:00",
     "market_matrix": "Main Match",
     "target_selection": "New Zealand or Draw",
     "au_bookie": "SportsBet",
@@ -963,7 +963,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "9dd26afdb5c8e3ad",
     "match_name": "New Zealand vs Egypt",
-    "kickoff_time_aest": "2026-06-22T04:00:00",
+    "kickoff_time_aest": "2026-06-22T11:00:00",
     "market_matrix": "Main Match",
     "target_selection": "New Zealand or Draw",
     "au_bookie": "TAB",
@@ -1015,7 +1015,7 @@ window.embeddedBetHistory = [
   {
     "bet_id": "cd398dcef2a8eb91",
     "match_name": "Bosnia and Herzegovina vs Qatar",
-    "kickoff_time_aest": "2026-06-24T22:00:00",
+    "kickoff_time_aest": "2026-06-25T05:00:00",
     "market_matrix": "Main Match",
     "target_selection": "Qatar or Draw",
     "au_bookie": "SportsBet",
