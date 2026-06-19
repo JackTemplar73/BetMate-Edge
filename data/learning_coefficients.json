@@ -1,11 +1,11 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T02:32:03.206Z",
+  "updated_at": "2026-06-19T03:45:57.163Z",
   "sample_size": 23,
   "confidence": "developing",
   "adjustments": {
-    "draw_lift": 0.0149,
-    "favourite_compression": 0.0285,
+    "draw_lift": 0.0127,
+    "favourite_compression": 0.0261,
     "goal_suppression": 0.042,
     "break_open_risk": 0.072,
     "chance_quality_penalty": 0.015
@@ -13,7 +13,7 @@
   "flags": {
     "break-open-risk-underweighted": 6,
     "finishing-variance-high": 2,
-    "draw-risk-underestimated": 7,
+    "draw-risk-underestimated": 6,
     "territory-did-not-become-shot-volume": 3,
     "xg-did-not-support-favourite": 2,
     "finishing-variance-low": 1,
@@ -21,11 +21,11 @@
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
   "xg_sample_size": 23,
-  "previous_updated_at": "2026-06-19T02:30:43.227Z",
+  "previous_updated_at": "2026-06-19T03:44:03.455Z",
   "walters_discipline": {
-    "settled_bets": 65,
-    "profit_units": 20.16,
-    "roi_percent": 31,
+    "settled_bets": 66,
+    "profit_units": 20.68,
+    "roi_percent": 31.3,
     "sharp_close_rate_percent": 0,
     "close_reference_rate_percent": 100,
     "market_profiles": {
@@ -66,15 +66,15 @@
         "sharp_close_rate_percent": 0
       },
       "Main Match": {
-        "bets": 28,
-        "wins": 12,
+        "bets": 29,
+        "wins": 13,
         "losses": 16,
-        "profit_units": 8.95,
+        "profit_units": 9.47,
         "confirmed_sharp_closes": 0,
         "positive_clv": 0,
         "negative_clv": 0,
-        "roi_percent": 32,
-        "win_rate_percent": 42.9,
+        "roi_percent": 32.7,
+        "win_rate_percent": 44.8,
         "sharp_close_rate_percent": 0
       },
       "Full Match Model": {
