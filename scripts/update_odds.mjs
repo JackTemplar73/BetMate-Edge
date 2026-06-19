@@ -295,9 +295,9 @@ function runVectorCalculations(marketItem) {
   const probabilityScore = clamp(((Number(quality.model_probability) - 20) / 45) * 100, 0, 100);
   const riskScore = {
     Low: 100,
-    Medium: 75,
-    High: 45,
-    'Very high': 20
+    Medium: 68,
+    High: 30,
+    'Very high': 8
   }[quality.risk] || 35;
   const baseQi = Math.round(clamp(
     (rawPriceQi * 0.35) +
@@ -308,13 +308,17 @@ function runVectorCalculations(marketItem) {
     100
   ));
   const adjustedQi = applyDataQualityToQi(baseQi, marketItem);
+  const cappedQi = highPriceConfidenceCap(adjustedQi.qi, marketItem, quality);
 
   return {
     ev: Number.parseFloat(ev.toFixed(2)),
-    qi: adjustedQi.qi,
+    qi: cappedQi.qi,
     base_qi: baseQi,
     price_qi: rawPriceQi,
-    data_quality_adjustment: adjustedQi.adjustment
+    data_quality_adjustment: adjustedQi.adjustment,
+    high_price_qi_cap: cappedQi.cap,
+    high_price_qi_adjustment: cappedQi.adjustment,
+    high_price_qi_note: cappedQi.note
   };
 }
 
@@ -339,6 +343,45 @@ function applyDataQualityToQi(baseQi, marketItem) {
   return {
     qi: adjusted,
     adjustment: adjusted - baseQi
+  };
+}
+
+function hasSharpCloseSupport(marketItem) {
+  return marketItem.closing_reference_type === 'sharp_market'
+    || marketItem.closing_status === 'confirmed_sharp_close'
+    || (Number.isFinite(Number(marketItem.clv_percent)) && SHARP_CLOSING_BOOKS.has(normalise(marketItem.closing_bookie || marketItem.au_bookie)));
+}
+
+function highPriceConfidenceCap(currentQi, marketItem, quality) {
+  const odds = Number(marketItem.current_odds);
+  const rating = Number(marketItem.model_data_quality_rating ?? marketItem.data_quality_rating);
+  const modelProbability = Number(quality?.model_probability);
+  if (!Number.isFinite(odds) || odds < 2.75 || hasSharpCloseSupport(marketItem)) {
+    return { qi: Math.round(clamp(currentQi, 0, 100)), cap: null, adjustment: 0, note: null };
+  }
+
+  const dataTier = Number.isFinite(rating)
+    ? rating >= 85 ? 'strong' : rating >= 75 ? 'good' : rating >= 62 ? 'developing' : 'thin'
+    : 'unknown';
+  let cap = 100;
+
+  if (odds >= 10) cap = dataTier === 'strong' ? 74 : dataTier === 'good' ? 68 : 58;
+  else if (odds >= 6) cap = dataTier === 'strong' ? 78 : dataTier === 'good' ? 72 : 64;
+  else if (odds >= 4) cap = dataTier === 'strong' ? 84 : dataTier === 'good' ? 78 : 70;
+  else if (odds >= 2.75) cap = dataTier === 'strong' ? 90 : dataTier === 'good' ? 84 : 78;
+
+  if (Number.isFinite(modelProbability) && modelProbability < 18) {
+    cap = Math.min(cap, dataTier === 'strong' ? 68 : 62);
+  }
+
+  const qi = Math.round(clamp(Math.min(currentQi, cap), 0, 100));
+  return {
+    qi,
+    cap,
+    adjustment: qi - Math.round(clamp(currentQi, 0, 100)),
+    note: qi < currentQi
+      ? `High-price confidence cap applied at QI ${cap}; needs stronger data or sharp close support for a higher confidence rating.`
+      : null
   };
 }
 
@@ -1360,6 +1403,9 @@ function applyDataQualityAdjustedScoring(dataset, learningCoefficients = DEFAULT
       marketItem.base_qi = metrics.base_qi;
       marketItem.price_qi = metrics.price_qi;
       marketItem.data_quality_adjustment = metrics.data_quality_adjustment;
+      marketItem.high_price_qi_cap = metrics.high_price_qi_cap;
+      marketItem.high_price_qi_adjustment = metrics.high_price_qi_adjustment;
+      marketItem.high_price_qi_note = metrics.high_price_qi_note;
       marketItem.walters_qi_adjustment = metrics.walters_qi_adjustment;
       marketItem.walters_process_note = metrics.walters_process_note;
     }
@@ -1386,6 +1432,9 @@ function applyDataQualityAdjustedScoring(dataset, learningCoefficients = DEFAULT
       row.base_qi = metrics.base_qi;
       row.price_qi = metrics.price_qi;
       row.data_quality_adjustment = metrics.data_quality_adjustment;
+      row.high_price_qi_cap = metrics.high_price_qi_cap;
+      row.high_price_qi_adjustment = metrics.high_price_qi_adjustment;
+      row.high_price_qi_note = metrics.high_price_qi_note;
       row.walters_qi_adjustment = metrics.walters_qi_adjustment;
       row.walters_process_note = metrics.walters_process_note;
     }
@@ -2845,6 +2894,9 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
         opening_ev: metrics.ev,
         opening_qi: metrics.qi,
         opening_walters_qi_adjustment: metrics.walters_qi_adjustment,
+        opening_high_price_qi_cap: metrics.high_price_qi_cap,
+        opening_high_price_qi_adjustment: metrics.high_price_qi_adjustment,
+        high_price_qi_note: metrics.high_price_qi_note,
         walters_process_note: metrics.walters_process_note,
         closing_odds: null,
         closing_captured_at: null,
@@ -2871,6 +2923,9 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
       entry.clv_benchmark_rule = entry.clv_benchmark_rule || 'Official CLV uses Betfair or Pinnacle around 5 minutes before game time; soft-book closes are estimates only.';
       entry.walters_process_note = metrics.walters_process_note || entry.walters_process_note || null;
       entry.current_walters_qi_adjustment = metrics.walters_qi_adjustment;
+      entry.high_price_qi_note = metrics.high_price_qi_note || entry.high_price_qi_note || null;
+      entry.current_high_price_qi_cap = metrics.high_price_qi_cap;
+      entry.current_high_price_qi_adjustment = metrics.high_price_qi_adjustment;
       entry.model_data_quality_rating = marketItem.model_data_quality_rating ?? fixture.model_data_quality?.rating ?? entry.model_data_quality_rating ?? null;
       entry.model_data_quality_band = marketItem.model_data_quality_band ?? fixture.model_data_quality?.band ?? entry.model_data_quality_band ?? null;
       if (entry.closing_status === 'missing_fresh_close') {

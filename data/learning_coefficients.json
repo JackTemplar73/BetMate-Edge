@@ -1,28 +1,27 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T01:56:43.222Z",
+  "updated_at": "2026-06-19T02:32:03.206Z",
   "sample_size": 23,
   "confidence": "developing",
   "adjustments": {
-    "draw_lift": 0.017,
-    "favourite_compression": 0.0333,
-    "goal_suppression": 0.063,
+    "draw_lift": 0.0149,
+    "favourite_compression": 0.0285,
+    "goal_suppression": 0.042,
     "break_open_risk": 0.072,
-    "chance_quality_penalty": 0.018
+    "chance_quality_penalty": 0.015
   },
   "flags": {
     "break-open-risk-underweighted": 6,
     "finishing-variance-high": 2,
-    "draw-risk-underestimated": 8,
+    "draw-risk-underestimated": 7,
     "territory-did-not-become-shot-volume": 3,
     "xg-did-not-support-favourite": 2,
-    "goal-suppression-underweighted": 1,
     "finishing-variance-low": 1,
-    "chance-quality-overstated": 4
+    "chance-quality-overstated": 3
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
   "xg_sample_size": 23,
-  "previous_updated_at": "2026-06-19T01:55:32.101Z",
+  "previous_updated_at": "2026-06-19T02:30:43.227Z",
   "walters_discipline": {
     "settled_bets": 65,
     "profit_units": 20.16,
