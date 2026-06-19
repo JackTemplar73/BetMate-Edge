@@ -224,7 +224,7 @@ function getSelectedFixture() {
 }
 
 function formatKickoff(value) {
-  return formatter.format(parseKickoff(value));
+  return `${formatter.format(parseKickoff(value))} AEST`;
 }
 
 function minutesSince(value) {
