@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-20T21:40:32.140Z",
+  "checked_at": "2026-06-20T22:47:56.416Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -678,7 +678,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 33
+      "matched_rows": 35
     },
     {
       "match_name": "Tunisia vs Japan",
