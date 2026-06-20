@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-20T01:29:09.052Z",
+  "checked_at": "2026-06-20T05:53:11.206Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,14 +10,14 @@
   ],
   "events_checked": 31,
   "market_counts": {
-    "h2h": 50,
-    "btts": 20,
-    "double_chance": 17,
-    "h2h_3_way": 50,
-    "h2h_lay": 10,
-    "draw_no_bet": 9,
-    "alternate_spreads": 10,
-    "alternate_totals": 10
+    "h2h": 45,
+    "btts": 18,
+    "double_chance": 15,
+    "h2h_3_way": 45,
+    "h2h_lay": 9,
+    "draw_no_bet": 8,
+    "alternate_spreads": 9,
+    "alternate_totals": 9
   },
   "matches": [
     {
@@ -677,7 +677,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 29
+      "matched_rows": 31
     },
     {
       "match_name": "Tunisia vs Japan",
