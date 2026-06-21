@@ -2148,6 +2148,7 @@ function selectedTeam(selection) {
   return normalise(String(selection || '')
     .replace(/\bto win\b/i, '')
     .replace(/\bdouble chance\b/i, '')
+    .replace(/\bdraw no bet\b/i, '')
     .replace(/[()+-]?\d+(?:\.\d+)?/g, '')
     .trim());
 }
@@ -2279,6 +2280,13 @@ function settleAgainstScore(entry, result, fixture = null) {
     if (homeSelected || awaySelected) {
       return (homeSelected && homeWon) || (awaySelected && awayWon) ? 'won' : 'lost';
     }
+  }
+
+  if (entry.market_matrix === 'Draw No Bet' || selection.includes('draw no bet')) {
+    const team = selectedTeam(entry.target_selection);
+    if (draw) return 'push';
+    if (team === home) return homeWon ? 'won' : 'lost';
+    if (team === away) return awayWon ? 'won' : 'lost';
   }
 
   if (entry.market_matrix === 'Moneyline' || entry.market_matrix === 'Full Match Model') {
