@@ -2144,6 +2144,26 @@ function resultLine(result) {
   return `${result.homeName} ${result.homeScore}-${result.awayScore} ${result.awayName}`;
 }
 
+function resultFromLine(line, source = null, sourceLabel = null) {
+  const match = String(line || '').match(/^(.+?)\s+(\d+)\s*[-–]\s*(\d+)\s+(.+)$/);
+  if (!match) return null;
+
+  return {
+    homeName: match[1],
+    homeScore: Number(match[2]),
+    awayScore: Number(match[3]),
+    awayName: match[4],
+    source,
+    sourceLabel
+  };
+}
+
+function postMatchLearningResult(fixture) {
+  const learning = fixture?.post_match_learning;
+  if (!learning?.result) return null;
+  return resultFromLine(learning.result, learning.source_url || learning.source || 'post_match_learning', learning.source || 'Post-match');
+}
+
 function selectedTeam(selection) {
   return normalise(String(selection || '')
     .replace(/\bto win\b/i, '')
@@ -2381,7 +2401,8 @@ function settleHistoryResults(entries, dataset, espnEvents, fifaReports = [], no
     const fifaReport = findFifaReport(fifaReports, fixture);
     const fifaResult = fifaReportResult(fifaReport, fixture);
     const event = findEspnEvent(espnEvents, fixture);
-    const result = fifaResult || (event ? eventResult(event) : null);
+    const learningResult = postMatchLearningResult(fixture);
+    const result = fifaResult || learningResult || (event ? eventResult(event) : null);
 
     if (!result) {
       if (previousStatus === 'pending') {
@@ -2417,6 +2438,9 @@ function fixtureVerifiedResult(fixture, espnEvents, fifaReports) {
   const fifaReport = findFifaReport(fifaReports, fixture);
   const fifaResult = fifaReportResult(fifaReport, fixture);
   if (fifaResult) return fifaResult;
+
+  const learningResult = postMatchLearningResult(fixture);
+  if (learningResult) return learningResult;
 
   const event = findEspnEvent(espnEvents, fixture);
   return event ? eventResult(event) : null;

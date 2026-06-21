@@ -1065,8 +1065,8 @@
     "estimated_closing_odds": 2.9,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Sweden 5-1 Tunisia. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: Sweden 5-1 Tunisia.",
     "settlement_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M12-SWE-V-TUN.pdf",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 84,
@@ -1081,7 +1081,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:52:09.484Z"
   },
   {
     "bet_id": "fe2e17b7e1643ced",
@@ -1555,8 +1556,8 @@
     "estimated_closing_odds": 4.25,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Belgium 1-1 Egypt. This market needs a more detailed settlement feed.",
+    "result_status": "push",
+    "result_detail": "ESPN final: Belgium 1-1 Egypt.",
     "settlement_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M16-BEL-V-EGY.pdf",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 78,
@@ -1571,7 +1572,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:52:09.486Z"
   },
   {
     "bet_id": "092f51d5ac8d482c",
@@ -1907,8 +1909,8 @@
     "estimated_closing_odds": 3.4,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Iran 2-2 New Zealand. This market needs a more detailed settlement feed.",
+    "result_status": "push",
+    "result_detail": "ESPN final: Iran 2-2 New Zealand.",
     "settlement_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M15-IRN-V-NZL.pdf",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 84,
@@ -1923,7 +1925,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:52:09.486Z"
   },
   {
     "bet_id": "f0674c382a1c0e8f",
@@ -2154,8 +2157,8 @@
     "estimated_closing_odds": 5,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: France 3-1 Senegal. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: France 3-1 Senegal.",
     "settlement_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M17-FRA-V-SEN.pdf",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 78,
@@ -2170,7 +2173,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:52:09.486Z"
   },
   {
     "bet_id": "85e54bb3ec9c2f55",
@@ -3251,8 +3255,8 @@
     "estimated_closing_odds": 3.7,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: England 4-2 Croatia. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: England 4-2 Croatia.",
     "settlement_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M22-ENG-V-CRO.pdf",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 84,
@@ -3267,7 +3271,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:52:09.486Z"
   },
   {
     "bet_id": "00f6912ce3b47bad",
@@ -3902,8 +3907,8 @@
     "estimated_closing_odds": 3.25,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Czechia 1-1 South Africa. This market needs a more detailed settlement feed.",
+    "result_status": "push",
+    "result_detail": "ESPN final: Czechia 1-1 South Africa.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760438/south-africa-czechia",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 84,
@@ -3918,7 +3923,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:53:12.923Z"
   },
   {
     "bet_id": "7ec06df7ed454f00",
@@ -4846,8 +4852,8 @@
     "estimated_closing_odds": 2.6,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Mexico 1-0 South Korea. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: Mexico 1-0 South Korea.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760441/south-korea-mexico",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": null,
@@ -4862,7 +4868,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:53:12.925Z"
   },
   {
     "bet_id": "1a6a6d1a1a061f8d",
@@ -5004,8 +5011,8 @@
     "estimated_closing_odds": 3.7,
     "estimated_clv_percent": 2.7,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: United States 2-0 Australia. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: United States 2-0 Australia.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760442/australia-united-states",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 84,
@@ -5020,7 +5027,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:53:12.925Z"
   },
   {
     "bet_id": "e9e10b68320b0ebe",
@@ -5692,8 +5700,8 @@
     "estimated_closing_odds": 4,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Scotland 0-1 Morocco. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: Scotland 0-1 Morocco.",
     "settlement_source": "https://www.fifatrainingcentre.com/media/native/tournaments/fifa-world-cup/2026/PMSR-M30-SCO-V-MAR.pdf",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 78,
@@ -5708,7 +5716,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:52:09.486Z"
   },
   {
     "bet_id": "a84e270bbf63145c",
@@ -6062,8 +6071,8 @@
     "estimated_closing_odds": 2.6,
     "estimated_clv_percent": -3.85,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Türkiye 0-1 Paraguay. This market needs a more detailed settlement feed.",
+    "result_status": "won",
+    "result_detail": "ESPN final: Türkiye 0-1 Paraguay.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760443/paraguay-turkiye",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": null,
@@ -6078,7 +6087,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:53:12.925Z"
   },
   {
     "bet_id": "c18300a846b4f0ca",
@@ -6485,8 +6495,8 @@
     "estimated_closing_odds": 3.4,
     "estimated_clv_percent": -2.94,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Netherlands 5-1 Sweden. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: Netherlands 5-1 Sweden.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760447/sweden-netherlands",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 84,
@@ -6501,7 +6511,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:53:12.925Z"
   },
   {
     "bet_id": "55b859d8cca99888",
@@ -7014,8 +7025,8 @@
     "estimated_closing_odds": 5,
     "estimated_clv_percent": 0,
     "estimated_closing_source": "Latest sharp estimate; previous capture was outside the official T-6 to T-3 close window.",
-    "result_status": "pending",
-    "result_detail": "Final score verified: Germany 2-1 Ivory Coast. This market needs a more detailed settlement feed.",
+    "result_status": "lost",
+    "result_detail": "ESPN final: Germany 2-1 Ivory Coast.",
     "settlement_source": "https://www.espn.com/soccer/match/_/gameId/760448/ivory-coast-germany",
     "current_walters_qi_adjustment": -4,
     "current_high_price_qi_cap": 78,
@@ -7030,7 +7041,8 @@
     "closing_bookie": null,
     "closing_source": "No Betfair/Pinnacle close captured in the official T-6 to T-3 window",
     "closing_status": "latest_pre_kickoff_estimate",
-    "closing_reference_type": "latest_estimate"
+    "closing_reference_type": "latest_estimate",
+    "settled_at": "2026-06-21T05:53:12.925Z"
   },
   {
     "bet_id": "31065dd463d44b1b",
