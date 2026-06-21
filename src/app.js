@@ -9,8 +9,8 @@ const state = {
   playerPropSortMode: 'qi',
   historyResultFilter: 'all',
   resultsResultFilter: 'won_lost',
-  resultsQiFilter: 70,
-  resultsPriceFilter: 'all',
+  resultsQiFilter: 80,
+  resultsPriceFilter: '1.8plus',
   modelMinProbability: 0,
   modelMaxFairPrice: Infinity,
   lastRefresh: null,
@@ -2123,7 +2123,9 @@ function filterResultsRowsByQiAndPrice(rows) {
     const passesQi = !Number.isFinite(minQi) || Number(qi) >= minQi;
     let passesPrice = true;
 
-    if (state.resultsPriceFilter === '5plus') {
+    if (state.resultsPriceFilter === '1.8plus') {
+      passesPrice = Number.isFinite(price) && price >= 1.8;
+    } else if (state.resultsPriceFilter === '5plus') {
       passesPrice = Number.isFinite(price) && price >= 5;
     } else if (state.resultsPriceFilter !== 'all') {
       const maxPrice = Number(state.resultsPriceFilter);
@@ -2266,7 +2268,7 @@ function renderResults() {
   renderResultsSummary(rows);
   renderResultsFilterControls();
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="11">No completed QI 70+ bets match this results filter.</td></tr>';
+    tableBody.innerHTML = '<tr><td colspan="11">No completed QI 80+ bets at 1.80+ match this results filter.</td></tr>';
     return;
   }
 
