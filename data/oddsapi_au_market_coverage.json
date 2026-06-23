@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-23T16:37:44.124Z",
+  "checked_at": "2026-06-23T18:27:19.125Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,14 +10,14 @@
   ],
   "events_checked": 32,
   "market_counts": {
-    "h2h": 25,
-    "h2h_3_way": 25,
-    "btts": 10,
-    "double_chance": 8,
-    "h2h_lay": 5,
-    "draw_no_bet": 5,
-    "alternate_spreads": 5,
-    "alternate_totals": 5
+    "h2h": 20,
+    "btts": 6,
+    "double_chance": 5,
+    "h2h_3_way": 20,
+    "h2h_lay": 4,
+    "draw_no_bet": 2,
+    "alternate_spreads": 2,
+    "alternate_totals": 2
   },
   "matches": [
     {
@@ -779,16 +779,13 @@
         "TAB"
       ],
       "offered_market_keys": [
-        "alternate_spreads",
-        "alternate_totals",
         "btts",
         "double_chance",
-        "draw_no_bet",
         "h2h",
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 35
+      "matched_rows": 19
     },
     {
       "match_name": "Colombia vs Congo DR",
@@ -815,16 +812,13 @@
         "TAB"
       ],
       "offered_market_keys": [
-        "alternate_spreads",
-        "alternate_totals",
         "btts",
         "double_chance",
-        "draw_no_bet",
         "h2h",
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 35
+      "matched_rows": 19
     },
     {
       "match_name": "Bosnia and Herzegovina vs Qatar",
