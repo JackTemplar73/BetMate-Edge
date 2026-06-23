@@ -12,7 +12,7 @@ const SCAN_BOOKMAKERS = (process.env.ODDS_API_TARGET_BOOKMAKERS || process.env.O
   .split(',')
   .map((item) => item.trim())
   .filter(Boolean);
-const AU_BOOKMAKERS = [...new Set([...SCAN_BOOKMAKERS, 'betright'])];
+const MARKET_SOURCE_BOOKMAKERS = [...new Set([...SCAN_BOOKMAKERS, 'betright'])];
 const PLAYER_PROP_BOOKMAKERS = ['sportsbet', 'tab', 'pointsbetau', 'neds'];
 const CORE_MARKETS = ['h2h', 'spreads', 'totals'];
 const EVENT_MARKETS = [
@@ -389,7 +389,7 @@ async function fetchJson(url) {
 async function fetchCoreEvents(apiKey) {
   const url = new URL(`https://api.the-odds-api.com/v4/sports/${SPORT_KEY}/odds`);
   url.searchParams.set('apiKey', apiKey);
-  url.searchParams.set('bookmakers', AU_BOOKMAKERS.join(','));
+  url.searchParams.set('bookmakers', MARKET_SOURCE_BOOKMAKERS.join(','));
   url.searchParams.set('markets', CORE_MARKETS.join(','));
   url.searchParams.set('oddsFormat', 'decimal');
   url.searchParams.set('dateFormat', 'iso');

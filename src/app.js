@@ -428,8 +428,57 @@ function formatRisk(market) {
   return formatRiskValue(market.quality?.risk);
 }
 
+function normaliseBookName(value) {
+  return String(value || '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function isSharpBook(value) {
+  return getBookSourceType(value) === 'sharp';
+}
+
+function getBookSourceType(value) {
+  const parts = String(value || '').split(/\s*\/\s*/).filter(Boolean);
+  const labels = parts.length ? parts : [value];
+  const hasSharp = labels.some((label) => {
+    const normalised = normaliseBookName(label);
+    return normalised === 'betfair'
+    || normalised === 'betfair ex au'
+    || normalised === 'betfair exchange'
+    || normalised === 'pinnacle';
+  });
+  const hasRetail = labels.some((label) => label && !isSharpBookLabel(label));
+
+  if (hasSharp && hasRetail) return 'mixed';
+  if (hasSharp) return 'sharp';
+  return value ? 'au' : 'model';
+}
+
+function isSharpBookLabel(value) {
+  const normalised = normaliseBookName(value);
+  return normalised === 'betfair'
+    || normalised === 'betfair ex au'
+    || normalised === 'betfair exchange'
+    || normalised === 'pinnacle';
+}
+
+function formatBookSourceLabel(value) {
+  if (!value) return 'Model only';
+  const type = getBookSourceType(value);
+  if (type === 'sharp') return 'Sharp book';
+  if (type === 'mixed') return 'Mixed AU/sharp sources';
+  return 'AU book';
+}
+
+function formatBookSourceText(value) {
+  if (!value) return 'Model only';
+  return `${value} (${formatBookSourceLabel(value)})`;
+}
+
 function formatBookCell(market) {
-  return `<span class="pill">${market.au_bookie || 'Model only'}</span>`;
+  return `<span class="pill">${formatBookSourceText(market.au_bookie || market.bookmaker)}</span>`;
 }
 
 function formatRefereeStatus(fixture) {
@@ -476,7 +525,7 @@ function renderSummaryBet(market, metricsHtml) {
 }
 
 function formatBookName(market) {
-  return market.au_bookie || market.bookmaker || 'Model only';
+  return formatBookSourceText(market.au_bookie || market.bookmaker);
 }
 
 function renderSummaryBestMetrics(market) {
@@ -883,7 +932,7 @@ function getCandidateRowsForFixtures(fixtures) {
       },
       devig_book_probability: row.devig_book_probability,
       quality: row.quality,
-      source_label: row.source || 'AU bookie scan'
+      source_label: row.source || 'Market scan'
     }));
   const seen = new Set();
   return [...fixtureRows, ...scanRows]
@@ -977,7 +1026,7 @@ function getSportsbookScanRowsForFixtures(fixtures) {
         ...row,
         match_name: fixture.match_name,
         kickoff_time_aest: fixture.kickoff_time_aest,
-        bookmaker: row.au_bookie || scan.bookmaker || 'AU bookie',
+        bookmaker: row.au_bookie || scan.bookmaker || 'Market source',
         checked_at: scan.checked_at,
         offered_market_keys: scan.offered_market_keys || [],
         quality: {
@@ -1018,7 +1067,7 @@ function renderSportsbookScan() {
   const rows = getSportsbookScanRows().sort(compareSelectionRows(state.scanSortMode));
 
   if (rows.length === 0) {
-    container.innerHTML = '<p class="empty-note">No AU bookie rows are matched to the model right now.</p>';
+    container.innerHTML = '<p class="empty-note">No market-source rows are matched to the model right now.</p>';
     return;
   }
 
@@ -1031,7 +1080,7 @@ function renderSportsbookScan() {
             <th>QI</th>
             <th>Match</th>
             <th>Selection</th>
-            <th>Bookie</th>
+            <th>Source</th>
             <th>Odds</th>
             <th>Model Price</th>
             <th>Model Prob</th>
@@ -1046,7 +1095,7 @@ function renderSportsbookScan() {
               <td><span class="qi-badge ${metricClass(Number(row.qi))}">${formatQiBadge(row.qi)}</span></td>
               <td><span class="primary-cell">${row.match_name}</span><span class="sub-cell">${formatKickoff(row.kickoff_time_aest)}</span></td>
               <td><span class="primary-cell">${row.selection}</span><span class="sub-cell">${row.market} | ${row.oddsapi_market}</span></td>
-              <td><span class="pill">${row.bookmaker}</span></td>
+              <td><span class="pill">${formatBookSourceText(row.bookmaker)}</span></td>
               <td>$${Number(row.current_odds).toFixed(2)}</td>
               <td>$${Number(row.model_price).toFixed(2)}</td>
               <td>${Number(row.model_probability).toFixed(1)}%</td>
@@ -1328,11 +1377,11 @@ function renderFixtureModelBlock(fixture) {
               <div>
                 <span>
                   <strong>${row.selection}</strong>
-                  <em>${row.au_bookie || 'AU bookie'} | ${row.market} | ${row.oddsapi_market}</em>
+                  <em>${formatBookSourceText(row.au_bookie)} | ${row.market} | ${row.oddsapi_market}</em>
                 </span>
                 <span>
                   <b><span class="qi-badge ${metricClass(Number(row.qi))}">${formatQiBadge(row.qi)}</span></b>
-                  <em>${row.au_bookie || 'AU bookie'} | $${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | ${row.quality.risk} risk</em>
+                  <em>${formatBookSourceText(row.au_bookie)} | $${Number(row.current_odds).toFixed(2)} | Model $${Number(row.model_price).toFixed(2)} | ${row.quality.risk} risk</em>
                 </span>
               </div>
             `).join('')}
@@ -1345,7 +1394,7 @@ function renderFixtureModelBlock(fixture) {
     <div class="fixture-model-block">
       <div class="inline-section-heading">
         <h3>Game Model</h3>
-        <p>Model projections plus AU bookie markets that were found and matched to our model prices.</p>
+        <p>Model projections plus market-source prices that were found and matched to our model prices.</p>
       </div>
       <div class="model-insight-grid">
         ${totalsHtml}

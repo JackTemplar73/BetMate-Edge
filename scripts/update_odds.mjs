@@ -261,6 +261,21 @@ function normalise(value) {
   return TEAM_ALIASES.get(clean) || clean;
 }
 
+function isSharpBook(value) {
+  return SHARP_CLOSING_BOOKS.has(normalise(value));
+}
+
+function sourceTypeLabel(value) {
+  const parts = String(value || '').split(/\s*\/\s*/).filter(Boolean);
+  const sources = parts.length ? parts : [value];
+  const hasSharp = sources.some((source) => isSharpBook(source));
+  const hasRetail = sources.some((source) => source && !isSharpBook(source));
+
+  if (hasSharp && hasRetail) return 'mixed AU/sharp source';
+  if (hasSharp) return 'sharp/reference source';
+  return 'AU book source';
+}
+
 function parseAest(value) {
   return new Date(`${value}+10:00`);
 }
@@ -1445,7 +1460,7 @@ function fixtureDataQualityAudit(fixture, nowIso) {
         ? 'Waiting for final close window'
         : 'Sharp close not captured';
   const repairActions = [];
-  if (!pricesFresh) repairActions.push('Refresh odds and AU book prices.');
+  if (!pricesFresh) repairActions.push('Refresh odds and market-source prices.');
   if (!hasSharpReference) repairActions.push('Retry Betfair/Pinnacle market matching for sharp close coverage.');
   if (insideFinalCloseCapture && !hasT5SharpCapture) repairActions.push(`Capture Betfair/Pinnacle at T-6, T-5, T-4 and T-3; fall back to latest sharp estimate only if the official window is missed.`);
   if (!hasLineups && untilKickoffMs <= LINEUP_CHECK_WINDOW_MS && untilKickoffMs >= 0) repairActions.push('Retry confirmed starting XI and bench from match-centre sources.');
@@ -2650,12 +2665,13 @@ function betId(fixture, marketItem) {
 }
 
 function scanRowToMarketItem(row, fixture) {
+  const sourceName = row.au_bookie || row.bookmaker || row.bookmaker_key || 'Market source';
   return {
-    market_matrix: row.category || row.market || 'AU Bookie Market Scan',
+    market_matrix: row.category || row.market || 'Market Source Scan',
     target_selection: row.selection,
     true_price: Number(row.model_price),
     current_odds: Number(row.current_odds),
-    au_bookie: row.au_bookie || row.bookmaker || row.bookmaker_key || 'AU bookie',
+    au_bookie: sourceName,
     bookmaker_key: row.bookmaker_key,
     oddsapi_market: row.oddsapi_market,
     model_data_quality_rating: row.model_data_quality_rating ?? fixture.model_data_quality?.rating ?? null,
@@ -2663,7 +2679,7 @@ function scanRowToMarketItem(row, fixture) {
     devig_book_probability: row.devig_book_probability,
     odds_checked_at: row.checked_at || fixture.market_scan?.checked_at || fixture.odds_last_checked,
     odds_refresh_status: Number.isFinite(Number(row.current_odds)) ? 'checked_current' : 'selection_missing',
-    odds_refresh_note: row.source || 'AU bookie market scan'
+    odds_refresh_note: row.source || `${sourceTypeLabel(sourceName)} market scan`
   };
 }
 
@@ -4063,7 +4079,7 @@ function collapseToBestAvailableH2h(fixture) {
     if (!current || price > currentPrice) {
       bestBySelection.set(key, {
         ...marketItem,
-        odds_refresh_note: `${marketItem.odds_refresh_note || 'Checked via Odds API.'} Best available AU book price selected.`,
+        odds_refresh_note: `${marketItem.odds_refresh_note || 'Checked via Odds API.'} Best available market-source price selected.`,
         best_price_tied_books: null
       });
     } else if (current && price === currentPrice) {
