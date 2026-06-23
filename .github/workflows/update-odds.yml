@@ -41,6 +41,7 @@ jobs:
         run: node scripts/deep_market_scan.mjs
 
       - name: Refresh prices when due
+        continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           ODDS_API_SPORT_KEYS: soccer_fifa_world_cup
