@@ -3003,27 +3003,48 @@ function bindResultsFilters() {
   });
 }
 
+function setRefreshNote(message, tone = '') {
+  const noteElement = document.querySelector('[data-refresh-note]');
+  if (!noteElement) return;
+  noteElement.dataset.userMessage = 'true';
+  noteElement.classList.toggle('warning-text', tone === 'warning');
+  noteElement.classList.toggle('confirmed-text', tone === 'success');
+  noteElement.textContent = message;
+}
+
+async function reloadSavedOddsData() {
+  await loadDataset({ bustCache: true });
+  await loadBetHistory({ bustCache: true });
+  await loadPlayerPropWatchlist({ bustCache: true });
+  render();
+}
+
 function bindRefreshOdds() {
   const button = document.querySelector('[data-refresh-odds]');
   button.addEventListener('click', async () => {
     button.disabled = true;
-    button.textContent = window.location.protocol === 'file:' ? 'Reloading...' : 'Refreshing...';
+    button.textContent = window.location.protocol === 'file:' ? 'Reloading...' : 'Opening GitHub...';
     document.querySelector('[data-app-error]').textContent = '';
-    await loadDataset({ bustCache: true });
-    await loadBetHistory({ bustCache: true });
-    await loadPlayerPropWatchlist({ bustCache: true });
 
-    render();
+    try {
+      if (window.location.protocol === 'file:') {
+        await reloadSavedOddsData();
+        window.open('https://github.com/JackTemplar73/BetMate-Edge/actions/workflows/update-odds.yml', '_blank', 'noopener');
+        setRefreshNote('Local file reloaded. GitHub Actions opened: click "Run workflow" there to run the real odds refresh.', 'warning');
+        return;
+      }
 
-    button.disabled = false;
-    button.textContent = 'Refresh odds';
-    const noteElement = document.querySelector('[data-refresh-note]');
-    if (noteElement) {
-      noteElement.dataset.userMessage = 'true';
-      noteElement.textContent = window.location.protocol === 'file:'
-        ? 'Local file reloaded saved data.'
-        : 'Latest saved odds data was reloaded.';
+      await reloadSavedOddsData();
+      window.open('https://github.com/JackTemplar73/BetMate-Edge/actions/workflows/update-odds.yml', '_blank', 'noopener');
+      setRefreshNote('Saved data reloaded. GitHub Actions opened: click "Run workflow" there to run the real odds refresh.', 'warning');
+    } catch (error) {
+      await reloadSavedOddsData();
+      setRefreshNote(`Could not reload saved data: ${error.message}. Open GitHub Actions to run the real odds refresh.`, 'warning');
+    } finally {
+      button.disabled = false;
+      button.textContent = 'Refresh odds';
     }
+
   });
 }
 
