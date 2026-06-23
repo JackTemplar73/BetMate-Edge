@@ -2266,6 +2266,7 @@ function renderResults() {
   const allRows = getQualifiedHistoryBets().sort(sortHistoryRows);
   const rows = filterResultsRowsByQiAndPrice(filterResultsRowsByResult(allRows));
   renderResultsSummary(rows);
+  renderResultsLearnings(rows);
   renderResultsFilterControls();
   if (rows.length === 0) {
     tableBody.innerHTML = '<tr><td colspan="11">No completed QI 80+ bets at 1.80+ match this results filter.</td></tr>';
@@ -2329,6 +2330,108 @@ function renderResultsSummary(rows) {
       <strong class="${valueClass}">${roi === null ? '-' : `${roi > 0 ? '+' : ''}${roi.toFixed(1)}%`}</strong>
       <small>${stakedUnits} settled units staked</small>
     </article>
+  `;
+}
+
+function marketLabelForLearning(value) {
+  return formatMarketLabel(value || 'Market', 'Market');
+}
+
+function resultRowProfit(rows) {
+  return rows.reduce((total, bet) => total + calculateProfitUnits(bet), 0);
+}
+
+function summarizeMarketPerformance(rows) {
+  const grouped = new Map();
+  rows.forEach((bet) => {
+    const key = marketLabelForLearning(bet.market_matrix);
+    const group = grouped.get(key) || { label: key, rows: [] };
+    group.rows.push(bet);
+    grouped.set(key, group);
+  });
+
+  return [...grouped.values()]
+    .map((group) => {
+      const settled = group.rows.filter(isSettledResult);
+      const wins = settled.filter((bet) => ['won', 'win'].includes(String(bet.result_status || '').toLowerCase())).length;
+      const pushes = settled.filter((bet) => String(bet.result_status || '').toLowerCase() === 'push').length;
+      const profit = resultRowProfit(settled);
+      return {
+        label: group.label,
+        bets: settled.length,
+        wins,
+        pushes,
+        profit,
+        roi: settled.length ? (profit / settled.length) * 100 : 0
+      };
+    })
+    .filter((item) => item.bets > 0)
+    .sort((a, b) => b.profit - a.profit);
+}
+
+function summarizeLearningFlags() {
+  const counts = new Map();
+  state.dataset.forEach((fixture) => {
+    (fixture.post_match_learning?.flags || []).forEach((flag) => {
+      const label = String(flag || '').replace(/-/g, ' ');
+      counts.set(label, (counts.get(label) || 0) + 1);
+    });
+  });
+
+  return [...counts.entries()]
+    .map(([label, count]) => ({ label, count }))
+    .sort((a, b) => b.count - a.count || a.label.localeCompare(b.label));
+}
+
+function renderResultsLearnings(rows) {
+  const container = document.querySelector('[data-results-learnings]');
+  if (!container) return;
+
+  const settled = rows.filter(isSettledResult);
+  if (!settled.length) {
+    container.innerHTML = '';
+    return;
+  }
+
+  const markets = summarizeMarketPerformance(settled);
+  const best = markets[0];
+  const worst = [...markets].sort((a, b) => a.profit - b.profit)[0];
+  const flags = summarizeLearningFlags();
+  const profit = resultRowProfit(settled);
+  const roi = settled.length ? (profit / settled.length) * 100 : 0;
+  const flagText = flags.length
+    ? flags.slice(0, 3).map((flag) => `${flag.label} (${flag.count})`).join(', ')
+    : 'No recurring post-match flags in the completed sample.';
+
+  container.innerHTML = `
+    <div class="inline-section-heading">
+      <div>
+        <h3>Key Learnings</h3>
+        <p>Read from the currently displayed settled bets and completed-match model flags.</p>
+      </div>
+    </div>
+    <div class="learning-card-grid">
+      <article>
+        <span>Filtered sample</span>
+        <strong>${settled.length} bets | ${roi > 0 ? '+' : ''}${roi.toFixed(1)}% ROI</strong>
+        <small>Only QI ${state.resultsQiFilter}+ and ${state.resultsPriceFilter === '1.8plus' ? '1.80+' : 'selected'} price rows are included.</small>
+      </article>
+      <article>
+        <span>Best market</span>
+        <strong>${best ? best.label : '-'}</strong>
+        <small>${best ? `${formatProfitUnits(best.profit)} from ${best.bets} bets` : 'No settled market sample yet.'}</small>
+      </article>
+      <article>
+        <span>Weakest market</span>
+        <strong>${worst ? worst.label : '-'}</strong>
+        <small>${worst ? `${formatProfitUnits(worst.profit)} from ${worst.bets} bets` : 'No settled market sample yet.'}</small>
+      </article>
+      <article>
+        <span>Model flags</span>
+        <strong>${flags[0]?.label || 'Stable sample'}</strong>
+        <small>${flagText}</small>
+      </article>
+    </div>
   `;
 }
 
