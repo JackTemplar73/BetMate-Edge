@@ -34,18 +34,18 @@ jobs:
         with:
           node-version: '20'
 
-      - name: Refresh AU market scan when due
-        env:
-          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
-          ODDS_API_TARGET_BOOKMAKERS: sportsbet,tab,pointsbetau,neds,bet365,betfair_ex_au
-        run: node scripts/deep_market_scan.mjs
-
       - name: Refresh prices when due
         continue-on-error: true
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           ODDS_API_SPORT_KEYS: soccer_fifa_world_cup
         run: node scripts/update_odds.mjs
+
+      - name: Refresh market-source scan when due
+        env:
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
+          ODDS_API_TARGET_BOOKMAKERS: sportsbet,tab,pointsbetau,neds,bet365,betfair_ex_au
+        run: node scripts/deep_market_scan.mjs
 
       - name: Check Sportsbet player props directly
         continue-on-error: true

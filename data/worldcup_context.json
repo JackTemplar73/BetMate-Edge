@@ -165,6 +165,17 @@
       "rest_travel": { "home_team": "England", "away_team": "Ghana", "home": { "rest_days": 5, "travel_km": 2494 }, "away": { "rest_days": 5, "travel_km": 686 } }
     },
     {
+      "match_name": "Panama vs Croatia",
+      "group": "Group L",
+      "match_number": 46,
+      "kickoff_aest": "2026-06-24T09:00:00+10:00",
+      "venue": "BMO Field",
+      "city": "Toronto, Canada",
+      "pitch_profile": "engineered tournament grass",
+      "weather": { "temperature_c": 24, "feels_like_c": 24, "humidity_pct": 48, "precip_chance_pct": 14, "wind_kmh": 13, "forecast": "Partly cloudy" },
+      "rest_travel": { "home_team": "Panama", "away_team": "Croatia", "home": { "rest_days": 5, "travel_km": 0 }, "away": { "rest_days": 5, "travel_km": 1930 } }
+    },
+    {
       "match_name": "Colombia vs Congo DR",
       "group": "Group K",
       "match_number": 48,
