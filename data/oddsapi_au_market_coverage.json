@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-21T05:54:01.423Z",
+  "checked_at": "2026-06-23T10:33:23.150Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,14 +10,14 @@
   ],
   "events_checked": 31,
   "market_counts": {
-    "h2h": 25,
-    "btts": 10,
-    "double_chance": 9,
-    "h2h_3_way": 25,
-    "h2h_lay": 5,
-    "draw_no_bet": 5,
-    "alternate_spreads": 5,
-    "alternate_totals": 5
+    "h2h": 20,
+    "h2h_3_way": 20,
+    "btts": 8,
+    "double_chance": 6,
+    "h2h_lay": 4,
+    "draw_no_bet": 4,
+    "alternate_spreads": 4,
+    "alternate_totals": 4
   },
   "matches": [
     {
@@ -744,7 +744,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 37
+      "matched_rows": 34
     },
     {
       "match_name": "England vs Ghana",
