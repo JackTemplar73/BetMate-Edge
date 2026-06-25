@@ -1,6 +1,6 @@
 {
-  "source": "World Cup 2026 context feed",
-  "updated_at": "2026-06-19T20:15:00+10:00",
+  "source": "World Cup 2026 context feed + current published schedule",
+  "updated_at": "2026-06-25T00:00:00+10:00",
   "lineup_source": "Projected tournament team sheets",
   "sources": {
     "results": "football-data.org",
@@ -18,11 +18,97 @@
       "venue": "Lumen Field",
       "city": "Seattle, United States",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 24, "feels_like_c": 26, "humidity_pct": 51, "precip_chance_pct": 0, "wind_kmh": 11, "forecast": "Clear sky" },
-      "rest_travel": { "home_team": "United States", "away_team": "Australia", "home": { "rest_days": 6, "travel_km": 1553 }, "away": { "rest_days": 5, "travel_km": 196 } },
+      "weather": {
+        "temperature_c": 24,
+        "feels_like_c": 26,
+        "humidity_pct": 51,
+        "precip_chance_pct": 0,
+        "wind_kmh": 11,
+        "forecast": "Clear sky"
+      },
+      "rest_travel": {
+        "home_team": "United States",
+        "away_team": "Australia",
+        "home": {
+          "rest_days": 6,
+          "travel_km": 1553
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 196
+        }
+      },
       "teams": {
-        "home": { "name": "United States", "coach": "Mauricio Pochettino", "formation": "4-3-3", "starting_xi": ["Matt Turner", "Antonee Robinson", "Chris Richards", "Tim Ream", "Sergino Dest", "Tyler Adams", "Weston McKennie", "Malik Tillman", "Brenden Aaronson", "Ricardo Pepi", "Christian Pulisic"], "substitutes": ["Auston Trusty", "Giovanni Reyna", "Miles Robinson", "Berhalter", "Cristian Roldan", "Alex Freeman", "Max Arfsten", "Haji Wright", "Folarin Balogun", "Timothy Weah", "Mark McKenzie", "Joe Scally", "Matt Freese", "Chris Brady", "Alejandro Zendejas"] },
-        "away": { "name": "Australia", "coach": "Tony Popovic", "formation": "4-3-3", "starting_xi": ["Patrick Beach", "Aziz Behich", "Harry Souttar", "Cameron Burgess", "Milos Degenek", "Jackson Irvine", "Connor Metcalfe", "Aiden O'Neill", "Awer Mabil", "Mohamed Toure", "Mathew Leckie"], "substitutes": ["Mathew Ryan", "Alessandro Circati", "Jacob Italiano", "Jordan Bos", "Jason Geria", "Ajdin Hrustic", "Paul Izzo", "Cammy Devlin", "Kai Trewin", "Nestory Irankunda", "Cristian Volpato", "Nishan Velupillay", "Paul Okon-Engstler", "Lucas Herrington", "Tete Yengi"] }
+        "home": {
+          "name": "United States",
+          "coach": "Mauricio Pochettino",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Matt Turner",
+            "Antonee Robinson",
+            "Chris Richards",
+            "Tim Ream",
+            "Sergino Dest",
+            "Tyler Adams",
+            "Weston McKennie",
+            "Malik Tillman",
+            "Brenden Aaronson",
+            "Ricardo Pepi",
+            "Christian Pulisic"
+          ],
+          "substitutes": [
+            "Auston Trusty",
+            "Giovanni Reyna",
+            "Miles Robinson",
+            "Berhalter",
+            "Cristian Roldan",
+            "Alex Freeman",
+            "Max Arfsten",
+            "Haji Wright",
+            "Folarin Balogun",
+            "Timothy Weah",
+            "Mark McKenzie",
+            "Joe Scally",
+            "Matt Freese",
+            "Chris Brady",
+            "Alejandro Zendejas"
+          ]
+        },
+        "away": {
+          "name": "Australia",
+          "coach": "Tony Popovic",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Patrick Beach",
+            "Aziz Behich",
+            "Harry Souttar",
+            "Cameron Burgess",
+            "Milos Degenek",
+            "Jackson Irvine",
+            "Connor Metcalfe",
+            "Aiden O'Neill",
+            "Awer Mabil",
+            "Mohamed Toure",
+            "Mathew Leckie"
+          ],
+          "substitutes": [
+            "Mathew Ryan",
+            "Alessandro Circati",
+            "Jacob Italiano",
+            "Jordan Bos",
+            "Jason Geria",
+            "Ajdin Hrustic",
+            "Paul Izzo",
+            "Cammy Devlin",
+            "Kai Trewin",
+            "Nestory Irankunda",
+            "Cristian Volpato",
+            "Nishan Velupillay",
+            "Paul Okon-Engstler",
+            "Lucas Herrington",
+            "Tete Yengi"
+          ]
+        }
       }
     },
     {
@@ -33,26 +119,63 @@
       "venue": "Gillette Stadium",
       "city": "Boston, United States",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 24, "feels_like_c": 21, "humidity_pct": 46, "precip_chance_pct": 0, "wind_kmh": 19, "forecast": "Clear sky" },
-      "rest_travel": { "home_team": "Scotland", "away_team": "Morocco", "home": { "rest_days": 5, "travel_km": 0 }, "away": { "rest_days": 5, "travel_km": 274 } },
+      "weather": {
+        "temperature_c": 24,
+        "feels_like_c": 21,
+        "humidity_pct": 46,
+        "precip_chance_pct": 0,
+        "wind_kmh": 19,
+        "forecast": "Clear sky"
+      },
+      "rest_travel": {
+        "home_team": "Scotland",
+        "away_team": "Morocco",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 0
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 274
+        }
+      },
       "teams": {
-        "home": { "name": "Scotland", "coach": "Steve Clarke", "formation": "4-3-3", "starting_xi": ["Angus Gunn", "Andy Robertson", "Grant Hanley", "Jack Hendry", "Aaron Hickey", "Ryan Christie", "Scott McTominay", "John McGinn", "Che Adams", "Lyndon Dykes", "Lewis Ferguson"] },
-        "away": { "name": "Morocco", "coach": "Walid Regragui", "formation": "4-3-3", "starting_xi": ["Yassine Bounou", "Noussair Mazraoui", "Issa Diop", "Chadi Riad", "Achraf Hakimi", "Sofyan Amrabat", "Azzedine Ounahi", "Ayyoub Bouaddi", "Soufiane Rahimi", "Ayoub El Kaabi", "Brahim Diaz"] }
-      }
-    },
-    {
-      "match_name": "Turkey vs Paraguay",
-      "group": "Group D",
-      "match_number": 31,
-      "kickoff_aest": "2026-06-20T13:00:00+10:00",
-      "venue": "Levi's Stadium",
-      "city": "Santa Clara, United States",
-      "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 19, "feels_like_c": 17, "humidity_pct": 67, "precip_chance_pct": 0, "wind_kmh": 17, "forecast": "Clear sky" },
-      "rest_travel": { "home_team": "Turkey", "away_team": "Paraguay", "home": { "rest_days": 5, "travel_km": 1323 }, "away": { "rest_days": 6, "travel_km": 505 } },
-      "teams": {
-        "home": { "name": "Turkey", "coach": "Vincenzo Montella", "formation": "4-2-3-1", "starting_xi": ["Mert Gunok", "Ferdi Kadioglu", "Merih Demiral", "Caglar Soyuncu", "Zeki Celik", "Salih Ozcan", "Hakan Calhanoglu", "Orkun Kokcu", "Arda Guler", "Kenan Yildiz", "Kerem Akturkoglu"] },
-        "away": { "name": "Paraguay", "coach": "Gustavo Alfaro", "formation": "4-3-3", "starting_xi": ["Gatito Fernandez", "Junior Alonso", "Fabian Balbuena", "Gustavo Gomez", "Gustavo Velazquez", "Ramon Sosa", "Diego Gomez", "Miguel Almiron", "Kaku", "Antonio Sanabria", "Julio Enciso"] }
+        "home": {
+          "name": "Scotland",
+          "coach": "Steve Clarke",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Angus Gunn",
+            "Andy Robertson",
+            "Grant Hanley",
+            "Jack Hendry",
+            "Aaron Hickey",
+            "Ryan Christie",
+            "Scott McTominay",
+            "John McGinn",
+            "Che Adams",
+            "Lyndon Dykes",
+            "Lewis Ferguson"
+          ]
+        },
+        "away": {
+          "name": "Morocco",
+          "coach": "Walid Regragui",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Yassine Bounou",
+            "Noussair Mazraoui",
+            "Issa Diop",
+            "Chadi Riad",
+            "Achraf Hakimi",
+            "Sofyan Amrabat",
+            "Azzedine Ounahi",
+            "Ayyoub Bouaddi",
+            "Soufiane Rahimi",
+            "Ayoub El Kaabi",
+            "Brahim Diaz"
+          ]
+        }
       }
     },
     {
@@ -63,11 +186,130 @@
       "venue": "Lincoln Financial Field",
       "city": "Philadelphia, United States",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 26, "feels_like_c": 24, "humidity_pct": 34, "precip_chance_pct": 0, "wind_kmh": 10, "forecast": "Clear sky" },
-      "rest_travel": { "home_team": "Brazil", "away_team": "Haiti", "home": { "rest_days": 5, "travel_km": 137 }, "away": { "rest_days": 5, "travel_km": 408 } },
+      "weather": {
+        "temperature_c": 26,
+        "feels_like_c": 24,
+        "humidity_pct": 34,
+        "precip_chance_pct": 0,
+        "wind_kmh": 10,
+        "forecast": "Clear sky"
+      },
+      "rest_travel": {
+        "home_team": "Brazil",
+        "away_team": "Haiti",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 137
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 408
+        }
+      },
       "teams": {
-        "home": { "name": "Brazil", "coach": "Carlo Ancelotti", "formation": "4-3-3", "starting_xi": ["Alisson", "Alex Sandro", "Gabriel Magalhaes", "Marquinhos", "Danilo Luiz", "Bruno Guimaraes", "Casemiro", "Lucas Paqueta", "Vinicius Junior", "Matheus Cunha", "Raphinha"] },
-        "away": { "name": "Haiti", "coach": "Sebastien Migne", "formation": "4-3-3", "starting_xi": ["Johny Placide", "Jean-Kevin Duverne", "Hannes Delcroix", "Keeto Thermoncy", "Carlens Arcus", "Carl Sainte", "Bellegarde", "Jacques", "Jr.", "Wilson Isidor", "Duckens Nazon"] }
+        "home": {
+          "name": "Brazil",
+          "coach": "Carlo Ancelotti",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Alisson",
+            "Alex Sandro",
+            "Gabriel Magalhaes",
+            "Marquinhos",
+            "Danilo Luiz",
+            "Bruno Guimaraes",
+            "Casemiro",
+            "Lucas Paqueta",
+            "Vinicius Junior",
+            "Matheus Cunha",
+            "Raphinha"
+          ]
+        },
+        "away": {
+          "name": "Haiti",
+          "coach": "Sebastien Migne",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Johny Placide",
+            "Jean-Kevin Duverne",
+            "Hannes Delcroix",
+            "Keeto Thermoncy",
+            "Carlens Arcus",
+            "Carl Sainte",
+            "Bellegarde",
+            "Jacques",
+            "Jr.",
+            "Wilson Isidor",
+            "Duckens Nazon"
+          ]
+        }
+      }
+    },
+    {
+      "match_name": "Turkey vs Paraguay",
+      "group": "Group D",
+      "match_number": 31,
+      "kickoff_aest": "2026-06-20T13:00:00+10:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "temperature_c": 19,
+        "feels_like_c": 17,
+        "humidity_pct": 67,
+        "precip_chance_pct": 0,
+        "wind_kmh": 17,
+        "forecast": "Clear sky"
+      },
+      "rest_travel": {
+        "home_team": "Turkey",
+        "away_team": "Paraguay",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 1323
+        },
+        "away": {
+          "rest_days": 6,
+          "travel_km": 505
+        }
+      },
+      "teams": {
+        "home": {
+          "name": "Turkey",
+          "coach": "Vincenzo Montella",
+          "formation": "4-2-3-1",
+          "starting_xi": [
+            "Mert Gunok",
+            "Ferdi Kadioglu",
+            "Merih Demiral",
+            "Caglar Soyuncu",
+            "Zeki Celik",
+            "Salih Ozcan",
+            "Hakan Calhanoglu",
+            "Orkun Kokcu",
+            "Arda Guler",
+            "Kenan Yildiz",
+            "Kerem Akturkoglu"
+          ]
+        },
+        "away": {
+          "name": "Paraguay",
+          "coach": "Gustavo Alfaro",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Gatito Fernandez",
+            "Junior Alonso",
+            "Fabian Balbuena",
+            "Gustavo Gomez",
+            "Gustavo Velazquez",
+            "Ramon Sosa",
+            "Diego Gomez",
+            "Miguel Almiron",
+            "Kaku",
+            "Antonio Sanabria",
+            "Julio Enciso"
+          ]
+        }
       }
     },
     {
@@ -78,11 +320,61 @@
       "venue": "NRG Stadium",
       "city": "Houston, United States",
       "pitch_profile": "retractable roof, engineered tournament grass",
-      "weather": { "temperature_c": 30, "feels_like_c": 36, "humidity_pct": 77, "forecast": "Thunderstorm; roof may close" },
-      "rest_travel": { "home_team": "Netherlands", "away_team": "Sweden", "home": { "rest_days": 5, "travel_km": 376 }, "away": { "rest_days": 5, "travel_km": 652 } },
+      "weather": {
+        "temperature_c": 30,
+        "feels_like_c": 36,
+        "humidity_pct": 77,
+        "forecast": "Thunderstorm; roof may close"
+      },
+      "rest_travel": {
+        "home_team": "Netherlands",
+        "away_team": "Sweden",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 376
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 652
+        }
+      },
       "teams": {
-        "home": { "name": "Netherlands", "coach": "Ronald Koeman", "formation": "4-3-3", "starting_xi": ["Bart Verbruggen", "Nathan Ake", "Virgil van Dijk", "Jan Paul van Hecke", "Denzel Dumfries", "Ryan Gravenberch", "Frenkie de Jong", "Tijjani Reijnders", "Cody Gakpo", "Wout Weghorst", "Noa Lang"] },
-        "away": { "name": "Sweden", "coach": "Graham Potter", "formation": "4-3-3", "starting_xi": ["Zetterstrom", "Gudmundsson", "Victor Lindelof", "Isak Hien", "Daniel Svensson", "Lucas Bergvall", "Mattias Svanberg", "Yasin Ayari", "Viktor Gyokeres", "Alexander Isak", "Anthony Elanga"] }
+        "home": {
+          "name": "Netherlands",
+          "coach": "Ronald Koeman",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Bart Verbruggen",
+            "Nathan Ake",
+            "Virgil van Dijk",
+            "Jan Paul van Hecke",
+            "Denzel Dumfries",
+            "Ryan Gravenberch",
+            "Frenkie de Jong",
+            "Tijjani Reijnders",
+            "Cody Gakpo",
+            "Wout Weghorst",
+            "Noa Lang"
+          ]
+        },
+        "away": {
+          "name": "Sweden",
+          "coach": "Graham Potter",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Zetterstrom",
+            "Gudmundsson",
+            "Victor Lindelof",
+            "Isak Hien",
+            "Daniel Svensson",
+            "Lucas Bergvall",
+            "Mattias Svanberg",
+            "Yasin Ayari",
+            "Viktor Gyokeres",
+            "Alexander Isak",
+            "Anthony Elanga"
+          ]
+        }
       }
     },
     {
@@ -93,11 +385,63 @@
       "venue": "BMO Field",
       "city": "Toronto, Canada",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 23, "feels_like_c": 22, "humidity_pct": 39, "precip_chance_pct": 12, "wind_kmh": 18, "forecast": "Mainly clear" },
-      "rest_travel": { "home_team": "Germany", "away_team": "Ivory Coast", "home": { "rest_days": 5, "travel_km": 2100 }, "away": { "rest_days": 5, "travel_km": 544 } },
+      "weather": {
+        "temperature_c": 23,
+        "feels_like_c": 22,
+        "humidity_pct": 39,
+        "precip_chance_pct": 12,
+        "wind_kmh": 18,
+        "forecast": "Mainly clear"
+      },
+      "rest_travel": {
+        "home_team": "Germany",
+        "away_team": "Ivory Coast",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 2100
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 544
+        }
+      },
       "teams": {
-        "home": { "name": "Germany", "coach": "Julian Nagelsmann", "formation": "4-2-3-1", "starting_xi": ["Manuel Neuer", "David Raum", "Jonathan Tah", "Antonio Rudiger", "Joshua Kimmich", "Pavlovic", "Leon Goretzka", "Leroy Sane", "Jamal Musiala", "Florian Wirtz", "Kai Havertz"] },
-        "away": { "name": "Ivory Coast", "coach": "Emerse Fae", "formation": "4-3-3", "starting_xi": ["Yahia Fofana", "Ghislain Konan", "Emmanuel Agbadou", "Evan Ndicka", "Wilfried Singo", "Ibrahim Sangare", "Seko Fofana", "Franck Kessie", "Simon Adingra", "Ange-Yoan Bonny", "Amad Diallo"] }
+        "home": {
+          "name": "Germany",
+          "coach": "Julian Nagelsmann",
+          "formation": "4-2-3-1",
+          "starting_xi": [
+            "Manuel Neuer",
+            "David Raum",
+            "Jonathan Tah",
+            "Antonio Rudiger",
+            "Joshua Kimmich",
+            "Pavlovic",
+            "Leon Goretzka",
+            "Leroy Sane",
+            "Jamal Musiala",
+            "Florian Wirtz",
+            "Kai Havertz"
+          ]
+        },
+        "away": {
+          "name": "Ivory Coast",
+          "coach": "Emerse Fae",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Yahia Fofana",
+            "Ghislain Konan",
+            "Emmanuel Agbadou",
+            "Evan Ndicka",
+            "Wilfried Singo",
+            "Ibrahim Sangare",
+            "Seko Fofana",
+            "Franck Kessie",
+            "Simon Adingra",
+            "Ange-Yoan Bonny",
+            "Amad Diallo"
+          ]
+        }
       }
     },
     {
@@ -108,8 +452,26 @@
       "venue": "Arrowhead Stadium",
       "city": "Kansas City, United States",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 24, "feels_like_c": 27, "humidity_pct": 82, "precip_chance_pct": 17, "wind_kmh": 16, "forecast": "Overcast" },
-      "rest_travel": { "home_team": "Ecuador", "away_team": "Curacao", "home": { "rest_days": 5, "travel_km": 1657 }, "away": { "rest_days": 5, "travel_km": 1045 } }
+      "weather": {
+        "temperature_c": 24,
+        "feels_like_c": 27,
+        "humidity_pct": 82,
+        "precip_chance_pct": 17,
+        "wind_kmh": 16,
+        "forecast": "Overcast"
+      },
+      "rest_travel": {
+        "home_team": "Ecuador",
+        "away_team": "Curacao",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 1657
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 1045
+        }
+      }
     },
     {
       "match_name": "Tunisia vs Japan",
@@ -120,8 +482,26 @@
       "city": "Guadalupe, Mexico",
       "altitude_m": 489,
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 24, "feels_like_c": 26, "humidity_pct": 81, "precip_chance_pct": 33, "wind_kmh": 13, "forecast": "Overcast" },
-      "rest_travel": { "home_team": "Tunisia", "away_team": "Japan", "home": { "rest_days": 5, "travel_km": 0 }, "away": { "rest_days": 5, "travel_km": 844 } }
+      "weather": {
+        "temperature_c": 24,
+        "feels_like_c": 26,
+        "humidity_pct": 81,
+        "precip_chance_pct": 33,
+        "wind_kmh": 13,
+        "forecast": "Overcast"
+      },
+      "rest_travel": {
+        "home_team": "Tunisia",
+        "away_team": "Japan",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 0
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 844
+        }
+      }
     },
     {
       "match_name": "New Zealand vs Egypt",
@@ -131,11 +511,61 @@
       "venue": "BC Place",
       "city": "Vancouver, Canada",
       "pitch_profile": "retractable roof, engineered tournament grass",
-      "weather": { "temperature_c": 23, "feels_like_c": 21, "humidity_pct": 44, "forecast": "Clear sky; roof may close" },
-      "rest_travel": { "home_team": "New Zealand", "away_team": "Egypt", "home": { "rest_days": 5, "travel_km": 1749 }, "away": { "rest_days": 5, "travel_km": 196 } },
+      "weather": {
+        "temperature_c": 23,
+        "feels_like_c": 21,
+        "humidity_pct": 44,
+        "forecast": "Clear sky; roof may close"
+      },
+      "rest_travel": {
+        "home_team": "New Zealand",
+        "away_team": "Egypt",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 1749
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 196
+        }
+      },
       "teams": {
-        "home": { "name": "New Zealand", "coach": "Darren Bazeley", "formation": "4-3-3", "starting_xi": ["Max Crocombe", "Liberato Cacace", "Michael Boxall", "Tyler Bindon", "Tim Payne", "Marko Stamenic", "Joe Bell", "Matthew Garbett", "Sarpreet Singh", "Chris Wood", "Ben Old"] },
-        "away": { "name": "Egypt", "coach": "Hossam Hassan", "formation": "4-3-3", "starting_xi": ["Mohamed El Shenawy", "Hossam Abdelmaguid", "Mohamed Abdelmonem", "Yasser Ibrahim", "Karim Hafez", "Emam Ashour", "Hamdy Fathy", "Marwan Attia", "Trezeguet", "Omar Marmoush", "Mohamed Salah"] }
+        "home": {
+          "name": "New Zealand",
+          "coach": "Darren Bazeley",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Max Crocombe",
+            "Liberato Cacace",
+            "Michael Boxall",
+            "Tyler Bindon",
+            "Tim Payne",
+            "Marko Stamenic",
+            "Joe Bell",
+            "Matthew Garbett",
+            "Sarpreet Singh",
+            "Chris Wood",
+            "Ben Old"
+          ]
+        },
+        "away": {
+          "name": "Egypt",
+          "coach": "Hossam Hassan",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Mohamed El Shenawy",
+            "Hossam Abdelmaguid",
+            "Mohamed Abdelmonem",
+            "Yasser Ibrahim",
+            "Karim Hafez",
+            "Emam Ashour",
+            "Hamdy Fathy",
+            "Marwan Attia",
+            "Trezeguet",
+            "Omar Marmoush",
+            "Mohamed Salah"
+          ]
+        }
       }
     },
     {
@@ -146,11 +576,61 @@
       "venue": "NRG Stadium",
       "city": "Houston, United States",
       "pitch_profile": "retractable roof, engineered tournament grass",
-      "weather": { "temperature_c": 33, "feels_like_c": 37, "humidity_pct": 45, "forecast": "Thunderstorm; roof may close" },
-      "rest_travel": { "home_team": "Portugal", "away_team": "Uzbekistan", "home": { "rest_days": 5, "travel_km": 0 }, "away": { "rest_days": 5, "travel_km": 1215 } },
+      "weather": {
+        "temperature_c": 33,
+        "feels_like_c": 37,
+        "humidity_pct": 45,
+        "forecast": "Thunderstorm; roof may close"
+      },
+      "rest_travel": {
+        "home_team": "Portugal",
+        "away_team": "Uzbekistan",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 0
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 1215
+        }
+      },
       "teams": {
-        "home": { "name": "Portugal", "coach": "Roberto Martinez", "formation": "4-3-3", "starting_xi": ["Diogo Costa", "Nuno Mendes", "Ruben Dias", "Goncalo Inacio", "Diogo Dalot", "Joao Neves", "Bruno Fernandes", "Bernardo Silva", "Rafael Leao", "Cristiano Ronaldo", "Pedro Neto"] },
-        "away": { "name": "Uzbekistan", "coach": "Fabio Cannavaro", "formation": "4-3-3", "starting_xi": ["Utkir Yusupov", "Alijonov", "Abdukodir Khusanov", "Rustam Ashurmatov", "Farrukh Sayfiev", "Akmal Mozgovoy", "Masharipov", "Fayzullaev", "Oston Urunov", "Eldor Shomurodov", "Khamdamov"] }
+        "home": {
+          "name": "Portugal",
+          "coach": "Roberto Martinez",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Diogo Costa",
+            "Nuno Mendes",
+            "Ruben Dias",
+            "Goncalo Inacio",
+            "Diogo Dalot",
+            "Joao Neves",
+            "Bruno Fernandes",
+            "Bernardo Silva",
+            "Rafael Leao",
+            "Cristiano Ronaldo",
+            "Pedro Neto"
+          ]
+        },
+        "away": {
+          "name": "Uzbekistan",
+          "coach": "Fabio Cannavaro",
+          "formation": "4-3-3",
+          "starting_xi": [
+            "Utkir Yusupov",
+            "Alijonov",
+            "Abdukodir Khusanov",
+            "Rustam Ashurmatov",
+            "Farrukh Sayfiev",
+            "Akmal Mozgovoy",
+            "Masharipov",
+            "Fayzullaev",
+            "Oston Urunov",
+            "Eldor Shomurodov",
+            "Khamdamov"
+          ]
+        }
       }
     },
     {
@@ -161,8 +641,26 @@
       "venue": "Gillette Stadium",
       "city": "Boston, United States",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 28, "feels_like_c": 28, "humidity_pct": 31, "precip_chance_pct": 18, "wind_kmh": 8, "forecast": "Partly cloudy" },
-      "rest_travel": { "home_team": "England", "away_team": "Ghana", "home": { "rest_days": 5, "travel_km": 2494 }, "away": { "rest_days": 5, "travel_km": 686 } }
+      "weather": {
+        "temperature_c": 28,
+        "feels_like_c": 28,
+        "humidity_pct": 31,
+        "precip_chance_pct": 18,
+        "wind_kmh": 8,
+        "forecast": "Partly cloudy"
+      },
+      "rest_travel": {
+        "home_team": "England",
+        "away_team": "Ghana",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 2494
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 686
+        }
+      }
     },
     {
       "match_name": "Panama vs Croatia",
@@ -172,8 +670,26 @@
       "venue": "BMO Field",
       "city": "Toronto, Canada",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 24, "feels_like_c": 24, "humidity_pct": 48, "precip_chance_pct": 14, "wind_kmh": 13, "forecast": "Partly cloudy" },
-      "rest_travel": { "home_team": "Panama", "away_team": "Croatia", "home": { "rest_days": 5, "travel_km": 0 }, "away": { "rest_days": 5, "travel_km": 1930 } }
+      "weather": {
+        "temperature_c": 24,
+        "feels_like_c": 24,
+        "humidity_pct": 48,
+        "precip_chance_pct": 14,
+        "wind_kmh": 13,
+        "forecast": "Partly cloudy"
+      },
+      "rest_travel": {
+        "home_team": "Panama",
+        "away_team": "Croatia",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 0
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 1930
+        }
+      }
     },
     {
       "match_name": "Colombia vs Congo DR",
@@ -184,8 +700,26 @@
       "city": "Zapopan, Mexico",
       "altitude_m": 1665,
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 19, "feels_like_c": 21, "humidity_pct": 91, "precip_chance_pct": 80, "wind_kmh": 5, "forecast": "Thunderstorm" },
-      "rest_travel": { "home_team": "Colombia", "away_team": "Congo DR", "home": { "rest_days": 5, "travel_km": 476 }, "away": { "rest_days": 5, "travel_km": 1287 } }
+      "weather": {
+        "temperature_c": 19,
+        "feels_like_c": 21,
+        "humidity_pct": 91,
+        "precip_chance_pct": 80,
+        "wind_kmh": 5,
+        "forecast": "Thunderstorm"
+      },
+      "rest_travel": {
+        "home_team": "Colombia",
+        "away_team": "Congo DR",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 476
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 1287
+        }
+      }
     },
     {
       "match_name": "Switzerland vs Canada",
@@ -195,8 +729,24 @@
       "venue": "BC Place",
       "city": "Vancouver, Canada",
       "pitch_profile": "retractable roof, engineered tournament grass",
-      "weather": { "temperature_c": 18, "feels_like_c": 17, "humidity_pct": 63, "forecast": "Overcast; roof may close" },
-      "rest_travel": { "home_team": "Switzerland", "away_team": "Canada", "home": { "rest_days": 5, "travel_km": 1749 }, "away": { "rest_days": 5, "travel_km": 0 } }
+      "weather": {
+        "temperature_c": 18,
+        "feels_like_c": 17,
+        "humidity_pct": 63,
+        "forecast": "Overcast; roof may close"
+      },
+      "rest_travel": {
+        "home_team": "Switzerland",
+        "away_team": "Canada",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 1749
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 0
+        }
+      }
     },
     {
       "match_name": "Bosnia and Herzegovina vs Qatar",
@@ -206,8 +756,350 @@
       "venue": "Lumen Field",
       "city": "Seattle, United States",
       "pitch_profile": "engineered tournament grass",
-      "weather": { "temperature_c": 20, "feels_like_c": 18, "humidity_pct": 50, "precip_chance_pct": 0, "wind_kmh": 15, "forecast": "Overcast" },
-      "rest_travel": { "home_team": "Bosnia and Herzegovina", "away_team": "Qatar", "home": { "rest_days": 5, "travel_km": 1553 }, "away": { "rest_days": 5, "travel_km": 196 } }
+      "weather": {
+        "temperature_c": 20,
+        "feels_like_c": 18,
+        "humidity_pct": 50,
+        "precip_chance_pct": 0,
+        "wind_kmh": 15,
+        "forecast": "Overcast"
+      },
+      "rest_travel": {
+        "home_team": "Bosnia and Herzegovina",
+        "away_team": "Qatar",
+        "home": {
+          "rest_days": 5,
+          "travel_km": 1553
+        },
+        "away": {
+          "rest_days": 5,
+          "travel_km": 196
+        }
+      }
+    },
+    {
+      "match_name": "Curacao vs Ivory Coast",
+      "group": "Group E",
+      "match_number": 53,
+      "kickoff_aest": "2026-06-26T06:00:00+10:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Curacao",
+        "away_team": "Ivory Coast",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Ecuador vs Germany",
+      "group": "Group E",
+      "match_number": 54,
+      "kickoff_aest": "2026-06-26T06:00:00+10:00",
+      "venue": "MetLife Stadium",
+      "city": "New York/New Jersey, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Ecuador",
+        "away_team": "Germany",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Tunisia vs Netherlands",
+      "group": "Group F",
+      "match_number": 55,
+      "kickoff_aest": "2026-06-26T09:00:00+10:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Tunisia",
+        "away_team": "Netherlands",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Japan vs Sweden",
+      "group": "Group F",
+      "match_number": 56,
+      "kickoff_aest": "2026-06-26T09:00:00+10:00",
+      "venue": "AT&T Stadium",
+      "city": "Dallas, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Japan",
+        "away_team": "Sweden",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Turkiye vs United States",
+      "group": "Group D",
+      "match_number": 57,
+      "kickoff_aest": "2026-06-26T12:00:00+10:00",
+      "venue": "SoFi Stadium",
+      "city": "Los Angeles, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Turkiye",
+        "away_team": "United States",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Paraguay vs Australia",
+      "group": "Group D",
+      "match_number": 58,
+      "kickoff_aest": "2026-06-26T12:00:00+10:00",
+      "venue": "Levi's Stadium",
+      "city": "Santa Clara, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Paraguay",
+        "away_team": "Australia",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Norway vs France",
+      "group": "Group I",
+      "match_number": 59,
+      "kickoff_aest": "2026-06-27T05:00:00+10:00",
+      "venue": "Gillette Stadium",
+      "city": "Boston, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Norway",
+        "away_team": "France",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Senegal vs Iraq",
+      "group": "Group I",
+      "match_number": 60,
+      "kickoff_aest": "2026-06-27T05:00:00+10:00",
+      "venue": "BMO Field",
+      "city": "Toronto, Canada",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Senegal",
+        "away_team": "Iraq",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Cabo Verde vs Saudi Arabia",
+      "group": "Group H",
+      "match_number": 61,
+      "kickoff_aest": "2026-06-27T10:00:00+10:00",
+      "venue": "NRG Stadium",
+      "city": "Houston, United States",
+      "pitch_profile": "retractable roof, engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Cabo Verde",
+        "away_team": "Saudi Arabia",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Uruguay vs Spain",
+      "group": "Group H",
+      "match_number": 62,
+      "kickoff_aest": "2026-06-27T10:00:00+10:00",
+      "venue": "Estadio Akron",
+      "city": "Zapopan, Mexico",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Uruguay",
+        "away_team": "Spain",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "New Zealand vs Belgium",
+      "group": "Group G",
+      "match_number": 63,
+      "kickoff_aest": "2026-06-27T13:00:00+10:00",
+      "venue": "BC Place",
+      "city": "Vancouver, Canada",
+      "pitch_profile": "retractable roof, engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "New Zealand",
+        "away_team": "Belgium",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Egypt vs Iran",
+      "group": "Group G",
+      "match_number": 64,
+      "kickoff_aest": "2026-06-27T13:00:00+10:00",
+      "venue": "Lumen Field",
+      "city": "Seattle, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Egypt",
+        "away_team": "Iran",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Panama vs England",
+      "group": "Group L",
+      "match_number": 65,
+      "kickoff_aest": "2026-06-28T07:00:00+10:00",
+      "venue": "MetLife Stadium",
+      "city": "New York/New Jersey, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Panama",
+        "away_team": "England",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Croatia vs Ghana",
+      "group": "Group L",
+      "match_number": 66,
+      "kickoff_aest": "2026-06-28T07:00:00+10:00",
+      "venue": "Lincoln Financial Field",
+      "city": "Philadelphia, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Croatia",
+        "away_team": "Ghana",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Colombia vs Portugal",
+      "group": "Group K",
+      "match_number": 67,
+      "kickoff_aest": "2026-06-28T09:30:00+10:00",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Colombia",
+        "away_team": "Portugal",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "DR Congo vs Uzbekistan",
+      "group": "Group K",
+      "match_number": 68,
+      "kickoff_aest": "2026-06-28T09:30:00+10:00",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "DR Congo",
+        "away_team": "Uzbekistan",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Algeria vs Austria",
+      "group": "Group J",
+      "match_number": 69,
+      "kickoff_aest": "2026-06-28T12:00:00+10:00",
+      "venue": "Arrowhead Stadium",
+      "city": "Kansas City, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Algeria",
+        "away_team": "Austria",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Jordan vs Argentina",
+      "group": "Group J",
+      "match_number": 70,
+      "kickoff_aest": "2026-06-28T12:00:00+10:00",
+      "venue": "AT&T Stadium",
+      "city": "Dallas, United States",
+      "pitch_profile": "engineered tournament grass",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Jordan",
+        "away_team": "Argentina",
+        "home": {},
+        "away": {}
+      }
     }
   ]
 }

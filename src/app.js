@@ -201,20 +201,6 @@ function getUpcomingFixtures() {
   return getFixturesInWindow().filter((fixture) => parseKickoff(fixture.kickoff_time_aest) > now);
 }
 
-function getRecentCompletedFixtures(limit = 12) {
-  const now = new Date();
-  return state.dataset
-    .filter((fixture) => estimatedFullTime(fixture) <= now)
-    .sort((a, b) => parseKickoff(b.kickoff_time_aest) - parseKickoff(a.kickoff_time_aest))
-    .slice(0, limit)
-    .sort((a, b) => parseKickoff(a.kickoff_time_aest) - parseKickoff(b.kickoff_time_aest));
-}
-
-function getMatchDisplayFixtures() {
-  const upcoming = getUpcomingFixtures();
-  return upcoming.length ? upcoming : getRecentCompletedFixtures();
-}
-
 function getCompletedFixtures() {
   const now = new Date();
   return getFixturesInWindow().filter((fixture) => estimatedFullTime(fixture) <= now);
@@ -228,7 +214,7 @@ function getStartedFixtures() {
 }
 
 function getSelectedFixture() {
-  const fixtures = getMatchDisplayFixtures();
+  const fixtures = getUpcomingFixtures();
   const selected = fixtures.find((fixture) => fixture.match_name === state.selectedMatchName);
 
   if (selected) return selected;
@@ -512,7 +498,7 @@ function refereeStatusClass(fixture) {
 }
 
 function renderSummary() {
-  const fixtures = getMatchDisplayFixtures();
+  const fixtures = getUpcomingFixtures();
   const rows = flattenMarkets(fixtures);
   const pricedRows = getHighValueCandidateRows();
   const top = [...pricedRows].sort(compareBetQuality)[0];
@@ -1422,7 +1408,7 @@ function renderFixtureModelBlock(fixture) {
 
 function renderMatchTabs() {
   const container = document.querySelector('[data-match-tabs]');
-  const fixtures = getMatchDisplayFixtures();
+  const fixtures = getUpcomingFixtures();
 
   if (state.selectedMatchName && !fixtures.some((fixture) => fixture.match_name === state.selectedMatchName)) {
     state.selectedMatchName = null;
@@ -1433,7 +1419,7 @@ function renderMatchTabs() {
   }
 
   if (fixtures.length === 0) {
-    container.innerHTML = '<p class="empty-note">No games are loaded for selection right now.</p>';
+    container.innerHTML = '<p class="empty-note">No current upcoming games are loaded.</p>';
     return;
   }
 
