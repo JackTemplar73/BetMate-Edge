@@ -654,7 +654,20 @@ function renderMarketsTable() {
   const rows = getFilteredMarkets();
 
   if (rows.length === 0) {
-    tableBody.innerHTML = '<tr><td colspan="10">No available games for selection. Started games are shown in the Completed tab.</td></tr>';
+    const fixture = getSelectedFixture();
+    tableBody.innerHTML = fixture
+      ? `
+        <tr>
+          <td>-</td>
+          <td>
+            <span class="primary-cell">${fixture.match_name}</span>
+            <span class="sub-cell">${formatKickoff(fixture.kickoff_time_aest)}</span>
+          </td>
+          <td colspan="7">Awaiting refreshed market rows for this current upcoming game.</td>
+          <td>${priceFreshness(fixture).label}</td>
+        </tr>
+      `
+      : '<tr><td colspan="10">No current upcoming games are loaded.</td></tr>';
     return;
   }
 
@@ -1067,7 +1080,33 @@ function renderSportsbookScan() {
   const rows = getSportsbookScanRows().sort(compareSelectionRows(state.scanSortMode));
 
   if (rows.length === 0) {
-    container.innerHTML = '<p class="empty-note">No market-source rows are matched to the model right now.</p>';
+    const fixtures = getUpcomingFixtures();
+    container.innerHTML = fixtures.length
+      ? `
+        <div class="sportsbook-scan-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Match</th>
+                <th>Kickoff</th>
+                <th>Status</th>
+                <th>Source</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${fixtures.map((fixture) => `
+                <tr>
+                  <td><span class="primary-cell">${fixture.match_name}</span></td>
+                  <td>${formatKickoff(fixture.kickoff_time_aest)}</td>
+                  <td>Awaiting refreshed market rows</td>
+                  <td>${priceFreshness(fixture).label}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `
+      : '<p class="empty-note">No current upcoming games are loaded.</p>';
     return;
   }
 
