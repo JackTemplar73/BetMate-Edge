@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-25T13:15:16.095Z",
+  "checked_at": "2026-06-25T13:23:24.908Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -8,8 +8,17 @@
     "bet365",
     "betfair_ex_au"
   ],
-  "events_checked": 32,
-  "market_counts": {},
+  "events_checked": 49,
+  "market_counts": {
+    "h2h": 85,
+    "btts": 34,
+    "double_chance": 32,
+    "h2h_3_way": 85,
+    "h2h_lay": 17,
+    "draw_no_bet": 16,
+    "alternate_spreads": 17,
+    "alternate_totals": 17
+  },
   "matches": [
     {
       "match_name": "Canada vs Bosnia & Herzegovina",
@@ -838,6 +847,393 @@
         "h2h_lay"
       ],
       "matched_rows": 28
+    },
+    {
+      "match_name": "Curacao vs Ivory Coast",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Betfair",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Ecuador vs Germany",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Betfair",
+        "Neds",
+        "TAB"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Tunisia vs Netherlands",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Japan vs Sweden",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Turkiye vs United States",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Betfair",
+        "Neds",
+        "TAB"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Paraguay vs Australia",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "Betfair",
+        "PointsBet (AU)"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Norway vs France",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Senegal vs Iraq",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Cabo Verde vs Saudi Arabia",
+      "status": "no_oddsapi_event",
+      "bookmakers": [
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365",
+        "betfair_ex_au"
+      ],
+      "offered_market_keys": [],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Uruguay vs Spain",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "New Zealand vs Belgium",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Egypt vs Iran",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Panama vs England",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Croatia vs Ghana",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Colombia vs Portugal",
+      "status": "checked",
+      "bookmakers": [
+        "PointsBet (AU)",
+        "SportsBet",
+        "Betfair",
+        "Neds",
+        "TAB"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "DR Congo vs Uzbekistan",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Algeria vs Austria",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "Jordan vs Argentina",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0
     }
   ]
 }

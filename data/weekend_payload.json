@@ -61650,7 +61650,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "Betfair",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "a5a0b544a984ab16e564264f3e859b43",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Ecuador vs Germany",
@@ -61664,7 +61688,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Betfair",
+        "Neds",
+        "TAB"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "0ec28b84ec399bd4dffbe8d1bc72b3c4",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Tunisia vs Netherlands",
@@ -61678,7 +61726,30 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "f3c4657daa143a0c5bd62cb370d01ce4",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Japan vs Sweden",
@@ -61692,7 +61763,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "0ed0233bddc4eafc8507f86a9c17b998",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Turkiye vs United States",
@@ -61706,7 +61801,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Betfair",
+        "Neds",
+        "TAB"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "f41aeac9a8343a84b4950f15ea25fba2",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Paraguay vs Australia",
@@ -61720,7 +61839,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "Betfair",
+        "PointsBet (AU)"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "22f6ac06dfcc88a847920f62633e6459",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Norway vs France",
@@ -61734,7 +61877,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "b86b4d60f773e9e3c46c00e9a6496e79",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Senegal vs Iraq",
@@ -61748,7 +61915,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "7e6aee294ea1a4792c59558791084528",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Cabo Verde vs Saudi Arabia",
@@ -61762,7 +61953,20 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365",
+        "betfair_ex_au"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "no_oddsapi_event",
+      "rows": []
+    }
   },
   {
     "match_name": "Uruguay vs Spain",
@@ -61776,7 +61980,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "dcff2e31c0bce001a4db5caaf4fa8822",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "New Zealand vs Belgium",
@@ -61790,7 +62018,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "581691da05dcd75b5c6d3be91ee9d2ab",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Egypt vs Iran",
@@ -61804,7 +62056,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "3e3b5fa2b3c963e74cf044c60db0b573",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Panama vs England",
@@ -61818,7 +62094,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "4be17c8e1ccfecb0f2a5ef79e045c415",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Croatia vs Ghana",
@@ -61832,7 +62132,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "Neds",
+        "TAB",
+        "PointsBet (AU)",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "537c0997cd899394f47f16545b7068b2",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Colombia vs Portugal",
@@ -61846,7 +62170,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "PointsBet (AU)",
+        "SportsBet",
+        "Betfair",
+        "Neds",
+        "TAB"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "67ae5751c401a98409b8566ae4897069",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "DR Congo vs Uzbekistan",
@@ -61860,7 +62208,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "13eab94a136b9c264ba974cf437a5f71",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Algeria vs Austria",
@@ -61874,7 +62246,31 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "8756200e539155e571557c4f2e0d7f05",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   },
   {
     "match_name": "Jordan vs Argentina",
@@ -61888,6 +62284,30 @@
     "markets": [],
     "odds_last_checked": "2026-06-25T13:20:38.238Z",
     "odds_refresh_cadence": "schedule-seed",
-    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write."
+    "odds_refresh_note": "Current upcoming fixture seeded from published World Cup schedule; odds not refreshed in this local write.",
+    "market_scan": {
+      "bookmakers": [
+        "SportsBet",
+        "PointsBet (AU)",
+        "Neds",
+        "TAB",
+        "Betfair"
+      ],
+      "checked_at": "2026-06-25T13:23:24.908Z",
+      "status": "checked",
+      "oddsapi_event_id": "54697f453437ab26276d773be1d72e9b",
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 0,
+      "rows": []
+    }
   }
 ]
