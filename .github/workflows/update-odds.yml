@@ -39,6 +39,7 @@ jobs:
         env:
           ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
           ODDS_API_SPORT_KEYS: soccer_fifa_world_cup
+          FORCE_REFRESH: ${{ github.event_name == 'push' && 'true' || 'false' }}
         run: node scripts/update_odds.mjs
 
       - name: Refresh market-source scan when due
