@@ -4074,6 +4074,7 @@ function findModelPriceForH2h(fixture, targetSelection) {
 function addMissingH2hRowsFromOddsApi(fixture, event, nowIso) {
   let added = 0;
   fixture.markets = fixture.markets || [];
+  const consensus = eventConsensusProbabilities(event);
 
   for (const bookmaker of event.bookmakers || []) {
     const bookName = BOOKMAKERS.get(bookmaker.key) || bookmaker.title || bookmaker.key;
@@ -4092,7 +4093,9 @@ function addMissingH2hRowsFromOddsApi(fixture, event, nowIso) {
 
       if (exists) continue;
 
-      const modelPrice = findModelPriceForH2h(fixture, targetSelection);
+      const consensusProbability = consensus?.get(normalise(outcome.name));
+      const modelPrice = findModelPriceForH2h(fixture, targetSelection)
+        || fairPriceFromProbability(consensusProbability);
       if (!Number.isFinite(modelPrice)) continue;
 
       fixture.markets.push({
@@ -4105,7 +4108,7 @@ function addMissingH2hRowsFromOddsApi(fixture, event, nowIso) {
         odds_checked_at: nowIso,
         odds_updated_at: nowIso,
         odds_refresh_status: 'added_from_oddsapi',
-        odds_refresh_note: `Added ${bookName} h2h price from Odds API.`
+        odds_refresh_note: `Added ${bookName} h2h price from Odds API${Number.isFinite(findModelPriceForH2h(fixture, targetSelection)) ? '' : ' using market-consensus fair price until model recalibration runs'}.`
       });
       added += 1;
     }
