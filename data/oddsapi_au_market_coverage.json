@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-25T13:25:47.069Z",
+  "checked_at": "2026-06-25T13:28:38.029Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -868,7 +868,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 34
     },
     {
       "match_name": "Ecuador vs Germany",
@@ -890,7 +890,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 37
     },
     {
       "match_name": "Tunisia vs Netherlands",
@@ -911,7 +911,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 29
     },
     {
       "match_name": "Japan vs Sweden",
@@ -933,7 +933,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 37
     },
     {
       "match_name": "Turkiye vs United States",
@@ -955,7 +955,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 25
     },
     {
       "match_name": "Paraguay vs Australia",
@@ -977,7 +977,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 35
     },
     {
       "match_name": "Norway vs France",
@@ -999,7 +999,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 35
     },
     {
       "match_name": "Senegal vs Iraq",
@@ -1021,7 +1021,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 35
     },
     {
       "match_name": "Cabo Verde vs Saudi Arabia",
@@ -1057,7 +1057,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 35
     },
     {
       "match_name": "New Zealand vs Belgium",
@@ -1079,7 +1079,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 33
     },
     {
       "match_name": "Egypt vs Iran",
@@ -1101,7 +1101,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 37
     },
     {
       "match_name": "Panama vs England",
@@ -1123,7 +1123,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 35
     },
     {
       "match_name": "Croatia vs Ghana",
@@ -1145,7 +1145,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 37
     },
     {
       "match_name": "Colombia vs Portugal",
@@ -1167,7 +1167,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 37
     },
     {
       "match_name": "DR Congo vs Uzbekistan",
@@ -1189,7 +1189,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 32
     },
     {
       "match_name": "Algeria vs Austria",
@@ -1211,7 +1211,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 37
     },
     {
       "match_name": "Jordan vs Argentina",
@@ -1233,7 +1233,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 0
+      "matched_rows": 35
     }
   ]
 }
