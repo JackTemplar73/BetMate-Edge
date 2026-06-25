@@ -1,32 +1,32 @@
 {
   "version": 1,
-  "updated_at": "2026-06-19T06:04:22.750Z",
-  "sample_size": 24,
-  "confidence": "developing",
+  "updated_at": "2026-06-25T12:25:25.337Z",
+  "sample_size": 41,
+  "confidence": "moderate",
   "adjustments": {
-    "draw_lift": 0.0064,
-    "favourite_compression": 0.0142,
-    "goal_suppression": 0.042,
-    "break_open_risk": 0.072,
-    "chance_quality_penalty": 0.009
+    "draw_lift": 0.0021,
+    "favourite_compression": 0.007,
+    "goal_suppression": 0.0615,
+    "break_open_risk": 0.1054,
+    "chance_quality_penalty": 0.0059
   },
   "flags": {
-    "break-open-risk-underweighted": 6,
-    "finishing-variance-high": 2,
-    "finishing-variance-low": 1,
-    "draw-risk-underestimated": 3,
-    "territory-did-not-become-shot-volume": 2,
-    "chance-quality-overstated": 2,
+    "break-open-risk-underweighted": 9,
+    "finishing-variance-high": 3,
+    "finishing-variance-low": 3,
+    "draw-risk-underestimated": 1,
+    "territory-did-not-become-shot-volume": 1,
+    "chance-quality-overstated": 1,
     "xg-did-not-support-favourite": 1,
-    "goal-suppression-underweighted": 1
+    "goal-suppression-underweighted": 2
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
-  "xg_sample_size": 24,
-  "previous_updated_at": "2026-06-19T06:02:14.336Z",
+  "xg_sample_size": 41,
+  "previous_updated_at": "2026-06-25T12:23:33.362Z",
   "walters_discipline": {
-    "settled_bets": 68,
-    "profit_units": 18.68,
-    "roi_percent": 27.5,
+    "settled_bets": 137,
+    "profit_units": -12.74,
+    "roi_percent": -9.3,
     "sharp_close_rate_percent": 0,
     "close_reference_rate_percent": 100,
     "market_profiles": {
@@ -67,39 +67,39 @@
         "sharp_close_rate_percent": 0
       },
       "Main Match": {
-        "bets": 31,
-        "wins": 13,
-        "losses": 18,
-        "profit_units": 7.47,
+        "bets": 68,
+        "wins": 21,
+        "losses": 47,
+        "profit_units": -10.1,
         "confirmed_sharp_closes": 0,
         "positive_clv": 0,
         "negative_clv": 0,
-        "roi_percent": 24.1,
-        "win_rate_percent": 41.9,
+        "roi_percent": -14.9,
+        "win_rate_percent": 30.9,
         "sharp_close_rate_percent": 0
       },
       "Full Match Model": {
-        "bets": 15,
+        "bets": 25,
         "wins": 6,
-        "losses": 9,
-        "profit_units": 23.05,
+        "losses": 19,
+        "profit_units": 13.05,
         "confirmed_sharp_closes": 0,
         "positive_clv": 0,
         "negative_clv": 0,
-        "roi_percent": 153.7,
-        "win_rate_percent": 40,
+        "roi_percent": 52.2,
+        "win_rate_percent": 24,
         "sharp_close_rate_percent": 0
       },
       "Goal Totals": {
-        "bets": 17,
-        "wins": 3,
-        "losses": 14,
-        "profit_units": -10.79,
+        "bets": 39,
+        "wins": 14,
+        "losses": 25,
+        "profit_units": -14.64,
         "confirmed_sharp_closes": 0,
         "positive_clv": 0,
         "negative_clv": 0,
-        "roi_percent": -63.5,
-        "win_rate_percent": 17.6,
+        "roi_percent": -37.5,
+        "win_rate_percent": 35.9,
         "sharp_close_rate_percent": 0
       }
     },
@@ -117,22 +117,23 @@
         "reasons": []
       },
       "Main Match": {
-        "qi_adjustment": -4,
+        "qi_adjustment": -12,
         "reasons": [
+          "early negative ROI",
           "no confirmed sharp close validation yet"
         ]
       },
       "Full Match Model": {
-        "qi_adjustment": -4,
+        "qi_adjustment": -9,
         "reasons": [
+          "low hit rate for this market type",
           "no confirmed sharp close validation yet"
         ]
       },
       "Goal Totals": {
-        "qi_adjustment": -22,
+        "qi_adjustment": -18,
         "reasons": [
           "negative ROI over a meaningful sample",
-          "low hit rate for this market type",
           "no confirmed sharp close validation yet",
           "goal totals are watch-only until close validation improves"
         ]

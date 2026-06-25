@@ -245,7 +245,8 @@ const TEAM_ALIASES = new Map([
   ['czechia', 'czech republic'],
   ['dr congo', 'congo dr'],
   ['democratic republic of congo', 'congo dr'],
-  ['bosnia & herzegovina', 'bosnia and herzegovina']
+  ['bosnia herzegovina', 'bosnia'],
+  ['bosnia & herzegovina', 'bosnia']
 ]);
 
 function normalise(value) {
@@ -2200,7 +2201,7 @@ function exactScoreSelection(selection) {
 }
 
 function cardedPlayers(result) {
-  return result.details
+  return (result.details || [])
     .filter((detail) => detail.yellowCard || detail.redCard || normalise(detail.type?.text).includes('card'))
     .flatMap((detail) => detail.athletesInvolved || [])
     .map((athlete) => normalise(athlete.displayName || athlete.fullName || athlete.shortName));
@@ -2561,6 +2562,7 @@ function applyPostMatchLearning(dataset, espnEvents, fifaReports, now = getNow()
         ? `Learning flags: ${flags.join(', ')}.`
         : 'Result was broadly inside the expected model shape.'
     };
+    fixture.final_score = resultLine(result);
     learned += 1;
   }
 
@@ -4133,6 +4135,34 @@ async function fetchOddsForSport(sportKey, apiKey) {
 }
 
 async function main() {
+  if (process.env.RESULTS_ONLY === 'true') {
+    const dataset = JSON.parse(await readFile(DATA_PATH, 'utf8'));
+    let learningCoefficients = await readLearningCoefficients();
+    const now = getNow();
+    const nowIso = now.toISOString();
+
+    const espnEvents = await fetchEspnEventsForDataset(dataset);
+    const fifaReports = await fetchFifaReportsForDataset(dataset, nowIso);
+    const refereeUpdates = await refreshRefereeData(dataset, nowIso, espnEvents);
+    const postMatchStatsUpdates = await refreshPostMatchStats(dataset, espnEvents, nowIso, now);
+    const learnedMatches = applyPostMatchLearning(dataset, espnEvents, fifaReports, now);
+    const historyForLearning = await readHistory();
+    learningCoefficients = buildLearningCoefficients(dataset, learningCoefficients, now, historyForLearning);
+    deriveFixtureModels(dataset, learningCoefficients);
+    applyPostMatchLearning(dataset, espnEvents, fifaReports, now);
+    reconcileMarketScanModelValues(dataset);
+    applyDataQualityAudits(dataset, nowIso);
+    applyDataQualityAdjustedScoring(dataset, learningCoefficients);
+
+    await writeFile(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
+    await writeFile(EMBEDDED_PATH, `window.embeddedDataset = ${JSON.stringify(dataset, null, 2)};\n`);
+    await writeFile(LEARNING_COEFFICIENTS_PATH, `${JSON.stringify(learningCoefficients, null, 2)}\n`);
+    const { historyCount, settledResults } = await syncBetHistory(dataset, now, espnEvents, fifaReports, learningCoefficients);
+
+    console.log(`Results-only refresh complete. Checked ${espnEvents.length} ESPN events and ${fifaReports.length} FIFA report rows. Verified ${refereeUpdates} referee assignments. Added stats for ${postMatchStatsUpdates} completed matches. Learned from ${learnedMatches} completed matches. Learning confidence ${learningCoefficients.confidence} from ${learningCoefficients.sample_size} samples. Settled ${settledResults} results. Tracking ${historyCount} history rows.`);
+    return;
+  }
+
   const apiKey = process.env.ODDS_API_KEY;
   if (!apiKey) {
     throw new Error('ODDS_API_KEY is not set. Add it as a GitHub repository secret.');
