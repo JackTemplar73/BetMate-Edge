@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updated_at": "2026-06-25T12:25:25.337Z",
+  "updated_at": "2026-06-25T13:10:34.318Z",
   "sample_size": 41,
   "confidence": "moderate",
   "adjustments": {
@@ -22,11 +22,11 @@
   },
   "note": "Automatically updated from settled match outcomes, post-match stats and xG where available. Early samples are deliberately damped.",
   "xg_sample_size": 41,
-  "previous_updated_at": "2026-06-25T12:23:33.362Z",
+  "previous_updated_at": "2026-06-25T13:08:48.516Z",
   "walters_discipline": {
-    "settled_bets": 137,
-    "profit_units": -12.74,
-    "roi_percent": -9.3,
+    "settled_bets": 105,
+    "profit_units": 0.17,
+    "roi_percent": 0.2,
     "sharp_close_rate_percent": 0,
     "close_reference_rate_percent": 100,
     "market_profiles": {
@@ -67,27 +67,27 @@
         "sharp_close_rate_percent": 0
       },
       "Main Match": {
-        "bets": 68,
-        "wins": 21,
-        "losses": 47,
-        "profit_units": -10.1,
+        "bets": 42,
+        "wins": 13,
+        "losses": 29,
+        "profit_units": -3.19,
         "confirmed_sharp_closes": 0,
         "positive_clv": 0,
         "negative_clv": 0,
-        "roi_percent": -14.9,
-        "win_rate_percent": 30.9,
+        "roi_percent": -7.6,
+        "win_rate_percent": 31,
         "sharp_close_rate_percent": 0
       },
       "Full Match Model": {
-        "bets": 25,
+        "bets": 19,
         "wins": 6,
-        "losses": 19,
-        "profit_units": 13.05,
+        "losses": 13,
+        "profit_units": 19.05,
         "confirmed_sharp_closes": 0,
         "positive_clv": 0,
         "negative_clv": 0,
-        "roi_percent": 52.2,
-        "win_rate_percent": 24,
+        "roi_percent": 100.3,
+        "win_rate_percent": 31.6,
         "sharp_close_rate_percent": 0
       },
       "Goal Totals": {
@@ -124,9 +124,8 @@
         ]
       },
       "Full Match Model": {
-        "qi_adjustment": -9,
+        "qi_adjustment": -4,
         "reasons": [
-          "low hit rate for this market type",
           "no confirmed sharp close validation yet"
         ]
       },

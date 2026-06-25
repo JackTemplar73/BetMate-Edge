@@ -2204,12 +2204,21 @@ function getDedupedHistoryBets(rows) {
     const key = [
       bet.match_name,
       bet.market_matrix,
-      bet.target_selection,
-      bet.au_bookie,
-      Number(bet.opening_odds || bet.current_odds || 0).toFixed(4)
+      bet.target_selection
     ].join('|');
     const existing = seen.get(key);
-    if (!existing || Date.parse(bet.last_seen_at || bet.first_seen_at || '') > Date.parse(existing.last_seen_at || existing.first_seen_at || '')) {
+    const betQi = Number(bet.opening_qi);
+    const existingQi = Number(existing?.opening_qi);
+    const betOdds = Number(bet.opening_odds);
+    const existingOdds = Number(existing?.opening_odds);
+    const betSeen = Date.parse(bet.last_seen_at || bet.first_seen_at || '');
+    const existingSeen = Date.parse(existing?.last_seen_at || existing?.first_seen_at || '');
+    const shouldKeep = !existing
+      || betQi > existingQi
+      || (betQi === existingQi && betOdds > existingOdds)
+      || (betQi === existingQi && betOdds === existingOdds && betSeen > existingSeen);
+
+    if (shouldKeep) {
       seen.set(key, bet);
     }
   });
@@ -2294,7 +2303,7 @@ function profitClass(bet) {
 }
 
 function getSettledBets() {
-  return getQualifiedHistoryBets()
+  return getDedupedHistoryBets(getQualifiedHistoryBets())
     .filter((bet) => isSettledResult(bet))
     .sort((a, b) => {
       const settledDiff = Date.parse(b.settled_at || '') - Date.parse(a.settled_at || '');
@@ -2312,7 +2321,7 @@ function renderResults() {
   const tableBody = document.querySelector('[data-results-table]');
   if (!tableBody) return;
 
-  const allRows = getQualifiedHistoryBets().sort(sortHistoryRows);
+  const allRows = getDedupedHistoryBets(getQualifiedHistoryBets()).sort(sortHistoryRows);
   const rows = filterResultsRowsByQiAndPrice(filterResultsRowsByResult(allRows));
   renderResultsSummary(rows);
   renderResultsLearnings(rows);

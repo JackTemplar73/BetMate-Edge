@@ -3004,6 +3004,55 @@ function isSettledHistoryEntry(entry) {
   return ['won', 'win', 'lost', 'loss', 'push', 'void'].includes(String(entry.result_status || '').toLowerCase());
 }
 
+function historyBetIdeaKey(entry) {
+  return [
+    entry.match_name,
+    entry.market_matrix,
+    entry.target_selection
+  ].map(normalise).join('|');
+}
+
+function dedupeHistoryBetIdeas(entries) {
+  const byIdea = new Map();
+
+  for (const entry of entries) {
+    const key = historyBetIdeaKey(entry);
+    const existing = byIdea.get(key);
+    if (!existing) {
+      byIdea.set(key, entry);
+      continue;
+    }
+
+    const entryQi = Number(entry.opening_qi);
+    const existingQi = Number(existing.opening_qi);
+    const entryOdds = Number(entry.opening_odds);
+    const existingOdds = Number(existing.opening_odds);
+    const entrySeen = Date.parse(entry.last_seen_at || entry.first_seen_at || '');
+    const existingSeen = Date.parse(existing.last_seen_at || existing.first_seen_at || '');
+
+    const entryRank = [
+      Number.isFinite(entryQi) ? entryQi : -Infinity,
+      Number.isFinite(entryOdds) ? entryOdds : -Infinity,
+      Number.isFinite(entrySeen) ? entrySeen : -Infinity
+    ];
+    const existingRank = [
+      Number.isFinite(existingQi) ? existingQi : -Infinity,
+      Number.isFinite(existingOdds) ? existingOdds : -Infinity,
+      Number.isFinite(existingSeen) ? existingSeen : -Infinity
+    ];
+
+    if (
+      entryRank[0] > existingRank[0]
+        || (entryRank[0] === existingRank[0] && entryRank[1] > existingRank[1])
+        || (entryRank[0] === existingRank[0] && entryRank[1] === existingRank[1] && entryRank[2] > existingRank[2])
+    ) {
+      byIdea.set(key, entry);
+    }
+  }
+
+  return [...byIdea.values()];
+}
+
 async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaReports = [], learningCoefficients = DEFAULT_LEARNING_COEFFICIENTS) {
   const history = await readHistory();
   const byId = new Map(history
@@ -3229,7 +3278,7 @@ async function syncBetHistory(dataset, now = getNow(), espnEvents = [], fifaRepo
     }
   }
 
-  const nextHistory = [...byId.values()]
+  const nextHistory = dedupeHistoryBetIdeas([...byId.values()])
     .filter((entry) => Number(entry.opening_qi) >= MIN_TRACKED_QI)
     .filter((entry) => activeBetIds.has(entry.bet_id) || entry.manual_user_saved || isSettledHistoryEntry(entry))
     .sort((a, b) => {
