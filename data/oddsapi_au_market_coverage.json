@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-26T01:29:35.155Z",
+  "checked_at": "2026-06-26T05:47:27.461Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,14 +10,14 @@
   ],
   "events_checked": 49,
   "market_counts": {
-    "h2h": 65,
-    "btts": 26,
-    "double_chance": 26,
-    "h2h_3_way": 65,
-    "h2h_lay": 13,
-    "draw_no_bet": 13,
-    "alternate_spreads": 13,
-    "alternate_totals": 13
+    "h2h": 55,
+    "btts": 22,
+    "double_chance": 22,
+    "h2h_3_way": 55,
+    "draw_no_bet": 11,
+    "alternate_spreads": 11,
+    "alternate_totals": 11,
+    "h2h_lay": 11
   },
   "matches": [
     {
@@ -1080,7 +1080,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 33
+      "matched_rows": 35
     },
     {
       "match_name": "Egypt vs Iran",
