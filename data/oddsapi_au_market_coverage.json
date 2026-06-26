@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-26T08:42:22.824Z",
+  "checked_at": "2026-06-26T11:30:56.667Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -1080,7 +1080,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 35
+      "matched_rows": 33
     },
     {
       "match_name": "Egypt vs Iran",
