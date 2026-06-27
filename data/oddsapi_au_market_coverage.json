@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-27T00:16:55.639Z",
+  "checked_at": "2026-06-27T04:17:35.863Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,14 +10,14 @@
   ],
   "events_checked": 49,
   "market_counts": {
-    "h2h": 40,
-    "btts": 16,
-    "double_chance": 16,
-    "h2h_3_way": 40,
-    "draw_no_bet": 8,
-    "alternate_spreads": 8,
-    "alternate_totals": 8,
-    "h2h_lay": 8
+    "h2h": 30,
+    "btts": 11,
+    "double_chance": 11,
+    "h2h_3_way": 30,
+    "draw_no_bet": 6,
+    "alternate_spreads": 6,
+    "alternate_totals": 6,
+    "h2h_lay": 6
   },
   "matches": [
     {
@@ -1212,7 +1212,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 37
+      "matched_rows": 32
     },
     {
       "match_name": "Jordan vs Argentina",
