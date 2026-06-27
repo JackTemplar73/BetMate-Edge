@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-27T16:43:12.569Z",
+  "checked_at": "2026-06-27T17:45:09.266Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -1234,7 +1234,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 33
+      "matched_rows": 31
     }
   ]
 }
