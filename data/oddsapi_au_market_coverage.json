@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-26T23:02:13.901Z",
+  "checked_at": "2026-06-27T00:16:55.639Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,14 +10,14 @@
   ],
   "events_checked": 49,
   "market_counts": {
-    "h2h": 45,
-    "btts": 18,
-    "double_chance": 18,
-    "h2h_3_way": 45,
-    "draw_no_bet": 9,
-    "alternate_spreads": 9,
-    "alternate_totals": 9,
-    "h2h_lay": 9
+    "h2h": 40,
+    "btts": 16,
+    "double_chance": 16,
+    "h2h_3_way": 40,
+    "draw_no_bet": 8,
+    "alternate_spreads": 8,
+    "alternate_totals": 8,
+    "h2h_lay": 8
   },
   "matches": [
     {
@@ -1124,7 +1124,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 35
+      "matched_rows": 33
     },
     {
       "match_name": "Croatia vs Ghana",
