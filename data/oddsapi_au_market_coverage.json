@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-27T15:37:12.313Z",
+  "checked_at": "2026-06-27T16:43:12.569Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -1124,7 +1124,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 35
+      "matched_rows": 33
     },
     {
       "match_name": "Croatia vs Ghana",
@@ -1234,7 +1234,7 @@
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 31
+      "matched_rows": 33
     }
   ]
 }
