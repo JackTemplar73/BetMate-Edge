@@ -1,13 +1,14 @@
 {
-  "source": "World Cup 2026 context feed + current published schedule",
-  "updated_at": "2026-06-25T00:00:00+10:00",
+  "source": "World Cup 2026 context feed + Round of 32 published schedule",
+  "updated_at": "2026-06-28T09:18:39.743Z",
   "lineup_source": "Projected tournament team sheets",
   "sources": {
     "results": "football-data.org",
     "weather": "Open-Meteo",
     "lineups": "Highlightly",
     "match_stats": "Bustami/EFI",
-    "reports": "FIFA Training Centre parsed with shufinskiy"
+    "reports": "FIFA Training Centre parsed with shufinskiy",
+    "round_of_32_schedule": "The Sun / BBC / ITV published Round of 32 fixture list, converted to AEST"
   },
   "fixtures": [
     {
@@ -1097,6 +1098,294 @@
       "rest_travel": {
         "home_team": "Jordan",
         "away_team": "Argentina",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "South Africa vs Canada",
+      "group": "Round of 32",
+      "match_number": 73,
+      "kickoff_aest": "2026-06-29T05:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "South Africa",
+        "away_team": "Canada",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Brazil vs Japan",
+      "group": "Round of 32",
+      "match_number": 76,
+      "kickoff_aest": "2026-06-30T03:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Brazil",
+        "away_team": "Japan",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Germany vs Paraguay",
+      "group": "Round of 32",
+      "match_number": 74,
+      "kickoff_aest": "2026-06-30T06:30:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Germany",
+        "away_team": "Paraguay",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Netherlands vs Morocco",
+      "group": "Round of 32",
+      "match_number": 75,
+      "kickoff_aest": "2026-06-30T11:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Netherlands",
+        "away_team": "Morocco",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Ivory Coast vs Norway",
+      "group": "Round of 32",
+      "match_number": 78,
+      "kickoff_aest": "2026-07-01T03:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Ivory Coast",
+        "away_team": "Norway",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "France vs Sweden",
+      "group": "Round of 32",
+      "match_number": 77,
+      "kickoff_aest": "2026-07-01T07:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "France",
+        "away_team": "Sweden",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Mexico vs Ecuador",
+      "group": "Round of 32",
+      "match_number": 79,
+      "kickoff_aest": "2026-07-01T11:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Mexico",
+        "away_team": "Ecuador",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "England vs DR Congo",
+      "group": "Round of 32",
+      "match_number": 80,
+      "kickoff_aest": "2026-07-02T02:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "England",
+        "away_team": "DR Congo",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Belgium vs Senegal",
+      "group": "Round of 32",
+      "match_number": 82,
+      "kickoff_aest": "2026-07-02T06:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Belgium",
+        "away_team": "Senegal",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "United States vs Bosnia and Herzegovina",
+      "group": "Round of 32",
+      "match_number": 81,
+      "kickoff_aest": "2026-07-02T10:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "United States",
+        "away_team": "Bosnia and Herzegovina",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Spain vs Austria",
+      "group": "Round of 32",
+      "match_number": 84,
+      "kickoff_aest": "2026-07-03T05:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Spain",
+        "away_team": "Austria",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Portugal vs Croatia",
+      "group": "Round of 32",
+      "match_number": 83,
+      "kickoff_aest": "2026-07-03T09:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Portugal",
+        "away_team": "Croatia",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Switzerland vs Algeria",
+      "group": "Round of 32",
+      "match_number": 85,
+      "kickoff_aest": "2026-07-03T13:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Switzerland",
+        "away_team": "Algeria",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Australia vs Egypt",
+      "group": "Round of 32",
+      "match_number": 88,
+      "kickoff_aest": "2026-07-04T04:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Australia",
+        "away_team": "Egypt",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Argentina vs Cabo Verde",
+      "group": "Round of 32",
+      "match_number": 86,
+      "kickoff_aest": "2026-07-04T08:00:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Argentina",
+        "away_team": "Cabo Verde",
+        "home": {},
+        "away": {}
+      }
+    },
+    {
+      "match_name": "Colombia vs Ghana",
+      "group": "Round of 32",
+      "match_number": 87,
+      "kickoff_aest": "2026-07-04T11:30:00+10:00",
+      "venue": "Venue pending verification",
+      "city": "Venue pending verification",
+      "pitch_profile": "knockout-stage tournament venue",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Colombia",
+        "away_team": "Ghana",
         "home": {},
         "away": {}
       }
