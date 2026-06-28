@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-28T14:10:03.732Z",
+  "checked_at": "2026-06-28T15:38:08.992Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,13 +10,13 @@
   ],
   "events_checked": 64,
   "market_counts": {
-    "h2h": 60,
-    "btts": 30,
-    "double_chance": 28,
-    "draw_no_bet": 15,
-    "alternate_spreads": 15,
-    "alternate_totals": 15,
-    "h2h_3_way": 60,
+    "h2h": 58,
+    "btts": 29,
+    "double_chance": 27,
+    "draw_no_bet": 14,
+    "alternate_spreads": 14,
+    "alternate_totals": 14,
+    "h2h_3_way": 58,
     "h2h_lay": 15
   },
   "matches": [
@@ -1409,21 +1409,16 @@
       "status": "checked",
       "bookmakers": [
         "SportsBet",
-        "PointsBet (AU)",
-        "TAB",
         "Betfair"
       ],
       "offered_market_keys": [
-        "alternate_spreads",
-        "alternate_totals",
         "btts",
         "double_chance",
-        "draw_no_bet",
         "h2h",
         "h2h_3_way",
         "h2h_lay"
       ],
-      "matched_rows": 34
+      "matched_rows": 11
     },
     {
       "match_name": "United States vs Bosnia and Herzegovina",
