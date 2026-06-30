@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-06-30T19:18:50.284Z",
+  "checked_at": "2026-06-30T21:08:03.558Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -10,14 +10,14 @@
   ],
   "events_checked": 64,
   "market_counts": {
-    "h2h": 40,
-    "h2h_3_way": 40,
-    "btts": 20,
-    "double_chance": 19,
-    "h2h_lay": 10,
-    "draw_no_bet": 10,
-    "alternate_spreads": 10,
-    "alternate_totals": 10
+    "h2h": 36,
+    "btts": 18,
+    "double_chance": 17,
+    "h2h_3_way": 36,
+    "h2h_lay": 9,
+    "draw_no_bet": 9,
+    "alternate_spreads": 9,
+    "alternate_totals": 9
   },
   "matches": [
     {
