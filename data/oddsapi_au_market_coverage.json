@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-07-13T13:05:53.553Z",
+  "checked_at": "2026-07-13T13:19:34.620Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -8,8 +8,17 @@
     "bet365",
     "betfair_ex_au"
   ],
-  "events_checked": 64,
-  "market_counts": {},
+  "events_checked": 66,
+  "market_counts": {
+    "h2h": 8,
+    "btts": 4,
+    "double_chance": 4,
+    "h2h_3_way": 8,
+    "h2h_lay": 2,
+    "draw_no_bet": 2,
+    "alternate_spreads": 2,
+    "alternate_totals": 2
+  },
   "matches": [
     {
       "match_name": "Canada vs Bosnia & Herzegovina",
@@ -1555,6 +1564,76 @@
         "h2h_lay"
       ],
       "matched_rows": 34
+    },
+    {
+      "match_name": "France vs Spain",
+      "status": "checked",
+      "bookmakers": [
+        "SportsBet",
+        "Betfair",
+        "TAB",
+        "PointsBet (AU)"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 34
+    },
+    {
+      "match_name": "England vs Argentina",
+      "status": "checked",
+      "bookmakers": [
+        "TAB",
+        "SportsBet",
+        "Betfair",
+        "PointsBet (AU)"
+      ],
+      "offered_market_keys": [
+        "alternate_spreads",
+        "alternate_totals",
+        "btts",
+        "double_chance",
+        "draw_no_bet",
+        "h2h",
+        "h2h_3_way",
+        "h2h_lay"
+      ],
+      "matched_rows": 32
+    },
+    {
+      "match_name": "Third-place playoff",
+      "status": "no_oddsapi_event",
+      "bookmakers": [
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365",
+        "betfair_ex_au"
+      ],
+      "offered_market_keys": [],
+      "matched_rows": 0
+    },
+    {
+      "match_name": "World Cup Final",
+      "status": "no_oddsapi_event",
+      "bookmakers": [
+        "sportsbet",
+        "tab",
+        "pointsbetau",
+        "neds",
+        "bet365",
+        "betfair_ex_au"
+      ],
+      "offered_market_keys": [],
+      "matched_rows": 0
     }
   ]
 }
