@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BetMate Edge: FIFA World Cup 2026</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260713-fifa-current-fixtures">
+  <title>BetMate Edge: Analysis Hub</title>
+  <link rel="stylesheet" href="./src/styles.css?v=20260714-ufc-hierarchy">
 </head>
 <body>
   <main class="app-shell">
     <header class="app-header">
       <div>
         <h1>BetMate Edge</h1>
-        <p class="subhead">FIFA World Cup 2026</p>
+        <p class="subhead">Analysis Hub</p>
       </div>
       <div class="status-strip">
         <span class="status-dot"></span>
@@ -21,21 +21,23 @@
     </header>
     <p class="refresh-note" data-refresh-note aria-live="polite"></p>
 
-    <nav class="view-tabs top-view-tabs" aria-label="Dashboard tabs">
-      <button class="view-tab active" data-view-tab="matches" type="button">Matches</button>
+    <nav class="view-tabs top-view-tabs hierarchy-tabs" aria-label="Analysis hierarchy">
+      <button class="view-tab hierarchy-primary active" data-view-tab="ufc" type="button">UFC</button>
+      <span class="hierarchy-label">FIFA World Cup</span>
+      <button class="view-tab" data-view-tab="matches" type="button">Matches</button>
       <button class="view-tab" data-view-tab="highValue" type="button">High Value Bets</button>
       <button class="view-tab" data-view-tab="props" type="button">Player Props</button>
       <button class="view-tab" data-view-tab="scan" type="button">Market Summary</button>
       <button class="view-tab" data-view-tab="strategy" type="button">Strategy</button>
+      <span class="hierarchy-label">Platform</span>
       <button class="view-tab" data-view-tab="betmateAustralia" type="button">BetMate Australia</button>
-      <button class="view-tab" data-view-tab="ufc" type="button">UFC</button>
       <button class="view-tab" data-view-tab="history" data-owner-only type="button">Bet History <span data-history-count>0</span></button>
       <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
     </nav>
 
     <p class="error" data-app-error></p>
 
-    <section class="summary-grid" aria-label="Games summary">
+    <section class="summary-grid" data-football-only aria-label="Games summary">
       <article>
         <span>Games</span>
         <strong data-summary-fixtures>0</strong>
@@ -54,7 +56,7 @@
       </article>
     </section>
 
-    <section class="qi-legend" aria-label="QI color guide">
+    <section class="qi-legend" data-football-only aria-label="QI color guide">
       <span>QI guide</span>
       <strong><span class="qi-dot elite"></span>90+</strong>
       <strong><span class="qi-dot strong"></span>80-89</strong>
@@ -426,10 +428,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260714-ufc-content"></script>
-  <script src="./src/embeddedData.js?v=20260714-ufc-content"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260714-ufc-content"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260714-ufc-content"></script>
-  <script src="./src/app.js?v=20260714-ufc-content"></script>
+  <script src="./src/calculations.js?v=20260714-ufc-hierarchy"></script>
+  <script src="./src/embeddedData.js?v=20260714-ufc-hierarchy"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260714-ufc-hierarchy"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260714-ufc-hierarchy"></script>
+  <script src="./src/app.js?v=20260714-ufc-hierarchy"></script>
 </body>
 </html>

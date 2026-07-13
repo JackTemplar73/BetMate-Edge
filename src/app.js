@@ -16,7 +16,7 @@ const state = {
   lastRefresh: null,
   dataSource: 'Not loaded',
   selectedMatchName: null,
-  activeView: 'matches',
+  activeView: 'ufc',
   matchDetailTab: 'bets'
 };
 
@@ -567,6 +567,8 @@ function renderDataPanel() {
 
 function renderViewTabs() {
   document.body.classList.toggle('owner-results-enabled', isOwnerResultsMode());
+  document.body.classList.toggle('football-view-active', ['matches', 'highValue', 'props', 'scan', 'strategy', 'history', 'results'].includes(state.activeView));
+  document.body.classList.toggle('ufc-view-active', state.activeView === 'ufc');
 
   document.querySelectorAll('[data-view-tab]').forEach((button) => {
     button.classList.toggle('active', button.dataset.viewTab === state.activeView);
@@ -3266,6 +3268,13 @@ function isOwnerResultsMode() {
 }
 
 function applyInitialViewFromUrl() {
+  const params = new URLSearchParams(window.location.search);
+  const hashView = window.location.hash.replace(/^#/, '');
+  const requestedView = params.get('view') || hashView;
+  if (requestedView && document.querySelector(`[data-view-tab="${requestedView}"]`)) {
+    state.activeView = requestedView;
+  }
+
   if (isOwnerResultsMode()) {
     state.activeView = 'results';
   }

@@ -792,6 +792,42 @@ h3 {
   margin: -8px 0 18px;
 }
 
+.hierarchy-tabs {
+  align-items: center;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(16, 16, 14, 0.34);
+}
+
+.hierarchy-label {
+  align-self: stretch;
+  display: inline-flex;
+  align-items: center;
+  min-height: 42px;
+  padding: 0 4px 0 10px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.hierarchy-primary {
+  min-width: 116px;
+  border-color: rgba(245, 188, 66, 0.76);
+  background: linear-gradient(180deg, rgba(245, 188, 66, 0.2), rgba(245, 188, 66, 0.08));
+  box-shadow: inset 0 0 0 1px rgba(245, 188, 66, 0.2);
+}
+
+.hierarchy-primary.active {
+  background: var(--gold);
+  color: var(--ink);
+}
+
+body:not(.football-view-active) [data-football-only] {
+  display: none;
+}
+
 body:not(.owner-results-enabled) [data-owner-only] {
   display: none;
 }
