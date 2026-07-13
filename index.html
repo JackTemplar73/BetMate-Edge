@@ -28,6 +28,7 @@
       <button class="view-tab" data-view-tab="scan" type="button">Market Summary</button>
       <button class="view-tab" data-view-tab="strategy" type="button">Strategy</button>
       <button class="view-tab" data-view-tab="betmateAustralia" type="button">BetMate Australia</button>
+      <button class="view-tab" data-view-tab="ufc" type="button">UFC</button>
       <button class="view-tab" data-view-tab="history" data-owner-only type="button">Bet History <span data-history-count>0</span></button>
       <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
     </nav>
@@ -128,6 +129,146 @@
         <a class="header-link" href="https://betmateaustralia.com" target="_blank" rel="noopener">Source site</a>
       </div>
       <div data-betmate-australia-content></div>
+    </section>
+
+    <section class="table-section ufc-section hidden" data-view-section="ufc">
+      <div class="section-heading">
+        <div>
+          <h2>UFC</h2>
+          <p>UFC dog-only guardrail board ported into BetMate Edge. This is separate from the FIFA World Cup model.</p>
+        </div>
+        <a class="header-link" href="./ufcgd.html" target="_blank" rel="noopener">Full UFC report</a>
+      </div>
+
+      <div class="ufc-hero">
+        <div>
+          <span class="eyebrow">UFC sharp quant board</span>
+          <h3>Dog-only selections with false-favourite guardrails</h3>
+          <p>Current UFC view uses non-market fight-path evidence first, then checks whether the market has overcharged the favourite enough to make the underdog playable.</p>
+        </div>
+        <div class="ufc-scorecard">
+          <span>Model Sharpness</span>
+          <strong>86/100 process</strong>
+          <p>76/100 proven until closing-line value and settled UFC selection history are captured.</p>
+        </div>
+      </div>
+
+      <div class="ufc-metric-grid" aria-label="UFC model metrics">
+        <article>
+          <span>Operating Mode</span>
+          <strong>Dog bets only</strong>
+          <p>Favourites are filters unless future backtests prove durable favourite ROI.</p>
+        </article>
+        <article>
+          <span>Priced Bouts</span>
+          <strong>12</strong>
+          <p>Melbourne-time UFC board from the current UFCgd run.</p>
+        </article>
+        <article>
+          <span>Release-Grade Rows</span>
+          <strong>3</strong>
+          <p>Rows passing the dog guardrail and data-quality checks.</p>
+        </article>
+        <article>
+          <span>Historical Dog Bucket</span>
+          <strong>+12.04% ROI</strong>
+          <p>Dog edge 5%+ bucket: 54 historical bets, 74.07% hit rate.</p>
+        </article>
+      </div>
+
+      <div class="ufc-best-list">
+        <article class="ufc-best-card elite">
+          <div class="ufc-rank">#1</div>
+          <div>
+            <span class="ufc-meta">19/07/2026 11:45 Melbourne time</span>
+            <h3>Kamaru Usman</h3>
+            <p>Dricus Du Plessis is priced too short. Usman's value route is to slow the fight, win clinch and wrestling minutes, and make the favourite work harder than the market expects.</p>
+          </div>
+          <dl>
+            <div><dt>Best price</dt><dd>3.50 TAB</dd></div>
+            <div><dt>Geoff fair</dt><dd>1.79</dd></div>
+            <div><dt>Dog edge</dt><dd>+24.5 pts</dd></div>
+            <div><dt>Status</dt><dd>Qualifies</dd></div>
+          </dl>
+        </article>
+
+        <article class="ufc-best-card elite">
+          <div class="ufc-rank">#2</div>
+          <div>
+            <span class="ufc-meta">19/07/2026 09:45 Melbourne time</span>
+            <h3>Tabatha Ricci</h3>
+            <p>Fatima Kline may still be dangerous, but the price is too short. Ricci's value path is a grinding fight with control time, extended exchanges, and close rounds.</p>
+          </div>
+          <dl>
+            <div><dt>Best price</dt><dd>4.25 Ladbrokes</dd></div>
+            <div><dt>Geoff fair</dt><dd>2.03</dd></div>
+            <div><dt>Dog edge</dt><dd>+21.7 pts</dd></div>
+            <div><dt>Status</dt><dd>Qualifies</dd></div>
+          </dl>
+        </article>
+
+        <article class="ufc-best-card strong">
+          <div class="ufc-rank">#3</div>
+          <div>
+            <span class="ufc-meta">16/08/2026 13:00 Melbourne time</span>
+            <h3>Gillian Robertson</h3>
+            <p>Robertson has the better repeatable path if the fight spends time in clinch, grappling, or top-control positions. The market is still treating Mackenzie Dern as too clear a side.</p>
+          </div>
+          <dl>
+            <div><dt>Best price</dt><dd>3.00 TAB</dd></div>
+            <div><dt>Geoff fair</dt><dd>1.92</dd></div>
+            <div><dt>Dog edge</dt><dd>+15.4 pts</dd></div>
+            <div><dt>Status</dt><dd>Qualifies</dd></div>
+          </dl>
+        </article>
+      </div>
+
+      <div class="ufc-panel-grid">
+        <article class="ufc-panel">
+          <h3>Guardrail Rules</h3>
+          <ul>
+            <li>Only release dog bets that pass the historical dog-edge bucket.</li>
+            <li>Require a visible price gap between market price and Geoff fair price.</li>
+            <li>Check data quality and usable fight sample before promotion.</li>
+            <li>Capture closing price before fight start and settle ROI after the bout.</li>
+          </ul>
+        </article>
+        <article class="ufc-panel">
+          <h3>Watch Rows</h3>
+          <div class="table-wrap compact-table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Bout</th>
+                  <th>Dog / Price</th>
+                  <th>Edge</th>
+                  <th>Reason Held Back</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Seok Hyun Ko vs Jean-Paul Lebosnoyani</td>
+                  <td>Jean-Paul Lebosnoyani 2.70 BetOnline.ag</td>
+                  <td>+23.6 pts</td>
+                  <td>Thin Markov sample</td>
+                </tr>
+                <tr>
+                  <td>Alden Coria vs Stewart Nicoll</td>
+                  <td>Stewart Nicoll 8.25 Ladbrokes</td>
+                  <td>+20.0 pts</td>
+                  <td>Thin Markov sample</td>
+                </tr>
+                <tr>
+                  <td>Christian Leroy Duncan vs Jared Cannonier</td>
+                  <td>Jared Cannonier 3.70 BetOnline.ag</td>
+                  <td>+13.5 pts</td>
+                  <td>Dog price only</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="table-section games-section" data-view-section="matches">
@@ -285,10 +426,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260713-fifa-current-fixtures"></script>
-  <script src="./src/embeddedData.js?v=20260713-fifa-current-fixtures"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260713-fifa-current-fixtures"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260713-fifa-current-fixtures"></script>
-  <script src="./src/app.js?v=20260713-fifa-current-fixtures"></script>
+  <script src="./src/calculations.js?v=20260714-ufc-content"></script>
+  <script src="./src/embeddedData.js?v=20260714-ufc-content"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260714-ufc-content"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260714-ufc-content"></script>
+  <script src="./src/app.js?v=20260714-ufc-content"></script>
 </body>
 </html>
