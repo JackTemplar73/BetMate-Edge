@@ -116425,7 +116425,7 @@ window.embeddedDataset = [
         "TAB",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-07-13T23:00:54.375Z",
+      "checked_at": "2026-07-13T23:11:08.827Z",
       "status": "checked",
       "oddsapi_event_id": "f9aa13a662d1658e5a02cfc06d6a2d73",
       "offered_market_keys": [
@@ -117636,7 +117636,7 @@ window.embeddedDataset = [
         "Betfair",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-07-13T23:00:54.375Z",
+      "checked_at": "2026-07-13T23:11:08.827Z",
       "status": "checked",
       "oddsapi_event_id": "ced22494ae0bbb8cc4f7108bf6f493df",
       "offered_market_keys": [
@@ -117659,13 +117659,13 @@ window.embeddedDataset = [
           "oddsapi_market": "btts",
           "model_probability": 55.8,
           "model_price": 1.79,
-          "current_odds": 2,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 47.37,
-          "ev": 11.73,
-          "qi": 75,
-          "price_qi": 85
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 48.68,
+          "ev": 8.94,
+          "qi": 71,
+          "price_qi": 82
         },
         {
           "selection": "BTTS No",
@@ -117675,13 +117675,13 @@ window.embeddedDataset = [
           "oddsapi_market": "btts",
           "model_probability": 55.8,
           "model_price": 1.79,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48.68,
-          "ev": 8.94,
-          "qi": 71,
-          "price_qi": 82
+          "current_odds": 1.91,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 48.52,
+          "ev": 6.7,
+          "qi": 67,
+          "price_qi": 78
         },
         {
           "selection": "Under 2.5 Goals",
@@ -117764,22 +117764,6 @@ window.embeddedDataset = [
           "price_qi": 41
         },
         {
-          "selection": "Argentina or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 68.1,
-          "model_price": 1.47,
-          "current_odds": 1.45,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 32.16,
-          "ev": -1.36,
-          "qi": 49,
-          "price_qi": 41
-        },
-        {
           "selection": "Argentina Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
@@ -117794,6 +117778,22 @@ window.embeddedDataset = [
           "ev": 0.5,
           "qi": 48,
           "price_qi": 53
+        },
+        {
+          "selection": "Argentina or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 68.1,
+          "model_price": 1.47,
+          "current_odds": 1.44,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 32.31,
+          "ev": -2.04,
+          "qi": 48,
+          "price_qi": 37
         },
         {
           "selection": "Match to end in a Draw",
@@ -117918,7 +117918,7 @@ window.embeddedDataset = [
           "current_odds": 1.35,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 34.54,
+          "devig_book_probability": 34.46,
           "ev": -8.78,
           "qi": 40,
           "price_qi": 13
@@ -118030,7 +118030,7 @@ window.embeddedDataset = [
           "current_odds": 1.8,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 52.63,
+          "devig_book_probability": 51.48,
           "ev": -20.35,
           "qi": 28,
           "price_qi": 6
@@ -118310,7 +118310,7 @@ window.embeddedDataset = [
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-07-13T23:00:54.375Z",
+      "checked_at": "2026-07-13T23:11:08.827Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -118459,7 +118459,7 @@ window.embeddedDataset = [
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-07-13T23:00:54.375Z",
+      "checked_at": "2026-07-13T23:11:08.827Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
