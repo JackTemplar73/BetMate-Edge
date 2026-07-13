@@ -27,6 +27,7 @@
       <button class="view-tab" data-view-tab="props" type="button">Player Props</button>
       <button class="view-tab" data-view-tab="scan" type="button">Market Summary</button>
       <button class="view-tab" data-view-tab="strategy" type="button">Strategy</button>
+      <button class="view-tab" data-view-tab="ufcgd" type="button">UFCgd</button>
       <button class="view-tab" data-view-tab="history" data-owner-only type="button">Bet History <span data-history-count>0</span></button>
       <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
     </nav>
@@ -91,6 +92,18 @@
         </div>
       </div>
       <div class="prop-watchlist-grid" data-player-prop-watchlist></div>
+    </section>
+
+    <section class="table-section ufcgd-section hidden" data-view-section="ufcgd">
+      <div class="section-heading">
+        <div>
+          <h2>UFCgd</h2>
+          <p>Dog-only UFC sharp filter. Release rows only: best book, fair price, edge and guardrail status.</p>
+        </div>
+        <a class="header-link" href="./ufcgd.html" target="_blank" rel="noopener">Full report</a>
+      </div>
+      <div class="ufcgd-summary" data-ufcgd-summary></div>
+      <div class="ufcgd-card-list" data-ufcgd-best-bets></div>
     </section>
 
     <section class="table-section sportsbook-scan-section hidden" data-view-section="scan">

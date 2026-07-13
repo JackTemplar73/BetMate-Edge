@@ -218,6 +218,117 @@ h3 {
   font-size: 18px;
 }
 
+.ufcgd-section .section-heading {
+  align-items: center;
+}
+
+.ufcgd-summary {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.ufcgd-summary article {
+  min-height: 88px;
+  padding: 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--panel-2);
+}
+
+.ufcgd-summary span,
+.ufcgd-price-grid b {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.ufcgd-summary strong {
+  display: block;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.ufcgd-card-list {
+  display: grid;
+  gap: 12px;
+}
+
+.ufcgd-card {
+  padding: 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(61, 220, 151, 0.08), rgba(32, 32, 28, 0.35));
+}
+
+.ufcgd-card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.ufcgd-card h3 {
+  margin: 0 0 6px;
+  font-size: 22px;
+}
+
+.ufcgd-card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.ufcgd-edge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 8px;
+  color: var(--ink);
+  font-weight: 950;
+  white-space: nowrap;
+}
+
+.ufcgd-edge.elite {
+  background: var(--green);
+}
+
+.ufcgd-edge.strong {
+  background: #86efac;
+}
+
+.ufcgd-edge.live {
+  background: var(--gold);
+}
+
+.ufcgd-edge.watch {
+  background: #f59e0b;
+}
+
+.ufcgd-price-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.ufcgd-price-grid span {
+  min-height: 68px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(16, 16, 14, 0.35);
+  font-weight: 900;
+}
+
+.ufcgd-reason {
+  line-height: 1.55;
+}
+
 .summary-grid .summary-match,
 .summary-grid .summary-selection,
 .summary-grid .summary-meta {
@@ -1945,6 +2056,11 @@ dd {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .ufcgd-summary,
+  .ufcgd-price-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .history-result-summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -1999,6 +2115,19 @@ dd {
 
   .summary-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ufcgd-summary,
+  .ufcgd-price-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ufcgd-card-top {
+    display: block;
+  }
+
+  .ufcgd-edge {
+    margin-top: 12px;
   }
 
   .history-result-summary {

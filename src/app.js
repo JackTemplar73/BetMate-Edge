@@ -2,6 +2,8 @@ const state = {
   dataset: [],
   betHistory: [],
   playerPropWatchlist: [],
+  ufcgdReport: null,
+  ufcgdLearning: null,
   marketFilter: 'All',
   sortMode: 'qi',
   highValueSortMode: 'qi',
@@ -155,6 +157,25 @@ async function loadPlayerPropWatchlist({ bustCache = false } = {}) {
     state.playerPropWatchlist = await response.json();
   } catch {
     state.playerPropWatchlist = JSON.parse(JSON.stringify(window.embeddedPlayerProps || []));
+  }
+}
+
+async function loadUFCgd() {
+  try {
+    const [reportResponse, learningResponse] = await Promise.all([
+      fetch(`./data/ufcgd_upcoming_markov_bout_analysis.json?t=${Date.now()}`, { cache: 'no-store' }),
+      fetch(`./data/ufcgd_self_learning_state.json?t=${Date.now()}`, { cache: 'no-store' })
+    ]);
+
+    if (!reportResponse.ok || !learningResponse.ok) {
+      throw new Error('UFCgd data failed to load');
+    }
+
+    state.ufcgdReport = await reportResponse.json();
+    state.ufcgdLearning = await learningResponse.json();
+  } catch {
+    state.ufcgdReport = null;
+    state.ufcgdLearning = null;
   }
 }
 
@@ -1301,6 +1322,68 @@ function renderPlayerPropWatchlist() {
     </div>
     ${props.map((prop) => renderPlayerPropCard(prop)).join('')}
   `;
+}
+
+function ufcgdEdgeClass(edge) {
+  if (edge >= 20) return 'ufcgd-edge elite';
+  if (edge >= 15) return 'ufcgd-edge strong';
+  if (edge >= 5) return 'ufcgd-edge live';
+  return 'ufcgd-edge watch';
+}
+
+function renderUFCgd() {
+  const summary = document.querySelector('[data-ufcgd-summary]');
+  const list = document.querySelector('[data-ufcgd-best-bets]');
+  if (!summary || !list) return;
+
+  const report = state.ufcgdReport;
+  const learning = state.ufcgdLearning;
+  const rows = report?.release_grade_rows || [];
+  const sharpness = learning?.sharpness || {};
+  const dogBucket = sharpness.dog_edge_5pct_bucket || {};
+
+  if (!report || !learning) {
+    summary.innerHTML = '<article><span>Status</span><strong>UFCgd data unavailable</strong></article>';
+    list.innerHTML = '';
+    return;
+  }
+
+  summary.innerHTML = `
+    <article><span>Mode</span><strong>${learning.operating_mode || 'Dog-only'}</strong></article>
+    <article><span>Release Bets</span><strong>${rows.length}</strong></article>
+    <article><span>Process Sharpness</span><strong>${sharpness.process_sharpness_0_100 ?? '-'} / 100</strong></article>
+    <article><span>Historical Dog Bucket</span><strong>${dogBucket.hit_rate_pct ?? '-'}% hit / ${dogBucket.roi_pct ?? '-'}% ROI</strong></article>
+  `;
+
+  list.innerHTML = rows.map((row) => {
+    const edge = Number(row.dog_edge_pts || 0);
+    const bout = `${row.favorite} vs ${row.underdog}`;
+    const reason = [
+      `${row.underdog} is priced like a normal underdog, but Geoff rates the fight much closer.`,
+      `The repeatable path is ${String(row.driver || 'dog route').replace(/;/g, ',')}.`,
+      `Guardrails: ${row.guardrail?.label || 'Qualifies'}; data quality ${row.data_quality || 'usable'}.`
+    ].join(' ');
+
+    return `
+      <article class="ufcgd-card">
+        <div class="ufcgd-card-top">
+          <div>
+            <span class="eyebrow">${row.event_time_melbourne || ''}</span>
+            <h3>${row.best_bet_side || row.underdog}</h3>
+            <p>${bout}</p>
+          </div>
+          <span class="${ufcgdEdgeClass(edge)}">+${edge.toFixed(1)} pts</span>
+        </div>
+        <div class="ufcgd-price-grid">
+          <span><b>Best book</b>${row.best_bet_book || row.best_dog_book || '-'}</span>
+          <span><b>Market price</b>${Number(row.best_bet_price || row.best_dog_price || 0).toFixed(2)}</span>
+          <span><b>Geoff fair</b>${Number(row.best_bet_fair || row.markov_dog_fair || 0).toFixed(2)}</span>
+          <span><b>Market miss</b>${row.verdict || '-'}</span>
+        </div>
+        <p class="ufcgd-reason">${reason}</p>
+      </article>
+    `;
+  }).join('');
 }
 
 function getFilteredModelMarkets(modelMarkets) {
@@ -3187,6 +3270,7 @@ function render() {
   renderMatchModelHighlights();
   renderSportsbookScan();
   renderPlayerPropWatchlist();
+  renderUFCgd();
   renderMatchTabs();
   renderFilters();
   renderSelectedMarketTitle();
@@ -3197,7 +3281,7 @@ function render() {
   renderBetHistory();
 }
 
-Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
+Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist(), loadUFCgd()])
   .then(() => {
     applyInitialViewFromUrl();
     window.betmateAppReady = true;
