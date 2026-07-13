@@ -218,27 +218,53 @@ h3 {
   font-size: 18px;
 }
 
-.ufcgd-section .section-heading {
+.source-label {
+  display: inline-flex;
   align-items: center;
+  min-height: 24px;
+  padding: 0 8px;
+  border: 1px solid rgba(61, 220, 151, 0.35);
+  border-radius: 999px;
+  color: var(--green);
+  background: rgba(61, 220, 151, 0.08);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.ufcgd-summary {
+.betmate-aus-hero {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  margin-bottom: 16px;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 16px;
+  margin-bottom: 18px;
+  padding: 18px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: linear-gradient(180deg, rgba(61, 220, 151, 0.08), rgba(16, 16, 14, 0.45));
 }
 
-.ufcgd-summary article {
-  min-height: 88px;
+.betmate-aus-hero h3,
+.betmate-aus-grid h3,
+.betmate-aus-panel h3 {
+  margin: 0 0 8px;
+}
+
+.betmate-aus-hero p,
+.betmate-aus-grid p,
+.betmate-aus-panel p,
+.betmate-aus-panel li {
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+.betmate-aus-scorecard {
   padding: 14px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: var(--panel-2);
+  background: rgba(16, 16, 14, 0.45);
 }
 
-.ufcgd-summary span,
-.ufcgd-price-grid b {
+.betmate-aus-scorecard span {
   display: block;
   margin-bottom: 8px;
   color: var(--muted);
@@ -247,86 +273,40 @@ h3 {
   text-transform: uppercase;
 }
 
-.ufcgd-summary strong {
+.betmate-aus-scorecard strong {
   display: block;
-  font-size: 18px;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 1.15;
 }
 
-.ufcgd-card-list {
+.betmate-aus-grid {
   display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 12px;
+  margin-bottom: 18px;
 }
 
-.ufcgd-card {
+.betmate-aus-grid article,
+.betmate-aus-panel {
   padding: 16px;
   border: 1px solid var(--border);
   border-radius: 8px;
-  background: linear-gradient(180deg, rgba(61, 220, 151, 0.08), rgba(32, 32, 28, 0.35));
+  background: var(--panel-2);
 }
 
-.ufcgd-card-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-  align-items: flex-start;
-}
-
-.ufcgd-card h3 {
-  margin: 0 0 6px;
-  font-size: 22px;
-}
-
-.ufcgd-card p {
-  margin: 0;
-  color: var(--muted);
-}
-
-.ufcgd-edge {
-  display: inline-flex;
-  align-items: center;
-  min-height: 34px;
-  padding: 0 12px;
-  border-radius: 8px;
-  color: var(--ink);
-  font-weight: 950;
-  white-space: nowrap;
-}
-
-.ufcgd-edge.elite {
-  background: var(--green);
-}
-
-.ufcgd-edge.strong {
-  background: #86efac;
-}
-
-.ufcgd-edge.live {
-  background: var(--gold);
-}
-
-.ufcgd-edge.watch {
-  background: #f59e0b;
-}
-
-.ufcgd-price-grid {
+.betmate-aus-split {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 10px;
-  margin: 16px 0;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 12px;
 }
 
-.ufcgd-price-grid span {
-  min-height: 68px;
-  padding: 12px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: rgba(16, 16, 14, 0.35);
-  font-weight: 900;
+.betmate-aus-panel ul {
+  margin: 10px 0 0;
+  padding-left: 18px;
 }
 
-.ufcgd-reason {
-  line-height: 1.55;
+.compact-table table {
+  min-width: 620px;
 }
 
 .summary-grid .summary-match,
@@ -2056,11 +2036,6 @@ dd {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .ufcgd-summary,
-  .ufcgd-price-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
   .history-result-summary {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -2070,6 +2045,15 @@ dd {
   }
 
   .strategy-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .betmate-aus-hero,
+  .betmate-aus-split {
+    grid-template-columns: 1fr;
+  }
+
+  .betmate-aus-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -2117,24 +2101,15 @@ dd {
     grid-template-columns: 1fr;
   }
 
-  .ufcgd-summary,
-  .ufcgd-price-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ufcgd-card-top {
-    display: block;
-  }
-
-  .ufcgd-edge {
-    margin-top: 12px;
-  }
-
   .history-result-summary {
     grid-template-columns: 1fr;
   }
 
   .learning-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .betmate-aus-grid {
     grid-template-columns: 1fr;
   }
 

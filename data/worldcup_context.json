@@ -1,6 +1,6 @@
 {
   "source": "World Cup 2026 context feed + Round of 32 published schedule",
-  "updated_at": "2026-06-28T09:18:39.743Z",
+  "updated_at": "2026-07-13T13:14:14.372Z",
   "lineup_source": "Projected tournament team sheets",
   "sources": {
     "results": "football-data.org",
@@ -1389,6 +1389,42 @@
         "home": {},
         "away": {}
       }
+    },
+    {
+      "match_name": "France vs Spain",
+      "kickoff_time_aest": "2026-07-15T05:00:00",
+      "round": "Semi-final",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "updated_at": "2026-07-13T13:14:14.372Z"
+    },
+    {
+      "match_name": "England vs Argentina",
+      "kickoff_time_aest": "2026-07-16T05:00:00",
+      "round": "Semi-final",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "updated_at": "2026-07-13T13:14:14.372Z"
+    },
+    {
+      "match_name": "Third-place playoff",
+      "kickoff_time_aest": "2026-07-19T06:00:00",
+      "round": "Third-place playoff",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "updated_at": "2026-07-13T13:14:14.372Z"
+    },
+    {
+      "match_name": "World Cup Final",
+      "kickoff_time_aest": "2026-07-20T05:00:00",
+      "round": "Final",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "updated_at": "2026-07-13T13:14:14.372Z"
     }
   ]
 }

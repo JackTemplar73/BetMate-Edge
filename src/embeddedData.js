@@ -115775,5 +115775,165 @@ window.embeddedDataset = [
       "source": "FotMob structured xG",
       "checked_at": "2026-07-13T13:05:41.030Z"
     }
+  },
+  {
+    "match_name": "France vs Spain",
+    "kickoff_time_aest": "2026-07-15T05:00:00",
+    "pitch_type": "knockout-stage tournament venue",
+    "pitch_constraints": "MetLife Stadium, East Rutherford. Weather read: not refreshed.",
+    "referee_name": "Pending verification",
+    "referee_status": "pending",
+    "referee_tendencies": "No referee-specific adjustment applied yet.",
+    "tactical_summary": "France vs Spain: Confirmed 2026 FIFA World Cup semi-final. UK 8:00pm Tuesday July 14 converts to 5:00am AEST Wednesday July 15. Odds and model rows populate from the next GitHub odds refresh when the market is available.",
+    "markets": [],
+    "odds_last_checked": "2026-07-13T13:14:14.372Z",
+    "odds_refresh_cadence": "seeded-current-fixture",
+    "odds_refresh_note": "Current/upcoming FIFA fixture seeded after stale payload audit; awaiting Odds API refresh.",
+    "fifa_report_last_checked": "2026-07-13T13:14:14.372Z",
+    "fifa_report_status": "not_found_yet",
+    "worldcup_context": {
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "source_updated_at": "2026-07-13T13:14:14.372Z",
+      "applied_at": "2026-07-13T13:14:14.372Z",
+      "match_number": 100,
+      "group": "Semi-final",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "France",
+        "away_team": "Spain",
+        "home": {},
+        "away": {}
+      }
+    },
+    "venue_context": {
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "pitch_profile": "knockout-stage tournament venue",
+      "altitude_m": null
+    }
+  },
+  {
+    "match_name": "England vs Argentina",
+    "kickoff_time_aest": "2026-07-16T05:00:00",
+    "pitch_type": "knockout-stage tournament venue",
+    "pitch_constraints": "Mercedes-Benz Stadium, Atlanta. Weather read: not refreshed.",
+    "referee_name": "Pending verification",
+    "referee_status": "pending",
+    "referee_tendencies": "No referee-specific adjustment applied yet.",
+    "tactical_summary": "England vs Argentina: Confirmed 2026 FIFA World Cup semi-final. UK 8:00pm Wednesday July 15 converts to 5:00am AEST Thursday July 16. Odds and model rows populate from the next GitHub odds refresh when the market is available.",
+    "markets": [],
+    "odds_last_checked": "2026-07-13T13:14:14.372Z",
+    "odds_refresh_cadence": "seeded-current-fixture",
+    "odds_refresh_note": "Current/upcoming FIFA fixture seeded after stale payload audit; awaiting Odds API refresh.",
+    "fifa_report_last_checked": "2026-07-13T13:14:14.372Z",
+    "fifa_report_status": "not_found_yet",
+    "worldcup_context": {
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "source_updated_at": "2026-07-13T13:14:14.372Z",
+      "applied_at": "2026-07-13T13:14:14.372Z",
+      "match_number": 101,
+      "group": "Semi-final",
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "England",
+        "away_team": "Argentina",
+        "home": {},
+        "away": {}
+      }
+    },
+    "venue_context": {
+      "venue": "Mercedes-Benz Stadium",
+      "city": "Atlanta",
+      "pitch_profile": "knockout-stage tournament venue",
+      "altitude_m": null
+    }
+  },
+  {
+    "match_name": "Third-place playoff",
+    "kickoff_time_aest": "2026-07-19T06:00:00",
+    "pitch_type": "knockout-stage tournament venue",
+    "pitch_constraints": "Hard Rock Stadium, Miami. Weather read: not refreshed.",
+    "referee_name": "Pending verification",
+    "referee_status": "pending",
+    "referee_tendencies": "No referee-specific adjustment applied yet.",
+    "tactical_summary": "Third-place playoff: Fixture placeholder until semi-final losers are known. Scheduled Saturday July 18 local/UK window; shown in AEST for dashboard continuity. Odds and model rows populate from the next GitHub odds refresh when the market is available.",
+    "markets": [],
+    "odds_last_checked": "2026-07-13T13:14:14.372Z",
+    "odds_refresh_cadence": "seeded-current-fixture",
+    "odds_refresh_note": "Current/upcoming FIFA fixture seeded after stale payload audit; awaiting Odds API refresh.",
+    "fifa_report_last_checked": "2026-07-13T13:14:14.372Z",
+    "fifa_report_status": "not_found_yet",
+    "worldcup_context": {
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "source_updated_at": "2026-07-13T13:14:14.372Z",
+      "applied_at": "2026-07-13T13:14:14.372Z",
+      "match_number": 102,
+      "group": "Third-place playoff",
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "Third-place playoff",
+        "away_team": "",
+        "home": {},
+        "away": {}
+      }
+    },
+    "venue_context": {
+      "venue": "Hard Rock Stadium",
+      "city": "Miami",
+      "pitch_profile": "knockout-stage tournament venue",
+      "altitude_m": null
+    }
+  },
+  {
+    "match_name": "World Cup Final",
+    "kickoff_time_aest": "2026-07-20T05:00:00",
+    "pitch_type": "knockout-stage tournament venue",
+    "pitch_constraints": "MetLife Stadium, East Rutherford. Weather read: not refreshed.",
+    "referee_name": "Pending verification",
+    "referee_status": "pending",
+    "referee_tendencies": "No referee-specific adjustment applied yet.",
+    "tactical_summary": "World Cup Final: Fixture placeholder until finalists are known. Final is scheduled for Sunday July 19, 8:00pm UK / 3:00pm New York, converting to 5:00am AEST Monday July 20. Odds and model rows populate from the next GitHub odds refresh when the market is available.",
+    "markets": [],
+    "odds_last_checked": "2026-07-13T13:14:14.372Z",
+    "odds_refresh_cadence": "seeded-current-fixture",
+    "odds_refresh_note": "Current/upcoming FIFA fixture seeded after stale payload audit; awaiting Odds API refresh.",
+    "fifa_report_last_checked": "2026-07-13T13:14:14.372Z",
+    "fifa_report_status": "not_found_yet",
+    "worldcup_context": {
+      "source": "Current FIFA World Cup knockout schedule audit",
+      "source_updated_at": "2026-07-13T13:14:14.372Z",
+      "applied_at": "2026-07-13T13:14:14.372Z",
+      "match_number": 103,
+      "group": "Final",
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "weather": {
+        "forecast": "Not refreshed"
+      },
+      "rest_travel": {
+        "home_team": "World Cup Final",
+        "away_team": "",
+        "home": {},
+        "away": {}
+      }
+    },
+    "venue_context": {
+      "venue": "MetLife Stadium",
+      "city": "East Rutherford",
+      "pitch_profile": "knockout-stage tournament venue",
+      "altitude_m": null
+    }
   }
 ];

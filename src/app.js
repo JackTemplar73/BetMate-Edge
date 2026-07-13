@@ -2,8 +2,6 @@ const state = {
   dataset: [],
   betHistory: [],
   playerPropWatchlist: [],
-  ufcgdReport: null,
-  ufcgdLearning: null,
   marketFilter: 'All',
   sortMode: 'qi',
   highValueSortMode: 'qi',
@@ -157,25 +155,6 @@ async function loadPlayerPropWatchlist({ bustCache = false } = {}) {
     state.playerPropWatchlist = await response.json();
   } catch {
     state.playerPropWatchlist = JSON.parse(JSON.stringify(window.embeddedPlayerProps || []));
-  }
-}
-
-async function loadUFCgd() {
-  try {
-    const [reportResponse, learningResponse] = await Promise.all([
-      fetch(`./data/ufcgd_upcoming_markov_bout_analysis.json?t=${Date.now()}`, { cache: 'no-store' }),
-      fetch(`./data/ufcgd_self_learning_state.json?t=${Date.now()}`, { cache: 'no-store' })
-    ]);
-
-    if (!reportResponse.ok || !learningResponse.ok) {
-      throw new Error('UFCgd data failed to load');
-    }
-
-    state.ufcgdReport = await reportResponse.json();
-    state.ufcgdLearning = await learningResponse.json();
-  } catch {
-    state.ufcgdReport = null;
-    state.ufcgdLearning = null;
   }
 }
 
@@ -1324,66 +1303,99 @@ function renderPlayerPropWatchlist() {
   `;
 }
 
-function ufcgdEdgeClass(edge) {
-  if (edge >= 20) return 'ufcgd-edge elite';
-  if (edge >= 15) return 'ufcgd-edge strong';
-  if (edge >= 5) return 'ufcgd-edge live';
-  return 'ufcgd-edge watch';
-}
+function renderBetMateAustralia() {
+  const container = document.querySelector('[data-betmate-australia-content]');
+  if (!container) return;
 
-function renderUFCgd() {
-  const summary = document.querySelector('[data-ufcgd-summary]');
-  const list = document.querySelector('[data-ufcgd-best-bets]');
-  if (!summary || !list) return;
+  const modules = [
+    ['Best Opportunities', 'Ranks member opportunities by QI, model edge, price value and risk.', 'Core'],
+    ['Core Markets', 'Moneyline, spread, totals and soccer views with model price versus market price.', 'Core'],
+    ['Soccer Markets', '1X2, draw-no-bet, both-teams-to-score, spreads, totals and line-shopping views.', 'Active'],
+    ['AFL / NRL Hubs', 'Team and player-prop workflows for repeat scanning, close tracking and results learning.', 'Active'],
+    ['Player Props', 'AFL, NRL and US player props, including middle-tracking where both sides can be priced.', 'Active'],
+    ['UFC / MMA', 'Combat-sport module from the broader member platform. Included here as product overview only, not a FIFA recommendation feed.', 'Module'],
+    ['Bet History', 'Tracked selections, closing-line movement, settled results and model-learning feedback.', 'Tracked']
+  ];
 
-  const report = state.ufcgdReport;
-  const learning = state.ufcgdLearning;
-  const rows = report?.release_grade_rows || [];
-  const sharpness = learning?.sharpness || {};
-  const dogBucket = sharpness.dog_edge_5pct_bucket || {};
+  const principles = [
+    'Separate sharp/reference books such as Betfair and Pinnacle from ordinary AU bookmakers.',
+    'Show the best available price and label the source accurately before any member-facing recommendation.',
+    'Use QI as the headline filter, then sanity-check risk, sample size and market type before release.',
+    'Keep results and learning loops visible so weak market types can be downgraded rather than repeated.'
+  ];
 
-  if (!report || !learning) {
-    summary.innerHTML = '<article><span>Status</span><strong>UFCgd data unavailable</strong></article>';
-    list.innerHTML = '';
-    return;
-  }
+  const futuresRows = [
+    ['Alexander Zverev', '28.33', '50.00', '+0.77', '89', 'Very High'],
+    ['Daniil Medvedev', '39.22', '70.00', '+0.79', '90', 'Very High'],
+    ['Felix Auger-Aliassime', '54.34', '100.00', '+0.84', '92', 'Very High'],
+    ['Sebastian Korda', '151.52', '301.00', '+0.99', '100', 'Very High']
+  ];
 
-  summary.innerHTML = `
-    <article><span>Mode</span><strong>${learning.operating_mode || 'Dog-only'}</strong></article>
-    <article><span>Release Bets</span><strong>${rows.length}</strong></article>
-    <article><span>Process Sharpness</span><strong>${sharpness.process_sharpness_0_100 ?? '-'} / 100</strong></article>
-    <article><span>Historical Dog Bucket</span><strong>${dogBucket.hit_rate_pct ?? '-'}% hit / ${dogBucket.roi_pct ?? '-'}% ROI</strong></article>
-  `;
+  container.innerHTML = `
+    <div class="betmate-aus-hero">
+      <div>
+        <span class="eyebrow">Ported member-platform overview</span>
+        <h3>BetMate Australia inside BetMate Edge</h3>
+        <p>This tab brings a compact overview of the broader BetMate Australia member platform into the World Cup site. FIFA rows, model pricing and World Cup bet tables remain controlled by the main dashboard tabs.</p>
+      </div>
+      <div class="betmate-aus-scorecard">
+        <span>Operating Rule</span>
+        <strong>Model first, market second</strong>
+        <p>Sharp books are reference signals. AU books are execution venues.</p>
+      </div>
+    </div>
 
-  list.innerHTML = rows.map((row) => {
-    const edge = Number(row.dog_edge_pts || 0);
-    const bout = `${row.favorite} vs ${row.underdog}`;
-    const reason = [
-      `${row.underdog} is priced like a normal underdog, but Geoff rates the fight much closer.`,
-      `The repeatable path is ${String(row.driver || 'dog route').replace(/;/g, ',')}.`,
-      `Guardrails: ${row.guardrail?.label || 'Qualifies'}; data quality ${row.data_quality || 'usable'}.`
-    ].join(' ');
-
-    return `
-      <article class="ufcgd-card">
-        <div class="ufcgd-card-top">
-          <div>
-            <span class="eyebrow">${row.event_time_melbourne || ''}</span>
-            <h3>${row.best_bet_side || row.underdog}</h3>
-            <p>${bout}</p>
+    <div class="betmate-aus-grid">
+      ${modules.map(([title, detail, status]) => `
+        <article>
+          <div class="card-topline">
+            <h3>${title}</h3>
+            <span class="source-label">${status}</span>
           </div>
-          <span class="${ufcgdEdgeClass(edge)}">+${edge.toFixed(1)} pts</span>
-        </div>
-        <div class="ufcgd-price-grid">
-          <span><b>Best book</b>${row.best_bet_book || row.best_dog_book || '-'}</span>
-          <span><b>Market price</b>${Number(row.best_bet_price || row.best_dog_price || 0).toFixed(2)}</span>
-          <span><b>Geoff fair</b>${Number(row.best_bet_fair || row.markov_dog_fair || 0).toFixed(2)}</span>
-          <span><b>Market miss</b>${row.verdict || '-'}</span>
-        </div>
-        <p class="ufcgd-reason">${reason}</p>
+          <p>${detail}</p>
+        </article>
+      `).join('')}
+    </div>
+
+    <div class="betmate-aus-split">
+      <article class="betmate-aus-panel">
+        <h3>Member Release Discipline</h3>
+        <ul>
+          ${principles.map((principle) => `<li>${principle}</li>`).join('')}
+        </ul>
       </article>
-    `;
-  }).join('');
+      <article class="betmate-aus-panel">
+        <h3>Ported Futures Example</h3>
+        <p>Sample Australian Open futures board from the local BetMate Australia app. These rows are product-content examples, not current World Cup selections.</p>
+        <div class="table-wrap compact-table">
+          <table>
+            <thead>
+              <tr>
+                <th>Player</th>
+                <th>Sharp Price</th>
+                <th>Best Price</th>
+                <th>EV</th>
+                <th>QI</th>
+                <th>Quality</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${futuresRows.map((row) => `
+                <tr>
+                  <td>${row[0]}</td>
+                  <td>${row[1]}</td>
+                  <td>${row[2]}</td>
+                  <td>${row[3]}</td>
+                  <td><span class="qi-badge ${metricClass(Number(row[4]))}">${row[4]}</span></td>
+                  <td>${row[5]}</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      </article>
+    </div>
+  `;
 }
 
 function getFilteredModelMarkets(modelMarkets) {
@@ -3270,7 +3282,7 @@ function render() {
   renderMatchModelHighlights();
   renderSportsbookScan();
   renderPlayerPropWatchlist();
-  renderUFCgd();
+  renderBetMateAustralia();
   renderMatchTabs();
   renderFilters();
   renderSelectedMarketTitle();
@@ -3281,7 +3293,7 @@ function render() {
   renderBetHistory();
 }
 
-Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist(), loadUFCgd()])
+Promise.all([loadDataset(), loadBetHistory(), loadPlayerPropWatchlist()])
   .then(() => {
     applyInitialViewFromUrl();
     window.betmateAppReady = true;
