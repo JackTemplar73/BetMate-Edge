@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NRL Round 20 — BetMate Edge v4 Bet Card</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #0d1117; color: #e6edf3;
+    padding: 20px; max-width: 680px; margin: 0 auto;
+    font-size: 15px; line-height: 1.6;
+  }
+  .match-header {
+    background: #161b22; border: 1px solid #30363d;
+    border-radius: 14px; padding: 22px 24px; margin-bottom: 14px; text-align: center;
+  }
+  .teams { font-size: 22px; font-weight: 800; color: #fff; }
+  .teams span { color: #22d67a; }
+  .match-meta { color: #8b949e; font-size: 13px; margin-top: 5px; }
+
+  .nobet-hero {
+    background: linear-gradient(135deg, #1c2128, #161b22);
+    border: 2px solid #8b949e; border-radius: 14px;
+    padding: 24px; margin-bottom: 14px; text-align: center;
+  }
+  .nobet-hero .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #8b949e; margin-bottom: 8px;
+  }
+  .nobet-hero .bet-name { font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; }
+  .nobet-hero .bet-sub { font-size: 14px; color: #8b949e; }
+
+  .lean-card {
+    background: #161b22; border: 1px solid #f0883e44;
+    border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;
+  }
+  .lean-card .eyebrow {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+    text-transform: uppercase; color: #f0883e; margin-bottom: 8px;
+  }
+  .lean-card .bet-name { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .lean-card .bet-sub { font-size: 13px; color: #8b949e; margin-bottom: 14px; }
+  .lean-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #21262d; font-size: 14px; }
+  .lean-row:last-child { border-bottom: none; }
+  .lean-key { color: #8b949e; }
+  .lean-val { font-weight: 600; }
+
+  .section { margin-bottom: 14px; }
+  .section-label {
+    font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+    color: #8b949e; text-transform: uppercase; margin-bottom: 8px;
+  }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 18px 20px; }
+  .plain-english {
+    background: #161b22; border: 1px solid #30363d;
+    border-left: 4px solid #8b949e; border-radius: 0 12px 12px 0;
+    padding: 16px 18px; font-size: 14px; color: #c9d1d9; line-height: 1.8;
+  }
+  .plain-english strong { color: #fff; }
+  .warning-banner {
+    background: #f0883e10; border: 1px solid #f0883e44;
+    border-radius: 10px; padding: 12px 16px;
+    font-size: 13px; color: #f0883e; line-height: 1.6; margin-bottom: 14px;
+  }
+  .green { color: #22d67a; } .orange { color: #f0883e; } .grey { color: #8b949e; }
+
+  .mkt-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+  .mkt-table th {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px;
+    color: #8b949e; padding: 0 0 8px; text-align: left; border-bottom: 1px solid #30363d;
+  }
+  .mkt-table th:not(:first-child) { text-align: center; }
+  .mkt-table td { padding: 9px 4px; border-bottom: 1px solid #21262d; }
+  .mkt-table td:not(:first-child) { text-align: center; }
+  .mkt-table tr:last-child td { border-bottom: none; }
+  .badge-watch { background: #f0883e18; color: #f0883e; font-weight: 700; border-radius: 4px; padding: 2px 8px; display: inline-block; }
+  .badge-pass { background: #30363d; color: #8b949e; border-radius: 4px; padding: 2px 8px; display: inline-block; font-size: 12px; }
+  .clv-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #21262d; font-size: 13px; }
+  .clv-row:last-child { border-bottom: none; }
+  .clv-key { color: #8b949e; }
+  .clv-pending { color: #484f58; font-style: italic; }
+  .footer { text-align: center; color: #484f58; font-size: 11px; margin-top: 24px; }
+</style>
+</head>
+<body>
+
+<!-- ROUND HEADER -->
+<div class="match-header">
+  <div class="teams">NRL <span>Round 20</span> Bet Card</div>
+  <div class="match-meta">Thu 16 – Sun 19 July 2026 · 8 games · Bye: Eels</div>
+  <div class="match-meta">BetMate Edge v4 (Walters Edition) · preliminary run Mon 13 Jul · OPENER window</div>
+</div>
+
+<!-- PROVISIONAL WARNING -->
+<div class="warning-banner">
+  ⚠️ <strong>Preliminary run.</strong> Ledger-anchored only (post-R19 Elo + venue HFA) — registry sources haven't published R20, no team lists (named 22s drop <strong>Tuesday 4pm AEST</strong>), no weather, Pinnacle not posted. Origin is over: no post-SOO adjustment this week. Full-source rerun Tuesday evening supersedes this card.
+</div>
+
+<!-- NO BET HERO -->
+<div class="nobet-hero">
+  <div class="eyebrow">Round Verdict</div>
+  <div class="bet-name">No qualifying bets at the openers</div>
+  <div class="bet-sub">0 of 8 games clear both gates (gap ≥ 2.5 pts AND EV ≥ +3%). A zero-bet round is a successful round — passing is the default, not a failure. Two games are one Tuesday development away.</div>
+</div>
+
+<!-- WATCH 1 -->
+<div class="lean-card">
+  <div class="eyebrow">⚠️ Watch #1 — closest to a bet</div>
+  <div class="bet-name">Sharks −4.5 @ $1.90 (Sportsbet)</div>
+  <div class="bet-sub">v Knights · PointsBet Stadium · Fri 17 Jul 6pm · model has Sharks −8.7</div>
+  <div class="lean-row"><span class="lean-key">Gap</span><span class="lean-val green">+4.2 pts — biggest structural edge of the round</span></div>
+  <div class="lean-row"><span class="lean-key">EV after shrinkage</span><span class="lean-val orange">+0.5% — fails the +3% gate at $1.90 flat</span></div>
+  <div class="lean-row"><span class="lean-key">Why watch</span><span class="lean-val">Sharks rating +22 off the Dolphins win; PointsBet already −5.5</span></div>
+  <div class="lean-row"><span class="lean-key">Becomes a bet if</span><span class="lean-val orange">registry sources confirm ≥8 Tue AND −4.5 survives teams</span></div>
+</div>
+
+<!-- WATCH 2 -->
+<div class="lean-card">
+  <div class="eyebrow">⚠️ Watch #2</div>
+  <div class="bet-name">Dolphins −3.5 @ $1.89 (Sportsbet)</div>
+  <div class="bet-sub">v Cowboys · Sun 19 Jul 4pm · model has Dolphins −6.8</div>
+  <div class="lean-row"><span class="lean-key">Gap</span><span class="lean-val green">+3.3 pts</span></div>
+  <div class="lean-row"><span class="lean-key">EV after shrinkage</span><span class="lean-val orange">−1.0% — fails</span></div>
+  <div class="lean-row"><span class="lean-key">Caution</span><span class="lean-val grey">Dolphins −22 Elo after Sharks loss; venue HFA 6.0 assumes Redcliffe — verify venue Tue</span></div>
+</div>
+
+<!-- ROUND SUMMARY -->
+<div class="section">
+  <div class="section-label">All 8 Games — lines for the first-named team (negative = favoured) · GAP = MKT − MDL · +GAP = value on first-named</div>
+  <div class="card">
+    <table class="mkt-table">
+      <thead><tr><th>Game</th><th>MDL</th><th>Sportsbet</th><th>PointsBet</th><th>GAP</th><th>Best side / EV</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Panthers</strong> v Broncos</td><td>−15.7</td><td>−14.5</td><td>−13.5</td><td>+1.2</td><td>Panthers −14.5 · −2.1%</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td><strong>Sharks</strong> v Knights</td><td>−8.7</td><td>−4.5</td><td>−5.5</td><td class="orange">+4.2</td><td>Sharks −4.5 · +0.5%</td><td><span class="badge-watch">WATCH</span></td></tr>
+        <tr><td><strong>Roosters</strong> v Storm</td><td>−5.8</td><td>−5.5</td><td>−6.5</td><td>−0.7</td><td>model = market</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td><strong>Raiders</strong> v Rabbitohs</td><td>−1.0</td><td>−1.5</td><td>−1.5</td><td>−0.5</td><td>coin-flip both ways</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td><strong>Warriors</strong> v Dragons</td><td>−12.9</td><td>−14.5</td><td>−15.5</td><td>−2.6</td><td>Dragons +15.5 · −2.6%</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td><strong>Bulldogs</strong> v Tigers</td><td>−5.0</td><td>−6.5</td><td>−6.5</td><td>−1.5</td><td>Tigers +6.5 · −3.9%</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td><strong>Titans</strong> v Sea Eagles</td><td>+6.2</td><td>+5.5</td><td>+5.5</td><td>−0.7</td><td>Manly −5.5 · −5.3%</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td><strong>Dolphins</strong> v Cowboys</td><td>−6.8</td><td>−3.5</td><td>−3.5</td><td class="orange">+3.3</td><td>Dolphins −3.5 · −1.0%</td><td><span class="badge-watch">WATCH</span></td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:11px;color:#484f58;margin-top:10px">MDL is mechanical ledger output: the post-R19 power-rating ledger (updated 13 Jul) converted at 25 Elo ≈ 1 pt + venue HFA. σ 17.4. Pinnacle not posted — two-book mode. Betfair exchange handicaps not yet liquid.</div>
+  </div>
+</div>
+
+<!-- WHY NO BETS -->
+<div class="section">
+  <div class="section-label">Why the Gaps Didn't Become Bets</div>
+  <div class="plain-english">
+    Sharks and Dolphins both show real structural gaps (+4.2, +3.3) — but both books price those spreads at flat <strong>$1.90/$1.90</strong>, and the model probability gets shrunk 70% toward the market's 50%. The maths: a 4-pt gap is worth ~+13% raw EV, but after shrinkage it's under +1%. That's the discipline working as designed — <strong>a gap without a price is not a bet</strong>. If Tuesday's registry sources land near the ledger number, the shrunken probability rises and both can clear the gate at the same line.
+  </div>
+</div>
+
+<!-- TOTALS -->
+<div class="section">
+  <div class="section-label">Totals — no plays (low trust preliminary)</div>
+  <div class="card">
+    <table class="mkt-table">
+      <thead><tr><th>Game</th><th>Model</th><th>Book</th><th>Gap</th><th>Verdict</th></tr></thead>
+      <tbody>
+        <tr><td>Panthers v Broncos</td><td>49.6</td><td>45.5</td><td>+4.1</td><td><span class="badge-pass">PASS · O EV +2.6%</span></td></tr>
+        <tr><td>Sharks v Knights</td><td>48.9</td><td>47.5</td><td>+1.4</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td>Roosters v Storm</td><td>48.6</td><td>44.5</td><td>+4.1</td><td><span class="badge-pass">PASS · O EV +2.6%</span></td></tr>
+        <tr><td>Raiders v Rabbitohs</td><td>48.1</td><td>48.5</td><td>−0.4</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td>Warriors v Dragons</td><td>49.3</td><td>46.5</td><td>+2.8</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td>Bulldogs v Tigers</td><td>48.5</td><td>45.5</td><td>+3.0</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td>Titans v Sea Eagles</td><td>48.6</td><td>48.5</td><td>+0.1</td><td><span class="badge-pass">PASS</span></td></tr>
+        <tr><td>Dolphins v Cowboys</td><td>48.7</td><td>50.5</td><td>−1.8</td><td><span class="badge-pass">PASS</span></td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:11px;color:#484f58;margin-top:10px">Model totals use the crude preliminary estimator (48.0 + 0.1×|line|) — the uniform Over lean against winter footy totals is an artifact, not a signal. Rain at any venue shades 4–8 pts Under at the Tuesday rerun.</div>
+  </div>
+</div>
+
+<!-- EXECUTION PLAN -->
+<div class="section">
+  <div class="section-label">Execution Plan</div>
+  <div class="card">
+    <div class="clv-row"><span class="clv-key">Now (OPENER)</span><span style="font-weight:600">No action · opener lines recorded as CLV yardstick</span></div>
+    <div class="clv-row"><span class="clv-key">Tue 4:05pm AEST (TEAMS)</span><span style="font-weight:600">Full rerun: named 22s + registry sources + Pinnacle + weather</span></div>
+    <div class="clv-row"><span class="clv-key">Sharks −4.5 trigger</span><span style="font-weight:600">Sources ≥ −8 and line unmoved → bet, quarter-Kelly window</span></div>
+    <div class="clv-row"><span class="clv-key">Dolphins −3.5 trigger</span><span style="font-weight:600">Confirm venue + sources → re-evaluate</span></div>
+    <div class="clv-row"><span class="clv-key">Steam rule</span><span style="font-weight:600">Sharks to −6.5 / Dolphins to −5.5 before Tuesday = value gone, no chase</span></div>
+    <div class="clv-row"><span class="clv-key">R19 ledger</span><span class="clv-pending">Storm −8.5 (0.5u) awaiting settlement — pull R19 scores to grade CLV</span></div>
+  </div>
+</div>
+
+<div class="footer" style="color:#8b949e;margin-bottom:6px">18+ · Gamble responsibly · Gambler's Help 1800 858 858 · gamblinghelponline.org.au</div>
+<div class="footer">BetMate · NRL BetMate Edge v4 (Walters Edition) · R20 preliminary · Mon 13 Jul 2026 · σ 17.4 · ledger: nrl_bets.csv</div>
+
+</body>
+</html>
