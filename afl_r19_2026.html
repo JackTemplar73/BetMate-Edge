@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFL — Round 19 2026</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .header {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 60%, #0f3460 100%);
+    padding: 24px 32px 20px;
+    border-bottom: 2px solid #e6c200;
+  }
+  .header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.5px;
+  }
+  .header h1 span { color: #e6c200; }
+  .header-meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #8b949e;
+  }
+  .header-meta span { display: flex; align-items: center; gap: 4px; }
+  .header-meta .label { color: #58a6ff; font-weight: 600; }
+
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px 24px 40px; }
+
+  /* BET CARD */
+  .bet-card {
+    background: #161b22;
+    border: 1px solid #e6c200;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: hidden;
+  }
+  .bet-card-header {
+    background: linear-gradient(90deg, #1f2a1f 0%, #1a2e1a 100%);
+    padding: 10px 16px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #3fb950;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #2d3a2d;
+    display: flex; justify-content: space-between; align-items: center;
+  }
+  .bet-card-header .window-tag {
+    background: #1f4e1f;
+    color: #3fb950;
+    border: 1px solid #3fb950;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 10px;
+  }
+  table.bets {
+    width: 100%; border-collapse: collapse;
+  }
+  table.bets th {
+    background: #1c2128;
+    color: #8b949e;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 8px 12px;
+    text-align: left;
+    border-bottom: 1px solid #30363d;
+  }
+  table.bets td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #21262d;
+    vertical-align: middle;
+  }
+  table.bets tr:last-child td { border-bottom: none; }
+  .bet-row td { background: #0d1117; }
+  .bet-row:hover td { background: #161b22; }
+  .bet-num { color: #e6c200; font-weight: 700; font-size: 14px; width: 28px; }
+  .bet-game { color: #fff; font-weight: 600; }
+  .bet-market { color: #8b949e; font-size: 11px; }
+  .bet-side { color: #58a6ff; font-weight: 600; }
+  .bet-book { color: #79c0ff; }
+  .bet-price { color: #fff; font-weight: 700; font-size: 14px; }
+  .bet-ev { color: #3fb950; font-weight: 700; }
+  .bet-qi {
+    display: inline-block;
+    background: #1f4e1f; color: #3fb950;
+    border-radius: 4px; padding: 2px 6px;
+    font-weight: 700; font-size: 12px;
+  }
+  .bet-qi.invest { background: #1a3a4e; color: #58a6ff; }
+  .bet-stake { color: #e6c200; font-weight: 700; }
+  .bet-signal { font-size: 11px; color: #3fb950; }
+
+  /* ALERTS */
+  .alert-box {
+    background: #2d1b00;
+    border: 1px solid #d29922;
+    border-radius: 8px;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+  }
+  .alert-box h3 {
+    color: #d29922;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 10px;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .alert-item {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 6px 0; border-bottom: 1px solid #3d2800;
+    font-size: 12px;
+  }
+  .alert-item:last-child { border-bottom: none; }
+  .alert-game { color: #fff; font-weight: 600; min-width: 110px; }
+  .alert-text { color: #d29922; }
+  .alert-flag { color: #f85149; font-size: 10px; font-weight: 700; }
+
+  /* GAME BLOCKS */
+  .section-title {
+    font-size: 11px;
+    font-weight: 700;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 24px 0 12px;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .section-title::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #30363d;
+  }
+
+  .game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(480px, 1fr));
+    gap: 14px;
+    margin-bottom: 20px;
+  }
+  .game-block {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .game-block.has-bet { border-color: #3fb950; }
+  .game-block.has-invest { border-color: #58a6ff; }
+  .game-block.has-alert { border-color: #d29922; }
+
+  .game-header {
+    padding: 10px 14px;
+    background: #1c2128;
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 1px solid #30363d;
+  }
+  .game-title { color: #fff; font-weight: 700; font-size: 13px; }
+  .game-badges { display: flex; gap: 6px; }
+  .badge {
+    font-size: 10px; font-weight: 700;
+    padding: 2px 7px; border-radius: 3px;
+    text-transform: uppercase; letter-spacing: 0.5px;
+  }
+  .badge.confirms { background: #1f4e1f; color: #3fb950; border: 1px solid #3fb950; }
+  .badge.weak { background: #2d2d00; color: #d29922; border: 1px solid #d29922; }
+  .badge.soft { background: #1a2d3a; color: #58a6ff; border: 1px solid #58a6ff; }
+  .badge.same-dir { background: #2d1a3a; color: #bc8cff; border: 1px solid #bc8cff; }
+  .badge.alert-badge { background: #3d1a00; color: #f85149; border: 1px solid #f85149; }
+
+  .game-stats {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-bottom: 1px solid #21262d;
+  }
+  .stat { padding: 8px 12px; border-right: 1px solid #21262d; }
+  .stat:last-child { border-right: none; }
+  .stat-label { font-size: 10px; color: #6e7681; text-transform: uppercase; letter-spacing: 0.4px; }
+  .stat-value { font-size: 13px; font-weight: 700; color: #fff; margin-top: 2px; }
+  .stat-value.pos { color: #3fb950; }
+  .stat-value.neu { color: #58a6ff; }
+  .stat-value.neg { color: #8b949e; }
+
+  .market-table { width: 100%; border-collapse: collapse; }
+  .market-table th {
+    font-size: 9px; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #6e7681; padding: 5px 12px; text-align: left;
+    border-bottom: 1px solid #21262d;
+    background: #0d1117;
+  }
+  .market-table td {
+    padding: 6px 12px; border-bottom: 1px solid #21262d; font-size: 12px;
+  }
+  .market-table tr:last-child td { border-bottom: none; }
+  .market-table tr.signal-bet td { background: #0d1f0d; }
+  .market-table tr.signal-invest td { background: #0d1a2e; }
+  .market-table tr.signal-pass td { opacity: 0.7; }
+
+  .ev-pos { color: #3fb950; font-weight: 700; }
+  .ev-neg { color: #8b949e; }
+  .verdict-bet { color: #3fb950; font-weight: 700; }
+  .verdict-invest { color: #58a6ff; font-weight: 700; }
+  .verdict-pass { color: #6e7681; }
+
+  /* PHASE BREAKDOWN */
+  .phases {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 14px; margin-bottom: 20px;
+  }
+  .phase-block {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 14px;
+  }
+  .phase-title {
+    font-size: 11px; font-weight: 700; color: #8b949e;
+    text-transform: uppercase; letter-spacing: 0.8px;
+    margin-bottom: 10px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #30363d;
+  }
+  .phase-row { display: flex; justify-content: space-between; align-items: center; padding: 4px 0; font-size: 12px; }
+  .phase-game { color: #c9d1d9; }
+  .phase-val { font-weight: 600; color: #fff; }
+  .phase-sig { font-size: 10px; padding: 1px 5px; border-radius: 3px; }
+  .sig-confirms { background: #1f4e1f; color: #3fb950; }
+  .sig-weak { background: #2d2d00; color: #d29922; }
+  .sig-soft { background: #1a2d3a; color: #79c0ff; }
+  .sig-same { background: #2d1a3a; color: #bc8cff; }
+
+  /* CLV FRAMEWORK */
+  .clv-table { width: 100%; border-collapse: collapse; }
+  .clv-table th {
+    font-size: 10px; text-transform: uppercase; letter-spacing: 0.4px;
+    color: #6e7681; padding: 7px 12px; background: #1c2128;
+    border-bottom: 1px solid #30363d; text-align: left;
+  }
+  .clv-table td { padding: 8px 12px; border-bottom: 1px solid #21262d; font-size: 12px; }
+  .clv-table tr:last-child td { border-bottom: none; }
+
+  /* THURSDAY CHECKLIST */
+  .checklist {
+    background: #1a1a2e;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 14px 16px;
+  }
+  .checklist h3 {
+    font-size: 12px; font-weight: 700; color: #58a6ff;
+    text-transform: uppercase; letter-spacing: 0.8px;
+    margin-bottom: 12px;
+  }
+  .check-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 7px 0; border-bottom: 1px solid #21262d; font-size: 12px;
+  }
+  .check-item:last-child { border-bottom: none; }
+  .check-num { color: #e6c200; font-weight: 700; min-width: 18px; }
+  .check-game { color: #fff; font-weight: 600; min-width: 100px; }
+  .check-text { color: #8b949e; }
+  .check-prio { font-size: 10px; padding: 1px 5px; border-radius: 3px; margin-left: auto; white-space: nowrap; }
+  .prio-high { background: #3d1a00; color: #f85149; }
+  .prio-normal { background: #1a2d3a; color: #58a6ff; }
+
+  /* FOOTER */
+  .footer {
+    text-align: center;
+    color: #484f58;
+    font-size: 10px;
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #21262d;
+  }
+  .exposure-bar {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex; align-items: center; gap: 20px;
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  .exposure-label { color: #6e7681; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .exposure-val { color: #fff; font-weight: 700; font-size: 16px; }
+  .exposure-cap { color: #8b949e; font-size: 12px; }
+  .exposure-bar-fill { flex: 1; }
+  .bar-track { height: 6px; background: #21262d; border-radius: 3px; overflow: hidden; }
+  .bar-fill { height: 100%; background: linear-gradient(90deg, #3fb950, #e6c200); border-radius: 3px; width: 18.2%; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>AFL — <span>Round 19</span> · 2026</h1>
+  <div class="header-meta">
+    <span><span class="label">Games:</span> Jul 16–20, 2026</span>
+    <span><span class="label">Window:</span> OPENER (eighth-Kelly, cap 1u)</span>
+    <span><span class="label">Sources:</span> 2/4 — Wheelo 0.560 · Squiggle 0.440</span>
+    <span><span class="label">Lineups:</span> PENDING (Thu 6:20pm AEST)</span>
+    <span><span class="label">Run:</span> Mon Jul 13, 2026</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- BET CARD -->
+  <div class="bet-card">
+    <div class="bet-card-header">
+      🎯 OPENER Bet Card — 2 Plays
+      <span class="window-tag">EIGHTH-KELLY · CAP 1u</span>
+    </div>
+    <table class="bets">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Game</th>
+          <th>Market</th>
+          <th>Side</th>
+          <th>Book</th>
+          <th>Price</th>
+          <th>EV</th>
+          <th>QI</th>
+          <th>Stake</th>
+          <th>Signal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="bet-row">
+          <td class="bet-num">1</td>
+          <td class="bet-game">GEEL v STK</td>
+          <td class="bet-market">Spread</td>
+          <td class="bet-side">GEEL −12.5</td>
+          <td class="bet-book">TAB</td>
+          <td class="bet-price">$1.90</td>
+          <td class="bet-ev">+12.2%</td>
+          <td><span class="bet-qi">QI 70</span></td>
+          <td class="bet-stake">0.55u</td>
+          <td class="bet-signal">✅ CONFIRMS</td>
+        </tr>
+        <tr class="bet-row">
+          <td class="bet-num">2</td>
+          <td class="bet-game">GC v WB</td>
+          <td class="bet-market">H2H</td>
+          <td class="bet-side">Gold Coast</td>
+          <td class="bet-book">PointsBet</td>
+          <td class="bet-price">$1.92</td>
+          <td class="bet-ev">+16.0%</td>
+          <td><span class="bet-qi invest">QI 67</span></td>
+          <td class="bet-stake">0.54u</td>
+          <td class="bet-signal">⚡ INVEST</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- EXPOSURE -->
+  <div class="exposure-bar">
+    <div>
+      <div class="exposure-label">Total Exposure</div>
+      <div class="exposure-val">1.09u <span class="exposure-cap">/ 6u cap</span></div>
+    </div>
+    <div class="exposure-bar-fill">
+      <div class="bar-track"><div class="bar-fill"></div></div>
+    </div>
+    <div>
+      <div class="exposure-label">Remaining</div>
+      <div style="color:#3fb950;font-weight:700;font-size:16px">4.91u</div>
+    </div>
+    <div>
+      <div class="exposure-label">Post-lineups upgrade</div>
+      <div style="color:#58a6ff;font-size:12px">ESS +39.5 INVESTIGATE → revisit Thu</div>
+    </div>
+  </div>
+
+  <!-- DATA ALERTS -->
+  <div class="alert-box">
+    <h3>⚠️ Data Alerts — Do Not Bet Until Thursday</h3>
+    <div class="alert-item">
+      <div class="alert-game">PORT v FRE</div>
+      <div class="alert-text">PORT $11.00 H2H (market: 91% FRE) vs model FRE by 10.5 (61.8%). 29pt probability gap — likely major PORT availability news already priced in. Model may be blind to it.</div>
+      <div class="alert-flag">INVESTIGATE</div>
+    </div>
+    <div class="alert-item">
+      <div class="alert-game">WCE v BRL</div>
+      <div class="alert-text">WCE $9.50 H2H, spread BRL −44.5. Model has BRL by only 25.0. WCE chain data sparse in R13–R15 — model may be underweighting Brisbane quality or WCE squad issues are in market.</div>
+      <div class="alert-flag">INVESTIGATE</div>
+    </div>
+    <div class="alert-item">
+      <div class="alert-game">ESS v GWS</div>
+      <div class="alert-text">ESS $7.60 H2H (market 87% GWS) vs model GWS 80.8%. Spread ESS +39.5 shows 60.1% model cover but warrants Thursday lineup confirmation before acting. SAME_DIR_DIVERGES structure adds risk.</div>
+      <div class="alert-flag">REVISIT THU</div>
+    </div>
+  </div>
+
+  <!-- PHASE BREAKDOWN -->
+  <div class="section-title">Phase Summary — All 9 Games</div>
+  <div class="phases">
+    <div class="phase-block">
+      <div class="phase-title">Phase 1 — BetMate Structural</div>
+      <div class="phase-row"><span class="phase-game">GEEL v STK</span><span class="phase-val">GEEL +22.3</span></div>
+      <div class="phase-row"><span class="phase-game">SYD v ADE</span><span class="phase-val">SYD +10.0</span></div>
+      <div class="phase-row"><span class="phase-game">PORT v FRE</span><span class="phase-val">FRE +17.4</span></div>
+      <div class="phase-row"><span class="phase-game">NM v MELB</span><span class="phase-val">MELB +24.8</span></div>
+      <div class="phase-row"><span class="phase-game">COLL v CARL</span><span class="phase-val">COLL +13.8</span></div>
+      <div class="phase-row"><span class="phase-game">WCE v BRL</span><span class="phase-val">BRL +34.5</span></div>
+      <div class="phase-row"><span class="phase-game">RICH v HAW</span><span class="phase-val">HAW +70.1</span></div>
+      <div class="phase-row"><span class="phase-game">GC v WB</span><span class="phase-val">GC +10.5</span></div>
+      <div class="phase-row"><span class="phase-game">ESS v GWS</span><span class="phase-val">GWS +50.3</span></div>
+    </div>
+    <div class="phase-block">
+      <div class="phase-title">Phase 2 — BMA Model Line</div>
+      <div class="phase-row"><span class="phase-game">GEEL v STK</span><span class="phase-val">GEEL +20.5 <small style="color:#6e7681">σ35</small></span></div>
+      <div class="phase-row"><span class="phase-game">SYD v ADE</span><span class="phase-val">SYD +11.0 <small style="color:#6e7681">σ40</small></span></div>
+      <div class="phase-row"><span class="phase-game">PORT v FRE</span><span class="phase-val">FRE +10.5 <small style="color:#6e7681">σ35</small></span></div>
+      <div class="phase-row"><span class="phase-game">NM v MELB</span><span class="phase-val">MELB +14.0 <small style="color:#6e7681">σ39</small></span></div>
+      <div class="phase-row"><span class="phase-game">COLL v CARL</span><span class="phase-val">COLL +9.0 <small style="color:#6e7681">σ32</small></span></div>
+      <div class="phase-row"><span class="phase-game">WCE v BRL</span><span class="phase-val">BRL +25.0 <small style="color:#6e7681">σ38</small></span></div>
+      <div class="phase-row"><span class="phase-game">RICH v HAW</span><span class="phase-val">HAW +50.0 <small style="color:#6e7681">σ37</small></span></div>
+      <div class="phase-row"><span class="phase-game">GC v WB</span><span class="phase-val">GC +9.0 <small style="color:#6e7681">σ34</small></span></div>
+      <div class="phase-row"><span class="phase-game">ESS v GWS</span><span class="phase-val">GWS +30.5 <small style="color:#6e7681">σ35</small></span></div>
+    </div>
+    <div class="phase-block">
+      <div class="phase-title">Phase 3 — CONFIRM Signal</div>
+      <div class="phase-row"><span class="phase-game">GEEL v STK</span><span class="phase-sig sig-confirms">CONFIRMS +3</span></div>
+      <div class="phase-row"><span class="phase-game">SYD v ADE</span><span class="phase-sig sig-weak">WEAK</span></div>
+      <div class="phase-row"><span class="phase-game">PORT v FRE</span><span class="phase-sig sig-soft">SOFT_DIV</span></div>
+      <div class="phase-row"><span class="phase-game">NM v MELB</span><span class="phase-sig sig-soft">SOFT_DIV</span></div>
+      <div class="phase-row"><span class="phase-game">COLL v CARL</span><span class="phase-sig sig-weak">WEAK</span></div>
+      <div class="phase-row"><span class="phase-game">WCE v BRL</span><span class="phase-sig sig-soft">SOFT_DIV</span></div>
+      <div class="phase-row"><span class="phase-game">RICH v HAW</span><span class="phase-sig sig-same">SAME_DIR</span></div>
+      <div class="phase-row"><span class="phase-game">GC v WB</span><span class="phase-sig sig-weak">WEAK</span></div>
+      <div class="phase-row"><span class="phase-game">ESS v GWS</span><span class="phase-sig sig-same">SAME_DIR</span></div>
+    </div>
+  </div>
+
+  <!-- GAME BLOCKS -->
+  <div class="section-title">Phase 4 — Market Analysis</div>
+  <div class="game-grid">
+
+    <!-- GEEL v STK -->
+    <div class="game-block has-bet">
+      <div class="game-header">
+        <div class="game-title">Geelong v St Kilda · Kardinia Park · Thu Jul 17</div>
+        <div class="game-badges">
+          <span class="badge confirms">CONFIRMS</span>
+        </div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value pos">GEEL +20.5</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">35.0</div></div>
+        <div class="stat"><div class="stat-label">Win%</div><div class="stat-value pos">72.1%</div></div>
+        <div class="stat"><div class="stat-label">BetMate</div><div class="stat-value">+22.3</div></div>
+      </div>
+      <table class="market-table">
+        <thead><tr><th>Market</th><th>Side</th><th>Model%</th><th>Mkt%</th><th>Best $</th><th>Book</th><th>EV</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="signal-bet">
+            <td>Spread</td><td style="color:#58a6ff">GEEL −12.5</td>
+            <td>59.0%</td><td>52.6%</td><td style="color:#fff;font-weight:700">$1.90</td><td>TAB</td>
+            <td class="ev-pos">+12.2%</td><td class="verdict-bet">🎯 BET</td>
+          </tr>
+          <tr class="signal-pass">
+            <td>H2H</td><td>Geelong</td>
+            <td>72.1%</td><td>64.6%</td><td>$1.54</td><td>Betfair</td>
+            <td class="ev-pos">+11.0%</td><td class="verdict-pass">Correlated→PASS</td>
+          </tr>
+          <tr class="signal-pass">
+            <td>H2H</td><td>St Kilda</td>
+            <td>27.9%</td><td>35.4%</td><td>$2.82</td><td>Betfair</td>
+            <td class="ev-neg">−21.3%</td><td class="verdict-pass">PASS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- GC v WB -->
+    <div class="game-block has-invest">
+      <div class="game-header">
+        <div class="game-title">Gold Coast v W. Bulldogs · Carrara · Sun Jul 20</div>
+        <div class="game-badges">
+          <span class="badge weak">WEAK</span>
+        </div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value pos">GC +9.0</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">34.0</div></div>
+        <div class="stat"><div class="stat-label">Win%</div><div class="stat-value pos">60.4%</div></div>
+        <div class="stat"><div class="stat-label">BetMate</div><div class="stat-value">+10.5</div></div>
+      </div>
+      <table class="market-table">
+        <thead><tr><th>Market</th><th>Side</th><th>Model%</th><th>Mkt%</th><th>Best $</th><th>Book</th><th>EV</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="signal-invest">
+            <td>H2H</td><td style="color:#58a6ff">Gold Coast</td>
+            <td>60.4%</td><td>51.8%</td><td style="color:#fff;font-weight:700">$1.92</td><td>PointsBet</td>
+            <td class="ev-pos">+16.0%</td><td class="verdict-invest">⚡ INVEST</td>
+          </tr>
+          <tr class="signal-pass">
+            <td>Spread</td><td>GC −2.5</td>
+            <td>57.6%</td><td>52.6%</td><td>$1.95</td><td>BetRight</td>
+            <td class="ev-pos">+12.3%</td><td class="verdict-pass">Correlated→PASS</td>
+          </tr>
+          <tr class="signal-pass">
+            <td>H2H</td><td>Bulldogs</td>
+            <td>39.6%</td><td>48.2%</td><td>$2.06</td><td>Betfair</td>
+            <td class="ev-neg">−18.5%</td><td class="verdict-pass">PASS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ESS v GWS -->
+    <div class="game-block has-invest">
+      <div class="game-header">
+        <div class="game-title">Essendon v GWS · Docklands · Sun Jul 20</div>
+        <div class="game-badges">
+          <span class="badge same-dir">SAME_DIR</span>
+        </div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value" style="color:#bc8cff">GWS +30.5</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">35.1</div></div>
+        <div class="stat"><div class="stat-label">Win%</div><div class="stat-value" style="color:#bc8cff">GWS 80.8%</div></div>
+        <div class="stat"><div class="stat-label">BetMate</div><div class="stat-value">GWS +50.3</div></div>
+      </div>
+      <table class="market-table">
+        <thead><tr><th>Market</th><th>Side</th><th>Model%</th><th>Mkt%</th><th>Best $</th><th>Book</th><th>EV</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="signal-invest">
+            <td>Spread</td><td style="color:#58a6ff">ESS +39.5</td>
+            <td>60.1%</td><td>52.6%</td><td style="color:#fff;font-weight:700">$1.90</td><td>Sportsbet</td>
+            <td class="ev-pos">+14.2%</td><td class="verdict-invest">⚡ REVISIT THU</td>
+          </tr>
+          <tr class="signal-pass">
+            <td>H2H</td><td>Essendon</td>
+            <td>19.2%</td><td>12.8%</td><td>$7.60</td><td>Betfair</td>
+            <td>+46%</td><td class="verdict-pass">DATA ALERT</td>
+          </tr>
+          <tr class="signal-pass">
+            <td>H2H</td><td>GWS</td>
+            <td>80.8%</td><td>87.2%</td><td>$1.12</td><td>Unibet</td>
+            <td class="ev-neg">−9.6%</td><td class="verdict-pass">PASS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- RICH v HAW -->
+    <div class="game-block">
+      <div class="game-header">
+        <div class="game-title">Richmond v Hawthorn · M.C.G. · Sun Jul 20</div>
+        <div class="game-badges">
+          <span class="badge same-dir">SAME_DIR</span>
+        </div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value">HAW +50.0</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">37.2</div></div>
+        <div class="stat"><div class="stat-label">Win%</div><div class="stat-value">HAW 91.1%</div></div>
+        <div class="stat"><div class="stat-label">Market</div><div class="stat-value">HAW −51.5</div></div>
+      </div>
+      <table class="market-table">
+        <thead><tr><th>Market</th><th>Side</th><th>Model%</th><th>Mkt%</th><th>Best $</th><th>EV</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="signal-pass">
+            <td>Spread</td><td>RICH +51.5</td><td>51.6%</td><td>52.6%</td><td>$1.90</td><td class="ev-neg">−1.9%</td><td class="verdict-pass">PASS</td>
+          </tr>
+          <tr class="signal-pass">
+            <td>H2H</td><td>Hawthorn</td><td>91.1%</td><td>91.8%</td><td>$1.07</td><td class="ev-neg">−2.6%</td><td class="verdict-pass">PASS</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- COLL v CARL -->
+    <div class="game-block">
+      <div class="game-header">
+        <div class="game-title">Collingwood v Carlton · M.C.G. · Sat Jul 19</div>
+        <div class="game-badges"><span class="badge weak">WEAK</span></div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value">COLL +9.0</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">32.1</div></div>
+        <div class="stat"><div class="stat-label">Win%</div><div class="stat-value">61.0%</div></div>
+        <div class="stat"><div class="stat-label">Market</div><div class="stat-value">COLL −6.5</div></div>
+      </div>
+      <table class="market-table">
+        <thead><tr><th>Market</th><th>Side</th><th>Model%</th><th>Mkt%</th><th>EV</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="signal-pass"><td>H2H</td><td>Collingwood</td><td>61.0%</td><td>58.6%</td><td class="ev-pos">+2.5%</td><td class="verdict-pass">PASS — sub-3% EV</td></tr>
+          <tr class="signal-pass"><td>Spread</td><td>COLL −6.5</td><td>53.1%</td><td>52.6%</td><td class="ev-pos">+1.4%</td><td class="verdict-pass">PASS</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- NM v MELB -->
+    <div class="game-block">
+      <div class="game-header">
+        <div class="game-title">North Melbourne v Melbourne · Docklands · Sat Jul 19</div>
+        <div class="game-badges"><span class="badge soft">SOFT_DIV</span></div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value">MELB +14.0</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">39.1</div></div>
+        <div class="stat"><div class="stat-label">Win%</div><div class="stat-value">MELB 64%</div></div>
+        <div class="stat"><div class="stat-label">Market</div><div class="stat-value">MELB −14.5</div></div>
+      </div>
+      <table class="market-table">
+        <thead><tr><th>Market</th><th>Model%</th><th>Mkt%</th><th>EV</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="signal-pass"><td>H2H Melbourne</td><td>64.0%</td><td>65.4%</td><td class="ev-neg">−5.3%</td><td class="verdict-pass">PASS — model=market</td></tr>
+          <tr class="signal-pass"><td>Spd NM +14.5</td><td>50.5%</td><td>52.6%</td><td class="ev-neg">−4.0%</td><td class="verdict-pass">PASS</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- SYD v ADE -->
+    <div class="game-block">
+      <div class="game-header">
+        <div class="game-title">Sydney v Adelaide · S.C.G. · Thu Jul 17</div>
+        <div class="game-badges"><span class="badge weak">WEAK</span></div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value">SYD +11.0</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">40.0</div></div>
+        <div class="stat"><div class="stat-label">Win%</div><div class="stat-value">SYD 60.8%</div></div>
+        <div class="stat"><div class="stat-label">Market</div><div class="stat-value">SYD −12.5</div></div>
+      </div>
+      <table class="market-table">
+        <thead><tr><th>Market</th><th>Model%</th><th>Mkt%</th><th>EV</th><th>Verdict</th></tr></thead>
+        <tbody>
+          <tr class="signal-pass"><td>H2H Sydney</td><td>60.8%</td><td>63.3%</td><td class="ev-neg">−6.3%</td><td class="verdict-pass">PASS</td></tr>
+          <tr class="signal-pass"><td>H2H Adelaide</td><td>39.2%</td><td>36.7%</td><td class="ev-pos">+4.2%</td><td class="verdict-pass">PASS — mkt has SYD right</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- PORT v FRE DATA ALERT -->
+    <div class="game-block has-alert">
+      <div class="game-header">
+        <div class="game-title">Port Adelaide v Fremantle · Adelaide Oval · Sat Jul 19</div>
+        <div class="game-badges">
+          <span class="badge soft">SOFT_DIV</span>
+          <span class="badge alert-badge">DATA ALERT</span>
+        </div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value">FRE +10.5</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">35.0</div></div>
+        <div class="stat"><div class="stat-label">Model FRE%</div><div class="stat-value">61.8%</div></div>
+        <div class="stat"><div class="stat-label">Market PORT</div><div class="stat-value" style="color:#f85149">$11.00!</div></div>
+      </div>
+      <div style="padding:10px 14px;background:#2d1b00;font-size:11px;color:#d29922">
+        ⚠️ Market implies 91% FRE (PORT only 9%). Model gives FRE 61.8%. 29pt probability gap. Do not bet — likely PORT availability news already priced in. Investigate Thursday before any action.
+      </div>
+    </div>
+
+    <!-- WCE v BRL DATA ALERT -->
+    <div class="game-block has-alert">
+      <div class="game-header">
+        <div class="game-title">West Coast v Brisbane · Perth Stadium · Sat Jul 19</div>
+        <div class="game-badges">
+          <span class="badge soft">SOFT_DIV</span>
+          <span class="badge alert-badge">DATA ALERT</span>
+        </div>
+      </div>
+      <div class="game-stats">
+        <div class="stat"><div class="stat-label">Model</div><div class="stat-value">BRL +25.0</div></div>
+        <div class="stat"><div class="stat-label">σ</div><div class="stat-value">38.0</div></div>
+        <div class="stat"><div class="stat-label">Model BRL%</div><div class="stat-value">74.5%</div></div>
+        <div class="stat"><div class="stat-label">Market WCE</div><div class="stat-value" style="color:#f85149">$9.50!</div></div>
+      </div>
+      <div style="padding:10px 14px;background:#2d1b00;font-size:11px;color:#d29922">
+        ⚠️ Market spread BRL −44.5; model BRL by 25.0. 19.5pt discrepancy. WCE chain data sparse in R13–R15 — model may understate Brisbane quality or WCE has news in market. Do not bet until explained.
+      </div>
+    </div>
+
+  </div>
+
+  <!-- THURSDAY CHECKLIST -->
+  <div class="section-title">Thursday Refresh Checklist</div>
+  <div class="checklist">
+    <h3>📋 Post-Lineups Actions — Thu Jul 17, 6:20pm AEST</h3>
+    <div class="check-item">
+      <span class="check-num">1</span>
+      <span class="check-game">PORT v FRE</span>
+      <span class="check-text">Investigate PORT availability. If 2+ key players missing → market is right, PASS. If data artefact → re-run Phase 4 with updated line.</span>
+      <span class="check-prio prio-high">CRITICAL</span>
+    </div>
+    <div class="check-item">
+      <span class="check-num">2</span>
+      <span class="check-game">WCE v BRL</span>
+      <span class="check-text">Check WCE named squad. 19.5pt model-market spread gap needs explanation before any action.</span>
+      <span class="check-prio prio-high">CRITICAL</span>
+    </div>
+    <div class="check-item">
+      <span class="check-num">3</span>
+      <span class="check-game">ESS v GWS</span>
+      <span class="check-text">ESS +39.5 INVESTIGATE: confirm GWS travel/squad and Essendon home factor. Upgrade to BET if lineups support edge. QI 57, EV +14.2%.</span>
+      <span class="check-prio prio-normal">UPGRADE CANDIDATE</span>
+    </div>
+    <div class="check-item">
+      <span class="check-num">4</span>
+      <span class="check-game">GEEL v STK</span>
+      <span class="check-text">Confirm STK team selection. Any key STK outs widen the edge further. Line likely moves toward model if Steam confirms.</span>
+      <span class="check-prio prio-normal">CONFIRM BET</span>
+    </div>
+    <div class="check-item">
+      <span class="check-num">5</span>
+      <span class="check-game">GC v WB</span>
+      <span class="check-text">Confirm Gold Coast home squad and Bulldogs travel. Carrara home advantage is structural; confirm no key GC outs.</span>
+      <span class="check-prio prio-normal">CONFIRM BET</span>
+    </div>
+    <div class="check-item">
+      <span class="check-num">6</span>
+      <span class="check-game">MoSHBODS + FootyF</span>
+      <span class="check-text">Re-run BMA when 4th/5th sources publish mid-week. May shift model lines 1–3 pts. If any game crosses 2pt market gap threshold, re-evaluate signals.</span>
+      <span class="check-prio prio-normal">BMA UPDATE</span>
+    </div>
+  </div>
+
+  <!-- CLV FRAMEWORK -->
+  <div class="section-title">Phase 6 — CLV Framework</div>
+  <div class="game-block" style="margin-bottom:20px">
+    <table class="clv-table">
+      <thead><tr><th>Bet</th><th>Open Line</th><th>Open Price</th><th>Target Close</th><th>CLV Gate</th><th>CLV Signal</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="color:#fff;font-weight:600">GEEL −12.5 spread</td>
+          <td>−12.5</td>
+          <td>$1.90 TAB</td>
+          <td>−14.5 to −16.0</td>
+          <td style="color:#3fb950">Line moves toward model</td>
+          <td style="color:#3fb950">GOOD if ≥ −14.5 at close</td>
+        </tr>
+        <tr>
+          <td style="color:#fff;font-weight:600">GC H2H</td>
+          <td>$1.92</td>
+          <td>$1.92 PointsBet</td>
+          <td>&lt; $1.80</td>
+          <td style="color:#3fb950">GC shortens = sharp agree</td>
+          <td style="color:#3fb950">GOOD if close &lt; $1.80</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="footer">
+    Generated by AFL · Round 19 2026 · OPENER window · Mon Jul 13 2026<br>
+    Sources: Wheelo (source=26, wt 0.560) · Squiggle (source=1, wt 0.440) · MoSHBODS/FootyF not yet published<br>
+    ⚠️ PORT v FRE and WCE v BRL market prices warrant investigation before any action
+  </div>
+</div>
+</body>
+</html>
