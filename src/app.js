@@ -3261,6 +3261,7 @@ function bindMatchDetailTabs() {
 }
 
 function isOwnerResultsMode() {
+  if (!document.querySelector('[data-view-tab="results"]')) return false;
   const params = new URLSearchParams(window.location.search);
   return window.location.hash === '#results'
     || params.get('view') === 'results'

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: Analysis Hub</title>
-  <link rel="stylesheet" href="./src/styles.css?v=20260714-ufc-hierarchy">
+  <link rel="stylesheet" href="./src/styles.css?v=20260714-ufc-only">
 </head>
 <body>
   <main class="app-shell">
@@ -23,16 +23,6 @@
 
     <nav class="view-tabs top-view-tabs hierarchy-tabs" aria-label="Analysis hierarchy">
       <button class="view-tab hierarchy-primary active" data-view-tab="ufc" type="button">UFC</button>
-      <span class="hierarchy-label">FIFA World Cup</span>
-      <button class="view-tab" data-view-tab="matches" type="button">Matches</button>
-      <button class="view-tab" data-view-tab="highValue" type="button">High Value Bets</button>
-      <button class="view-tab" data-view-tab="props" type="button">Player Props</button>
-      <button class="view-tab" data-view-tab="scan" type="button">Market Summary</button>
-      <button class="view-tab" data-view-tab="strategy" type="button">Strategy</button>
-      <span class="hierarchy-label">Platform</span>
-      <button class="view-tab" data-view-tab="betmateAustralia" type="button">BetMate Australia</button>
-      <button class="view-tab" data-view-tab="history" data-owner-only type="button">Bet History <span data-history-count>0</span></button>
-      <button class="view-tab" data-view-tab="results" type="button">Results <span data-results-count>0</span></button>
     </nav>
 
     <p class="error" data-app-error></p>
@@ -428,10 +418,10 @@
 
   </main>
 
-  <script src="./src/calculations.js?v=20260714-ufc-hierarchy"></script>
-  <script src="./src/embeddedData.js?v=20260714-ufc-hierarchy"></script>
-  <script src="./src/embeddedBetHistory.js?v=20260714-ufc-hierarchy"></script>
-  <script src="./src/embeddedPlayerProps.js?v=20260714-ufc-hierarchy"></script>
-  <script src="./src/app.js?v=20260714-ufc-hierarchy"></script>
+  <script src="./src/calculations.js?v=20260714-ufc-only"></script>
+  <script src="./src/embeddedData.js?v=20260714-ufc-only"></script>
+  <script src="./src/embeddedBetHistory.js?v=20260714-ufc-only"></script>
+  <script src="./src/embeddedPlayerProps.js?v=20260714-ufc-only"></script>
+  <script src="./src/app.js?v=20260714-ufc-only"></script>
 </body>
 </html>
