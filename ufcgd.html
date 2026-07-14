@@ -1,52 +1,20 @@
-<!doctype html><html><head><meta charset="utf-8"><title>UFCgd Upcoming Markov Analysis</title>
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>UFCgd Upcoming Markov Analysis</title>
 <style>
-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif;margin:0;background:#f4f6f8;color:#14202b}
-main{margin:28px}
-h1,h2{margin:0 0 10px}p{max-width:1120px;line-height:1.45;color:#405064}
-.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}
-.tile{background:white;border:1px solid #d8dee8;border-radius:8px;padding:14px}.big{font-size:30px;font-weight:760}
-table{border-collapse:collapse;width:100%;background:white;margin:12px 0 28px}th,td{border:1px solid #d8dee8;padding:8px 10px;text-align:left;font-size:13px;vertical-align:top}th{background:#e9eff6}
-.tabs{position:sticky;top:0;z-index:5;display:flex;gap:6px;padding:12px 28px;background:#ffffff;border-bottom:1px solid #d8dee8}
-.tab-btn{border:1px solid #c9d2df;background:#f7f9fb;border-radius:8px;padding:9px 12px;font-weight:700;color:#233244;cursor:pointer}
-.tab-btn.active{background:#14202b;color:white;border-color:#14202b}
-.tab-panel{display:none}.tab-panel.active{display:block}
-.member-table th{font-size:12px;text-transform:uppercase;letter-spacing:.02em}.member-table td{font-size:14px;line-height:1.35}
-.member-table td:nth-child(11){min-width:420px;white-space:normal}
-.section-note{margin-top:-4px;margin-bottom:10px;color:#5b6877}
-.best-list{display:grid;gap:12px;margin:12px 0 26px;max-width:1220px}
-.best-card{display:grid;grid-template-columns:46px minmax(280px,1fr) 130px 130px 150px;gap:14px;align-items:center;background:#fff;border:1px solid #d8dee8;border-left:5px solid #0d6b3f;border-radius:8px;padding:14px}
-.best-card.edge-elite{border-left-color:#047857;background:linear-gradient(90deg,#ecfdf5 0%,#ffffff 18%)}
-.best-card.edge-strong{border-left-color:#16a34a;background:linear-gradient(90deg,#f0fdf4 0%,#ffffff 16%)}
-.best-card.edge-watch{border-left-color:#ca8a04;background:linear-gradient(90deg,#fffbeb 0%,#ffffff 16%)}
-.best-card.edge-low{border-left-color:#94a3b8}
-.best-rank{width:34px;height:34px;border-radius:999px;background:#14202b;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
-.best-main h3{margin:3px 0 5px;font-size:22px}.best-main p{margin:0;color:#334155;line-height:1.35}
-.best-meta{font-size:12px;text-transform:uppercase;letter-spacing:.03em;color:#64748b}
-.best-price,.best-stat{background:#f7f9fb;border:1px solid #e1e7ef;border-radius:8px;padding:10px;min-height:76px}
-.edge-elite .best-stat:nth-of-type(2){background:#dcfce7;border-color:#86efac}
-.edge-strong .best-stat:nth-of-type(2){background:#ecfdf5;border-color:#bbf7d0}
-.edge-watch .best-stat:nth-of-type(2){background:#fef3c7;border-color:#fde68a}
-.best-price strong,.best-stat strong{display:block;font-size:24px;line-height:1.1;margin:3px 0;color:#14202b}
-.best-price span,.best-stat span{display:block;color:#526173;font-size:12px}.label{font-weight:800;text-transform:uppercase;letter-spacing:.03em;color:#64748b!important}
-.best-history{grid-column:2 / -1;color:#405064;background:#f8fafc;border:1px solid #e1e7ef;border-radius:8px;padding:8px 10px;font-size:13px}
-.edge-chip{display:inline-block;border-radius:999px;padding:4px 8px;font-weight:800;font-size:12px;white-space:nowrap}
-.edge-chip.edge-elite{background:#bbf7d0;color:#065f46}
-.edge-chip.edge-strong{background:#dcfce7;color:#166534}
-.edge-chip.edge-watch{background:#fef3c7;color:#854d0e}
-.edge-chip.edge-low{background:#e2e8f0;color:#475569}
-.guardrail-box{background:white;border:1px solid #d8dee8;border-radius:8px;padding:14px;margin:14px 0 22px;max-width:1120px}
-.guardrail-box ol{margin:8px 0 0 20px;padding:0;color:#334155;line-height:1.5}
-.bout-card{background:white;border:1px solid #d8dee8;border-radius:8px;padding:16px;margin:12px 0 18px;max-width:1180px}
-.bout-card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:1px solid #e5e9f0;padding-bottom:10px;margin-bottom:12px}
-.bout-card h3{margin:2px 0 0;font-size:20px}.card-kicker{font-size:12px;color:#64748b;text-transform:uppercase;letter-spacing:.03em}
-.badge{background:#e8f5ee;color:#0d6b3f;border:1px solid #bfe3cf;border-radius:999px;padding:6px 10px;font-weight:760;white-space:nowrap}
-.card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:12px}
-.card-grid div{background:#f7f9fb;border:1px solid #e1e7ef;border-radius:8px;padding:10px}.card-grid strong{display:block;font-size:12px;color:#526173;margin-bottom:4px}.card-grid span{font-weight:700}
-.checklist{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;list-style:none;margin:8px 0 0;padding:0}.checklist li{border:1px solid #e1e7ef;border-radius:8px;padding:8px;background:#f8fafc}.checklist span{font-weight:800;margin-right:4px}.checklist .pass span{color:#0d6b3f}.checklist .miss span{color:#9b1c31}
-.goodcell{font-weight:760;color:#0d6b3f}.warncell{font-weight:760;color:#9a5a00}.mutedcell{color:#566579}
-.tag{font-weight:700}.warn{color:#8a4f00}.good{color:#0d6b3f}.bad{color:#9b1c31}
-@media(max-width:900px){main{margin:16px}.tabs{padding:10px 16px;overflow-x:auto}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.best-card{grid-template-columns:38px 1fr}.best-price,.best-stat,.best-history{grid-column:2}table{display:block;overflow-x:auto;white-space:nowrap}}
+:root{color-scheme:dark;--bg:#151412;--panel:#20201c;--panel-2:#292820;--border:#444033;--text:#f6f1df;--muted:#b9ad91;--green:#3ddc97;--green-soft:rgba(61,220,151,.16);--gold:#f5bc42;--purple:#a78bfa;--rust:#d96c45;--ink:#10100e}
+*{box-sizing:border-box}body{margin:0;min-width:320px;background:linear-gradient(180deg,rgba(217,108,69,.08),transparent 320px),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button{color:inherit;font:inherit}.app-shell{width:min(1280px,calc(100% - 32px));margin:0 auto;padding:28px 0 56px}.app-header{display:flex;justify-content:space-between;gap:20px;align-items:end;padding:8px 0 24px}.subhead,.eyebrow{margin:0;color:var(--gold);font-weight:800;text-transform:uppercase}.subhead{margin-top:8px;font-size:clamp(15px,2vw,22px)}h1,h2,h3,h4,p{margin-top:0}h1{margin-bottom:0;font-size:clamp(32px,6vw,62px);line-height:.95;letter-spacing:0;max-width:860px}h2{margin:0 0 8px;font-size:22px}h3{margin-bottom:16px;font-size:17px;line-height:1.3}p{max-width:1120px;line-height:1.5;color:var(--muted)}.status-strip,.header-link{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:0 12px;border:1px solid var(--border);border-radius:8px;background:var(--panel);color:var(--muted);white-space:nowrap}.header-link{background:var(--gold);border-color:var(--gold);color:var(--ink);font-weight:900;text-decoration:none}.status-dot{width:9px;height:9px;border-radius:50%;background:var(--green)}.view-tabs{display:flex;gap:8px;flex-wrap:wrap}.top-view-tabs{margin:-8px 0 18px}.hierarchy-tabs{align-items:center;padding:10px;border:1px solid var(--border);border-radius:8px;background:rgba(16,16,14,.34)}.view-tab,.tab-btn{min-height:42px;padding:0 14px;border:1px solid var(--border);border-radius:8px;background:var(--panel-2);font-weight:900;white-space:nowrap;cursor:pointer}.view-tab{display:inline-flex;align-items:center;text-decoration:none}.hierarchy-primary{min-width:116px;border-color:rgba(245,188,66,.76);background:var(--gold);color:var(--ink);box-shadow:inset 0 0 0 1px rgba(245,188,66,.2)}.tabs{position:sticky;top:0;z-index:5;display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px;padding:10px;border:1px solid var(--border);border-radius:8px;background:rgba(32,32,28,.95);backdrop-filter:blur(10px)}.tab-btn.active{background:var(--gold);color:var(--ink);border-color:var(--gold)}.tab-panel{display:none}.tab-panel.active{display:block}.report-body{display:block}.report-title{padding:18px;margin-bottom:18px;border:1px solid var(--border);border-radius:8px;background:linear-gradient(180deg,rgba(61,220,151,.08),rgba(16,16,14,.45))}.grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:18px 0}.tile,.guardrail-box,.bout-card,.best-card,.best-price,.best-stat,.card-grid div{border:1px solid var(--border);border-radius:8px;background:var(--panel);padding:14px}.tile{min-height:96px}.tile>div:first-child,.label,.best-meta,.card-kicker,.card-grid strong{display:block;color:var(--muted);font-size:12px;font-weight:900;text-transform:uppercase}.big{font-size:30px;font-weight:800;color:var(--text)}table{border-collapse:collapse;width:100%;margin:12px 0 28px;background:var(--panel);border:1px solid var(--border);border-radius:8px;overflow:hidden}th,td{border:1px solid var(--border);padding:9px 10px;text-align:left;font-size:13px;vertical-align:top}th{background:var(--panel-2);color:var(--gold);font-size:12px;text-transform:uppercase}td{color:var(--text)}.member-table td{font-size:14px;line-height:1.35}.member-table td:nth-child(11){min-width:420px;white-space:normal}.section-note{margin-top:-4px;margin-bottom:14px;color:var(--muted)}.best-list{display:grid;gap:12px;margin:12px 0 26px;max-width:1220px}.best-card{display:grid;grid-template-columns:46px minmax(280px,1fr) 130px 130px 150px;gap:14px;align-items:center;border-left:5px solid var(--green)}.best-card.edge-elite{border-left-color:var(--green);background:linear-gradient(90deg,rgba(61,220,151,.16),var(--panel) 20%)}.best-card.edge-strong{border-left-color:#22c55e;background:linear-gradient(90deg,rgba(34,197,94,.12),var(--panel) 18%)}.best-card.edge-watch{border-left-color:#f59e0b;background:linear-gradient(90deg,rgba(245,158,11,.14),var(--panel) 18%)}.best-card.edge-low{border-left-color:#64748b}.best-rank{width:34px;height:34px;border-radius:999px;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:900}.best-main h3{margin:3px 0 5px;font-size:22px}.best-main p{margin:0;color:var(--muted);line-height:1.35}.best-price,.best-stat{min-height:76px;background:var(--panel-2)}.best-price strong,.best-stat strong{display:block;font-size:24px;line-height:1.1;margin:3px 0;color:var(--text)}.best-price span,.best-stat span{display:block;color:var(--muted);font-size:12px}.best-history{grid-column:2/-1;color:var(--muted);background:rgba(61,220,151,.08);border:1px solid rgba(61,220,151,.25);border-radius:8px;padding:8px 10px;font-size:13px}.edge-chip{display:inline-block;border-radius:999px;padding:4px 8px;font-weight:900;font-size:12px;white-space:nowrap}.edge-chip.edge-elite{background:#bbf7d0;color:#065f46}.edge-chip.edge-strong{background:#dcfce7;color:#166534}.edge-chip.edge-watch{background:#fef3c7;color:#854d0e}.edge-chip.edge-low{background:#334155;color:#cbd5e1}.guardrail-box{margin:14px 0 22px;max-width:1120px}.guardrail-box ol{margin:8px 0 0 20px;padding:0;color:var(--muted);line-height:1.5}.bout-card{margin:12px 0 18px;max-width:1180px}.bout-card-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;border-bottom:1px solid var(--border);padding-bottom:10px;margin-bottom:12px}.bout-card h3{margin:2px 0 0;font-size:20px}.badge{background:var(--green-soft);color:var(--green);border:1px solid rgba(61,220,151,.35);border-radius:999px;padding:6px 10px;font-weight:900;white-space:nowrap}.card-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-bottom:12px}.card-grid div{background:var(--panel-2)}.card-grid span{font-weight:800;color:var(--text)}.checklist{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;list-style:none;margin:8px 0 0;padding:0}.checklist li{border:1px solid var(--border);border-radius:8px;padding:8px;background:var(--panel-2);color:var(--muted)}.checklist span{font-weight:900;margin-right:4px}.checklist .pass span,.goodcell,.good{color:var(--green)}.checklist .miss span,.bad{color:var(--rust)}.warncell,.warn{font-weight:800;color:#f59e0b}.mutedcell{color:var(--muted)}.tag{font-weight:800}.back-link{margin-left:auto}@media(max-width:900px){.app-shell{width:min(100% - 24px,1280px);padding-top:18px}.app-header{align-items:flex-start;flex-direction:column}.tabs{overflow-x:auto;flex-wrap:nowrap}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.best-card{grid-template-columns:38px 1fr}.best-price,.best-stat,.best-history{grid-column:2}table{display:block;overflow-x:auto;white-space:nowrap}.card-grid,.checklist{grid-template-columns:1fr}.bout-card-head{flex-direction:column}}
 </style></head><body>
+<main class="app-shell">
+<header class="app-header">
+  <div>
+    <h1>BetMate Edge</h1>
+    <p class="subhead">Analysis Hub</p>
+  </div>
+  <div class="status-strip"><span class="status-dot"></span><span>UFC module live</span></div>
+</header>
+<nav class="view-tabs top-view-tabs hierarchy-tabs" aria-label="Analysis hierarchy">
+  <a class="view-tab hierarchy-primary" href="./ufcgd.html">UFC</a>
+  <a class="header-link back-link" href="./">Hub</a>
+</nav>
 <div class="tabs">
 <button class="tab-btn active" data-tab="summary">Best Bets</button>
 <button class="tab-btn" data-tab="member">Member View</button>
@@ -56,9 +24,11 @@ table{border-collapse:collapse;width:100%;background:white;margin:12px 0 28px}th
 <button class="tab-btn" data-tab="learning">Self Learning</button>
 <button class="tab-btn" data-tab="history">Selection History</button>
 </div>
-<main>
+<section class="report-body">
+<div class="report-title">
 <h1>UFCgd Upcoming Markov Bout Analysis</h1>
 <p>Sportsbet-priced upcoming bouts shown in Melbourne time. UFCgd is now operating in dog-bets-only mode. Geoff View audits the favourite first, then only promotes an underdog when the favourite looks overpriced, the dog has a credible fight path, and the historical dog-edge bucket supports the price.</p>
+</div>
 <div class="grid"><div class="tile"><div>Priced Bouts</div><div class="big">12</div></div><div class="tile"><div>Release-Grade Markov Rows</div><div class="big">3</div></div><div class="tile"><div>False Fav / Dog Rows</div><div class="big">2</div></div><div class="tile"><div>Clean Rows</div><div class="big">3</div></div></div>
 <section id="summary" class="tab-panel active">
 <h2>Best Bets</h2>
@@ -264,6 +234,7 @@ table{border-collapse:collapse;width:100%;background:white;margin:12px 0 28px}th
 <h2>Selection Trend Count</h2>
 <tr><td>Kamaru Usman</td><td>1</td></tr><tr><td>Tabatha Ricci</td><td>1</td></tr><tr><td>Gillian Robertson</td><td>1</td></tr><tr><td>Jared Cannonier</td><td>1</td></tr>
 
+</section>
 </section>
 </main>
 <script>
