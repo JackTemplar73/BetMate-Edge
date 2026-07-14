@@ -25,6 +25,7 @@
       <button class="view-tab hierarchy-primary active" data-view-tab="ufc" type="button">UFC</button>
       <button class="view-tab hierarchy-primary" data-view-tab="nrl" type="button">NRL</button>
       <button class="view-tab hierarchy-primary" data-view-tab="afl" type="button">AFL</button>
+          <button class="view-tab hierarchy-primary" data-view-tab="winrates" type="button">Win Rates</button>
     </nav>
 
     <p class="error" data-app-error></p>
@@ -80,6 +81,18 @@
         <iframe src="./afl_r19_2026.html" style="width:100%;height:100%;border:none;display:block;background:#0d1117;" title="AFL Round 19 2026 Analysis" loading="lazy"></iframe>
       </div>
     </section>
+          <section class="table-section winrates-section hidden" data-view-section="winrates">
+            <div class="section-heading">
+              <div>
+                <h2>AFL Win Rates</h2>
+                <p>Model calibration · 734 predictions · where the model's probability can be trusted</p>
+              </div>
+              <a class="header-link" href="./afl_calibration.html" target="_blank" rel="noopener">Open full report</a>
+            </div>
+            <div style="width:100%;height:calc(100vh - 160px);min-height:700px;">
+              <iframe src="./afl_calibration.html" style="width:100%;height:100%;border:none;display:block;background:#0d1117;" title="AFL Historical Win Rates &amp; Model Calibration" loading="lazy"></iframe>
+            </div>
+          </section>
 
     <section class="table-section high-value-section hidden" data-view-section="highValue">
       <div class="section-heading">
@@ -463,6 +476,25 @@
       });
       document.querySelectorAll('[data-view-tab]').forEach(function(b) {
         b.classList.toggle('active', b === aflBtn);
+      });
+    });
+  })();
+  </script>
+
+  <script>
+  (function() {
+    var wrBtn = document.querySelector('[data-view-tab="winrates"]');
+    if (!wrBtn) return;
+    wrBtn.addEventListener('click', function() {
+      if (typeof state !== 'undefined') {
+        state.activeView = 'winrates';
+        if (typeof renderViewTabs === 'function') renderViewTabs();
+      }
+      document.querySelectorAll('[data-view-section]').forEach(function(s) {
+        s.classList.toggle('hidden', s.dataset.viewSection !== 'winrates');
+      });
+      document.querySelectorAll('[data-view-tab]').forEach(function(b) {
+        b.classList.toggle('active', b === wrBtn);
       });
     });
   })();
