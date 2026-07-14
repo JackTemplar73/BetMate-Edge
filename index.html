@@ -31,6 +31,8 @@
       <button class="view-tab hierarchy-primary active" data-view-tab="ufc" type="button">UFC</button>
       <button class="view-tab hierarchy-primary" data-view-tab="nrl" type="button">NRL</button>
       <button class="view-tab hierarchy-primary" data-view-tab="afl" type="button">AFL</button>
+      <button class="view-tab hierarchy-primary" data-view-tab="nrlBands" type="button">NRL Bands</button>
+      <button class="view-tab hierarchy-primary" data-view-tab="aflBands" type="button">AFL Bands</button>
     </nav>
 
     <p class="error" data-app-error></p>
@@ -326,6 +328,180 @@
                 </tr>
               </tbody>
             </table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="table-section hidden band-analysis-section" data-view-section="nrlBands">
+      <div class="section-heading">
+        <div>
+          <h2>NRL Band Analysis</h2>
+          <p>Simple historical band summary: price-band win rate, ATS cover rate by spread band, and match totals over/under by total band.</p>
+        </div>
+        <a class="header-link" href="./nrl_dashboard.html" target="_blank" rel="noopener">Full page</a>
+      </div>
+
+      <section class="band-card-grid" aria-label="NRL band summary">
+        <article>
+          <span>Bets</span>
+          <strong>652</strong>
+        </article>
+        <article>
+          <span>Wins</span>
+          <strong>326</strong>
+        </article>
+        <article>
+          <span>Overall</span>
+          <strong>50.0%</strong>
+        </article>
+      </section>
+
+      <div class="band-grid">
+        <article class="band-panel">
+          <h3>Win % by Price Band</h3>
+          <div class="band-bars">
+            <div class="band-bar-row"><span>&lt;$1.50</span><div><b style="width:77.8%"></b></div><strong>77.8%</strong></div>
+            <div class="band-bar-row"><span>$1.50-$1.79</span><div><b style="width:55.2%"></b></div><strong>55.2%</strong></div>
+            <div class="band-bar-row"><span>$1.80-$1.99</span><div><b style="width:51.5%"></b></div><strong>51.5%</strong></div>
+            <div class="band-bar-row"><span>$2.00-$2.49</span><div><b style="width:42.7%"></b></div><strong>42.7%</strong></div>
+            <div class="band-bar-row"><span>$2.50+</span><div><b style="width:36.4%"></b></div><strong>36.4%</strong></div>
+          </div>
+          <div class="table-wrap compact-table">
+            <table><thead><tr><th>Price Band</th><th>Bets</th><th>Wins</th><th>Win %</th></tr></thead><tbody>
+              <tr><td>&lt;$1.50</td><td>9</td><td>7</td><td>77.8%</td></tr>
+              <tr><td>$1.50-$1.79</td><td>58</td><td>32</td><td>55.2%</td></tr>
+              <tr><td>$1.80-$1.99</td><td>431</td><td>222</td><td>51.5%</td></tr>
+              <tr><td>$2.00-$2.49</td><td>143</td><td>61</td><td>42.7%</td></tr>
+              <tr><td>$2.50+</td><td>11</td><td>4</td><td>36.4%</td></tr>
+            </tbody></table>
+          </div>
+        </article>
+
+        <article class="band-panel">
+          <h3>ATS Favourite Cover % by Spread Band</h3>
+          <div class="band-bars blue">
+            <div class="band-bar-row"><span>Pick / &lt;3.5</span><div><b style="width:37.2%"></b></div><strong>37.2%</strong></div>
+            <div class="band-bar-row"><span>3.5-6.5</span><div><b style="width:45.5%"></b></div><strong>45.5%</strong></div>
+            <div class="band-bar-row"><span>7.5-10.5</span><div><b style="width:47.7%"></b></div><strong>47.7%</strong></div>
+            <div class="band-bar-row"><span>11.5-14.5</span><div><b style="width:58.7%"></b></div><strong>58.7%</strong></div>
+            <div class="band-bar-row"><span>15.5+</span><div><b style="width:45.9%"></b></div><strong>45.9%</strong></div>
+          </div>
+          <div class="table-wrap compact-table">
+            <table><thead><tr><th>Spread Band</th><th>Games</th><th>Fav</th><th>Dog</th><th>Home</th></tr></thead><tbody>
+              <tr><td>Pick / &lt;3.5</td><td>78</td><td>37.2%</td><td>62.8%</td><td>43.6%</td></tr>
+              <tr><td>3.5-6.5</td><td>77</td><td>45.5%</td><td>54.5%</td><td>45.5%</td></tr>
+              <tr><td>7.5-10.5</td><td>88</td><td>47.7%</td><td>52.3%</td><td>54.5%</td></tr>
+              <tr><td>11.5-14.5</td><td>46</td><td>58.7%</td><td>41.3%</td><td>60.9%</td></tr>
+              <tr><td>15.5+</td><td>37</td><td>45.9%</td><td>54.1%</td><td>40.5%</td></tr>
+            </tbody></table>
+          </div>
+        </article>
+
+        <article class="band-panel">
+          <h3>Match Totals Over % by Total Band</h3>
+          <div class="band-bars gold">
+            <div class="band-bar-row"><span>&lt;38.5</span><div><b style="width:50.0%"></b></div><strong>50.0%</strong></div>
+            <div class="band-bar-row"><span>38.5-41.5</span><div><b style="width:51.1%"></b></div><strong>51.1%</strong></div>
+            <div class="band-bar-row"><span>42.5-45.5</span><div><b style="width:50.1%"></b></div><strong>50.1%</strong></div>
+            <div class="band-bar-row"><span>46.5-49.5</span><div><b style="width:46.7%"></b></div><strong>46.7%</strong></div>
+            <div class="band-bar-row"><span>50.5+</span><div><b style="width:45.4%"></b></div><strong>45.4%</strong></div>
+          </div>
+          <div class="table-wrap compact-table">
+            <table><thead><tr><th>Total Band</th><th>Games</th><th>Over</th><th>Under</th></tr></thead><tbody>
+              <tr><td>&lt;38.5</td><td>460</td><td>50.0%</td><td>50.0%</td></tr>
+              <tr><td>38.5-41.5</td><td>612</td><td>51.1%</td><td>48.9%</td></tr>
+              <tr><td>42.5-45.5</td><td>877</td><td>50.1%</td><td>49.9%</td></tr>
+              <tr><td>46.5-49.5</td><td>433</td><td>46.7%</td><td>53.3%</td></tr>
+              <tr><td>50.5+</td><td>229</td><td>45.4%</td><td>54.6%</td></tr>
+            </tbody></table>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="table-section hidden band-analysis-section" data-view-section="aflBands">
+      <div class="section-heading">
+        <div>
+          <h2>AFL Band Analysis</h2>
+          <p>Simple historical band summary: price-band win rate, ATS cover rate by spread band, and match totals over/under by total band.</p>
+        </div>
+        <a class="header-link" href="./afl_dashboard.html" target="_blank" rel="noopener">Full page</a>
+      </div>
+
+      <section class="band-card-grid" aria-label="AFL band summary">
+        <article>
+          <span>Bets</span>
+          <strong>6,948</strong>
+        </article>
+        <article>
+          <span>Wins</span>
+          <strong>3,444</strong>
+        </article>
+        <article>
+          <span>Overall</span>
+          <strong>49.6%</strong>
+        </article>
+      </section>
+
+      <div class="band-grid">
+        <article class="band-panel">
+          <h3>Win % by Price Band</h3>
+          <div class="band-bars">
+            <div class="band-bar-row"><span>&lt;$1.50</span><div><b style="width:77.1%"></b></div><strong>77.1%</strong></div>
+            <div class="band-bar-row"><span>$1.50-$1.79</span><div><b style="width:56.8%"></b></div><strong>56.8%</strong></div>
+            <div class="band-bar-row"><span>$1.80-$1.99</span><div><b style="width:49.1%"></b></div><strong>49.1%</strong></div>
+            <div class="band-bar-row"><span>$2.00-$2.49</span><div><b style="width:43.4%"></b></div><strong>43.4%</strong></div>
+            <div class="band-bar-row"><span>$2.50+</span><div><b style="width:22.5%"></b></div><strong>22.5%</strong></div>
+          </div>
+          <div class="table-wrap compact-table">
+            <table><thead><tr><th>Price Band</th><th>Bets</th><th>Wins</th><th>Win %</th></tr></thead><tbody>
+              <tr><td>&lt;$1.50</td><td>2,219</td><td>1,710</td><td>77.1%</td></tr>
+              <tr><td>$1.50-$1.79</td><td>1,041</td><td>591</td><td>56.8%</td></tr>
+              <tr><td>$1.80-$1.99</td><td>470</td><td>231</td><td>49.1%</td></tr>
+              <tr><td>$2.00-$2.49</td><td>896</td><td>389</td><td>43.4%</td></tr>
+              <tr><td>$2.50+</td><td>2,322</td><td>523</td><td>22.5%</td></tr>
+            </tbody></table>
+          </div>
+        </article>
+
+        <article class="band-panel">
+          <h3>ATS Favourite Cover % by Spread Band</h3>
+          <div class="band-bars blue">
+            <div class="band-bar-row"><span>Pick / &lt;3.5</span><div><b style="width:52.7%"></b></div><strong>52.7%</strong></div>
+            <div class="band-bar-row"><span>3.5-6.5</span><div><b style="width:45.0%"></b></div><strong>45.0%</strong></div>
+            <div class="band-bar-row"><span>7.5-10.5</span><div><b style="width:45.7%"></b></div><strong>45.7%</strong></div>
+            <div class="band-bar-row"><span>11.5-14.5</span><div><b style="width:47.6%"></b></div><strong>47.6%</strong></div>
+            <div class="band-bar-row"><span>15.5+</span><div><b style="width:47.6%"></b></div><strong>47.6%</strong></div>
+          </div>
+          <div class="table-wrap compact-table">
+            <table><thead><tr><th>Spread Band</th><th>Games</th><th>Fav</th><th>Dog</th><th>Home</th></tr></thead><tbody>
+              <tr><td>Pick / &lt;3.5</td><td>220</td><td>52.7%</td><td>47.3%</td><td>58.2%</td></tr>
+              <tr><td>3.5-6.5</td><td>262</td><td>45.0%</td><td>55.0%</td><td>47.3%</td></tr>
+              <tr><td>7.5-10.5</td><td>346</td><td>45.7%</td><td>54.3%</td><td>50.9%</td></tr>
+              <tr><td>11.5-14.5</td><td>332</td><td>47.6%</td><td>52.4%</td><td>50.6%</td></tr>
+              <tr><td>15.5+</td><td>1,631</td><td>47.6%</td><td>52.4%</td><td>49.7%</td></tr>
+            </tbody></table>
+          </div>
+        </article>
+
+        <article class="band-panel">
+          <h3>Match Totals Over % by Total Band</h3>
+          <div class="band-bars gold">
+            <div class="band-bar-row"><span>&lt;160.5</span><div><b style="width:50.3%"></b></div><strong>50.3%</strong></div>
+            <div class="band-bar-row"><span>160.5-169.5</span><div><b style="width:47.9%"></b></div><strong>47.9%</strong></div>
+            <div class="band-bar-row"><span>170.5-179.5</span><div><b style="width:49.4%"></b></div><strong>49.4%</strong></div>
+            <div class="band-bar-row"><span>180.5-189.5</span><div><b style="width:46.7%"></b></div><strong>46.7%</strong></div>
+            <div class="band-bar-row"><span>190.5+</span><div><b style="width:44.9%"></b></div><strong>44.9%</strong></div>
+          </div>
+          <div class="table-wrap compact-table">
+            <table><thead><tr><th>Total Band</th><th>Games</th><th>Over</th><th>Under</th></tr></thead><tbody>
+              <tr><td>&lt;160.5</td><td>557</td><td>50.3%</td><td>49.7%</td></tr>
+              <tr><td>160.5-169.5</td><td>699</td><td>47.9%</td><td>52.1%</td></tr>
+              <tr><td>170.5-179.5</td><td>724</td><td>49.4%</td><td>50.6%</td></tr>
+              <tr><td>180.5-189.5</td><td>418</td><td>46.7%</td><td>53.3%</td></tr>
+              <tr><td>190.5+</td><td>187</td><td>44.9%</td><td>55.1%</td></tr>
+            </tbody></table>
           </div>
         </article>
       </div>

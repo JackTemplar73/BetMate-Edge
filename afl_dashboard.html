@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AFL Price Bands</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}body{background:#0d1117;color:#e6edf3;font-family:'Segoe UI',Arial,sans-serif;min-height:100vh}.header{background:linear-gradient(135deg,#1a2744 0%,#0d1117 100%);border-bottom:2px solid #1f3a6e;padding:18px 28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}h1{font-size:22px;color:#58a6ff}.subtitle,.updated{font-size:12px;color:#7d8590;margin-top:2px}main{padding:22px 28px 32px}.cards{display:grid;grid-template-columns:repeat(3,minmax(140px,1fr));gap:12px;margin-bottom:18px}.card,.panel{background:#161b22;border:1px solid #21262d;border-radius:10px}.card{padding:14px 16px}.label{color:#7d8590;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.value{display:block;margin-top:5px;font-size:24px;font-weight:800}.blue{color:#58a6ff}.green{color:#3fb950}.panel{overflow:hidden;margin-bottom:18px}.panel-head{padding:14px 16px;border-bottom:1px solid #21262d}.panel-head h2{font-size:15px;color:#c9d1d9}.chart{padding:16px}.bar-row{display:grid;grid-template-columns:110px 1fr 70px;gap:12px;align-items:center;margin:10px 0}.bar-label{font-size:13px;color:#c9d1d9}.bar-track{height:24px;background:#21262d;border-radius:6px;overflow:hidden}.bar-fill{height:100%;background:#3fb950}.bar-fill.alt{background:#58a6ff}.bar-fill.total{background:#d29922}.bar-num{font-weight:800;text-align:right;color:#e6edf3}.table-wrap{overflow-x:auto}table{width:100%;border-collapse:collapse}th{background:#21262d;color:#8b949e;font-size:11px;text-transform:uppercase;letter-spacing:.5px;padding:9px 10px;text-align:left;white-space:nowrap}td{border-top:1px solid #21262d;padding:9px 10px;font-size:13px;white-space:nowrap}tr:hover td{background:#1c2128}.num{text-align:right;font-variant-numeric:tabular-nums}@media(max-width:800px){.cards{grid-template-columns:1fr}main{padding:16px}.bar-row{grid-template-columns:90px 1fr 58px}}
+</style></head><body>
+<header class="header"><div><h1>AFL Win % by Price Band</h1><p class="subtitle">Match-winner result grouped by H2H price</p></div><span class="updated">Last generated: 14 Jul 2026 18:10</span></header>
+<main>
+<section class="cards"><div class="card"><span class="label">Bets</span><span class="value blue">6948</span></div><div class="card"><span class="label">Wins</span><span class="value green">3444</span></div><div class="card"><span class="label">Overall</span><span class="value">49.6%</span></div></section>
+<section class="panel"><div class="panel-head"><h2>Win % by Price Band</h2></div><div class="chart">
+        <div class="bar-row">
+          <div class="bar-label">&lt;$1.50</div>
+          <div class="bar-track"><div class="bar-fill" style="width:77.1%"></div></div>
+          <div class="bar-num">77.1%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">$1.50-$1.79</div>
+          <div class="bar-track"><div class="bar-fill" style="width:56.8%"></div></div>
+          <div class="bar-num">56.8%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">$1.80-$1.99</div>
+          <div class="bar-track"><div class="bar-fill" style="width:49.1%"></div></div>
+          <div class="bar-num">49.1%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">$2.00-$2.49</div>
+          <div class="bar-track"><div class="bar-fill" style="width:43.4%"></div></div>
+          <div class="bar-num">43.4%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">$2.50+</div>
+          <div class="bar-track"><div class="bar-fill" style="width:22.5%"></div></div>
+          <div class="bar-num">22.5%</div>
+        </div></div></section>
+<section class="panel"><div class="panel-head"><h2>Band Table</h2></div><div class="table-wrap"><table><thead><tr><th>Price Band</th><th class="num">Bets</th><th class="num">Wins</th><th class="num">Win %</th></tr></thead><tbody><tr><td>&lt;$1.50</td><td class='num'>2219</td><td class='num'>1710</td><td class='num'>77.1%</td></tr>
+<tr><td>$1.50-$1.79</td><td class='num'>1041</td><td class='num'>591</td><td class='num'>56.8%</td></tr>
+<tr><td>$1.80-$1.99</td><td class='num'>470</td><td class='num'>231</td><td class='num'>49.1%</td></tr>
+<tr><td>$2.00-$2.49</td><td class='num'>896</td><td class='num'>389</td><td class='num'>43.4%</td></tr>
+<tr><td>$2.50+</td><td class='num'>2322</td><td class='num'>523</td><td class='num'>22.5%</td></tr></tbody></table></div></section>
+<section class="panel"><div class="panel-head"><h2>ATS Favourite Cover % by Spread Band</h2></div><div class="chart">
+        <div class="bar-row">
+          <div class="bar-label">Pick / &lt;3.5</div>
+          <div class="bar-track"><div class="bar-fill alt" style="width:52.7%"></div></div>
+          <div class="bar-num">52.7%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">3.5-6.5</div>
+          <div class="bar-track"><div class="bar-fill alt" style="width:45.0%"></div></div>
+          <div class="bar-num">45.0%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">7.5-10.5</div>
+          <div class="bar-track"><div class="bar-fill alt" style="width:45.7%"></div></div>
+          <div class="bar-num">45.7%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">11.5-14.5</div>
+          <div class="bar-track"><div class="bar-fill alt" style="width:47.6%"></div></div>
+          <div class="bar-num">47.6%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">15.5+</div>
+          <div class="bar-track"><div class="bar-fill alt" style="width:47.6%"></div></div>
+          <div class="bar-num">47.6%</div>
+        </div></div></section>
+<section class="panel"><div class="panel-head"><h2>ATS Cover Table</h2></div><div class="table-wrap"><table><thead><tr><th>Spread Band</th><th class="num">Games</th><th class="num">Fav Cover</th><th class="num">Dog Cover</th><th class="num">Home Cover</th></tr></thead><tbody><tr><td>Pick / &lt;3.5</td><td class='num'>220</td><td class='num'>52.7%</td><td class='num'>47.3%</td><td class='num'>58.2%</td></tr>
+<tr><td>3.5-6.5</td><td class='num'>262</td><td class='num'>45.0%</td><td class='num'>55.0%</td><td class='num'>47.3%</td></tr>
+<tr><td>7.5-10.5</td><td class='num'>346</td><td class='num'>45.7%</td><td class='num'>54.3%</td><td class='num'>50.9%</td></tr>
+<tr><td>11.5-14.5</td><td class='num'>332</td><td class='num'>47.6%</td><td class='num'>52.4%</td><td class='num'>50.6%</td></tr>
+<tr><td>15.5+</td><td class='num'>1631</td><td class='num'>47.6%</td><td class='num'>52.4%</td><td class='num'>49.7%</td></tr></tbody></table></div></section>
+<section class="panel"><div class="panel-head"><h2>Match Totals Over % by Total Band</h2></div><div class="chart">
+        <div class="bar-row">
+          <div class="bar-label">&lt;160.5</div>
+          <div class="bar-track"><div class="bar-fill total" style="width:50.3%"></div></div>
+          <div class="bar-num">50.3%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">160.5-169.5</div>
+          <div class="bar-track"><div class="bar-fill total" style="width:47.9%"></div></div>
+          <div class="bar-num">47.9%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">170.5-179.5</div>
+          <div class="bar-track"><div class="bar-fill total" style="width:49.4%"></div></div>
+          <div class="bar-num">49.4%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">180.5-189.5</div>
+          <div class="bar-track"><div class="bar-fill total" style="width:46.7%"></div></div>
+          <div class="bar-num">46.7%</div>
+        </div>
+
+        <div class="bar-row">
+          <div class="bar-label">190.5+</div>
+          <div class="bar-track"><div class="bar-fill total" style="width:44.9%"></div></div>
+          <div class="bar-num">44.9%</div>
+        </div></div></section>
+<section class="panel"><div class="panel-head"><h2>Match Totals Table</h2></div><div class="table-wrap"><table><thead><tr><th>Total Band</th><th class="num">Games</th><th class="num">Over</th><th class="num">Under</th></tr></thead><tbody><tr><td>&lt;160.5</td><td class='num'>557</td><td class='num'>50.3%</td><td class='num'>49.7%</td></tr>
+<tr><td>160.5-169.5</td><td class='num'>699</td><td class='num'>47.9%</td><td class='num'>52.1%</td></tr>
+<tr><td>170.5-179.5</td><td class='num'>724</td><td class='num'>49.4%</td><td class='num'>50.6%</td></tr>
+<tr><td>180.5-189.5</td><td class='num'>418</td><td class='num'>46.7%</td><td class='num'>53.3%</td></tr>
+<tr><td>190.5+</td><td class='num'>187</td><td class='num'>44.9%</td><td class='num'>55.1%</td></tr></tbody></table></div></section>
+<section class="panel"><div class="panel-head"><h2>Sample Rows</h2></div><div class="table-wrap"><table><thead><tr><th>Date</th><th>Matchup</th><th>Side</th><th class="num">Price</th><th class="num">Score</th><th class="num">Result</th></tr></thead><tbody>
+        <tr>
+          <td>2026-06-14</td>
+          <td>St Kilda v GWS Giants</td>
+          <td>Home</td>
+          <td class="num">$1.97</td>
+          <td class="num">96-88</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-14</td>
+          <td>St Kilda v GWS Giants</td>
+          <td>Away</td>
+          <td class="num">$1.87</td>
+          <td class="num">96-88</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-14</td>
+          <td>Richmond v Brisbane</td>
+          <td>Home</td>
+          <td class="num">$11.00</td>
+          <td class="num">80-115</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-14</td>
+          <td>Richmond v Brisbane</td>
+          <td>Away</td>
+          <td class="num">$1.05</td>
+          <td class="num">80-115</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-13</td>
+          <td>Port Adelaide v Sydney</td>
+          <td>Home</td>
+          <td class="num">$3.20</td>
+          <td class="num">90-93</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-13</td>
+          <td>Port Adelaide v Sydney</td>
+          <td>Away</td>
+          <td class="num">$1.42</td>
+          <td class="num">90-93</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-13</td>
+          <td>North Melbourne v West Coast</td>
+          <td>Home</td>
+          <td class="num">$1.51</td>
+          <td class="num">74-73</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-13</td>
+          <td>North Melbourne v West Coast</td>
+          <td>Away</td>
+          <td class="num">$2.70</td>
+          <td class="num">74-73</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-13</td>
+          <td>Melbourne v Essendon</td>
+          <td>Home</td>
+          <td class="num">$1.20</td>
+          <td class="num">95-50</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-13</td>
+          <td>Melbourne v Essendon</td>
+          <td>Away</td>
+          <td class="num">$5.25</td>
+          <td class="num">95-50</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-12</td>
+          <td>Geelong v Gold Coast</td>
+          <td>Home</td>
+          <td class="num">$1.25</td>
+          <td class="num">105-60</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-12</td>
+          <td>Geelong v Gold Coast</td>
+          <td>Away</td>
+          <td class="num">$4.50</td>
+          <td class="num">105-60</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-11</td>
+          <td>Western Bulldogs v Adelaide</td>
+          <td>Home</td>
+          <td class="num">$1.73</td>
+          <td class="num">64-121</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-11</td>
+          <td>Western Bulldogs v Adelaide</td>
+          <td>Away</td>
+          <td class="num">$2.20</td>
+          <td class="num">64-121</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-08</td>
+          <td>Collingwood v Melbourne</td>
+          <td>Home</td>
+          <td class="num">$1.91</td>
+          <td class="num">75-83</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-08</td>
+          <td>Collingwood v Melbourne</td>
+          <td>Away</td>
+          <td class="num">$1.94</td>
+          <td class="num">75-83</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-07</td>
+          <td>Essendon v Carlton</td>
+          <td>Home</td>
+          <td class="num">$5.25</td>
+          <td class="num">67-72</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-07</td>
+          <td>Essendon v Carlton</td>
+          <td>Away</td>
+          <td class="num">$1.17</td>
+          <td class="num">67-72</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-07</td>
+          <td>Sydney v St Kilda</td>
+          <td>Home</td>
+          <td class="num">$1.20</td>
+          <td class="num">104-102</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-07</td>
+          <td>Sydney v St Kilda</td>
+          <td>Away</td>
+          <td class="num">$5.25</td>
+          <td class="num">104-102</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-06</td>
+          <td>West Coast v Port Adelaide</td>
+          <td>Home</td>
+          <td class="num">$2.25</td>
+          <td class="num">71-77</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-06</td>
+          <td>West Coast v Port Adelaide</td>
+          <td>Away</td>
+          <td class="num">$1.66</td>
+          <td class="num">71-77</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-06</td>
+          <td>Gold Coast v Brisbane</td>
+          <td>Home</td>
+          <td class="num">$1.54</td>
+          <td class="num">75-106</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-06</td>
+          <td>Gold Coast v Brisbane</td>
+          <td>Away</td>
+          <td class="num">$2.55</td>
+          <td class="num">75-106</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-06</td>
+          <td>North Melbourne v Fremantle</td>
+          <td>Home</td>
+          <td class="num">$4.50</td>
+          <td class="num">31-155</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-06</td>
+          <td>North Melbourne v Fremantle</td>
+          <td>Away</td>
+          <td class="num">$1.26</td>
+          <td class="num">31-155</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-05</td>
+          <td>Hawthorn v Western Bulldogs</td>
+          <td>Home</td>
+          <td class="num">$1.53</td>
+          <td class="num">71-77</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-05</td>
+          <td>Hawthorn v Western Bulldogs</td>
+          <td>Away</td>
+          <td class="num">$2.65</td>
+          <td class="num">71-77</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-04</td>
+          <td>Adelaide v Geelong</td>
+          <td>Home</td>
+          <td class="num">$2.80</td>
+          <td class="num">75-74</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-06-04</td>
+          <td>Adelaide v Geelong</td>
+          <td>Away</td>
+          <td class="num">$1.49</td>
+          <td class="num">75-74</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-31</td>
+          <td>West Coast v Essendon</td>
+          <td>Home</td>
+          <td class="num">$1.45</td>
+          <td class="num">85-55</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-31</td>
+          <td>West Coast v Essendon</td>
+          <td>Away</td>
+          <td class="num">$2.80</td>
+          <td class="num">85-55</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-31</td>
+          <td>Melbourne v GWS Giants</td>
+          <td>Home</td>
+          <td class="num">$2.18</td>
+          <td class="num">70-119</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-31</td>
+          <td>Melbourne v GWS Giants</td>
+          <td>Away</td>
+          <td class="num">$1.70</td>
+          <td class="num">70-119</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-30</td>
+          <td>Western Bulldogs v Collingwood</td>
+          <td>Home</td>
+          <td class="num">$1.56</td>
+          <td class="num">97-93</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-30</td>
+          <td>Western Bulldogs v Collingwood</td>
+          <td>Away</td>
+          <td class="num">$2.45</td>
+          <td class="num">97-93</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-30</td>
+          <td>Brisbane v Fremantle</td>
+          <td>Home</td>
+          <td class="num">$1.61</td>
+          <td class="num">78-103</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-30</td>
+          <td>Brisbane v Fremantle</td>
+          <td>Away</td>
+          <td class="num">$2.45</td>
+          <td class="num">78-103</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-30</td>
+          <td>Sydney v Richmond</td>
+          <td>Home</td>
+          <td class="num">$1.03</td>
+          <td class="num">170-56</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-30</td>
+          <td>Sydney v Richmond</td>
+          <td>Away</td>
+          <td class="num">$12.00</td>
+          <td class="num">170-56</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-29</td>
+          <td>Carlton v Geelong</td>
+          <td>Home</td>
+          <td class="num">$4.35</td>
+          <td class="num">88-84</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-29</td>
+          <td>Carlton v Geelong</td>
+          <td>Away</td>
+          <td class="num">$1.24</td>
+          <td class="num">88-84</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-28</td>
+          <td>St Kilda v Hawthorn</td>
+          <td>Home</td>
+          <td class="num">$3.60</td>
+          <td class="num">67-119</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-28</td>
+          <td>St Kilda v Hawthorn</td>
+          <td>Away</td>
+          <td class="num">$1.32</td>
+          <td class="num">67-119</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-24</td>
+          <td>Western Bulldogs v Melbourne</td>
+          <td>Home</td>
+          <td class="num">$2.05</td>
+          <td class="num">93-90</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-24</td>
+          <td>Western Bulldogs v Melbourne</td>
+          <td>Away</td>
+          <td class="num">$1.78</td>
+          <td class="num">93-90</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-24</td>
+          <td>GWS Giants v Brisbane</td>
+          <td>Home</td>
+          <td class="num">$2.50</td>
+          <td class="num">166-88</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-24</td>
+          <td>GWS Giants v Brisbane</td>
+          <td>Away</td>
+          <td class="num">$1.55</td>
+          <td class="num">166-88</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>Port Adelaide v Carlton</td>
+          <td>Home</td>
+          <td class="num">$1.50</td>
+          <td class="num">58-92</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>Port Adelaide v Carlton</td>
+          <td>Away</td>
+          <td class="num">$2.80</td>
+          <td class="num">58-92</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>Collingwood v West Coast</td>
+          <td>Home</td>
+          <td class="num">$1.07</td>
+          <td class="num">92-82</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>Collingwood v West Coast</td>
+          <td>Away</td>
+          <td class="num">$10.00</td>
+          <td class="num">92-82</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>Geelong v Sydney</td>
+          <td>Home</td>
+          <td class="num">$1.54</td>
+          <td class="num">107-80</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>Geelong v Sydney</td>
+          <td>Away</td>
+          <td class="num">$2.80</td>
+          <td class="num">107-80</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>North Melbourne v Gold Coast</td>
+          <td>Home</td>
+          <td class="num">$2.39</td>
+          <td class="num">111-105</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-23</td>
+          <td>North Melbourne v Gold Coast</td>
+          <td>Away</td>
+          <td class="num">$1.66</td>
+          <td class="num">111-105</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-22</td>
+          <td>Fremantle v St Kilda</td>
+          <td>Home</td>
+          <td class="num">$1.29</td>
+          <td class="num">104-74</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-22</td>
+          <td>Fremantle v St Kilda</td>
+          <td>Away</td>
+          <td class="num">$3.85</td>
+          <td class="num">104-74</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-22</td>
+          <td>Richmond v Essendon</td>
+          <td>Home</td>
+          <td class="num">$2.90</td>
+          <td class="num">74-56</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-22</td>
+          <td>Richmond v Essendon</td>
+          <td>Away</td>
+          <td class="num">$1.46</td>
+          <td class="num">74-56</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-21</td>
+          <td>Hawthorn v Adelaide</td>
+          <td>Home</td>
+          <td class="num">$1.58</td>
+          <td class="num">75-66</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-21</td>
+          <td>Hawthorn v Adelaide</td>
+          <td>Away</td>
+          <td class="num">$2.44</td>
+          <td class="num">75-66</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-17</td>
+          <td>West Coast v GWS Giants</td>
+          <td>Home</td>
+          <td class="num">$4.20</td>
+          <td class="num">88-71</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-17</td>
+          <td>West Coast v GWS Giants</td>
+          <td>Away</td>
+          <td class="num">$1.25</td>
+          <td class="num">88-71</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-17</td>
+          <td>St Kilda v Richmond</td>
+          <td>Home</td>
+          <td class="num">$1.10</td>
+          <td class="num">109-73</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-17</td>
+          <td>St Kilda v Richmond</td>
+          <td>Away</td>
+          <td class="num">$7.00</td>
+          <td class="num">109-73</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-17</td>
+          <td>Essendon v Fremantle</td>
+          <td>Home</td>
+          <td class="num">$4.60</td>
+          <td class="num">61-104</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-17</td>
+          <td>Essendon v Fremantle</td>
+          <td>Away</td>
+          <td class="num">$1.20</td>
+          <td class="num">61-104</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-16</td>
+          <td>Carlton v Western Bulldogs</td>
+          <td>Home</td>
+          <td class="num">$2.34</td>
+          <td class="num">74-62</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-16</td>
+          <td>Carlton v Western Bulldogs</td>
+          <td>Away</td>
+          <td class="num">$1.62</td>
+          <td class="num">74-62</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-16</td>
+          <td>Melbourne v Hawthorn</td>
+          <td>Home</td>
+          <td class="num">$2.80</td>
+          <td class="num">120-81</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-16</td>
+          <td>Melbourne v Hawthorn</td>
+          <td>Away</td>
+          <td class="num">$1.47</td>
+          <td class="num">120-81</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-16</td>
+          <td>Adelaide v North Melbourne</td>
+          <td>Home</td>
+          <td class="num">$1.51</td>
+          <td class="num">133-65</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-16</td>
+          <td>Adelaide v North Melbourne</td>
+          <td>Away</td>
+          <td class="num">$2.70</td>
+          <td class="num">133-65</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-15</td>
+          <td>Gold Coast v Port Adelaide</td>
+          <td>Home</td>
+          <td class="num">$1.23</td>
+          <td class="num">98-73</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-15</td>
+          <td>Gold Coast v Port Adelaide</td>
+          <td>Away</td>
+          <td class="num">$4.50</td>
+          <td class="num">98-73</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-15</td>
+          <td>Sydney v Collingwood</td>
+          <td>Home</td>
+          <td class="num">$1.17</td>
+          <td class="num">81-75</td>
+          <td class="num">Win</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-15</td>
+          <td>Sydney v Collingwood</td>
+          <td>Away</td>
+          <td class="num">$5.75</td>
+          <td class="num">81-75</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-14</td>
+          <td>Brisbane v Geelong</td>
+          <td>Home</td>
+          <td class="num">$1.54</td>
+          <td class="num">76-117</td>
+          <td class="num">Loss</td>
+        </tr>
+
+        <tr>
+          <td>2026-05-14</td>
+          <td>Brisbane v Geelong</td>
+          <td>Away</td>
+          <td class="num">$2.65</td>
+          <td class="num">76-117</td>
+          <td class="num">Win</td>
+        </tr></tbody></table></div></section>
+</main></body></html>

@@ -8,6 +8,8 @@ on:
     paths:
       - CNAME
       - index.html
+      - afl_dashboard.html
+      - nrl_dashboard.html
       - ufcgd.html
       - src/**
       - data/**

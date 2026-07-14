@@ -264,6 +264,141 @@ h3 {
   background: rgba(16, 16, 14, 0.45);
 }
 
+.band-analysis-section {
+  padding: 18px;
+}
+
+.band-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.band-card-grid article,
+.band-panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: rgba(16, 16, 14, 0.28);
+}
+
+.band-card-grid article {
+  min-height: 92px;
+  padding: 14px;
+}
+
+.band-card-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.band-card-grid strong {
+  font-size: 26px;
+  line-height: 1.1;
+}
+
+.band-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.band-panel {
+  overflow: hidden;
+}
+
+.band-panel h3 {
+  margin: 0;
+  padding: 13px 14px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.band-bars {
+  display: grid;
+  gap: 10px;
+  padding: 14px;
+}
+
+.band-bar-row {
+  display: grid;
+  grid-template-columns: minmax(90px, 128px) minmax(90px, 1fr) 58px;
+  gap: 10px;
+  align-items: center;
+}
+
+.band-bar-row span {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.band-bar-row div {
+  height: 22px;
+  overflow: hidden;
+  border-radius: 6px;
+  background: rgba(246, 241, 223, 0.08);
+}
+
+.band-bar-row b {
+  display: block;
+  height: 100%;
+  border-radius: 6px;
+  background: var(--green);
+}
+
+.band-bars.blue .band-bar-row b {
+  background: #58a6ff;
+}
+
+.band-bars.gold .band-bar-row b {
+  background: var(--gold);
+}
+
+.band-bar-row strong {
+  color: var(--text);
+  font-size: 13px;
+  text-align: right;
+}
+
+.band-panel .compact-table {
+  border-top: 1px solid var(--border);
+}
+
+.band-panel .compact-table table {
+  min-width: 0;
+}
+
+.band-panel .compact-table th,
+.band-panel .compact-table td {
+  padding: 9px 10px;
+  font-size: 12px;
+}
+
+@media (max-width: 1100px) {
+  .band-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .band-card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .band-analysis-section {
+    padding: 12px;
+  }
+
+  .band-bar-row {
+    grid-template-columns: 92px minmax(70px, 1fr) 52px;
+  }
+}
+
 .betmate-aus-scorecard span {
   display: block;
   margin-bottom: 8px;
