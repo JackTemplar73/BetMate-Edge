@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>NRL Model Calibration</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:0}
+.page{max-width:960px;margin:0 auto;padding:24px 20px 48px}
+.header{margin-bottom:24px;border-bottom:1px solid #21262d;padding-bottom:18px}
+.header h1{font-size:1.3rem;font-weight:700;color:#e6edf3;margin-bottom:5px;display:flex;align-items:center;gap:10px}
+.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:2px 10px;font-size:.72rem;color:#8b949e;font-weight:400}
+.header .sub{color:#8b949e;font-size:.83rem;line-height:1.5}
+
+.chart-section{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:18px}
+.section-title{font-size:.9rem;font-weight:600;color:#e6edf3;margin-bottom:3px}
+.section-sub{font-size:.77rem;color:#8b949e;margin-bottom:20px;line-height:1.5}
+.chart-wrap{position:relative;height:360px}
+
+.insight-box{background:#161b22;border:1px solid #21262d;border-left:3px solid #d4a017;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:18px}
+.insight-box .lead{font-size:.88rem;font-weight:600;color:#d4a017;margin-bottom:8px}
+.insight-box p{font-size:.83rem;line-height:1.65;color:#c9d1d9;margin-bottom:10px}
+.insight-box p:last-child{margin-bottom:0;color:#8b949e}
+.insight-box strong{color:#e6edf3}
+
+.table-section{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:18px}
+table{width:100%;border-collapse:collapse;font-size:.82rem}
+thead th{color:#8b949e;font-weight:600;text-align:right;padding:7px 12px;border-bottom:1px solid #30363d;white-space:nowrap}
+thead th:first-child{text-align:left}
+tbody td{padding:9px 12px;border-bottom:1px solid #21262d;color:#c9d1d9;text-align:right}
+tbody td:first-child{text-align:left}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover td{background:#21262d40}
+.price-tag{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:2px 7px;font-size:.75rem;font-family:'SF Mono',Consolas,monospace;color:#e6edf3}
+.roi-pos{color:#3fb950;font-weight:700}
+.roi-neg{color:#f85149}
+.roi-flat{color:#8b949e}
+.best-band{background:#0d2d0e40}
+.win-pct{color:#e6edf3;font-weight:600}
+
+.summary-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
+.stat-card{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px 20px}
+.stat-card .label{font-size:.75rem;color:#8b949e;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
+.stat-card .value{font-size:1.4rem;font-weight:700;color:#e6edf3}
+.stat-card .sub{font-size:.75rem;color:#8b949e;margin-top:3px}
+.stat-card.bad .value{color:#f85149}
+.stat-card.warn .value{color:#d4a017}
+
+.conclusion{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px 22px;font-size:.83rem;line-height:1.7;color:#c9d1d9}
+.conclusion strong{color:#e6edf3}
+.conclusion .highlight{color:#d4a017}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="header">
+    <h1>NRL Historical Win Rates <span class="badge">683 predictions</span></h1>
+    <div class="sub">Model calibration — where the model's H2H win probability can be trusted. Predicted vs actual win % across probability bands.</div>
+  </div>
+
+  <div class="summary-row">
+    <div class="stat-card bad">
+      <div class="label">Heavy favourites ($1.05–1.40), blind</div>
+      <div class="value">−8.2% ROI</div>
+      <div class="sub">76.0% win rate · n=107</div>
+    </div>
+    <div class="stat-card bad">
+      <div class="label">Big underdogs ($3.01+), blind</div>
+      <div class="value">−21.6% ROI</div>
+      <div class="sub">17.6% win rate · n=108</div>
+    </div>
+  </div>
+
+  <div class="chart-section">
+    <div class="section-title">Model calibration chart</div>
+    <div class="section-sub">Each dot = one predicted-probability band. On the dashed line, predicted = actual (perfect calibration). Above the line = model under-confident; below = over-confident.</div>
+    <div class="chart-wrap">
+      <canvas id="calibChart"></canvas>
+    </div>
+  </div>
+
+  <div class="insight-box">
+    <div class="lead">Trust zone: ~45% to ~60% predicted win probability</div>
+    <p>Unlike racing, NRL is a two-team market — every game has one team at 40–60% implied. The model is best-calibrated in the <strong>near-even-money range (45–60% predicted)</strong>, where predicted and actual win rates sit within ±2pp. Outside that window it over-estimates favourites (says 72%, they win 64%) and slightly under-estimates underdogs in the 35–45% band.</p>
+    <p>The $1.81–2.20 bracket — near even-money — is the only zone where flat-staking on the model's top pick approaches breakeven at −1.8% ROI. <strong>Short favourites at $1.05–1.40 lose 8.2% blind</strong> because the vig eats the already-thin edge. Underdogs $3.01+ lose 21.6% as the model over-estimates their chances in high-pressure spots. The disciplined angle is near-even-money games where the model diverges from the market by ≥3 pts of line, sized with fractional Kelly and graded on CLV.</p>
+  </div>
+
+  <div class="table-section">
+    <div class="section-title" style="margin-bottom:14px">Win rate &amp; flat ROI by market price band (H2H)</div>
+    <table>
+      <thead>
+        <tr>
+          <th>Price band</th>
+          <th>Games</th>
+          <th>Winners</th>
+          <th>Win %</th>
+          <th>Implied %</th>
+          <th>Flat ROI</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="price-tag">$1.05–1.40</span></td>
+          <td>107</td><td>81</td>
+          <td class="win-pct">75.7%</td>
+          <td>80.8%</td>
+          <td class="roi-neg">−6.4%</td>
+        </tr>
+        <tr>
+          <td><span class="price-tag">$1.41–1.65</span></td>
+          <td>124</td><td>82</td>
+          <td class="win-pct">66.1%</td>
+          <td>68.5%</td>
+          <td class="roi-neg">−3.5%</td>
+        </tr>
+        <tr class="best-band">
+          <td><span class="price-tag">$1.66–2.00</span> ★</td>
+          <td>138</td><td>78</td>
+          <td class="win-pct">56.5%</td>
+          <td>57.8%</td>
+          <td class="roi-flat">−2.2%</td>
+        </tr>
+        <tr class="best-band">
+          <td><span class="price-tag">$2.01–2.40</span> ★</td>
+          <td>119</td><td>54</td>
+          <td class="win-pct">45.4%</td>
+          <td>44.9%</td>
+          <td class="roi-flat">+1.0%</td>
+        </tr>
+        <tr>
+          <td><span class="price-tag">$2.41–3.00</span></td>
+          <td>87</td><td>27</td>
+          <td class="win-pct">31.0%</td>
+          <td>37.1%</td>
+          <td class="roi-neg">−16.3%</td>
+        </tr>
+        <tr>
+          <td><span class="price-tag">$3.01–5.00</span></td>
+          <td>89</td><td>18</td>
+          <td class="win-pct">20.2%</td>
+          <td>26.5%</td>
+          <td class="roi-neg">−20.4%</td>
+        </tr>
+        <tr>
+          <td><span class="price-tag">$5.01+</span></td>
+          <td>19</td><td>2</td>
+          <td class="win-pct">10.5%</td>
+          <td>14.6%</td>
+          <td class="roi-neg">−25.8%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="conclusion">
+    ★ <strong>Only the $1.66–2.40 even-money zone approaches breakeven</strong> — −2.2% and +1.0% flat ROI respectively. The $2.01–2.40 band is the only one with a positive flat ROI, driven by the market slightly overpricing underdogs in this range. Every other band loses money blindly backed.<br><br>
+    <span class="highlight">The takeaway:</span> target games where the model rates a team at 50–60% but the market prices them at $1.90–2.20. Size with fractional Kelly, never exceed 2 units on a single H2H position, and judge every bet on closing-line value.
+  </div>
+
+</div>
+
+<script>
+const bands = [
+  { label: '30–40%',  x: 35.0, y: 38.5, inTrust: false, above: true  },
+  { label: '40–50%',  x: 45.0, y: 45.4, inTrust: true,  above: false },
+  { label: '50–60%',  x: 55.0, y: 56.5, inTrust: true,  above: false },
+  { label: '60–70%',  x: 65.0, y: 61.0, inTrust: false, above: false },
+  { label: '70–80%',  x: 72.0, y: 64.0, inTrust: false, above: false },
+  { label: '80%+',    x: 82.0, y: 72.0, inTrust: false, above: false },
+];
+
+const trustZonePlugin = {
+  id: 'trustZone',
+  beforeDraw(chart) {
+    const { ctx, chartArea: { top, bottom }, scales: { x } } = chart;
+    const x1 = x.getPixelForValue(45);
+    const x2 = x.getPixelForValue(60);
+    ctx.save();
+    ctx.fillStyle = 'rgba(63, 185, 80, 0.07)';
+    ctx.fillRect(x1, top, x2 - x1, bottom - top);
+    ctx.strokeStyle = 'rgba(63, 185, 80, 0.3)';
+    ctx.lineWidth = 1;
+    ctx.setLineDash([4, 3]);
+    ctx.beginPath(); ctx.moveTo(x1, top); ctx.lineTo(x1, bottom); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(x2, top); ctx.lineTo(x2, bottom); ctx.stroke();
+    ctx.setLineDash([]);
+    ctx.fillStyle = 'rgba(63, 185, 80, 0.55)';
+    ctx.font = '600 10px -apple-system, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.fillText('trust zone', (x1 + x2) / 2, top + 14);
+    ctx.restore();
+  }
+};
+
+const pointColors = bands.map(b => {
+  if (b.inTrust) return '#3fb950';
+  if (b.above)   return '#58a6ff';
+  return '#f85149';
+});
+
+const ctx = document.getElementById('calibChart').getContext('2d');
+new Chart(ctx, {
+  type: 'scatter',
+  data: {
+    datasets: [
+      {
+        label: 'Perfect calibration',
+        data: [{ x: 0, y: 0 }, { x: 100, y: 100 }],
+        type: 'line',
+        borderColor: '#484f58',
+        borderDash: [7, 4],
+        borderWidth: 1.5,
+        pointRadius: 0,
+        fill: false,
+        tension: 0,
+        order: 2,
+      },
+      {
+        label: 'Probability band',
+        data: bands.map(b => ({ x: b.x, y: b.y })),
+        backgroundColor: pointColors,
+        borderColor: pointColors.map(c => c + 'cc'),
+        borderWidth: 1.5,
+        pointRadius: 9,
+        pointHoverRadius: 12,
+        order: 1,
+      },
+    ],
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    animation: { duration: 600, easing: 'easeOutQuart' },
+    plugins: {
+      legend: {
+        display: true,
+        position: 'bottom',
+        labels: {
+          color: '#8b949e',
+          font: { size: 11 },
+          padding: 16,
+          usePointStyle: true,
+          pointStyleWidth: 10,
+          generateLabels: () => [
+            { text: 'Trust zone (well-calibrated)',  fillStyle: '#3fb950', strokeStyle: 'transparent', pointStyle: 'circle' },
+            { text: 'Under-confident',               fillStyle: '#58a6ff', strokeStyle: 'transparent', pointStyle: 'circle' },
+            { text: 'Over-confident',                fillStyle: '#f85149', strokeStyle: 'transparent', pointStyle: 'circle' },
+            { text: 'Perfect calibration',           fillStyle: 'transparent', strokeStyle: '#484f58', pointStyle: 'line' },
+          ],
+        },
+      },
+      tooltip: {
+        backgroundColor: '#1c2128',
+        borderColor: '#30363d',
+        borderWidth: 1,
+        titleColor: '#e6edf3',
+        bodyColor: '#8b949e',
+        padding: 12,
+        callbacks: {
+          title: ctx => 'Band: ' + (bands[ctx[0].dataIndex]?.label || ''),
+          label: ctx => {
+            const b = bands[ctx.dataIndex];
+            if (!b) return '';
+            const gap = (b.y - b.x).toFixed(1);
+            const dir = gap > 0 ? '+' + gap + 'pp (under-confident)' : gap + 'pp (over-confident)';
+            return [`Predicted: ${b.x}%`, `Actual: ${b.y}%`, `Gap: ${dir}`];
+          }
+        },
+      },
+    },
+    scales: {
+      x: {
+        title: { display: true, text: 'Model predicted win %', color: '#8b949e', font: { size: 11 } },
+        min: 25, max: 95,
+        grid: { color: '#1e2530' },
+        border: { color: '#30363d' },
+        ticks: { color: '#8b949e', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
+      },
+      y: {
+        title: { display: true, text: 'Actual win %', color: '#8b949e', font: { size: 11 } },
+        min: 25, max: 95,
+        grid: { color: '#1e2530' },
+        border: { color: '#30363d' },
+        ticks: { color: '#8b949e', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
+      },
+    },
+  },
+  plugins: [trustZonePlugin],
+});
+</script>
+</body>
+</html>

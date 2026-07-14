@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BetMate Edge: Analysis Hub</title>
   <link rel="stylesheet" href="./src/styles.css?v=20260714-ufc-only">
+  <style>
+  .sub-tab-nav{display:flex;gap:2px;margin-bottom:0;border-bottom:1px solid #21262d;padding:0 0 0 0}
+  .sub-tab{background:none;border:none;border-bottom:2px solid transparent;color:#8b949e;cursor:pointer;font-size:.82rem;font-weight:500;padding:10px 16px;margin-bottom:-1px;transition:color .15s,border-color .15s;line-height:1}
+  .sub-tab:hover{color:#c9d1d9}
+  .sub-tab.active{color:#e6edf3;border-bottom-color:#d4a017}
+  </style>
 </head>
 <body>
   <main class="app-shell">
@@ -25,7 +31,6 @@
       <button class="view-tab hierarchy-primary active" data-view-tab="ufc" type="button">UFC</button>
       <button class="view-tab hierarchy-primary" data-view-tab="nrl" type="button">NRL</button>
       <button class="view-tab hierarchy-primary" data-view-tab="afl" type="button">AFL</button>
-          <button class="view-tab hierarchy-primary" data-view-tab="winrates" type="button">Win Rates</button>
     </nav>
 
     <p class="error" data-app-error></p>
@@ -59,40 +64,64 @@
     </section>
 
     <section class="table-section nrl-section hidden" data-view-section="nrl">
-      <div class="section-heading">
-        <div>
-          <h2>NRL</h2>
-          <p>BetMate Edge v4 (Walters Edition) round bet card. Preliminary run Mon 13 Jul — updates after Tuesday team lists.</p>
-        </div>
-        <a class="header-link" href="./nrl-2026-round-20.html" target="_blank" rel="noopener">Full Round 20 report</a>
+      <div class="sub-tab-nav">
+        <button class="sub-tab active" data-sub-tab="nrl-main">Round 20 2026</button>
+        <button class="sub-tab" data-sub-tab="nrl-winrates">Win Rates</button>
       </div>
-      <iframe src="./nrl-2026-round-20.html" title="NRL Round 20 BetMate Edge report" style="width:100%;height:80vh;min-height:600px;border:0;border-radius:12px;background:#0d1117"></iframe>
+      <div data-sub-section="nrl-main">
+        <div class="section-heading">
+          <div>
+            <h2>NRL</h2>
+            <p>BetMate Edge v4 (Walters Edition) round bet card. Preliminary run Mon 13 Jul — updates after Tuesday team lists.</p>
+          </div>
+          <a class="header-link" href="./nrl-2026-round-20.html" target="_blank" rel="noopener">Full Round 20 report</a>
+        </div>
+        <iframe src="./nrl-2026-round-20.html" title="NRL Round 20 BetMate Edge report" style="width:100%;height:80vh;min-height:600px;border:0;border-radius:12px;background:#0d1117"></iframe>
+      </div>
+      <div class="hidden" data-sub-section="nrl-winrates">
+        <div class="section-heading">
+          <div>
+            <h2>NRL Win Rates</h2>
+            <p>Model calibration · 683 predictions · H2H win probability trust zones</p>
+          </div>
+          <a class="header-link" href="./nrl_calibration.html" target="_blank" rel="noopener">Open full report</a>
+        </div>
+        <div style="width:100%;height:calc(100vh - 200px);min-height:650px;">
+          <iframe src="./nrl_calibration.html" style="width:100%;height:100%;border:none;display:block;background:#0d1117;" title="NRL Historical Win Rates" loading="lazy"></iframe>
+        </div>
+      </div>
     </section>
 
     <section class="table-section afl-section hidden" data-view-section="afl">
-      <div class="section-heading">
-        <div>
-          <h2>AFL</h2>
-          <p>Round 19 2026 — OPENER window · Walters pipeline: structural → BMA → market · eighth-Kelly sizing</p>
-        </div>
-        <a class="header-link" href="./afl_r19_2026.html" target="_blank" rel="noopener">Open full report</a>
+      <div class="sub-tab-nav">
+        <button class="sub-tab active" data-sub-tab="afl-main">Round 19 2026</button>
+        <button class="sub-tab" data-sub-tab="afl-winrates">Win Rates</button>
       </div>
-      <div style="width:100%;height:calc(100vh - 160px);min-height:700px;">
-        <iframe src="./afl_r19_2026.html" style="width:100%;height:100%;border:none;display:block;background:#0d1117;" title="AFL Round 19 2026 Analysis" loading="lazy"></iframe>
+      <div data-sub-section="afl-main">
+        <div class="section-heading">
+          <div>
+            <h2>AFL</h2>
+            <p>Round 19 2026 — OPENER window · Walters pipeline: structural → BMA → market · eighth-Kelly sizing</p>
+          </div>
+          <a class="header-link" href="./afl_r19_2026.html" target="_blank" rel="noopener">Open full report</a>
+        </div>
+        <div style="width:100%;height:calc(100vh - 200px);min-height:650px;">
+          <iframe src="./afl_r19_2026.html" style="width:100%;height:100%;border:none;display:block;background:#0d1117;" title="AFL Round 19 2026 Analysis" loading="lazy"></iframe>
+        </div>
+      </div>
+      <div class="hidden" data-sub-section="afl-winrates">
+        <div class="section-heading">
+          <div>
+            <h2>AFL Win Rates</h2>
+            <p>Model calibration · 734 predictions · where the model's probability can be trusted</p>
+          </div>
+          <a class="header-link" href="./afl_calibration.html" target="_blank" rel="noopener">Open full report</a>
+        </div>
+        <div style="width:100%;height:calc(100vh - 200px);min-height:650px;">
+          <iframe src="./afl_calibration.html" style="width:100%;height:100%;border:none;display:block;background:#0d1117;" title="AFL Historical Win Rates" loading="lazy"></iframe>
+        </div>
       </div>
     </section>
-          <section class="table-section winrates-section hidden" data-view-section="winrates">
-            <div class="section-heading">
-              <div>
-                <h2>AFL Win Rates</h2>
-                <p>Model calibration · 734 predictions · where the model's probability can be trusted</p>
-              </div>
-              <a class="header-link" href="./afl_calibration.html" target="_blank" rel="noopener">Open full report</a>
-            </div>
-            <div style="width:100%;height:calc(100vh - 160px);min-height:700px;">
-              <iframe src="./afl_calibration.html" style="width:100%;height:100%;border:none;display:block;background:#0d1117;" title="AFL Historical Win Rates &amp; Model Calibration" loading="lazy"></iframe>
-            </div>
-          </section>
 
     <section class="table-section high-value-section hidden" data-view-section="highValue">
       <div class="section-heading">
@@ -483,18 +512,17 @@
 
   <script>
   (function() {
-    var wrBtn = document.querySelector('[data-view-tab="winrates"]');
-    if (!wrBtn) return;
-    wrBtn.addEventListener('click', function() {
-      if (typeof state !== 'undefined') {
-        state.activeView = 'winrates';
-        if (typeof renderViewTabs === 'function') renderViewTabs();
-      }
-      document.querySelectorAll('[data-view-section]').forEach(function(s) {
-        s.classList.toggle('hidden', s.dataset.viewSection !== 'winrates');
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('.sub-tab');
+      if (!btn) return;
+      var section = btn.closest('[data-view-section]');
+      if (!section) return;
+      var target = btn.dataset.subTab;
+      section.querySelectorAll('[data-sub-section]').forEach(function(s) {
+        s.classList.toggle('hidden', s.dataset.subSection !== target);
       });
-      document.querySelectorAll('[data-view-tab]').forEach(function(b) {
-        b.classList.toggle('active', b === wrBtn);
+      section.querySelectorAll('.sub-tab').forEach(function(b) {
+        b.classList.toggle('active', b === btn);
       });
     });
   })();
