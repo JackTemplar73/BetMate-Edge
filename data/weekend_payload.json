@@ -116425,7 +116425,7 @@
         "TAB",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-07-13T23:35:25.696Z",
+      "checked_at": "2026-07-14T00:04:50.962Z",
       "status": "checked",
       "oddsapi_event_id": "f9aa13a662d1658e5a02cfc06d6a2d73",
       "offered_market_keys": [
@@ -116563,7 +116563,7 @@
           "current_odds": 3.3,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 30.16,
+          "devig_book_probability": 30.12,
           "ev": 10.74,
           "qi": 54,
           "price_qi": 81
@@ -116649,22 +116649,6 @@
           "price_qi": 69
         },
         {
-          "selection": "Spain to Win",
-          "category": "Full Match Model",
-          "market": "Full Match Model",
-          "source": "Priced model",
-          "oddsapi_market": "h2h_3_way",
-          "model_probability": 30.8,
-          "model_price": 3.25,
-          "current_odds": 3.35,
-          "au_bookie": "Betfair",
-          "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 29.71,
-          "ev": 3.08,
-          "qi": 41,
-          "price_qi": 65
-        },
-        {
           "selection": "France or Draw",
           "category": "Main Match",
           "market": "Double Chance",
@@ -116711,6 +116695,22 @@
           "ev": -5.36,
           "qi": 39,
           "price_qi": 12
+        },
+        {
+          "selection": "Spain to Win",
+          "category": "Full Match Model",
+          "market": "Full Match Model",
+          "source": "Priced model",
+          "oddsapi_market": "h2h_3_way",
+          "model_probability": 30.8,
+          "model_price": 3.25,
+          "current_odds": 3.3,
+          "au_bookie": "Betfair",
+          "bookmaker_key": "betfair_ex_au",
+          "devig_book_probability": 30.12,
+          "ev": 1.54,
+          "qi": 38,
+          "price_qi": 58
         },
         {
           "selection": "France or Spain",
@@ -116896,11 +116896,11 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 35.6,
           "model_price": 2.81,
-          "current_odds": 2.48,
+          "current_odds": 2.5,
           "au_bookie": "Betfair",
           "bookmaker_key": "betfair_ex_au",
-          "devig_book_probability": 40.13,
-          "ev": -11.74,
+          "devig_book_probability": 39.76,
+          "ev": -11.03,
           "qi": 24,
           "price_qi": 16
         },
@@ -117636,7 +117636,7 @@
         "Betfair",
         "PointsBet (AU)"
       ],
-      "checked_at": "2026-07-13T23:35:25.696Z",
+      "checked_at": "2026-07-14T00:04:50.962Z",
       "status": "checked",
       "oddsapi_event_id": "ced22494ae0bbb8cc4f7108bf6f493df",
       "offered_market_keys": [
@@ -117659,13 +117659,13 @@
           "oddsapi_market": "btts",
           "model_probability": 56.1,
           "model_price": 1.78,
-          "current_odds": 1.95,
-          "au_bookie": "TAB",
-          "bookmaker_key": "tab",
-          "devig_book_probability": 48.68,
-          "ev": 9.55,
-          "qi": 72,
-          "price_qi": 83
+          "current_odds": 2,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 47.37,
+          "ev": 12.36,
+          "qi": 77,
+          "price_qi": 86
         },
         {
           "selection": "BTTS No",
@@ -117675,13 +117675,13 @@
           "oddsapi_market": "btts",
           "model_probability": 56.1,
           "model_price": 1.78,
-          "current_odds": 1.91,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 48.52,
-          "ev": 7.3,
-          "qi": 68,
-          "price_qi": 79
+          "current_odds": 1.95,
+          "au_bookie": "TAB",
+          "bookmaker_key": "tab",
+          "devig_book_probability": 48.68,
+          "ev": 9.55,
+          "qi": 72,
+          "price_qi": 83
         },
         {
           "selection": "Under 2.5 Goals",
@@ -117764,6 +117764,22 @@
           "price_qi": 49
         },
         {
+          "selection": "Argentina or Draw",
+          "category": "Main Match",
+          "market": "Double Chance",
+          "source": "Model",
+          "oddsapi_market": "double_chance",
+          "model_probability": 68.4,
+          "model_price": 1.46,
+          "current_odds": 1.45,
+          "au_bookie": "SportsBet",
+          "bookmaker_key": "sportsbet",
+          "devig_book_probability": 32.08,
+          "ev": -0.68,
+          "qi": 51,
+          "price_qi": 45
+        },
+        {
           "selection": "Match to end in a Draw",
           "category": "Full Match Model",
           "market": "Full Match Model",
@@ -117796,22 +117812,6 @@
           "price_qi": 73
         },
         {
-          "selection": "Argentina or Draw",
-          "category": "Main Match",
-          "market": "Double Chance",
-          "source": "Model",
-          "oddsapi_market": "double_chance",
-          "model_probability": 68.4,
-          "model_price": 1.46,
-          "current_odds": 1.44,
-          "au_bookie": "SportsBet",
-          "bookmaker_key": "sportsbet",
-          "devig_book_probability": 32.31,
-          "ev": -1.37,
-          "qi": 49,
-          "price_qi": 41
-        },
-        {
           "selection": "Argentina Draw No Bet",
           "category": "Main Match",
           "market": "Draw No Bet",
@@ -117838,7 +117838,7 @@
           "current_odds": 2.85,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 33.22,
+          "devig_book_probability": 33,
           "ev": 3.64,
           "qi": 46,
           "price_qi": 68
@@ -117966,7 +117966,7 @@
           "current_odds": 3.05,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 31.05,
+          "devig_book_probability": 30.83,
           "ev": -2.56,
           "qi": 29,
           "price_qi": 36
@@ -117998,7 +117998,7 @@
           "current_odds": 1.8,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 51.48,
+          "devig_book_probability": 52.63,
           "ev": -21.05,
           "qi": 28,
           "price_qi": 6
@@ -118091,13 +118091,13 @@
           "oddsapi_market": "h2h_3_way",
           "model_probability": 31.6,
           "model_price": 3.16,
-          "current_odds": 2.65,
+          "current_odds": 2.6,
           "au_bookie": "SportsBet",
           "bookmaker_key": "sportsbet",
-          "devig_book_probability": 35.73,
-          "ev": -16.14,
+          "devig_book_probability": 36.17,
+          "ev": -17.72,
           "qi": 21,
-          "price_qi": 13
+          "price_qi": 12
         },
         {
           "selection": "England to Win",
@@ -118310,7 +118310,7 @@
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-07-13T23:35:25.696Z",
+      "checked_at": "2026-07-14T00:04:50.962Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
@@ -118459,7 +118459,7 @@
         "bet365",
         "betfair_ex_au"
       ],
-      "checked_at": "2026-07-13T23:35:25.696Z",
+      "checked_at": "2026-07-14T00:04:50.962Z",
       "status": "no_oddsapi_event",
       "rows": []
     }
