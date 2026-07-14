@@ -7,81 +7,81 @@
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
-    background: #0d1117; color: #e6edf3;
+    font-family: Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;
+    background: #151412; color: #f6f1df;
     padding: 20px; max-width: 680px; margin: 0 auto;
     font-size: 15px; line-height: 1.6;
   }
   .match-header {
-    background: #161b22; border: 1px solid #30363d;
+    background: #20201c; border: 1px solid #444033;
     border-radius: 14px; padding: 22px 24px; margin-bottom: 14px; text-align: center;
   }
   .teams { font-size: 22px; font-weight: 800; color: #fff; }
-  .teams span { color: #22d67a; }
-  .match-meta { color: #8b949e; font-size: 13px; margin-top: 5px; }
+  .teams span { color: #3ddc97; }
+  .match-meta { color: #b9ad91; font-size: 13px; margin-top: 5px; }
 
   .nobet-hero {
-    background: linear-gradient(135deg, #1c2128, #161b22);
-    border: 2px solid #8b949e; border-radius: 14px;
+    background: linear-gradient(135deg, #242320, #20201c);
+    border: 2px solid #b9ad91; border-radius: 14px;
     padding: 24px; margin-bottom: 14px; text-align: center;
   }
   .nobet-hero .eyebrow {
     font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase; color: #8b949e; margin-bottom: 8px;
+    text-transform: uppercase; color: #b9ad91; margin-bottom: 8px;
   }
   .nobet-hero .bet-name { font-size: 26px; font-weight: 800; color: #fff; margin-bottom: 6px; }
-  .nobet-hero .bet-sub { font-size: 14px; color: #8b949e; }
+  .nobet-hero .bet-sub { font-size: 14px; color: #b9ad91; }
 
   .lean-card {
-    background: #161b22; border: 1px solid #f0883e44;
+    background: #20201c; border: 1px solid #f5bc4244;
     border-radius: 12px; padding: 18px 20px; margin-bottom: 14px;
   }
   .lean-card .eyebrow {
     font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
-    text-transform: uppercase; color: #f0883e; margin-bottom: 8px;
+    text-transform: uppercase; color: #f5bc42; margin-bottom: 8px;
   }
   .lean-card .bet-name { font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 4px; }
-  .lean-card .bet-sub { font-size: 13px; color: #8b949e; margin-bottom: 14px; }
-  .lean-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #21262d; font-size: 14px; }
+  .lean-card .bet-sub { font-size: 13px; color: #b9ad91; margin-bottom: 14px; }
+  .lean-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #34322a; font-size: 14px; }
   .lean-row:last-child { border-bottom: none; }
-  .lean-key { color: #8b949e; }
+  .lean-key { color: #b9ad91; }
   .lean-val { font-weight: 600; }
 
   .section { margin-bottom: 14px; }
   .section-label {
     font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
-    color: #8b949e; text-transform: uppercase; margin-bottom: 8px;
+    color: #b9ad91; text-transform: uppercase; margin-bottom: 8px;
   }
-  .card { background: #161b22; border: 1px solid #30363d; border-radius: 12px; padding: 18px 20px; }
+  .card { background: #20201c; border: 1px solid #444033; border-radius: 12px; padding: 18px 20px; }
   .plain-english {
-    background: #161b22; border: 1px solid #30363d;
-    border-left: 4px solid #8b949e; border-radius: 0 12px 12px 0;
-    padding: 16px 18px; font-size: 14px; color: #c9d1d9; line-height: 1.8;
+    background: #20201c; border: 1px solid #444033;
+    border-left: 4px solid #b9ad91; border-radius: 0 12px 12px 0;
+    padding: 16px 18px; font-size: 14px; color: #e8e2d0; line-height: 1.8;
   }
   .plain-english strong { color: #fff; }
   .warning-banner {
-    background: #f0883e10; border: 1px solid #f0883e44;
+    background: #f5bc4210; border: 1px solid #f5bc4244;
     border-radius: 10px; padding: 12px 16px;
-    font-size: 13px; color: #f0883e; line-height: 1.6; margin-bottom: 14px;
+    font-size: 13px; color: #f5bc42; line-height: 1.6; margin-bottom: 14px;
   }
-  .green { color: #22d67a; } .orange { color: #f0883e; } .grey { color: #8b949e; }
+  .green { color: #3ddc97; } .orange { color: #f5bc42; } .grey { color: #b9ad91; }
 
   .mkt-table { width: 100%; border-collapse: collapse; font-size: 13px; }
   .mkt-table th {
     font-size: 11px; text-transform: uppercase; letter-spacing: 0.8px;
-    color: #8b949e; padding: 0 0 8px; text-align: left; border-bottom: 1px solid #30363d;
+    color: #b9ad91; padding: 0 0 8px; text-align: left; border-bottom: 1px solid #444033;
   }
   .mkt-table th:not(:first-child) { text-align: center; }
-  .mkt-table td { padding: 9px 4px; border-bottom: 1px solid #21262d; }
+  .mkt-table td { padding: 9px 4px; border-bottom: 1px solid #34322a; }
   .mkt-table td:not(:first-child) { text-align: center; }
   .mkt-table tr:last-child td { border-bottom: none; }
-  .badge-watch { background: #f0883e18; color: #f0883e; font-weight: 700; border-radius: 4px; padding: 2px 8px; display: inline-block; }
-  .badge-pass { background: #30363d; color: #8b949e; border-radius: 4px; padding: 2px 8px; display: inline-block; font-size: 12px; }
-  .clv-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #21262d; font-size: 13px; }
+  .badge-watch { background: #f5bc4218; color: #f5bc42; font-weight: 700; border-radius: 4px; padding: 2px 8px; display: inline-block; }
+  .badge-pass { background: #444033; color: #b9ad91; border-radius: 4px; padding: 2px 8px; display: inline-block; font-size: 12px; }
+  .clv-row { display: flex; justify-content: space-between; padding: 9px 0; border-bottom: 1px solid #34322a; font-size: 13px; }
   .clv-row:last-child { border-bottom: none; }
-  .clv-key { color: #8b949e; }
-  .clv-pending { color: #484f58; font-style: italic; }
-  .footer { text-align: center; color: #484f58; font-size: 11px; margin-top: 24px; }
+  .clv-key { color: #b9ad91; }
+  .clv-pending { color: #7a745f; font-style: italic; }
+  .footer { text-align: center; color: #7a745f; font-size: 11px; margin-top: 24px; }
 </style>
 </head>
 <body>
@@ -143,7 +143,7 @@
         <tr><td><strong>Dolphins</strong> v Cowboys</td><td>−6.8</td><td>−3.5</td><td>−3.5</td><td class="orange">+3.3</td><td>Dolphins −3.5 · −1.0%</td><td><span class="badge-watch">WATCH</span></td></tr>
       </tbody>
     </table>
-    <div style="font-size:11px;color:#484f58;margin-top:10px">MDL is mechanical ledger output: the post-R19 power-rating ledger (updated 13 Jul) converted at 25 Elo ≈ 1 pt + venue HFA. σ 17.4. Pinnacle not posted — two-book mode. Betfair exchange handicaps not yet liquid.</div>
+    <div style="font-size:11px;color:#7a745f;margin-top:10px">MDL is mechanical ledger output: the post-R19 power-rating ledger (updated 13 Jul) converted at 25 Elo ≈ 1 pt + venue HFA. σ 17.4. Pinnacle not posted — two-book mode. Betfair exchange handicaps not yet liquid.</div>
   </div>
 </div>
 
@@ -172,7 +172,7 @@
         <tr><td>Dolphins v Cowboys</td><td>48.7</td><td>50.5</td><td>−1.8</td><td><span class="badge-pass">PASS</span></td></tr>
       </tbody>
     </table>
-    <div style="font-size:11px;color:#484f58;margin-top:10px">Model totals use the crude preliminary estimator (48.0 + 0.1×|line|) — the uniform Over lean against winter footy totals is an artifact, not a signal. Rain at any venue shades 4–8 pts Under at the Tuesday rerun.</div>
+    <div style="font-size:11px;color:#7a745f;margin-top:10px">Model totals use the crude preliminary estimator (48.0 + 0.1×|line|) — the uniform Over lean against winter footy totals is an artifact, not a signal. Rain at any venue shades 4–8 pts Under at the Tuesday rerun.</div>
   </div>
 </div>
 
@@ -189,7 +189,7 @@
   </div>
 </div>
 
-<div class="footer" style="color:#8b949e;margin-bottom:6px">18+ · Gamble responsibly · Gambler's Help 1800 858 858 · gamblinghelponline.org.au</div>
+<div class="footer" style="color:#b9ad91;margin-bottom:6px">18+ · Gamble responsibly · Gambler's Help 1800 858 858 · gamblinghelponline.org.au</div>
 <div class="footer">BetMate · NRL BetMate Edge v4 (Walters Edition) · R20 preliminary · Mon 13 Jul 2026 · σ 17.4 · ledger: nrl_bets.csv</div>
 
 </body>

@@ -7,49 +7,49 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:0}
+body{background:#151412;color:#f6f1df;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;padding:0}
 .page{max-width:960px;margin:0 auto;padding:24px 20px 48px}
-.header{margin-bottom:24px;border-bottom:1px solid #21262d;padding-bottom:18px}
-.header h1{font-size:1.3rem;font-weight:700;color:#e6edf3;margin-bottom:5px;display:flex;align-items:center;gap:10px}
-.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:2px 10px;font-size:.72rem;color:#8b949e;font-weight:400}
-.header .sub{color:#8b949e;font-size:.83rem;line-height:1.5}
+.header{margin-bottom:24px;border-bottom:1px solid #34322a;padding-bottom:18px}
+.header h1{font-size:1.3rem;font-weight:700;color:#f6f1df;margin-bottom:5px;display:flex;align-items:center;gap:10px}
+.badge{display:inline-block;background:#34322a;border:1px solid #444033;border-radius:20px;padding:2px 10px;font-size:.72rem;color:#b9ad91;font-weight:400}
+.header .sub{color:#b9ad91;font-size:.83rem;line-height:1.5}
 
-.chart-section{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:18px}
-.section-title{font-size:.9rem;font-weight:600;color:#e6edf3;margin-bottom:3px}
-.section-sub{font-size:.77rem;color:#8b949e;margin-bottom:20px;line-height:1.5}
+.chart-section{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:24px;margin-bottom:18px}
+.section-title{font-size:.9rem;font-weight:600;color:#f6f1df;margin-bottom:3px}
+.section-sub{font-size:.77rem;color:#b9ad91;margin-bottom:20px;line-height:1.5}
 .chart-wrap{position:relative;height:360px}
 
-.insight-box{background:#161b22;border:1px solid #21262d;border-left:3px solid #d4a017;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:18px}
+.insight-box{background:#20201c;border:1px solid #34322a;border-left:3px solid #d4a017;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:18px}
 .insight-box .lead{font-size:.88rem;font-weight:600;color:#d4a017;margin-bottom:8px}
-.insight-box p{font-size:.83rem;line-height:1.65;color:#c9d1d9;margin-bottom:10px}
-.insight-box p:last-child{margin-bottom:0;color:#8b949e}
-.insight-box strong{color:#e6edf3}
+.insight-box p{font-size:.83rem;line-height:1.65;color:#e8e2d0;margin-bottom:10px}
+.insight-box p:last-child{margin-bottom:0;color:#b9ad91}
+.insight-box strong{color:#f6f1df}
 
-.table-section{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:18px}
+.table-section{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:24px;margin-bottom:18px}
 table{width:100%;border-collapse:collapse;font-size:.82rem}
-thead th{color:#8b949e;font-weight:600;text-align:right;padding:7px 12px;border-bottom:1px solid #30363d;white-space:nowrap}
+thead th{color:#b9ad91;font-weight:600;text-align:right;padding:7px 12px;border-bottom:1px solid #444033;white-space:nowrap}
 thead th:first-child{text-align:left}
-tbody td{padding:9px 12px;border-bottom:1px solid #21262d;color:#c9d1d9;text-align:right}
+tbody td{padding:9px 12px;border-bottom:1px solid #34322a;color:#e8e2d0;text-align:right}
 tbody td:first-child{text-align:left}
 tbody tr:last-child td{border-bottom:none}
-tbody tr:hover td{background:#21262d40}
-.price-tag{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:2px 7px;font-size:.75rem;font-family:'SF Mono',Consolas,monospace;color:#e6edf3}
-.roi-pos{color:#3fb950;font-weight:700}
-.roi-neg{color:#f85149}
-.roi-flat{color:#8b949e}
+tbody tr:hover td{background:#34322a40}
+.price-tag{display:inline-block;background:#34322a;border:1px solid #444033;border-radius:4px;padding:2px 7px;font-size:.75rem;font-family:'SF Mono',Consolas,monospace;color:#f6f1df}
+.roi-pos{color:#3ddc97;font-weight:700}
+.roi-neg{color:#d96c45}
+.roi-flat{color:#b9ad91}
 .best-band{background:#0d2d0e40}
-.win-pct{color:#e6edf3;font-weight:600}
+.win-pct{color:#f6f1df;font-weight:600}
 
 .summary-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
-.stat-card{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px 20px}
-.stat-card .label{font-size:.75rem;color:#8b949e;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
-.stat-card .value{font-size:1.4rem;font-weight:700;color:#e6edf3}
-.stat-card .sub{font-size:.75rem;color:#8b949e;margin-top:3px}
-.stat-card.bad .value{color:#f85149}
+.stat-card{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:18px 20px}
+.stat-card .label{font-size:.75rem;color:#b9ad91;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
+.stat-card .value{font-size:1.4rem;font-weight:700;color:#f6f1df}
+.stat-card .sub{font-size:.75rem;color:#b9ad91;margin-top:3px}
+.stat-card.bad .value{color:#d96c45}
 .stat-card.warn .value{color:#d4a017}
 
-.conclusion{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px 22px;font-size:.83rem;line-height:1.7;color:#c9d1d9}
-.conclusion strong{color:#e6edf3}
+.conclusion{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:18px 22px;font-size:.83rem;line-height:1.7;color:#e8e2d0}
+.conclusion strong{color:#f6f1df}
 .conclusion .highlight{color:#d4a017}
 </style>
 </head>
@@ -221,9 +221,9 @@ const trustZonePlugin = {
 };
 
 const pointColors = bands.map(b => {
-  if (b.inTrust) return '#3fb950';
-  if (b.above)   return '#58a6ff';
-  return '#f85149';
+  if (b.inTrust) return '#3ddc97';
+  if (b.above)   return '#a78bfa';
+  return '#d96c45';
 });
 
 const ctx = document.getElementById('calibChart').getContext('2d');
@@ -235,7 +235,7 @@ new Chart(ctx, {
         label: 'Perfect calibration',
         data: [{ x: 0, y: 0 }, { x: 65, y: 65 }],
         type: 'line',
-        borderColor: '#484f58',
+        borderColor: '#7a745f',
         borderDash: [7, 4],
         borderWidth: 1.5,
         pointRadius: 0,
@@ -264,25 +264,25 @@ new Chart(ctx, {
         display: true,
         position: 'bottom',
         labels: {
-          color: '#8b949e',
+          color: '#b9ad91',
           font: { size: 11 },
           padding: 16,
           usePointStyle: true,
           pointStyleWidth: 10,
           generateLabels: chart => [
-            { text: 'Trust zone (well-calibrated)',   fillStyle: '#3fb950', strokeStyle: 'transparent', pointStyle: 'circle', hidden: false },
-            { text: 'Under-confident (below 10%)',    fillStyle: '#58a6ff', strokeStyle: 'transparent', pointStyle: 'circle', hidden: false },
-            { text: 'Over-confident (above 20%)',     fillStyle: '#f85149', strokeStyle: 'transparent', pointStyle: 'circle', hidden: false },
-            { text: 'Perfect calibration',            fillStyle: 'transparent', strokeStyle: '#484f58', pointStyle: 'line',   hidden: false },
+            { text: 'Trust zone (well-calibrated)',   fillStyle: '#3ddc97', strokeStyle: 'transparent', pointStyle: 'circle', hidden: false },
+            { text: 'Under-confident (below 10%)',    fillStyle: '#a78bfa', strokeStyle: 'transparent', pointStyle: 'circle', hidden: false },
+            { text: 'Over-confident (above 20%)',     fillStyle: '#d96c45', strokeStyle: 'transparent', pointStyle: 'circle', hidden: false },
+            { text: 'Perfect calibration',            fillStyle: 'transparent', strokeStyle: '#7a745f', pointStyle: 'line',   hidden: false },
           ],
         },
       },
       tooltip: {
-        backgroundColor: '#1c2128',
-        borderColor: '#30363d',
+        backgroundColor: '#242320',
+        borderColor: '#444033',
         borderWidth: 1,
-        titleColor: '#e6edf3',
-        bodyColor: '#8b949e',
+        titleColor: '#f6f1df',
+        bodyColor: '#b9ad91',
         padding: 12,
         callbacks: {
           title: ctx => {
@@ -305,23 +305,24 @@ new Chart(ctx, {
     },
     scales: {
       x: {
-        title: { display: true, text: 'Model predicted win %', color: '#8b949e', font: { size: 11 } },
+        title: { display: true, text: 'Model predicted win %', color: '#b9ad91', font: { size: 11 } },
         min: 0, max: 65,
         grid: { color: '#1e2530' },
-        border: { color: '#30363d' },
-        ticks: { color: '#8b949e', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
+        border: { color: '#444033' },
+        ticks: { color: '#b9ad91', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
       },
       y: {
-        title: { display: true, text: 'Actual win %', color: '#8b949e', font: { size: 11 } },
+        title: { display: true, text: 'Actual win %', color: '#b9ad91', font: { size: 11 } },
         min: 0, max: 65,
         grid: { color: '#1e2530' },
-        border: { color: '#30363d' },
-        ticks: { color: '#8b949e', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
+        border: { color: '#444033' },
+        ticks: { color: '#b9ad91', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
       },
     },
   },
   plugins: [trustZonePlugin],
 });
 </script>
+<div style="margin:28px 0 8px;text-align:center;color:#b9ad91;font-size:12px;font-weight:700">18+ · Gamble responsibly · Gambler's Help 1800 858 858 · gamblinghelponline.org.au</div>
 </body>
 </html>
