@@ -7,50 +7,45 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#151412;color:#f6f1df;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;padding:0}
+body{background:#0d1117;color:#e6edf3;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;padding:0}
 .page{max-width:960px;margin:0 auto;padding:24px 20px 48px}
-.header{margin-bottom:24px;border-bottom:1px solid #34322a;padding-bottom:18px}
-.header h1{font-size:1.3rem;font-weight:700;color:#f6f1df;margin-bottom:5px;display:flex;align-items:center;gap:10px}
-.badge{display:inline-block;background:#34322a;border:1px solid #444033;border-radius:20px;padding:2px 10px;font-size:.72rem;color:#b9ad91;font-weight:400}
-.header .sub{color:#b9ad91;font-size:.83rem;line-height:1.5}
-
-.chart-section{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:24px;margin-bottom:18px}
-.section-title{font-size:.9rem;font-weight:600;color:#f6f1df;margin-bottom:3px}
-.section-sub{font-size:.77rem;color:#b9ad91;margin-bottom:20px;line-height:1.5}
+.header{margin-bottom:24px;border-bottom:1px solid #21262d;padding-bottom:18px}
+.header h1{font-size:1.3rem;font-weight:700;color:#e6edf3;margin-bottom:5px;display:flex;align-items:center;gap:10px}
+.badge{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:20px;padding:2px 10px;font-size:.72rem;color:#8b949e;font-weight:400}
+.header .sub{color:#8b949e;font-size:.83rem;line-height:1.5}
+.chart-section{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:18px}
+.section-title{font-size:.9rem;font-weight:600;color:#e6edf3;margin-bottom:3px}
+.section-sub{font-size:.77rem;color:#8b949e;margin-bottom:20px;line-height:1.5}
 .chart-wrap{position:relative;height:360px}
-
-.insight-box{background:#20201c;border:1px solid #34322a;border-left:3px solid #d4a017;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:18px}
-.insight-box .lead{font-size:.88rem;font-weight:600;color:#d4a017;margin-bottom:8px}
-.insight-box p{font-size:.83rem;line-height:1.65;color:#e8e2d0;margin-bottom:10px}
-.insight-box p:last-child{margin-bottom:0;color:#b9ad91}
-.insight-box strong{color:#f6f1df}
-
-.table-section{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:24px;margin-bottom:18px}
+.chart-wrap-bar{position:relative;height:200px}
+.insight-box{background:#161b22;border:1px solid #21262d;border-left:3px solid #4493f8;border-radius:0 10px 10px 0;padding:16px 20px;margin-bottom:18px}
+.insight-box .lead{font-size:.88rem;font-weight:600;color:#4493f8;margin-bottom:8px}
+.insight-box p{font-size:.83rem;line-height:1.65;color:#c9d1d9;margin-bottom:10px}
+.insight-box p:last-child{margin-bottom:0;color:#8b949e}
+.insight-box strong{color:#e6edf3}
+.table-section{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:24px;margin-bottom:18px}
 table{width:100%;border-collapse:collapse;font-size:.82rem}
-thead th{color:#b9ad91;font-weight:600;text-align:right;padding:7px 12px;border-bottom:1px solid #444033;white-space:nowrap}
+thead th{color:#8b949e;font-weight:600;text-align:right;padding:7px 12px;border-bottom:1px solid #30363d;white-space:nowrap}
 thead th:first-child{text-align:left}
-tbody td{padding:9px 12px;border-bottom:1px solid #34322a;color:#e8e2d0;text-align:right}
+tbody td{padding:9px 12px;border-bottom:1px solid #21262d;color:#c9d1d9;text-align:right}
 tbody td:first-child{text-align:left}
 tbody tr:last-child td{border-bottom:none}
-tbody tr:hover td{background:#34322a40}
-.price-tag{display:inline-block;background:#34322a;border:1px solid #444033;border-radius:4px;padding:2px 7px;font-size:.75rem;font-family:'SF Mono',Consolas,monospace;color:#f6f1df}
-.roi-pos{color:#3ddc97;font-weight:700}
-.roi-neg{color:#d96c45}
-.roi-flat{color:#b9ad91}
+tbody tr:hover td{background:#21262d40}
+.price-tag{display:inline-block;background:#21262d;border:1px solid #30363d;border-radius:4px;padding:2px 7px;font-size:.75rem;font-family:'SF Mono',Consolas,monospace;color:#e6edf3}
+.roi-pos{color:#3fb950;font-weight:700}
+.roi-neg{color:#f85149}
+.roi-flat{color:#8b949e}
 .best-band{background:#0d2d0e40}
-.win-pct{color:#f6f1df;font-weight:600}
-
+.win-pct{color:#e6edf3;font-weight:600}
 .summary-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:18px}
-.stat-card{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:18px 20px}
-.stat-card .label{font-size:.75rem;color:#b9ad91;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
-.stat-card .value{font-size:1.4rem;font-weight:700;color:#f6f1df}
-.stat-card .sub{font-size:.75rem;color:#b9ad91;margin-top:3px}
-.stat-card.bad .value{color:#d96c45}
-.stat-card.warn .value{color:#d4a017}
-
-.conclusion{background:#20201c;border:1px solid #34322a;border-radius:10px;padding:18px 22px;font-size:.83rem;line-height:1.7;color:#e8e2d0}
-.conclusion strong{color:#f6f1df}
-.conclusion .highlight{color:#d4a017}
+.stat-card{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px 20px}
+.stat-card .label{font-size:.75rem;color:#8b949e;margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
+.stat-card .value{font-size:1.4rem;font-weight:700;color:#e6edf3}
+.stat-card .sub{font-size:.75rem;color:#8b949e;margin-top:3px}
+.stat-card.bad .value{color:#f85149}
+.conclusion{background:#161b22;border:1px solid #21262d;border-radius:10px;padding:18px 22px;font-size:.83rem;line-height:1.7;color:#c9d1d9}
+.conclusion strong{color:#e6edf3}
+.conclusion .highlight{color:#4493f8}
 </style>
 </head>
 <body>
@@ -75,6 +70,14 @@ tbody tr:hover td{background:#34322a40}
   </div>
 
   <div class="chart-section">
+    <div class="section-title">Win % by market odds</div>
+    <div class="section-sub">Actual win rate for each price band across all 683 predictions.</div>
+    <div class="chart-wrap-bar">
+      <canvas id="barChart"></canvas>
+    </div>
+  </div>
+
+  <div class="chart-section">
     <div class="section-title">Model calibration chart</div>
     <div class="section-sub">Each dot = one predicted-probability band. On the dashed line, predicted = actual (perfect calibration). Above the line = model under-confident; below = over-confident.</div>
     <div class="chart-wrap">
@@ -84,8 +87,8 @@ tbody tr:hover td{background:#34322a40}
 
   <div class="insight-box">
     <div class="lead">Trust zone: ~45% to ~60% predicted win probability</div>
-    <p>Unlike racing, NRL is a two-team market — every game has one team at 40–60% implied. The model is best-calibrated in the <strong>near-even-money range (45–60% predicted)</strong>, where predicted and actual win rates sit within ±2pp. Outside that window it over-estimates favourites (says 72%, they win 64%) and slightly under-estimates underdogs in the 35–45% band.</p>
-    <p>The $1.81–2.20 bracket — near even-money — is the only zone where flat-staking on the model's top pick approaches breakeven at −1.8% ROI. <strong>Short favourites at $1.05–1.40 lose 8.2% blind</strong> because the vig eats the already-thin edge. Underdogs $3.01+ lose 21.6% as the model over-estimates their chances in high-pressure spots. The disciplined angle is near-even-money games where the model diverges from the market by ≥3 pts of line, sized with fractional Kelly and graded on CLV.</p>
+    <p>NRL is a two-team market — every game has one side near 40–60% implied. The model is best-calibrated in the <strong>near-even-money range (45–60% predicted)</strong>, where predicted and actual win rates sit within ±2pp. Outside that window it over-estimates favourites (says 72%, they win 64%) and slightly under-estimates underdogs in the 35–45% band.</p>
+    <p>The $1.66–2.40 bracket is the only zone where flat-staking approaches breakeven (−2.2% and +1.0%). <strong>Short favourites at $1.05–1.40 lose 8.2% blind</strong> because the vig eats the already-thin edge. Underdogs $3.01+ lose 21.6%. The disciplined angle is near-even-money games where the model diverges from the market by ≥3 pts of line, sized with fractional Kelly and graded on CLV.</p>
   </div>
 
   <div class="table-section">
@@ -128,7 +131,7 @@ tbody tr:hover td{background:#34322a40}
           <td>119</td><td>54</td>
           <td class="win-pct">45.4%</td>
           <td>44.9%</td>
-          <td class="roi-flat">+1.0%</td>
+          <td class="roi-pos">+1.0%</td>
         </tr>
         <tr>
           <td><span class="price-tag">$2.41–3.00</span></td>
@@ -156,13 +159,47 @@ tbody tr:hover td{background:#34322a40}
   </div>
 
   <div class="conclusion">
-    ★ <strong>Only the $1.66–2.40 even-money zone approaches breakeven</strong> — −2.2% and +1.0% flat ROI respectively. The $2.01–2.40 band is the only one with a positive flat ROI, driven by the market slightly overpricing underdogs in this range. Every other band loses money blindly backed.<br><br>
+    ★ <strong>Only the $1.66–2.40 even-money zone approaches breakeven</strong> — −2.2% and +1.0% flat ROI respectively. Every other band loses money blindly backed.<br><br>
     <span class="highlight">The takeaway:</span> target games where the model rates a team at 50–60% but the market prices them at $1.90–2.20. Size with fractional Kelly, never exceed 2 units on a single H2H position, and judge every bet on closing-line value.
   </div>
 
 </div>
 
 <script>
+new Chart(document.getElementById('barChart').getContext('2d'), {
+  type: 'bar',
+  data: {
+    labels: ['$1.05–1.40','$1.41–1.65','$1.66–2.00','$2.01–2.40','$2.41–3.00','$3.01–5.00','$5.01+'],
+    datasets: [{
+      data: [75.7, 66.1, 56.5, 45.4, 31.0, 20.2, 10.5],
+      backgroundColor: '#4493f8',
+      borderRadius: 3,
+      maxBarThickness: 56,
+    }]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: { display: false },
+      tooltip: { callbacks: { label: c => c.parsed.y + '%' } }
+    },
+    scales: {
+      x: {
+        grid: { display: false },
+        border: { color: '#30363d' },
+        ticks: { color: '#8b949e', font: { size: 11 } }
+      },
+      y: {
+        min: 0, max: 90,
+        grid: { color: '#1e2530' },
+        border: { display: false },
+        ticks: { color: '#8b949e', font: { size: 11 }, callback: v => v + '%', stepSize: 20 }
+      }
+    }
+  }
+});
+
 const bands = [
   { label: '30–40%',  x: 35.0, y: 38.5, inTrust: false, above: true  },
   { label: '40–50%',  x: 45.0, y: 45.4, inTrust: true,  above: false },
@@ -195,22 +232,17 @@ const trustZonePlugin = {
   }
 };
 
-const pointColors = bands.map(b => {
-  if (b.inTrust) return '#3ddc97';
-  if (b.above)   return '#a78bfa';
-  return '#d96c45';
-});
+const pointColors = bands.map(b => b.inTrust ? '#3fb950' : b.above ? '#58a6ff' : '#f85149');
 
-const ctx = document.getElementById('calibChart').getContext('2d');
-new Chart(ctx, {
+new Chart(document.getElementById('calibChart').getContext('2d'), {
   type: 'scatter',
   data: {
     datasets: [
       {
         label: 'Perfect calibration',
-        data: [{ x: 0, y: 0 }, { x: 100, y: 100 }],
+        data: [{ x: 25, y: 25 }, { x: 95, y: 95 }],
         type: 'line',
-        borderColor: '#7a745f',
+        borderColor: '#484f58',
         borderDash: [7, 4],
         borderWidth: 1.5,
         pointRadius: 0,
@@ -239,25 +271,25 @@ new Chart(ctx, {
         display: true,
         position: 'bottom',
         labels: {
-          color: '#b9ad91',
+          color: '#8b949e',
           font: { size: 11 },
           padding: 16,
           usePointStyle: true,
           pointStyleWidth: 10,
           generateLabels: () => [
-            { text: 'Trust zone (well-calibrated)',  fillStyle: '#3ddc97', strokeStyle: 'transparent', pointStyle: 'circle' },
-            { text: 'Under-confident',               fillStyle: '#a78bfa', strokeStyle: 'transparent', pointStyle: 'circle' },
-            { text: 'Over-confident',                fillStyle: '#d96c45', strokeStyle: 'transparent', pointStyle: 'circle' },
-            { text: 'Perfect calibration',           fillStyle: 'transparent', strokeStyle: '#7a745f', pointStyle: 'line' },
+            { text: 'Trust zone (well-calibrated)',  fillStyle: '#3fb950', strokeStyle: 'transparent', pointStyle: 'circle' },
+            { text: 'Under-confident',               fillStyle: '#58a6ff', strokeStyle: 'transparent', pointStyle: 'circle' },
+            { text: 'Over-confident',                fillStyle: '#f85149', strokeStyle: 'transparent', pointStyle: 'circle' },
+            { text: 'Perfect calibration',           fillStyle: 'transparent', strokeStyle: '#484f58', pointStyle: 'line' },
           ],
         },
       },
       tooltip: {
-        backgroundColor: '#242320',
-        borderColor: '#444033',
+        backgroundColor: '#1c2128',
+        borderColor: '#30363d',
         borderWidth: 1,
-        titleColor: '#f6f1df',
-        bodyColor: '#b9ad91',
+        titleColor: '#e6edf3',
+        bodyColor: '#8b949e',
         padding: 12,
         callbacks: {
           title: ctx => 'Band: ' + (bands[ctx[0].dataIndex]?.label || ''),
@@ -273,24 +305,23 @@ new Chart(ctx, {
     },
     scales: {
       x: {
-        title: { display: true, text: 'Model predicted win %', color: '#b9ad91', font: { size: 11 } },
+        title: { display: true, text: 'Model predicted win %', color: '#8b949e', font: { size: 11 } },
         min: 25, max: 95,
         grid: { color: '#1e2530' },
-        border: { color: '#444033' },
-        ticks: { color: '#b9ad91', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
+        border: { color: '#30363d' },
+        ticks: { color: '#8b949e', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
       },
       y: {
-        title: { display: true, text: 'Actual win %', color: '#b9ad91', font: { size: 11 } },
+        title: { display: true, text: 'Actual win %', color: '#8b949e', font: { size: 11 } },
         min: 25, max: 95,
         grid: { color: '#1e2530' },
-        border: { color: '#444033' },
-        ticks: { color: '#b9ad91', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
+        border: { color: '#30363d' },
+        ticks: { color: '#8b949e', font: { size: 10 }, callback: v => v + '%', stepSize: 10 },
       },
     },
   },
   plugins: [trustZonePlugin],
 });
 </script>
-<div style="margin:28px 0 8px;text-align:center;color:#b9ad91;font-size:12px;font-weight:700">18+ · Gamble responsibly · Gambler's Help 1800 858 858 · gamblinghelponline.org.au</div>
 </body>
 </html>
