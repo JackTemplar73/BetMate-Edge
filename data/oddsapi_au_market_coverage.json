@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-07-15T18:06:45.943Z",
+  "checked_at": "2026-07-15T19:33:25.654Z",
   "target_bookmakers": [
     "sportsbet",
     "tab",
@@ -9,16 +9,7 @@
     "betfair_ex_au"
   ],
   "events_checked": 66,
-  "market_counts": {
-    "h2h": 4,
-    "btts": 2,
-    "double_chance": 2,
-    "draw_no_bet": 1,
-    "alternate_spreads": 1,
-    "alternate_totals": 1,
-    "h2h_3_way": 4,
-    "h2h_lay": 1
-  },
+  "market_counts": {},
   "matches": [
     {
       "match_name": "Canada vs Bosnia & Herzegovina",
