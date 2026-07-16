@@ -3214,32 +3214,7 @@ async function reloadSavedOddsData() {
 }
 
 function bindRefreshOdds() {
-  const button = document.querySelector('[data-refresh-odds]');
-  button.addEventListener('click', async () => {
-    button.disabled = true;
-    button.textContent = window.location.protocol === 'file:' ? 'Reloading...' : 'Opening GitHub...';
-    document.querySelector('[data-app-error]').textContent = '';
-
-    try {
-      if (window.location.protocol === 'file:') {
-        await reloadSavedOddsData();
-        window.open('https://github.com/JackTemplar73/BetMate-Edge/actions/workflows/update-odds.yml', '_blank', 'noopener');
-        setRefreshNote('Local file reloaded. GitHub Actions opened: click "Run workflow" there to run the real odds refresh.', 'warning');
-        return;
-      }
-
-      await reloadSavedOddsData();
-      window.open('https://github.com/JackTemplar73/BetMate-Edge/actions/workflows/update-odds.yml', '_blank', 'noopener');
-      setRefreshNote('Saved data reloaded. GitHub Actions opened: click "Run workflow" there to run the real odds refresh.', 'warning');
-    } catch (error) {
-      await reloadSavedOddsData();
-      setRefreshNote(`Could not reload saved data: ${error.message}. Open GitHub Actions to run the real odds refresh.`, 'warning');
-    } finally {
-      button.disabled = false;
-      button.textContent = 'Refresh odds';
-    }
-
-  });
+  // Manual price refresh controls were removed from the public analysis hub.
 }
 
 function bindViewTabs() {
